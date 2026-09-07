@@ -1,0 +1,43 @@
+# Local Git metadata inside the imported source trees
+**/.git/
+
+# Local environments and caches
+**/.conda/
+**/.venv/
+**/venv/
+**/__pycache__/
+**/.pytest_cache/
+**/.ruff_cache/
+**/*.py[cod]
+
+# Datasets (kept locally only)
+/data/
+/dataset/
+/datasets/
+/Echo/data/
+/ESR-GRPO/data
+**/*.parquet
+**/*.arrow
+
+# Model weights and checkpoints (kept locally only)
+/model/
+/models/
+**/checkpoints/
+**/*.pt
+**/*.pth
+**/*.ckpt
+**/*.safetensors
+**/*.gguf
+**/pytorch_model*.bin
+**/adapter_model*.bin
+
+# Generated training artifacts
+**/logs/
+**/outputs/
+**/wandb/
+**/*.log
+
+# Editor and OS files
+**/.DS_Store
+**/.idea/
+**/.vscode/
