@@ -42,7 +42,8 @@ jobs:
           from pathlib import Path
           paths = json.loads(Path('/tmp/state21-staged-paths.json').read_text())
           subprocess.run(['git', 'add', '-A', '--', *paths], check=True)
-          subprocess.run(['git', 'diff', '--cached', '--check'], check=True)
+          # Original research Markdown is byte-preserved, including deliberate two-space hard breaks.
+          subprocess.run(['git', 'diff', '--cached', '--check', '--', 'src', 'tests', 'pyproject.toml', 'README.md', 'docs/harness/DESIGN.md', 'docs/harness/RUNBOOK.md', 'docs/harness/VALIDATION.md', 'docs/harness/schemas', 'docs/research/state_21/README.md'], check=True)
           subprocess.run(['git', 'commit', '-m', 'refactor(harness): implement 4B state/action 2.1 with scoped gaps, exact exposure and archived analyses'], check=True)
           PY
           git push origin HEAD:refs/heads/refactor/esr-state-2.1
