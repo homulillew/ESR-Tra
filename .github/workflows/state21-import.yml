@@ -1,0 +1,72 @@
+name: Materialize reviewed ESR state 2.1
+on:
+  push:
+    branches: ['refactor/esr-state-2.1']
+    paths: ['.state21-import.py', '.github/workflows/state21-import.yml']
+permissions:
+  contents: write
+concurrency:
+  group: state21-reviewed-import
+  cancel-in-progress: false
+jobs:
+  import-and-validate:
+    if: github.repository == 'homulillew/ESR-Tra' && github.ref == 'refs/heads/refactor/esr-state-2.1'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v6
+        with:
+          python-version: '3.13'
+      - name: Materialize hash-verified source and preserve v2
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: python .state21-import.py
+      - run: python -m pip install -e '.[test]'
+      - name: Validate both protocol generations
+        run: python -m pytest -q --junitxml=/tmp/state21-tests.xml
+      - name: Scripted smoke and read-only replay
+        run: |
+          python -m esr_harness smoke --store /tmp/state21-smoke.sqlite > /tmp/state21-smoke.json
+          python -m esr_harness replay /tmp/state21-smoke.sqlite > /tmp/state21-replay.json
+      - name: Commit tested files to requested branch only
+        env:
+          TARGET_BRANCH: refactor/esr-state-2.1
+        run: |
+          test "$GITHUB_REF_NAME" = "$TARGET_BRANCH"
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          python - <<'PY'
+          import json, subprocess
+          from pathlib import Path
+          paths = json.loads(Path('/tmp/state21-staged-paths.json').read_text())
+          subprocess.run(['git', 'add', '-A', '--', *paths], check=True)
+          subprocess.run(['git', 'diff', '--cached', '--check'], check=True)
+          subprocess.run(['git', 'commit', '-m', 'refactor(harness): implement 4B state/action 2.1 with scoped gaps, exact exposure and archived analyses'], check=True)
+          PY
+          git push origin HEAD:refs/heads/refactor/esr-state-2.1
+          git rev-parse HEAD > /tmp/state21-commit.txt
+      - name: Preserve validation evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: reviewed-state21-import-${{ github.run_id }}
+          retention-days: 7
+          include-hidden-files: true
+          path: |
+            src/esr_harness/
+            tests/harness_v2/
+            tests/harness_v21/
+            tests/__init__.py
+            docs/harness/
+            docs/research/state_21/
+            README.md
+            pyproject.toml
+            /tmp/state21-expected.json
+            /tmp/state21-tests.xml
+            /tmp/state21-smoke.json
+            /tmp/state21-replay.json
+            /tmp/state21-commit.txt
+            !**/__pycache__/**
+            !**/*.pyc
