@@ -7,6 +7,8 @@
 | 入口 | 用途 |
 |---|---|
 | [设计规范](docs/harness/DESIGN.md) | State、动作、gap、上下文、审核与终止 |
+| [提示词分层](docs/harness/PROMPTS.md) | 按模式选择原则、工具契约和提示快照 |
+| [服务器前向验证提示词](docs/harness/FORWARD_VALIDATION_PROMPT.md) | 交给服务器编程 agent，自动执行有界开发验证 |
 | [运行和迁移](docs/harness/RUNBOOK.md) | CPU smoke、4B服务CLI、旧账本只读回放 |
 | [验收记录](docs/harness/VALIDATION.md) | 已执行协议测试与未验证边界 |
 | [前期分析与q324推演](docs/research/state_21/README.md) | 原分析、RFC、Schema与真实材料事后推演归档 |

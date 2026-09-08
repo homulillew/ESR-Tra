@@ -42,12 +42,12 @@ SCHEMAS = {
     "finish": obj({"answer": string(2000)}),
 }
 DESCRIPTIONS = {
-    "search": "Find navigation candidates for current focus.need. Optional focus changes purpose, not proof. Exact fixed-index requests can use cache; inspect unread hits rather than repeat.",
+    "search": "Search for document candidates. Snippets are navigation, not citable evidence.",
     "open_page": "Open a real search hit. Parent search ID is optional. query and offset are mutually exclusive. Returns an immutable, capacity-admitted observation.",
     "read_evidence": "Replay an observation exactly, even if already cited. Alternatively directory_cursor='start' (or returned cursor) lists archived view IDs. Choose exactly one mode.",
     "update_state": "Local delta, not full-state rewrite. Omitted fields stay unchanged; answer=null withdraws a candidate. Pair finding with its observation_ids. New claims omit ID; returned IDs can be used next turn. Task revisions/retirements need a reason. Findings are interpretations, not verdicts.",
     "verify_answer": "Fresh full-question audit of current interpretations and actual evidence. Partial answer=null is allowed but cannot pass target. Same semantic input uses cache; focus/attempt notes do not invalidate it.",
-    "submit_answer": "End with current state.answer (default decision=answer) or explicitly abstain. No alternative answer argument. Preserve the configured hard/soft/off evidence label.",
+    "submit_answer": "End with current state.answer (default decision=answer) or decision=abstain. No alternative answer argument.",
     "finish": "Baseline only: end with the answer itself.",
 }
 VERDICT = {"enum": ["supported", "unknown", "contradicted"]}
@@ -126,6 +126,12 @@ class Config:
     def to_dict(self):
         return asdict(self)
 
+    def tool_schema(self, name):
+        """The same mode-specific parameters are rendered and validated at runtime."""
+        if self.mode == "baseline" and name == "search":
+            return obj({k: SCHEMAS[name]["properties"][k] for k in ("query", "top_k")}, ["query"])
+        return SCHEMAS[name]
+
     @property
     def tools(self):
         names = ["search", "open_page", "read_evidence"]
@@ -136,4 +142,4 @@ class Config:
             if self.audit_mode != "off":
                 names += ["verify_answer"]
             names += ["submit_answer"]
-        return [{"name": n, "description": DESCRIPTIONS[n], "parameters": SCHEMAS[n]} for n in names]
+        return [{"name": n, "description": DESCRIPTIONS[n], "parameters": self.tool_schema(n)} for n in names]

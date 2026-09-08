@@ -4,7 +4,7 @@ from copy import copy, deepcopy
 import time
 from .audit import status, unresolved, validate_report
 from .ledger import Ledger
-from .protocol import Config, HarnessError, SCHEMAS, SCHEMA_VERSION, VERSION, digest, validate
+from .protocol import Config, HarnessError, SCHEMA_VERSION, VERSION, digest, validate
 from .state import initial_state, apply_delta, candidate_scope, edit_focus, purpose
 from .views import document, hit, make_view, merge_spans, shrink_view
 
@@ -141,7 +141,7 @@ class Harness:
                 if name == "invalid_model_response" and isinstance(arguments, dict):
                     raise HarnessError("protocol_error", "Invalid model output: " + str(arguments.get("error", "Malformed decision")))
                 raise HarnessError("protocol_error", f"Unavailable action: {name}")
-            validate(arguments, SCHEMAS[name])
+            validate(arguments, self.config.tool_schema(name))
             if getattr(self.retriever, "identity", {}) != self.ledger.header["retriever"]:
                 raise HarnessError("service_error", "Declared retriever identity changed inside an episode")
             if self.auditor and self.auditor.identity != self.ledger.header["auditor"]:

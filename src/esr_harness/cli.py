@@ -12,7 +12,8 @@ from .client import ChatClient, ChatConfig, HFTokenCounter, UsageBudget
 from .demo import smoke
 from .engine import Harness
 from .ledger import Ledger
-from .protocol import Config, HarnessError
+from .protocol import Config, HarnessError, canonical, digest
+from .prompts import POLICY_PROMPT_VERSION, policy_system
 from .runner import replay, run, summary
 from .views import EchoRetriever
 
@@ -135,6 +136,8 @@ def live(args) -> dict:
     retriever.deterministic = args.deterministic_retrieval
     retriever.identity["deterministic"] = args.deterministic_retrieval
     manifest = {"qid": args.qid, "policy": policy.identity, "code_revision": code_revision(),
+                "policy_prompt": {"version": POLICY_PROMPT_VERSION,
+                                  "system_hash": digest(policy_system(config) + "\nTools:\n" + canonical(config.tools))},
                 "generation_budget": budget.limit,
                 "dataset_sha256": hashlib.sha256(Path(args.dataset).read_bytes()).hexdigest() if args.dataset else None,
                 "note": "Served model/index revisions are operator declarations, not remotely attested hashes."}

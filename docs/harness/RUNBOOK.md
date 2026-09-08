@@ -50,3 +50,9 @@ python -m esr_harness run \
 ## 开发准则
 
 先加可复现的机制测试，再修代码；不添加qid专属规则、失败N次放行、关键词黑名单或凭命中答案名判supported。前向未通过真实校准前不开始信用算法扩展。
+
+## 服务器自动验证入口
+
+克隆 `refactor/esr-state-2.1` 分支后，将 [FORWARD_VALIDATION_PROMPT.md](FORWARD_VALIDATION_PROMPT.md) 交给服务器上的编程 agent。默认最多8道开发题、4个配置、并发1；它不是被测4B的系统提示词。
+
+提示层现为 `research-2.1.1` / `atomic-2.1.1`，参见 [PROMPTS.md](PROMPTS.md)。提示变更后使用新账本，不对旧episode静默resume；State 2.1与ledger schema 3不变。

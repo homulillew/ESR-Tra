@@ -1,6 +1,7 @@
 """Deterministic work-card rendering; archive size is not prompt size."""
 from copy import deepcopy
 from .state import candidate_scope
+from .prompts import PENDING_GUIDANCE, STAGNATION_GUIDANCE
 
 
 def visible_ids(harness):
@@ -78,11 +79,11 @@ def workcard(harness, recent_limit=None):
                   "quote_excerpt": c["quotes"][0]["quote"][:240], "label": "Previously reported conflict; re-check raw evidence"}
                  for c in harness.conflicts.values() if c["scope"] == scope]
     guidance = []
-    if harness.pending:
-        guidance.append("Record useful findings with sources, or dismiss irrelevant pending views. A citation is not a verified fact.")
+    if harness.pending and harness.config.mode == "esr":
+        guidance.append(PENDING_GUIDANCE)
     searches = list(harness.searches.values())[-harness.config.stagnant_after:]
     if len(searches) >= harness.config.stagnant_after and all(not s["new_hit_docids"] for s in searches):
-        guidance.append("Recent searches added no new document IDs. Inspect unread hits/new windows or revisit another clue. This does NOT prove the candidate false, and repeated reading can still help.")
+        guidance.append(STAGNATION_GUIDANCE)
     previous = None
     if harness.last_audit and audit is None:
         previous = {"answer_at_audit": harness.last_audit["answer"],
