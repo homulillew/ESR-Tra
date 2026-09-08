@@ -44,11 +44,11 @@ def code_revision() -> str:
 
 
 def parser() -> argparse.ArgumentParser:
-    p = argparse.ArgumentParser(description="ESR forward harness 2.1 (no training)")
+    p = argparse.ArgumentParser(description="ESR forward harness v2 (no training)")
     commands = p.add_subparsers(dest="command", required=True)
     s = commands.add_parser("smoke", help="CPU synthetic repair fixture; no model or retrieval services")
     s.add_argument("--store", default=":memory:")
-    r = commands.add_parser("replay", help="Verify and inspect a versioned ledger without live services")
+    r = commands.add_parser("replay", help="Verify and inspect a v2 ledger without live services")
     r.add_argument("store")
     r.add_argument("--export", help="Export the exact trace (may contain full copyrighted/private evidence)")
     r = commands.add_parser("run", help="One live question; independent policy and audit contexts")
@@ -80,11 +80,7 @@ def parser() -> argparse.ArgumentParser:
     r.add_argument("--max-total-completion-tokens", type=int, default=24000)
     r.add_argument("--search-top-k", type=int, default=5)
     r.add_argument("--view-chars", type=int, default=8000)
-    r.add_argument("--max-pending-views", type=int, default=4)
-    r.add_argument("--recent-actions", type=int, default=4)
-    r.add_argument("--deterministic-retrieval", action=argparse.BooleanOptionalAction, default=True,
-                   help="Declare fixed deterministic index; cache also requires --retrieval-revision")
-    r.add_argument("--store", required=True, help="New SQLite episode path (2.1 schema only; old files use replay)")
+    r.add_argument("--store", required=True, help="New SQLite episode path (v2 schema only)")
     r.add_argument("--resume", action="store_true")
     r.add_argument("--output", help="Summary JSON; default is <store>.summary.json")
     return p
@@ -103,15 +99,9 @@ def live(args) -> dict:
         raise ValueError("Cannot resume a missing store")
     question = load_question(args.dataset, args.qid) if args.dataset else args.question
     counter = HFTokenCounter(args.tokenizer, args.tokenizer_revision)
-    if args.resume:
-        check = Ledger(args.store, readonly=True)
-        schema = check.header.get("schema_version")
-        check.close()
-        if schema != 3:
-            raise ValueError("Live resume requires a 2.1 ledger (schema 3); old ledgers are replay-only here")
     ledger = Ledger(args.store)
     if args.resume and not ledger.header:
-        raise ValueError("Cannot resume a store without an episode header")
+        raise ValueError("Cannot resume a store without a v2 episode header")
     budget = UsageBudget(args.max_total_completion_tokens, ledger.events())
     policy = ChatClient(ChatConfig(base_url=args.policy_url, model=args.model, model_revision=args.model_revision,
                                   max_context_tokens=args.max_context_tokens, max_output_tokens=args.max_output_tokens,
@@ -128,12 +118,9 @@ def live(args) -> dict:
                                             temperature=0.0, thinking=args.audit_thinking), acounter, budget, ledger)
         auditor = ModelAuditor(audit_client)
     config = Config(mode=args.mode, audit_mode=audit_mode, max_actions=args.max_actions,
-                    search_top_k=args.search_top_k, view_chars=args.view_chars,
-                    recent_actions=args.recent_actions, max_pending_views=args.max_pending_views)
+                    search_top_k=args.search_top_k, view_chars=args.view_chars)
     retriever = EchoRetriever(args.retrieval_url)
     retriever.identity["index_revision"] = args.retrieval_revision
-    retriever.deterministic = args.deterministic_retrieval
-    retriever.identity["deterministic"] = args.deterministic_retrieval
     manifest = {"qid": args.qid, "policy": policy.identity, "code_revision": code_revision(),
                 "generation_budget": budget.limit,
                 "dataset_sha256": hashlib.sha256(Path(args.dataset).read_bytes()).hexdigest() if args.dataset else None,

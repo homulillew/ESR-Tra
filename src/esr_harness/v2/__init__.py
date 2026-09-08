@@ -1,4 +1,4 @@
-"""ESR 2.1 forward harness. Frozen v2 replay lives in esr_harness.v2."""
+"""Canonical ESR v2 forward harness. Legacy esr_grpo remains for reproduction only."""
 from .engine import Harness
 from .ledger import Ledger
 from .protocol import Config, HarnessError, VERSION

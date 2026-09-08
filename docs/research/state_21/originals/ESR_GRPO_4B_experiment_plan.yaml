@@ -1,0 +1,206 @@
+# 研究规划 manifest；不是当前仓库已经实现的 CLI 配置。
+# 所有预算/阈值为 pilot 起点，不是已验证的最优值。
+schema_version: '0.1-planning'
+status: proposed_not_executed
+review_date: '2026-09-07'
+repository:
+  full_name: homulillew/ESR-Tra
+  inspected_ref: main
+  inspected_tree_sha: 040710279e591162d793883cd64f8b1ae424a759
+  actual_run_commit: null
+  require_import_path_audit: true
+policy:
+  model: Qwen/Qwen3.5-4B
+  revision: null
+  tokenizer_revision: null
+  thinking: select_on_dev_then_freeze
+  working_context_tokens: 32768
+  max_policy_generation_tokens_per_call: 2048
+  cumulative_generation_tokens_per_episode: 24576
+  audit_generation_included_in_episode_budget: true
+  action_budget_sweep: [32, 64, 100]
+  parameterization: select_full_parameter_or_lora_then_hold_fixed
+retrieval:
+  main_backend: frozen_bm25
+  index_revision: null
+  top_k: 5
+  sensitivity_backend: frozen_dense_embedding
+  jointly_train_retriever: false
+  immutable_observation_views: true
+  persist_fields: [observation_id, episode_id, docid, chunk_ids, text, text_sha256, query, search_action_id, open_action_id]
+  verifier_reads_actual_visible_views_only: true
+  allow_new_chunk_views: true
+  new_chunk_view_requires_new_observation_id: true
+evaluation:
+  final_judge: frozen_benchmark_semantic_judge_with_manual_disagreement_audit
+  judge_model_revision: null
+  judge_prompt_hash: null
+  substring_smoke_judge_for_training_or_final_scores: false
+  value_normalization: typed_answer_aliases_units_dates_numbers
+  empty_gold: dataset_error
+  key_fields: [run_id, qid, seed, mode]
+  preserve_duplicate_runs: true
+  normal_budget_exhaustion: terminal_reward_zero
+  infrastructure_error: separate_status_predeclared_retry_policy
+  confidence_intervals: paired_bootstrap_clustered_by_qid
+  metrics:
+    - final_answer_accuracy_all_questions
+    - supported_answer_accuracy
+    - submission_coverage
+    - semantic_false_accept_rate
+    - semantic_false_reject_rate
+    - audit_parse_error_rate
+    - necessary_document_recall
+    - necessary_visible_span_recall
+    - unique_observation_gain
+    - repeated_open_rate
+    - no_op_update_rate
+    - candidate_switch_after_contradiction_rate
+    - policy_input_tokens
+    - policy_output_tokens
+    - audit_input_tokens
+    - audit_output_tokens
+    - search_calls
+    - latency_p50_p95
+    - budget_exhaustion_rate
+p0_regressions:
+  - substring_17_vs_117_and_negative_statement
+  - full_input_preserved_on_verifier_retry
+  - supported_with_gaps_is_protocol_error
+  - tool_schema_signature_consistency
+  - archived_observation_read_without_task_state
+  - same_doc_different_query_exact_view_replay
+  - no_op_update_preserves_audit_fingerprint
+  - gap_paraphrase_does_not_create_repair_credit
+  - duplicate_open_does_not_reset_information_stagnation
+  - infrastructure_error_does_not_create_semantic_gap
+  - one_success_seven_policy_budget_failures_keep_nonzero_advantage
+  - equal_length_and_ragged_credit_masks
+  - real_tokenizer_generated_id_and_action_span_alignment
+  - cross_segment_rollout_grouping_and_reward_once
+harness_experiments:
+  H0:
+    goal: deterministic_protocol_and_old_trace_regression
+    old_cases_range: [24, 40]
+    old_cases_are_dev_only: true
+  H1:
+    goal: fixed_input_verifier_calibration
+    snapshots: 300
+    strata: [supported, insufficient, contradicted, abstention_not_an_answer]
+    candidate_conditions: [correct_answer, plausible_wrong_entity, wrong_relation_target]
+    verifier_conditions: [same_4b_fresh_context_thinking_on, same_4b_fresh_context_thinking_off, strong_offline_reference]
+    blind_adjudication: true
+    keep_snapshot_related_variants_in_same_split: true
+  H2:
+    goal: harness_ablations
+    dev_questions: 100
+    stochastic_policy_seeds: [20260907, 20260908, 20260909]
+    deterministic_policy_repeats: 1
+    arms:
+      A: repaired_react_baseline
+      B: A_plus_compact_evidence_state_no_audit
+      C: B_plus_soft_atomic_audit
+      D: B_plus_hard_atomic_gate
+      E: C_plus_information_stagnation_feedback
+    shared_repairs: [schema, visible_views, infrastructure_handling, audit_cache_when_applicable]
+  H3:
+    goal: budget_and_retriever_sensitivity
+    selected_harness_count: 2
+    report_accuracy_cost_frontier: true
+    all_policy_and_audit_compute_counted: true
+  H4:
+    goal: frozen_heldout_confirmation
+    untouched_qid_manifest: null
+    freeze_prompts_and_hyperparameters_before_test: true
+    repetitions_for_checkpoint_selection_on_test: 0
+state:
+  claims: minimal_necessary_question_requirements_and_target_relations
+  stable_claim_ids: true
+  explicit_requirement_versions: true
+  answer_statuses: [tentative, answer, abstain]
+  per_claim_audit_statuses: [supported, unknown, contradicted]
+  record_all_opened_docs_in_archive: true
+  require_findings_for_every_opened_doc: false
+  audit_cache_key: [question_version, answer_value, requirements, sorted_actual_view_hashes]
+  audit_fresh_context: true
+  force_supported_after_failed_retries: false
+  semantic_audit_as_process_reward: false
+  semantic_audit_as_universal_submission_gate: false
+  optional_soft_audit_repair_rounds_pilot: 2
+data:
+  official_bc_plus_qa_split: test
+  official_bc_plus_question_count: 830
+  preferred_training_route: external_grounded_bc_plus_style_synthetic_tasks
+  alternative_route: explicitly_declared_custom_bc_plus_train_dev_test_split
+  existing_analyzed_questions: dev_or_regression_only
+  train_manifest: null
+  dev_manifest: null
+  test_manifest: null
+  deduplicate_by: [question_similarity, target_entity, relation_chain, evidence_source_overlap]
+  training_teacher_solver_sees_gold_in_prompt: false
+  offline_labeler_may_use_gold: true
+  preselected_gold_docids_in_imitation_search_trajectories: false
+  fabricated_tool_observations: false
+  synthesis_hops: [2, 4]
+  pass_rate_probe_rollouts: 8
+  main_pool: mixed_success_rate_with_some_easy_and_hard_curriculum_examples
+sft:
+  required_by_assumption: false
+  suggested_complete_trajectories: [1000, 2000]
+  suggested_repair_windows: [2000, 4000]
+  optional_audit_pairs: [1000, 2000]
+  teacher_continues_real_4b_prefixes_in_same_visible_state: true
+  mix:
+    normal_completion: 0.40
+    gap_repair: 0.30
+    contradiction_and_candidate_pivot: 0.20
+    protocol_recovery_and_termination: 0.10
+  initial_learning_rate: 0.00001
+  epochs_pilot: [0.5, 1.0]
+  trainable_tokens: assistant_generated_only
+rl:
+  initial_group_size: 8
+  group_size_sensitivity: 16
+  questions_per_global_batch_pilot: 32
+  learning_rate_grid: [0.0000003, 0.000001]
+  clipping_initial: 0.2
+  kl_coefficient_initial: 0.01
+  main_reward: final_answer_correctness_binary
+  no_reward_for: [audit_pass, gap_disappearance, query_rewrite, new_document_count]
+  positive_only_is_ablation_not_default: true
+  compute_group_statistics_per_logical_rollout: true
+  exclude_normal_policy_budget_failures_from_group: false
+  response_mask_excludes: [tool_observations, harness_feedback, external_verifier_generated_tokens]
+  same_policy_nested_audit_generated_tokens: require_separate_generation_context_and_old_logprob_or_mask
+  training_arms:
+    T0: base_4b_best_harness_no_training
+    T1: base_4b_best_harness_standard_grpo
+    T2: light_sft_best_harness_no_rl
+    T3: light_sft_best_harness_standard_grpo
+    T4: same_as_T3_full_trajectory_positive_only
+    T5: same_as_T3_original_esr_positive_only_provenance_mask
+    T6: same_as_T3_bounded_provenance_weighting
+  credit_selection_ablation_requires_matched_success_eligibility: true
+  audit_pass_eligibility_gate: separate_switch_from_credit_mask
+  optional_nearest_neighbor_baseline: echo_source_turn_routing_under_same_context_segmentation
+  optional_process_credit_baseline: trace_separate_reference_scoring_budget
+  proposed_bounded_weighting:
+    lambda_grid: [0.0, 1.0]
+    success_positive_advantage_weight: '(1 + lambda * credit_mask) / (1 + lambda * mean_credit_mask_over_policy_tokens)'
+    other_rollout_weight: 1.0
+    missing_trace_fallback_weight: 1.0
+    negative_advantage: unchanged_standard_grpo
+  monitoring:
+    - mixed_reward_group_fraction
+    - successful_trainable_rollout_fraction
+    - mask_density
+    - action_type_gradient_coverage
+    - actual_kl
+    - clipping_fraction
+    - old_logprob_reproduction_error
+    - rollout_policy_version_lag
+    - cumulative_generation_tokens
+    - cumulative_search_calls
+  mixed_group_fraction_warning_pilot: 0.20
+  pilot_budget_definition: cumulative_generated_tokens_not_only_optimizer_steps
+  hardware_and_long_sequence_smoke_validation_required: true

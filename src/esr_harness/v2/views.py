@@ -71,7 +71,6 @@ def post_json(url: str, body: dict, *, timeout: float = 60, headers: dict | None
 
 
 class EchoRetriever:
-    deterministic = True  # Operator must also declare a pinned index_revision for cache use.
     """Matches existing /retrieve, /get_doc and optional /get_doc_chunks contracts."""
     def __init__(self, base_url: str, timeout: float = 60):
         self.base_url, self.timeout = base_url.rstrip("/"), timeout
@@ -95,7 +94,6 @@ class EchoRetriever:
 
 
 class MemoryRetriever:
-    deterministic = True
     """Deterministic lexical test adapter, not a benchmark retriever."""
     def __init__(self, documents: list[dict]):
         self.documents = {str(d["docid"]): document(d, str(d["docid"])) for d in documents}
@@ -152,13 +150,7 @@ def make_view(doc: dict, retriever: Retriever, query: str, *, limit: int, top_k:
                 text = chunk.get("text", "")
                 if not isinstance(text, str) or not text.strip() or text not in full:
                     raise HarnessError("chunks_not_verbatim", "Chunk cannot be mapped to raw text")
-                supplied = chunk.get("start", chunk.get("offset"))
-                if type(supplied) is int and supplied >= 0 and full[supplied:supplied + len(text)] == text:
-                    start = supplied
-                else:
-                    start = full.find(text)
-                    if full.find(text, start + 1) >= 0:
-                        raise HarnessError("ambiguous_chunk_offset", "Repeated chunk needs a validated original offset")
+                start = full.find(text)
                 spans.append([start, start + len(text)])
         except (HarnessError, KeyError, TypeError, ValueError, AttributeError, OSError, NotImplementedError) as exc:
             fallback = getattr(exc, "code", type(exc).__name__)
@@ -173,71 +165,17 @@ def make_view(doc: dict, retriever: Retriever, query: str, *, limit: int, top_k:
                 candidates.append((-score, start, end))
             spans = [[s, e] for _, s, e in sorted(candidates)[:top_k]]
     selected, remaining = [], limit
-    # Select by retrieval rank BEFORE ordering the chosen source ranges for display.
-    # Subtract already selected intervals to avoid paying twice for overlapping chunks.
-    for start, end in spans:
-        uncovered = [(start, end)]
-        for left, right in merge_spans(selected):
-            pieces = []
-            for a, b in uncovered:
-                if b <= left or a >= right:
-                    pieces.append((a, b))
-                else:
-                    if a < left: pieces.append((a, left))
-                    if b > right: pieces.append((right, b))
-            uncovered = pieces
-        for a, b in uncovered:
-            if remaining <= 0: break
-            b = min(b, a + remaining)
-            selected.append([a, b])
-            remaining -= b - a
-    selected = merge_spans(selected)
+    for start, end in merge_spans(spans):
+        if remaining <= 0:
+            break
+        end = min(end, start + remaining)
+        selected.append([start, end])
+        remaining -= end - start
     if not selected:
         raise HarnessError("retrieval_error", "No visible text")
-    # Preserve relevance order for token-based admission, but display selected ranges in source order.
-    ranked = []
-    for a, b in spans:
-        for left, right in selected:
-            if max(a, left) < min(b, right):
-                ranked.append([max(a, left), min(b, right)])
     parts = [full[s:e] for s, e in selected]
     rendered = "\n\n".join(f"[chars {s}:{e}]\n{text}" for (s, e), text in zip(selected, parts))
     identity = {"docid": doc["docid"], "document_hash": doc["document_hash"], "spans": selected, "text": rendered}
     return {**identity, "view_hash": digest(identity), "source": source, "fallback": fallback,
-            "query": query, "raw_parts": parts, "priority_spans": ranked, "document_chars": len(full),
+            "query": query, "raw_parts": parts, "document_chars": len(full),
             "fully_visible": selected == [[0, len(full)]]}
-
-
-def shrink_view(view: dict, limit: int) -> dict:
-    """Capacity admission before return; never calls retriever or edits a stored view."""
-    from copy import deepcopy
-    if limit >= sum(e - s for s, e in view["spans"]):
-        return deepcopy(view)
-    spans, remaining = [], limit
-    for left, right in view.get("priority_spans", view["spans"]):
-        ranges = [(left, right)]
-        for a, b in merge_spans(spans):
-            fresh = []
-            for x, y in ranges:
-                if y <= a or x >= b:
-                    fresh.append((x, y))
-                else:
-                    if x < a: fresh.append((x, a))
-                    if y > b: fresh.append((b, y))
-            ranges = fresh
-        for x, y in ranges:
-            if remaining <= 0: break
-            y = min(y, x + remaining)
-            spans.append([x, y]); remaining -= y - x
-    spans = merge_spans(spans)
-    parts = []
-    for left, right in spans:
-        part = next(text[left-a:right-a] for (a, b), text in zip(view["spans"], view["raw_parts"])
-                    if a <= left < right <= b)
-        parts.append(part)
-    if not parts:
-        raise HarnessError("context_capacity", "Empty view is not an observation")
-    rendered = "\n\n".join(f"[chars {s}:{e}]\n{part}" for (s, e), part in zip(spans, parts))
-    identity = {"docid": view["docid"], "document_hash": view["document_hash"], "spans": spans, "text": rendered}
-    return {**view, **identity, "raw_parts": parts, "view_hash": digest(identity),
-            "fully_visible": spans == [[0, view["document_chars"]]], "admission_shortened": True}

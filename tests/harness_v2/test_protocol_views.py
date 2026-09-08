@@ -1,10 +1,10 @@
 from copy import deepcopy
 import pytest
 
-from esr_harness.audit import AUDIT_SYSTEM, status, validate_report
-from esr_harness.protocol import AUDIT_SCHEMA, Config, HarnessError, SCHEMAS, parse_object, validate
-from esr_harness.views import MemoryRetriever, document, make_view, merge_spans
-from conftest import opened, report_for, update
+from esr_harness.v2.audit import AUDIT_SYSTEM, status, validate_report
+from esr_harness.v2.protocol import AUDIT_SCHEMA, Config, HarnessError, SCHEMAS, parse_object, validate
+from esr_harness.v2.views import MemoryRetriever, document, make_view, merge_spans
+from .conftest import opened, report_for, update
 
 
 @pytest.mark.parametrize("text", ['[]', '1', 'null', '{"x": NaN}', '{"x":1,"x":2}',
