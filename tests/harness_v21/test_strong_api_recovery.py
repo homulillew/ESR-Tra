@@ -178,6 +178,21 @@ def test_native_tools_use_contract_and_reject_multiple_calls(tmp_path):
     with pytest.raises(HarnessError,match="exactly one"): c.complete(messages)
 
 
+def test_native_report_preserves_report_shape_and_exact_active_ids(tmp_path):
+    from esr_harness.audit import ModelAuditor
+    from esr_harness.protocol import canonical, AUDIT_SCHEMA
+    h=env();update(h,opened(h))
+    report=h.auditor.audit(h.question,h.state,list(h.observations.values()))
+    r=response();r['stop_reason']='tool_use';r['content']=[{'type':'tool_use','name':'audit_report','id':'report','input':report}]
+    c=client(tmp_path,[r]);c.budget=UsageBudget(2000)
+    received=ModelAuditor(c).audit(h.question,h.state,list(h.observations.values()))
+    assert received==report
+    schema=c.transport.requests[0]['tools'][0]['input_schema']
+    assert schema['properties']['claims']['minItems']==schema['properties']['claims']['maxItems']==1
+    assert schema['properties']['claims']['items']['properties']['claim_id']['enum']==['c0']
+    assert 'enum' not in AUDIT_SCHEMA['properties']['claims']['items']['properties']['claim_id']
+
+
 def test_context_check_is_finite(tmp_path):
     c=client(tmp_path,[])
     assert not c.fits([{"role":"user","content":"X"*70000}])

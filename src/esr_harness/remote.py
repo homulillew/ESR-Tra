@@ -107,6 +107,10 @@ class AnthropicClient:
                     content, serialized = content.split("\nTools:\n", 1)
                     tools = [{"name": t["name"], "description": t["description"], "input_schema": t["parameters"]}
                              for t in json.loads(serialized)]
+                elif "\nSchema:\n" in content:
+                    content, serialized = content.split("\nSchema:\n", 1)
+                    tools = [{"name": "audit_report", "description": "Return exactly one report using the supplied schema and claim IDs.",
+                              "input_schema": json.loads(serialized)}]
                 systems.append(content)
             elif message["role"] in {"user", "assistant"}:
                 # Merge adjacent roles explicitly. Exact mapped body is recorded before network I/O.
@@ -121,7 +125,8 @@ class AnthropicClient:
             result["system"] = "\n\n".join(systems)
         if tools:
             result["tools"] = tools
-            result["tool_choice"] = {"type": "any", "disable_parallel_tool_use": True}
+            result["tool_choice"] = ({"type": "tool", "name": "audit_report", "disable_parallel_tool_use": True}
+                                     if tools[0]["name"] == "audit_report" else {"type": "any", "disable_parallel_tool_use": True})
         return result
 
     @staticmethod
@@ -196,6 +201,8 @@ class AnthropicClient:
                     exc = HarnessError("protocol_error", "Expected exactly one declared native tool call with object input. Choose one proposed action; never issue parallel calls.")
                     exc.proposal = {"native_tool_calls": [{"name": c.get("name"), "input": c.get("input")} for c in calls]}
                     raise exc
+                if calls[0]["name"] == "audit_report":
+                    return canonical(calls[0]["input"])
                 return canonical({"action": calls[0]["name"], "arguments": calls[0]["input"]})
             if response.get("stop_reason") != "end_turn":
                 raise HarnessError("protocol_error", "Unexpected provider stop_reason=" + str(response.get("stop_reason")))

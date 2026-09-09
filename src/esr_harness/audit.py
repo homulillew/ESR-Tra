@@ -1,5 +1,6 @@
 """Fresh, source-grounded semantic audit. The model's interpretations are not sources."""
 from typing import Protocol
+from copy import deepcopy
 from .protocol import AUDIT_SCHEMA, HarnessError, canonical, digest, parse_object, validate
 
 from .prompts import AUDIT_PROMPT_VERSION, AUDIT_SYSTEM
@@ -14,7 +15,7 @@ def validate_report(report, state, views):
     expected = {c["claim_id"]: c for c in state["claims"]}
     got = [c["claim_id"] for c in report["claims"]]
     if len(got) != len(set(got)) or set(got) != set(expected):
-        raise HarnessError("audit_protocol_error", "Audit must cover each active requirement exactly once")
+        raise HarnessError("audit_protocol_error", f"audit.claims: expected exactly {sorted(expected)}, received {got}; do not invent or decompose claim IDs")
     if state["answer"] is None and report["target"]["status"] != "unknown":
         raise HarnessError("audit_protocol_error", "No bound answer: target must be unknown")
     for v in [report["target"], report["coverage"], *report["claims"]]:
@@ -54,7 +55,10 @@ class ModelAuditor:
     def audit(self, question, state, views):
         payload = {"question": question, **state,
                    "observations": [{"observation_id": v["observation_id"], "docid": v["docid"], "text": v["text"]} for v in views]}
-        messages = [{"role": "system", "content": AUDIT_SYSTEM + "\nSchema:\n" + canonical(AUDIT_SCHEMA)},
+        schema = deepcopy(AUDIT_SCHEMA)
+        schema["properties"]["claims"].update(minItems=len(state["claims"]), maxItems=len(state["claims"]))
+        schema["properties"]["claims"]["items"]["properties"]["claim_id"]["enum"] = [c["claim_id"] for c in state["claims"]]
+        messages = [{"role": "system", "content": AUDIT_SYSTEM + "\nSchema:\n" + canonical(schema)},
                     {"role": "user", "content": canonical(payload)}]
         last = ""
         for attempt in range(self.attempts):
