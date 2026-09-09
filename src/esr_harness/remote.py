@@ -93,7 +93,8 @@ class AnthropicClient:
         self.identity = {"protocol": "anthropic_messages", "config": asdict(self.config),
                          "context_estimate": "UTF-8 bytes of mapped JSON + 1024 overhead; conservative, not verified tokenizer",
                          "thinking": "omitted; provider default unverified", "model_revision": "gateway_alias_unpinned",
-                         "url": transport.base_url + "/v1/messages", "parser": "one_final_text_json_v1"}
+                         "url": transport.base_url + "/v1/messages", "parser": "one_native_call_or_final_text_json_v2",
+                         "parallel_control": "requested; observed gateway may ignore; multiple calls strictly rejected"}
 
     def body(self, messages, max_tokens):
         systems, turns, tools = [], [], []
@@ -185,7 +186,9 @@ class AnthropicClient:
             if response.get("stop_reason") == "tool_use" and body.get("tools"):
                 calls = [b for b in blocks if b.get("type") == "tool_use"]
                 if len(calls) != 1 or calls[0].get("name") not in {t["name"] for t in body["tools"]} or not isinstance(calls[0].get("input"), dict):
-                    raise HarnessError("protocol_error", "Expected exactly one declared native tool call with object input")
+                    exc = HarnessError("protocol_error", "Expected exactly one declared native tool call with object input. Choose one proposed action; never issue parallel calls.")
+                    exc.proposal = {"native_tool_calls": [{"name": c.get("name"), "input": c.get("input")} for c in calls]}
+                    raise exc
                 return canonical({"action": calls[0]["name"], "arguments": calls[0]["input"]})
             if response.get("stop_reason") != "end_turn":
                 raise HarnessError("protocol_error", "Unexpected provider stop_reason=" + str(response.get("stop_reason")))

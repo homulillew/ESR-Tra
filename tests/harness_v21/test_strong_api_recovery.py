@@ -29,6 +29,13 @@ def test_auxiliary_association_failure_preserves_semantics_without_false_provena
     assert h.actions[-1]["arguments"]["attempt_note"] == "read this source"
 
 
+@pytest.mark.parametrize("fields",[{"attempt_note":42},{"attempt_note":"note","attempt_id":[]},{"attempt_id":False}])
+def test_malformed_auxiliary_fields_do_not_erase_valid_research(fields):
+    h=env();r=update(h,opened(h),**fields)
+    assert r["ok"] and r["warnings"] and h.state["answer"]=="Taylor"
+    assert "attempt_note" not in h.actions[-1]["delta"]
+
+
 def test_semantic_error_retains_proposal_for_single_local_repair():
     h=env(); oid=opened(h)
     patch={"answer":"Taylor","claim_updates":[{"claim_id":"c0","finding":"relation","observation_ids":[oid]}],

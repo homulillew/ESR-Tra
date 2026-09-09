@@ -45,7 +45,7 @@ DESCRIPTIONS = {
     "search": "Search for document candidates. Snippets are navigation, not citable evidence.",
     "open_page": "Open a real search hit. Parent search ID is optional. query and offset are mutually exclusive. Returns an immutable, capacity-admitted observation.",
     "read_evidence": "Replay an observation exactly, even if already cited. Alternatively directory_cursor='start' (or returned cursor) lists archived view IDs. Choose exactly one mode.",
-    "update_state": "Local delta, not full-state rewrite. Omitted fields stay unchanged; answer=null withdraws a candidate. Pair finding with its observation_ids. New claims omit ID; returned IDs can be used next turn. Task revisions/retirements need a reason. Findings are interpretations, not verdicts.",
+    "update_state": "Local delta, not full-state rewrite. Omitted fields stay unchanged; answer=null withdraws a candidate. Pair finding with its observation_ids; citing automatically consumes pending views. Dismiss only irrelevant uncited views, never a view cited in the same update. New claims omit ID; returned IDs can be used next turn. Task revisions/retirements need a reason. Findings are interpretations, not verdicts. An invalid note association returns a warning without discarding valid research edits.",
     "verify_answer": "Fresh full-question audit of current interpretations and actual evidence. Partial answer=null is allowed but cannot pass target. Same semantic input uses cache; focus/attempt notes do not invalidate it.",
     "submit_answer": "End with current state.answer (default decision=answer) or decision=abstain. No alternative answer argument.",
     "finish": "Baseline only: end with the answer itself.",

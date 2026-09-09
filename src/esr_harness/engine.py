@@ -141,7 +141,13 @@ class Harness:
                 if name == "invalid_model_response" and isinstance(arguments, dict):
                     raise HarnessError(arguments.get("error_code", "protocol_error"), "Invalid model output: " + str(arguments.get("error", "Malformed decision")))
                 raise HarnessError("protocol_error", f"Unavailable action: {name}")
-            validate(arguments, self.config.tool_schema(name))
+            if name == "update_state" and isinstance(arguments, dict) and arguments:
+                # Semantic fields still validate atomically. Auxiliary metadata has an explicit warning path.
+                core = {k:v for k,v in arguments.items() if k not in {"attempt_note", "attempt_id"}}
+                schema = {**self.config.tool_schema(name), "minProperties": 0}
+                validate(core, schema)
+            else:
+                validate(arguments, self.config.tool_schema(name))
             if getattr(self.retriever, "identity", {}) != self.ledger.header["retriever"]:
                 raise HarnessError("service_error", "Declared retriever identity changed inside an episode")
             if self.auditor and self.auditor.identity != self.ledger.header["auditor"]:
@@ -289,13 +295,21 @@ class Harness:
                                                            exposed_ids=self.exposed, observations=self.observations)
         attempt_id = patch.get("attempt_id")
         warnings = []
+        for field in ("attempt_note", "attempt_id"):
+            if field in patch:
+                try:
+                    validate(patch[field], self.config.tool_schema("update_state")["properties"][field], "arguments."+field)
+                except HarnessError as exc:
+                    warnings.append({"path":"arguments."+field, "code":"unlinked_note", "message":str(exc)+"; research delta committed, auxiliary data retained only in action arguments"})
+        if warnings:
+            attempt_id = None
         if "attempt_note" in patch:
-            if attempt_id is None:
+            if attempt_id is None and not warnings:
                 focus = self.state["focus"]
                 attempt_id = next((sid for sid, s in reversed(list(self.searches.items())) if s["purpose"] and focus
                                    and s["purpose"]["claim_id"] == focus["claim_id"]
                                    and s["purpose"]["candidate_scope"] == candidate_scope(self.state)), None)
-            if attempt_id not in self.searches:
+            if not warnings and attempt_id not in self.searches:
                 warnings.append({"path": "arguments.attempt_id", "code": "unlinked_note",
                                  "message": "Research delta committed; note retained in action arguments but not linked to a search. Supply an existing attempt_id to link it."})
         elif attempt_id is not None:

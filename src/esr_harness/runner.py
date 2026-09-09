@@ -75,7 +75,7 @@ def run(harness, client):
             if exc.code in {"context_overflow", "service_error", "generation_budget_exhausted"}:
                 harness.end(exc.code)
                 break
-            harness.record_protocol_error(str(exc), decision_id, exc.code, action)
+            harness.record_protocol_error(str(exc), decision_id, exc.code, getattr(exc, "proposal", action))
             continue
         result = harness.execute(action["action"], action["arguments"], decision_id=decision_id)
         if not result["ok"] and result["error_code"] == "generation_budget_exhausted":

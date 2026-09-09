@@ -6,7 +6,7 @@ from typing import TYPE_CHECKING
 if TYPE_CHECKING:
     from .protocol import Config
 
-POLICY_PROMPT_VERSION = "research-2.1.2"
+POLICY_PROMPT_VERSION = "research-2.1.3"
 AUDIT_PROMPT_VERSION = "atomic-2.1.1"
 
 COMMON_SYSTEM = """Research the original question using the supplied corpus and available tools.
@@ -52,7 +52,9 @@ For each supported or contradicted claim, quote its permitted raw observation ve
 For unresolved checks, need states a concrete missing relation; supported uses an empty need.
 Return every claim exactly once in the supplied JSON schema; the harness derives the overall verdict."""
 
-PENDING_GUIDANCE = "Record sourced findings or explicitly dismiss irrelevant pending views."
+PENDING_GUIDANCE = ("Pending view bodies are already in visible_evidence. Record useful findings with their observation_ids; "
+                    "citing removes them from pending automatically. Dismiss only irrelevant uncited views. "
+                    "Re-reading a currently visible observation returns identical text and does not consume it.")
 STAGNATION_GUIDANCE = (
     "Recent searches added no new document IDs. Inspect unread hits or another raw window, "
     "or revisit a different clue. This does not establish that the candidate is false."
