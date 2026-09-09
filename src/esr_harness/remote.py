@@ -96,10 +96,15 @@ class AnthropicClient:
                          "url": transport.base_url + "/v1/messages", "parser": "one_final_text_json_v1"}
 
     def body(self, messages, max_tokens):
-        systems, turns = [], []
+        systems, turns, tools = [], [], []
         for message in messages:
             if message["role"] == "system":
-                systems.append(message["content"])
+                content = message["content"]
+                if "\nTools:\n" in content:
+                    content, serialized = content.split("\nTools:\n", 1)
+                    tools = [{"name": t["name"], "description": t["description"], "input_schema": t["parameters"]}
+                             for t in json.loads(serialized)]
+                systems.append(content)
             elif message["role"] in {"user", "assistant"}:
                 # Merge adjacent roles explicitly. Exact mapped body is recorded before network I/O.
                 if turns and turns[-1]["role"] == message["role"]:
@@ -111,6 +116,9 @@ class AnthropicClient:
         result = {"model": self.config.model, "max_tokens": max_tokens, "temperature": self.config.temperature, "messages": turns}
         if systems:
             result["system"] = "\n\n".join(systems)
+        if tools:
+            result["tools"] = tools
+            result["tool_choice"] = {"type": "any", "disable_parallel_tool_use": True}
         return result
 
     @staticmethod
@@ -173,9 +181,14 @@ class AnthropicClient:
                 raise HarnessError("generation_budget_exhausted", "Provider exceeded reservation; stop to revise capacity assumptions")
             if response.get("stop_reason") == "max_tokens":
                 raise HarnessError("output_truncated", "Provider stop_reason=max_tokens; no partial action executed")
+            blocks = response.get("content", [])
+            if response.get("stop_reason") == "tool_use" and body.get("tools"):
+                calls = [b for b in blocks if b.get("type") == "tool_use"]
+                if len(calls) != 1 or calls[0].get("name") not in {t["name"] for t in body["tools"]} or not isinstance(calls[0].get("input"), dict):
+                    raise HarnessError("protocol_error", "Expected exactly one declared native tool call with object input")
+                return canonical({"action": calls[0]["name"], "arguments": calls[0]["input"]})
             if response.get("stop_reason") != "end_turn":
                 raise HarnessError("protocol_error", "Unexpected provider stop_reason=" + str(response.get("stop_reason")))
-            blocks = response.get("content", [])
             texts = [b["text"] for b in blocks if b.get("type") == "text" and isinstance(b.get("text"), str)]
             if len(texts) != 1 or any(b.get("type") not in {"text","thinking","redacted_thinking"} for b in blocks):
                 raise HarnessError("protocol_error", "Expected exactly one final text block; raw content retained")

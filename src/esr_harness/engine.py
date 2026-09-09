@@ -139,7 +139,7 @@ class Harness:
         try:
             if name not in {t["name"] for t in self.config.tools}:
                 if name == "invalid_model_response" and isinstance(arguments, dict):
-                    raise HarnessError("protocol_error", "Invalid model output: " + str(arguments.get("error", "Malformed decision")))
+                    raise HarnessError(arguments.get("error_code", "protocol_error"), "Invalid model output: " + str(arguments.get("error", "Malformed decision")))
                 raise HarnessError("protocol_error", f"Unavailable action: {name}")
             validate(arguments, self.config.tool_schema(name))
             if getattr(self.retriever, "identity", {}) != self.ledger.header["retriever"]:
@@ -167,7 +167,8 @@ class Harness:
             # Only a validated search-focus edit may survive an external retrieval failure.
             if name != "search" or exc.code not in {"service_error", "retrieval_error"}:
                 delta = {}
-            result = {"ok": False, "action_id": aid, "error_code": exc.code, "error": str(exc)[:2000]}
+            result = {"ok": False, "action_id": aid, "error_code": exc.code, "error": str(exc),
+                      "error_path": str(exc).split(":", 1)[0] if str(exc).startswith(("arguments.", "state.")) else "arguments"}
             if name == "search":
                 result["focus_edit_applied"] = "state" in delta
         event = {"type": "tool", "action_id": aid, "decision_id": decision_id, "action": name,
@@ -182,8 +183,9 @@ class Harness:
         self._commit(event)
         return deepcopy(event["result"])
 
-    def record_protocol_error(self, message, decision_id=None):
-        return self.execute("invalid_model_response", {"error": message[:2000]}, decision_id=decision_id)
+    def record_protocol_error(self, message, decision_id=None, error_code="protocol_error", proposal=None):
+        return self.execute("invalid_model_response", {"error": message, "error_code": error_code,
+                            "parsed_proposal": proposal}, decision_id=decision_id)
 
     def _search(self, aid, query, top_k=None, focus=None, anchor_refs=None):
         state = edit_focus(self.state, focus) if focus is not None else self.state

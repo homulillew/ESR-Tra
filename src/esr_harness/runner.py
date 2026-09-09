@@ -18,12 +18,16 @@ def messages_for(harness, client):
         messages = [system, {"role": "user", "content": canonical(card)}]
         if harness.config.mode == "baseline":
             # Ordinary ReAct history, retained verbatim without state tables or model summaries.
-            history = [{"role": "user", "content": harness.question}]
+            history = []
             for event in harness.actions:
                 history.extend([{"role": "assistant", "content": canonical({"action": event["action"], "arguments": event["arguments"]})},
                                 {"role": "user", "content": canonical(event["result"])}])
-            # Keep the current card at index 1 for API consumers; history is chronological thereafter.
-            messages = [system, messages[1], *history]
+            # Neutral initial metadata followed by chronological full actions/results. No duplicated bodies.
+            initial = {"question": harness.question, "state": None, "focus_attempts": [], "guidance": []}
+            current = {"remaining_actions": card["remaining_actions"], "budget": card.get("budget"),
+                       "failed_proposal": card.get("failed_proposal")}
+            messages = [system, {"role": "user", "content": canonical(initial)}, *history,
+                        {"role": "user", "content": canonical(current)}]
         if client.fits(messages):
             return messages
     raise HarnessError("context_overflow", "Required state, pending and latest result do not fit; none were dropped")
@@ -41,6 +45,7 @@ def run(harness, client):
     harness.admission = admissible
     while harness.terminal is None and harness.attempts < harness.config.max_actions:
         decision_id = None
+        action = None
         try:
             messages = messages_for(harness, client)
             ids = visible_ids(harness)
@@ -70,7 +75,7 @@ def run(harness, client):
             if exc.code in {"context_overflow", "service_error", "generation_budget_exhausted"}:
                 harness.end(exc.code)
                 break
-            harness.record_protocol_error(str(exc), decision_id)
+            harness.record_protocol_error(str(exc), decision_id, exc.code, action)
             continue
         result = harness.execute(action["action"], action["arguments"], decision_id=decision_id)
         if not result["ok"] and result["error_code"] == "generation_budget_exhausted":

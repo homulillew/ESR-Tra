@@ -122,7 +122,10 @@ def test_attempt_note_is_linked_and_does_not_invalidate_audit():
     r=h.execute("update_state",{"attempt_note":"This viewed passage establishes the year only.","attempt_id":"a1"})
     assert r["ok"] and h.fingerprint()==fp
     assert h.context()["focus_attempts"][-1]["actor_report_not_verified"]
-    assert not h.execute("update_state",{"attempt_note":"x","attempt_id":"a999"})["ok"]
+    result = h.execute("update_state",{"attempt_note":"x","attempt_id":"a999"})
+    assert result["ok"] and result["warnings"][0]["code"] == "unlinked_note"
+    assert "attempt_note" not in h.actions[-1]["delta"]
+    assert h.fingerprint() == fp
 
 
 def test_resume_replays_exposures_cache_and_ids(tmp_path):
