@@ -239,6 +239,22 @@ def test_undeclared_single_tool_is_not_misreported_as_parallel_calls(tmp_path):
     assert 'missing_tool' in str(exc.value) and 'parallel' not in str(exc.value)
 
 
+def test_text_interface_preserves_full_contract_and_strict_action_envelope(tmp_path):
+    from dataclasses import replace
+    from esr_harness.protocol import canonical, parse_object
+    cfg=Config(mode='baseline',audit_mode='off')
+    messages=[{'role':'system','content':'One JSON action.\nTools:\n'+canonical(cfg.tools)},
+              {'role':'user','content':'fixture'}]
+    r=response();r['content'][0]['text']='{}{}'
+    c=client(tmp_path,[response(),r]);c.config=replace(c.config,policy_tool_interface='text')
+    assert parse_object(c.complete(messages))['action']=='finish'
+    body=c.transport.requests[0]
+    assert 'tools' not in body and 'tool_choice' not in body and body['system']==messages[0]['content']
+    with pytest.raises(HarnessError):parse_object(c.complete(messages))
+    audit_body=c.body([{'role':'system','content':'Audit.\nSchema:\n'+canonical({'type':'object'})}],32)
+    assert audit_body['tools'][0]['name']=='audit_report'
+
+
 def test_context_check_is_finite(tmp_path):
     c=client(tmp_path,[])
     assert not c.fits([{"role":"user","content":"X"*70000}])

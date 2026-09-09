@@ -98,7 +98,7 @@ class RemoteConfig:
     policy_tool_interface: str = 'native'
 
     def __post_init__(self):
-        if self.policy_tool_interface not in {'native', 'dispatcher'}:
+        if self.policy_tool_interface not in {'native', 'dispatcher', 'text'}:
             raise ValueError('Unknown policy tool interface')
 
 
@@ -119,7 +119,7 @@ class AnthropicClient:
         for message in messages:
             if message["role"] == "system":
                 content = message["content"]
-                if "\nTools:\n" in content:
+                if "\nTools:\n" in content and self.config.policy_tool_interface != 'text':
                     content, serialized = content.split("\nTools:\n", 1)
                     tools = [{"name": t["name"], "description": t["description"], "input_schema": t["parameters"]}
                              for t in json.loads(serialized)]

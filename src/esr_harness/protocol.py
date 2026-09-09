@@ -69,7 +69,7 @@ def validate(value, schema, path="arguments"):
                 pass
         raise HarnessError("protocol_error", f"{path}: no permitted type matches")
     if "enum" in schema and value not in schema["enum"]:
-        raise HarnessError("protocol_error", f"{path}: invalid enum")
+        raise HarnessError("protocol_error", f"{path}: invalid enum; expected one of {schema['enum']!r}, received {value!r}")
     kind = schema.get("type")
     checks = {"null": lambda: value is None, "object": lambda: isinstance(value, dict),
               "array": lambda: isinstance(value, list), "string": lambda: isinstance(value, str),

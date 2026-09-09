@@ -16,6 +16,7 @@ provider:
   credential_env: ANTHROPIC_AUTH_TOKEN
   temperature: 0.6
   max_output_tokens: 4096
+  policy_tool_interface: text
   # Conservative operating cap, not a verified model context-window specification.
   context_operating_cap: 128000
   context_recovery_headroom: 2048
