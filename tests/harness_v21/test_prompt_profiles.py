@@ -30,10 +30,10 @@ def test_rendered_system_has_only_available_action_instructions(mode, audit_mode
     messages = messages_for(h, SimpleNamespace(fits=lambda messages: True))
     instructions, serialized = messages[0]["content"].split("\nTools:\n")
     tools = json.loads(serialized)
-    assert tools == h.config.tools
+    assert tools == h.available_tools()
     names = {t["name"] for t in tools}
-    assert ("verify_answer" in names) == (mode == "esr" and audit_mode != "off")
-    for unavailable in {"update_state", "verify_answer", "submit_answer", "finish"} - names:
+    assert "verify_answer" not in names  # empty bootstrap has no material audit packet
+    for unavailable in {"update_state", "verify_answer", "submit_answer", "finish"} - {t["name"] for t in h.config.tools}:
         assert unavailable not in instructions
     if mode == "baseline":
         assert "focus" not in instructions and "findings" not in instructions
@@ -56,8 +56,8 @@ def test_baseline_pending_does_not_request_nonexistent_state_actions():
     opened(h, expose=False)
     assert h.pending
     card = json.loads(messages_for(h, SimpleNamespace(fits=lambda messages: True))[1]["content"])
-    assert card["state"] is None and card["focus_attempts"] == []
-    assert card["guidance"] == []
+    assert set(card) == {"question"}
+    assert "update_state" not in messages_for(h, SimpleNamespace(fits=lambda messages: True))[0]["content"]
 
 
 @pytest.mark.parametrize("field,value", [

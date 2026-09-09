@@ -9,7 +9,7 @@ from .prompts import POLICY_PROMPT_VERSION, policy_system
 
 
 def messages_for(harness, client):
-    system = {"role": "system", "content": policy_system(harness.config) + "\nTools:\n" + canonical(harness.config.tools)}
+    system = {"role": "system", "content": policy_system(harness.config) + "\nTools:\n" + canonical(harness.available_tools())}
     for limit in range(harness.config.recent_actions, -1, -1):
         card = harness.context(limit)
         budget = getattr(client, "budget", None)
@@ -23,7 +23,7 @@ def messages_for(harness, client):
                 history.extend([{"role": "assistant", "content": canonical({"action": event["action"], "arguments": event["arguments"]})},
                                 {"role": "user", "content": canonical(event["result"])}])
             # Neutral initial metadata followed by chronological full actions/results. No duplicated bodies.
-            initial = {"question": harness.question, "state": None, "focus_attempts": [], "guidance": []}
+            initial = {"question": harness.question}
             current = {"remaining_actions": card["remaining_actions"], "budget": card.get("budget"),
                        "failed_proposal": card.get("failed_proposal")}
             messages = [system, {"role": "user", "content": canonical(initial)}, *history,
@@ -51,7 +51,7 @@ def run(harness, client):
             ids = visible_ids(harness)
             decision_id = f"d{len(harness.ledger.events()) + 1}"
             harness.ledger.append({"type": "decision", "decision_id": decision_id, "messages": messages,
-                                   "compiler_version": "workcard-2.1.1", "prompt_hash": digest(messages),
+                                   "compiler_version": "workcard-2.1.4", "prompt_hash": digest(messages),
                                    "policy_prompt_version": POLICY_PROMPT_VERSION,
                                    "policy_system_hash": digest(messages[0]["content"]),
                                    "visible_observation_ids": ids,

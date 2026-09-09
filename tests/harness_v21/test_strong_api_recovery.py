@@ -78,6 +78,25 @@ def test_submit_readiness_uses_execution_preconditions():
     assert h.readiness()["submit_answer.answer"]["ready"]
 
 
+def test_native_tool_availability_retains_all_recovery_routes():
+    h=env()
+    tools={t['name']:t for t in h.available_tools()}
+    assert 'verify_answer' not in tools and 'open_page' not in tools
+    assert tools['submit_answer']['parameters']['properties']['decision']['enum']==['abstain']
+    oid=opened(h)
+    assert 'verify_answer' not in {t['name'] for t in h.available_tools()}
+    assert update(h,oid,focus=None)['ok']
+    tools={t['name']:t for t in h.available_tools()}
+    assert 'verify_answer' in tools
+    assert 'observation_id' not in tools['read_evidence']['parameters']['properties']
+    assert 'update_state' in tools and 'search' in tools  # either can restore focus
+    h.execute('update_state',{'focus':{'claim_id':'c0','need':'inspect source'}})
+    assert 'observation_id' in next(t for t in h.available_tools() if t['name']=='read_evidence')['parameters']['properties']
+    h.execute('verify_answer')
+    assert 'verify_answer' not in {t['name'] for t in h.available_tools()}
+    assert h.execute('verify_answer')['cached']  # cache remains available to direct/replay clients
+
+
 def test_baseline_retains_full_observations_and_query_results():
     h=env(config=Config(mode="baseline",audit_mode="off")); o=opened(h)
     h.execute("search",{"query":"Other"})

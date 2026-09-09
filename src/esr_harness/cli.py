@@ -137,7 +137,8 @@ def live(args) -> dict:
     retriever.identity["deterministic"] = args.deterministic_retrieval
     manifest = {"qid": args.qid, "policy": policy.identity, "code_revision": code_revision(),
                 "policy_prompt": {"version": POLICY_PROMPT_VERSION,
-                                  "system_hash": digest(policy_system(config) + "\nTools:\n" + canonical(config.tools))},
+                                  "template_hash": digest(policy_system(config) + "\nTools:\n" + canonical(config.tools)),
+                                  "actual_system_hash": "recorded per decision; tools depend on state"},
                 "generation_budget": budget.limit,
                 "dataset_sha256": hashlib.sha256(Path(args.dataset).read_bytes()).hexdigest() if args.dataset else None,
                 "note": "Served model/index revisions are operator declarations, not remotely attested hashes."}

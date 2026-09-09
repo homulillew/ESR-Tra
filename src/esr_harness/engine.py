@@ -379,6 +379,37 @@ class Harness:
                 conflicts[digest(record)] = record
         return {"audit": audit, "cached": False, "evidence_repair_ids": repaired}, {"audit": audit, "conflicts": conflicts}
 
+    def available_tools(self):
+        """Render a state-valid subset of the single contract; no evidence or verdict changes.
+
+        Direct engine calls retain the full contract, including deterministic audit-cache reads.
+        Native policy requests omit actions whose current preconditions cannot be satisfied.
+        """
+        pending = self.pending if self.config.mode == "esr" else set()
+        focus_ok = self.config.mode == "baseline" or self.state["focus"] is not None
+        cited = {o for c in self.state["claims"] for o in c["observation_ids"]}
+        readable = sorted(o for o in self.observations if focus_ok and
+                          (o in cited | pending or len(pending) < self.config.max_pending_views))
+        result = []
+        for tool in deepcopy(self.config.tools):
+            name = tool["name"]
+            if name == "open_page" and (not self.searches or not focus_ok or len(pending) >= self.config.max_pending_views):
+                continue
+            if name == "read_evidence":
+                if not readable:
+                    tool["parameters"]["properties"].pop("observation_id")
+                    tool["parameters"]["required"] = ["directory_cursor"]
+                else:
+                    tool["parameters"]["properties"]["observation_id"]["enum"] = readable
+            if name == "verify_answer" and (pending or self.current_audit is not None or
+                                              (self.state["answer"] is None and not cited)):
+                continue
+            if name == "submit_answer" and self.answer_blocker():
+                tool["parameters"]["properties"]["decision"]["enum"] = ["abstain"]
+                tool["parameters"]["required"] = ["decision"]
+            result.append(tool)
+        return result
+
     def _submit(self, aid, decision="answer", reason=""):
         if decision == "abstain":
             terminal = {"outcome": "abstained", "answer": "", "final_draft": self.state["answer"],
