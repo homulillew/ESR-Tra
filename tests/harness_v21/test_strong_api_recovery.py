@@ -97,6 +97,23 @@ def test_native_tool_availability_retains_all_recovery_routes():
     assert h.execute('verify_answer')['cached']  # cache remains available to direct/replay clients
 
 
+@pytest.mark.parametrize('mode',['baseline','esr'])
+def test_readable_id_enum_never_leaks_into_other_tool_fields(mode):
+    from esr_harness.protocol import canonical,SCHEMAS,validate
+    before=canonical(SCHEMAS)
+    h=env(config=Config(mode=mode,audit_mode='off'));oid=opened(h)
+    tools={t['name']:t['parameters'] for t in h.available_tools()}
+    assert tools['read_evidence']['properties']['observation_id']['enum']==[oid]
+    assert 'enum' not in tools['open_page']['properties']['docid']
+    assert 'enum' not in tools['open_page']['properties']['search_action_id']
+    validate({'docid':'d1'},tools['open_page'])
+    if mode=='esr':
+        validate({'query':'Lake','focus':{'claim_id':'c0','need':'inspect source'}},tools['search'])
+        validate({'claim_updates':[{'claim_id':'c0','finding':'Source fact','observation_ids':[oid]}]},tools['update_state'])
+        assert 'enum' not in tools['update_state']['properties']['attempt_id']
+    assert canonical(SCHEMAS)==before
+
+
 def test_baseline_retains_full_observations_and_query_results():
     h=env(config=Config(mode="baseline",audit_mode="off")); o=opened(h)
     h.execute("search",{"query":"Other"})
@@ -175,6 +192,21 @@ def test_global_reservation_rejects_overrun(tmp_path):
     with pytest.raises(HarnessError): b.reserve("audit",12,7)
 
 
+def test_daily_quota_holds_all_purposes_across_restart_without_refunding(tmp_path):
+    import httpx
+    from dataclasses import replace
+    error=httpx.HTTPStatusError('quota',request=httpx.Request('POST','http://fixture'),
+                               response=httpx.Response(429,text=json.dumps({'error':{'message':'超过EB模型每日最多调用次数'}})))
+    c=client(tmp_path,[error,response()]);c.config=replace(c.config,transport_attempts=2)
+    with pytest.raises(HarnessError,match='daily request quota'):c.complete([{'role':'user','content':'fixture'}])
+    assert len(c.transport.requests)==1 and c.budget.charged_tokens==32
+    assert c.global_budget.summary()['purposes'][0]['unknown_or_outstanding_requests']==1
+    resumed=client(tmp_path,[response()])
+    with pytest.raises(HarnessError,match='paused'):resumed.complete([{'role':'user','content':'fixture'}],purpose='judge')
+    with pytest.raises(HarnessError):resumed.global_budget.episode('new','development')
+    assert resumed.transport.requests==[] and resumed.budget.charged_tokens==0
+
+
 def test_native_tools_use_contract_and_reject_multiple_calls(tmp_path):
     from esr_harness.protocol import canonical
     cfg=Config(mode="baseline",audit_mode="off")
@@ -203,6 +235,7 @@ def test_native_report_preserves_report_shape_and_exact_active_ids(tmp_path):
     assert schema['properties']['claims']['minItems']==schema['properties']['claims']['maxItems']==1
     assert schema['properties']['claims']['items']['properties']['claim_id']['enum']==['c0']
     assert 'enum' not in AUDIT_SCHEMA['properties']['claims']['items']['properties']['claim_id']
+    assert 'enum' not in schema['properties']['claims']['items']['properties']['quotes']['items']['properties']['observation_id']
 
 
 def test_dispatcher_preserves_contract_and_rejects_multiple_proposals(tmp_path):

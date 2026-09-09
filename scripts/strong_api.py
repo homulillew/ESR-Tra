@@ -81,6 +81,7 @@ def episode(root, budget, transport, settings, *, question, qid, arm, category, 
         frozen=check_final_freeze(root,snapshot(),settings)
         if arm not in frozen['confirmation_plan']['arms']:
             raise ValueError('Arm differs from final confirmation plan')
+    budget.ensure_available()
     rid=datetime.now(timezone.utc).strftime("%Y%m%dT%H%M%S%fZ")+f"_{category}_{arm}_{qid}_{replicate}"
     directory=root/rid
     directory.mkdir()

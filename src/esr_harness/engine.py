@@ -401,7 +401,10 @@ class Harness:
                     tool["parameters"]["properties"].pop("observation_id")
                     tool["parameters"]["required"] = ["directory_cursor"]
                 else:
-                    tool["parameters"]["properties"]["observation_id"]["enum"] = readable
+                    # ID schemas are shared in the contract; deepcopy preserves aliases.
+                    # Replace this field so its enum cannot constrain unrelated IDs.
+                    props=tool['parameters']['properties']
+                    props['observation_id']={**props['observation_id'],'enum':readable}
             if name == "verify_answer" and (pending or self.current_audit is not None or
                                               (self.state["answer"] is None and not cited)):
                 continue

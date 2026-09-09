@@ -76,7 +76,9 @@ class ModelAuditor:
             payload['observations'],references=source_span_packet(views,self.span_max_chars)
         schema = deepcopy(self.schema)
         schema["properties"]["claims"].update(minItems=len(state["claims"]), maxItems=len(state["claims"]))
-        schema["properties"]["claims"]["items"]["properties"]["claim_id"]["enum"] = [c["claim_id"] for c in state["claims"]]
+        claim_props=schema['properties']['claims']['items']['properties']
+        # Detach the shared ID schema before specializing only claim_id.
+        claim_props['claim_id']={**claim_props['claim_id'],'enum':[c['claim_id'] for c in state['claims']]}
         if self.citation_mode=='source_spans':
             quotes=schema['properties']['claims']['items']['properties']['quotes']
             if references:quotes['items']['properties']['span_id']['enum']=list(references)

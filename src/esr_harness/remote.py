@@ -1,5 +1,7 @@
 """Thin Anthropic adapter with durable global reservations and raw provider receipts."""
 from dataclasses import dataclass, asdict
+from datetime import datetime, timezone
+from pathlib import Path
 import json
 import sqlite3
 import time
@@ -20,6 +22,7 @@ def normalize_tool_text(text):
 class GlobalBudget:
     """One writer, all remote purposes. Outstanding requests remain conservatively charged."""
     def __init__(self, path, *, input_limit=30000000, output_limit=6000000, episode_limit=240, probe_limit=12):
+        self.hold_path=Path(path).parent/'PROVIDER_BLOCKED.json'
         self.db = sqlite3.connect(path)
         self.db.executescript("""
             CREATE TABLE IF NOT EXISTS limits (singleton INTEGER PRIMARY KEY, payload TEXT NOT NULL);
@@ -35,7 +38,20 @@ class GlobalBudget:
             self.db.execute("INSERT INTO limits VALUES(1,?)", (canonical(self.limits),))
             self.db.commit()
 
+    def ensure_available(self):
+        if self.hold_path.exists():
+            record=json.loads(self.hold_path.read_text(encoding='utf-8-sig'))
+            raise HarnessError('service_error','Provider requests paused: '+record['reason'])
+
+    def hold_provider(self, reason, **metadata):
+        try:
+            with self.hold_path.open('x',encoding='utf-8') as f:
+                json.dump({'created_at_utc':datetime.now(timezone.utc).isoformat(),'reason':reason,**metadata},f,ensure_ascii=False,indent=2)
+        except FileExistsError:
+            pass  # Preserve the original reason and evidence on repeated entry.
+
     def episode(self, episode_id, category):
+        self.ensure_available()
         with self.db:
             self.db.execute("BEGIN IMMEDIATE")
             n = self.db.execute("SELECT count(*) FROM episodes").fetchone()[0]
@@ -45,6 +61,7 @@ class GlobalBudget:
             self.db.execute("INSERT INTO episodes VALUES(?,?,?)", (episode_id, category, "started"))
 
     def reserve(self, purpose, input_tokens, output_tokens):
+        self.ensure_available()
         with self.db:
             self.db.execute("BEGIN IMMEDIATE")
             used_in, used_out = self.db.execute("SELECT coalesce(sum(input_charged),0), coalesce(sum(output_charged),0) FROM requests").fetchone()
@@ -175,6 +192,7 @@ class AnthropicClient:
                 "measurement": "conservative UTF-8 bytes plus overhead, not provider token count; includes all current history"}
 
     def complete(self, messages, purpose="policy"):
+        self.global_budget.ensure_available()
         reserve_finish = 512 if purpose == "audit" else 0
         maximum = min(self.config.max_output_tokens, self.budget.remaining - reserve_finish)
         if maximum <= 0:
@@ -212,6 +230,19 @@ class AnthropicClient:
                                     "usage": None, "reserved_completion_tokens": maximum,
                                     "elapsed_seconds": time.monotonic()-started})
                 self.budget.unknown_usage_requests += 1
+                quota_message=error_body
+                if http_status == 429 and isinstance(error_body,str):
+                    try:
+                        parsed_error=json.loads(error_body)
+                        if isinstance(parsed_error,dict) and isinstance(parsed_error.get('error'),dict):
+                            quota_message=parsed_error['error'].get('message','')
+                    except ValueError:
+                        pass
+                if http_status == 429 and isinstance(quota_message,str) and '每日最多调用次数' in quota_message:
+                    self.global_budget.hold_provider('EB daily request quota exhausted; same-route quota restoration is required',
+                        source_request_id=rid,model=self.config.model,url=self.identity['url'],
+                        provider_error_body=error_body,reset_time_verified=False)
+                    raise HarnessError('service_error','EB daily request quota exhausted; further research requests paused') from None
                 retryable = http_status in {429,500,502,503,504} or type(exc).__name__ in {"ConnectTimeout","ReadTimeout","ConnectError"}
                 if retryable and attempt + 1 < self.config.transport_attempts:
                     time.sleep(0.25)
