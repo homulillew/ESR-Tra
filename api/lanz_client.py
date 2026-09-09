@@ -76,6 +76,19 @@ class LanzClient:
         resp.raise_for_status()
         return resp.json()
 
+    def request(self, body: dict, *, timeout=None) -> tuple[dict, dict]:
+        """Send an already mapped provider body, without extra prompts or hidden retries.
+
+        Return response JSON and allowlisted receipt headers. Never return authentication.
+        Existing configured client identification is retained; no fallback UA on failure.
+        """
+        response = httpx.post(f"{self.base_url}/v1/messages", headers=self._headers(),
+                              json=body, timeout=timeout or self.timeout)
+        response.raise_for_status()
+        receipt = {k: response.headers[k] for k in ("request-id", "x-request-id", "anthropic-request-id")
+                   if k in response.headers}
+        return response.json(), {"http_status": response.status_code, **receipt}
+
     @staticmethod
     def _extract_text(js: dict[str, Any]) -> str:
         """从响应里抓取助手回复文本，兼容 text / tool_use 等 content 块。"""
