@@ -1,5 +1,6 @@
 """Bounded research entry point. Agent decisions remain exclusively in esr_harness."""
 import argparse
+from contextlib import redirect_stdout, redirect_stderr
 from collections import Counter
 from dataclasses import replace
 from datetime import datetime, timezone
@@ -73,6 +74,12 @@ def systemic_failure(result, directory):
 
 
 def episode(root, budget, transport, settings, *, question, qid, arm, category, index=None, replicate=0):
+    from strong_api_freeze_guard import check_episode_input, check_final_freeze
+    check_episode_input(root,category,qid,question,arm)
+    if category=='confirmation':
+        frozen=check_final_freeze(root,snapshot(),settings)
+        if arm not in frozen['confirmation_plan']['arms']:
+            raise ValueError('Arm differs from final confirmation plan')
     rid=datetime.now(timezone.utc).strftime("%Y%m%dT%H%M%S%fZ")+f"_{category}_{arm}_{qid}_{replicate}"
     directory=root/rid
     directory.mkdir()
@@ -102,12 +109,16 @@ def episode(root, budget, transport, settings, *, question, qid, arm, category, 
     harness=Harness(question,retriever,auditor,config=config,ledger=ledger,manifest=manifest)
     error=None
     try:
-        result=run(harness,client)
+        with (directory/'stdout.log').open('x',encoding='utf-8') as stdout, (directory/'stderr.log').open('x',encoding='utf-8') as stderr:
+            with redirect_stdout(stdout), redirect_stderr(stderr):
+                result=run(harness,client)
     except Exception as exc:
         error={"type":type(exc).__name__,"traceback":traceback.format_exc()}
         # Source contains no credential literal; do not stringify the transport or its headers.
         error["traceback"]=error["traceback"].replace(transport.token,"[REDACTED]")
         write_json(directory/"failure.json",error)
+        with (directory/'stderr.log').open('a',encoding='utf-8') as stderr:
+            print(error['traceback'],file=stderr)
         from esr_harness.runner import summary
         result=summary(harness,usage)
         result["execution_error"]=error["type"]
@@ -121,8 +132,10 @@ def episode(root, budget, transport, settings, *, question, qid, arm, category, 
     with budget.db:
         budget.db.execute("UPDATE episodes SET status=? WHERE id=?",("unfinished" if harness.terminal is None else "finished",rid))
     append(root/"experiment_registry.jsonl",{"run_id":rid,"status":"unfinished" if harness.terminal is None else "finished", "elapsed_seconds":result["elapsed_seconds"]})
-    print(json.dumps({"run_id":rid,"terminal":(harness.terminal or {}).get("outcome"),"attempts":harness.attempts,
-                      "invalid_actions":result["invalid_actions"],"usage":usage.summary()},ensure_ascii=False),flush=True)
+    console_record=json.dumps({"run_id":rid,"terminal":(harness.terminal or {}).get("outcome"),"attempts":harness.attempts,
+                               "invalid_actions":result["invalid_actions"],"usage":usage.summary()},ensure_ascii=False)
+    with (directory/'stdout.log').open('a',encoding='utf-8') as stdout:print(console_record,file=stdout)
+    print(console_record,flush=True)
     return result,directory
 
 
