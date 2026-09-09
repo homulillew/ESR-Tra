@@ -24,7 +24,7 @@ D:/AgentSearchAssets/BrowseComp-Plus/indexes/esr-sqlite-bm25-20260909.sqlite
 
 建索引使用已有环境中的 pyarrow。运行检索只使用 Python 标准库；API 与实验入口还使用已有的 httpx、PyYAML。不要把 CPU 检索延迟与远端模型推理延迟混在一起，完整账本分别保存二者。
 
-在仓库根目录运行一个已暴露的历史回归题：
+以下是单题历史回归入口，会产生真实调用。当前每日配额已耗尽，先保留 `PROVIDER_BLOCKED.json` 和 `PAUSE_NEW_EPISODES.json`；本轮恢复应按 [HANDOFF.md](HANDOFF.md) 执行固定开发队列，不额外重复历史探针。仅在单题检查确有需要且预算允许时使用此入口：
 
 ```powershell
 $researchRoot = (Get-Content runs/strong_api_esr/CURRENT -Raw).Trim()

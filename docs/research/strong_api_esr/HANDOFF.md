@@ -1,40 +1,74 @@
-# 强 API 研究执行入口
+# 强 API 研究恢复入口（2026-09-09）
 
-研究目录由 `runs/strong_api_esr/CURRENT` 指向。密钥通过 ANTHROPIC_AUTH_TOKEN 环境变量或 getpass 无回显读取，勿写命令行、源码或报告。用户已授权真实调用，无需重新索要权限。
+当前状态：远端 EB-GLM-5.2 返回每日调用配额耗尽，所有实网 worker 已结束。研究根目录由 `runs/strong_api_esr/CURRENT` 指向；`PROVIDER_BLOCKED.json` 与 `PAUSE_NEW_EPISODES.json` 均保留。不要自动重试、切换模型或将删除标记当作服务恢复。
 
-CPU 索引已建立在 `D:/AgentSearchAssets/BrowseComp-Plus/indexes/esr-sqlite-bm25-20260909.sqlite`。现有默认 Python 可以运行检索；建索引使用已有的 `D:/AgentSearchAssets/.venv-download/Scripts/python.exe`（含 pyarrow）。重建须指定新路径，禁止覆盖旧索引。
+最新功能修复为 `6d3684b`，比较保护为 `dc1a3a9`，223 项回归通过（`tests-22.txt`）。动态 ID schema 别名污染已修复；原始 1,001 份导出请求中 442 份受影响，18 局开发运行全部带警告。修复后的版本没有真实 rollout，原文片段审核也尚未实网验证。最终候选未选择，确认集 0/54，禁止提前打开其问题或 gold。详细结果见 [FINAL_REPORT.md](FINAL_REPORT.md)。
+
+## 无需配额的本地核查
+
+在仓库根目录执行以下导出。新导出使用独立时间目录，不覆盖旧记录；schema 核查只会给尚未标记的受影响运行添加警告。
 
 ```powershell
-python -B -m pytest -q --basetemp runs/strong_api_esr/test-temp-NEW
-python -B -u scripts/strong_api.py probe --native
-python -B -u scripts/strong_api.py fixture
 $researchRoot = (Get-Content runs/strong_api_esr/CURRENT -Raw).Trim()
-python -B -u scripts/strong_api.py run --questions "$researchRoot/dataset_splits/known-regression.questions.jsonl" --qid 120 --arms B E-off E-soft
+git status --short
+python -B -X utf8 scripts/audit_strong_api_receipts.py
+python -B -X utf8 scripts/audit_strong_api_schemas.py
+python -B -X utf8 scripts/summarize_strong_api.py
 ```
 
-每局使用唯一时间 ID；完整 SQLite 和 JSONL 保留实际 provider 请求与原始响应。global_budget.sqlite 包含所有本轮实际模型请求的预留/结算和 episode 注册。中断后先检查是否有正在运行的进程、未结算请求及无终态的 episode，不直接重新运行相同问题。恢复时未知用量仍占预算。当前脚本不会自动接续未完成的 episode。
-
-官方 grader 模板已保存至研究目录 evaluation_protocol，并记录来源和哈希。评价使用独立进程 `scripts/evaluate_strong_api.py --run-dirs <已结束运行目录名>`，只评价指定运行。相同模型路由充当 judge 的相关误差必须保留为限制。
-
-确认集问题文件已经锁定；最终冻结之前禁止运行/展示其详细内容。开发集已锁定，已有部分真实开发结果，但尚无完整冻结对照或确认集结论。任务未结束时本文件只作为恢复入口，不代表后续阶段已完成。
-
-
-2026-09-09 pilot 的 30 次额度全部执行完并完成独立判分，禁止再跑 pilot。两次强制中断已记为 operator_paused，未知请求仍占用预算。正文重复、搜索结果提交容量检查、JSON 尾标记问题均已保存原始失败并修复。开发集已冻结为 9 题，全为暂列中等，未完成可靠的三档平衡校准。确认集仍封存。当前准备运行 development --replicate 0 --take 9 --arms B E-off E-soft；候选选择规则在私有 candidate_selection_preregistered.json，按第一遍结果选择 E-off 或 E-soft 后，再运行 B 与候选的 replicate 1。
-
-freeze_development.py 只读 baseline pilot，按预登记规则冻结开发题。compare_strong_api.py 要求完整、同源的显式配对队列，按题目聚类 bootstrap。freeze_final_strong_api.py 只接受 9 题、B 与候选各 2 次的开发比较；确认批次会核对冻结的源码、配置、样本和 judge 模板。实际确认尚未执行，不能把脚本存在写成已得到结果。
-
-需要暂停未来批次时，在研究根目录创建 PAUSE_NEW_EPISODES.json，执行器会在当前局结束后停止。保留暂停文件并重命名归档后才能继续。无显卡部署说明见 CPU_RUNBOOK.md。
-
-2026-09-09 当前恢复点：原生 policy 工具与 audit_report；共享 policy 提示 research-2.1.5。auditor 改为选择全部允许原文中的确定片段 ID，程序只还原对应原文，保持证据范围和模型 verdict。DEVELOPMENT_FREEZE_v5.json 保存当前源码和配置，tests-20.txt 为 219 项通过。旧四个开发版本分别执行 3、8、2、3 局后停止，全部独立判分；这 16 局不与当前版本混算。文本接口和直接长引文审核的失败均完整保留，详情见 DECISIONS.md。另有 8 次固定前缀诊断和 4 次联通/容量探针，均保留原始记录与费用。
-
-audit_span_iteration_preregistered.json 登记这最后一项主要改动及四轮预算的实际组成；之后不再增加主要机制、接口探针或轮换格式以挑选成功输出。原文引用模式仍作为默认关闭的兼容选项保留，最终使用的 auditor 模式由 configs/strong_api_forward.yaml 明确指定。
-
-当前执行固定 9 题、B/E-off/E-soft 的 replicate 0。恢复前先查当前进程和实际已完成目录；同一源码版本的已注册 replicate 禁止重复。全部结束后用独立 evaluator 判分，再按既定规则选择 ESR 候选，运行 B 与候选的 replicate 1，做完整配对比较后才能冻结确认集。
+需要验证后续代码修改时，测试使用新的临时目录并保存完整日志。不要覆盖 `tests-22.txt`：
 
 ```powershell
-python -B -X utf8 scripts/audit_strong_api_receipts.py
+$testStamp = Get-Date -Format yyyyMMddTHHmmssfff
+python -B -X utf8 -m pytest -q --basetemp "runs/strong_api_esr/test-temp-$testStamp" *> "$researchRoot/tests-$testStamp.txt"
+$testExit = $LASTEXITCODE
+Get-Content "$researchRoot/tests-$testStamp.txt" -Tail 5
+Write-Output "pytest exit=$testExit"
+```
+
+CPU 索引已建好，无需下载模型或重建，运行与重建说明见 [CPU_RUNBOOK.md](CPU_RUNBOOK.md)。密钥只从 `ANTHROPIC_AUTH_TOKEN` 或 getpass 读取，不写源码、命令行参数或报告。用户已有调用授权，无需重新索要权限。
+
+## 同一路由配额恢复后的有限执行
+
+先确认服务的原路由配额已恢复，核查没有在途请求和未关闭 episode，再将两个暂停标记以新时间名归档；保留原内容。响应没有给出配额重置时刻，不能按猜测时间清除标记。源码会阻止持久配额标记存在时调用；一般传输错误仅按固定规则重试。
+
+pilot 已完成 15 题各两次，跨版本 30 局上限用完。确认集和开发集原始选择不变，不再跑 pilot、不按 ESR 结果重新分层或换题。四轮主要机制预算已用完，不增加新的接口探针。旧开发版本不能接在当前版本后充当同源队列。
+
+当前修复版本尚未注册开发 rollout；配额恢复后从固定顺序开始第一遍：
+
+```powershell
+python -B -X utf8 -u scripts/strong_api_batch.py development --replicate 0 --start 0 --take 9 --arms B E-off E-soft
+```
+
+调度器串行交错运行并保存预登记顺序，遇到系统性故障会暂停。若中途暂停，先检查真实完成目录、错误与预算；同一在线源码/题号/臂/replicate 不得重复。不能重跑直到成功，也不能跳过失败题来拼完整比较。
+
+仅在 rollout 结束后，用独立 evaluator 对指定目录判分；已保存判分只读。当前另有 7 个 BC+ 提交未判分，清单在 `blocked_status_metrics.json`，仍计研究 judge 预算：
+
+```powershell
 python -B -X utf8 scripts/evaluate_strong_api.py --run-dirs <已结束运行目录名>
 python -B -X utf8 scripts/compare_strong_api.py development --esr E-off --replicates 1 --reference-run <当前版本B目录名>
+python -B -X utf8 scripts/compare_strong_api.py development --esr E-soft --replicates 1 --reference-run <当前版本B目录名>
 ```
 
-记账核对脚本验证全局预留/结算、SQLite 原始响应与 JSONL 导出是否一致。运行中缺少导出不等于丢失：当前局结束后才导出。计数接口的单独探针使用 request.json/response.json，不在 episode ledger 中；它的未知用量仍占预算。最终交付前应在无在途请求时再核对一次。
+尖括号是需替换的实际文件/目录参数，不能原样执行。比较要求固定 9 题、完整同源配置与判分，并拒绝 schema 警告队列。按预登记规则选择准确率较高的 ESR；同分依次比较实际后端请求、模型请求、占用输入 token，仍同分选 E-off。随后将 `<候选>` 替换为选定的 E-off 或 E-soft：
+
+```powershell
+python -B -X utf8 -u scripts/strong_api_batch.py development --replicate 1 --start 0 --take 9 --arms B <候选>
+python -B -X utf8 scripts/evaluate_strong_api.py --run-dirs <第二遍已结束运行目录名>
+python -B -X utf8 scripts/compare_strong_api.py development --esr <候选> --replicates 2 --reference-run <当前版本B目录名>
+python -B -X utf8 scripts/freeze_final_strong_api.py --comparison <两遍开发比较JSON路径> --reason <依据固定规则的选择说明> --tests <最新通过测试日志路径>
+```
+
+只有最终冻结成功，才能运行最初封存的 9 题、B 与候选各三次确认：
+
+```powershell
+python -B -X utf8 -u scripts/strong_api_batch.py confirmation --replicate 0 --start 0 --take 9 --arms B <候选>
+python -B -X utf8 -u scripts/strong_api_batch.py confirmation --replicate 1 --start 0 --take 9 --arms B <候选>
+python -B -X utf8 -u scripts/strong_api_batch.py confirmation --replicate 2 --start 0 --take 9 --arms B <候选>
+python -B -X utf8 scripts/evaluate_strong_api.py --run-dirs <确认运行目录名>
+python -B -X utf8 scripts/compare_strong_api.py confirmation --esr <候选> --replicates 3 --reference-run <确认B目录名>
+```
+
+每一步都需要上一步完成和预算允许，不能把这组命令直接作为无条件大批执行脚本。确认结果不能用于继续调参；失败与未提交保留在完整预定分母，按题目聚类分析，不把同题三次运行当成三道独立题。
+
+全局目前登记 67 个预算单位、1,002 个远端请求，未知的 4 笔用量仍占用预算。最终确认预留 54 局没有动用。预算、样本、索引、grader、实际请求、逐局轨迹和版本摘要均在私有研究根目录；不公开原始数据、不推送远端，不承诺会话结束后后台执行。
