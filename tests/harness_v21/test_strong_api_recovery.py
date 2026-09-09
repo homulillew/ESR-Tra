@@ -47,6 +47,17 @@ def test_semantic_error_retains_proposal_for_single_local_repair():
     assert h.execute("update_state",patch)["ok"] and h.state["answer"]=="Taylor"
 
 
+def test_cite_dismiss_conflict_identifies_field_and_ids_for_one_repair():
+    h=env();o=opened(h)
+    patch={"answer":"Taylor","claim_updates":[{"claim_id":"c0","finding":"relation","observation_ids":[o]}],
+           "dismiss_observation_ids":[o]}
+    r=h.execute("update_state",patch)
+    assert not r["ok"] and r["error_path"]=="arguments.dismiss_observation_ids" and o in r["error"]
+    assert h.state["answer"] is None
+    patch["dismiss_observation_ids"]=[]
+    assert h.execute("update_state",patch)["ok"] and not h.pending
+
+
 def test_read_cannot_overflow_pending_but_cited_reread_is_visible():
     h=env(config=Config(max_pending_views=1)); o1=opened(h)
     assert h.execute("update_state",{"dismiss_observation_ids":[o1]})["ok"]

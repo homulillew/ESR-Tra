@@ -103,8 +103,11 @@ def apply_delta(state, patch, *, next_claim, exposed_ids, observations):
         result["focus"]["need"] = result["focus"]["need"].strip()
     cited = {o for c in result["claims"] for o in c["observation_ids"]}
     dismissed = set(patch.get("dismiss_observation_ids", []))
-    if not dismissed <= set(observations) or cited & dismissed:
-        raise HarnessError("protocol_error", "Dismiss only known, currently uncited observations")
+    if not dismissed <= set(observations):
+        raise HarnessError("protocol_error", "arguments.dismiss_observation_ids: unknown observation IDs " + str(sorted(dismissed-set(observations))))
+    if cited & dismissed:
+        raise HarnessError("protocol_error", "arguments.dismiss_observation_ids: remove cited IDs " + str(sorted(cited & dismissed)) +
+                           " from the dismiss list. Citation already consumes these views. No research edits were committed; resend the proposal with this field corrected.")
     validate({k: v for k, v in result.items() if k != "research_version"}, STATE_SCHEMA, "state")
     changed = result != state
     result["research_version"] += int(changed)

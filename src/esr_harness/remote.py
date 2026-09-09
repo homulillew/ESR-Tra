@@ -28,6 +28,7 @@ class GlobalBudget:
 
     def episode(self, episode_id, category):
         with self.db:
+            self.db.execute("BEGIN IMMEDIATE")
             n = self.db.execute("SELECT count(*) FROM episodes").fetchone()[0]
             cap = self.limits["episode_limit"] - (54 if category != "confirmation" else 0)
             if n >= cap:
@@ -36,6 +37,7 @@ class GlobalBudget:
 
     def reserve(self, purpose, input_tokens, output_tokens):
         with self.db:
+            self.db.execute("BEGIN IMMEDIATE")
             used_in, used_out = self.db.execute("SELECT coalesce(sum(input_charged),0), coalesce(sum(output_charged),0) FROM requests").fetchone()
             if used_in + input_tokens > self.limits["input_limit"] or used_out + output_tokens > self.limits["output_limit"]:
                 raise HarnessError("generation_budget_exhausted", "Global input/output reservation limit reached")
@@ -158,8 +160,13 @@ class AnthropicClient:
                 # Only safe classification, never stringify an exception containing authentication.
                 http_status = getattr(getattr(exc, "response", None), "status_code", None)
                 kind = "authentication_error" if http_status in {401,403} else "rate_limit" if http_status == 429 else "transport_error"
+                error_body = getattr(getattr(exc, "response", None), "text", None)
+                secret = getattr(self.transport, "token", "")
+                if isinstance(error_body, str) and secret:
+                    error_body = error_body.replace(secret, "[REDACTED]")
                 self.ledger.append({"type": "generation", "request_id": rid, "purpose": purpose,
                                     "error_code": kind, "http_status": http_status, "exception_type": type(exc).__name__,
+                                    "provider_error_body": error_body,
                                     "usage": None, "reserved_completion_tokens": maximum,
                                     "elapsed_seconds": time.monotonic()-started})
                 self.budget.unknown_usage_requests += 1

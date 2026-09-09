@@ -1,5 +1,17 @@
 # api/ — Lanz 模型多轮对话客户端
 
+## 当前强 API 研究入口（2026-09-09）
+
+当前已实测用户授权的 `EB-GLM-5.2` 路由，base URL 为
+`http://lanz.hikvision.com/v3/anthropic/model`，请求地址追加 `/v1/messages`。
+密钥使用 `ANTHROPIC_AUTH_TOKEN` 环境变量或研究脚本的无回显输入，勿写入代码、命令行或日志。
+
+`scripts/strong_api.py` 复用 `LanzClient.request()` 和 `esr_harness`，保存实际 provider body、完整响应、请求 ID、usage 和 stop_reason。
+当前网关支持原生 tool_use，但实测可能忽略禁用并行工具的参数；客户端会拒绝多个动作并保留提案，不能选第一个假装成功。
+计数端点在本次探针中未返回可用 token 计数。上下文估计是明确标记的保守容量估计，不冒充本地 Qwen tokenizer。
+
+以下本机代理与 User-Agent 内容是历史接入说明，不是当前支持保证。研究脚本沿用已有获准的客户端配置；遇到 403 应保留错误并核对授权，不切换身份绕过限制。
+
 通过本机 `127.0.0.1:18080` 的 Lanz 网关（Anthropic Messages API），用 Python 做多轮对话/Agent Search。
 
 ## 为什么不能直接用官方 anthropic SDK

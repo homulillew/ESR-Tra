@@ -87,7 +87,11 @@ class LanzClient:
         response.raise_for_status()
         receipt = {k: response.headers[k] for k in ("request-id", "x-request-id", "anthropic-request-id")
                    if k in response.headers}
-        return response.json(), {"http_status": response.status_code, **receipt}
+        try:
+            payload = response.json()
+        except ValueError:
+            payload = {"non_json_response_body": response.text.replace(self.token, "[REDACTED]") if self.token else response.text}
+        return payload, {"http_status": response.status_code, **receipt}
 
     @staticmethod
     def _extract_text(js: dict[str, Any]) -> str:
