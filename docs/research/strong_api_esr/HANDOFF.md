@@ -19,4 +19,8 @@ python -B -u scripts/strong_api.py run --questions "$researchRoot/dataset_splits
 确认集问题文件已经锁定；最终冻结之前禁止运行/展示其详细内容。还未产生新题开发集或确认集效果结论。任务未结束时本文件只作为恢复入口，不代表后续阶段已完成。
 
 
-2026-09-09 pilot ?????? operator_paused??? 7 ?????????????????????????????? pilot --replicate 1 --take 15 --arms B???? pilot --replicate 0 --start 7 --take 8 --arms B?????????? 2 ???????? 7 ????????????????? pilot ???
+2026-09-09 两次 pilot 中断均已恢复为 operator_paused。第一批 7 局均带正文重复的难度校准排除标记。第二批 replicate 1 已花费原顺序前 13 题，第 13 题中断；前 12 题完成并判分。6 次容量停止促成 search 提交前检查和恢复空间修复，详见 DECISIONS.md。下一步运行 pilot --replicate 0 --start 7 --take 8 --arms B，再运行 pilot --replicate 1 --start 13 --take 2 --arms B。每题跨版本总计最多 2 局，不能再重跑前 7 题。确认集仍封存。
+
+freeze_development.py 只读 baseline pilot，按预登记规则冻结开发题。compare_strong_api.py 要求完整、同源的显式配对队列，按题目聚类 bootstrap。freeze_final_strong_api.py 只接受 9 题、B 与候选各 2 次的开发比较；确认批次会核对冻结的源码、配置、样本和 judge 模板。实际确认尚未执行，不能把脚本存在写成已得到结果。
+
+需要暂停未来批次时，在研究根目录创建 PAUSE_NEW_EPISODES.json，执行器会在当前局结束后停止。保留暂停文件并重命名归档后才能继续。无显卡部署说明见 CPU_RUNBOOK.md。

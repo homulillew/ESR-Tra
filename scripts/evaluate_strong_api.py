@@ -64,6 +64,10 @@ if __name__=='__main__':
             raise ValueError('Confirmation is sealed; references must not be loaded')
         if not json.loads((directory/'summary.json').read_text(encoding='utf-8')).get('terminal'):
             raise ValueError('All requested rollouts must finish before references are loaded')
+        if meta['category']=='confirmation':
+            from strong_api import snapshot
+            from strong_api_freeze_guard import check_final_freeze
+            check_final_freeze(root,snapshot(),config)
     # Load references only for completed requested runs, outside every rollout process.
     ids={json.loads((d/'manifest.json').read_text(encoding='utf-8'))['qid'] for d in selected}
     gold={}

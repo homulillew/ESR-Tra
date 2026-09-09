@@ -29,6 +29,9 @@ def main():
     chosen=rows[a.start:a.start+a.take]
     if not chosen: p.error('No questions at this frozen offset')
     conditions=snapshot()
+    if a.stage=='confirmation':
+        from strong_api_freeze_guard import check_final_freeze
+        check_final_freeze(root,conditions,settings,a.arms)
     # Register all scheduled denominators before the first episode, including anything later interrupted.
     schedule={'stage':a.stage,'replicate':a.replicate,'arms':a.arms,'start':a.start,'qids':[r['qid'] for r in chosen],
               'conditions':conditions,'status':'registered; unexecuted entries must remain visible'}
@@ -45,6 +48,10 @@ def main():
         # Alternate which arm goes first while keeping within-question adjacent time blocks.
         arms=a.arms if (n+a.replicate)%2==0 else list(reversed(a.arms))
         for arm in arms:
+            if (root/'PAUSE_NEW_EPISODES.json').exists():
+                write_json(root/f'schedule_{schedule_id}_paused.json',{'runs':outputs,'reason':'operator cooperative pause flag','remaining_schedule':'not executed'})
+                print('Batch paused between episodes; current records retained.',flush=True)
+                return
             if a.stage=='pilot' and len(list(root.glob(f'*_pilot_B_{row["qid"]}_*/manifest.json')))>=2:
                 raise ValueError('This pilot question already used its two-episode allowance across all versions')
             # Do not silently repeat an already registered replicate in the same source version.

@@ -35,6 +35,10 @@ def metrics(directory):
          'backend_documents':op['get_document'],'policy_requests':kinds['policy'],'audit_requests':kinds['audit'],
          'online_model_requests':len(requests),'input_tokens_measured':sum(u['prompt_tokens'] for u in measured),
          'output_tokens_measured':sum(u['completion_tokens'] for u in measured),
+         'uncached_input_tokens_measured':sum(u.get('uncached_input_tokens',u['prompt_tokens']) for u in measured),
+         'reasoning_tokens_known_sum':sum(u.get('reasoning_tokens') or 0 for u in measured),
+         'reasoning_usage_unknown_requests':sum(u.get('reasoning_tokens') is None for u in measured)+len(unknown),
+         'model_transport_retries':sum(e.get('transport_attempt',1)>1 for e in requests),
          'cache_read_tokens_measured':sum(u.get('cache_read_input_tokens',0) for u in measured),
          'cache_creation_tokens_measured':sum(u.get('cache_creation_input_tokens',0) for u in measured),
          'unknown_requests':len(unknown),'charged_output_tokens':summary.get('usage',{}).get('charged_completion_tokens'),
@@ -42,9 +46,14 @@ def metrics(directory):
          'policy_seconds':sum(e['elapsed_seconds'] for e in generations if e['purpose']=='policy'),
          'audit_seconds':sum(e['elapsed_seconds'] for e in generations if e['purpose']=='audit'),
          'backend_seconds':sum(e['elapsed_seconds'] for e in retrieval),'consecutive_identical_reads':same_reads,
+         'unattributed_wall_seconds':summary['elapsed_seconds']-sum(e['elapsed_seconds'] for e in generations)-sum(e['elapsed_seconds'] for e in retrieval),
          'search_cache_hits':summary['search_cache_hits'],'audit_cache_hits':summary['audit_cache_hits'],
          'zero_search':action_counts['search']==0,'zero_open':action_counts['open_page']==0,
          'audit_supported':terminal.get('evidence_status')=='supported','errors':dict(errors),'action_counts':dict(action_counts)}
+    row['backend_instrumented']=summary['manifest']['retriever'].get('type')=='sqlite_fts5_bm25'
+    if not row['backend_instrumented']:
+        for key in ['backend_requests','backend_searches','backend_documents','backend_seconds','unattributed_wall_seconds']:
+            row[key]=None
     return row
 
 
