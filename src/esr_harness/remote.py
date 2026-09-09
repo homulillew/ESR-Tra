@@ -95,6 +95,11 @@ class RemoteConfig:
     timeout: float = 60
     transport_attempts: int = 2
     recovery_headroom: int = 2048
+    policy_tool_interface: str = 'native'
+
+    def __post_init__(self):
+        if self.policy_tool_interface not in {'native', 'dispatcher'}:
+            raise ValueError('Unknown policy tool interface')
 
 
 class AnthropicClient:
@@ -105,7 +110,7 @@ class AnthropicClient:
         self.identity = {"protocol": "anthropic_messages", "config": asdict(self.config),
                          "context_estimate": "UTF-8 bytes of mapped JSON + 1024 overhead; conservative, not verified tokenizer",
                          "thinking": "omitted; provider default unverified", "model_revision": "gateway_alias_unpinned",
-                         "url": transport.base_url + "/v1/messages", "parser": "one_native_call_or_final_text_json_v3",
+                         "url": transport.base_url + "/v1/messages", "parser": "one_native_call_or_final_text_json_v4",
                          "text_suffix": "one strict JSON object followed by one </tool_call>; no field correction",
                          "parallel_control": "requested; observed gateway may ignore; multiple calls strictly rejected"}
 
@@ -118,6 +123,15 @@ class AnthropicClient:
                     content, serialized = content.split("\nTools:\n", 1)
                     tools = [{"name": t["name"], "description": t["description"], "input_schema": t["parameters"]}
                              for t in json.loads(serialized)]
+                    if self.config.policy_tool_interface == 'dispatcher':
+                        branches=[{'type':'object','description':t['description'],
+                                   'properties':{'action':{'type':'string','enum':[t['name']]},'arguments':t['input_schema']},
+                                   'required':['action','arguments'],'additionalProperties':False} for t in tools]
+                        schema={'type':'object','properties':{'action':{'type':'string','enum':[t['name'] for t in tools]},
+                                                           'arguments':{'type':'object'}},
+                                'required':['action','arguments'],'additionalProperties':False,'oneOf':branches}
+                        tools=[{'name':'take_action','description':'Choose and execute exactly one research action with its defined arguments.',
+                                'input_schema':schema}]
                 elif "\nSchema:\n" in content:
                     content, serialized = content.split("\nSchema:\n", 1)
                     tools = [{"name": "audit_report", "description": "Return exactly one report using the supplied schema and claim IDs.",
@@ -136,8 +150,8 @@ class AnthropicClient:
             result["system"] = "\n\n".join(systems)
         if tools:
             result["tools"] = tools
-            result["tool_choice"] = ({"type": "tool", "name": "audit_report", "disable_parallel_tool_use": True}
-                                     if tools[0]["name"] == "audit_report" else {"type": "any", "disable_parallel_tool_use": True})
+            result["tool_choice"] = ({"type": "tool", "name": tools[0]['name'], "disable_parallel_tool_use": True}
+                                     if tools[0]["name"] in {'audit_report','take_action'} else {"type": "any", "disable_parallel_tool_use": True})
         return result
 
     @staticmethod
@@ -220,11 +234,19 @@ class AnthropicClient:
             blocks = response.get("content", [])
             if response.get("stop_reason") == "tool_use" and body.get("tools"):
                 calls = [b for b in blocks if b.get("type") == "tool_use"]
-                if len(calls) != 1 or calls[0].get("name") not in {t["name"] for t in body["tools"]} or not isinstance(calls[0].get("input"), dict):
-                    exc = HarnessError("protocol_error", "Expected exactly one declared native tool call with object input. Choose one proposed action; never issue parallel calls.")
+                declared = sorted(t['name'] for t in body['tools'])
+                problem = None
+                if len(calls) != 1:
+                    problem = f'Expected exactly one native tool call; received {len(calls)}. Choose one proposed action; never issue parallel calls.'
+                elif calls[0].get('name') not in declared:
+                    problem = f'Native tool name {calls[0].get("name")!r} is not available; choose one of {declared}.'
+                elif not isinstance(calls[0].get('input'), dict):
+                    problem = 'Native tool input must be an object matching the declared argument schema.'
+                if problem:
+                    exc = HarnessError("protocol_error", problem)
                     exc.proposal = {"native_tool_calls": [{"name": c.get("name"), "input": c.get("input")} for c in calls]}
                     raise exc
-                if calls[0]["name"] == "audit_report":
+                if calls[0]["name"] in {"audit_report","take_action"}:
                     return canonical(calls[0]["input"])
                 return canonical({"action": calls[0]["name"], "arguments": calls[0]["input"]})
             if response.get("stop_reason") != "end_turn":

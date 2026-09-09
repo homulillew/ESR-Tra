@@ -205,6 +205,40 @@ def test_native_report_preserves_report_shape_and_exact_active_ids(tmp_path):
     assert 'enum' not in AUDIT_SCHEMA['properties']['claims']['items']['properties']['claim_id']
 
 
+def test_dispatcher_preserves_contract_and_rejects_multiple_proposals(tmp_path):
+    from dataclasses import replace
+    from esr_harness.protocol import canonical, validate
+    cfg=Config(mode='baseline',audit_mode='off')
+    messages=[{'role':'system','content':'Call one tool.\nTools:\n'+canonical(cfg.tools)},
+              {'role':'user','content':'fixture'}]
+    proposal={'action':'finish','arguments':{'answer':'fixture'}}
+    r=response();r['stop_reason']='tool_use'
+    r['content']=[{'type':'tool_use','id':'call1','name':'take_action','input':proposal}]
+    bad={**r,'content':[dict(r['content'][0],input={'action':'finish','arguments':{'unexpected':1}})]}
+    c=client(tmp_path,[r,{**r,'content':r['content']*2},bad])
+    c.config=replace(c.config,policy_tool_interface='dispatcher')
+    assert json.loads(c.complete(messages))==proposal
+    body=c.transport.requests[0]
+    assert len(body['tools'])==1 and body['tool_choice']['name']=='take_action'
+    branches=body['tools'][0]['input_schema']['oneOf']
+    assert {b['properties']['action']['enum'][0]:b['properties']['arguments'] for b in branches}=={t['name']:t['parameters'] for t in cfg.tools}
+    with pytest.raises(HarnessError,match='exactly one'):c.complete(messages)
+    parsed=json.loads(c.complete(messages))
+    assert parsed['arguments']=={'unexpected':1}
+    with pytest.raises(HarnessError):validate(parsed['arguments'],cfg.tool_schema('finish'),'arguments')
+
+
+def test_undeclared_single_tool_is_not_misreported_as_parallel_calls(tmp_path):
+    from esr_harness.protocol import canonical
+    cfg=Config(mode='baseline',audit_mode='off')
+    r=response();r['stop_reason']='tool_use'
+    r['content']=[{'type':'tool_use','name':'missing_tool','input':{}}]
+    c=client(tmp_path,[r])
+    with pytest.raises(HarnessError,match='not available') as exc:
+        c.complete([{'role':'system','content':'Tools:\nignored\nTools:\n'+canonical(cfg.tools)}])
+    assert 'missing_tool' in str(exc.value) and 'parallel' not in str(exc.value)
+
+
 def test_context_check_is_finite(tmp_path):
     c=client(tmp_path,[])
     assert not c.fits([{"role":"user","content":"X"*70000}])

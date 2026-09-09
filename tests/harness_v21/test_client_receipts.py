@@ -73,6 +73,21 @@ def test_bad_quote_not_semantic_gap():
     assert h.last_audit is None
 
 
+def test_quote_repair_reports_all_bad_paths_without_changing_sources():
+    from copy import deepcopy
+    h=env();update(h,opened(h));packet=h.audit_packet()
+    report=h.auditor.audit(h.question,packet,list(h.observations.values()))
+    row=report['claims'][0]
+    row['quotes'][0]['quote']='invented content'
+    row['quotes'].append({'observation_id':'not-permitted','quote':'another invented quote'})
+    before=deepcopy((report,packet,h.observations))
+    with pytest.raises(HarnessError) as exc:validate_report(report,packet,h.observations)
+    assert exc.value.code=='audit_protocol_error'
+    assert 'audit.claims[0].quotes[0]' in str(exc.value) and 'audit.claims[0].quotes[1]' in str(exc.value)
+    assert 'not-permitted' in str(exc.value) and 'report unknown' in str(exc.value)
+    assert (report,packet,h.observations)==before
+
+
 def test_audit_repair_keeps_original_evidence_and_question():
     h=env(); update(h,opened(h)); good=h.auditor.audit(h.question,h.audit_packet(),list(h.observations.values()))
     class Fake:

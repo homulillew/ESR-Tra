@@ -23,16 +23,21 @@ def validate_report(report, state, views):
             raise HarnessError("audit_protocol_error", "Unresolved verdict requires a concrete need")
         if v["status"] == "supported" and v["need"].strip():
             raise HarnessError("audit_protocol_error", "Supported verdict cannot also declare a missing relation")
-    for v in report["claims"]:
+    quotation_errors=[]
+    for ci,v in enumerate(report["claims"]):
         if v["status"] in {"supported", "contradicted"} and not v["quotes"]:
             raise HarnessError("audit_protocol_error", "Support/contradiction requires raw quotes")
         allowed = set(expected[v["claim_id"]]["observation_ids"])
-        for q in v["quotes"]:
+        for qi,q in enumerate(v["quotes"]):
             oid = q["observation_id"]
+            path=f'audit.claims[{ci}].quotes[{qi}] (claim_id={v["claim_id"]}, observation_id={oid})'
             if oid not in allowed or oid not in views:
-                raise HarnessError("audit_protocol_error", "Quote is outside this claim's permitted evidence")
-            if not any(q["quote"] in part for part in views[oid]["raw_parts"]):
-                raise HarnessError("audit_protocol_error", "Quotation does not occur verbatim in raw observation")
+                quotation_errors.append(path+": Quote is outside this claim's permitted evidence")
+            elif not any(q["quote"] in part for part in views[oid]["raw_parts"]):
+                quotation_errors.append(path+": Quotation does not occur verbatim in this raw observation")
+    if quotation_errors:
+        raise HarnessError("audit_protocol_error", '; '.join(quotation_errors)+
+                           '. Check every listed source ID and exact quote against the supplied raw text. If support is absent, report unknown with a concrete need; do not invent or paraphrase quotes.')
     return report
 
 
