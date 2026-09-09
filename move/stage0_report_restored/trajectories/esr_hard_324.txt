@@ -1,0 +1,260 @@
+### esr/hard / qid 324
+total events: 232, decisions: 59
+
+[dec d1] policy: {"action":"search","arguments":{"query":"poker player learned from sibling plays piano web design won tournament 2009 2015 final table nurse animal rights","focus":{"claim_id":"c0","need":"Identify po
+  [search] ok=True err=None elapsed=1.185388945043087
+    query: poker player learned from sibling plays piano web design won tournament 2009 2015 final table nurse animal rights
+
+[dec d5] policy: {"action":"open_page","arguments":{"docid":"42885","query":"poker player learned from sibling plays piano web design won tournament"}}
+  [open_page] ok=True err=None elapsed=0.030252940952777863
+    open: 42885
+
+  [invalid_model_response] ok=False err=protocol_error elapsed=6.99041411280632e-05
+
+[dec d12] policy: {"action":"update_state","arguments":{"claim_updates":[{"claim_id":"c0","finding":"Vanessa Hellebuyck (WSOP Ladies Event #22, likely 2013 based on text referring to earlier 2008/events) learned poker 
+  [update_state] ok=False err=protocol_error elapsed=0.0008276090957224369
+    claim[c0] oids=['o1'] finding=Vanessa Hellebuyck (WSOP Ladies Event #22, likely 2013 based on text referring to earlier 
+
+[dec d16] policy: ```json
+{
+  "action": "update_state",
+  "arguments": {
+    "attempt_id": "a2",
+    "attempt_note": "Despite initial search results including a document about Vanessa Hellebuyck, that observation shows
+  [update_state] ok=False err=protocol_error elapsed=0.0008124238811433315
+    claim[c0] oids=['o1'] finding=The initially found WSOP Ladies Champion Vanessa Hellebuyck (from Event #22 of a WSOP year
+
+[dec d20] policy: {"action":"update_state","arguments":{"claim_updates":[{"claim_id":"c0","finding":"Vanessa Hellebuyck learned poker from her brother, plays piano, works as freelance web designer, won 2012 WSOP Ladies
+  [update_state] ok=True err=None elapsed=0.0009964145720005035
+    claim[c0] oids=['o1'] finding=Vanessa Hellebuyck learned poker from her brother, plays piano, works as freelance web des
+
+[dec d24] policy: {"action":"search","arguments":{"query":"poker player \"learned to play\" \"piano\" \"web design\" \"third major\" tournament won heads-up called all-in","focus":{"claim_id":"c0","need":"Find poker pl
+  [search] ok=True err=None elapsed=1.092814824078232
+    query: poker player "learned to play" "piano" "web design" "third major" tournament won heads-up called all-in
+
+[dec d28] policy: {"action":"search","arguments":{"query":"poker player won event 2012 \"web designer\" piano brother \"third\" tournament","focus":{"claim_id":"c0","need":"Find poker player matching all biography clue
+  [search] ok=False err=unexposed_reference elapsed=0.0034818830899894238
+    query: poker player won event 2012 "web designer" piano brother "third" tournament
+
+  [invalid_model_response] ok=False err=protocol_error elapsed=6.698118522763252e-05
+
+[dec d35] policy: {"action":"open_page","arguments":{"docid":"61674","search_action_id":"a7"}}
+  [open_page] ok=True err=None elapsed=0.022259115241467953
+    open: 61674
+
+[dec d39] policy: {"action":"search","arguments":{"query":"poker player \"learned\" \"sibling\" \"piano\" \"web design\" tournament won heads-up call all-in 300,000","top_k":20,"focus":{"claim_id":"c0","need":"Find pok
+  [search] ok=True err=None elapsed=1.101820178795606
+    query: poker player "learned" "sibling" "piano" "web design" tournament won heads-up call all-in 300,000
+
+[dec d43] policy: {"action":"open_page","arguments":{"docid":"4649","search_action_id":"a11"}}
+  [open_page] ok=True err=None elapsed=0.01660455111414194
+    open: 4649
+
+[dec d47] policy: {"action":"search","arguments":{"query":"poker player sister learned poker plays piano web designer won tournament third major tournament","focus":{"claim_id":"c0","need":"Find poker player with total
+  [search] ok=True err=None elapsed=0.8823399590328336
+    query: poker player sister learned poker plays piano web designer won tournament third major tournament
+
+[dec d51] policy: {"action":"update_state","arguments":{"attempt_id":"a14","attempt_note":"Found 2010 WSOP Ladies article confirming Vanessa Hellebuyck's first-ever Las Vegas cash, contradicting 'third major tournament
+  [update_state] ok=False err=protocol_error elapsed=0.0007822955958545208
+    claim[c0] oids=['o1', 'o3'] finding=Vanessa Hellebuyck won 2010 WSOP Ladies Event #22, learned poker from brother, plays piano
+
+[dec d55] policy: {"action":"update_state","arguments":{"dismiss_observation_ids":["o2"],"attempt_id":"a15","attempt_note":"o2 is about Peter Eastgate 2008 WSOP Main Event; does not match player X criteria (no sibling/
+  [update_state] ok=False err=protocol_error elapsed=0.0011330447159707546
+
+[dec d59] policy: {"action":"search","arguments":{"query":"poker player learned from sister plays piano web designer won tournament third major tournament final table nurse animal rights advocate filmmaking","focus":{"
+  [search] ok=True err=None elapsed=1.2814030181616545
+    query: poker player learned from sister plays piano web designer won tournament third major tournament final table nurse animal rights advocate filmmaking
+
+[dec d63] policy: {"action":"search","arguments":{"query":"Vanessa Hellebuyck poker sister learned piano web designer tournament 2012","focus":{"claim_id":"c0","need":"Locate detailed profile of Vanessa Hellebuyck to v
+  [search] ok=True err=None elapsed=0.6991858067922294
+    query: Vanessa Hellebuyck poker sister learned piano web designer tournament 2012
+
+[dec d67] policy: {"action":"open_page","arguments":{"docid":"24297"}}
+  [open_page] ok=True err=None elapsed=0.016474046278744936
+    open: 24297
+
+[dec d71] policy: {"action":"update_state","arguments":{"attempt_id":"a19","attempt_note":"Found and read CardPlayer article about Vanessa Hellebuyck's 2010 WSOP Event #22 win. It states she 'made the most of her third
+  [update_state] ok=False err=protocol_error elapsed=0.0013249288313090801
+    claim[c0] oids=['o3', 'o4'] finding=Vanessa Hellebuyck: French, pianist, won 2010 WSOP Event #22 Ladies No-Limit Hold'em for $
+
+[dec d75] policy: {"action":"update_state","arguments":{"claim_updates":[{"claim_id":"c0","finding":"Vanessa Hellebuyck learned poker from her brother, plays piano, works as freelance web designer, won 2010 WSOP Ladies
+  [update_state] ok=False err=protocol_error elapsed=0.0009189308620989323
+    claim[c0] oids=['o3', 'o4'] finding=Vanessa Hellebuyck learned poker from her brother, plays piano, works as freelance web des
+
+[dec d79] policy: {"action":"update_state","arguments":{"attempt_id":"a20","attempt_note":"o3 confirms Vanessa Hellebuyck won 2010 WSOP Ladies Event #22, was first French woman, pianist, married mother of two; first La
+  [update_state] ok=False err=protocol_error elapsed=0.00010936986654996872
+    claim[c0] oids=['o3', 'o4'] finding=Vanessa Hellebuyck won 2010 WSOP Event #22 Ladies NLHE for $192,132; this was her third ma
+
+[dec d83] policy: {"action":"update_state","arguments":{"attempt_id":"a22","attempt_note":"Observed 2010 WSOP Event #22 detailed report: Hellebuyck won $192,132, her third major tournament cash, bringing career earning
+  [update_state] ok=False err=protocol_error elapsed=0.0011255750432610512
+    claim[c0] oids=['o4', 'o3'] finding=Vanessa Hellebuyck learned poker from her brother, plays piano, works as freelance web des
+
+[dec d87] policy: {"action":"update_state","arguments":{"attempt_id":"a22","attempt_note":"Confirmed Hellebuyck details from o4/o3; she did win 2010 Ladies event, third major tournament cash, career earnings over $200k
+  [update_state] ok=False err=protocol_error elapsed=0.0003689257428050041
+    claim[c0] oids=['o3', 'o4', 'o1'] finding=Vanessa Hellebuyck learned poker from her brother (from earlier search snippet/o1), plays 
+
+[dec d91] policy: {"action":"update_state","arguments":{"focus":{"claim_id":"c0","need":"Determine whether Vanessa Hellebuyck learned poker from a sibling and worked in web design at the time of the 2010 event; if not,
+  [update_state] ok=False err=protocol_error elapsed=0.0012593530118465424
+
+[dec d95] policy: {"action":"update_state","arguments":{"attempt_id":"a16","claim_updates":[{"claim_id":"c0","finding":"Evidence from o4 (Card Player): Vanessa Hellebuyck won 2010 WSOP Event #22 ($1,000 Ladies NLHE) fo
+  [update_state] ok=False err=protocol_error elapsed=0.00121740298345685
+    claim[c0] oids=['o4'] finding=Evidence from o4 (Card Player): Vanessa Hellebuyck won 2010 WSOP Event #22 ($1,000 Ladies 
+
+[dec d99] policy: ```json
+{
+  "action": "update_state",
+  "arguments": {
+    "attempt_id": "a26",
+    "attempt_note": "Key facts verified from o3 and o4: Vanessa Hellebuyck is indeed an accomplished pianist, her 2010 w
+  [update_state] ok=False err=protocol_error elapsed=0.000863261055201292
+    claim[c0] oids=['o3', 'o4'] finding=VERIFIED KEY FITS: (a) o3 confirms she was an accomplished pianist and first French woman 
+
+[dec d103] policy: ```json
+{"action":"read_evidence","arguments":{"observation_id":"o2"}}
+```
+  [read_evidence] ok=True err=None elapsed=0.0005112788639962673
+
+[dec d107] policy: {"action":"search","arguments":{"query":"poker player sister piano web designer third tournament final table nurse animal rights advocate filmmaking","focus":{"claim_id":"c0","need":"Find another poke
+  [search] ok=False err=unexposed_reference elapsed=0.006773635745048523
+    query: poker player sister piano web designer third tournament final table nurse animal rights advocate filmmaking
+
+[dec d111] policy: {"action":"update_state","arguments":{"focus":{"claim_id":"c0","need":"Determine who won the 2008 WSOP Ladies Event (two years before Hellebuyck's 2010 win), since Hellebuyck's 2010 win appears to be 
+  [update_state] ok=False err=protocol_error elapsed=0.0010644979774951935
+    claim[c0] oids=['o3', 'o4'] finding=Vanessa Hellebuyck matches key clues: 2010 WSOP Ladies event win for $192,132, was her thi
+
+[dec d115] policy: ```json
+{
+  "action": "search",
+  "arguments": {
+    "query": "poker winner final table nurse animal rights activist filmmaking degree 2010 WSOP ladies",
+    "top_k": 10,
+    "focus": {
+      "claim_i
+  [search] ok=True err=None elapsed=0.7992273271083832
+    query: poker winner final table nurse animal rights activist filmmaking degree 2010 WSOP ladies
+
+[dec d119] policy: {"action":"open_page","arguments":{"docid":"93649"}}
+  [open_page] ok=True err=None elapsed=0.022296978160738945
+    open: 93649
+
+[dec d123] policy: {"action":"update_state","arguments":{"focus":{"claim_id":"c0","need":"Identify the correct 2010 WSOP Ladies Event winner and final table characteristics; note Vanessa Hellebuyck appears to be a stron
+  [update_state] ok=False err=protocol_error elapsed=0.0011219251900911331
+    claim[c0] oids=['o3', 'o4', 'o5'] finding=Vanessa Hellebuyck: learned poker from brother (o1 not visible here, but archived), plays 
+
+[dec d127] policy: ```json
+{"action":"update_state","arguments":{"attempt_id":"a33","attempt_note":"Reviewing observed evidence: o4 (Card Player Event No.22 article) shows Vanessa Hellebuyck won 2010 WSOP Ladies Event #
+  [update_state] ok=False err=protocol_error elapsed=0.0011325688101351261
+    claim[c0] oids=['o3', 'o4', 'o5'] finding=Vanessa Hellebuyck won 2010 WSOP Ladies Event #22 ($1,000 Ladies NLHE) on 2010-06-14 for $
+
+[dec d131] policy: {"action":"update_state","arguments":{"focus_attempts":[{"attempt_id":"a34","need_at_search":"Find the 2008 WSOP Ladies Event winner to answer who won two years before Vanessa Hellebuyck won in 2010, 
+  [update_state] ok=False err=protocol_error elapsed=0.0001023649238049984
+
+[dec d135] policy: {"action":"update_state","arguments":{"attempt_id":"a35","attempt_note":"Search hits for 2010 WSOP ladies final table profiles. The 2010 WSOP Ladies Event #22 final table (from o4/o5) matches several 
+  [update_state] ok=False err=protocol_error elapsed=0.0011112568899989128
+    claim[c0] oids=['o3', 'o4', 'o5'] finding=Vanessa Hellebuyck won 2010 WSOP Ladies Event #22, was 35-year-old freelance web designer,
+
+[dec d139] policy: {"action":"open_page","arguments":{"docid":"9722"}}
+  [open_page] ok=False err=context_capacity elapsed=0.0005407505668699741
+    open: 9722
+
+[dec d143] policy: {"action":"update_state","arguments":{"attempt_id":"a37","attempt_note":"Found 2010 WSOP Ladies winner Vanessa Hellebuyck with many matching details (learned from sibling? played piano, web designer, 
+  [update_state] ok=False err=protocol_error elapsed=0.001284013967961073
+    claim[c0] oids=['o3', 'o4', 'o5'] finding=Vanessa Hellebuyck won 2010 WSOP Event #22 (Ladies No-Limit Hold'em) for $192,132. Source 
+
+[dec d147] policy: {"action":"update_state","arguments":{"attempt_id":"a38","attempt_note":"o5 already confirms 2010 WSOP Ladies final table paid positions but does not identify nurse, animal rights advocate, or filmmak
+  [update_state] ok=False err=protocol_error elapsed=0.0007993490435183048
+    claim[c0] oids=['o1', 'o3', 'o4', 'o5'] finding=Vanessa Hellebuyck fits player X: learned poker from brother, plays piano, freelance web d
+
+[dec d151] policy: ```json
+{
+  "action": "update_state",
+  "arguments": {
+    "attempt_id": "a39",
+    "attempt_note": "Reassessing clues against Hellebuyck evidence. o3 confirms she is a pianist; o5 confirms she is a f
+  [update_state] ok=False err=protocol_error elapsed=0.0011177710257470608
+    claim[c0] oids=['o1', 'o3', 'o4', 'o5'] finding=Vanessa Hellebuyck: French pianist, freelance web designer, mother of two; won 2010 WSOP L
+
+[dec d155] policy: {"action":"search","arguments":{"query":"2010 WSOP Ladies Event #22 final table nurse animal rights advocate filmmaking degree","focus":{"claim_id":"c0","need":"Locate final table profiles for 2010 WS
+  [search] ok=True err=None elapsed=0.7757061896845698
+    query: 2010 WSOP Ladies Event #22 final table nurse animal rights advocate filmmaking degree
+
+[dec d159] policy: {
+  "action": "update_state",
+  "arguments": {
+    "attempt_id": "a41",
+    "attempt_note": "Reviewing evidence from o3, o4, o5: Hellebuyck's first WSOP, career earnings only $200k+ after win, final t
+  [update_state] ok=False err=protocol_error elapsed=0.0008380012586712837
+    claim[c0] oids=['o3', 'o4', 'o5'] finding=Vanessa Hellebuyck learned poker from brother, plays piano, web designer, won 2010 WSOP La
+
+[dec d163] policy: {"action":"update_state","arguments":{"revision_reason":"Discard incorrect candidate Vanessa Hellebuyck (won 2010, not the target year; clue says won between 2009 and 2015 exclusive and asks who won t
+  [update_state] ok=False err=protocol_error elapsed=0.0008510802872478962
+    claim[c0] oids=['o4', 'o5'] finding=False candidate: Vanessa Hellebuyck won 2010 WSOP Ladies Event #22, not between 2009-2015 
+
+[dec d167] policy: {"action":"update_state","arguments":{"attempt_id":"a41","attempt_note":"2010 WSOP Ladies Event #22 final table identified: Vanessa Hellebuyck, Sidsel Boesen, Timmi Derosa, Allison Whalen, Kami Chisho
+  [update_state] ok=False err=protocol_error elapsed=0.0012339488603174686
+    claim[c0] oids=['o1', 'o3', 'o4', 'o5'] finding=Vanessa Hellebuyck learned poker from her brother, plays piano, freelance web designer, wo
+
+[dec d171] policy: {
+  "action": "update_state",
+  "arguments": {
+    "focus": {
+      "claim_id": "c0",
+      "need": "Identify the poker event won by X and determine who won that event two years before X. X matches Va
+  [update_state] ok=False err=protocol_error elapsed=0.0002564196474850178
+    claim[c0] oids=['o2', 'o3', 'o4', 'o5'] finding=The 2010 WSOP Ladies Event #22 (won by Vanessa Hellebuyck) final table profile does not co
+
+[dec d175] policy: {"action":"search","arguments":{"query":"Vanessa Hellebuyck nurse animal rights advocate filmmaking degree final table 2010 WSOP ladies","focus":{"claim_id":"c0","need":"Verify final table members' pr
+  [search] ok=True err=None elapsed=0.8914324650540948
+    query: Vanessa Hellebuyck nurse animal rights advocate filmmaking degree final table 2010 WSOP ladies
+
+[dec d179] policy: ```json
+{"action":"search","arguments":{"query":"2010 WSOP Ladies Championship final table nurse animal rights advocate filmmaking degree","focus":{"claim_id":"c0","need":"Verify final table members' 
+  [search] ok=True err=None elapsed=0.9055572929792106
+    query: 2010 WSOP Ladies Championship final table nurse animal rights advocate filmmaking degree
+
+[dec d183] policy: {"action":"update_state","arguments":{"attempt_id":"a47","attempt_note":"Candidate X appears to be Vanessa Hellebuyck based on: learned from sibling (brother), plays piano, freelance web designer, thi
+  [update_state] ok=False err=protocol_error elapsed=0.001250233966857195
+    claim[c0] oids=['o1', 'o3', 'o4', 'o5'] finding=Vanessa Hellebuyck matches most criteria: learned poker from brother (per WSOP article), p
+
+[dec d187] policy: {"action":"open_page","arguments":{"docid":"60017"}}
+  [open_page] ok=False err=context_capacity elapsed=0.0006575961597263813
+    open: 60017
+
+[dec d191] policy: {"action":"update_state","arguments":{"focus":{"claim_id":"c0","need":"Determine whether Vanessa Hellebuyck is player X by verifying: (a) third major tournament = 2010 WSOP Ladies, (b) heads-up all-in
+  [update_state] ok=False err=protocol_error elapsed=0.001226864755153656
+    claim[c0] oids=['o1', 'o3', 'o4', 'o5'] finding=Hellebuyck: learned poker from brother? Not yet confirmed. Plays piano (o3 confirms 'accom
+
+  [invalid_model_response] ok=False err=protocol_error elapsed=0.0003829062916338444
+
+[dec d198] policy: {"action":"update_state","arguments":{"focus":{"claim_id":"c0","need":"Find evidence for Vanessa Hellebuyck's 2010 WSOP Ladies Event #22 final table members' professions: nurse, animal rights advocate
+  [update_state] ok=False err=protocol_error elapsed=0.0011631879024207592
+
+[dec d202] policy: {"action":"update_state","arguments":{"attempt_id":"a51","attempt_note":"Confirmed 2010 WSOP Ladies Event #22 final table from o4/o5: nurse, animal rights advocate, filmmaking degree holder not yet in
+  [update_state] ok=False err=protocol_error elapsed=0.0011317431926727295
+    claim[c0] oids=['o1', 'o3', 'o4', 'o5'] finding=Vanessa Hellebuyck learned poker from brother, plays piano, worked as freelance web design
+
+  [invalid_model_response] ok=False err=protocol_error elapsed=5.6490302085876465e-05
+
+[dec d209] policy: {"action":"update_state","arguments":{"attempt_id":"a54","attempt_note":"o4 and o5 confirm Hellebuyck as third major tournament cash ($8,217 career before win to >$200k) and freelance web designer; fi
+  [update_state] ok=False err=protocol_error elapsed=0.0011212537065148354
+    claim[c0] oids=['o3', 'o4', 'o5'] finding=Vanessa Hellebuyck learned poker from her brother, plays piano, works as freelance web des
+
+[dec d213] policy: ```json
+{"action":"update_state","arguments":{"attempt_id":"a54","attempt_note":"Updating findings based on evidence o4 (CardPlayer article) and o5 (ESPN article). These support Vanessa Hellebuyck as 
+  [update_state] ok=False err=protocol_error elapsed=0.00011575175449252129
+
+[dec d217] policy: {"action":"search","arguments":{"query":"2010 WSOP Ladies final table players nurse animal rights advocate filmmaking degree","focus":{"claim_id":"c0","need":"Find whether 2010 WSOP Ladies Event #22 f
+  [search] ok=True err=None elapsed=0.7617904860526323
+    query: 2010 WSOP Ladies final table players nurse animal rights advocate filmmaking degree
+
+[dec d221] policy: {"action":"read_evidence","arguments":{"observation_id":"o1"}}
+  [read_evidence] ok=True err=None elapsed=0.0007889382541179657
+
+[dec d225] policy: {"action":"search","arguments":{"query":"2010 WSOP Ladies Event #22 final table nurse animal rights advocate filmmaking degree","focus":{"claim_id":"c0","need":"Find whether 2010 WSOP Ladies Event #22
+  [search] ok=False err=unexposed_reference elapsed=0.011743003968149424
+    query: 2010 WSOP Ladies Event #22 final table nurse animal rights advocate filmmaking degree
+
+[dec d229] policy: {"action":"submit_answer","arguments":{"decision":"abstain","reason":"Insufficient evidence: the corpus shows Vanessa Hellebuyck won 2010 WSOP Ladies Event #22 with $192,132, learned from sibling/play
+  [submit_answer] ok=True err=None elapsed=0.0005522631108760834
+    decision=abstain answer=None reason=Insufficient evidence: the corpus shows Vanessa He
+

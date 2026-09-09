@@ -1,0 +1,249 @@
+### esr/soft / qid 1000
+total events: 249, decisions: 63
+
+[dec d1] policy: {"action":"search","arguments":{"query":"Ghanaian doctor Copacabana ship Second World War studied medicine Scotland established clinic","focus":{"claim_id":"c0","need":"Identify the Ghanaian doctor wh
+  [search] ok=True err=None elapsed=0.7403416410088539
+    query: Ghanaian doctor Copacabana ship Second World War studied medicine Scotland established clinic
+
+[dec d5] policy: {"action":"open_page","arguments":{"docid":"33294"}}
+  [open_page] ok=True err=None elapsed=0.015254276804625988
+    open: 33294
+
+[dec d9] policy: {"action":"update_state","arguments":{"claim_updates":[{"claim_id":"c0","finding":"Matthew Arnum Barnor, born in Accra 1917, won a British government scholarship and sailed to Edinburgh University on 
+  [update_state] ok=False err=protocol_error elapsed=0.0008630142547190189
+    claim[c0] oids=['o1'] finding=Matthew Arnum Barnor, born in Accra 1917, won a British government scholarship and sailed 
+
+[dec d13] policy: {"action":"update_state","arguments":{"claim_updates":[{"claim_id":"c0","finding":"Dr Matthew Arnum Barnor was born in Accra in 1917, won a British government scholarship, left for Edinburgh Universit
+  [update_state] ok=True err=None elapsed=0.0010967538692057133
+    claim[c0] oids=['o1'] finding=Dr Matthew Arnum Barnor was born in Accra in 1917, won a British government scholarship, l
+
+[dec d17] policy: {"action":"search","arguments":{"query":"Dr Matthew Barnor Copacabana Edinburgh University clinic 1958 book profile WHO","focus":{"claim_id":"c0","need":"Find corroboration that Dr Matthew Barnor was 
+  [search] ok=True err=None elapsed=0.8554876735433936
+    query: Dr Matthew Barnor Copacabana Edinburgh University clinic 1958 book profile WHO
+
+  [invalid_model_response] ok=False err=protocol_error elapsed=7.758708670735359e-05
+
+[dec d24] policy: {"action":"verify_answer","arguments":{}}
+  [verify_answer] ok=True err=None elapsed=21.403559706173837
+    AUDIT status=unknown target_status=supported
+      claim[c0]: status=supported need=
+
+[dec d28] policy: {"action":"search","arguments":{"query":"Barnor WHO book profile 1996 2000 Ghana doctor","focus":{"claim_id":"c0","need":"Find corroboration that Dr Matthew Barnor was profiled in a book by an interna
+  [search] ok=True err=None elapsed=0.6125876070000231
+    query: Barnor WHO book profile 1996 2000 Ghana doctor
+
+[dec d32] policy: {"action":"open_page","arguments":{"docid":"33294","search_action_id":"a8","query":"Dr Matthew Barnor Copacabana Edinburgh University clinic 1958 book profile WHO"}}
+  [open_page] ok=True err=None elapsed=0.012243347242474556
+    open: 33294
+
+[dec d36] policy: {"action":"search","arguments":{"query":"Matthew Barnor book profile WHO 2000 Ghana doctor recognized","focus":{"claim_id":"c0","need":"Find corroboration that Dr Matthew Barnor was profiled in a book
+  [search] ok=True err=None elapsed=0.731790176127106
+    query: Matthew Barnor book profile WHO 2000 Ghana doctor recognized
+
+[dec d40] policy: {"action":"open_page","arguments":{"docid":"27060","search_action_id":"a10"}}
+  [open_page] ok=True err=None elapsed=0.031664893962442875
+    open: 27060
+
+[dec d44] policy: {"action":"update_state","arguments":{"attempt_note":"o2 confirms the book 'Motherhood by Choice' (Feminist Press, 1992) containing a chapter on Dr M.A. Barnor of Ghana, but the publisher is not an in
+  [update_state] ok=False err=protocol_error elapsed=0.0008644666522741318
+    claim[c0] oids=['o1', 'o2'] finding=Dr Matthew Arnum Barnor was born in Accra in 1917, studied at Edinburgh University (sailin
+
+[dec d48] policy: {"action":"update_state","arguments":{"claim_updates":[{"claim_id":"c0","finding":"Dr Matthew Arnum Barnor was born in Accra in 1917, won a British government scholarship, left for Edinburgh Universit
+  [update_state] ok=False err=protocol_error elapsed=0.000847943127155304
+    claim[c0] oids=['o1', 'o2'] finding=Dr Matthew Arnum Barnor was born in Accra in 1917, won a British government scholarship, l
+
+[dec d52] policy: {"action":"update_state","arguments":{"claim_updates":[{"claim_id":"c0","finding":"Dr Matthew Arnum Barnor was born in Accra in 1917, won a British government scholarship, left for Edinburgh Universit
+  [update_state] ok=True err=None elapsed=0.0011579650454223156
+    claim[c0] oids=['o1', 'o2'] finding=Dr Matthew Arnum Barnor was born in Accra in 1917, won a British government scholarship, l
+
+[dec d56] policy: {"action":"search","arguments":{"query":"Feminist Press founded 1970 history City University New York","focus":{"claim_id":"c0","need":"Confirm the founding year of Feminist Press; if not 1952, identi
+  [invalid_model_response] ok=False err=protocol_error elapsed=5.859695374965668e-05
+
+[dec d60] policy: {"action":"search","arguments":{"query":"Feminist Press founded 1970 New York City history","top_k":10,"focus":{"claim_id":"c0","need":"Confirm whether the Feminist Press or another organization autho
+  [search] ok=True err=None elapsed=0.5837260149419308
+    query: Feminist Press founded 1970 New York City history
+
+[dec d64] policy: {"action":"search","arguments":{"query":"Feminist Press at City University of New York founded 1970","focus":{"claim_id":"c0","need":"Confirm whether the Feminist Press or another organization authori
+  [search] ok=True err=None elapsed=0.7620326322503388
+    query: Feminist Press at City University of New York founded 1970
+
+[dec d68] policy: {"action":"open_page","arguments":{"docid":"24373","query":"Feminist Press at City University of New York founded 1970","search_action_id":"a17"}}
+  [open_page] ok=True err=None elapsed=0.02192909363657236
+    open: 24373
+
+[dec d72] policy: {
+  "action": "open_page",
+  "arguments": {
+    "docid": "27906",
+    "search_action_id": "a16"
+  }
+}
+  [open_page] ok=True err=None elapsed=0.04769106209278107
+    open: 27906
+
+[dec d76] policy: {"action":"search","arguments":{"query":"\"Motherhood by choice\" \"Feminist Press\" 1992 Barnor","top_k":10,"focus":{"claim_id":"c0","need":"Confirm the publisher/author and formation year of the 199
+  [search] ok=True err=None elapsed=0.4666264597326517
+    query: "Motherhood by choice" "Feminist Press" 1992 Barnor
+
+[dec d80] policy: {"action":"search","arguments":{"query":"\"Motherhood by choice\" \"Feminist Press\" 1992 table of contents Barnor","focus":{"claim_id":"c0","need":"Find direct evidence of the 1992 book's publisher/a
+  [search] ok=True err=None elapsed=0.7075769281946123
+    query: "Motherhood by choice" "Feminist Press" 1992 table of contents Barnor
+
+[dec d84] policy: {"action":"search","arguments":{"query":"\"M.A. Barnor\" \"Feminist Press\" OR \"Motherhood by choice\" 1992 profile","focus":{"claim_id":"c0","need":"Find direct evidence of the 1992 book's publisher
+  [search] ok=True err=None elapsed=0.8505084873177111
+    query: "M.A. Barnor" "Feminist Press" OR "Motherhood by choice" 1992 profile
+
+[dec d88] policy: {"action":"open_page","arguments":{"docid":"12064"}}
+  [open_page] ok=True err=None elapsed=0.049340962897986174
+    open: 12064
+
+[dec d92] policy: {"action":"update_state","arguments":{"dismiss_observation_ids":["o3","o4","o5"],"attempt_note":"Dismissed o3 (Ama Ata Aidoo biography, irrelevant), o4 (performance art, unrelated), o5 (photomontage a
+  [update_state] ok=True err=None elapsed=0.0010043997317552567
+
+[dec d96] policy: {"action":"open_page","arguments":{"docid":"50121","search_action_id":"a21"}}
+  [open_page] ok=True err=None elapsed=0.05586698092520237
+    open: 50121
+
+[dec d100] policy: {"action":"search","arguments":{"query":"Feminist Press founded 1970 OR 1972 OR 1952 history organization","focus":{"claim_id":"c0","need":"Verify the founding year of the Feminist Press, the publishe
+  [search] ok=True err=None elapsed=0.7151898588053882
+    query: Feminist Press founded 1970 OR 1972 OR 1952 history organization
+
+  [invalid_model_response] ok=False err=protocol_error elapsed=6.634369492530823e-05
+
+[dec d107] policy: {"action":"search","arguments":{"query":"\"Motherhood by choice\" Barnor 1992 publisher International Planned Parenthood Federation OR UNFPA","focus":{"claim_id":"c0","need":"Identify the internationa
+  [search] ok=True err=None elapsed=0.8490977408364415
+    query: "Motherhood by choice" Barnor 1992 publisher International Planned Parenthood Federation OR UNFPA
+
+[dec d111] policy: {"action":"open_page","arguments":{"docid":"45538","search_action_id":"a28"}}
+  [open_page] ok=True err=None elapsed=0.03496564272791147
+    open: 45538
+
+[dec d115] policy: {"action":"search","arguments":{"focus":{"claim_id":"c0","need":"Identify the international organization that authored the 1992 book profiling Dr Barnor and confirm it was formed in 1952."},"query":"\
+  [search] ok=True err=None elapsed=0.7684513200074434
+    query: "Motherhood by choice" 1992 publisher "International Planned Parenthood Federation" OR IPPF Barnor
+
+[dec d119] policy: {"action":"search","arguments":{"query":"\"Motherhood by choice\" Barnor Feminist Press 1992 authors","focus":{"claim_id":"c0","need":"Confirm the authoring organization of the 1992 book 'Motherhood b
+  [search] ok=True err=None elapsed=0.6148125142790377
+    query: "Motherhood by choice" Barnor Feminist Press 1992 authors
+
+[dec d123] policy: {"action":"open_page","arguments":{"docid":"73363","query":"\"Motherhood by Choice\" 1992 Feminist Press authors organization Barnor","search_action_id":"a31"}}
+  [open_page] ok=True err=None elapsed=0.034716353751719
+    open: 73363
+
+[dec d127] policy: {"action":"open_page","arguments":{"docid":"49130"}}
+  [open_page] ok=True err=None elapsed=0.02993449242785573
+    open: 49130
+
+[dec d131] policy: {"action":"update_state","arguments":{"focus":{"claim_id":"c0","need":"Confirm the International Planned Parenthood Federation (IPPF) authored the 1992 book that profiled Dr Barnor, and that IPPF was 
+  [update_state] ok=True err=None elapsed=0.0012768232263624668
+    claim[c0] oids=['o1', 'o2', 'o9'] finding=Dr Matthew Arnum Barnor was born in Accra in 1917, won a British government scholarship, l
+
+[dec d135] policy: {"action":"search","arguments":{"query":"\"Motherhood by choice\" \"International Planned Parenthood Federation\" 1992","focus":{"claim_id":"c0","need":"Confirm the International Planned Parenthood Fe
+  [search] ok=True err=None elapsed=0.6172958225943148
+    query: "Motherhood by choice" "International Planned Parenthood Federation" 1992
+
+[dec d139] policy: {"action":"open_page","arguments":{"docid":"57070","query":"\"Motherhood by choice\" \"International Planned Parenthood Federation\" 1992"}}
+  [open_page] ok=True err=None elapsed=0.06803233828395605
+    open: 57070
+
+[dec d143] policy: {"action":"open_page","arguments":{"docid":"76806","focus":{"claim_id":"c0","need":"Confirm the International Planned Parenthood Federation (IPPF) authored the 1992 book that profiled Dr Barnor, and t
+  [open_page] ok=False err=protocol_error elapsed=0.00011719297617673874
+    open: 76806
+
+[dec d147] policy: {"action":"search","arguments":{"query":"\"Motherhood by Choice\" \"International Planned Parenthood Federation\" Barnor","top_k":10,"focus":{"claim_id":"c0","need":"Confirm IPPF authored the 1992 boo
+  [search] ok=True err=None elapsed=0.6116492063738406
+    query: "Motherhood by Choice" "International Planned Parenthood Federation" Barnor
+
+[dec d151] policy: {"action":"open_page","arguments":{"docid":"33294","query":"Matthew Arnum Barnor"}}
+  [open_page] ok=False err=context_capacity elapsed=0.0005677691660821438
+    open: 33294
+
+[dec d155] policy: {"action":"update_state","arguments":{"attempt_note":"Dismissing irrelevant pending views (o6 social contract, o7 IPPF history already cited, o8 Judy Chicago, o10 sports article) and updating focus to
+  [update_state] ok=True err=None elapsed=0.0012056459672749043
+    claim[c0] oids=['o1', 'o2', 'o9'] finding=Dr Matthew Arnum Barnor was born in Accra in 1917, won a British government scholarship, l
+
+[dec d159] policy: {"action":"search","arguments":{"query":"\"Motherhood by Choice\" \"Dr M.A. Barnor\" OR \"Barnor\" Ghana Feminist Press 1992","focus":{"claim_id":"c0","need":"Find source confirming the authoring orga
+  [search] ok=True err=None elapsed=0.8115248782560229
+    query: "Motherhood by Choice" "Dr M.A. Barnor" OR "Barnor" Ghana Feminist Press 1992
+
+[dec d163] policy: {"action":"open_page","arguments":{"docid":"33294","search_action_id":"a41"}}
+  [open_page] ok=True err=None elapsed=0.026405545882880688
+    open: 33294
+
+[dec d167] policy: {"action":"search","arguments":{"query":"\"International Planned Parenthood Federation\" \"Motherhood by Choice\" 1992 Barnor","focus":{"claim_id":"c0","need":"Find source confirming the authoring org
+  [search] ok=True err=None elapsed=0.70585573092103
+    query: "International Planned Parenthood Federation" "Motherhood by Choice" 1992 Barnor
+
+[dec d171] policy: {"action":"open_page","arguments":{"docid":"33294"}}
+  [open_page] ok=True err=None elapsed=0.022364997770637274
+    open: 33294
+
+[dec d175] policy: {"action":"verify_answer","arguments":{}}
+  [verify_answer] ok=False err=pending_observations elapsed=0.0004433039575815201
+    AUDIT status=None target_status=None
+
+[dec d179] policy: {"action":"update_state","arguments":{"dismiss_observation_ids":["o11","o7"],"attempt_note":"o11 confirmed Barnor details from BMJ obituary (already used); o7 is IPPF history but does not directly tie
+  [update_state] ok=True err=None elapsed=0.000956118106842041
+
+[dec d183] policy: {"action":"open_page","arguments":{"docid":"95895","search_action_id":"a41"}}
+  [open_page] ok=True err=None elapsed=0.030068648047745228
+    open: 95895
+
+[dec d187] policy: {"action":"search","arguments":{"query":"\"Motherhood by Choice\" \"Barnor\" 1992 IPPF OR \"Feminist Press\"","focus":{"claim_id":"c0","need":"Find the publisher/author of the 1992 book profiling Dr B
+  [search] ok=True err=None elapsed=0.6960078091360629
+    query: "Motherhood by Choice" "Barnor" 1992 IPPF OR "Feminist Press"
+
+[dec d191] policy: {"action":"search","arguments":{"query":"\"Motherhood by Choice\" \"Feminist Press\" 1992 Barnor","focus":{"claim_id":"c0","need":"Locate and open the Internet Archive record for 'Motherhood by Choice
+  [search] ok=True err=None elapsed=0.49387041572481394
+    query: "Motherhood by Choice" "Feminist Press" 1992 Barnor
+
+[dec d195] policy: {"action":"open_page","arguments":{"docid":"33294"}}
+  [open_page] ok=True err=None elapsed=0.0231340522877872
+    open: 33294
+
+[dec d199] policy: {"action":"search","arguments":{"query":"\"Motherhood by Choice\" \"International Planned Parenthood Federation\" 1992","focus":{"claim_id":"c0","need":"Confirm the 1992 book profiling Dr M.A. Barnor 
+  [search] ok=True err=None elapsed=0.5719675030559301
+    query: "Motherhood by Choice" "International Planned Parenthood Federation" 1992
+
+[dec d203] policy: {"action":"open_page","arguments":{"docid":"64168","search_action_id":"a49"}}
+  [open_page] ok=True err=None elapsed=0.035220067016780376
+    open: 64168
+
+[dec d207] policy: {"action":"read_evidence","arguments":{"observation_id":"o11"}}
+  [read_evidence] ok=True err=None elapsed=0.000772613100707531
+
+[dec d211] policy: {"action":"open_page","arguments":{"docid":"51436"}}
+  [open_page] ok=True err=None elapsed=0.03772558877244592
+    open: 51436
+
+[dec d215] policy: {"action":"verify_answer","arguments":{}}
+  [verify_answer] ok=False err=pending_observations elapsed=0.0005283961072564125
+    AUDIT status=None target_status=None
+
+[dec d219] policy: {"action":"update_state","arguments":{"dismiss_observation_ids":["o13","o14"],"attempt_note":"o13 (Working-Class Family wartime article) and o14 (Abolishing Abortion history) are irrelevant to the Bar
+  [update_state] ok=True err=None elapsed=0.0011017140932381153
+
+[dec d223] policy: {"action":"read_evidence","arguments":{"directory_cursor":"start"}}
+  [read_evidence] ok=True err=None elapsed=0.0008786986581981182
+
+  [invalid_model_response] ok=False err=protocol_error elapsed=5.8416277170181274e-05
+
+[dec d230] policy: {"action":"verify_answer","arguments":{}}
+  [verify_answer] ok=False err=pending_observations elapsed=0.00039420416578650475
+    AUDIT status=None target_status=None
+
+[dec d234] policy: {"action":"update_state","arguments":{"attempt_note":"Dismissed o11 and o12 as irrelevant; o11 is BMJ obituary (already cited via o1), o12 is a fashion article about African models, not the 1992 book.
+  [update_state] ok=True err=None elapsed=0.0010423511266708374
+
+[dec d238] policy: {"action":"update_state","arguments":{"attempt_note":"Budget exhausted; proceeding to final verification with current evidence.","focus":null,"answer":"Matthew Arnum Barnor"}}
+  [update_state] ok=True err=None elapsed=0.0009556673467159271
+
+[dec d242] policy: {"action":"verify_answer","arguments":{}}
+  [verify_answer] ok=True err=None elapsed=10.5479028923437
+    AUDIT status=supported target_status=supported
+      claim[c0]: status=supported need=
+
+[dec d246] policy: {"action":"submit_answer","arguments":{"decision":"answer","reason":"All distinctive clues are met by Dr Matthew Arnum Barnor: BMJ obituary (E Evans, 2005) confirms he was born in Accra in 1917, saile
+  [submit_answer] ok=True err=None elapsed=0.000964681152254343
+    decision=answer answer=None reason=All distinctive clues are met by Dr Matthew Arnum 
+
