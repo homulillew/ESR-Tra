@@ -1,0 +1,40 @@
+### esr/off / qid 234
+total events: 42, decisions: 8
+
+[dec None] (no tool)
+
+[dec d1] policy: <think>
+Okay, let me try to figure this out. The user is asking for the by-name of a village where a volunteer group from a non-profit organization found and dated a lost
+  [submit_answer] ok=False err=protocol_error
+    decision=answer answer=None
+
+[dec d7] policy: <think>
+Okay, let's tackle this problem step by step. The user is asking for the by-name of a village where a volunteer group from a non-profit organization discovered a 
+  [search] ok=True err=None
+    query: village name derived from river and walking stick
+
+[dec d13] policy: <think>
+Okay, let's try to figure out the answer here. The user is asking for the by-name of a village where a volunteer group found a lost bridge. The key clues are that
+  [submit_answer] ok=False err=protocol_error
+    decision=answer answer=None
+
+[dec d19] policy: <think>
+Okay, let's try to figure out the answer to this question. The user is asking for the by-name of a village where a volunteer group from a non-profit organization 
+  [submit_answer] ok=False err=protocol_error
+    decision=answer answer=None
+
+[dec d25] policy: <think>
+Okay, let's tackle this problem step by step. The user is asking for the by-name of a village where a volunteer group from a non-profit organization located and d
+  [open_page] ok=True err=None
+    open: 69721
+
+[dec d31] policy: <think>
+Okay, let me try to figure this out. The user is asking for the by-name of a village where a volunteer group found a lost bridge. The village's name is derived fr
+  [submit_answer] ok=False err=pending_observations
+    decision=answer answer=None
+
+[dec d37] policy: <think>
+Okay, let's tackle this question step by step. The user is asking for the by-name of a village where a volunteer group from a non-profit organization located and 
+  [submit_answer] ok=True err=None
+    decision=abstain answer=None
+

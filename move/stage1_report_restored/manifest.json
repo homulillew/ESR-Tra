@@ -1,0 +1,25 @@
+{
+  "experiment": "FORWARD_VALIDATION refactor-esr-state-2.1 Stage1",
+  "code_revision": "refactor-esr-state-2.1",
+  "schema_version": 3,
+  "arms": [
+    "baseline/off",
+    "esr/off",
+    "esr/hard",
+    "esr/soft"
+  ],
+  "qids": [
+    "324",
+    "120",
+    "594",
+    "234",
+    "364",
+    "854",
+    "1000",
+    "170"
+  ],
+  "episodes": 32,
+  "policy_model": "Qwen3-32B",
+  "verifier_model": "Qwen3-32B (same)",
+  "note": "4 arms; baseline via CLI ChatClient-finish; 32B both; no crashes (all exit=0). esr arms abstain/budget with empty final_draft."
+}

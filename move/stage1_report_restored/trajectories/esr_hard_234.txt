@@ -1,0 +1,45 @@
+### esr/hard / qid 234
+total events: 48, decisions: 9
+
+[dec None] (no tool)
+
+[dec d1] policy: <think>
+Okay, let's tackle this question step by step. The user is asking for the by-name of a village where a volunteer group from a non-profit organization located and 
+  [submit_answer] ok=False err=protocol_error
+    decision=answer answer=None
+
+[dec d7] policy: <think>
+Okay, let's tackle this question step by step. The user is asking for the by-name of a village where a volunteer group from a non-profit organization discovered a
+  [search] ok=True err=None
+    query: village named after river and walking stick lost bridge discovery 2016-2023
+
+[dec d13] policy: <think>
+Okay, let's try to figure out the answer step by step. The user is asking for the by-name of a village where a non-profit organization discovered a lost bridge be
+  [submit_answer] ok=False err=protocol_error
+    decision=answer answer=None
+
+[dec d19] policy: <think>
+Okay, let's try to figure out the answer here. The user is asking for the by-name of a village where a volunteer group found a lost bridge between 2016 and 2023. 
+  [submit_answer] ok=False err=protocol_error
+    decision=answer answer=None
+
+[dec d25] policy: <think>
+Okay, let's try to figure out the answer to this question. The user is asking for the by-name of a village where a volunteer group found a lost bridge between 201
+  [open_page] ok=True err=None
+    open: 16503
+
+[dec d31] policy: <think>
+Okay, let's tackle this problem step by step. The user is asking for the by-name of a village that's named after a river and a walking stick. A volunteer group fo
+  [submit_answer] ok=False err=pending_observations
+    decision=answer answer=None
+
+[dec d37] policy: <think>
+Okay, let's try to figure out the answer to this question. The user is asking for the by-name of a village where a volunteer group from a non-profit organization 
+  [submit_answer] ok=False err=pending_observations
+    decision=answer answer=None
+
+[dec d43] policy: <think>
+Okay, let's tackle this problem step by step. The user is asking for the by-name of a village where a volunteer group from a non-profit organization discovered a 
+  [submit_answer] ok=True err=None
+    decision=abstain answer=None
+

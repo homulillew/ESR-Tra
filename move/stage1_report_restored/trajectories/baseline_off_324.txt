@@ -1,0 +1,23 @@
+### baseline/off / qid 324
+total events: 17, decisions: 4
+
+[dec None] (no tool)
+
+  [invalid_model_response] ok=False err=protocol_error
+
+[dec d6] policy: <think>
+Okay, let's try to figure out the answer step by step using the provided tools. The question is asking who won the event two years before Poker player X did. 
+
+Fi
+  [search] ok=True err=None
+    query: poker player sibling piano web design tournament 2010-2014
+
+[dec d12] policy: <think>
+Okay, let's try to figure out who the poker player X is and then determine who won the event two years before them. 
+
+First, let's break down the clues given:
+
+1.
+  [finish] ok=True err=None
+    finish
+
