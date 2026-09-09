@@ -6,7 +6,8 @@ from .protocol import HarnessError, STATE_SCHEMA, digest, validate
 def initial_state(question):
     return {"research_version": 0, "target": question, "answer": None,
             "claims": [{"claim_id": "c0", "requirement": question, "finding": "", "observation_ids": []}],
-            "focus": {"claim_id": "c0", "need": question}}
+            "focus": {"claim_id": "c0", "need": question if len(question) <= 1000 else
+                      "Find evidence for the original question recorded in target and c0.requirement."}}
 
 
 def candidate_scope(state):

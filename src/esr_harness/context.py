@@ -87,9 +87,19 @@ def workcard(harness, recent_limit=None):
     previous = None
     if harness.last_audit and audit is None:
         previous = {"answer_at_audit": harness.last_audit["answer"],
+                    "diagnostics": audit_card(harness.last_audit["report"]),
                     "unresolved_ids": harness.last_audit["unresolved_ids"], "label": "STALE, not current verdict"}
     state = {k: deepcopy(v) for k, v in harness.state.items() if k != "research_version"}
+    failed = harness.actions[-1] if harness.actions and not harness.actions[-1]["result"]["ok"] else None
+    recovery = None
+    if failed:
+        prior = harness.actions[-2] if len(harness.actions) > 1 else None
+        recovery = {"action_id": failed["action_id"], "action": failed["action"],
+                    "arguments": deepcopy(failed["arguments"]), "error": deepcopy(failed["result"]),
+                    "instruction": "Repair the identified field once, preserving valid research content. Do not guess evidence IDs.",
+                    "local_repair_available": not (prior and not prior["result"]["ok"] and prior["action"] == failed["action"])}
     return {"question": harness.question, "mode": harness.config.mode, "audit_mode": harness.config.audit_mode,
+            "action_readiness": harness.readiness(), "failed_proposal": recovery,
             "state": state if harness.config.mode == "esr" else None,
             "finding_scope_stale_ids": [cid for cid, s in harness.finding_scopes.items() if s != scope],
             "current_audit": audit_card(audit["report"]) if audit else None, "previous_issues": previous,

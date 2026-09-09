@@ -16,6 +16,14 @@ def messages_for(harness, client):
         if budget:
             card["budget"] = budget.summary()
         messages = [system, {"role": "user", "content": canonical(card)}]
+        if harness.config.mode == "baseline":
+            # Ordinary ReAct history, retained verbatim without state tables or model summaries.
+            history = [{"role": "user", "content": harness.question}]
+            for event in harness.actions:
+                history.extend([{"role": "assistant", "content": canonical({"action": event["action"], "arguments": event["arguments"]})},
+                                {"role": "user", "content": canonical(event["result"])}])
+            # Keep the current card at index 1 for API consumers; history is chronological thereafter.
+            messages = [system, messages[1], *history]
         if client.fits(messages):
             return messages
     raise HarnessError("context_overflow", "Required state, pending and latest result do not fit; none were dropped")

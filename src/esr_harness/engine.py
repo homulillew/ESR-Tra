@@ -277,6 +277,8 @@ class Harness:
         if observation_id not in self.observations:
             raise HarnessError("protocol_error", "Unknown observation in this episode")
         refs = {o for c in self.state["claims"] for o in c["observation_ids"]}
+        if observation_id not in refs | self.pending and len(self.pending) >= self.config.max_pending_views:
+            raise HarnessError("context_capacity", "Pending buffer full; process existing observations before reading an uncited view")
         return {"observation": self.observations[observation_id], "purpose": self._purpose()}, {
             "pending_add": [] if observation_id in refs else [observation_id]}
 
@@ -284,6 +286,7 @@ class Harness:
         result, next_claim, changes, consumed = apply_delta(self.state, patch, next_claim=self.next_claim,
                                                            exposed_ids=self.exposed, observations=self.observations)
         attempt_id = patch.get("attempt_id")
+        warnings = []
         if "attempt_note" in patch:
             if attempt_id is None:
                 focus = self.state["focus"]
@@ -291,16 +294,47 @@ class Harness:
                                    and s["purpose"]["claim_id"] == focus["claim_id"]
                                    and s["purpose"]["candidate_scope"] == candidate_scope(self.state)), None)
             if attempt_id not in self.searches:
-                raise HarnessError("protocol_error", "attempt_note requires an existing unambiguous attempt_id")
+                warnings.append({"path": "arguments.attempt_id", "code": "unlinked_note",
+                                 "message": "Research delta committed; note retained in action arguments but not linked to a search. Supply an existing attempt_id to link it."})
         elif attempt_id is not None:
-            raise HarnessError("protocol_error", "attempt_id requires attempt_note")
+            warnings.append({"path": "arguments.attempt_note", "code": "unlinked_note",
+                             "message": "Research delta committed; attempt_id without a note has no bookkeeping effect."})
         delta = {"state": result, "next_claim": next_claim, "pending_remove": sorted(consumed),
                  "changes": changes, "revision_reason": patch.get("revision_reason", ""),
                  "finding_scopes": {cid: candidate_scope(result) for cid in changes["working_updates"]}}
-        if "attempt_note" in patch:
+        if "attempt_note" in patch and not warnings:
             delta["attempt_note"] = {"attempt_id": attempt_id, "text": patch["attempt_note"], "actor_report": True}
         return {"research_version": result["research_version"], "noop": result == self.state,
-                "added_claim_ids": changes["added_claim_ids"], "changes": changes}, delta
+                "added_claim_ids": changes["added_claim_ids"], "changes": changes, "warnings": warnings}, delta
+
+    def answer_blocker(self):
+        """Single source for submit preconditions and policy-visible readiness."""
+        if self.pending:
+            return ("pending_observations", "Record or dismiss pending observations")
+        if not self.state["answer"]:
+            return ("protocol_error", "No candidate answer is bound; update_state must bind answer first")
+        audit = self.current_audit
+        if self.config.audit_mode != "off" and audit is None:
+            return ("audit_required", "Audit the current semantic state")
+        if self.config.audit_mode == "hard" and audit["status"] != "supported":
+            return ("not_supported", "Repair or abstain; hard mode does not rewrite unknown")
+        return None
+
+    def readiness(self):
+        if self.config.mode == "baseline":
+            return {}
+        blocker = self.answer_blocker()
+        result = {"submit_answer.answer": {"ready": blocker is None, "blocked_reason": blocker},
+                  "submit_answer.abstain": {"ready": True},
+                  "open_page": {"ready": self.state["focus"] is not None and len(self.pending) < self.config.max_pending_views,
+                                "requires": "existing search hit, active focus, pending capacity"},
+                  "search": {"ready": True, "requires": "active focus or a valid focus argument"},
+                  "read_evidence": {"requires": "directory cursor OR observation ID; raw read requires active focus and pending capacity"}}
+        if self.config.audit_mode != "off":
+            result["verify_answer"] = {"ready": not self.pending, "cached": self.current_audit is not None,
+                                       "use": "Current audit already delivered; change semantic evidence before requesting a new judgment."
+                                       if self.current_audit else "Audit a bound candidate or a sourced partial finding; an empty state provides no evidence to audit."}
+        return result
 
     def _verify(self, aid):
         if self.pending:
@@ -334,15 +368,10 @@ class Harness:
             terminal = {"outcome": "abstained", "answer": "", "final_draft": self.state["answer"],
                         "evidence_status": "unverified", "reason": reason}
         else:
-            if self.pending:
-                raise HarnessError("pending_observations", "Record or dismiss pending observations")
-            if not self.state["answer"]:
-                raise HarnessError("protocol_error", "No candidate answer is bound")
+            blocker = self.answer_blocker()
+            if blocker:
+                raise HarnessError(*blocker)
             audit = self.current_audit
-            if self.config.audit_mode != "off" and audit is None:
-                raise HarnessError("audit_required", "Audit the current semantic state")
-            if self.config.audit_mode == "hard" and audit["status"] != "supported":
-                raise HarnessError("not_supported", "Repair or abstain; hard mode does not rewrite unknown")
             terminal = {"outcome": "submitted", "answer": self.state["answer"], "final_draft": self.state["answer"],
                         "evidence_status": audit["status"] if audit else "unverified",
                         "unresolved_ids": audit["unresolved_ids"] if audit else [],
