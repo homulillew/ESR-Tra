@@ -29,10 +29,13 @@ def metrics(directory):
     errors=Counter(e['result'].get('error_code') for e in actions if not e['result']['ok'])
     same_reads=sum(a['action']=='read_evidence' and b['action']=='read_evidence' and a['arguments']==b['arguments']
                    for a,b in zip(actions,actions[1:]))
+    native_proposals=[sum(b.get('type')=='tool_use' for b in e.get('response',{}).get('content',[])) for e in generations]
     row={'run_id':directory.name,'category':manifest['category'],'qid':manifest['qid'],'arm':manifest['arm'],
          'replicate':manifest['replicate'],'sha':manifest['sha'],'context_cap':manifest['settings']['provider']['context_operating_cap'],
          'outcome':terminal.get('outcome'),'correct':correct,'judged':bool(evaluation),'actions':len(actions),
          'invalid_actions':sum(errors.values()),'backend_requests':len(retrieval),'backend_searches':op['search'],
+         'native_tool_call_proposals':sum(native_proposals),'native_multi_call_responses':sum(n>1 for n in native_proposals),
+         'accepted_tool_actions':sum(e['result']['ok'] for e in actions),
          'backend_documents':op['get_document'],'policy_requests':kinds['policy'],'audit_requests':kinds['audit'],
          'online_model_requests':len(requests),'input_tokens_measured':sum(u['prompt_tokens'] for u in measured),
          'input_tokens_charged':sum(actual_by_request[e['request_id']]['prompt_tokens'] if e['request_id'] in actual_by_request
