@@ -12,7 +12,7 @@ RULE = {
     'hard': 'At least two healthy pilots, none correct',
     'medium': 'Other healthy observations, including single healthy trials; high uncertainty',
     'diagnostic': 'No healthy pilot; not evidence of question difficulty',
-    'health': 'Exclude explicit calibration exclusions, service/operator/context failures, protocol-stalled runs, or recorded judge disputes; retain original scores in primary records',
+    'health': 'Exclude explicit calibration exclusions, schema contract warnings, service/operator/context failures, protocol-stalled runs, or recorded judge disputes; retain original scores in primary records',
     'selection': 'Take first three per empirical stratum in original frozen order; fill shortages with remaining healthy candidates, then diagnostic candidates, all in original order; never call diagnostic failures hard',
     'uncertainty': 'All empirical labels provisional; one or two draws do not establish intrinsic difficulty',
 }
@@ -20,6 +20,7 @@ RULE = {
 
 def classify(rows):
     healthy = [r for r in rows if not r.get('calibration_excluded')
+               and not r.get('schema_contract_warning')
                and not r.get('evaluation_disputed')
                and r['outcome'] in {'submitted', 'abstained', 'budget_exhausted', 'generation_budget_exhausted'}
                and not r.get('systemic_pause')]

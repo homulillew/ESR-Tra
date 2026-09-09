@@ -67,6 +67,8 @@ def compare(root, stage, esr, replicates, reference_run):
         raise ValueError('Incomplete predeclared cohort, missing '+repr(sorted(expected-set(cohort))))
     if any(row['correct'] is None for row in cohort.values()):
         raise ValueError('Submitted answers require completed independent grading')
+    if any(row['schema_contract_warning'] for row in cohort.values()):
+        raise ValueError('Saved provider schemas were inconsistent with runtime; this cohort cannot qualify as the final comparison')
     pairs={q:[(cohort[(q,'B',r)],cohort[(q,esr,r)]) for r in range(replicates)] for q in qids}
     if stage=='development':
         selection=json.loads((root/'dataset_splits/development_selection.json').read_text(encoding='utf-8'))

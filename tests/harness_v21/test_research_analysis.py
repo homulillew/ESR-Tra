@@ -21,6 +21,7 @@ def test_difficulty_does_not_turn_infrastructure_failure_into_hard_question():
     assert classify([row(False,outcome='context_overflow')]*2)[0]=='diagnostic'
     assert classify([row(False,calibration_excluded=True)]*2)[0]=='diagnostic'
     assert classify([row(False,evaluation_disputed=True)]*2)[0]=='diagnostic'
+    assert classify([row(True,schema_contract_warning=True)]*2)[0]=='diagnostic'
     assert classify([row(False)]*2)[0]=='hard'
     assert classify([row(True)])[0]=='medium'
     assert classify([row(True)]*2)[0]=='easy'
@@ -90,3 +91,12 @@ def test_receipt_audit_detects_charge_and_export_disagreement(tmp_path):
     with sqlite3.connect(tmp_path/'global_budget.sqlite') as db:db.execute('update requests set input_charged=0')
     (directory/'provider_responses.jsonl').write_text('{}\n',encoding='utf-8')
     assert {e['kind'] for e in audit(tmp_path)['mismatches']}=={'usage_or_charge','export_differs_from_ledger'}
+
+
+def test_schema_audit_distinguishes_valid_read_constraint_from_leaked_doc_constraint():
+    from audit_strong_api_schemas import anomalies
+    body={'tools':[{'name':'read_evidence','input_schema':{'properties':{'observation_id':{'enum':['o1']}}}},
+                   {'name':'open_page','input_schema':{'properties':{'docid':{'type':'string'}}}}]}
+    assert anomalies(body)==[]
+    body['tools'][1]['input_schema']['properties']['docid']['enum']=['o1']
+    assert anomalies(body)[0]['kind']=='policy_unintended_id_enum'
