@@ -1,0 +1,36 @@
+{
+  "experiment": "FORWARD_VALIDATION refactor-esr-state-2.1 Stage0",
+  "code_revision": "refactor-esr-state-2.1",
+  "schema_version": 3,
+  "dataset_sha256": "4f261d506e2022e47d9e8d3fdcbcbe1ab02beeb5bb58eec3595a1c60b6b7b1e7",
+  "arms": [
+    "esr/off",
+    "esr/hard",
+    "esr/soft"
+  ],
+  "qids": [
+    "324",
+    "120",
+    "594",
+    "234",
+    "364",
+    "854",
+    "1000",
+    "170"
+  ],
+  "episodes_planned": 24,
+  "policy_model": "Lanz-Medium",
+  "verifier_model": "Lanz-Medium (same as policy)",
+  "generation_budget": 24000,
+  "max_actions": 64,
+  "search_top_k": 5,
+  "view_chars": 8000,
+  "recent_actions": 4,
+  "max_pending_views": 4,
+  "fixes_applied": [
+    "_extract_action prose/fence recovery",
+    "_TOOL_SCHEMA_HINT 2.1 delta field contract"
+  ],
+  "re_runs": "off/120 (was store-skip), hard/1000 (infra 502)",
+  "note": "Strategy model == verifier model per user directive for Stage0. q324 arms used the OLD prompt (pre schema-hint fix). Episodes ran serially, concurrency=1."
+}

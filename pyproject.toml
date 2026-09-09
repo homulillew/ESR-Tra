@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "esr-forward-harness"
-version = "2.0.0"
+version = "2.1.0"
 description = "Evidence-state inference harness with immutable observations and auditable transitions"
 requires-python = ">=3.10"
 dependencies = []
@@ -21,5 +21,6 @@ where = ["src"]
 include = ["esr_harness*", "esr_grpo*"]
 
 [tool.pytest.ini_options]
-testpaths = ["tests/harness_v2"]
+testpaths = ["tests/harness_v2", "tests/harness_v21"]
+addopts = "--import-mode=importlib"
 pythonpath = ["src"]

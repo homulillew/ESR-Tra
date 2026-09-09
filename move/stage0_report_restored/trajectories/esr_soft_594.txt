@@ -1,0 +1,101 @@
+### esr/soft / qid 594
+total events: 86, decisions: 22
+
+  [invalid_model_response] ok=False err=protocol_error elapsed=6.355484947562218e-05
+
+[dec d4] policy: {"action":"search","arguments":{"query":"workshop schedule Islandora Digital Commons \"gentle introduction\"","focus":{"claim_id":"c0","need":"Find the workshop schedule that included sessions on Isla
+  [search] ok=True err=None elapsed=0.5454915296286345
+    query: workshop schedule Islandora Digital Commons "gentle introduction"
+
+  [invalid_model_response] ok=False err=protocol_error elapsed=6.946967914700508e-05
+
+[dec d11] policy: {"action":"open_page","arguments":{"docid":"9628","search_action_id":"a2"}}
+  [open_page] ok=True err=None elapsed=0.012001004070043564
+    open: 9628
+
+[dec d15] policy: {"action":"update_state","arguments":{"claim_updates":[{"claim_id":"c0","finding":"The workshop schedule (doc 9628, 'Editing Modernism in Canada', May 8 2012) matches the question: sponsored by reposi
+  [update_state] ok=True err=None elapsed=0.0011440548114478588
+    claim[c0] oids=['o1'] finding=The workshop schedule (doc 9628, 'Editing Modernism in Canada', May 8 2012) matches the qu
+
+[dec d19] policy: {"action":"verify_answer","arguments":{}}
+  [verify_answer] ok=True err=None elapsed=35.8148678871803
+    AUDIT status=unknown target_status=unknown
+      claim[c0]: status=supported need=
+
+[dec d23] policy: {"action":"verify_answer","arguments":{}}
+  [verify_answer] ok=True err=None elapsed=0.0008064308203756809
+    AUDIT status=unknown target_status=unknown
+      claim[c0]: status=supported need=
+
+[dec d27] policy: {"action":"verify_answer","arguments":{}}
+  [verify_answer] ok=True err=None elapsed=0.0008425032719969749
+    AUDIT status=unknown target_status=unknown
+      claim[c0]: status=supported need=
+
+[dec d31] policy: {"action":"verify_answer","arguments":{}}
+  [verify_answer] ok=True err=None elapsed=0.0007681110873818398
+    AUDIT status=unknown target_status=unknown
+      claim[c0]: status=supported need=
+
+[dec d35] policy: {"action":"verify_answer","arguments":{}}
+  [verify_answer] ok=True err=None elapsed=0.0007514022290706635
+    AUDIT status=unknown target_status=unknown
+      claim[c0]: status=supported need=
+
+[dec d39] policy: {"action":"verify_answer","arguments":{}}
+  [verify_answer] ok=True err=None elapsed=0.0007317117415368557
+    AUDIT status=unknown target_status=unknown
+      claim[c0]: status=supported need=
+
+[dec d43] policy: {"action":"verify_answer","arguments":{}}
+  [verify_answer] ok=True err=None elapsed=0.000706053338944912
+    AUDIT status=unknown target_status=unknown
+      claim[c0]: status=supported need=
+
+[dec d47] policy: {"action":"verify_answer","arguments":{}}
+  [verify_answer] ok=True err=None elapsed=0.000818328931927681
+    AUDIT status=unknown target_status=unknown
+      claim[c0]: status=supported need=
+
+[dec d51] policy: {"action":"verify_answer","arguments":{}}
+  [verify_answer] ok=True err=None elapsed=0.0008759349584579468
+    AUDIT status=unknown target_status=unknown
+      claim[c0]: status=supported need=
+
+[dec d55] policy: {"action":"verify_answer","arguments":{}}
+  [verify_answer] ok=True err=None elapsed=0.0008429982699453831
+    AUDIT status=unknown target_status=unknown
+      claim[c0]: status=supported need=
+
+[dec d59] policy: {"action":"verify_answer","arguments":{}}
+  [verify_answer] ok=True err=None elapsed=0.000845479778945446
+    AUDIT status=unknown target_status=unknown
+      claim[c0]: status=supported need=
+
+[dec d63] policy: {"action":"submit_answer","arguments":{"decision":"answer","reason":"The observed workshop schedule (doc 9628) explicitly shows a session 'Intro to Markup' containing a link labeled 'Gentle Introducti
+  [submit_answer] ok=False err=protocol_error elapsed=0.0005098460242152214
+    decision=answer answer=None reason=The observed workshop schedule (doc 9628) explicit
+
+[dec d67] policy: {"action":"verify_answer","arguments":{}}
+  [verify_answer] ok=True err=None elapsed=0.0008921572007238865
+    AUDIT status=unknown target_status=unknown
+      claim[c0]: status=supported need=
+
+[dec d71] policy: {"action":"verify_answer","arguments":{}}
+  [verify_answer] ok=True err=None elapsed=0.0009071980603039265
+    AUDIT status=unknown target_status=unknown
+      claim[c0]: status=supported need=
+
+[dec d75] policy: {"action":"update_state","arguments":{"answer":"XML","focus":{"claim_id":"c0","need":"Submit answer after confirming the gentle introduction link targets XML."},"claim_updates":[{"claim_id":"c0","find
+  [update_state] ok=True err=None elapsed=0.0010489611886441708
+    claim[c0] oids=['o1'] finding=The workshop schedule (doc 9628, 'Editing Modernism in Canada', May 8 2012) matches the qu
+
+[dec d79] policy: {"action":"verify_answer","arguments":{}}
+  [verify_answer] ok=True err=None elapsed=22.602414833847433
+    AUDIT status=supported target_status=supported
+      claim[c0]: status=supported need=
+
+[dec d83] policy: {"action":"submit_answer","arguments":{"decision":"answer","reason":"The workshop schedule (doc 9628, 'Editing Modernism in Canada', May 8 2012) matches all clues: sponsored by Islandora/DiscoveryGard
+  [submit_answer] ok=True err=None elapsed=0.0010506398975849152
+    decision=answer answer=None reason=The workshop schedule (doc 9628, 'Editing Modernis
+

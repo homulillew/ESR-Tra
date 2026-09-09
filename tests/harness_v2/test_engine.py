@@ -4,12 +4,12 @@ import sqlite3
 
 import pytest
 
-from esr_harness.engine import Harness
-from esr_harness.ledger import Ledger
-from esr_harness.protocol import Config, HarnessError
-from esr_harness.runner import replay
-from esr_harness.views import MemoryRetriever
-from conftest import DOCUMENTS, StubAuditor, opened, report_for, update
+from esr_harness.v2.engine import Harness
+from esr_harness.v2.ledger import Ledger
+from esr_harness.v2.protocol import Config, HarnessError
+from esr_harness.v2.runner import replay
+from esr_harness.v2.views import MemoryRetriever
+from .conftest import DOCUMENTS, StubAuditor, opened, report_for, update
 
 
 def test_supported_path(env):

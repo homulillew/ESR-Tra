@@ -3,9 +3,9 @@ import json
 import threading
 from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
 
-from esr_harness import cli
-from esr_harness.demo import DemoAuditor, DemoPolicy
-from esr_harness.runner import replay
+from esr_harness.v2 import cli
+from esr_harness.v2.demo import DemoAuditor, DemoPolicy
+from esr_harness.v2.runner import replay
 
 
 class Counter:

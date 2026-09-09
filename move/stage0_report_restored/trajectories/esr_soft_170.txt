@@ -1,0 +1,195 @@
+### esr/soft / qid 170
+total events: 191, decisions: 49
+
+[dec d1] policy: {"action":"search","arguments":{"query":"actor suggested plot injury survived 1950s producer credit TV series writer hospital","focus":{"claim_id":"c0","need":"Identify TV series and season where acto
+  [search] ok=True err=None elapsed=0.8014310728758574
+    query: actor suggested plot injury survived 1950s producer credit TV series writer hospital
+
+[dec d5] policy: {"action":"open_page","arguments":{"docid":"1939"}}
+  [open_page] ok=True err=None elapsed=0.03264136705547571
+    open: 1939
+
+[dec d9] policy: {"action":"open_page","arguments":{"docid":"41035","search_action_id":"a1"}}
+  [open_page] ok=True err=None elapsed=0.03836601693183184
+    open: 41035
+
+[dec d13] policy: {"action":"update_state","arguments":{"attempt_note":"Opened two candidate pages (Rod Serling, actor biographies) but neither observation shows the target injury story. Both can be dismissed as irrele
+  [update_state] ok=True err=None elapsed=0.001152804121375084
+
+  [invalid_model_response] ok=False err=protocol_error elapsed=6.341002881526947e-05
+
+[dec d20] policy: {"action":"search","arguments":{"query":"actor survived injury 1950s suggested plot TV series writer hospital producer credit burn","focus":{"claim_id":"c0","need":"Find the specific TV series season 
+  [search] ok=True err=None elapsed=0.8258502371609211
+    query: actor survived injury 1950s suggested plot TV series writer hospital producer credit burn
+
+[dec d24] policy: {"action":"search","arguments":{"query":"actor suffered injury 1950s suggested plot writer producer credit charity advocate TV series episode","focus":{"claim_id":"c0","need":"Identify the actor who s
+  [search] ok=True err=None elapsed=0.8772997236810625
+    query: actor suffered injury 1950s suggested plot writer producer credit charity advocate TV series episode
+
+[dec d28] policy: {"action":"open_page","arguments":{"docid":"42731","search_action_id":"a7"}}
+  [open_page] ok=True err=None elapsed=0.02184063894674182
+    open: 42731
+
+[dec d32] policy: {"action":"search","arguments":{"query":"actor suggested plot injury survived 1950s writer hospital producer credit TV series season","focus":{"claim_id":"c0","need":"Find the TV series and season whe
+  [search] ok=True err=None elapsed=0.872262654826045
+    query: actor suggested plot injury survived 1950s writer hospital producer credit TV series season
+
+[dec d36] policy: {"action":"search","arguments":{"query":"actor survived neck injury 1950s suggested episode plot received producer credit writer hospital worker","focus":{"claim_id":"c0","need":"Find the TV series an
+  [search] ok=True err=None elapsed=0.897498644888401
+    query: actor survived neck injury 1950s suggested episode plot received producer credit writer hospital worker
+
+[dec d40] policy: {"action":"search","arguments":{"query":"actor suggested plot injury 1950s writer hospital producer credit TV series","focus":{"claim_id":"c0","need":"Find the TV series and season where an actor's re
+  [search] ok=True err=None elapsed=0.7158381710760295
+    query: actor suggested plot injury 1950s writer hospital producer credit TV series
+
+  [invalid_model_response] ok=False err=protocol_error elapsed=6.149616092443466e-05
+
+[dec d47] policy: {"action":"search","arguments":{"query":"actor suffered neck injury 1950s survived suggested plot writer producer credit TV series attack","top_k":20,"focus":{"claim_id":"c0","need":"Find TV series an
+  [search] ok=True err=None elapsed=0.9675185065716505
+    query: actor suffered neck injury 1950s survived suggested plot writer producer credit TV series attack
+
+[dec d51] policy: {"action":"search","arguments":{"query":"actor suggested plot injury survived 1950s producer credit TV series writer hospital","focus":{"claim_id":"c0","need":"Find TV series and season where actor's 
+  [invalid_model_response] ok=False err=protocol_error elapsed=4.374561831355095e-05
+
+[dec d55] policy: {"action":"update_state","arguments":{"attempt_note":"Dismissed o3 (Richard Dean Anderson/MacGyver/Stargate) as irrelevant - his injuries were stunt-related in the 1980s-90s, not a 1950s injury with c
+  [update_state] ok=True err=None elapsed=0.0011334591545164585
+
+  [invalid_model_response] ok=False err=protocol_error elapsed=5.66788949072361e-05
+
+[dec d62] policy: {"action":"search","arguments":{"query":"actor suggested plot injury 1950s writer producer credit hospital TV series character attacked","focus":{"claim_id":"c0","need":"Find TV series and season wher
+  [search] ok=True err=None elapsed=0.8178312331438065
+    query: actor suggested plot injury 1950s writer producer credit hospital TV series character attacked
+
+[dec d66] policy: {"action":"search","arguments":{"query":"actor 1950s neck injury survived charities advocate suggested plot writer producer credit TV series","focus":{"claim_id":"c0","need":"Find TV series and season
+  [search] ok=True err=None elapsed=0.8934206962585449
+    query: actor 1950s neck injury survived charities advocate suggested plot writer producer credit TV series
+
+[dec d70] policy: {"action":"search","arguments":{"query":"actor suggested plot injury survived 1950s producer credit writer worked hospital TV series season","focus":{"claim_id":"c0","need":"Find TV series and season 
+  [search] ok=True err=None elapsed=0.9192377664148808
+    query: actor suggested plot injury survived 1950s producer credit writer worked hospital TV series season
+
+[dec d74] policy: {"action":"search","arguments":{"query":"actor survived neck injury 1950s suggested plot writer producer credit television series","focus":{"claim_id":"c0","need":"Find TV series and season where acto
+  [search] ok=True err=None elapsed=0.8690401366911829
+    query: actor survived neck injury 1950s suggested plot writer producer credit television series
+
+[dec d78] policy: {"action":"search","arguments":{"query":"actor injured 1950s suggested storyline writer producer credit charity advocate neck injury TV series","focus":{"claim_id":"c0","need":"Identify the actor, TV 
+  [search] ok=True err=None elapsed=0.8639478362165391
+    query: actor injured 1950s suggested storyline writer producer credit charity advocate neck injury TV series
+
+[dec d82] policy: {"action":"search","arguments":{"query":"actor survived spinal injury 1950s suggested plot writer producer credit TV series","focus":{"claim_id":"c0","need":"Find TV series and season where a characte
+  [search] ok=True err=None elapsed=0.820824250113219
+    query: actor survived spinal injury 1950s suggested plot writer producer credit TV series
+
+[dec d86] policy: {"action":"search","arguments":{"query":"actor suggested own injury storyline TV series writer producer credit","focus":{"claim_id":"c0","need":"Find TV series and season where a character suffers an 
+  [search] ok=True err=None elapsed=0.7567442879080772
+    query: actor suggested own injury storyline TV series writer producer credit
+
+[dec d90] policy: {"action":"open_page","arguments":{"docid":"32785","query":"actor suggested own injury storyline TV series writer producer credit","search_action_id":"a23"}}
+  [open_page] ok=True err=None elapsed=0.07566086808219552
+    open: 32785
+
+[dec d94] policy: {"action":"search","arguments":{"query":"actor survived injury 1950s suggested storyline writer producer credit TV series attack","focus":{"claim_id":"c0","need":"Identify the actor who survived injur
+  [search] ok=True err=None elapsed=0.7983608362264931
+    query: actor survived injury 1950s suggested storyline writer producer credit TV series attack
+
+[dec d98] policy: {"action":"search","arguments":{"query":"actor survived 1950s attack injury suggested storyline writer worked hospital TV series","focus":{"claim_id":"c0","need":"Find the TV series and season where c
+  [search] ok=True err=None elapsed=0.789873646106571
+    query: actor survived 1950s attack injury suggested storyline writer worked hospital TV series
+
+[dec d102] policy: {"action":"open_page","arguments":{"docid":"33125"}}
+  [open_page] ok=True err=None elapsed=0.024399334099143744
+    open: 33125
+
+[dec d106] policy: {"action":"update_state","arguments":{"claim_updates":[{"claim_id":"c0","finding":"The Good Karma Hospital (ITV) series 3 (2020) includes an acid attack storyline suggested by actress Amanda Redman to
+  [update_state] ok=True err=None elapsed=0.0014010132290422916
+    claim[c0] oids=['o5', 'o4'] finding=The Good Karma Hospital (ITV) series 3 (2020) includes an acid attack storyline suggested 
+
+[dec d110] policy: {"action":"search","arguments":{"query":"Amanda Redman \"producer\" \"Good Karma Hospital\" burns charity","top_k":10,"focus":{"claim_id":"c0","need":"Find source confirming Amanda Redman received a p
+  [search] ok=True err=None elapsed=0.671254781074822
+    query: Amanda Redman "producer" "Good Karma Hospital" burns charity
+
+[dec d114] policy: {"action":"open_page","arguments":{"docid":"80759","search_action_id":"a29"}}
+  [open_page] ok=True err=None elapsed=0.018384956289082766
+    open: 80759
+
+[dec d118] policy: {"action":"update_state","arguments":{"claim_updates":[{"claim_id":"c0","finding":"The Good Karma Hospital (ITV) series 3 (2020) includes an acid attack storyline suggested by actress Amanda Redman to
+  [update_state] ok=False err=protocol_error elapsed=0.0008822977542877197
+    claim[c0] oids=['o4', 'o5', 'o6'] finding=The Good Karma Hospital (ITV) series 3 (2020) includes an acid attack storyline suggested 
+
+  [invalid_model_response] ok=False err=protocol_error elapsed=6.615929305553436e-05
+
+[dec d125] policy: {"action":"update_state","arguments":{"attempt_note":"Found IMDb evidence that Amanda Redman is Associate Producer on The Good Karma Hospital episode 3.4, confirming the producer credit element.","cla
+  [update_state] ok=True err=None elapsed=0.0011812238954007626
+    claim[c0] oids=['o4', 'o5', 'o6'] finding=The Good Karma Hospital (ITV) series 3 (2020) includes an acid attack storyline suggested 
+
+[dec d129] policy: {"action":"verify_answer","arguments":{}}
+  [verify_answer] ok=True err=None elapsed=8.346326458267868
+    AUDIT status=unknown target_status=unknown
+      claim[c0]: status=unknown need=Observation evidence that Amanda Redman suffer
+
+[dec d133] policy: {"action":"verify_answer","arguments":{}}
+  [verify_answer] ok=True err=None elapsed=0.0010392791591584682
+    AUDIT status=unknown target_status=unknown
+      claim[c0]: status=unknown need=Observation evidence that Amanda Redman suffer
+
+[dec d137] policy: {"action":"verify_answer","arguments":{}}
+  [verify_answer] ok=True err=None elapsed=0.0010403268970549107
+    AUDIT status=unknown target_status=unknown
+      claim[c0]: status=unknown need=Observation evidence that Amanda Redman suffer
+
+[dec d141] policy: {"action":"verify_answer","arguments":{}}
+  [verify_answer] ok=True err=None elapsed=0.0009730560705065727
+    AUDIT status=unknown target_status=unknown
+      claim[c0]: status=unknown need=Observation evidence that Amanda Redman suffer
+
+[dec d145] policy: {"action":"verify_answer","arguments":{}}
+  [verify_answer] ok=True err=None elapsed=0.000954153947532177
+    AUDIT status=unknown target_status=unknown
+      claim[c0]: status=unknown need=Observation evidence that Amanda Redman suffer
+
+[dec d149] policy: {"action":"verify_answer","arguments":{}}
+  [verify_answer] ok=True err=None elapsed=0.0009512673132121563
+    AUDIT status=unknown target_status=unknown
+      claim[c0]: status=unknown need=Observation evidence that Amanda Redman suffer
+
+[dec d153] policy: {"action":"search","arguments":{"query":"Amanda Redman burns 1950s East Grinstead burns unit child","focus":{"claim_id":"c0","need":"Confirm the decade of Amanda Redman's childhood burns and verify se
+  [search] ok=True err=None elapsed=0.6235521757043898
+    query: Amanda Redman burns 1950s East Grinstead burns unit child
+
+[dec d157] policy: {"action":"open_page","arguments":{"docid":"38607","search_action_id":"a40"}}
+  [open_page] ok=True err=None elapsed=0.023556515108793974
+    open: 38607
+
+[dec d161] policy: {"action":"update_state","arguments":{"claim_updates":[{"claim_id":"c0","finding":"The Good Karma Hospital (ITV) series 3 (2020) includes an acid attack storyline suggested by actress Amanda Redman to
+  [update_state] ok=False err=protocol_error elapsed=0.000975798349827528
+    claim[c0] oids=['o4', 'o5', 'o6', 'o7'] finding=The Good Karma Hospital (ITV) series 3 (2020) includes an acid attack storyline suggested 
+
+[dec d165] policy: {"action":"update_state","arguments":{"claim_updates":[{"claim_id":"c0","finding":"The Good Karma Hospital (ITV) series 3 (2020) includes an acid attack storyline suggested by actress Amanda Redman to
+  [update_state] ok=False err=protocol_error elapsed=0.0009466591291129589
+    claim[c0] oids=['o4', 'o5', 'o6', 'o7'] finding=The Good Karma Hospital (ITV) series 3 (2020) includes an acid attack storyline suggested 
+
+  [invalid_model_response] ok=False err=protocol_error elapsed=9.329104796051979e-05
+
+[dec d172] policy: {"action":"update_state","arguments":{"claim_updates":[{"claim_id":"c0","finding":"The Good Karma Hospital (ITV) series 3 (2020) includes an acid attack storyline suggested by actress Amanda Redman to
+  [update_state] ok=True err=None elapsed=0.0012944885529577732
+    claim[c0] oids=['o4', 'o5', 'o6', 'o7'] finding=The Good Karma Hospital (ITV) series 3 (2020) includes an acid attack storyline suggested 
+
+[dec d176] policy: {"action":"verify_answer","arguments":{}}
+  [verify_answer] ok=True err=None elapsed=14.155065873172134
+    AUDIT status=supported target_status=supported
+      claim[c0]: status=supported need=
+
+[dec d180] policy: {"action":"verify_answer","arguments":{}}
+  [verify_answer] ok=True err=None elapsed=0.0011396692134439945
+    AUDIT status=supported target_status=supported
+      claim[c0]: status=supported need=
+
+[dec d184] policy: {"action":"verify_answer","arguments":{}}
+  [verify_answer] ok=True err=None elapsed=0.0009214808233082294
+    AUDIT status=supported target_status=supported
+      claim[c0]: status=supported need=
+
+[dec d188] policy: {"action":"submit_answer","arguments":{"decision":"answer","reason":"Evidence supports The Good Karma Hospital series 3, featuring an acid attack on character Jyoti suggested by Amanda Redman to write
+  [submit_answer] ok=True err=None elapsed=0.0011798860505223274
+    decision=answer answer=None reason=Evidence supports The Good Karma Hospital series 3
+

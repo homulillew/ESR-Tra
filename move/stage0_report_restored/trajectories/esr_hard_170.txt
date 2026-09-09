@@ -1,0 +1,233 @@
+### esr/hard / qid 170
+total events: 240, decisions: 60
+
+[dec d1] policy: {"action":"search","arguments":{"query":"actor survived injury 1950s suggested plot producer credit TV series hospital writer","top_k":20}}
+  [search] ok=True err=None elapsed=0.6878007287159562
+    query: actor survived injury 1950s suggested plot producer credit TV series hospital writer
+
+[dec d5] policy: {"action":"search","arguments":{"query":"actor survived injury 1950s suggested story to writer producer credit advocate charity","focus":{"claim_id":"c0","need":"In which season and TV series does a c
+  [search] ok=True err=None elapsed=0.8054470331408083
+    query: actor survived injury 1950s suggested story to writer producer credit advocate charity
+
+[dec d9] policy: {"action":"search","arguments":{"query":"actor survived illness 1950s suggested story writer producer credit TV series","focus":{"claim_id":"c0","need":"In which season and TV series does a character 
+  [search] ok=True err=None elapsed=0.7924580690450966
+    query: actor survived illness 1950s suggested story writer producer credit TV series
+
+[dec d13] policy: {"action":"search","arguments":{"query":"actor survived burn 1950s suggested story line producer credit TV series writer hospital","focus":{"claim_id":"c0","need":"In which season and TV series does a
+  [search] ok=True err=None elapsed=0.9083721260540187
+    query: actor survived burn 1950s suggested story line producer credit TV series writer hospital
+
+[dec d17] policy: {"action":"search","arguments":{"query":"actor survived illness 1950s suggested plot writer producer credit TV series charity advocate","focus":{"claim_id":"c0","need":"In which season and TV series d
+  [search] ok=True err=None elapsed=0.8388878237456083
+    query: actor survived illness 1950s suggested plot writer producer credit TV series charity advocate
+
+[dec d21] policy: {"action":"search","arguments":{"query":"actor suggested storyline to writer survived burns 1950s producer credit TV series","focus":{"claim_id":"c0","need":"In which season and TV series does a chara
+  [search] ok=True err=None elapsed=0.8410304170101881
+    query: actor suggested storyline to writer survived burns 1950s producer credit TV series
+
+[dec d25] policy: {"action":"search","arguments":{"query":"actor survived burns 1950s suggested storyline writer producer credit TV series charity advocate","focus":{"claim_id":"c0","need":"In which season and TV serie
+  [search] ok=True err=None elapsed=0.8558506369590759
+    query: actor survived burns 1950s suggested storyline writer producer credit TV series charity advocate
+
+[dec d29] policy: {"action":"open_page","arguments":{"docid":"33125","search_action_id":"a7"}}
+  [open_page] ok=True err=None elapsed=0.02636020304635167
+    open: 33125
+
+[dec d33] policy: {"action":"update_state","arguments":{"claim_updates":[{"claim_id":"c0","finding":"The Good Karma Hospital (ITV) third season includes an acid attack storyline suggested by Amanda Redman to writer Dan
+  [update_state] ok=False err=protocol_error elapsed=0.0011914512142539024
+    claim[c0] oids=['o1'] finding=The Good Karma Hospital (ITV) third season includes an acid attack storyline suggested by 
+
+[dec d37] policy: {"action":"update_state","arguments":{"claim_updates":[{"claim_id":"c0","finding":"The Good Karma Hospital (ITV) season 3 includes an acid attack storyline suggested by actress Amanda Redman to writer
+  [update_state] ok=True err=None elapsed=0.0011062975972890854
+    claim[c0] oids=['o1'] finding=The Good Karma Hospital (ITV) season 3 includes an acid attack storyline suggested by actr
+
+[dec d41] policy: {"action":"search","arguments":{"query":"Amanda Redman burns child 1950s producer credit Good Karma Hospital","top_k":10,"focus":{"claim_id":"c0","need":"Confirm whether Amanda Redman suffered burns i
+  [search] ok=True err=None elapsed=0.6223524948582053
+    query: Amanda Redman burns child 1950s producer credit Good Karma Hospital
+
+[dec d45] policy: {"action":"open_page","arguments":{"docid":"33125","search_action_id":"a7"}}
+  [open_page] ok=True err=None elapsed=0.024467885959893465
+    open: 33125
+
+[dec d49] policy: {"action":"open_page","arguments":{"docid":"58426","search_action_id":"a7"}}
+  [open_page] ok=True err=None elapsed=0.051419937051832676
+    open: 58426
+
+[dec d53] policy: {"action":"open_page","arguments":{"docid":"38607","search_action_id":"a11"}}
+  [open_page] ok=True err=None elapsed=0.01782563328742981
+    open: 38607
+
+[dec d57] policy: {"action":"update_state","arguments":{"claim_updates":[{"claim_id":"c0","finding":"Amanda Redman was scalded by soup at 18 months old on Boxing Day 1958, suffering burns to 75% of her body (article sa
+  [update_state] ok=True err=None elapsed=0.001157504040747881
+    claim[c0] oids=['o1', 'o3'] finding=Amanda Redman was scalded by soup at 18 months old on Boxing Day 1958, suffering burns to 
+
+[dec d61] policy: {"action":"search","arguments":{"query":"Dan Sefton doctor before writer television hospital","focus":{"claim_id":"c0","need":"Find evidence for writer Dan Sefton having previously worked in a hospita
+  [search] ok=True err=None elapsed=0.48709685169160366
+    query: Dan Sefton doctor before writer television hospital
+
+[dec d65] policy: {"action":"open_page","arguments":{"docid":"28637","search_action_id":"a16"}}
+  [open_page] ok=True err=None elapsed=0.01706552365794778
+    open: 28637
+
+[dec d69] policy: {"action":"update_state","arguments":{"claim_updates":[{"claim_id":"c0","finding":"Amanda Redman was scalded by soup at 18 months old on Boxing Day 1958, suffering burns to 75% of her body (article sa
+  [update_state] ok=True err=None elapsed=0.0011232453398406506
+    claim[c0] oids=['o1', 'o3', 'o4'] finding=Amanda Redman was scalded by soup at 18 months old on Boxing Day 1958, suffering burns to 
+
+[dec d73] policy: {"action":"search","arguments":{"query":"Amanda Redman producer credit Good Karma Hospital","focus":{"claim_id":"c0","need":"Find evidence that Amanda Redman received a producer's credit for The Good 
+  [invalid_model_response] ok=False err=protocol_error elapsed=6.301188841462135e-05
+
+[dec d77] policy: {"action":"search","arguments":{"query":"Amanda Redman producer credit Good Karma Hospital season 3","focus":{"claim_id":"c0","need":"Find evidence that Amanda Redman received a producer's credit for 
+  [search] ok=True err=None elapsed=0.5686463601887226
+    query: Amanda Redman producer credit Good Karma Hospital season 3
+
+[dec d81] policy: {"action":"open_page","arguments":{"docid":"80759","search_action_id":"a20"}}
+  [open_page] ok=True err=None elapsed=0.019551973789930344
+    open: 80759
+
+[dec d85] policy: {"action":"update_state","arguments":{"claim_updates":[{"claim_id":"c0","finding":"Amanda Redman was scalded by soup at 18 months old on Boxing Day 1958, suffering burns to 75% of her body (article sa
+  [update_state] ok=True err=None elapsed=0.001318229828029871
+    claim[c0] oids=['o1', 'o3', 'o4', 'o5'] finding=Amanda Redman was scalded by soup at 18 months old on Boxing Day 1958, suffering burns to 
+
+[dec d89] policy: {
+  "action": "verify_answer",
+  "arguments": {}
+}
+  [verify_answer] ok=False err=pending_observations elapsed=0.0005640117451548576
+    AUDIT status=None target_status=None
+
+[dec d93] policy: {"action":"update_state","arguments":{"dismiss_observation_ids":["o2"],"attempt_note":"Dismissing o2 (IMDb biography page containing unrelated actors) as it does not support the question's conditions.
+  [update_state] ok=False err=protocol_error elapsed=0.0010718731209635735
+
+[dec d97] policy: {"action":"verify_answer","arguments":{}}
+  [verify_answer] ok=False err=pending_observations elapsed=0.0004771971143782139
+    AUDIT status=None target_status=None
+
+[dec d101] policy: {"action":"update_state","arguments":{"dismiss_observation_ids":["o2"],"attempt_note":"Dismissing o2 (IMDb biography overview) as irrelevant to the target; it concerns unrelated actors and producers. 
+  [update_state] ok=False err=protocol_error elapsed=0.0013708006590604782
+
+[dec d105] policy: {"action":"update_state","arguments":{"attempt_note":"","focus":null,"claim_updates":[{"claim_id":"c0","finding":"Amanda Redman was scalded by soup at 18 months old on Boxing Day 1958, suffering burns
+  [update_state] ok=False err=protocol_error elapsed=8.570589125156403e-05
+    claim[c0] oids=['o1', 'o3', 'o4', 'o5'] finding=Amanda Redman was scalded by soup at 18 months old on Boxing Day 1958, suffering burns to 
+
+[dec d109] policy: {"action":"verify_answer","arguments":{}}
+  [verify_answer] ok=False err=pending_observations elapsed=0.0005163457244634628
+    AUDIT status=None target_status=None
+
+[dec d113] policy: {"action":"update_state","arguments":{"dismiss_observation_ids":["o2"],"focus":{"claim_id":"c0","need":"The current claim cites an IMDb user review for Amanda Redman's Associate Producer credit. Verif
+  [update_state] ok=False err=protocol_error elapsed=0.001381701324135065
+
+[dec d117] policy: {"action":"verify_answer","arguments":{}}
+  [verify_answer] ok=False err=pending_observations elapsed=0.0005858116783201694
+    AUDIT status=None target_status=None
+
+[dec d121] policy: {"action":"update_state","arguments":{"dismiss_observation_ids":["o2"],"attempt_note":"Dismissing o2 (an actor biography unrelated to the Good Karma Hospital question). Now ready for audit."}}
+  [update_state] ok=False err=protocol_error elapsed=0.0015631611458957195
+
+[dec d125] policy: {"action":"read_evidence","arguments":{"directory_cursor":"start"}}
+  [read_evidence] ok=True err=None elapsed=0.0004405658692121506
+
+[dec d129] policy: {"action":"update_state","arguments":{"dismiss_observation_ids":["o2"],"attempt_note":"Dismissed unrelated IMDb biography view about J. Carroll Naish/George Burns (o2) — not relevant to Good Karma Hos
+  [update_state] ok=False err=protocol_error elapsed=0.0012687807902693748
+
+[dec d133] policy: {"action":"verify_answer","arguments":{}}
+  [verify_answer] ok=False err=pending_observations elapsed=0.0005349563434720039
+    AUDIT status=None target_status=None
+
+[dec d137] policy: {"action":"update_state","arguments":{"dismiss_observation_ids":["o2"],"focus":null,"attempt_note":"Dismissed o2 (IMDb actors page) as irrelevant to the question; it lists unrelated actors and does no
+  [update_state] ok=False err=protocol_error elapsed=0.0013268538750708103
+
+[dec d141] policy: {"action":"verify_answer","arguments":{}}
+  [verify_answer] ok=False err=pending_observations elapsed=0.0005789622664451599
+    AUDIT status=None target_status=None
+
+[dec d145] policy: {"action":"update_state","arguments":{"focus":{"claim_id":"c0","need":"Resolve pending observation o2 or dismiss it; the content about J. Carroll Naish, Ian Wolfe, and George Burns appears unrelated t
+  [update_state] ok=False err=protocol_error elapsed=0.001439589075744152
+
+[dec d149] policy: {"action":"read_evidence","arguments":{"observation_id":"o2"}}
+  [read_evidence] ok=True err=None elapsed=0.0007718726992607117
+
+[dec d153] policy: {"action":"verify_answer","arguments":{}}
+  [verify_answer] ok=False err=pending_observations elapsed=0.0005020559765398502
+    AUDIT status=None target_status=None
+
+[dec d157] policy: {"action":"update_state","arguments":{"dismiss_observation_ids":["o2"],"attempt_note":"Dismissed o2 (J. Carroll Naish/George Burns biography content) as irrelevant to The Good Karma Hospital question.
+  [update_state] ok=False err=protocol_error elapsed=0.0012437878176569939
+
+[dec d161] policy: {
+  "action": "verify_answer",
+  "arguments": {}
+}
+  [verify_answer] ok=False err=pending_observations elapsed=0.000548272393643856
+    AUDIT status=None target_status=None
+
+[dec d165] policy: {"action":"verify_answer","arguments":{}}
+  [verify_answer] ok=False err=pending_observations elapsed=0.00046660006046295166
+    AUDIT status=None target_status=None
+
+[dec d169] policy: {"action":"update_state","arguments":{"attempt_note":"Dismissing o2 (Wikipedia actors list) as irrelevant to the question; it covers J. Carroll Naish, Ian Wolfe, George Burns, etc., not the Good Karma
+  [update_state] ok=False err=protocol_error elapsed=0.0014693164266645908
+
+[dec d173] policy: {"action":"update_state","arguments":{"attempt_note":"Skipping misleading IMDb-style user review evidence (o5 was an IMDb user review, not an official credit). Need more authoritative source for Amand
+  [update_state] ok=False err=protocol_error elapsed=0.0014596250839531422
+    claim[c0] oids=['o1', 'o3', 'o4'] finding=Amanda Redman was scalded by soup at 18 months old on Boxing Day 1958, suffering burns to 
+
+[dec d177] policy: {"action":"verify_answer","arguments":{}}
+  [verify_answer] ok=False err=pending_observations elapsed=0.0006585740484297276
+    AUDIT status=None target_status=None
+
+[dec d181] policy: {"action":"update_state","arguments":{"claim_updates":[{"claim_id":"c0","finding":"Amanda Redman was scalded by soup at 18 months old on Boxing Day 1958, suffering burns to 75% of her body (article sa
+  [update_state] ok=False err=protocol_error elapsed=0.0013617551885545254
+    claim[c0] oids=['o1', 'o3', 'o4', 'o5'] finding=Amanda Redman was scalded by soup at 18 months old on Boxing Day 1958, suffering burns to 
+
+[dec d185] policy: ```json
+{"action":"read_evidence","arguments":{"observation_id":"o2"}}
+```
+  [read_evidence] ok=True err=None elapsed=0.000743878073990345
+
+[dec d189] policy: {"action":"verify_answer","arguments":{}}
+  [verify_answer] ok=False err=pending_observations elapsed=0.0005455547943711281
+    AUDIT status=None target_status=None
+
+[dec d193] policy: {"action":"update_state","arguments":{"dismiss_observation_ids":["o2"],"attempt_note":"Dismissed o2 (IMDb biography dump about J. Carroll Naish/George Burns) as irrelevant to The Good Karma Hospital a
+  [update_state] ok=False err=protocol_error elapsed=0.0015189992263913155
+
+[dec d197] policy: {"action":"verify_answer","arguments":{}}
+  [verify_answer] ok=False err=pending_observations elapsed=0.0006831372156739235
+    AUDIT status=None target_status=None
+
+[dec d201] policy: {"action":"update_state","arguments":{"dismiss_observation_ids":["o2"],"attempt_note":"Dismiss pending view o2; it covers unrelated Hollywood actors (J. Carroll Naish, Ian Wolfe, George Burns) with no
+  [update_state] ok=False err=protocol_error elapsed=0.0014761202037334442
+
+[dec d205] policy: {"action":"verify_answer","arguments":{}}
+  [verify_answer] ok=False err=pending_observations elapsed=0.0004887268878519535
+    AUDIT status=None target_status=None
+
+[dec d209] policy: {"action":"update_state","arguments":{"dismiss_observation_ids":["o2"],"attempt_note":"o2 contains unrelated biographical data about J. Carroll Naish and George Burns; dismissed as irrelevant to the c
+  [update_state] ok=False err=protocol_error elapsed=0.001307039987295866
+
+[dec d213] policy: {"action":"verify_answer","arguments":{}}
+  [verify_answer] ok=False err=pending_observations elapsed=0.0005441969260573387
+    AUDIT status=None target_status=None
+
+[dec d217] policy: {"action":"update_state","arguments":{"dismiss_observation_ids":["o2"],"attempt_note":"Dismissing o2 (IMDb biography list) as irrelevant; it covers J. Carroll Naish, George Burns, etc., not the Good K
+  [update_state] ok=False err=protocol_error elapsed=0.0012497473508119583
+
+[dec d221] policy: {"action":"read_evidence","arguments":{"observation_id":"o2"}}
+  [read_evidence] ok=True err=None elapsed=0.0009712949395179749
+
+[dec d225] policy: {"action":"verify_answer","arguments":{}}
+  [verify_answer] ok=False err=pending_observations elapsed=0.0005329088307917118
+    AUDIT status=None target_status=None
+
+[dec d229] policy: {"action":"update_state","arguments":{"dismiss_observation_ids":["o2"],"attempt_note":"o2 is a general Hollywood biography page (J. Carroll Naish, Ian Wolfe, George Burns) with no relevance to The Goo
+  [update_state] ok=False err=protocol_error elapsed=0.0014207642525434494
+    claim[c0] oids=['o1', 'o3', 'o4', 'o5'] finding=Amanda Redman was scalded by soup at 18 months old on Boxing Day 1958, suffering burns to 
+
+[dec d233] policy: {"action":"update_state","arguments":{"dismiss_observation_ids":["o2"],"attempt_note":"a58 valid","focus":{"claim_id":"c0","need":"Verify all conditions before submission"},"claim_updates":[{"claim_id
+  [update_state] ok=False err=protocol_error elapsed=0.0012984159402549267
+    claim[c0] oids=['o1', 'o3', 'o4', 'o5'] finding=Amanda Redman was scalded by soup at 18 months old on Boxing Day 1958, suffering burns to 
+
+[dec d237] policy: {"action":"submit_answer","arguments":{"decision":"abstain","reason":"Budget exhausted before verify_answer could pass; answer rests on an IMDb user review for the producer credit, which is weak evide
+  [submit_answer] ok=True err=None elapsed=0.0006405930034816265
+    decision=abstain answer=None reason=Budget exhausted before verify_answer could pass; 
+

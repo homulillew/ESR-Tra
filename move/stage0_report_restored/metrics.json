@@ -1,0 +1,283 @@
+{
+  "stage": "stage0_lanz_policy_and_verifier",
+  "code_revision": "refactor-esr-state-2.1-stage0-lanz",
+  "schema_version": 3,
+  "policy_model": "Lanz-Medium (Anthropic Messages :18080)",
+  "verifier_model": "same (Lanz-Medium)",
+  "policy_verifier_same_model": true,
+  "per_arm": {
+    "esr/off": {
+      "episodes_total": 8,
+      "episodes_with_summary": 8,
+      "submitted": 3,
+      "abstained": 3,
+      "budget_exhausted": 2,
+      "correct": 5,
+      "total_invalid": 136,
+      "rows": [
+        {
+          "qid": "324",
+          "outcome": "budget_exhausted",
+          "invalid_actions": 43,
+          "attempts": 64,
+          "evidence_status": "unverified",
+          "final_draft": null,
+          "correct": false,
+          "src_summary": "/data1/ESR-Tra/traces/experiments/refactor_v21_forward/esr/off/324.summary.json"
+        },
+        {
+          "qid": "120",
+          "outcome": "abstained",
+          "invalid_actions": 2,
+          "attempts": 11,
+          "evidence_status": "unverified",
+          "final_draft": "Why would any graduate want to start a business in Nigeria?",
+          "correct": true,
+          "src_summary": "/data1/ESR-Tra/traces/experiments/refactor_v21_forward/esr/off/120.summary.json"
+        },
+        {
+          "qid": "594",
+          "outcome": "submitted",
+          "invalid_actions": 2,
+          "attempts": 6,
+          "evidence_status": "unverified",
+          "final_draft": "XML",
+          "correct": true,
+          "src_summary": "/data1/ESR-Tra/traces/experiments/refactor_v21_forward/esr/off/594.summary.json"
+        },
+        {
+          "qid": "234",
+          "outcome": "budget_exhausted",
+          "invalid_actions": 40,
+          "attempts": 64,
+          "evidence_status": "unverified",
+          "final_draft": "Little Lovely",
+          "correct": true,
+          "src_summary": "/data1/ESR-Tra/traces/experiments/refactor_v21_forward/esr/off/234.summary.json"
+        },
+        {
+          "qid": "364",
+          "outcome": "abstained",
+          "invalid_actions": 2,
+          "attempts": 48,
+          "evidence_status": "unverified",
+          "final_draft": null,
+          "correct": false,
+          "src_summary": "/data1/ESR-Tra/traces/experiments/refactor_v21_forward/esr/off/364.summary.json"
+        },
+        {
+          "qid": "854",
+          "outcome": "submitted",
+          "invalid_actions": 4,
+          "attempts": 40,
+          "evidence_status": "unverified",
+          "final_draft": "37 kg",
+          "correct": true,
+          "src_summary": "/data1/ESR-Tra/traces/experiments/refactor_v21_forward/esr/off/854.summary.json"
+        },
+        {
+          "qid": "1000",
+          "outcome": "submitted",
+          "invalid_actions": 39,
+          "attempts": 64,
+          "evidence_status": "unverified",
+          "final_draft": "Matthew Arnum Barnor",
+          "correct": true,
+          "src_summary": "/data1/ESR-Tra/traces/experiments/refactor_v21_forward/esr/off/1000.summary.json"
+        },
+        {
+          "qid": "170",
+          "outcome": "abstained",
+          "invalid_actions": 4,
+          "attempts": 63,
+          "evidence_status": "unverified",
+          "final_draft": null,
+          "correct": false,
+          "src_summary": "/data1/ESR-Tra/traces/experiments/refactor_v21_forward/esr/off/170.summary.json"
+        }
+      ]
+    },
+    "esr/hard": {
+      "episodes_total": 8,
+      "episodes_with_summary": 8,
+      "submitted": 3,
+      "abstained": 2,
+      "budget_exhausted": 3,
+      "correct": 5,
+      "total_invalid": 155,
+      "rows": [
+        {
+          "qid": "324",
+          "outcome": "abstained",
+          "invalid_actions": 39,
+          "attempts": 59,
+          "evidence_status": "unverified",
+          "final_draft": null,
+          "correct": false,
+          "src_summary": "/data1/ESR-Tra/traces/experiments/refactor_v21_forward/esr/hard/324.summary.json"
+        },
+        {
+          "qid": "120",
+          "outcome": "submitted",
+          "invalid_actions": 1,
+          "attempts": 13,
+          "evidence_status": "supported",
+          "final_draft": "Why would any graduate want to start a business in Nigeria?",
+          "correct": true,
+          "src_summary": "/data1/ESR-Tra/traces/experiments/refactor_v21_forward/esr/hard/120.summary.json"
+        },
+        {
+          "qid": "594",
+          "outcome": "submitted",
+          "invalid_actions": 12,
+          "attempts": 30,
+          "evidence_status": "supported",
+          "final_draft": "XML",
+          "correct": true,
+          "src_summary": "/data1/ESR-Tra/traces/experiments/refactor_v21_forward/esr/hard/594.summary.json"
+        },
+        {
+          "qid": "234",
+          "outcome": "budget_exhausted",
+          "invalid_actions": 23,
+          "attempts": 64,
+          "evidence_status": "contradicted",
+          "final_draft": "Little Lovely",
+          "correct": true,
+          "src_summary": "/data1/ESR-Tra/traces/experiments/refactor_v21_forward/esr/hard/234.summary.json"
+        },
+        {
+          "qid": "364",
+          "outcome": "submitted",
+          "invalid_actions": 16,
+          "attempts": 64,
+          "evidence_status": "supported",
+          "final_draft": "Bada Lee",
+          "correct": true,
+          "src_summary": "/data1/ESR-Tra/traces/experiments/refactor_v21_forward/esr/hard/364.summary.json"
+        },
+        {
+          "qid": "854",
+          "outcome": "budget_exhausted",
+          "invalid_actions": 7,
+          "attempts": 64,
+          "evidence_status": "unknown",
+          "final_draft": "37 kilograms",
+          "correct": false,
+          "src_summary": "/data1/ESR-Tra/traces/experiments/refactor_v21_forward/esr/hard/854.summary.json"
+        },
+        {
+          "qid": "1000",
+          "outcome": "budget_exhausted",
+          "invalid_actions": 22,
+          "attempts": 64,
+          "evidence_status": "unverified",
+          "final_draft": "Matthew Arnum Barnor",
+          "correct": true,
+          "src_summary": "/data1/ESR-Tra/traces/experiments/refactor_v21_forward/esr/hard/1000.summary.json"
+        },
+        {
+          "qid": "170",
+          "outcome": "abstained",
+          "invalid_actions": 35,
+          "attempts": 60,
+          "evidence_status": "unverified",
+          "final_draft": "Season 3 of The Good Karma Hospital",
+          "correct": false,
+          "src_summary": "/data1/ESR-Tra/traces/experiments/refactor_v21_forward/esr/hard/170.summary.json"
+        }
+      ]
+    },
+    "esr/soft": {
+      "episodes_total": 8,
+      "episodes_with_summary": 8,
+      "submitted": 6,
+      "abstained": 0,
+      "budget_exhausted": 2,
+      "correct": 7,
+      "total_invalid": 102,
+      "rows": [
+        {
+          "qid": "324",
+          "outcome": "budget_exhausted",
+          "invalid_actions": 33,
+          "attempts": 64,
+          "evidence_status": "unverified",
+          "final_draft": "Svetlana Gromenkova",
+          "correct": true,
+          "src_summary": "/data1/ESR-Tra/traces/experiments/refactor_v21_forward/esr/soft/324.summary.json"
+        },
+        {
+          "qid": "120",
+          "outcome": "submitted",
+          "invalid_actions": 2,
+          "attempts": 14,
+          "evidence_status": "unknown",
+          "final_draft": "Why would any graduate want to start a business in Nigeria?",
+          "correct": true,
+          "src_summary": "/data1/ESR-Tra/traces/experiments/refactor_v21_forward/esr/soft/120.summary.json"
+        },
+        {
+          "qid": "594",
+          "outcome": "submitted",
+          "invalid_actions": 3,
+          "attempts": 22,
+          "evidence_status": "supported",
+          "final_draft": "XML",
+          "correct": true,
+          "src_summary": "/data1/ESR-Tra/traces/experiments/refactor_v21_forward/esr/soft/594.summary.json"
+        },
+        {
+          "qid": "234",
+          "outcome": "budget_exhausted",
+          "invalid_actions": 36,
+          "attempts": 64,
+          "evidence_status": "unverified",
+          "final_draft": "Little Lovely",
+          "correct": true,
+          "src_summary": "/data1/ESR-Tra/traces/experiments/refactor_v21_forward/esr/soft/234.summary.json"
+        },
+        {
+          "qid": "364",
+          "outcome": "submitted",
+          "invalid_actions": 4,
+          "attempts": 58,
+          "evidence_status": "unknown",
+          "final_draft": "Bada Lee",
+          "correct": true,
+          "src_summary": "/data1/ESR-Tra/traces/experiments/refactor_v21_forward/esr/soft/364.summary.json"
+        },
+        {
+          "qid": "854",
+          "outcome": "submitted",
+          "invalid_actions": 3,
+          "attempts": 25,
+          "evidence_status": "supported",
+          "final_draft": "37 kg",
+          "correct": true,
+          "src_summary": "/data1/ESR-Tra/traces/experiments/refactor_v21_forward/esr/soft/854.summary.json"
+        },
+        {
+          "qid": "1000",
+          "outcome": "submitted",
+          "invalid_actions": 12,
+          "attempts": 63,
+          "evidence_status": "supported",
+          "final_draft": "Matthew Arnum Barnor",
+          "correct": true,
+          "src_summary": "/data1/ESR-Tra/traces/experiments/refactor_v21_forward/esr/soft/1000.summary.json"
+        },
+        {
+          "qid": "170",
+          "outcome": "submitted",
+          "invalid_actions": 9,
+          "attempts": 49,
+          "evidence_status": "supported",
+          "final_draft": "The Good Karma Hospital, series 3 (2020)",
+          "correct": false,
+          "src_summary": "/data1/ESR-Tra/traces/experiments/refactor_v21_forward/esr/soft/170.summary.json"
+        }
+      ]
+    }
+  }
+}

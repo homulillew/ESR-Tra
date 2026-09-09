@@ -4,16 +4,16 @@ import sqlite3
 
 import pytest
 
-from esr_harness.audit import ModelAuditor
-from esr_harness.cli import load_question, main
-from esr_harness.client import ChatClient, ChatConfig, UsageBudget
-from esr_harness.demo import smoke
-from esr_harness.engine import Harness
-from esr_harness.ledger import Ledger
-from esr_harness.protocol import Config, HarnessError, canonical
-from esr_harness.runner import POLICY_SYSTEM, messages_for, replay, run
-from esr_harness.views import MemoryRetriever
-from conftest import DOCUMENTS, StubAuditor, opened, report_for, update
+from esr_harness.v2.audit import ModelAuditor
+from esr_harness.v2.cli import load_question, main
+from esr_harness.v2.client import ChatClient, ChatConfig, UsageBudget
+from esr_harness.v2.demo import smoke
+from esr_harness.v2.engine import Harness
+from esr_harness.v2.ledger import Ledger
+from esr_harness.v2.protocol import Config, HarnessError, canonical
+from esr_harness.v2.runner import POLICY_SYSTEM, messages_for, replay, run
+from esr_harness.v2.views import MemoryRetriever
+from .conftest import DOCUMENTS, StubAuditor, opened, report_for, update
 
 
 class Counter:
