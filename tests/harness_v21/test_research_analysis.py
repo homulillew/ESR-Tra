@@ -68,3 +68,25 @@ def test_offline_analysis_edit_does_not_create_a_new_online_sampling_version():
     assert online_source_hashes(old)==online_source_hashes(new)
     new['source_hashes']['scripts/strong_api.py']='changed experiment driver'
     assert online_source_hashes(old)!=online_source_hashes(new)
+
+
+def test_receipt_audit_detects_charge_and_export_disagreement(tmp_path):
+    import sqlite3
+    from audit_strong_api_receipts import audit
+    usage={'prompt_tokens':12,'completion_tokens':7}
+    with sqlite3.connect(tmp_path/'global_budget.sqlite') as db:
+        db.execute('create table requests (id,purpose,settled,usage,input_charged,output_charged)')
+        db.execute('insert into requests values (?,?,?,?,?,?)',('r','policy',1,json.dumps(usage),12,7))
+    directory=tmp_path/'synthetic';directory.mkdir()
+    request={'type':'generation_request','request_id':'r','purpose':'policy','reserved_input_tokens':30,'reserved_completion_tokens':20}
+    generation={'type':'generation','request_id':'r','usage':usage,'response':{'model':'synthetic'}}
+    with sqlite3.connect(directory/'ledger.sqlite') as db:
+        db.execute('create table events (seq integer,payload text)')
+        db.executemany('insert into events values (?,?)',[(1,json.dumps(request)),(2,json.dumps(generation))])
+    for filename,event in [('provider_requests.jsonl',request),('provider_responses.jsonl',generation)]:
+        (directory/filename).write_text(json.dumps(event)+'\n',encoding='utf-8')
+    result=audit(tmp_path)
+    assert result['mismatches']==[] and result['settled_receipts_verified']==1 and result['exports_verified']==2
+    with sqlite3.connect(tmp_path/'global_budget.sqlite') as db:db.execute('update requests set input_charged=0')
+    (directory/'provider_responses.jsonl').write_text('{}\n',encoding='utf-8')
+    assert {e['kind'] for e in audit(tmp_path)['mismatches']}=={'usage_or_charge','export_differs_from_ledger'}
