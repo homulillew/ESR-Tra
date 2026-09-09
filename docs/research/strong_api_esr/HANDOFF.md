@@ -25,7 +25,7 @@ freeze_development.py 只读 baseline pilot，按预登记规则冻结开发题�
 
 需要暂停未来批次时，在研究根目录创建 PAUSE_NEW_EPISODES.json，执行器会在当前局结束后停止。保留暂停文件并重命名归档后才能继续。无显卡部署说明见 CPU_RUNBOOK.md。
 
-2026-09-09 当前恢复点：严格文本 policy 接口，原生 audit_report；共享提示 research-2.1.5。DEVELOPMENT_FREEZE_v3.json 保存当前源码和配置。tests-18.txt 为 214 项通过。旧两个开发版本分别执行 3、8 局后停止，全部完成独立判分；这些原生接口队列不与当前版本混算。另有 8 次固定前缀诊断和 4 次联通/容量探针，均保留原始记录与费用。不得继续增加接口探针以挑选成功输出。
+2026-09-09 当前恢复点：原生 policy 工具与 audit_report；共享提示 research-2.1.5。DEVELOPMENT_FREEZE_v4.json 保存当前源码和配置。tests-19.txt 为 214 项通过。旧三个开发版本分别执行 3、8、2 局后停止，全部完成独立判分；这些队列不与当前版本混算。文本接口在完整 E-off 轨迹中 31 个动作有 18 个非法，故拒绝，详情见 DECISIONS.md。另有 8 次固定前缀诊断和 4 次联通/容量探针，均保留原始记录与费用。不得继续增加接口探针或轮换格式以挑选成功输出。
 
 当前执行固定 9 题、B/E-off/E-soft 的 replicate 0。恢复前先查当前进程和实际已完成目录；同一源码版本的已注册 replicate 禁止重复。全部结束后用独立 evaluator 判分，再按既定规则选择 ESR 候选，运行 B 与候选的 replicate 1，做完整配对比较后才能冻结确认集。
 
