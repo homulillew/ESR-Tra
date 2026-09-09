@@ -58,6 +58,14 @@ Return every supplied claim ID exactly once. Do not add IDs or decompose a requi
 Use the supplied native report tool when present, otherwise return the JSON schema directly.
 The harness derives the overall verdict."""
 
+AUDIT_SPAN_PROMPT_VERSION = 'atomic-source-spans-2.1.0'
+AUDIT_SPAN_SYSTEM = AUDIT_SYSTEM.replace(
+    'For each supported or contradicted claim, quote its permitted raw observation verbatim.',
+    'For each supported or contradicted claim, select supporting passages from its permitted observations.\n'
+    'In quotes, return the supplied span_id for each selected passage; do not invent IDs or copy text.\n'
+    'Passages partition the original raw text without omissions. Adjacent passages may be selected together.\n'
+    'The harness retrieves the exact selected text. A valid ID alone does not establish support.')
+
 PENDING_GUIDANCE = ("Pending view bodies are already in visible_evidence. Record useful findings with their observation_ids; "
                     "citing removes them from pending automatically. Dismiss only irrelevant uncited views. "
                     "Re-reading a currently visible observation returns identical text and does not consume it.")

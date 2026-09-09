@@ -24,6 +24,9 @@ provider:
   model_revision: gateway_alias_unpinned
   transport_timeout_seconds: 60
 dataset_root: D:/AgentSearchAssets/BrowseComp-Plus
+auditor:
+  citation_mode: source_spans
+  span_max_chars: 1200
 selection_seed: esr-strong-api-20260909-v1
 targets:
   accuracy_improvement_percentage_points: 5

@@ -103,7 +103,9 @@ def episode(root, budget, transport, settings, *, question, qid, arm, category, 
                                    "content":"The fictional Orin Observatory opened in 2041. Its first director was Sela Venn."}])
     else:
         retriever=SQLiteRetriever(index,log=ledger.append)
-    auditor=ModelAuditor(client) if config.audit_mode!="off" else None
+    audit_settings=settings.get('auditor',{})
+    auditor=ModelAuditor(client,citation_mode=audit_settings.get('citation_mode','quotes'),
+                         span_max_chars=audit_settings.get('span_max_chars',1200)) if config.audit_mode!="off" else None
     manifest={**snapshot(),"run_id":rid,"category":category,"qid":qid,"arm":arm,"replicate":replicate,
               "index_fingerprint":fingerprint,
               "settings":settings,"input_hash":digest({"qid":qid,"question":question}),"provider":client.identity,

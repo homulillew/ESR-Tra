@@ -3,7 +3,8 @@ from typing import Protocol
 from copy import deepcopy
 from .protocol import AUDIT_SCHEMA, HarnessError, canonical, digest, parse_object, validate
 
-from .prompts import AUDIT_PROMPT_VERSION, AUDIT_SYSTEM
+from .prompts import AUDIT_PROMPT_VERSION, AUDIT_SYSTEM, AUDIT_SPAN_PROMPT_VERSION, AUDIT_SPAN_SYSTEM
+from .audit_spans import SPAN_SCHEMA, source_span_packet, expand_references
 
 class Auditor(Protocol):
     identity: dict
@@ -51,25 +52,53 @@ def unresolved(report):
 
 
 class ModelAuditor:
-    def __init__(self, client, attempts=2):
+    def __init__(self, client, attempts=2, *, citation_mode='quotes', span_max_chars=1200):
         if attempts not in {1, 2}:
             raise ValueError("Audit protocol repair must be bounded")
+        if citation_mode not in {'quotes','source_spans'}:
+            raise ValueError('Unknown auditor citation mode')
+        if not 100 <= span_max_chars <= 4000:
+            raise ValueError('Invalid audit span size')
         self.client, self.attempts = client, attempts
-        self.identity = {"client": client.identity, "prompt": AUDIT_PROMPT_VERSION, "system_hash": digest(AUDIT_SYSTEM), "schema_hash": digest(AUDIT_SCHEMA)}
+        self.citation_mode,self.span_max_chars=citation_mode,span_max_chars
+        self.system=AUDIT_SPAN_SYSTEM if citation_mode=='source_spans' else AUDIT_SYSTEM
+        self.schema=SPAN_SCHEMA if citation_mode=='source_spans' else AUDIT_SCHEMA
+        self.identity = {"client": client.identity,
+                         "prompt": AUDIT_SPAN_PROMPT_VERSION if citation_mode=='source_spans' else AUDIT_PROMPT_VERSION,
+                         "system_hash": digest(self.system), "schema_hash": digest(self.schema),
+                         'citation_mode':citation_mode,'span_max_chars':span_max_chars if citation_mode=='source_spans' else None}
 
     def audit(self, question, state, views):
         payload = {"question": question, **state,
                    "observations": [{"observation_id": v["observation_id"], "docid": v["docid"], "text": v["text"]} for v in views]}
-        schema = deepcopy(AUDIT_SCHEMA)
+        references={}
+        if self.citation_mode=='source_spans':
+            payload['observations'],references=source_span_packet(views,self.span_max_chars)
+        schema = deepcopy(self.schema)
         schema["properties"]["claims"].update(minItems=len(state["claims"]), maxItems=len(state["claims"]))
         schema["properties"]["claims"]["items"]["properties"]["claim_id"]["enum"] = [c["claim_id"] for c in state["claims"]]
-        messages = [{"role": "system", "content": AUDIT_SYSTEM + "\nSchema:\n" + canonical(schema)},
+        if self.citation_mode=='source_spans':
+            quotes=schema['properties']['claims']['items']['properties']['quotes']
+            if references:quotes['items']['properties']['span_id']['enum']=list(references)
+            else:quotes['maxItems']=0
+        messages = [{"role": "system", "content": self.system + "\nSchema:\n" + canonical(schema)},
                     {"role": "user", "content": canonical(payload)}]
         last = ""
         for attempt in range(self.attempts):
             reply = self.client.complete(messages, purpose="audit")
             try:
-                return validate_report(parse_object(reply), state, {v["observation_id"]: v for v in views})
+                proposed=parse_object(reply)
+                if self.citation_mode=='source_spans':
+                    validate(proposed,schema,'audit')
+                    report=expand_references(proposed,references)
+                else:report=proposed
+                validated=validate_report(report, state, {v["observation_id"]: v for v in views})
+                if self.citation_mode=='source_spans' and hasattr(self.client,'ledger'):
+                    selected={q['span_id'] for row in proposed['claims'] for q in row['quotes']}
+                    self.client.ledger.append({'type':'audit_citation_resolution','proposed_report':proposed,
+                                               'selected_source_spans':{sid:references[sid] for sid in sorted(selected)},
+                                               'expanded_report':validated,'verdict_modified':False})
+                return validated
             except HarnessError as exc:
                 last = str(exc)
                 if attempt + 1 < self.attempts:
