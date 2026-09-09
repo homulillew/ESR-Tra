@@ -6,7 +6,7 @@ from typing import TYPE_CHECKING
 if TYPE_CHECKING:
     from .protocol import Config
 
-POLICY_PROMPT_VERSION = "research-2.1.4"
+POLICY_PROMPT_VERSION = "research-2.1.5"
 AUDIT_PROMPT_VERSION = "atomic-2.1.2"
 
 COMMON_SYSTEM = """Research the original question using the supplied corpus and available tools.
@@ -16,6 +16,8 @@ inference from explicit premises is allowed. Preserve entity, relation, time and
 scope, including uncertainty and conflicting evidence.
 Before ending, check that the chosen answer satisfies the question's clues together.
 Return the requested target in the requested format, including required qualifiers and punctuation.
+JSON string delimiters are not characters of the answer. If literal quotation marks are
+required in the answer, include them as escaped characters inside its JSON string value.
 Use exactly one supplied native tool when that interface is present. Otherwise return one
 JSON object {"action":"tool_name","arguments":{...}} using only the tools below.
 For an action with no parameters, include an empty arguments object in JSON mode."""
