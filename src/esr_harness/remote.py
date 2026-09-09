@@ -85,6 +85,7 @@ class RemoteConfig:
     temperature: float = 0.6
     timeout: float = 60
     transport_attempts: int = 2
+    recovery_headroom: int = 2048
 
 
 class AnthropicClient:
@@ -136,6 +137,18 @@ class AnthropicClient:
     def fits(self, messages):
         maximum = min(self.config.max_output_tokens, self.budget.remaining)
         return self.input_reservation(self.body(messages, maximum)) + maximum <= self.config.context_operating_cap
+
+    def fits_for_admission(self, messages):
+        maximum = min(self.config.max_output_tokens, self.budget.remaining)
+        return self.input_reservation(self.body(messages, maximum)) + maximum + self.config.recovery_headroom <= self.config.context_operating_cap
+
+    def context_status(self, messages):
+        maximum = min(self.config.max_output_tokens, self.budget.remaining)
+        reserved = self.input_reservation(self.body(messages, maximum))
+        return {"operating_capacity_units": self.config.context_operating_cap,
+                "remaining_units_before_this_status": max(0,self.config.context_operating_cap-maximum-reserved),
+                "recovery_headroom_units": self.config.recovery_headroom,
+                "measurement": "conservative UTF-8 bytes plus overhead, not provider token count; includes all current history"}
 
     def complete(self, messages, purpose="policy"):
         reserve_finish = 512 if purpose == "audit" else 0

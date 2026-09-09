@@ -83,7 +83,8 @@ def episode(root, budget, transport, settings, *, question, qid, arm, category, 
                   max_actions=min(12,settings["max_actions_per_episode"]) if category=="fixture" else settings["max_actions_per_episode"])
     rc=RemoteConfig(model=transport.model,max_output_tokens=p["max_output_tokens"],temperature=p["temperature"],
                     context_operating_cap=p["context_operating_cap"],timeout=p["transport_timeout_seconds"],
-                    transport_attempts=settings["max_transport_attempts_per_request"])
+                    transport_attempts=settings["max_transport_attempts_per_request"],
+                    recovery_headroom=p["context_recovery_headroom"])
     ledger=Ledger(directory/"ledger.sqlite")
     usage=UsageBudget(settings["max_completion_tokens_per_episode_including_audit"])
     started=time.monotonic()

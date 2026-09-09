@@ -18,6 +18,7 @@ provider:
   max_output_tokens: 4096
   # Conservative operating cap, not a verified model context-window specification.
   context_operating_cap: 128000
+  context_recovery_headroom: 2048
   thinking: omitted_provider_default_unverified
   model_revision: gateway_alias_unpinned
   transport_timeout_seconds: 60

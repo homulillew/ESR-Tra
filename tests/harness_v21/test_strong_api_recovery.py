@@ -210,6 +210,44 @@ def test_context_check_is_finite(tmp_path):
     assert not c.fits([{"role":"user","content":"X"*70000}])
 
 
+def test_search_capacity_failure_keeps_next_request_executable_and_allows_smaller_retry():
+    from esr_harness.protocol import canonical
+    class LargeHits(MemoryRetriever):
+        def __init__(self):
+            super().__init__([]);self.calls=[]
+        def search(self,query,top_k):
+            self.calls.append(top_k)
+            return [{'docid':str(i),'title':'fixture','snippet':'evidence '*100,'score':1.0} for i in range(top_k)]
+    class Policy:
+        limit=100000
+        def __init__(self):self.requests=[]
+        def fits(self,messages):return len(canonical(messages))<=self.limit
+        def complete(self,messages,purpose):
+            self.requests.append(messages)
+            return canonical([{'action':'search','arguments':{'query':'fixture','top_k':20}},
+                              {'action':'search','arguments':{'query':'fixture','top_k':1}},
+                              {'action':'finish','arguments':{'answer':'synthetic'}}][len(self.requests)-1])
+    retriever=LargeHits();h=Harness('Synthetic capacity test',retriever,config=Config(mode='baseline'))
+    c=Policy();c.limit=len(canonical(messages_for(h,c)))+4500
+    result=run(h,c)
+    assert result['terminal']['outcome']=='submitted'
+    assert retriever.calls==[20,1] and set(h.searches)=={'a2'}
+    assert h.actions[0]['result']['error_code']=='context_capacity'
+    assert 'no hits were admitted' in canonical(c.requests[1])
+    assert all(c.fits(m) for m in c.requests)
+
+
+def test_remote_admission_reserves_error_recovery_space(tmp_path):
+    c=client(tmp_path,[])
+    messages=[{'role':'user','content':'synthetic'}]
+    from dataclasses import replace
+    maximum=min(c.config.max_output_tokens,c.budget.remaining)
+    need=c.input_reservation(c.body(messages,maximum))+maximum
+    c.config=replace(c.config,context_operating_cap=need+1000)
+    assert c.fits(messages) and not c.fits_for_admission(messages)
+    assert c.context_status(messages)['remaining_units_before_this_status']==1000
+
+
 def test_cpu_index_search_document_consistency(tmp_path):
     import sqlite3
     from esr_harness.local_retrieval import SQLiteRetriever

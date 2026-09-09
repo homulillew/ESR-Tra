@@ -40,6 +40,10 @@ def messages_for(harness, client):
                        "failed_proposal": card.get("failed_proposal")}
             messages = [system, {"role": "user", "content": canonical(initial)}, *history,
                         {"role": "user", "content": canonical(current)}]
+        if hasattr(client, "context_status"):
+            current_payload = parse_object(messages[-1]["content"])
+            current_payload["context_budget"] = client.context_status(messages)
+            messages[-1]["content"] = canonical(current_payload)
         if client.fits(messages):
             return messages
     raise HarnessError("context_overflow", "Required state, pending and latest result do not fit; none were dropped")
@@ -48,8 +52,8 @@ def messages_for(harness, client):
 def run(harness, client):
     def admissible(preview):
         try:
-            messages_for(preview, client)
-            return True
+            messages = messages_for(preview, client)
+            return client.fits_for_admission(messages) if hasattr(client, "fits_for_admission") else True
         except HarnessError as exc:
             if exc.code == "context_overflow":
                 return False
@@ -63,7 +67,7 @@ def run(harness, client):
             ids = visible_ids(harness)
             decision_id = f"d{len(harness.ledger.events()) + 1}"
             harness.ledger.append({"type": "decision", "decision_id": decision_id, "messages": messages,
-                                   "compiler_version": "workcard-2.1.4", "prompt_hash": digest(messages),
+                                   "compiler_version": "workcard-2.1.5", "prompt_hash": digest(messages),
                                    "policy_prompt_version": POLICY_PROMPT_VERSION,
                                    "policy_system_hash": digest(messages[0]["content"]),
                                    "visible_observation_ids": ids,

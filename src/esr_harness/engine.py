@@ -180,12 +180,13 @@ class Harness:
         event = {"type": "tool", "action_id": aid, "decision_id": decision_id, "action": name,
                  "arguments": arguments, "result": result, "delta": delta,
                  "elapsed_seconds": time.monotonic() - start}
-        # Updates and new observations must leave an executable next prompt.
-        if result["ok"] and name in {"update_state", "open_page", "read_evidence"} and self.admission:
+        # Search results, updates and observations must leave an executable next prompt.
+        if result["ok"] and name in {"search", "update_state", "open_page", "read_evidence"} and self.admission:
             if not self.admission(self._preview(event)):
                 event["delta"] = {}
                 event["result"] = {"ok": False, "action_id": aid, "error_code": "context_capacity",
-                                   "error": "Required state/latest view would not fit; process pending views or shorten the edit"}
+                                   "error": ("Search results do not fit; no hits were admitted. Use fewer results (smaller top_k), existing material, or finish when ready. The backend request was still counted."
+                                             if name == "search" else "Required state/latest view would not fit; process pending views or shorten the edit")}
         self._commit(event)
         return deepcopy(event["result"])
 
