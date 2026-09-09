@@ -210,6 +210,22 @@ def test_context_check_is_finite(tmp_path):
     assert not c.fits([{"role":"user","content":"X"*70000}])
 
 
+def test_observed_gateway_end_token_is_only_removed_after_strict_whole_json_validation(tmp_path):
+    from esr_harness.remote import normalize_tool_text
+    raw='{"action":"search","arguments":{"query":"synthetic"}}</tool_call>'
+    normalized,rule=normalize_tool_text(raw)
+    assert json.loads(normalized)=={'action':'search','arguments':{'query':'synthetic'}}
+    assert rule=='json_object_tool_end_suffix_v1'
+    for malformed in ['{"action":"finish"}}', '{}{}', '{"x":1,"x":2}', '{"x":NaN}']:
+        with pytest.raises(HarnessError):normalize_tool_text(malformed+'</tool_call>')
+    prose='Example: '+raw
+    assert normalize_tool_text(prose)==(prose,None)
+    r=response();r['content']=[{'type':'text','text':raw}]
+    c=client(tmp_path,[r]);assert json.loads(c.complete([{'role':'user','content':'fixture'}]))['action']=='search'
+    event=c.ledger.events()[-1]
+    assert event['type']=='response_normalization' and event['semantic_fields_modified'] is False
+
+
 def test_search_capacity_failure_keeps_next_request_executable_and_allows_smaller_retry():
     from esr_harness.protocol import canonical
     class LargeHits(MemoryRetriever):

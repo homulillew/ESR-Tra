@@ -8,6 +8,7 @@
 
 `scripts/strong_api.py` 复用 `LanzClient.request()` 和 `esr_harness`，保存实际 provider body、完整响应、请求 ID、usage 和 stop_reason。
 当前网关支持原生 tool_use，但实测可能忽略禁用并行工具的参数；客户端会拒绝多个动作并保留提案，不能选第一个假装成功。
+实测还出现 `end_turn` 文本为一个完整 JSON 对象后附单个 `</tool_call>` 的情况。当前适配器先严格验证前面的完整 JSON，再移除这一已声明的尾标记，并记录 response_normalization；不修改语义字段。多余括号、重复键、多对象和散文前缀均不能借此通过。
 计数端点在本次探针中未返回可用 token 计数。上下文估计是明确标记的保守容量估计，不冒充本地 Qwen tokenizer。
 
 以下本机代理与 User-Agent 内容是历史接入说明，不是当前支持保证。研究脚本沿用已有获准的客户端配置；遇到 403 应保留错误并核对授权，不切换身份绕过限制。

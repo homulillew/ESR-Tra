@@ -5,7 +5,16 @@ import sqlite3
 import time
 import uuid
 
-from .protocol import HarnessError, canonical
+from .protocol import HarnessError, canonical, parse_object
+
+
+def normalize_tool_text(text):
+    """Observed gateway suffix: validate the entire JSON before removing one end token."""
+    stripped=text.strip()
+    suffix='</tool_call>'
+    if stripped.startswith('{') and stripped.endswith(suffix):
+        return canonical(parse_object(stripped[:-len(suffix)].strip())), 'json_object_tool_end_suffix_v1'
+    return text, None
 
 
 class GlobalBudget:
@@ -96,7 +105,8 @@ class AnthropicClient:
         self.identity = {"protocol": "anthropic_messages", "config": asdict(self.config),
                          "context_estimate": "UTF-8 bytes of mapped JSON + 1024 overhead; conservative, not verified tokenizer",
                          "thinking": "omitted; provider default unverified", "model_revision": "gateway_alias_unpinned",
-                         "url": transport.base_url + "/v1/messages", "parser": "one_native_call_or_final_text_json_v2",
+                         "url": transport.base_url + "/v1/messages", "parser": "one_native_call_or_final_text_json_v3",
+                         "text_suffix": "one strict JSON object followed by one </tool_call>; no field correction",
                          "parallel_control": "requested; observed gateway may ignore; multiple calls strictly rejected"}
 
     def body(self, messages, max_tokens):
@@ -222,5 +232,9 @@ class AnthropicClient:
             texts = [b["text"] for b in blocks if b.get("type") == "text" and isinstance(b.get("text"), str)]
             if len(texts) != 1 or any(b.get("type") not in {"text","thinking","redacted_thinking"} for b in blocks):
                 raise HarnessError("protocol_error", "Expected exactly one final text block; raw content retained")
-            return texts[0]
+            normalized, rule = normalize_tool_text(texts[0])
+            if rule:
+                self.ledger.append({"type":"response_normalization","request_id":rid,"rule":rule,
+                                    "semantic_fields_modified":False})
+            return normalized
         raise AssertionError("unreachable")
