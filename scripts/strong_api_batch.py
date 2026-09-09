@@ -7,7 +7,7 @@ import os
 from pathlib import Path
 import yaml
 
-from strong_api import ROOT, GlobalBudget, LanzClient, episode, write_json, snapshot
+from strong_api import ROOT, GlobalBudget, LanzClient, episode, write_json, snapshot, systemic_failure
 
 
 def main():
@@ -43,6 +43,8 @@ def main():
         # Alternate which arm goes first while keeping within-question adjacent time blocks.
         arms=a.arms if (n+a.replicate)%2==0 else list(reversed(a.arms))
         for arm in arms:
+            if a.stage=='pilot' and len(list(root.glob(f'*_pilot_B_{row["qid"]}_*/manifest.json')))>=2:
+                raise ValueError('This pilot question already used its two-episode allowance across all versions')
             # Do not silently repeat an already registered replicate in the same source version.
             for old in root.glob(f'*_{a.stage}_{arm}_{row["qid"]}_{a.replicate}/manifest.json'):
                 previous=json.loads(old.read_text(encoding='utf-8'))
@@ -51,9 +53,9 @@ def main():
             result,directory=episode(root,budget,transport,settings,question=row['question'],qid=row['qid'],arm=arm,
                                      category=a.stage,replicate=a.replicate,index=Path(settings['dataset_root'])/'indexes/esr-sqlite-bm25-20260909.sqlite')
             outputs.append(directory.name)
-            terminal=(result.get('terminal') or {}).get('outcome')
-            if terminal in {None,'service_error'} or result['invalid_actions']>=3:
-                write_json(root/f'schedule_{schedule_id}_paused.json',{'runs':outputs,'reason':'infrastructure or repeated protocol failures; remaining schedule not executed'})
+            pause=systemic_failure(result,directory)
+            if pause:
+                write_json(root/f'schedule_{schedule_id}_paused.json',{'runs':outputs,'reason':pause,'remaining_schedule':'not executed'})
                 print('Batch paused; inspect saved failures before continuing.',flush=True)
                 return
     write_json(root/f'schedule_{schedule_id}_completed.json',{'runs':outputs})

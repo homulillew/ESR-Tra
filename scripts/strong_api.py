@@ -1,5 +1,6 @@
 """Bounded research entry point. Agent decisions remain exclusively in esr_harness."""
 import argparse
+from collections import Counter
 from dataclasses import replace
 from datetime import datetime, timezone
 import getpass
@@ -52,6 +53,23 @@ def export(ledger, directory):
     for event in ledger.events():
         append(directory/"trajectory.jsonl", event)
         if event["type"] in names: append(directory/names[event["type"]],event)
+
+
+def systemic_failure(result, directory):
+    """Pause repeated execution breakdowns, not every recovered error on a long task."""
+    terminal=(result.get("terminal") or {}).get("outcome")
+    if terminal in {None,"service_error"}: return "infrastructure_or_unfinished"
+    events=[json.loads(x) for x in (directory/"trajectory.jsonl").read_text(encoding="utf-8").splitlines()]
+    actions=[e for e in events if e["type"]=="tool"]
+    errors=[e for e in actions if not e["result"]["ok"]]
+    signatures=Counter((e["action"],e["result"].get("error_code"),digest(e["arguments"])) for e in errors)
+    if signatures and max(signatures.values())>=3: return "same_failed_proposal_three_times"
+    if sum(e["action"]=="verify_answer" and e["result"].get("error_code")=="audit_protocol_error" for e in errors)>=2:
+        return "repeated_audit_protocol_failure"
+    if len(errors)>=4 and len(errors)*2>=len(actions):return "majority_invalid_actions"
+    for i in range(len(actions)-2):
+        if all(not e["result"]["ok"] for e in actions[i:i+3]):return "three_consecutive_errors"
+    return None
 
 
 def episode(root, budget, transport, settings, *, question, qid, arm, category, index=None, replicate=0):
@@ -163,8 +181,9 @@ def main():
         if args.category=="confirmation" and not (root/"FINAL_FREEZE.json").exists(): raise ValueError("Confirmation requires final freeze")
         for arm in args.arms:
             result,path=episode(root,budget,transport,settings,question=matches[0]["question"],qid=args.qid,arm=arm,category=args.category,index=args.index)
-            if result["terminal"] is None or (result["terminal"] or {}).get("outcome")=="service_error" or result["invalid_actions"]>=3:
-                print("Batch paused: inspect infrastructure or repeated invalid actions before expanding",flush=True)
+            pause=systemic_failure(result,path)
+            if pause:
+                print("Batch paused: "+pause,flush=True)
                 break
     print(json.dumps(budget.summary()),flush=True)
 
