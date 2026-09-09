@@ -1,7 +1,8 @@
 """One 2.1 decision loop with protected delivery and explicit request receipts."""
 from types import SimpleNamespace
+from copy import deepcopy
 from .engine import Harness
-from .context import visible_ids
+from .context import visible_ids, visible_view
 from .ledger import Ledger
 from .protocol import Config, HarnessError, SCHEMA_VERSION, canonical, digest, obj, parse_object, string, validate
 
@@ -10,7 +11,8 @@ from .prompts import POLICY_PROMPT_VERSION, policy_system
 
 def messages_for(harness, client):
     system = {"role": "system", "content": policy_system(harness.config) + "\nTools:\n" + canonical(harness.available_tools())}
-    for limit in range(harness.config.recent_actions, -1, -1):
+    limits = [0] if harness.config.mode == "baseline" else range(harness.config.recent_actions, -1, -1)
+    for limit in limits:
         card = harness.context(limit)
         budget = getattr(client, "budget", None)
         if budget:
@@ -19,9 +21,19 @@ def messages_for(harness, client):
         if harness.config.mode == "baseline":
             # Ordinary ReAct history, retained verbatim without state tables or model summaries.
             history = []
+            rendered_views = {}
             for event in harness.actions:
+                result = deepcopy(event["result"])
+                if "observation" in result:
+                    view = result["observation"]
+                    oid = view["observation_id"]
+                    if oid in rendered_views:
+                        result["observation"] = {"observation_id": oid, "identical_body_at_action": rendered_views[oid]}
+                    else:
+                        result["observation"] = visible_view(view, harness.documents[view["docid"]]["title"])
+                        rendered_views[oid] = event["action_id"]
                 history.extend([{"role": "assistant", "content": canonical({"action": event["action"], "arguments": event["arguments"]})},
-                                {"role": "user", "content": canonical(event["result"])}])
+                                {"role": "user", "content": canonical(result)}])
             # Neutral initial metadata followed by chronological full actions/results. No duplicated bodies.
             initial = {"question": harness.question}
             current = {"remaining_actions": card["remaining_actions"], "budget": card.get("budget"),

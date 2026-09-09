@@ -108,6 +108,18 @@ def test_baseline_retains_full_observations_and_query_results():
     assert not any('"claim_updates"' in m["content"] for m in messages)
 
 
+def test_baseline_never_renders_internal_raw_parts_or_repeats_identical_views():
+    h=env(config=Config(mode="baseline",audit_mode="off"));o=opened(h)
+    h.execute('read_evidence',{'observation_id':o})
+    messages=messages_for(h,SimpleNamespace(fits=lambda _:True))
+    results=[json.loads(m['content']) for m in messages if m['role']=='user']
+    views=[r['observation'] for r in results if 'observation' in r]
+    assert len([v for v in views if 'text' in v])==1
+    assert views[0]['text']==h.observations[o]['text']
+    assert views[1]['identical_body_at_action']=='a2'
+    assert 'raw_parts' not in json.dumps(messages)
+
+
 class Transport:
     base_url="http://fixture"
     def __init__(self, responses): self.responses=iter(responses); self.requests=[]

@@ -15,9 +15,10 @@ def main():
     p.add_argument('stage',choices=['pilot','development','confirmation'])
     p.add_argument('--replicate',type=int,default=0)
     p.add_argument('--take',type=int,default=15)
+    p.add_argument('--start',type=int,default=0,help='Zero-based offset in the original frozen order; never reorders samples')
     p.add_argument('--arms',nargs='+',choices=['B','E-off','E-soft'],default=['B'])
     a=p.parse_args()
-    if a.replicate not in range(3) or a.take not in range(1,16): p.error('Invalid bounded schedule')
+    if a.replicate not in range(3) or a.take not in range(1,16) or a.start not in range(15): p.error('Invalid bounded schedule')
     if a.stage=='pilot' and (a.arms!=['B'] or a.replicate>=2): p.error('Pilot permits baseline only, at most two passes')
     root=Path((ROOT/'runs/strong_api_esr/CURRENT').read_text().strip())
     if a.stage=='confirmation' and not (root/'FINAL_FREEZE.json').exists(): p.error('Confirmation still sealed')
@@ -25,10 +26,11 @@ def main():
     source=root/'dataset_splits'/f'{a.stage}.questions.jsonl'
     rows=[json.loads(x) for x in source.read_text(encoding='utf-8').splitlines() if x.strip()]
     if any(set(r)!={'qid','question'} for r in rows): raise ValueError('Labels are forbidden in rollout input')
-    chosen=rows[:a.take]
+    chosen=rows[a.start:a.start+a.take]
+    if not chosen: p.error('No questions at this frozen offset')
     conditions=snapshot()
     # Register all scheduled denominators before the first episode, including anything later interrupted.
-    schedule={'stage':a.stage,'replicate':a.replicate,'arms':a.arms,'qids':[r['qid'] for r in chosen],
+    schedule={'stage':a.stage,'replicate':a.replicate,'arms':a.arms,'start':a.start,'qids':[r['qid'] for r in chosen],
               'conditions':conditions,'status':'registered; unexecuted entries must remain visible'}
     schedule_id=datetime.now(timezone.utc).strftime('%Y%m%dT%H%M%S%fZ')
     write_json(root/f'schedule_{schedule_id}.json',schedule)
@@ -39,7 +41,7 @@ def main():
                         output_limit=settings['max_completion_tokens_all_remote_calls'],episode_limit=settings['max_real_episodes_total'],
                         probe_limit=settings['max_auxiliary_connectivity_requests'])
     outputs=[]
-    for n,row in enumerate(chosen):
+    for n,row in enumerate(chosen,start=a.start):
         # Alternate which arm goes first while keeping within-question adjacent time blocks.
         arms=a.arms if (n+a.replicate)%2==0 else list(reversed(a.arms))
         for arm in arms:

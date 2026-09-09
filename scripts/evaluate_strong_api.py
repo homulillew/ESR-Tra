@@ -58,6 +58,12 @@ if __name__=='__main__':
     budget=GlobalBudget(root/'global_budget.sqlite')
     template=(root/'evaluation_protocol/grader_template.txt').read_text(encoding='utf-8')
     selected=[root/r for r in a.run_dirs]
+    for directory in selected:
+        meta=json.loads((directory/'manifest.json').read_text(encoding='utf-8'))
+        if meta['category']=='confirmation' and not (root/'FINAL_FREEZE.json').exists():
+            raise ValueError('Confirmation is sealed; references must not be loaded')
+        if not json.loads((directory/'summary.json').read_text(encoding='utf-8')).get('terminal'):
+            raise ValueError('All requested rollouts must finish before references are loaded')
     # Load references only for completed requested runs, outside every rollout process.
     ids={json.loads((d/'manifest.json').read_text(encoding='utf-8'))['qid'] for d in selected}
     gold={}
