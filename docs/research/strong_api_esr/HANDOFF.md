@@ -19,7 +19,7 @@ python -B -u scripts/strong_api.py run --questions "$researchRoot/dataset_splits
 确认集问题文件已经锁定；最终冻结之前禁止运行/展示其详细内容。还未产生新题开发集或确认集效果结论。任务未结束时本文件只作为恢复入口，不代表后续阶段已完成。
 
 
-2026-09-09 两次 pilot 中断均已恢复为 operator_paused。第一批 7 局均带正文重复的难度校准排除标记。第二批 replicate 1 已花费原顺序前 13 题，第 13 题中断；前 12 题完成并判分。6 次容量停止促成 search 提交前检查和恢复空间修复，详见 DECISIONS.md。下一步运行 pilot --replicate 0 --start 7 --take 8 --arms B，再运行 pilot --replicate 1 --start 13 --take 2 --arms B。每题跨版本总计最多 2 局，不能再重跑前 7 题。确认集仍封存。
+2026-09-09 pilot 的 30 次额度全部执行完并完成独立判分，禁止再跑 pilot。两次强制中断已记为 operator_paused，未知请求仍占用预算。正文重复、搜索结果提交容量检查、JSON 尾标记问题均已保存原始失败并修复。开发集已冻结为 9 题，全为暂列中等，未完成可靠的三档平衡校准。确认集仍封存。当前准备运行 development --replicate 0 --take 9 --arms B E-off E-soft；候选选择规则在私有 candidate_selection_preregistered.json，按第一遍结果选择 E-off 或 E-soft 后，再运行 B 与候选的 replicate 1。
 
 freeze_development.py 只读 baseline pilot，按预登记规则冻结开发题。compare_strong_api.py 要求完整、同源的显式配对队列，按题目聚类 bootstrap。freeze_final_strong_api.py 只接受 9 题、B 与候选各 2 次的开发比较；确认批次会核对冻结的源码、配置、样本和 judge 模板。实际确认尚未执行，不能把脚本存在写成已得到结果。
 

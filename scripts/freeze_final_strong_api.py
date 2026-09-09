@@ -6,6 +6,7 @@ import json
 from pathlib import Path
 from strong_api import ROOT, snapshot, write_json
 import yaml
+from strong_api_freeze_guard import online_source_hashes
 
 
 def sha(path):return hashlib.sha256(path.read_bytes()).hexdigest()
@@ -18,7 +19,7 @@ def freeze(root, comparison, reason, tests):
     if result['stage']!='development' or result['replicates']!=2 or result['questions']!=9:
         raise ValueError('Require nine development questions with two paired replicates before final freeze')
     now=snapshot();settings=yaml.safe_load((ROOT/'configs/strong_api_forward.yaml').read_text(encoding='utf-8'))
-    sources={k:v for k,v in now['source_hashes'].items() if k.startswith(('src/esr_harness/','api/'))}
+    sources=online_source_hashes(now)
     if sources!=result['conditions']['sources'] or settings!=result['conditions']['settings']:
         raise ValueError('Current online code/config differs from measured development version')
     test_bytes=tests.read_bytes()
@@ -28,7 +29,8 @@ def freeze(root, comparison, reason, tests):
     files={str(p.relative_to(root)).replace('\\','/'):sha(p) for p in [
         root/'dataset_splits/development.questions.jsonl',root/'dataset_splits/development_selection.json',
         root/'dataset_splits/confirmation.questions.jsonl',root/'dataset_splits/selection.json',
-        root/'evaluation_protocol/grader_template.txt',root/'evaluation_protocol/source_metadata.json']}
+        root/'evaluation_protocol/grader_template.txt',root/'evaluation_protocol/source_metadata.json',
+        root/'index_fingerprint.json']}
     record={'timestamp':datetime.now(timezone.utc).isoformat(),'candidate':result['esr'],'reason':reason,
             'source_snapshot':now,'online_sources':sources,'settings':settings,'sealed_files':files,
             'development_comparison':str(comparison),'development_comparison_sha256':sha(comparison),

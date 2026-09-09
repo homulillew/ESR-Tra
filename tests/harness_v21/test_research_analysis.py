@@ -8,7 +8,7 @@ SCRIPTS=Path(__file__).resolve().parents[2]/'scripts'
 sys.path.insert(0,str(SCRIPTS))
 from freeze_development import classify
 from compare_strong_api import effect, clustered
-from strong_api_freeze_guard import check_episode_input,check_final_freeze,PROCEDURE_SOURCES
+from strong_api_freeze_guard import check_episode_input,check_final_freeze,PROCEDURE_SOURCES,online_source_hashes
 import json
 
 
@@ -55,8 +55,16 @@ def test_direct_episode_entry_cannot_bypass_sealed_confirmation_or_pilot_allowan
 
 def test_confirmation_guard_rejects_post_freeze_code_change(tmp_path):
     snap={'source_hashes':{k:'original' for k in PROCEDURE_SOURCES}}
-    record={'online_sources':{},'settings':{},'source_snapshot':snap,'sealed_files':{},'confirmation_plan':{'arms':['B','E-off']}}
+    record={'online_sources':online_source_hashes(snap),'settings':{},'source_snapshot':snap,'sealed_files':{},'confirmation_plan':{'arms':['B','E-off']}}
     (tmp_path/'FINAL_FREEZE.json').write_text(json.dumps(record))
     assert check_final_freeze(tmp_path,snap,{})==record
     snap['source_hashes'][PROCEDURE_SOURCES[0]]='changed'
-    with pytest.raises(ValueError,match='procedure changed'):check_final_freeze(tmp_path,snap,{})
+    with pytest.raises(ValueError,match='sources/config changed'):check_final_freeze(tmp_path,snap,{})
+
+
+def test_offline_analysis_edit_does_not_create_a_new_online_sampling_version():
+    old={'source_hashes':{'src/esr_harness/runner.py':'a','scripts/strong_api.py':'b','scripts/compare_strong_api.py':'c'}}
+    new={'source_hashes':{**old['source_hashes'],'scripts/compare_strong_api.py':'new analysis'}}
+    assert online_source_hashes(old)==online_source_hashes(new)
+    new['source_hashes']['scripts/strong_api.py']='changed experiment driver'
+    assert online_source_hashes(old)!=online_source_hashes(new)

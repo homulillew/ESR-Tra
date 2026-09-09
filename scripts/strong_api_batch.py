@@ -8,6 +8,7 @@ from pathlib import Path
 import yaml
 
 from strong_api import ROOT, GlobalBudget, LanzClient, episode, write_json, snapshot, systemic_failure
+from strong_api_freeze_guard import online_source_hashes
 
 
 def main():
@@ -17,10 +18,12 @@ def main():
     p.add_argument('--take',type=int,default=15)
     p.add_argument('--start',type=int,default=0,help='Zero-based offset in the original frozen order; never reorders samples')
     p.add_argument('--arms',nargs='+',choices=['B','E-off','E-soft'],default=['B'])
+    p.add_argument('--root',default=str(ROOT/'runs/strong_api_esr/CURRENT'))
     a=p.parse_args()
     if a.replicate not in range(3) or a.take not in range(1,16) or a.start not in range(15): p.error('Invalid bounded schedule')
     if a.stage=='pilot' and (a.arms!=['B'] or a.replicate>=2): p.error('Pilot permits baseline only, at most two passes')
-    root=Path((ROOT/'runs/strong_api_esr/CURRENT').read_text().strip())
+    root=Path(a.root)
+    if root.is_file():root=Path(root.read_text().strip())
     if a.stage=='confirmation' and not (root/'FINAL_FREEZE.json').exists(): p.error('Confirmation still sealed')
     settings=yaml.safe_load((ROOT/'configs/strong_api_forward.yaml').read_text(encoding='utf-8'))
     source=root/'dataset_splits'/f'{a.stage}.questions.jsonl'
@@ -57,7 +60,10 @@ def main():
             # Do not silently repeat an already registered replicate in the same source version.
             for old in root.glob(f'*_{a.stage}_{arm}_{row["qid"]}_{a.replicate}/manifest.json'):
                 previous=json.loads(old.read_text(encoding='utf-8'))
-                if previous.get('source_hashes')==conditions['source_hashes']:
+                if (online_source_hashes(previous)==online_source_hashes(conditions)
+                    and previous['settings']==settings
+                    and previous['provider']['url']==transport.base_url+'/v1/messages'
+                    and previous['provider']['config']['model']==transport.model):
                     raise ValueError('This source-version replicate already exists; inspect it rather than resample')
             result,directory=episode(root,budget,transport,settings,question=row['question'],qid=row['qid'],arm=arm,
                                      category=a.stage,replicate=a.replicate,index=Path(settings['dataset_root'])/'indexes/esr-sqlite-bm25-20260909.sqlite')

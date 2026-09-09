@@ -8,11 +8,12 @@ from pathlib import Path
 import random
 from statistics import mean
 from summarize_strong_api import metrics
+from strong_api_freeze_guard import online_source_hashes
 
 
 def online_conditions(meta):
-    return {'sources':{k:v for k,v in meta['source_hashes'].items() if k.startswith(('src/esr_harness/', 'api/'))},
-            'settings':meta['settings'], 'provider':meta['provider']}
+    return {'sources':online_source_hashes(meta),
+            'settings':meta['settings'], 'provider':meta['provider'],'index_fingerprint':meta.get('index_fingerprint')}
 
 
 def effect(pairs):

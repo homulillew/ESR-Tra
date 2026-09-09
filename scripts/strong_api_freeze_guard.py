@@ -1,9 +1,27 @@
 """Fail closed if an experiment tries to use changed confirmation conditions."""
 import hashlib
 import json
+from datetime import datetime
+from pathlib import Path
 
 PROCEDURE_SOURCES = ['scripts/strong_api.py','scripts/strong_api_batch.py','scripts/evaluate_strong_api.py',
                      'scripts/compare_strong_api.py','scripts/summarize_strong_api.py','scripts/strong_api_freeze_guard.py']
+
+
+def online_source_hashes(snapshot):
+    return {k:v for k,v in snapshot['source_hashes'].items()
+            if k.startswith(('src/esr_harness/','api/')) or k=='scripts/strong_api.py'}
+
+
+def checked_index_fingerprint(root,index,required=False):
+    record_path=root/'index_fingerprint.json'
+    if not record_path.exists() and not required:return None
+    record=json.loads(record_path.read_text(encoding='utf-8-sig'))
+    path=Path(index).resolve();stat=path.stat()
+    expected_time=datetime.fromisoformat(record['last_write_utc'].replace('Z','+00:00')).timestamp()
+    if path!=Path(record['path']).resolve() or stat.st_size!=record['bytes'] or abs(stat.st_mtime-expected_time)>0.00001:
+        raise ValueError('Index differs from the file whose full SHA256 was verified')
+    return record
 
 
 def check_episode_input(root,category,qid,question,arm):
@@ -22,7 +40,7 @@ def check_episode_input(root,category,qid,question,arm):
 
 def check_final_freeze(root, snapshot, settings, arms=None):
     freeze=json.loads((root/'FINAL_FREEZE.json').read_text(encoding='utf-8'))
-    online={k:v for k,v in snapshot['source_hashes'].items() if k.startswith(('src/esr_harness/','api/'))}
+    online=online_source_hashes(snapshot)
     if online!=freeze['online_sources'] or settings!=freeze['settings']:
         raise ValueError('Confirmation online sources/config changed after freeze')
     for source in PROCEDURE_SOURCES:

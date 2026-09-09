@@ -74,8 +74,9 @@ def systemic_failure(result, directory):
 
 
 def episode(root, budget, transport, settings, *, question, qid, arm, category, index=None, replicate=0):
-    from strong_api_freeze_guard import check_episode_input, check_final_freeze
+    from strong_api_freeze_guard import check_episode_input, check_final_freeze, checked_index_fingerprint
     check_episode_input(root,category,qid,question,arm)
+    fingerprint=checked_index_fingerprint(root,index,required=category in {'development','confirmation'}) if index is not None else None
     if category=='confirmation':
         frozen=check_final_freeze(root,snapshot(),settings)
         if arm not in frozen['confirmation_plan']['arms']:
@@ -103,6 +104,7 @@ def episode(root, budget, transport, settings, *, question, qid, arm, category, 
         retriever=SQLiteRetriever(index,log=ledger.append)
     auditor=ModelAuditor(client) if config.audit_mode!="off" else None
     manifest={**snapshot(),"run_id":rid,"category":category,"qid":qid,"arm":arm,"replicate":replicate,
+              "index_fingerprint":fingerprint,
               "settings":settings,"input_hash":digest({"qid":qid,"question":question}),"provider":client.identity,
               "shared_cache_warmth":"OS page cache uncontrolled; adjacent interleaved arms; no cross-episode application cache"}
     write_json(directory/"manifest.json",manifest)
