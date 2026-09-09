@@ -25,7 +25,9 @@ freeze_development.py 只读 baseline pilot，按预登记规则冻结开发题�
 
 需要暂停未来批次时，在研究根目录创建 PAUSE_NEW_EPISODES.json，执行器会在当前局结束后停止。保留暂停文件并重命名归档后才能继续。无显卡部署说明见 CPU_RUNBOOK.md。
 
-2026-09-09 当前恢复点：原生 policy 工具与 audit_report；共享提示 research-2.1.5。DEVELOPMENT_FREEZE_v4.json 保存当前源码和配置。tests-19.txt 为 214 项通过。旧三个开发版本分别执行 3、8、2 局后停止，全部完成独立判分；这些队列不与当前版本混算。文本接口在完整 E-off 轨迹中 31 个动作有 18 个非法，故拒绝，详情见 DECISIONS.md。另有 8 次固定前缀诊断和 4 次联通/容量探针，均保留原始记录与费用。不得继续增加接口探针或轮换格式以挑选成功输出。
+2026-09-09 当前恢复点：原生 policy 工具与 audit_report；共享 policy 提示 research-2.1.5。auditor 改为选择全部允许原文中的确定片段 ID，程序只还原对应原文，保持证据范围和模型 verdict。DEVELOPMENT_FREEZE_v5.json 保存当前源码和配置，tests-20.txt 为 219 项通过。旧四个开发版本分别执行 3、8、2、3 局后停止，全部独立判分；这 16 局不与当前版本混算。文本接口和直接长引文审核的失败均完整保留，详情见 DECISIONS.md。另有 8 次固定前缀诊断和 4 次联通/容量探针，均保留原始记录与费用。
+
+audit_span_iteration_preregistered.json 登记这最后一项主要改动及四轮预算的实际组成；之后不再增加主要机制、接口探针或轮换格式以挑选成功输出。原文引用模式仍作为默认关闭的兼容选项保留，最终使用的 auditor 模式由 configs/strong_api_forward.yaml 明确指定。
 
 当前执行固定 9 题、B/E-off/E-soft 的 replicate 0。恢复前先查当前进程和实际已完成目录；同一源码版本的已注册 replicate 禁止重复。全部结束后用独立 evaluator 判分，再按既定规则选择 ESR 候选，运行 B 与候选的 replicate 1，做完整配对比较后才能冻结确认集。
 
