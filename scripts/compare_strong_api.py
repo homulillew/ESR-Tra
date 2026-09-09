@@ -25,7 +25,7 @@ def effect(pairs):
             'esr_accuracy':mean(b['correct'] is True for a,b in pairs),
             'both_correct_pairs':len(common),
             'correct_completion_time_change':ratio('elapsed_seconds',common)}
-    for key in ['backend_requests','online_model_requests','input_tokens_measured','output_tokens_measured']:
+    for key in ['backend_requests','online_model_requests','input_tokens_measured','input_tokens_charged','output_tokens_measured','charged_output_tokens']:
         result[key+'_change']=ratio(key,pairs)
         result['both_correct_'+key+'_change']=ratio(key,common)
     return result

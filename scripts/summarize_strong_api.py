@@ -25,6 +25,7 @@ def metrics(directory):
     terminal=summary.get('terminal') or {}
     correct=evaluation.get('correct') if terminal.get('outcome')=='submitted' else False
     unknown=set(e['request_id'] for e in requests)-{e['request_id'] for e in generations if e.get('usage')}
+    actual_by_request={e['request_id']:e['usage'] for e in generations if e.get('usage')}
     errors=Counter(e['result'].get('error_code') for e in actions if not e['result']['ok'])
     same_reads=sum(a['action']=='read_evidence' and b['action']=='read_evidence' and a['arguments']==b['arguments']
                    for a,b in zip(actions,actions[1:]))
@@ -34,6 +35,8 @@ def metrics(directory):
          'invalid_actions':sum(errors.values()),'backend_requests':len(retrieval),'backend_searches':op['search'],
          'backend_documents':op['get_document'],'policy_requests':kinds['policy'],'audit_requests':kinds['audit'],
          'online_model_requests':len(requests),'input_tokens_measured':sum(u['prompt_tokens'] for u in measured),
+         'input_tokens_charged':sum(actual_by_request[e['request_id']]['prompt_tokens'] if e['request_id'] in actual_by_request
+                                    else e['reserved_input_tokens'] for e in requests),
          'output_tokens_measured':sum(u['completion_tokens'] for u in measured),
          'uncached_input_tokens_measured':sum(u.get('uncached_input_tokens',u['prompt_tokens']) for u in measured),
          'reasoning_tokens_known_sum':sum(u.get('reasoning_tokens') or 0 for u in measured),

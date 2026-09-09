@@ -15,3 +15,16 @@
 评价协议核对：[BC+ 官方 evaluate_with_openai.py](https://raw.githubusercontent.com/texttron/BrowseComp-Plus/main/scripts_evaluation/evaluate_with_openai.py) 与 [官方 prompts.py](https://raw.githubusercontent.com/texttron/BrowseComp-Plus/main/search_agent/prompts.py)，读取 grader 模板及调用/解析实现。官方采用独立答案匹配判断；本轮不得用子串判断替代。若复用 policy 路由做离线 judge，明确模型相关误差，不宣称独立模型。
 
 CPU 检索依据：[SQLite FTS5 文档](https://www.sqlite.org/fts5.html)；这是另建的 FTS5 BM25 索引，使用完整 BC+ corpus，不等同于下载的 Lucene BM25 索引。[Pyserini 当前文档](https://github.com/castorini/pyserini)要求 Java 21 并主要面向 Python 3.12，本机默认 Python 3.13 且无 Java。两臂统一采用新 CPU 检索器，不能与旧实验直接归因比较。
+
+## 2026-09-09：由实际评分争议触发的补充核对
+
+pilot 有一次提交包含参考名称及其所属地点的限定说明，judge 仅因附加信息判错。原分数保留，标为疑似误判，不能把它作为题目困难的证据。另一题遗漏原问题明确要求的引号，判错有直接依据。这两种情况必须分开。
+
+以下均只核对作者的一手摘要和版本信息，未复现实验或完整审查正文，不将论文数值当作本项目的校准结果。
+
+| 来源与日期 | 对应问题与最小做法 | 预测、消融及决定 |
+|---|---|---|
+| [Explaining Length Bias in LLM-Based Preference Evaluations](https://aclanthology.org/2025.findings-emnlp.358/)，EMNLP Findings，2025-11 | 偏好比较可能受长度影响；本例却是附加文字被罚，偏差方向与任务不同，不能直接套用。仅记录答复长度与争议。 | 固定语义的合成长度变体可检验敏感性，但不改变 BC+ 原评分。拒绝把长度校正胜率用于答案正确率；无新增在线调用。 |
+| [How Long Reasoning Chains Influence LLMs' Judgment of Answer Factuality](https://arxiv.org/abs/2604.06756)，首次 2026-04-08，v2 2026-08-07 | 给 judge 更多推理不保证更准确，流畅解释可能影响判断。继续只给原问题、已提交答案和参考答案。 | 预测：加入内部轨迹可能改变判分且不稳定。拒绝用 policy 内部 finding/audit 说服 judge，不增加推理链审核组件。 |
+| [Nine Judges, Two Effective Votes: Correlated Errors Undermine LLM Evaluation Panels](https://arxiv.org/abs/2605.29800)，v1 2026-05-28 | 多模型投票也可能共享错误，重复同一路由更不能假定独立。保留原分及离线争议说明。 | 不采用“重判直到通过”或未经校准的投票，避免额外成本。真正独立的复核仍是限制，不能由重复一致替代。 |
+| [LLMs are Biased Evaluators But Not Biased for Fact-Centric Retrieval Augmented Generation](https://aclanthology.org/2025.findings-acl.1369/)，ACL Findings，2025-07，超过最近 12 个月 | 作为反证：该研究的事实型 RAG 设置未观察到显著自偏好，说明偏差依任务而定。 | 不能仅因 policy/judge 同路由就宣称本实验有确定方向的偏差；结论依实际争议和敏感性分析，保留相关误差风险。 |

@@ -10,6 +10,8 @@ D:/AgentSearchAssets/BrowseComp-Plus/indexes/esr-sqlite-bm25-20260909.sqlite
 
 检索由 Python 进程直接调用 CPU 上的 SQLite，不依赖端口 8000 的检索服务。search 查询完整索引，open/read 使用正常返回的文档与窗口；没有按题号过滤 gold 文档。索引保存语料 SHA256、文档数、分词器与完成标记。
 
+2026-09-09 本机系统可见 4 个逻辑处理器，约 8 GiB 内存；索引实际为 4,393,078,784 字节，约 4.09 GiB。它在当前环境已完成真实多轮检索。硬件快照保存在私有研究目录 hardware_cpu_retrieval_20260909.json，空闲内存仅代表采样时刻。
+
 该配置使用新建的 SQLite BM25，与下载的 Lucene BM25、Qwen 稠密检索索引均有区别。当前结果只能归于已记录的检索配置。B、E-off、E-soft 使用相同索引；将来换成稠密检索或重排器时，需要给 baseline 同等能力并重新比较。
 
 已有索引可直接运行，无需重复建索引。需要独立重建时，必须提供不存在的新输出路径：

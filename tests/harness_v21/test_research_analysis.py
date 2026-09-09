@@ -14,7 +14,7 @@ import json
 
 def row(correct=True, **changes):
     return {'correct':correct,'outcome':'submitted','backend_requests':3,'online_model_requests':7,
-            'elapsed_seconds':10,'input_tokens_measured':100,'output_tokens_measured':20,**changes}
+            'elapsed_seconds':10,'input_tokens_measured':100,'input_tokens_charged':100,'output_tokens_measured':20,'charged_output_tokens':20,**changes}
 
 
 def test_difficulty_does_not_turn_infrastructure_failure_into_hard_question():
