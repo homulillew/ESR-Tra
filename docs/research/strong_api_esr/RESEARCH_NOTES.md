@@ -1,5 +1,7 @@
 # 研究核对记录
 
+2026-09-10 最新两轮 task coverage 研究、SearchAuditor/HALT/ECHO 等一手文献的机制边界及实际失败结论见 [TASK_COVERAGE_RESEARCH_20260910.md](TASK_COVERAGE_RESEARCH_20260910.md)。没有新增状态图或训练接入；两轮共 42 次请求，审核逻辑未通过验收并已从运行代码移除。
+
 2026-09-10 的补充检索、逐例断点和采用/拒绝机制见 [ORDERED_TOOLS_RESEARCH_20260910.md](ORDERED_TOOLS_RESEARCH_20260910.md)。核查了 2026 年 2–8 月的多工具执行、搜索失败诊断和停止审核一手论文；文献、旧答案及本研究任务文档未进入被测模型。实施后的 GLM 接口结果及剩余格式问题见 [GLM_REPAIR_VALIDATION_20260910.md](GLM_REPAIR_VALIDATION_20260910.md)。
 
 检索日期：2026-09-09。以下文献只供离线设计，不进入被测模型上下文。当前未进行训练或新增在线模型组件。

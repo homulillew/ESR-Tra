@@ -4,7 +4,6 @@ from copy import deepcopy
 from .protocol import AUDIT_SCHEMA, HarnessError, canonical, digest, parse_object, validate
 
 from .prompts import AUDIT_PROMPT_VERSION, AUDIT_SYSTEM, AUDIT_SPAN_PROMPT_VERSION, AUDIT_SPAN_SYSTEM
-from .prompts import TASK_FIRST_AUDIT, TASK_FIRST_AUDIT_VERSION, LITERAL_ANSWER_AUDIT
 from .audit_spans import SPAN_SCHEMA, source_span_packet, expand_references
 
 class Auditor(Protocol):
@@ -53,32 +52,21 @@ def unresolved(report):
 
 
 class ModelAuditor:
-    def __init__(self, client, attempts=2, *, citation_mode='quotes', span_max_chars=1200, profile='atomic'):
+    def __init__(self, client, attempts=2, *, citation_mode='quotes', span_max_chars=1200):
         if attempts not in {1, 2}:
             raise ValueError("Audit protocol repair must be bounded")
         if citation_mode not in {'quotes','source_spans'}:
             raise ValueError('Unknown auditor citation mode')
         if not 100 <= span_max_chars <= 4000:
             raise ValueError('Invalid audit span size')
-        if profile not in {'atomic', 'task_first', 'task_first_literal'}:
-            raise ValueError('Unknown auditor profile')
-        self.profile = profile
         self.client, self.attempts = client, attempts
         self.citation_mode,self.span_max_chars=citation_mode,span_max_chars
         self.system=AUDIT_SPAN_SYSTEM if citation_mode=='source_spans' else AUDIT_SYSTEM
-        if profile in {'task_first', 'task_first_literal'}:
-            self.system = TASK_FIRST_AUDIT + self.system
-        if profile == 'task_first_literal':
-            self.system = LITERAL_ANSWER_AUDIT + self.system
         self.schema=SPAN_SCHEMA if citation_mode=='source_spans' else AUDIT_SCHEMA
         self.identity = {"client": client.identity,
                          "prompt": AUDIT_SPAN_PROMPT_VERSION if citation_mode=='source_spans' else AUDIT_PROMPT_VERSION,
                          "system_hash": digest(self.system), "schema_hash": digest(self.schema),
                          'citation_mode':citation_mode,'span_max_chars':span_max_chars if citation_mode=='source_spans' else None}
-        if profile in {'task_first', 'task_first_literal'}:
-            self.identity.update(profile=profile, prompt=TASK_FIRST_AUDIT_VERSION + '+' + self.identity['prompt'])
-        if profile == 'task_first_literal':
-            self.identity['prompt'] = 'literal-answer-2.1.0+' + self.identity['prompt']
 
     def audit(self, question, state, views):
         payload = {"question": question, **state,
@@ -96,7 +84,7 @@ class ModelAuditor:
             if references:quotes['items']['properties']['span_id']['enum']=list(references)
             else:quotes['maxItems']=0
         messages = [{"role": "system", "content": self.system + "\nSchema:\n" + canonical(schema)},
-                    {"role": "user", "content": literal_answer_packet(payload) if self.profile == 'task_first_literal' else canonical(payload)}]
+                    {"role": "user", "content": canonical(payload)}]
         last = ""
         for attempt in range(self.attempts):
             reply = self.client.complete(messages, purpose="audit")
@@ -119,21 +107,3 @@ class ModelAuditor:
                     messages += [{"role": "assistant", "content": reply},
                                  {"role": "user", "content": "Repair protocol only; keep all original evidence: " + last}]
         raise HarnessError("audit_protocol_error", last)
-
-
-def literal_answer_packet(payload):
-    """Render the exact answer once outside JSON; derive no semantic requirement."""
-    rest = dict(payload)
-    answer = rest.pop('answer')
-    if answer is None:
-        candidate = 'Candidate answer: null (no answer bound).'
-    else:
-        nonce = 0
-        while True:
-            marker = digest([answer, nonce])
-            begin, end = 'BEGIN_ANSWER_' + marker, 'END_ANSWER_' + marker
-            if begin not in answer and end not in answer:
-                break
-            nonce += 1
-        candidate = begin + '\n' + answer + '\n' + end
-    return candidate + '\n\nAudit inputs (candidate answer above):\n' + canonical(rest)

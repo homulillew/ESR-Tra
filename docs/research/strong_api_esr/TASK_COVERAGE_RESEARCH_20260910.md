@@ -73,3 +73,81 @@ Expected benefit：减少候选字符与序列化符号混淆；Expected downsid
 第二轮先只给新表示运行全部 12 个固定合成包及 1 个原始审核包，各最多两次请求，上限 26；上一轮 task_first 结果保留为已冻结固定包控制，不重采样。通过必须六正例接受、六负例识别、原始包报告明确指出遗漏的引号且新报告全部有效。通过后同一当前源码下完整跑九题三条件：E-off、E-soft/task_first、E-soft/task_first_literal，比较的唯一在线差异是审核 profile。该自然对照用于归因答案表示；不得称为对 atomic 或 B 的自然性能提升。仍各局 16 次在线加最多一次原 judge，上限 459，总计最多新增 485，未超剩余 616。
 
 各题一次自然运行，轮换条件顺序；暂停 baseline、不打开确认集、不覆盖第一轮。若第二轮没有通过机制门槛，不为完成批次数而运行已证实仍错误的候选，也不缩减样本后宣称成功。
+
+## 第二轮实测、机制结论及最终代码
+
+第二轮在线版本 `d28b437`，新增 14 次审核请求。全部六个合规和六个违规合成例均在一次请求内得到正确有效报告。但原始 q790 包先后两次返回相同矛盾：coverage=contradicted，明确指出遗漏要求；target=supported，却仍填写要求修复的 need。当前契约要求 supported 的 need 为空，因此两次均被拒绝，未生成有效审核。模型看见了完整原题、相同证据及单独展示的原答案；harness 没有替模型清空字段或修改结论。
+
+| 固定审核输入 | atomic（第一轮） | task_first（第一轮） | task_first_literal（第二轮） |
+| --- | --- | --- | --- |
+| 六个合规合成例 | 6/6 正确支持 | 6/6 正确支持 | 6/6 正确支持 |
+| 违规：引号、单位、请求对象 | 三例均错误支持 | 三例均正确拒绝 | 三例均正确拒绝 |
+| 违规：顺序 | 正确拒绝 | 正确拒绝 | 正确拒绝 |
+| 违规：数量、时间 | 两例报告协议失败，各消耗两次请求 | 两例均正确拒绝 | 两例均正确拒绝 |
+| 原始 q790 审核包 | 错误支持 | 错误支持，并错误声称要求已满足 | 识别遗漏，但报告矛盾；两次请求后仍无有效报告 |
+
+这不是三组自然答题准确率。每列对固定候选进行审核，没有重新搜索、生成答案或执行 policy 修复；真实包来自一个已研究题目，不能当独立泛化样本。第二轮复用第一轮 task_first 的固定包控制，没有重新抽取对照响应，时间与采样差异仍是限制。
+
+逐例分析显示三个不同阶段：
+
+1. **理解要求**：原题信息已存在，新增字段不是必要条件。直接检查答案能改善简单独立约束的判断，但长证据包仍会把序列化引号当作答案字符。这是有原始报告支撑的错误解释，尚不能推论所有任务都是同一根因。
+2. **形成可用报告**：答案单独展示后识别出了具体缺失，但仍无法使多个 status/need 字段一致。原子审核在另外两个独立合成例也出现相同类问题。当前“语义判断正确”与“能通过报告契约”是两个瓶颈。
+3. **实际修复**：两轮都未通过预先登记的扩批门槛，因此没有把不合格报告交给自然 policy 继续运行。检测后的有效状态修改、修复成功率、损害率和任务准确率均未测量；不能将它们记作已改善，也不能用无效报告的理由替代模型动作。
+
+**工程修复决定 Keep：** 答案首尾字符原样保存及字符变化使旧审核失效，有确定性失败/通过与持久化重放证据，保留 `373ba0a` 的修复和五项回归。
+
+**第一轮研究决定 Remove；第二轮效果决定 Inconclusive，部署决定 Remove。** 第一轮对真实包仍错误支持；第二轮有一次可解释的检测改善，但两次均无有效报告，没有前向修复收益。最终从当前运行代码移除这两种可选审核 profile 和相关实验专属测试，恢复原审核及默认配置。合成材料、研究记录和实验提交 `4c931af`/`d28b437` 保留，便于在确切版本复查；不因已投入实现工作而增加默认系统负担。
+
+触发停止条件：连续两种合理的最小干预均未通过真实包的完整机制门槛。没有发起第三轮提示试错，没有放宽 status/need 验证，没有重跑失败直到成功。固定开发九题的 27 条自然对照清单完整保留为未运行；没有把缺失条目当零成本成功、没有替换为合成准确率。没有选择最终 ESR 版本或打开确认集，目标未达成。
+
+## 真实成本与原始记录
+
+| 阶段 | 请求 | 实测输入 token | 实测输出 token | 审核流程累计耗时 |
+| --- | ---: | ---: | ---: | ---: |
+| task_first 固定包对照 | 28 | 37,937 | 8,737 | 242.88 秒 |
+| 单独展示答案的固定包检验 | 14 | 26,525 | 4,245 | 106.06 秒 |
+| 本轮合计 | **42** | **64,462** | **12,982** | **348.94 秒** |
+
+全部 42 次响应来自 `glm-5.2`，用量均已结算，无新传输错误或未知用量；三次额外请求是预设的报告协议修复，均计费。没有 policy、BC+ 后端检索或 judge 请求。以上时间是固定包审核耗时，不能作为正确完成题目的速度。没有可靠单价，不估造货币成本。
+
+当前累计 **1,398/2,000，剩余总额度 602**。检查点为 1,410，距离当前检查点剩 12，不等同于总剩余。13 笔历史未知用量继续保守占账；本地累计额度不代表 provider 今日配额，也不会因日期或新会话重置。
+
+39 份固定包的实际请求解码核查全部通过：三种表示中的语义输入和 schema 一致；三份 q790 请求的题目、候选、claims、原文与原始审核包完全相同。expected_supported、研究文档、参考答案和文献笔记不进入审核请求。用量核查覆盖 1,398 笔全局请求、1,385 笔已结算回执及 418 份导出，零差异、零缺失导出。一个历史独立 probe 的单独记录继续保留。旧 49 个目录中的 442 个 schema 问题不删除，本轮没有新增。
+
+私有根目录 `runs/strong_api_esr/20260909T085343Z/`：
+
+- 两轮 `TASK_COVERAGE_20260910_*`、`TASK_LITERAL_20260910_*` 保存 PLAN/STARTED/PACKETS/ONLINE_FINISHED/FINISHED；未运行的自然对照清单仍在 PLAN。
+- 每包保存 `packet.json`、`ledger.sqlite`、`provider_requests.jsonl`、`provider_responses.jsonl`、`trajectory.jsonl`、`result.json`。真实题目和原文不提交到公开仓库。
+- `task_packet_input_audit_20260910T095012615458Z.json`：39 包输入、schema、原始真实包一致性。
+- `receipt_audit_20260910T095022546213Z.json`、`schema_audit_20260910T095017274307Z.json`：全局用量与 schema 核查。
+- 第一轮/第二轮测试分别为 339 passed（25.73 秒）、344 passed（25.85 秒）；日志 `tests_task_first_release_20260910.txt`、`tests_task_literal_release_20260910.txt`。最终移除实验代码后的回归另存，不以旧通过数冒充最终版本。
+
+采集时实际命令如下，均是已完成、禁止覆盖或重启的一次性入口；重现源码应分别查看 `4c931af` 与 `d28b437`，不能在最终移除 profile 的版本重跑控制器。再次付费实验需新清单和目录，不能复用旧 STARTED 文件。
+
+```powershell
+python -B -X utf8 runs/strong_api_esr/20260909T085343Z/run_task_coverage_20260910.py
+python -B -X utf8 runs/strong_api_esr/20260909T085343Z/run_task_literal_20260910.py
+```
+
+最终版本可重复执行的只读核查及本地测试，不产生 API 请求：
+
+```powershell
+python -B -X utf8 runs/strong_api_esr/20260909T085343Z/audit_task_packet_inputs_20260910.py
+python -B -X utf8 scripts/audit_strong_api_receipts.py
+python -B -X utf8 scripts/audit_strong_api_schemas.py
+python -B -m pytest tests -q --basetemp runs/strong_api_esr/20260909T085343Z/analysis-temp-task-coverage-recheck
+git show 4c931af:src/esr_harness/audit.py
+git show d28b437:src/esr_harness/audit.py
+```
+
+## 训练接口核查与剩余研究问题
+
+只读检查 `src/esr_grpo/models.py`、`credit.py`、`integrations/echo.py` 后，确认当前 Harness 2.1 尚不能直接输入旧 CreditRouter。旧 TaskState 需要 evidence_directory、supporting_evidence、gaps、verification_status；当前状态是 claims、finding、observation_ids、focus 及独立审核记录，尚无已实现的映射。旧 ActionRecord 的 token_spans 需要真实采样序列；Anthropic 原生工具响应只提供结构化块和 usage，没有本次采样 token ID、old logprob 或精确策略 mask。把 JSON 重新分词不能冒充这些值。
+
+未来 bridge 至少需要保存：原始 request ID/decision ID/native call index 到完整动作的关系、最终保留证据与形成该 finding 的动作、带候选作用域的有效修复，以及采样端提供的精确 token 区间和 logprob。先验证动作选择，再与 trajectory-wide GRPO、动作级及 token 级信用分配比较。最终奖励仍由正式任务成功锚定；合法 supported 只表示一个可检查的中间判断，不能自动产生正奖励。以上是缺失项与接口要求，没有实现训练或声称信用分配提高了性能。
+
+下一优先瓶颈是审核报告中重复语义字段的协调及可执行反馈：当前错误信息只有通用 status/need 不一致提示，未指出具体 target/coverage/claim 路径。此次真实包与两份独立合成例给出了后续研究依据；可在新的有界轮次比较更精确的字段反馈或更少冗余的报告契约，必须保留原 verdict、全部失败成本和完整固定开发对照。它们本轮未实现，不能当作已解决。
+
+全局限制仍包括：开发难度分层不可靠、反复查看开发题导致的过拟合、单次受控采样的不确定性、模型路由与 thinking 默认值未固定、CPU BM25 检索配置差异，以及同模型判分的相关误差。当前证据不足以宣称 ESR 比普通搜索 baseline 更准、更省或更快。
+
+最终运行代码回归：**334 passed，30.29 秒**，日志 `tests_task_coverage_final_20260910.txt`。研究专属 profile 已移除，原测试及答案字符回归全部保留通过；实验版本的测试仍在其原始提交和日志中。最终机器可读汇总为 `TASK_COVERAGE_CLOSEOUT_20260910.json`，预算备份为 `global_budget_task_coverage_closeout_20260910.sqlite`。所有阶段已关闭，无后台实验；未推送本轮新提交或私有材料。
