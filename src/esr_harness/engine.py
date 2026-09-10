@@ -436,7 +436,8 @@ class Harness:
     def end(self, reason):
         if self.readonly:
             raise RuntimeError("Replay is read-only")
-        if reason not in {"budget_exhausted", "generation_budget_exhausted", "context_overflow", "service_error"}:
+        if reason not in {"budget_exhausted", "generation_budget_exhausted", "context_overflow", "service_error",
+                          'request_budget_exhausted','execution_error_limit'}:
             raise ValueError("Unknown termination reason")
         if self.terminal is None:
             audit = self.current_audit

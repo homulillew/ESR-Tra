@@ -60,6 +60,7 @@ def systemic_failure(result, directory):
     """Pause repeated execution breakdowns, not every recovered error on a long task."""
     terminal=(result.get("terminal") or {}).get("outcome")
     if terminal in {None,"service_error"}: return "infrastructure_or_unfinished"
+    if terminal in {'execution_error_limit','request_budget_exhausted'}: return terminal
     events=[json.loads(x) for x in (directory/"trajectory.jsonl").read_text(encoding="utf-8").splitlines()]
     actions=[e for e in events if e["type"]=="tool"]
     errors=[e for e in actions if not e["result"]["ok"]]
@@ -82,6 +83,7 @@ def episode(root, budget, transport, settings, *, question, qid, arm, category, 
         if arm not in frozen['confirmation_plan']['arms']:
             raise ValueError('Arm differs from final confirmation plan')
     budget.ensure_available()
+    budget.ensure_request_capacity(settings.get('max_remote_requests_per_episode',1))
     rid=datetime.now(timezone.utc).strftime("%Y%m%dT%H%M%S%fZ")+f"_{category}_{arm}_{qid}_{replicate}"
     directory=root/rid
     directory.mkdir()
@@ -89,12 +91,15 @@ def episode(root, budget, transport, settings, *, question, qid, arm, category, 
     append(root/"experiment_registry.jsonl",{"run_id":rid,"status":"started","category":category,"qid":qid,"arm":arm,"replicate":replicate})
     p=settings["provider"]
     config=Config(mode="baseline" if arm=="B" else "esr",audit_mode="off" if arm in {"B","E-off"} else "soft",
-                  max_actions=min(12,settings["max_actions_per_episode"]) if category=="fixture" else settings["max_actions_per_episode"])
+                  max_actions=min(12,settings["max_actions_per_episode"]) if category=="fixture" else settings["max_actions_per_episode"],
+                  max_execution_errors=settings.get('max_execution_errors_per_episode',0),
+                  max_consecutive_errors=settings.get('max_consecutive_execution_errors',0))
     rc=RemoteConfig(model=transport.model,max_output_tokens=p["max_output_tokens"],temperature=p["temperature"],
                     context_operating_cap=p["context_operating_cap"],timeout=p["transport_timeout_seconds"],
                     transport_attempts=settings["max_transport_attempts_per_request"],
                     recovery_headroom=p["context_recovery_headroom"],
-                    policy_tool_interface=p.get('policy_tool_interface','native'))
+                    policy_tool_interface=p.get('policy_tool_interface','native'),
+                    max_requests=settings.get('max_remote_requests_per_episode',0))
     ledger=Ledger(directory/"ledger.sqlite")
     usage=UsageBudget(settings["max_completion_tokens_per_episode_including_audit"])
     started=time.monotonic()
@@ -108,6 +113,7 @@ def episode(root, budget, transport, settings, *, question, qid, arm, category, 
     auditor=ModelAuditor(client,citation_mode=audit_settings.get('citation_mode','quotes'),
                          span_max_chars=audit_settings.get('span_max_chars',1200)) if config.audit_mode!="off" else None
     manifest={**snapshot(),"run_id":rid,"category":category,"qid":qid,"arm":arm,"replicate":replicate,
+              'global_request_allowance':budget.request_status(),
               "index_fingerprint":fingerprint,
               "settings":settings,"input_hash":digest({"qid":qid,"question":question}),"provider":client.identity,
               "shared_cache_warmth":"OS page cache uncontrolled; adjacent interleaved arms; no cross-episode application cache"}

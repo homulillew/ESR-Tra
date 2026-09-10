@@ -111,8 +111,13 @@ class Config:
     directory_page_size: int = 8
     max_pending_views: int = 4
     cache_search: bool = True
+    max_execution_errors: int = 0
+    max_consecutive_errors: int = 0
 
     def __post_init__(self):
+        for key in ('max_execution_errors','max_consecutive_errors'):
+            if type(getattr(self,key)) is not int or getattr(self,key) < 0:
+                raise ValueError(f'{key} must be a nonnegative integer')
         if self.mode not in {"esr", "baseline"} or self.audit_mode not in {"hard", "soft", "off"}:
             raise ValueError("Invalid mode/audit mode")
         for key in ("max_actions", "search_top_k", "view_chars", "chunk_top_k", "stagnant_after", "directory_page_size", "max_pending_views"):

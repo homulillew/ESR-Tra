@@ -43,6 +43,8 @@ def messages_for(harness, client):
         if hasattr(client, "context_status"):
             current_payload = parse_object(messages[-1]["content"])
             current_payload["context_budget"] = client.context_status(messages)
+            if hasattr(client,'request_status') and client.request_status()['limit'] is not None:
+                current_payload['remote_request_budget']=client.request_status()
             messages[-1]["content"] = canonical(current_payload)
         if client.fits(messages):
             return messages
@@ -60,6 +62,20 @@ def run(harness, client):
             raise
     harness.admission = admissible
     while harness.terminal is None and harness.attempts < harness.config.max_actions:
+        errors=[a for a in harness.actions if not a['result']['ok']]
+        consecutive=harness.config.max_consecutive_errors
+        stop_reason=None
+        if harness.config.max_execution_errors and len(errors) >= harness.config.max_execution_errors:
+            stop_reason='total_execution_errors'
+        elif consecutive and len(harness.actions) >= consecutive and all(not a['result']['ok'] for a in harness.actions[-consecutive:]):
+            stop_reason='consecutive_execution_errors'
+        elif harness.config.max_execution_errors and sum(a['result'].get('error_code')=='audit_protocol_error' for a in errors)>=2:
+            stop_reason='repeated_audit_protocol_failure'
+        if stop_reason:
+            harness.ledger.append({'type':'execution_stop','reason':stop_reason,
+                                   'error_action_ids':[a['action_id'] for a in errors]})
+            harness.end('execution_error_limit')
+            break
         decision_id = None
         action = None
         try:
@@ -88,14 +104,14 @@ def run(harness, client):
             validate(action, obj({"action": string(64), "arguments": {"type": "object", "properties": {},
                                 "required": [], "additionalProperties": True}}), "decision")
         except HarnessError as exc:
-            if exc.code in {"context_overflow", "service_error", "generation_budget_exhausted"}:
+            if exc.code in {"context_overflow", "service_error", "generation_budget_exhausted",'request_budget_exhausted'}:
                 harness.end(exc.code)
                 break
             harness.record_protocol_error(str(exc), decision_id, exc.code, getattr(exc, "proposal", action))
             continue
         result = harness.execute(action["action"], action["arguments"], decision_id=decision_id)
-        if not result["ok"] and result["error_code"] == "generation_budget_exhausted":
-            harness.end("generation_budget_exhausted")
+        if not result["ok"] and result["error_code"] in {'generation_budget_exhausted','request_budget_exhausted','service_error'}:
+            harness.end(result['error_code'])
     if harness.terminal is None:
         harness.end("budget_exhausted")
     return summary(harness, getattr(client, "budget", None))

@@ -29,6 +29,8 @@ class GlobalBudget:
             CREATE TABLE IF NOT EXISTS requests (id TEXT PRIMARY KEY, purpose TEXT, input_reserved INTEGER,
               output_reserved INTEGER, input_charged INTEGER, output_charged INTEGER, settled INTEGER, usage TEXT);
             CREATE TABLE IF NOT EXISTS episodes (id TEXT PRIMARY KEY, category TEXT NOT NULL, status TEXT NOT NULL);
+            CREATE TABLE IF NOT EXISTS request_limits (singleton INTEGER PRIMARY KEY, total_limit INTEGER, checkpoint_limit INTEGER);
+            CREATE TABLE IF NOT EXISTS request_limit_events (seq INTEGER PRIMARY KEY, payload TEXT NOT NULL);
         """)
         self.limits = dict(input_limit=input_limit, output_limit=output_limit, episode_limit=episode_limit, probe_limit=probe_limit)
         current = self.db.execute("SELECT payload FROM limits").fetchone()
@@ -42,6 +44,35 @@ class GlobalBudget:
         if self.hold_path.exists():
             record=json.loads(self.hold_path.read_text(encoding='utf-8-sig'))
             raise HarnessError('service_error','Provider requests paused: '+record['reason'])
+
+    def configure_request_limits(self, total_limit, checkpoint_limit, reason):
+        """Persist an operator-reviewed checkpoint; restarting cannot reset counts."""
+        if any(type(n) is not int or n < 1 for n in (total_limit, checkpoint_limit)) or checkpoint_limit > total_limit:
+            raise ValueError('Invalid request limits')
+        if not isinstance(reason, str) or not reason.strip():
+            raise ValueError('A checkpoint review reason is required')
+        with self.db:
+            self.db.execute('BEGIN IMMEDIATE')
+            previous=self.db.execute('SELECT total_limit,checkpoint_limit FROM request_limits').fetchone()
+            if previous and total_limit > previous[0]:
+                raise ValueError('Cannot expand the registered total request allowance')
+            self.db.execute('INSERT OR REPLACE INTO request_limits VALUES(1,?,?)',(total_limit,checkpoint_limit))
+            self.db.execute('INSERT INTO request_limit_events(payload) VALUES(?)',(canonical({
+                'timestamp_utc':datetime.now(timezone.utc).isoformat(),'previous':previous,
+                'total_limit':total_limit,'checkpoint_limit':checkpoint_limit,'reason':reason}),))
+
+    def request_status(self):
+        used=self.db.execute('SELECT count(*) FROM requests').fetchone()[0]
+        limits=self.db.execute('SELECT total_limit,checkpoint_limit FROM request_limits').fetchone()
+        return {'used':used,'total_limit':limits[0] if limits else None,
+                'checkpoint_limit':limits[1] if limits else None,
+                'remaining':max(0,min(limits)-used) if limits else None}
+
+    def ensure_request_capacity(self, amount=1):
+        self.ensure_available()
+        status=self.request_status()
+        if status['remaining'] is not None and amount > status['remaining']:
+            raise HarnessError('request_budget_exhausted','Global request allowance or reviewed checkpoint reached')
 
     def hold_provider(self, reason, **metadata):
         try:
@@ -64,6 +95,7 @@ class GlobalBudget:
         self.ensure_available()
         with self.db:
             self.db.execute("BEGIN IMMEDIATE")
+            self.ensure_request_capacity()
             used_in, used_out = self.db.execute("SELECT coalesce(sum(input_charged),0), coalesce(sum(output_charged),0) FROM requests").fetchone()
             if used_in + input_tokens > self.limits["input_limit"] or used_out + output_tokens > self.limits["output_limit"]:
                 raise HarnessError("generation_budget_exhausted", "Global input/output reservation limit reached")
@@ -84,7 +116,7 @@ class GlobalBudget:
 
     def summary(self):
         rows = self.db.execute("SELECT purpose,count(*),sum(input_charged),sum(output_charged),sum(1-settled) FROM requests GROUP BY purpose").fetchall()
-        return {"limits": self.limits, "purposes": [{"purpose": p, "requests": n, "charged_input_tokens": i,
+        return {"limits": self.limits, 'request_limits':self.request_status(), "purposes": [{"purpose": p, "requests": n, "charged_input_tokens": i,
                  "charged_output_tokens": o, "unknown_or_outstanding_requests": u} for p,n,i,o,u in rows]}
 
 
@@ -113,8 +145,11 @@ class RemoteConfig:
     transport_attempts: int = 2
     recovery_headroom: int = 2048
     policy_tool_interface: str = 'native'
+    max_requests: int = 0
 
     def __post_init__(self):
+        if type(self.max_requests) is not int or self.max_requests < 0:
+            raise ValueError('Invalid remote request limit')
         if self.policy_tool_interface not in {'native', 'dispatcher', 'text'}:
             raise ValueError('Unknown policy tool interface')
 
@@ -191,6 +226,12 @@ class AnthropicClient:
                 "recovery_headroom_units": self.config.recovery_headroom,
                 "measurement": "conservative UTF-8 bytes plus overhead, not provider token count; includes all current history"}
 
+    def request_status(self):
+        used=sum(e['type']=='generation_request' for e in self.ledger.events())
+        return {'used':used,'limit':self.config.max_requests or None,
+                'remaining':max(0,self.config.max_requests-used) if self.config.max_requests else None,
+                'scope':'All policy, audit and transport attempts in this episode'}
+
     def complete(self, messages, purpose="policy"):
         self.global_budget.ensure_available()
         reserve_finish = 512 if purpose == "audit" else 0
@@ -202,6 +243,9 @@ class AnthropicClient:
         body = self.body(messages, maximum)
         input_reserved = self.input_reservation(body)
         for attempt in range(self.config.transport_attempts):
+            remaining=self.request_status()['remaining']
+            if remaining is not None and remaining <= 0:
+                raise HarnessError('request_budget_exhausted','Combined episode remote request limit reached')
             left = self.deadline - time.monotonic() if self.deadline else self.config.timeout
             if left <= 0:
                 raise HarnessError("service_error", "episode_wall_timeout")

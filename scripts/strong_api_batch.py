@@ -9,6 +9,7 @@ import yaml
 
 from strong_api import ROOT, GlobalBudget, LanzClient, episode, write_json, snapshot, systemic_failure
 from strong_api_freeze_guard import online_source_hashes
+from esr_harness.protocol import HarnessError
 
 
 def main():
@@ -54,6 +55,13 @@ def main():
             if (root/'PAUSE_NEW_EPISODES.json').exists():
                 write_json(root/f'schedule_{schedule_id}_paused.json',{'runs':outputs,'reason':'operator cooperative pause flag','remaining_schedule':'not executed'})
                 print('Batch paused between episodes; current records retained.',flush=True)
+                return
+            try:
+                budget.ensure_request_capacity(settings.get('max_remote_requests_per_episode',1))
+            except HarnessError as exc:
+                write_json(root/f'schedule_{schedule_id}_paused.json',{'runs':outputs,'reason':exc.code,
+                           'remaining_schedule':'not executed','request_allowance':budget.request_status()})
+                print('Batch paused before episode: '+str(exc),flush=True)
                 return
             if a.stage=='pilot' and len(list(root.glob(f'*_pilot_B_{row["qid"]}_*/manifest.json')))>=2:
                 raise ValueError('This pilot question already used its two-episode allowance across all versions')
