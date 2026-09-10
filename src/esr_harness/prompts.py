@@ -6,7 +6,7 @@ from typing import TYPE_CHECKING
 if TYPE_CHECKING:
     from .protocol import Config
 
-POLICY_PROMPT_VERSION = "research-2.1.5"
+POLICY_PROMPT_VERSION = "research-2.1.6"
 AUDIT_PROMPT_VERSION = "atomic-2.1.2"
 
 COMMON_SYSTEM = """Research the original question using the supplied corpus and available tools.
@@ -78,7 +78,21 @@ STAGNATION_GUIDANCE = (
 def policy_system(config: Config) -> str:
     """Select instructions for capabilities actually enabled in this run."""
     common = COMMON_SYSTEM
-    if config.max_tool_calls > 1:
+    if config.max_tool_calls > 1 and config.ordered_tool_calls:
+        controls = ''
+        if config.mode == 'esr':
+            controls = ('A state update can precede another tool in this response. For example, record findings and bind an answer, then submit when its preconditions hold. '
+                        'Each search uses its explicit focus or the focus committed by earlier calls. ')
+            if config.audit_mode != 'off':
+                controls += ('You may put verify_answer after update_state and before submit_answer. '
+                             'Submission still requires a valid current audit; hard mode still requires supported. '
+                             'To inspect the audit and decide how to respond to it, end this response at verify_answer. ')
+        common = common.replace('Use exactly one supplied native tool when that interface is present. Otherwise return one',
+            f'Use one or at most {config.max_tool_calls} supplied native tools in a response, executed in their listed order.\n'
+            'An ending action must be last. The first failed call blocks all later calls; earlier successful changes remain committed.\n'
+            'Every call receives its own result. Use only evidence and document/observation IDs already observed before this response; '
+            'do not guess the results or IDs of an earlier call in the same response.\n' + controls + '\nOtherwise return one')
+    elif config.max_tool_calls > 1:
         controls = 'Ending requires a separate response. '
         if config.mode == 'esr':
             controls += 'State updates require a separate response. Searches in one group use the same focus. '

@@ -95,7 +95,8 @@ def episode(root, budget, transport, settings, *, question, qid, arm, category, 
                   max_actions=min(12,settings["max_actions_per_episode"]) if category=="fixture" else settings["max_actions_per_episode"],
                   max_execution_errors=settings.get('max_execution_errors_per_episode',0),
                   max_consecutive_errors=settings.get('max_consecutive_execution_errors',0),
-                  max_tool_calls=settings.get('max_tool_calls_per_decision',1))
+                  max_tool_calls=settings.get('max_tool_calls_per_decision',1),
+                  ordered_tool_calls=settings.get('ordered_tool_calls',False))
     rc=RemoteConfig(model=transport.model,max_output_tokens=p["max_output_tokens"],temperature=p["temperature"],
                     context_operating_cap=p["context_operating_cap"],timeout=p["transport_timeout_seconds"],
                     transport_attempts=settings["max_transport_attempts_per_request"],

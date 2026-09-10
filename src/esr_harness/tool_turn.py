@@ -10,7 +10,7 @@ import json
 from .protocol import HarnessError, canonical, validate
 from .state import edit_focus
 
-TOOL_TURN_VERSION = "native-retrieval-turn-1"
+TOOL_TURN_VERSION = "native-tool-turn-2"
 READ_TOOLS = {"search", "open_page", "read_evidence"}
 RESERVED_RESULT_BYTES = 8192  # Admission estimate, not a bound on backend output.
 
@@ -94,7 +94,7 @@ def focus_requirements(h, calls):
     None denotes an independent call. An invalid focus remains unresolved until
     a later explicit valid edit; implicit calls must not fall back to old state.
     """
-    if h.config.mode != 'esr' or len(calls) == 1:
+    if h.config.mode != 'esr' or len(calls) == 1 or h.config.ordered_tool_calls:
         return [None for _ in calls]
     scope = {'focus': deepcopy(h.state['focus'])}
     requirements = []
@@ -131,7 +131,10 @@ def prepare(h, turn):
     if len(calls) > h.config.max_tool_calls:
         problem = error("batch_limit", f"At most {h.config.max_tool_calls} calls per decision; resend a bounded group")
         return calls, [(None, problem) for c in calls], [None for c in calls]
-    if len(calls) > 1 and any(c.get("name") not in READ_TOOLS for c in calls):
+    if h.config.ordered_tool_calls and any(c['name'] in {'finish','submit_answer'} for c in calls[:-1]):
+        problem = error('ending_must_be_last', 'An ending action must be the last call; no call executed')
+        return calls, [(None, problem) for c in calls], [None for c in calls]
+    if not h.config.ordered_tool_calls and len(calls) > 1 and any(c.get("name") not in READ_TOOLS for c in calls):
         problem = error("serial_action_required", "A multi-call group permits only independent search/open_page/read_evidence. State updates, audit and ending require their own decision.")
         return calls, [(None, problem) for c in calls], [None for c in calls]
     declared = {t["name"] for t in turn.declared_tools}
@@ -148,7 +151,7 @@ def prepare(h, turn):
             else:
                 validate(args, h.config.tool_schema(name))
             if len(calls) > 1:
-                if name == "search" and args.get("focus") is not None:
+                if name == "search" and args.get("focus") is not None and not h.config.ordered_tool_calls:
                     edit_focus(h.state, args["focus"])
                 if name == "open_page":
                     parent = args.get("search_action_id") or next((sid for sid, s in reversed(list(h.searches.items())) if args["docid"] in {r["docid"] for r in s["hits"]}), None)
@@ -206,6 +209,8 @@ def execute_turn(h, turn, decision_id):
                 rejected = error('dependency_failed', 'Required focus was not committed by an earlier call; set focus in a separate decision before resending this call (search may also supply focus explicitly)')
         if rejected:
             h._commit({"type": "native_result", "decision_id": decision_id, "index": i, "result": deepcopy(rejected)})
+            if h.config.ordered_tool_calls:
+                blocked = error('dependency_failed', 'Not executed after an earlier failed call; inspect every receipt and repair the failed action')
             continue
         h._commit({"type": "native_call_started", "decision_id": decision_id, "index": i})
         h.native_active = (decision_id, i)
@@ -221,6 +226,8 @@ def execute_turn(h, turn, decision_id):
             h._commit({"type": "native_result", "decision_id": decision_id, "index": i, "result": result})
         if not result["ok"] and result.get("error_code") in {"service_error", "context_capacity", "request_budget_exhausted", "generation_budget_exhausted", "budget_exhausted"}:
             blocked = error("previous_call_failed", "Not executed after a capacity, budget or uncertain service failure")
+        elif not result['ok'] and h.config.ordered_tool_calls:
+            blocked = error('dependency_failed', 'Not executed after an earlier failed call; committed earlier results are retained')
     h._commit({"type": "native_turn_complete", "decision_id": decision_id})
 
 

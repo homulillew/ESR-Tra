@@ -388,6 +388,8 @@ class Harness:
                 offered = not self.pending and self.current_audit is None and (self.state['answer'] is not None or any(c['observation_ids'] for c in self.state['claims']))
                 result['verify_answer']['ready'] = bool(offered)
                 result['verify_answer']['blocked_reason'] = None if offered else 'Pending evidence, empty state, or current audit already available'
+        if self.config.ordered_tool_calls:
+            result['ordered_calls'] = 'Readiness above describes current state. A prior successful update in this response can satisfy pending/answer preconditions; a prior successful verification can satisfy the current-audit precondition. Execution checks each action in order.'
         return result
 
     def _verify(self, aid):
@@ -442,10 +444,10 @@ class Harness:
                     # Replace this field so its enum cannot constrain unrelated IDs.
                     props=tool['parameters']['properties']
                     props['observation_id']={**props['observation_id'],'enum':readable}
-            if name == "verify_answer" and (pending or self.current_audit is not None or
+            if not self.config.ordered_tool_calls and name == "verify_answer" and (pending or self.current_audit is not None or
                                               (self.state["answer"] is None and not cited)):
                 continue
-            if name == "submit_answer" and self.answer_blocker():
+            if not self.config.ordered_tool_calls and name == "submit_answer" and self.answer_blocker():
                 tool["parameters"]["properties"]["decision"]["enum"] = ["abstain"]
                 tool["parameters"]["required"] = ["decision"]
             result.append(tool)

@@ -10,10 +10,11 @@ max_wall_seconds_per_episode: 900
 max_transport_attempts_per_request: 2
 max_protocol_repair_attempts_per_failed_proposal: 1
 confirmation_reserved_episodes: 54
-max_remote_requests_per_episode: 32
+max_remote_requests_per_episode: 16
 max_execution_errors_per_episode: 6
 max_consecutive_execution_errors: 3
 max_tool_calls_per_decision: 4
+ordered_tool_calls: true
 provider:
   base_url: http://lanz.hikvision.com/v3/anthropic/model
   model: Lanz-Medium

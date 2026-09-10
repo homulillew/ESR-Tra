@@ -114,8 +114,11 @@ class Config:
     max_execution_errors: int = 0
     max_consecutive_errors: int = 0
     max_tool_calls: int = 1  # Opt-in native retrieval groups; legacy ledgers stay single-call.
+    ordered_tool_calls: bool = False
 
     def __post_init__(self):
+        if type(self.ordered_tool_calls) is not bool:
+            raise ValueError('ordered_tool_calls must be boolean')
         if type(self.max_tool_calls) is not int or not 1 <= self.max_tool_calls <= 4:
             raise ValueError('max_tool_calls must be between 1 and 4')
         for key in ('max_execution_errors','max_consecutive_errors'):
@@ -133,6 +136,8 @@ class Config:
 
     def to_dict(self):
         result = asdict(self)
+        if not self.ordered_tool_calls:
+            result.pop('ordered_tool_calls')
         if self.max_tool_calls == 1:
             result.pop('max_tool_calls')  # Preserve existing immutable headers on replay.
         return result
