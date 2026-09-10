@@ -1,5 +1,7 @@
 # 研究核对记录
 
+2026-09-10 的补充检索、逐例断点和采用/拒绝机制见 [ORDERED_TOOLS_RESEARCH_20260910.md](ORDERED_TOOLS_RESEARCH_20260910.md)。核查了 2026 年 2–8 月的多工具执行、搜索失败诊断和停止审核一手论文；文献、旧答案及本研究任务文档未进入被测模型。实施后的 GLM 接口结果及剩余格式问题见 [GLM_REPAIR_VALIDATION_20260910.md](GLM_REPAIR_VALIDATION_20260910.md)。
+
 检索日期：2026-09-09。以下文献只供离线设计，不进入被测模型上下文。当前未进行训练或新增在线模型组件。
 
 2026-09-09 补充：[Anthropic Citations 官方文档](https://platform.claude.com/docs/en/build-with-claude/citations)，读取引用指针、文档分块与 token 成本说明。它通过引用位置取回原文，提示了“选择原文位置”可以替代“生成长引文”的设计。本轮不调用该厂商 citations 功能，也不声称 GLM 网关支持它；仅在已有 harness 中为允许原文生成确定片段 ID。预测是减少抄写错误和审计输出 token，代价是输入中的片段标签；语义判断仍可能错误。对照为已保留的逐字引文审核轨迹、无审核 E-off 和完整同源开发队列，不把固定引用合法性当作准确率。

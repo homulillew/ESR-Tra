@@ -1,13 +1,15 @@
 # api/ — Lanz 模型多轮对话客户端
 
-## 当前强 API 研究入口（2026-09-09）
+## 当前强 API 研究入口（2026-09-10）
 
 当前已实测用户授权的 `EB-GLM-5.2` 路由，base URL 为
 `http://lanz.hikvision.com/v3/anthropic/model`，请求地址追加 `/v1/messages`。
 密钥使用 `ANTHROPIC_AUTH_TOKEN` 环境变量或研究脚本的无回显输入，勿写入代码、命令行或日志。
 
 `scripts/strong_api.py` 复用 `LanzClient.request()` 和 `esr_harness`，保存实际 provider body、完整响应、请求 ID、usage 和 stop_reason。
-当前网关支持原生 tool_use，但实测可能忽略禁用并行工具的参数。研究配置通过 `max_tool_calls_per_decision: 4` 启用有界检索组合：逐项执行并返回匹配结果，状态更新、审核和结束分别决策。旧单调用配置仍会拒绝多调用并保留提案；两种配置都不静默选取第一项。原生工具路径使用 `request()`，`raw_text()` 仅提取文本，不能用来取得工具调用。
+当前网关支持原生 tool_use，但实测可能忽略禁用并行工具的参数。研究配置通过 `max_tool_calls_per_decision: 4` 和 `ordered_tool_calls: true` 启用顺序执行：允许更新、检索、审核与最后的结束动作组合；逐项返回回执，首个失败阻止后续调用，已有成功结果保留。证据必须在本响应前交付，提交仍检查 pending、answer 和 audit。关闭 ordered 配置时保留旧独立检索组规则，单调用配置仍拒绝多调用并保留提案，均不静默选取第一项。原生工具路径使用 `request()`，`raw_text()` 仅提取文本，不能用来取得工具调用。
+
+最新 `EB-GLM-5.2` 实测响应模型为 `glm-5.2`：合成“更新→审核→提交”组及真实题目“更新→提交”组执行成功。三局共 22 个工具回执、零工具错误，但真实回归仍因答案格式不符判错；见 [修复验证报告](../docs/research/strong_api_esr/GLM_REPAIR_VALIDATION_20260910.md)。
 实测还出现 `end_turn` 文本为一个完整 JSON 对象后附单个 `</tool_call>` 的情况。当前适配器先严格验证前面的完整 JSON，再移除这一已声明的尾标记，并记录 response_normalization；不修改语义字段。多余括号、重复键、多对象和散文前缀均不能借此通过。
 计数端点在本次探针中未返回可用 token 计数。上下文估计是明确标记的保守容量估计，不冒充本地 Qwen tokenizer。
 
