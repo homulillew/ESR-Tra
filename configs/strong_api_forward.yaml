@@ -15,7 +15,7 @@ max_execution_errors_per_episode: 6
 max_consecutive_execution_errors: 3
 provider:
   base_url: http://lanz.hikvision.com/v3/anthropic/model
-  model: EB-GLM-5.2
+  model: Lanz-Medium
   credential_env: ANTHROPIC_AUTH_TOKEN
   temperature: 0.6
   max_output_tokens: 4096
