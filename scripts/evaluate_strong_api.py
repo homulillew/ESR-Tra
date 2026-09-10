@@ -25,18 +25,20 @@ def evaluate(directory, gold, template, transport, budget):
     if terminal.get('outcome')!='submitted':
         grade={'correct':False,'submitted':False,'method':'non-submission counts as incorrect','judge_requests':0}
     else:
+        if meta['provider']['config']['model'] != transport.model:
+            raise ValueError('Judge route must match this rollout model; do not silently grade old cohorts with a new model')
         question=gold[meta['qid']]['query']; answer=gold[meta['qid']]['answer']
         prompt=template.format(question=question,response=terminal['answer'],correct_answer=answer)
         judge_dir=directory/('judge_'+datetime.now(timezone.utc).strftime('%Y%m%dT%H%M%S%fZ'));judge_dir.mkdir()
         ledger=Ledger(judge_dir/'ledger.sqlite');ledger.initialize({'kind':'offline_judge','qid':meta['qid'],'protocol':'official_grader_template_pinned'})
-        c=AnthropicClient(transport,UsageBudget(2048),ledger,budget,config=RemoteConfig(max_output_tokens=1024,temperature=0.0))
+        c=AnthropicClient(transport,UsageBudget(2048),ledger,budget,config=RemoteConfig(model=transport.model,max_output_tokens=1024,temperature=0.0))
         messages=[{'role':'user','content':prompt}]; grade=None
         try:
             for attempt in range(2):
                 text=c.complete(messages,purpose='judge')
                 matches=re.findall(r'^\s*(?:\*\*)?correct(?:\*\*)?\s*:\s*(?:\*\*)?(yes|no)(?:\*\*)?\s*$',text,re.I|re.M)
                 if len(matches)==1:
-                    grade={'correct':matches[0].lower()=='yes','submitted':True,'method':'official_BC+_grader_with_EB-GLM-5.2',
+                    grade={'correct':matches[0].lower()=='yes','submitted':True,'method':'official_BC+_grader_with_'+transport.model,
                            'judge_text':text,'judge_requests':attempt+1,'usage':c.budget.summary()}
                     break
                 messages += [{'role':'assistant','content':text},{'role':'user','content':"Repair only the output format: include exactly one line correct: yes or correct: no under the original grading criteria."}]

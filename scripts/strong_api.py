@@ -181,7 +181,7 @@ def main():
     if args.stage=="probe":
         path=root/("probe_"+datetime.now(timezone.utc).strftime("%Y%m%dT%H%M%S%fZ")); path.mkdir()
         ledger=Ledger(path/"ledger.sqlite"); ledger.initialize({"kind":"connectivity_probe",**snapshot()})
-        client=AnthropicClient(transport,UsageBudget(4096),ledger,budget,config=RemoteConfig(max_output_tokens=512,temperature=p["temperature"]))
+        client=AnthropicClient(transport,UsageBudget(4096),ledger,budget,config=RemoteConfig(model=transport.model,max_output_tokens=512,temperature=p["temperature"]))
         try:
             if args.native:
                 from esr_harness.prompts import policy_system
