@@ -1,10 +1,12 @@
 # 强 API 研究恢复入口（更新至 2026-09-10）
 
-当前状态：已使用 `eef3e27` 完成 10 局正式开发运行，新增 91 次 API 请求。首批固定三题 B/E-off/E-soft 分别答对 3/3、2/3、3/3，两种 ESR 的模型成本和时间均更高。第二批首局 q785 E-soft 用满单局 16 次 policy＋audit 请求后未提交，按预登记规则暂停，其余 8 局未执行。研究累计 1,180 次，检查点 1,317（剩余 137），研究总上限 1,403（剩余 223）；这不是服务方今日用量。最新结果及失败链见 [FORMAL_EXPERIMENT_CHECKPOINT_20260910.md](FORMAL_EXPERIMENT_CHECKPOINT_20260910.md)。九题完整比较、最终冻结和确认集尚未完成。
+当前状态：固定首轮开发实验已完成 **22/27 局**，前七题完整配对为 B 6/7、E-off 4/7、E-soft 4/7。正式实验共 233 次 API 请求，另有 1 次拥塞恢复探针；本次续跑新增 143 次，研究累计 **1,323/1,403**，剩余 80。q1044 E-soft 最后一笔请求发生未恢复的 ReadTimeout，单局上限已满，停止新请求；五笔本次未知用量与四笔历史未知继续占账。完整结果、错误与限制见 [FORMAL_DEVELOPMENT_CLOSEOUT_20260910.md](FORMAL_DEVELOPMENT_CLOSEOUT_20260910.md)。没有最终冻结，确认集 0/54。
 
-工程版本：`1658bd6` 修复原生/文本动作容量预演及 focus 失败依赖，启动前 288 项回归通过。本次采集期间没有代码或提示改动；10 局的 102 项原生调用均有回执，已发送请求的配对与正文检查通过。工程说明见 [NATIVE_TRANSITION_FIXES_20260910.md](NATIVE_TRANSITION_FIXES_20260910.md)。
+工程版本：`1658bd6` 修复原生/文本动作容量预演及 focus 失败依赖，启动前 288 项回归通过。22 局的在线源码哈希和配置一致，没有修改提示或重跑失败；301 项原生调用均有回执，已发送请求配对、正文交付、账目和新运行 schema 核查通过。工程说明见 [NATIVE_TRANSITION_FIXES_20260910.md](NATIVE_TRANSITION_FIXES_20260910.md)。这不等于整体系统无 bug，也不证明 ESR 优于 baseline。
 
-恢复时读取私有 `LATEST_STATUS.json`、`PAUSE_NEW_EPISODES.json` 和 `FORMAL_EXPERIMENT_CHECKPOINT_20260910.json`。先检查失败前缀和既定停止条件，再登记下一步；不延长失败局、不重跑到成功，也不拿后续题替换未运行的条目。下面的旧批量命令是历史记录，不能直接据此重启整批任务。
+恢复时读取私有 `LATEST_STATUS.json`、`PAUSE_NEW_EPISODES.json`、`FORMAL_DEVELOPMENT_CLOSEOUT_20260910.json`。未运行顺序为 **q1044 E-off、q1044 B、q718 B、q718 E-off、q718 E-soft**。核对无在途请求、服务恢复与预算后另行登记，仅续接这些条目；不可直接重跑已经执行过的一次性控制器。首轮之后仍需 18 局候选复验及 54 局确认，不能用剩余 80 次请求缩减原验收设计。当前无活动研究进程；一次有限恢复探针已经使用，不继续无限探测。
+
+此前完成 10 局时的历史快照见 [FORMAL_EXPERIMENT_CHECKPOINT_20260910.md](FORMAL_EXPERIMENT_CHECKPOINT_20260910.md)。下面的旧批量命令和用量是历史记录，不能直接据此重启整批任务。
 
 ## 历史恢复记录
 
