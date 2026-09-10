@@ -1,8 +1,10 @@
 # 强 API 研究恢复入口（更新至 2026-09-10）
 
-当前状态：生产补丁 `1658bd6` 已修复原生调用切换文本动作时的容量预演异常，以及 focus 修改失败后仍按旧 focus 执行后项的问题。完整离线回归通过 288 项；四份已有真实轨迹的配对和正文交付只读检查通过。本阶段新 API 调用为 0，全局仍为 1,089 次，当前检查点剩余 48 次。最新说明见 [NATIVE_TRANSITION_FIXES_20260910.md](NATIVE_TRANSITION_FIXES_20260910.md)，最新真实对照见 [NATIVE_TOOL_TURN_ACCEPTANCE_20260910.md](NATIVE_TOOL_TURN_ACCEPTANCE_20260910.md)。最终版本没有冻结，确认集 0/54，扩展批跑仍暂停。
+当前状态：已使用 `eef3e27` 完成 10 局正式开发运行，新增 91 次 API 请求。首批固定三题 B/E-off/E-soft 分别答对 3/3、2/3、3/3，两种 ESR 的模型成本和时间均更高。第二批首局 q785 E-soft 用满单局 16 次 policy＋audit 请求后未提交，按预登记规则暂停，其余 8 局未执行。研究累计 1,180 次，检查点 1,317（剩余 137），研究总上限 1,403（剩余 223）；这不是服务方今日用量。最新结果及失败链见 [FORMAL_EXPERIMENT_CHECKPOINT_20260910.md](FORMAL_EXPERIMENT_CHECKPOINT_20260910.md)。九题完整比较、最终冻结和确认集尚未完成。
 
-恢复时读取私有 `LATEST_STATUS.json` 和 `PAUSE_NEW_EPISODES.json`，先登记剩余预算内的新阶段。下面的旧批量命令是历史记录，不能直接据此重启整批任务。
+工程版本：`1658bd6` 修复原生/文本动作容量预演及 focus 失败依赖，启动前 288 项回归通过。本次采集期间没有代码或提示改动；10 局的 102 项原生调用均有回执，已发送请求的配对与正文检查通过。工程说明见 [NATIVE_TRANSITION_FIXES_20260910.md](NATIVE_TRANSITION_FIXES_20260910.md)。
+
+恢复时读取私有 `LATEST_STATUS.json`、`PAUSE_NEW_EPISODES.json` 和 `FORMAL_EXPERIMENT_CHECKPOINT_20260910.json`。先检查失败前缀和既定停止条件，再登记下一步；不延长失败局、不重跑到成功，也不拿后续题替换未运行的条目。下面的旧批量命令是历史记录，不能直接据此重启整批任务。
 
 ## 历史恢复记录
 
