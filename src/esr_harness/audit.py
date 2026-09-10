@@ -4,6 +4,7 @@ from copy import deepcopy
 from .protocol import AUDIT_SCHEMA, HarnessError, canonical, digest, parse_object, validate
 
 from .prompts import AUDIT_PROMPT_VERSION, AUDIT_SYSTEM, AUDIT_SPAN_PROMPT_VERSION, AUDIT_SPAN_SYSTEM
+from .prompts import TASK_FIRST_AUDIT, TASK_FIRST_AUDIT_VERSION
 from .audit_spans import SPAN_SCHEMA, source_span_packet, expand_references
 
 class Auditor(Protocol):
@@ -52,21 +53,27 @@ def unresolved(report):
 
 
 class ModelAuditor:
-    def __init__(self, client, attempts=2, *, citation_mode='quotes', span_max_chars=1200):
+    def __init__(self, client, attempts=2, *, citation_mode='quotes', span_max_chars=1200, profile='atomic'):
         if attempts not in {1, 2}:
             raise ValueError("Audit protocol repair must be bounded")
         if citation_mode not in {'quotes','source_spans'}:
             raise ValueError('Unknown auditor citation mode')
         if not 100 <= span_max_chars <= 4000:
             raise ValueError('Invalid audit span size')
+        if profile not in {'atomic', 'task_first'}:
+            raise ValueError('Unknown auditor profile')
         self.client, self.attempts = client, attempts
         self.citation_mode,self.span_max_chars=citation_mode,span_max_chars
         self.system=AUDIT_SPAN_SYSTEM if citation_mode=='source_spans' else AUDIT_SYSTEM
+        if profile == 'task_first':
+            self.system = TASK_FIRST_AUDIT + self.system
         self.schema=SPAN_SCHEMA if citation_mode=='source_spans' else AUDIT_SCHEMA
         self.identity = {"client": client.identity,
                          "prompt": AUDIT_SPAN_PROMPT_VERSION if citation_mode=='source_spans' else AUDIT_PROMPT_VERSION,
                          "system_hash": digest(self.system), "schema_hash": digest(self.schema),
                          'citation_mode':citation_mode,'span_max_chars':span_max_chars if citation_mode=='source_spans' else None}
+        if profile == 'task_first':
+            self.identity.update(profile=profile, prompt=TASK_FIRST_AUDIT_VERSION + '+' + self.identity['prompt'])
 
     def audit(self, question, state, views):
         payload = {"question": question, **state,
