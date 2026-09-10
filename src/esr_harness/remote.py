@@ -45,21 +45,25 @@ class GlobalBudget:
             record=json.loads(self.hold_path.read_text(encoding='utf-8-sig'))
             raise HarnessError('service_error','Provider requests paused: '+record['reason'])
 
-    def configure_request_limits(self, total_limit, checkpoint_limit, reason):
+    def configure_request_limits(self, total_limit, checkpoint_limit, reason, *, user_authorization=None):
         """Persist an operator-reviewed checkpoint; restarting cannot reset counts."""
         if any(type(n) is not int or n < 1 for n in (total_limit, checkpoint_limit)) or checkpoint_limit > total_limit:
             raise ValueError('Invalid request limits')
         if not isinstance(reason, str) or not reason.strip():
             raise ValueError('A checkpoint review reason is required')
+        if user_authorization is not None and (not isinstance(user_authorization, str) or not user_authorization.strip()):
+            raise ValueError('User authorization must quote an explicit new allowance')
         with self.db:
             self.db.execute('BEGIN IMMEDIATE')
             previous=self.db.execute('SELECT total_limit,checkpoint_limit FROM request_limits').fetchone()
-            if previous and total_limit > previous[0]:
+            if previous and total_limit > previous[0] and user_authorization is None:
                 raise ValueError('Cannot expand the registered total request allowance')
             self.db.execute('INSERT OR REPLACE INTO request_limits VALUES(1,?,?)',(total_limit,checkpoint_limit))
             self.db.execute('INSERT INTO request_limit_events(payload) VALUES(?)',(canonical({
                 'timestamp_utc':datetime.now(timezone.utc).isoformat(),'previous':previous,
-                'total_limit':total_limit,'checkpoint_limit':checkpoint_limit,'reason':reason}),))
+                'total_limit':total_limit,'checkpoint_limit':checkpoint_limit,'reason':reason,
+                'user_authorization':user_authorization,
+                'requests_already_used':self.db.execute('SELECT count(*) FROM requests').fetchone()[0]}),))
 
     def request_status(self):
         used=self.db.execute('SELECT count(*) FROM requests').fetchone()[0]

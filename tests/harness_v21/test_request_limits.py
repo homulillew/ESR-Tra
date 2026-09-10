@@ -49,6 +49,25 @@ def test_episode_request_limit_includes_audit_and_unknown_transport_retry(tmp_pa
     assert c.request_status()['remaining']==0
 
 
+def test_authorized_total_increase_preserves_unknown_usage_and_checkpoints(tmp_path):
+    path=tmp_path/'budget.sqlite'
+    b=GlobalBudget(path)
+    b.configure_request_limits(2,2,'Original allowance')
+    b.reserve('policy',17,11)
+    before=b.db.execute('SELECT * FROM requests').fetchall()
+    b.configure_request_limits(4,2,'New bounded phase',user_authorization='User: total allowance is now 4')
+    assert b.request_status()==dict(used=1,total_limit=4,checkpoint_limit=2,remaining=1)
+    assert b.db.execute('SELECT * FROM requests').fetchall()==before
+    event=json.loads(b.db.execute('SELECT payload FROM request_limit_events ORDER BY seq DESC').fetchone()[0])
+    assert event['previous']==[2,2] and event['requests_already_used']==1
+    assert event['user_authorization']=='User: total allowance is now 4'
+    b.db.close()
+    b=GlobalBudget(path)
+    with pytest.raises(ValueError,match='expand'):b.configure_request_limits(5,5,'Implicit expansion')
+    with pytest.raises(ValueError,match='authorization'):b.configure_request_limits(5,5,'Empty',user_authorization=' ')
+    assert b.request_status()['total_limit']==4
+
+
 @pytest.mark.parametrize('mode',['baseline','esr'])
 def test_three_distinct_parse_errors_stop_inside_episode_without_fourth_call(mode):
     h=Harness('Synthetic task',MemoryRetriever([]),config=Config(

@@ -75,6 +75,7 @@ def systemic_failure(result, directory):
 
 
 def episode(root, budget, transport, settings, *, question, qid, arm, category, index=None, replicate=0):
+    started=time.monotonic()  # Receipt of the question, including input/index/budget preflight.
     from strong_api_freeze_guard import check_episode_input, check_final_freeze, checked_index_fingerprint
     check_episode_input(root,category,qid,question,arm)
     fingerprint=checked_index_fingerprint(root,index,required=category in {'development','confirmation'}) if index is not None else None
@@ -104,7 +105,7 @@ def episode(root, budget, transport, settings, *, question, qid, arm, category, 
                     max_tool_calls=settings.get('max_tool_calls_per_decision',1))
     ledger=Ledger(directory/"ledger.sqlite")
     usage=UsageBudget(settings["max_completion_tokens_per_episode_including_audit"])
-    started=time.monotonic()
+    preflight_seconds=time.monotonic()-started
     client=AnthropicClient(transport,usage,ledger,budget,config=rc,deadline=started+settings["max_wall_seconds_per_episode"])
     if category=="fixture":
         retriever=MemoryRetriever([{"docid":"fixture-1","title":"Orin Observatory opening record",
@@ -137,6 +138,8 @@ def episode(root, budget, transport, settings, *, question, qid, arm, category, 
         result=summary(harness,usage)
         result["execution_error"]=error["type"]
     result["elapsed_seconds"]=time.monotonic()-started
+    result["preflight_seconds"]=preflight_seconds
+    result["latency_scope"]="question_received_through_terminal_including_preflight"
     result["run_id"]=rid
     export(ledger,directory)
     write_json(directory/"summary.json",result)
