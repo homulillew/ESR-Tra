@@ -1,5 +1,11 @@
 # 强 API 研究恢复入口（更新至 2026-09-10）
 
+当前状态：生产补丁 `1658bd6` 已修复原生调用切换文本动作时的容量预演异常，以及 focus 修改失败后仍按旧 focus 执行后项的问题。完整离线回归通过 288 项；四份已有真实轨迹的配对和正文交付只读检查通过。本阶段新 API 调用为 0，全局仍为 1,089 次，当前检查点剩余 48 次。最新说明见 [NATIVE_TRANSITION_FIXES_20260910.md](NATIVE_TRANSITION_FIXES_20260910.md)，最新真实对照见 [NATIVE_TOOL_TURN_ACCEPTANCE_20260910.md](NATIVE_TOOL_TURN_ACCEPTANCE_20260910.md)。最终版本没有冻结，确认集 0/54，扩展批跑仍暂停。
+
+恢复时读取私有 `LATEST_STATUS.json` 和 `PAUSE_NEW_EPISODES.json`，先登记剩余预算内的新阶段。下面的旧批量命令是历史记录，不能直接据此重启整批任务。
+
+## 历史恢复记录
+
 最新多轮状态：Lanz-Medium 已完成固定首题三臂，共 28 次 policy 和 2 次独立 judge。B、E-off 判对；E-soft 的 6 次多工具响应被单动作契约拒绝，触发局内停止，尚未调用 auditor。28 次在线响应均为 HTTP 200，模型标识 DeepSeek-V4-Flash-0731。当前再次暂停扩批，确认集未打开；实际汇总见 [LANZ_MEDIUM_CHECKPOINT_20260910.md](LANZ_MEDIUM_CHECKPOINT_20260910.md) 和私有 `lanz_medium_checkpoint_20260910.json`。全历史请求现为 1,065，上限 1,403、当前检查点 1,137；下面联通阶段的 1,035 是保留的历史快照。
 
 最新模型切换：用户随后指定 `Lanz-Medium`，配置已切换。一次原生工具测试返回 HTTP 200，响应模型标识 `DeepSeek-V4-Flash-0731`，合法 finish(API_OK)，输入 915、输出 45 token，耗时 3.57 秒，记录在 `probe_20260910T021146025933Z/model_switch_check.json`。该返回标识不等于已固定权重版本；尚无 Lanz-Medium 的完整 BC+ rollout 或审核测试，不能推定多工具问题已解决。234 项回归通过，日志 `tests-20260910-04.txt`。
