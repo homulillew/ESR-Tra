@@ -17,10 +17,18 @@ def visible_texts(value):
     elif isinstance(value, list):
         values = value
     elif isinstance(value, str):
-        try:
-            return visible_texts(json.loads(value)) if value.lstrip().startswith(('{', '[')) else {}
-        except ValueError:
-            return {}
+        # The provider adapter may merge adjacent user messages into multiple
+        # JSON payloads separated by whitespace. Decode each without losing a
+        # legacy text result that precedes the current budget card.
+        values = []
+        remaining = value.lstrip()
+        while remaining.startswith(('{', '[')):
+            try:
+                parsed, end = json.JSONDecoder().raw_decode(remaining)
+            except ValueError:
+                break
+            values.append(parsed)
+            remaining = remaining[end:].lstrip()
     else:
         return {}
     for child in values:

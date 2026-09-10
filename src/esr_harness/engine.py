@@ -27,23 +27,24 @@ class Harness:
         self.search_cache, self.audit_cache, self.conflicts = {}, {}, {}
         self.finding_scopes, self.cursors = {}, {}
         self.actions, self.audit_history = [], []
+        self.action_sequences = {}  # Journal positions, including prospective actions in a preview.
         self.native_turns, self.native_active = {}, None
         self.pending, self.exposed = set(), set()
         self.last_audit = self.terminal = self.latest_result = None
         self.readonly = False
         self.admission = None  # Pure prospective-context predicate installed by the runner.
-        for event in self.ledger.events():
-            self._apply(event)
+        for sequence, event in enumerate(self.ledger.events()):
+            self._apply(event, sequence)
 
     @property
     def attempts(self):
         return len(self.actions)
 
     def _commit(self, event):
-        self.ledger.append(event)
-        self._apply(event)
+        sequence = self.ledger.append(event) - 1
+        self._apply(event, sequence)
 
-    def _apply(self, event):
+    def _apply(self, event, sequence):
         kind = event["type"]
         if kind == "native_turn":
             self.native_turns[event['decision_id']] = {**deepcopy(event), 'results': {}, 'started': [], 'complete': False, 'delivered': False}
@@ -73,6 +74,7 @@ class Harness:
         if kind != "tool":
             return
         self.actions.append(event)
+        self.action_sequences[event['action_id']] = sequence
         if 'native_call_index' in event:
             self.native_turns[event['decision_id']]['results'][str(event['native_call_index'])] = deepcopy(event['result'])
         self.latest_result = deepcopy(event["result"])
@@ -105,11 +107,14 @@ class Harness:
     def _preview(self, event):
         clone = copy(self)
         for key in ("state", "documents", "observations", "searches", "search_cache", "audit_cache", "conflicts",
-                    "finding_scopes", "cursors", "actions", "audit_history", "pending", "exposed", "native_turns"):
+                    "finding_scopes", "cursors", "actions", "action_sequences", "audit_history", "pending", "exposed", "native_turns"):
             setattr(clone, key, deepcopy(getattr(self, key)))
+        if event.get('type') == 'tool':
+            event = {'decision_id': None, **event}  # Internal open/focus probes have no decision yet.
         if self.native_active and event.get('type') == 'tool':
             event = {**event, 'decision_id': self.native_active[0], 'native_call_index': self.native_active[1]}
-        clone._apply(event)
+        sequence = max(len(self.ledger.events()), max(self.action_sequences.values(), default=-1) + 1)
+        clone._apply(event, sequence)
         return clone
 
     def record_exposure(self, ids, decision_id, delivery="response_received", native_turn_ids=()):

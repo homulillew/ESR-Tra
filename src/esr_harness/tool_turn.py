@@ -67,7 +67,7 @@ def native_messages(h, messages):
                                            {"role": "user", "content": result_blocks(t)}]))
         for action in h.actions:
             if action["decision_id"] not in paired:
-                sequence = next(i for i, e in enumerate(h.ledger.events()) if e.get("type") == "tool" and e["action_id"] == action["action_id"])
+                sequence = h.action_sequences[action['action_id']]
                 entries.append((sequence, [{"role": "assistant", "content": canonical({"action": action["action"], "arguments": action["arguments"]})},
                                            {"role": "user", "content": result_content(action["result"])}]))
         for _, group in sorted(entries, key=lambda item: item[0]):
@@ -86,6 +86,29 @@ def native_messages(h, messages):
 
 def error(code, message, *, execution="not_executed"):
     return {"ok": False, "error_code": code, "error": message, "execution": execution}
+
+
+def focus_requirements(h, calls):
+    """Capture intended scopes even when another argument invalidates the edit.
+
+    None denotes an independent call. An invalid focus remains unresolved until
+    a later explicit valid edit; implicit calls must not fall back to old state.
+    """
+    if h.config.mode != 'esr' or len(calls) == 1:
+        return [None for _ in calls]
+    scope = {'focus': deepcopy(h.state['focus'])}
+    requirements = []
+    for call in calls:
+        name, args = call['name'], call['input']
+        if name == 'search' and args.get('focus') is not None:
+            try:
+                validate(args['focus'], h.config.tool_schema('search')['properties']['focus'])
+                scope = {'focus': edit_focus(h.state, args['focus'])['focus']}
+            except HarnessError:
+                scope = {'invalid_focus': True}
+        uses_focus = name in READ_TOOLS and not (name == 'read_evidence' and 'directory_cursor' in args)
+        requirements.append(deepcopy(scope) if uses_focus else None)
+    return requirements
 
 
 def prepare(h, turn):
@@ -107,13 +130,13 @@ def prepare(h, turn):
         raise exc
     if len(calls) > h.config.max_tool_calls:
         problem = error("batch_limit", f"At most {h.config.max_tool_calls} calls per decision; resend a bounded group")
-        return calls, [(None, problem) for c in calls]
+        return calls, [(None, problem) for c in calls], [None for c in calls]
     if len(calls) > 1 and any(c.get("name") not in READ_TOOLS for c in calls):
         problem = error("serial_action_required", "A multi-call group permits only independent search/open_page/read_evidence. State updates, audit and ending require their own decision.")
-        return calls, [(None, problem) for c in calls]
+        return calls, [(None, problem) for c in calls], [None for c in calls]
     declared = {t["name"] for t in turn.declared_tools}
     plan = []
-    explicit = []
+    requirements = focus_requirements(h, calls)
     for call in calls:
         name, args = call.get("name"), deepcopy(call.get("input"))
         try:
@@ -126,7 +149,7 @@ def prepare(h, turn):
                 validate(args, h.config.tool_schema(name))
             if len(calls) > 1:
                 if name == "search" and args.get("focus") is not None:
-                    explicit.append(edit_focus(h.state, args["focus"])["focus"])
+                    edit_focus(h.state, args["focus"])
                 if name == "open_page":
                     parent = args.get("search_action_id") or next((sid for sid, s in reversed(list(h.searches.items())) if args["docid"] in {r["docid"] for r in s["hits"]}), None)
                     if parent not in h.searches or args["docid"] not in {r["docid"] for r in h.searches[parent]["hits"]}:
@@ -137,32 +160,23 @@ def prepare(h, turn):
             plan.append((args, None))
         except HarnessError as exc:
             plan.append((None, error(exc.code, str(exc))))
-    if explicit and any(f != explicit[0] for f in explicit):
-        problem = error("batch_focus_conflict", "Searches in one group must use the same focus; choose separate decisions for different focus edits")
-        return calls, [(None, problem) for c in calls]
     # A leading explicit focus can be inherited, matching sequential single calls;
     # a later focus change cannot silently reattribute an earlier read/search.
-    if explicit:
-        focus = h.state["focus"]
-        scopes = []
-        for c, (args, failure) in zip(calls, plan):
-            if failure:
-                continue
-            if c["name"] == "search" and args.get("focus") is not None:
-                focus = args["focus"]
-            scopes.append(focus)
-        if any(f != scopes[0] for f in scopes):
-            return calls, [(None, error("batch_focus_conflict", "Group changes focus after an earlier call; split the decisions")) for c in calls]
-    return calls, plan
+    scopes = [r['focus'] for r, (_, failure) in zip(requirements, plan)
+              if not failure and r is not None and 'focus' in r]
+    if scopes and any(f != scopes[0] for f in scopes):
+        problem = error('batch_focus_conflict', 'Research calls in one group must use the same focus; split different focus edits into separate decisions')
+        return calls, [(None, problem) for c in calls], requirements
+    return calls, plan, requirements
 
 
 def execute_turn(h, turn, decision_id):
     if decision_id in h.native_turns:
         raise ValueError('Decision already journaled; recover existing records instead of executing again')
-    calls, plan = prepare(h, turn)
+    calls, plan, requirements = prepare(h, turn)
     h._commit({"type": "native_turn", "decision_id": decision_id, "request_id": turn.request_id,
                "content": deepcopy(turn.content), "calls": calls, "version": TOOL_TURN_VERSION,
-               "sequence": len(h.ledger.events())})
+               "sequence": len(h.ledger.events()), "focus_requirements": requirements})
     # Admission reserves the complete group, including not-yet-produced results.
     blocked = None
     pending_add = set()
@@ -185,6 +199,11 @@ def execute_turn(h, turn, decision_id):
         blocked = error("context_capacity", "Entire group and result reservations do not fit; request fewer calls")
     for i, (call, (args, failure)) in enumerate(zip(calls, plan)):
         rejected = blocked or failure
+        required = requirements[i]
+        establishes_focus = call['name'] == 'search' and call['input'].get('focus') is not None
+        if not rejected and required is not None and not establishes_focus:
+            if 'focus' not in required or required['focus'] != h.state['focus']:
+                rejected = error('dependency_failed', 'Required focus was not committed by an earlier call; set focus in a separate decision before resending this call (search may also supply focus explicitly)')
         if rejected:
             h._commit({"type": "native_result", "decision_id": decision_id, "index": i, "result": deepcopy(rejected)})
             continue
