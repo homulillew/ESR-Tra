@@ -101,7 +101,7 @@ def run(harness, client):
             decision_id = f"d{len(harness.ledger.events()) + 1}"
             harness.ledger.append({"type": "decision", "decision_id": decision_id, "messages": messages,
                                    "compiler_version": TOOL_TURN_VERSION if harness.config.max_tool_calls > 1 else "workcard-2.1.5", "prompt_hash": digest(messages),
-                                   "policy_prompt_version": POLICY_PROMPT_VERSION + ('+native-turn-1' if harness.config.max_tool_calls > 1 else ''),
+                                   "policy_prompt_version": POLICY_PROMPT_VERSION + ('+'+TOOL_TURN_VERSION if harness.config.max_tool_calls > 1 else ''),
                                    "policy_system_hash": digest(messages[0]["content"]),
                                    "visible_observation_ids": ids,
                                    "state_version": harness.state["research_version"],

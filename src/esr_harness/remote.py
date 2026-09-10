@@ -175,8 +175,9 @@ class AnthropicClient:
                          "text_suffix": "one strict JSON object followed by one </tool_call>; no field correction",
                          "parallel_control": "requested; observed gateway may ignore; multiple calls strictly rejected"}
         if self.config.max_tool_calls > 1:
-            self.identity.update(parser='lossless_native_turn_v1', parallel_control='bounded independent retrieval groups; sequential execution',
-                                 tool_contract='native-retrieval-turn-1')
+            self.identity.update(parser='lossless_native_turn_v1',
+                                 parallel_control='native blocks preserved; scheduling is determined by the harness configuration',
+                                 tool_contract='native_response_blocks_v1')
 
     def body(self, messages, max_tokens):
         systems, turns, tools = [], [], []

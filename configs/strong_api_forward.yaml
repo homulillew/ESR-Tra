@@ -17,7 +17,7 @@ max_tool_calls_per_decision: 4
 ordered_tool_calls: true
 provider:
   base_url: http://lanz.hikvision.com/v3/anthropic/model
-  model: Lanz-Medium
+  model: EB-GLM-5.2
   credential_env: ANTHROPIC_AUTH_TOKEN
   temperature: 0.6
   max_output_tokens: 4096
