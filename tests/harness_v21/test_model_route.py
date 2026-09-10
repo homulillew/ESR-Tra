@@ -43,3 +43,36 @@ def test_judge_uses_rollout_model_and_prevents_silent_route_change(tmp_path):
                    '{question} {response} {correct_answer}',transport,budget)
     assert transport.requests[0]['model']=='fixture-alternate-model'
     assert grade['method']=='official_BC+_grader_with_fixture-alternate-model'
+
+
+def test_judge_request_cap_prevents_unregistered_format_retry(tmp_path):
+    from esr_harness.protocol import HarnessError
+    directory=tmp_path/'run';directory.mkdir()
+    (directory/'summary.json').write_text(json.dumps({'terminal':{'outcome':'submitted','answer':'synthetic'}}),encoding='utf-8')
+    (directory/'manifest.json').write_text(json.dumps({'category':'development','qid':'fixture',
+        'provider':{'config':{'model':'fixture'}}}),encoding='utf-8')
+    reply=response();reply['content'][0]['text']='malformed judge output'
+    transport=Transport([reply]);transport.model='fixture'
+    budget=strong_api.GlobalBudget(tmp_path/'budget.sqlite')
+    with pytest.raises(HarnessError) as exc:
+        evaluate(directory,{'fixture':{'query':'Synthetic question','answer':'synthetic'}},
+                 '{question} {response} {correct_answer}',transport,budget,max_requests=1)
+    assert exc.value.code=='request_budget_exhausted'
+    assert len(transport.requests)==budget.request_status()['used']==1
+    assert len(list(directory.glob('judge_*/provider_responses.jsonl')))==1
+    assert not (directory/'evaluation.json').exists()
+
+
+def test_native_audit_detects_missing_tool_result_in_provider_body(tmp_path):
+    from audit_native_tool_turns import audit
+    from esr_harness.ledger import Ledger
+    from .helpers import env
+    directory=tmp_path/'run';directory.mkdir()
+    h=env(ledger=Ledger(directory/'ledger.sqlite'))
+    h.ledger.append({'type':'decision','decision_id':'d1'})
+    h.ledger.append({'type':'generation_request','purpose':'policy','request_id':'fixture', 'request':{'messages':[
+        {'role':'assistant','content':[{'type':'tool_use','id':'missing','name':'search','input':{'query':'fixture'}}]},
+        {'role':'user','content':'No result was paired'}]}})
+    h.ledger.close()
+    result=audit(directory)
+    assert any(p['kind']=='unpaired_history' for p in result['problems'])

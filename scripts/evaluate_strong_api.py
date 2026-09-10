@@ -12,7 +12,7 @@ from strong_api import ROOT, GlobalBudget, LanzClient, Ledger, AnthropicClient, 
 import yaml
 
 
-def evaluate(directory, gold, template, transport, budget):
+def evaluate(directory, gold, template, transport, budget, *, max_requests=0):
     result=json.loads((directory/'summary.json').read_text(encoding='utf-8'))
     meta=json.loads((directory/'manifest.json').read_text(encoding='utf-8'))
     terminal=result.get('terminal') or {}
@@ -31,7 +31,7 @@ def evaluate(directory, gold, template, transport, budget):
         prompt=template.format(question=question,response=terminal['answer'],correct_answer=answer)
         judge_dir=directory/('judge_'+datetime.now(timezone.utc).strftime('%Y%m%dT%H%M%S%fZ'));judge_dir.mkdir()
         ledger=Ledger(judge_dir/'ledger.sqlite');ledger.initialize({'kind':'offline_judge','qid':meta['qid'],'protocol':'official_grader_template_pinned'})
-        c=AnthropicClient(transport,UsageBudget(2048),ledger,budget,config=RemoteConfig(model=transport.model,max_output_tokens=1024,temperature=0.0))
+        c=AnthropicClient(transport,UsageBudget(2048),ledger,budget,config=RemoteConfig(model=transport.model,max_output_tokens=1024,temperature=0.0,max_requests=max_requests))
         messages=[{'role':'user','content':prompt}]; grade=None
         try:
             for attempt in range(2):
@@ -51,6 +51,7 @@ def evaluate(directory, gold, template, transport, budget):
 
 if __name__=='__main__':
     p=argparse.ArgumentParser();p.add_argument('--run-dirs',nargs='+',required=True);p.add_argument('--root',default=str(ROOT/'runs/strong_api_esr/CURRENT'))
+    p.add_argument('--max-requests-per-answer',type=int,default=0,help='Bound all judge requests including repairs and transport retries; 0 keeps the existing default')
     a=p.parse_args();root=Path(a.root)
     if root.is_file(): root=Path(root.read_text().strip())
     config=yaml.safe_load((ROOT/'configs/strong_api_forward.yaml').read_text(encoding='utf-8'))
@@ -78,6 +79,6 @@ if __name__=='__main__':
             row=json.loads(line)
             if str(row['query_id']) in ids: gold[str(row['query_id'])]={'query':row['query'],'answer':row['answer']}
     for d in selected:
-        r=evaluate(d,gold,template,transport,budget)
+        r=evaluate(d,gold,template,transport,budget,max_requests=a.max_requests_per_answer)
         print(json.dumps({'run_id':d.name,'correct':r.get('correct'),'submitted':r.get('submitted'),'parse_error':r.get('parse_error',False)}),flush=True)
     print(json.dumps(budget.summary()),flush=True)

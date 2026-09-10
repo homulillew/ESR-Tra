@@ -60,6 +60,15 @@ def metrics(directory):
          'zero_search':action_counts['search']==0,'zero_open':action_counts['open_page']==0,
          'audit_supported':terminal.get('evidence_status')=='supported','errors':dict(errors),'action_counts':dict(action_counts)}
     row['backend_instrumented']=summary['manifest']['retriever'].get('type')=='sqlite_fts5_bm25'
+    if 'native_tools' in summary:
+        native=summary['native_tools']
+        row.update(tool_contract=native['contract'], native_policy_decisions=native['model_decisions'],
+                   native_policy_calls=native['proposed_calls'], native_call_receipts=native['receipts'],
+                   native_not_executed=native['not_executed'], native_unknown_outcomes=native['unknown_outcomes'],
+                   error_decisions=native['error_decisions'], invalid_actions=summary['invalid_actions'],
+                   invalid_executed_actions=summary['invalid_executed_actions'])
+    row['max_remote_requests']=manifest['settings'].get('max_remote_requests_per_episode')
+    row['max_tool_calls_per_decision']=manifest['settings'].get('max_tool_calls_per_decision',1)
     if not row['backend_instrumented']:
         for key in ['backend_requests','backend_searches','backend_documents','backend_seconds','unattributed_wall_seconds']:
             row[key]=None

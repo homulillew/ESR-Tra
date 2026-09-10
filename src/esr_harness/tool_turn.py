@@ -95,6 +95,16 @@ def prepare(h, turn):
         exc = HarnessError("protocol_error", "Native tool IDs must be nonempty, unique strings; no call executed")
         exc.proposal = {"native_tool_calls": calls}
         raise exc
+    if (any(not isinstance(c.get('name'), str) or not c['name'] or not isinstance(c.get('input'), dict) for c in calls)
+            or any(b.get('type') not in {'text', 'thinking', 'redacted_thinking', 'tool_use'} for b in turn.content)
+            or any(b.get('type') == 'text' and not isinstance(b.get('text'), str) for b in turn.content)):
+        # A malformed native envelope cannot safely be replayed as an assistant
+        # message. Preserve all calls and explicit statuses in the error proposal;
+        # the next request uses a plain diagnostic, never an invented tool block.
+        exc = HarnessError('protocol_error', 'Malformed native block/name/input; no call executed and invalid blocks will not be replayed')
+        exc.proposal = {'native_tool_calls': calls, 'call_results': [
+            {'tool_use_id': c['id'], **error('malformed_native_envelope', 'Not executed: response cannot form a valid native message')} for c in calls]}
+        raise exc
     if len(calls) > h.config.max_tool_calls:
         problem = error("batch_limit", f"At most {h.config.max_tool_calls} calls per decision; resend a bounded group")
         return calls, [(None, problem) for c in calls]

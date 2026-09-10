@@ -94,6 +94,17 @@ def test_invalid_call_ids_keep_proposal_and_execute_nothing(ids):
     assert len(exc.value.proposal['native_tool_calls']) == 2 and not h.actions
 
 
+@pytest.mark.parametrize('field,value', [('name', []), ('input', None), ('input', [])])
+def test_malformed_native_envelope_cannot_poison_next_provider_request(field,value):
+    h = native_env()
+    t = turn(h, ('search', {'query':'Lake'}), ('search', {'query':'Other'}))
+    t.content[1][field] = value
+    with pytest.raises(HarnessError) as exc:
+        execute_turn(h, t, 'd1')
+    assert len(exc.value.proposal['call_results']) == 2
+    assert not h.native_turns and not h.actions
+
+
 def test_search_parent_resolved_at_group_entry():
     h = native_env()
     first = h.execute('search', {'query':'Lake'})['action_id']
