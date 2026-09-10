@@ -469,7 +469,7 @@ class Harness:
         return {"terminal": terminal}, {"terminal": terminal}
 
     def _finish(self, aid, answer):
-        terminal = {"outcome": "submitted", "answer": answer.strip(), "final_draft": answer.strip(), "evidence_status": "unverified"}
+        terminal = {"outcome": "submitted", "answer": answer, "final_draft": answer, "evidence_status": "unverified"}
         return {"terminal": terminal}, {"terminal": terminal}
 
     def end(self, reason):

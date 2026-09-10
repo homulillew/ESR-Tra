@@ -48,7 +48,8 @@ def apply_delta(state, patch, *, next_claim, exposed_ids, observations):
         if result["target"] != state["target"] and not reason:
             raise HarnessError("protocol_error", "Changing target requires revision_reason")
     if "answer" in patch:
-        result["answer"] = patch["answer"].strip() if patch["answer"] is not None else None
+        # Literal answer characters belong to the policy; validation rejects blanks.
+        result["answer"] = patch["answer"]
     touched = set()
     for change in patch.get("claim_updates", []):
         if ("finding" in change) != ("observation_ids" in change):
