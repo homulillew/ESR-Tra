@@ -7,7 +7,7 @@
 密钥使用 `ANTHROPIC_AUTH_TOKEN` 环境变量或研究脚本的无回显输入，勿写入代码、命令行或日志。
 
 `scripts/strong_api.py` 复用 `LanzClient.request()` 和 `esr_harness`，保存实际 provider body、完整响应、请求 ID、usage 和 stop_reason。
-当前网关支持原生 tool_use，但实测可能忽略禁用并行工具的参数；客户端会拒绝多个动作并保留提案，不能选第一个假装成功。
+当前网关支持原生 tool_use，但实测可能忽略禁用并行工具的参数。研究配置通过 `max_tool_calls_per_decision: 4` 启用有界检索组合：逐项执行并返回匹配结果，状态更新、审核和结束分别决策。旧单调用配置仍会拒绝多调用并保留提案；两种配置都不静默选取第一项。原生工具路径使用 `request()`，`raw_text()` 仅提取文本，不能用来取得工具调用。
 实测还出现 `end_turn` 文本为一个完整 JSON 对象后附单个 `</tool_call>` 的情况。当前适配器先严格验证前面的完整 JSON，再移除这一已声明的尾标记，并记录 response_normalization；不修改语义字段。多余括号、重复键、多对象和散文前缀均不能借此通过。
 计数端点在本次探针中未返回可用 token 计数。上下文估计是明确标记的保守容量估计，不冒充本地 Qwen tokenizer。
 

@@ -7,6 +7,7 @@ from .ledger import Ledger
 from .protocol import Config, HarnessError, SCHEMA_VERSION, canonical, digest, obj, parse_object, string, validate
 
 from .prompts import POLICY_PROMPT_VERSION, policy_system
+from .tool_turn import NativeTurn, execute_turn, native_messages, recover_incomplete, undelivered, TOOL_TURN_VERSION
 
 
 def messages_for(harness, client):
@@ -42,16 +43,22 @@ def messages_for(harness, client):
                         {"role": "user", "content": canonical(current)}]
         if hasattr(client, "context_status"):
             current_payload = parse_object(messages[-1]["content"])
-            current_payload["context_budget"] = client.context_status(messages)
+            mapped = native_messages(harness, messages) if harness.config.max_tool_calls > 1 else messages
+            current_payload["context_budget"] = client.context_status(mapped)
             if hasattr(client,'request_status') and client.request_status()['limit'] is not None:
                 current_payload['remote_request_budget']=client.request_status()
             messages[-1]["content"] = canonical(current_payload)
+        if harness.config.max_tool_calls > 1:
+            messages = native_messages(harness, messages)
         if client.fits(messages):
             return messages
     raise HarnessError("context_overflow", "Required state, pending and latest result do not fit; none were dropped")
 
 
 def run(harness, client):
+    if harness.config.max_tool_calls > 1 and getattr(getattr(client, 'config', None), 'max_tool_calls', harness.config.max_tool_calls) != harness.config.max_tool_calls:
+        raise ValueError('Policy adapter and harness tool-call limits differ')
+    recover_incomplete(harness)
     def admissible(preview):
         try:
             messages = messages_for(preview, client)
@@ -62,18 +69,27 @@ def run(harness, client):
             raise
     harness.admission = admissible
     while harness.terminal is None and harness.attempts < harness.config.max_actions:
-        errors=[a for a in harness.actions if not a['result']['ok']]
+        grouped_ids = set(harness.native_turns)
+        legacy = [a for a in harness.actions if a['decision_id'] not in grouped_ids]
+        # Grouped decisions use one error-stop unit; per-call failures remain in summary.
+        # Native and text fallback order comes from journal events, never list concatenation.
+        order = {e['decision_id']: i for i, e in enumerate(harness.ledger.events()) if e['type'] in {'decision', 'native_turn'}}
+        entries = [(order.get(a['decision_id'], i), [a['result']]) for i, a in enumerate(legacy)]
+        entries += [(order.get(t['decision_id'], t['sequence']), list(t['results'].values())) for t in harness.native_turns.values()]
+        groups = [g for _, g in sorted(entries, key=lambda item: item[0])]
+        errors = [g for g in groups if any(not r['ok'] for r in g)]
         consecutive=harness.config.max_consecutive_errors
         stop_reason=None
         if harness.config.max_execution_errors and len(errors) >= harness.config.max_execution_errors:
             stop_reason='total_execution_errors'
-        elif consecutive and len(harness.actions) >= consecutive and all(not a['result']['ok'] for a in harness.actions[-consecutive:]):
+        elif consecutive and len(groups) >= consecutive and all(any(not r['ok'] for r in g) for g in groups[-consecutive:]):
             stop_reason='consecutive_execution_errors'
-        elif harness.config.max_execution_errors and sum(a['result'].get('error_code')=='audit_protocol_error' for a in errors)>=2:
+        elif harness.config.max_execution_errors and sum(r.get('error_code')=='audit_protocol_error' for g in groups for r in g)>=2:
             stop_reason='repeated_audit_protocol_failure'
         if stop_reason:
             harness.ledger.append({'type':'execution_stop','reason':stop_reason,
-                                   'error_action_ids':[a['action_id'] for a in errors]})
+                                   'error_action_ids':[a['action_id'] for a in harness.actions if not a['result']['ok']],
+                                   'error_decisions':len(errors)})
             harness.end('execution_error_limit')
             break
         decision_id = None
@@ -81,10 +97,11 @@ def run(harness, client):
         try:
             messages = messages_for(harness, client)
             ids = visible_ids(harness)
+            turn_ids = [t['decision_id'] for t in undelivered(harness)]
             decision_id = f"d{len(harness.ledger.events()) + 1}"
             harness.ledger.append({"type": "decision", "decision_id": decision_id, "messages": messages,
-                                   "compiler_version": "workcard-2.1.5", "prompt_hash": digest(messages),
-                                   "policy_prompt_version": POLICY_PROMPT_VERSION,
+                                   "compiler_version": TOOL_TURN_VERSION if harness.config.max_tool_calls > 1 else "workcard-2.1.5", "prompt_hash": digest(messages),
+                                   "policy_prompt_version": POLICY_PROMPT_VERSION + ('+native-turn-1' if harness.config.max_tool_calls > 1 else ''),
                                    "policy_system_hash": digest(messages[0]["content"]),
                                    "visible_observation_ids": ids,
                                    "state_version": harness.state["research_version"],
@@ -95,9 +112,16 @@ def run(harness, client):
             except HarnessError:
                 events = harness.ledger.events()[before:]
                 received = any(e.get("type") == "generation" and "response" in e for e in events)
-                harness.record_exposure(ids, decision_id, "response_received" if received else "unknown")
+                harness.record_exposure(ids, decision_id, "response_received" if received else "unknown", native_turn_ids=turn_ids)
                 raise
-            harness.record_exposure(ids, decision_id)
+            harness.record_exposure(ids, decision_id, native_turn_ids=turn_ids)
+            if isinstance(text, NativeTurn):
+                execute_turn(harness, text, decision_id)
+                results = harness.native_turns[decision_id]['results'].values()
+                fatal = next((r['error_code'] for r in results if not r['ok'] and r.get('error_code') in {'service_error', 'request_budget_exhausted', 'generation_budget_exhausted', 'budget_exhausted'}), None)
+                if fatal and harness.terminal is None:
+                    harness.end(fatal)
+                continue
             # Preserve generated text even for injected clients that do not log API responses.
             harness.ledger.append({"type": "policy_output", "decision_id": decision_id, "text": text})
             action = parse_object(text)
@@ -133,6 +157,17 @@ def summary(harness, budget=None):
               "evidence_repairs": sum(len(a["result"].get("evidence_repair_ids", [])) for a in harness.actions),
               "candidate_revisions": sum(bool(a["delta"].get("changes", {}).get("candidate_revision")) for a in harness.actions),
               "manifest": harness.ledger.header}
+    if harness.config.max_tool_calls > 1:
+        turns = list(harness.native_turns.values())
+        receipts = [r for t in turns for r in t['results'].values()]
+        result['native_tools'] = {'contract': TOOL_TURN_VERSION, 'model_decisions':len(turns),
+                                  'proposed_calls':sum(len(t['calls']) for t in turns), 'receipts':len(receipts),
+                                  'not_executed':sum(r.get('execution')=='not_executed' for r in receipts),
+                                  'unknown_outcomes':sum(r.get('execution')=='unknown' for r in receipts),
+                                  'failed_calls':sum(not r['ok'] for r in receipts),
+                                  'error_decisions':sum(any(not r['ok'] for r in t['results'].values()) for t in turns)}
+        result['invalid_executed_actions'] = result['invalid_actions']
+        result['invalid_actions'] = sum(not a['result']['ok'] for a in harness.actions if a['decision_id'] not in harness.native_turns) + sum(not r['ok'] for r in receipts)
     if budget:
         result["usage"] = budget.summary()
     return result

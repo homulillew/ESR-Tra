@@ -27,6 +27,7 @@ class Harness:
         self.search_cache, self.audit_cache, self.conflicts = {}, {}, {}
         self.finding_scopes, self.cursors = {}, {}
         self.actions, self.audit_history = [], []
+        self.native_turns, self.native_active = {}, None
         self.pending, self.exposed = set(), set()
         self.last_audit = self.terminal = self.latest_result = None
         self.readonly = False
@@ -44,9 +45,25 @@ class Harness:
 
     def _apply(self, event):
         kind = event["type"]
+        if kind == "native_turn":
+            self.native_turns[event['decision_id']] = {**deepcopy(event), 'results': {}, 'started': [], 'complete': False, 'delivered': False}
+            return
+        if kind in {'native_result', 'native_call_started', 'native_turn_complete'}:
+            turn = self.native_turns[event['decision_id']]
+            if kind == 'native_result':
+                turn['results'][str(event['index'])] = deepcopy(event['result'])
+            elif kind == 'native_call_started':
+                turn['started'].append(event['index'])
+            else:
+                if set(turn['results']) != {str(i) for i in range(len(turn['calls']))}:
+                    raise ValueError('Cannot complete a native turn with missing results')
+                turn['complete'] = True
+            return
         if kind == "exposure":
             if event["delivery"] == "response_received":
                 self.exposed.update(event["observation_ids"])
+                for tid in event.get('native_turn_ids', []):
+                    self.native_turns[tid]['delivered'] = True
                 if self.config.mode == "baseline":
                     self.pending.difference_update(event["observation_ids"])
             return
@@ -56,6 +73,8 @@ class Harness:
         if kind != "tool":
             return
         self.actions.append(event)
+        if 'native_call_index' in event:
+            self.native_turns[event['decision_id']]['results'][str(event['native_call_index'])] = deepcopy(event['result'])
         self.latest_result = deepcopy(event["result"])
         delta = event["delta"]
         for key, store, id_key in (("document", self.documents, "docid"),
@@ -86,19 +105,24 @@ class Harness:
     def _preview(self, event):
         clone = copy(self)
         for key in ("state", "documents", "observations", "searches", "search_cache", "audit_cache", "conflicts",
-                    "finding_scopes", "cursors", "actions", "audit_history", "pending", "exposed"):
+                    "finding_scopes", "cursors", "actions", "audit_history", "pending", "exposed", "native_turns"):
             setattr(clone, key, deepcopy(getattr(self, key)))
+        if self.native_active and event.get('type') == 'tool':
+            event = {**event, 'decision_id': self.native_active[0], 'native_call_index': self.native_active[1]}
         clone._apply(event)
         return clone
 
-    def record_exposure(self, ids, decision_id, delivery="response_received"):
+    def record_exposure(self, ids, decision_id, delivery="response_received", native_turn_ids=()):
         ids = sorted(set(ids))
         if not set(ids) <= set(self.observations) or delivery not in {"response_received", "unknown"}:
             raise ValueError("Invalid exposure receipt")
         if self.readonly:
             raise RuntimeError("Replay is read-only")
+        if any(t not in self.native_turns or not self.native_turns[t]['complete'] for t in native_turn_ids):
+            raise ValueError('Cannot deliver an incomplete tool group')
         self._commit({"type": "exposure", "decision_id": decision_id, "observation_ids": ids,
-                      "view_hashes": {o: self.observations[o]["view_hash"] for o in ids}, "delivery": delivery})
+                      "view_hashes": {o: self.observations[o]["view_hash"] for o in ids}, "delivery": delivery,
+                      **({'native_turn_ids': list(native_turn_ids)} if native_turn_ids else {})})
 
     def _purpose(self, state=None):
         return purpose(state or self.state) if self.config.mode == "esr" else None
@@ -180,9 +204,13 @@ class Harness:
         event = {"type": "tool", "action_id": aid, "decision_id": decision_id, "action": name,
                  "arguments": arguments, "result": result, "delta": delta,
                  "elapsed_seconds": time.monotonic() - start}
+        if self.native_active:
+            event['native_call_index'] = self.native_active[1]
+            event['native_call_id'] = self.native_turns[self.native_active[0]]['calls'][self.native_active[1]]['id']
         # Search results, updates and observations must leave an executable next prompt.
         if result["ok"] and name in {"search", "update_state", "open_page", "read_evidence"} and self.admission:
             if not self.admission(self._preview(event)):
+                event['unadmitted_output'] = deepcopy(event['result'])
                 event["delta"] = {}
                 event["result"] = {"ok": False, "action_id": aid, "error_code": "context_capacity",
                                    "error": ("Search results do not fit; no hits were admitted. Use fewer results (smaller top_k), existing material, or finish when ready. The backend request was still counted."
@@ -351,6 +379,10 @@ class Harness:
             result["verify_answer"] = {"ready": not self.pending, "cached": self.current_audit is not None,
                                        "use": "Current audit already delivered; change semantic evidence before requesting a new judgment."
                                        if self.current_audit else "Audit a bound candidate or a sourced partial finding; an empty state provides no evidence to audit."}
+            if self.config.max_tool_calls > 1:
+                offered = not self.pending and self.current_audit is None and (self.state['answer'] is not None or any(c['observation_ids'] for c in self.state['claims']))
+                result['verify_answer']['ready'] = bool(offered)
+                result['verify_answer']['blocked_reason'] = None if offered else 'Pending evidence, empty state, or current audit already available'
         return result
 
     def _verify(self, aid):

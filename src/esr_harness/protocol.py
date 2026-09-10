@@ -113,8 +113,11 @@ class Config:
     cache_search: bool = True
     max_execution_errors: int = 0
     max_consecutive_errors: int = 0
+    max_tool_calls: int = 1  # Opt-in native retrieval groups; legacy ledgers stay single-call.
 
     def __post_init__(self):
+        if type(self.max_tool_calls) is not int or not 1 <= self.max_tool_calls <= 4:
+            raise ValueError('max_tool_calls must be between 1 and 4')
         for key in ('max_execution_errors','max_consecutive_errors'):
             if type(getattr(self,key)) is not int or getattr(self,key) < 0:
                 raise ValueError(f'{key} must be a nonnegative integer')
@@ -129,7 +132,10 @@ class Config:
             raise ValueError("Retrieval/directory limits exceeded")
 
     def to_dict(self):
-        return asdict(self)
+        result = asdict(self)
+        if self.max_tool_calls == 1:
+            result.pop('max_tool_calls')  # Preserve existing immutable headers on replay.
+        return result
 
     def tool_schema(self, name):
         """The same mode-specific parameters are rendered and validated at runtime."""

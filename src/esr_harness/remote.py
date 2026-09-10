@@ -146,8 +146,13 @@ class RemoteConfig:
     recovery_headroom: int = 2048
     policy_tool_interface: str = 'native'
     max_requests: int = 0
+    max_tool_calls: int = 1
 
     def __post_init__(self):
+        if type(self.max_tool_calls) is not int or not 1 <= self.max_tool_calls <= 4:
+            raise ValueError('Invalid native tool-call limit')
+        if self.max_tool_calls > 1 and self.policy_tool_interface != 'native':
+            raise ValueError('Multi-call decisions require the native interface')
         if type(self.max_requests) is not int or self.max_requests < 0:
             raise ValueError('Invalid remote request limit')
         if self.policy_tool_interface not in {'native', 'dispatcher', 'text'}:
@@ -165,6 +170,9 @@ class AnthropicClient:
                          "url": transport.base_url + "/v1/messages", "parser": "one_native_call_or_final_text_json_v4",
                          "text_suffix": "one strict JSON object followed by one </tool_call>; no field correction",
                          "parallel_control": "requested; observed gateway may ignore; multiple calls strictly rejected"}
+        if self.config.max_tool_calls > 1:
+            self.identity.update(parser='lossless_native_turn_v1', parallel_control='bounded independent retrieval groups; sequential execution',
+                                 tool_contract='native-retrieval-turn-1')
 
     def body(self, messages, max_tokens):
         systems, turns, tools = [], [], []
@@ -192,7 +200,12 @@ class AnthropicClient:
             elif message["role"] in {"user", "assistant"}:
                 # Merge adjacent roles explicitly. Exact mapped body is recorded before network I/O.
                 if turns and turns[-1]["role"] == message["role"]:
-                    turns[-1]["content"] += "\n\n" + message["content"]
+                    if isinstance(turns[-1]['content'], list) or isinstance(message['content'], list):
+                        def blocks(value):
+                            return value if isinstance(value, list) else [{'type': 'text', 'text': value}]
+                        turns[-1]['content'] = blocks(turns[-1]['content']) + blocks(message['content'])
+                    else:
+                        turns[-1]["content"] += "\n\n" + message["content"]
                 else:
                     turns.append(dict(message))
             else:
@@ -204,6 +217,8 @@ class AnthropicClient:
             result["tools"] = tools
             result["tool_choice"] = ({"type": "tool", "name": tools[0]['name'], "disable_parallel_tool_use": True}
                                      if tools[0]["name"] in {'audit_report','take_action'} else {"type": "any", "disable_parallel_tool_use": True})
+            if self.config.max_tool_calls > 1 and tools[0]['name'] not in {'audit_report', 'take_action'}:
+                result['tool_choice'] = {'type': 'any'}
         return result
 
     @staticmethod
@@ -307,8 +322,13 @@ class AnthropicClient:
             if response.get("stop_reason") == "max_tokens":
                 raise HarnessError("output_truncated", "Provider stop_reason=max_tokens; no partial action executed")
             blocks = response.get("content", [])
+            if not isinstance(blocks, list) or any(not isinstance(b, dict) for b in blocks):
+                raise HarnessError('protocol_error', 'Malformed content blocks; raw response retained')
             if response.get("stop_reason") == "tool_use" and body.get("tools"):
                 calls = [b for b in blocks if b.get("type") == "tool_use"]
+                if purpose == 'policy' and self.config.max_tool_calls > 1:
+                    from .tool_turn import NativeTurn
+                    return NativeTurn(rid, blocks, body['tools'])
                 declared = sorted(t['name'] for t in body['tools'])
                 problem = None
                 if len(calls) != 1:

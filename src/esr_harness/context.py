@@ -6,6 +6,9 @@ from .prompts import PENDING_GUIDANCE, STAGNATION_GUIDANCE
 
 def visible_ids(harness):
     ids = set(harness.pending)
+    for turn in harness.native_turns.values():
+        if not turn['delivered']:
+            ids.update(r['observation']['observation_id'] for r in turn['results'].values() if r.get('observation'))
     latest = harness.latest_result or {}
     if latest.get("observation"):
         ids.add(latest["observation"]["observation_id"])

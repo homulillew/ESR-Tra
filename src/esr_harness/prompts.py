@@ -77,8 +77,20 @@ STAGNATION_GUIDANCE = (
 
 def policy_system(config: Config) -> str:
     """Select instructions for capabilities actually enabled in this run."""
+    common = COMMON_SYSTEM
+    if config.max_tool_calls > 1:
+        controls = 'Ending requires a separate response. '
+        if config.mode == 'esr':
+            controls += 'State updates require a separate response. Searches in one group use the same focus. '
+            if config.audit_mode != 'off':
+                controls += 'Audit requires a separate response. '
+        common = common.replace('Use exactly one supplied native tool when that interface is present. Otherwise return one',
+            f'Use one native tool, or at most {config.max_tool_calls} independent search/open_page/read_evidence calls in one response.\n'
+            'Each call must use IDs already known before this response.\n' + controls + 'Every call receives its own result.\n'
+            'Search result snippets may be shortened with an explicit marker; open documents to read evidence.\n'
+            'Otherwise return one')
     if config.mode == "baseline":
-        return COMMON_SYSTEM + "\n\n" + BASELINE_SYSTEM
+        return common + "\n\n" + BASELINE_SYSTEM
     if config.mode != "esr" or config.audit_mode not in END_SYSTEM:
         raise ValueError("Unsupported prompt profile")
-    return COMMON_SYSTEM + "\n\n" + ESR_SYSTEM + "\n\n" + END_SYSTEM[config.audit_mode]
+    return common + "\n\n" + ESR_SYSTEM + "\n\n" + END_SYSTEM[config.audit_mode]
