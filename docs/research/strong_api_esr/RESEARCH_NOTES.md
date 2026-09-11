@@ -1,5 +1,7 @@
 # 研究核对记录
 
+2026-09-11 核对了 Diagnosis Before Recovery、Closed-Loop Validation-Repair、CAFE 和 Reviewer Capability Governs Rejection Targeting 的原文。实施并实测了一次字段反馈消融：同前缀只改变最后修复消息，六次请求，局部有效但未通过完整门槛。论文适用边界、逐字段结果和保留决定见 [FIELD_FEEDBACK_RESEARCH_20260911.md](FIELD_FEEDBACK_RESEARCH_20260911.md)。未将论文、参考答案或开发标签交给在线模型。
+
 2026-09-10 最新两轮 task coverage 研究、SearchAuditor/HALT/ECHO 等一手文献的机制边界及实际失败结论见 [TASK_COVERAGE_RESEARCH_20260910.md](TASK_COVERAGE_RESEARCH_20260910.md)。没有新增状态图或训练接入；两轮共 42 次请求，审核逻辑未通过验收并已从运行代码移除。
 
 2026-09-10 的补充检索、逐例断点和采用/拒绝机制见 [ORDERED_TOOLS_RESEARCH_20260910.md](ORDERED_TOOLS_RESEARCH_20260910.md)。核查了 2026 年 2–8 月的多工具执行、搜索失败诊断和停止审核一手论文；文献、旧答案及本研究任务文档未进入被测模型。实施后的 GLM 接口结果及剩余格式问题见 [GLM_REPAIR_VALIDATION_20260910.md](GLM_REPAIR_VALIDATION_20260910.md)。
