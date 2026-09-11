@@ -1,0 +1,251 @@
+{
+  "status": "synthetic syntax examples; NOT executed tool calls or BC+ solutions",
+  "synthetic_documents": [
+    {
+      "docid": "d1",
+      "content": "Mira won the Lake Cup in 2010."
+    },
+    {
+      "docid": "d2",
+      "content": "The Lake Cup 2008 champion was Taylor."
+    }
+  ],
+  "view_assignment_for_explanation_only": {
+    "o1": "d1 full content",
+    "o2": "d2 full content"
+  },
+  "initial_state": {
+    "target": "Mira夺冠的赛事在其夺冠前两年的冠军是谁？",
+    "answer": null,
+    "claims": [
+      {
+        "claim_id": "c0",
+        "requirement": "Mira夺冠的赛事在其夺冠前两年的冠军是谁？",
+        "finding": "",
+        "observation_ids": []
+      }
+    ],
+    "focus": {
+      "claim_id": "c0",
+      "need": "Mira夺冠的赛事在其夺冠前两年的冠军是谁？"
+    }
+  },
+  "final_state": {
+    "target": "返回Mira夺冠前两年同一赛事的冠军姓名",
+    "answer": "Taylor",
+    "claims": [
+      {
+        "claim_id": "c0",
+        "requirement": "确定Mira夺冠的赛事E和年份Y",
+        "finding": "原文记载Mira在2010年赢得Lake Cup。",
+        "observation_ids": [
+          "o1"
+        ]
+      },
+      {
+        "claim_id": "c1",
+        "requirement": "答案是同一赛事E在Y-2年的冠军",
+        "finding": "Y=2010；另一原文记载Lake Cup的2008年冠军是Taylor。",
+        "observation_ids": [
+          "o1",
+          "o2"
+        ]
+      }
+    ],
+    "focus": null
+  },
+  "valid_actions": [
+    {
+      "action": "search",
+      "arguments": {
+        "query": "Mira championship winner year",
+        "focus": {
+          "claim_id": "c0",
+          "need": "Mira夺冠的赛事和年份是什么？"
+        },
+        "anchor_refs": [
+          "question"
+        ]
+      }
+    },
+    {
+      "action": "open_page",
+      "arguments": {
+        "docid": "d1"
+      }
+    },
+    {
+      "action": "update_state",
+      "arguments": {
+        "target": "返回Mira夺冠前两年同一赛事的冠军姓名",
+        "claim_updates": [
+          {
+            "claim_id": "c0",
+            "requirement": "确定Mira夺冠的赛事E和年份Y",
+            "finding": "原文记载Mira在2010年赢得Lake Cup。",
+            "observation_ids": [
+              "o1"
+            ]
+          },
+          {
+            "requirement": "答案是同一赛事E在Y-2年的冠军"
+          }
+        ],
+        "attempt_note": "当前材料确定赛事与年份；还没有找到两年前的冠军。",
+        "revision_reason": "将原题分解为赛事年份定位和目标年份冠军两条关系。"
+      }
+    },
+    {
+      "action": "search",
+      "arguments": {
+        "query": "Lake Cup 2008 champion",
+        "focus": {
+          "claim_id": "c1",
+          "need": "Lake Cup在2008年的冠军是谁？"
+        },
+        "anchor_refs": [
+          "question",
+          "o1"
+        ]
+      }
+    },
+    {
+      "action": "open_page",
+      "arguments": {
+        "docid": "d2",
+        "search_action_id": "a4"
+      }
+    },
+    {
+      "action": "update_state",
+      "arguments": {
+        "answer": "Taylor",
+        "claim_updates": [
+          {
+            "claim_id": "c1",
+            "requirement": "答案是同一赛事E在Y-2年的冠军",
+            "finding": "Y=2010；另一原文记载Lake Cup的2008年冠军是Taylor。",
+            "observation_ids": [
+              "o1",
+              "o2"
+            ]
+          }
+        ],
+        "focus": null,
+        "attempt_note": "已读材料建立了同一赛事2008年冠军与Taylor的关系；准备完整审核。"
+      }
+    },
+    {
+      "action": "verify_answer",
+      "arguments": {}
+    },
+    {
+      "action": "submit_answer",
+      "arguments": {}
+    },
+    {
+      "action": "submit_answer",
+      "arguments": {
+        "decision": "abstain",
+        "reason": "关键关系仍缺证据。"
+      }
+    },
+    {
+      "action": "read_evidence",
+      "arguments": {
+        "observation_id": "o1"
+      }
+    },
+    {
+      "action": "read_evidence",
+      "arguments": {
+        "directory_cursor": "start"
+      }
+    },
+    {
+      "action": "open_page",
+      "arguments": {
+        "docid": "d1",
+        "offset": 8000
+      }
+    },
+    {
+      "action": "update_state",
+      "arguments": {
+        "answer": null
+      }
+    }
+  ],
+  "invalid_actions": [
+    {
+      "action": "update_state",
+      "arguments": {
+        "supported": true
+      }
+    },
+    {
+      "action": "update_state",
+      "arguments": {
+        "claim_updates": [
+          {
+            "claim_id": "c1",
+            "finding": "无源结论"
+          }
+        ]
+      }
+    },
+    {
+      "action": "update_state",
+      "arguments": {
+        "claim_updates": [
+          {
+            "finding": "新事实",
+            "observation_ids": [
+              "o1"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "action": "update_state",
+      "arguments": {
+        "claim_updates": [
+          {
+            "claim_id": "c1",
+            "finding": "无源事实",
+            "observation_ids": []
+          }
+        ]
+      }
+    },
+    {
+      "action": "open_page",
+      "arguments": {
+        "docid": "d1",
+        "query": "x",
+        "offset": 0
+      }
+    },
+    {
+      "action": "read_evidence",
+      "arguments": {
+        "observation_id": "o1",
+        "directory_cursor": "start"
+      }
+    },
+    {
+      "action": "submit_answer",
+      "arguments": {
+        "answer": "bypass"
+      }
+    },
+    {
+      "action": "search",
+      "arguments": {
+        "query": "x",
+        "top_k": true
+      }
+    }
+  ]
+}

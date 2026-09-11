@@ -1,0 +1,102 @@
+### esr/soft / qid 854
+total events: 98, decisions: 25
+
+[dec d1] policy: {"action":"search","arguments":{"query":"February 2017 article animal injured car accident weight","focus":{"claim_id":"c0","need":"Find the February 2017 article about an animal injured in a car acci
+  [search] ok=True err=None elapsed=0.635536739602685
+    query: February 2017 article animal injured car accident weight
+
+[dec d5] policy: {"action":"search","arguments":{"query":"February 2017 article animal injured car accident weight","focus":{"claim_id":"c0","need":"Find the February 2017 article about an animal injured in a car acci
+  [search] ok=False err=unexposed_reference elapsed=0.002329742070287466
+    query: February 2017 article animal injured car accident weight
+
+[dec d9] policy: {"action":"search","arguments":{"query":"February 2017 animal injured car accident road builder orphan widowed weight","focus":{"claim_id":"c0","need":"Find the February 2017 article about an animal i
+  [search] ok=True err=None elapsed=0.8983264951966703
+    query: February 2017 animal injured car accident road builder orphan widowed weight
+
+[dec d13] policy: {"action":"search","arguments":{"query":"February 2017 article bear injured car accident road built toll road builder orphan widowed","focus":{"claim_id":"c0","need":"Find the February 2017 article ab
+  [search] ok=True err=None elapsed=1.01106221601367
+    query: February 2017 article bear injured car accident road built toll road builder orphan widowed
+
+[dec d17] policy: {"action":"search","arguments":{"query":"Horace King bridge builder orphan widowed married 1818","focus":{"claim_id":"c0","need":"Identify the road builder who was orphaned and widowed in the late 185
+  [search] ok=True err=None elapsed=0.4863642090931535
+    query: Horace King bridge builder orphan widowed married 1818
+
+[dec d21] policy: {"action":"open_page","arguments":{"docid":"21545"}}
+  [open_page] ok=True err=None elapsed=0.017761151306331158
+    open: 21545
+
+[dec d25] policy: {"action":"update_state","arguments":{"claim_updates":[{"claim_id":"c0","finding":"Horace King (1807-1885) was a bridge builder who married Frances Gould Thomas in 1839 (174 years before 2013, not 199
+  [update_state] ok=True err=None elapsed=0.0012168241664767265
+    claim[c0] oids=['o1'] finding=Horace King (1807-1885) was a bridge builder who married Frances Gould Thomas in 1839 (174
+
+  [invalid_model_response] ok=False err=protocol_error elapsed=4.811212420463562e-05
+
+[dec d32] policy: {"action":"search","arguments":{"query":"February 2017 bear injured car accident road built toll bridge builder orphan widowed 1818","focus":{"claim_id":"c0","need":"Find a road/bridge builder who mar
+  [search] ok=True err=None elapsed=0.9640651470981538
+    query: February 2017 bear injured car accident road built toll bridge builder orphan widowed 1818
+
+[dec d36] policy: {"action":"search","arguments":{"query":"built road married 1818 orphan widowed late 1850s 29 39 roads family","focus":{"claim_id":"c0","need":"Identify the road builder who married in 1818, was orpha
+  [search] ok=True err=None elapsed=0.9650963991880417
+    query: built road married 1818 orphan widowed late 1850s 29 39 roads family
+
+[dec d40] policy: {"action":"search","arguments":{"query":"February 2017 bear hit by car injured article weight pounds road built 1818","focus":{"claim_id":"c0","need":"Find the February 2017 news article about an anim
+  [search] ok=True err=None elapsed=1.0601053424179554
+    query: February 2017 bear hit by car injured article weight pounds road built 1818
+
+[dec d44] policy: {"action":"search","arguments":{"query":"road builder married 1818 orphan widowed 1850s built 39 roads family","focus":{"claim_id":"c0","need":"Identify the road builder who married in 1818, was orpha
+  [search] ok=True err=None elapsed=0.7240125890821218
+    query: road builder married 1818 orphan widowed 1850s built 39 roads family
+
+[dec d48] policy: {"action":"open_page","arguments":{"docid":"71391"}}
+  [open_page] ok=True err=None elapsed=0.01728841196745634
+    open: 71391
+
+[dec d52] policy: {"action":"update_state","arguments":{"claim_updates":[{"claim_id":"c0","finding":"Andrew Geddes Bain (1797-1864) married Elizabeth Maria von Backstrom in November 1818 (199 years before February 2017
+  [update_state] ok=True err=None elapsed=0.0011701341718435287
+    claim[c0] oids=['o2'] finding=Andrew Geddes Bain (1797-1864) married Elizabeth Maria von Backstrom in November 1818 (199
+
+  [invalid_model_response] ok=False err=protocol_error elapsed=6.990181282162666e-05
+
+[dec d59] policy: {"action":"search","arguments":{"query":"February 2017 bear car accident weight recorded after accident road built Bain","focus":{"claim_id":"c0","need":"Find the February 2017 news article about an a
+  [search] ok=True err=None elapsed=0.8593674721196294
+    query: February 2017 bear car accident weight recorded after accident road built Bain
+
+[dec d63] policy: {"action":"search","arguments":{"query":"Andrew Geddes Bain road animal accident February 2017","focus":{"claim_id":"c0","need":"Find the February 2017 news article about an animal injured in a car ac
+  [search] ok=True err=None elapsed=0.5297636208124459
+    query: Andrew Geddes Bain road animal accident February 2017
+
+[dec d67] policy: {"action":"search","arguments":{"query":"Andrew Geddes Bain road animal accident February 2017 news weight","focus":{"claim_id":"c0","need":"Find the February 2017 news article about an animal injured
+  [search] ok=True err=None elapsed=0.7174440082162619
+    query: Andrew Geddes Bain road animal accident February 2017 news weight
+
+[dec d71] policy: {"action":"search","arguments":{"query":"Bainskloof Pass animal car accident 2017 rhino","focus":{"claim_id":"c0","need":"Find the February 2017 news article about an animal injured in a car accident 
+  [search] ok=True err=None elapsed=0.4641489842906594
+    query: Bainskloof Pass animal car accident 2017 rhino
+
+[dec d75] policy: {"action":"open_page","arguments":{"docid":"41381","search_action_id":"a19"}}
+  [open_page] ok=True err=None elapsed=0.021529862191528082
+    open: 41381
+
+[dec d79] policy: {"action":"update_state","arguments":{"answer":"37 kg","claim_updates":[{"claim_id":"c0","finding":"Andrew Geddes Bain (1797-1864) married Elizabeth Maria von Backstrom in November 1818 (199 years bef
+  [update_state] ok=True err=None elapsed=0.001255027949810028
+    claim[c0] oids=['o2', 'o3'] finding=Andrew Geddes Bain (1797-1864) married Elizabeth Maria von Backstrom in November 1818 (199
+
+[dec d83] policy: {"action":"verify_answer","arguments":{}}
+  [verify_answer] ok=True err=None elapsed=6.717001250013709
+    AUDIT status=supported target_status=supported
+      claim[c0]: status=supported need=
+
+[dec d87] policy: {"action":"verify_answer","arguments":{}}
+  [verify_answer] ok=True err=None elapsed=0.0007683560252189636
+    AUDIT status=supported target_status=supported
+      claim[c0]: status=supported need=
+
+[dec d91] policy: {"action":"verify_answer","arguments":{}}
+  [verify_answer] ok=True err=None elapsed=0.0008525419980287552
+    AUDIT status=supported target_status=supported
+      claim[c0]: status=supported need=
+
+[dec d95] policy: {"action":"submit_answer","arguments":{"decision":"answer","reason":"The February 2017 Cape Leopard Trust article describes leopard BM30 hit by a car on Bainskloof Pass, a road built by Andrew Geddes 
+  [submit_answer] ok=True err=None elapsed=0.0009656399488449097
+    decision=answer answer=None reason=The February 2017 Cape Leopard Trust article descr
+

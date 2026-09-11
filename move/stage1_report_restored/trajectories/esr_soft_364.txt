@@ -1,0 +1,70 @@
+### esr/soft / qid 364
+total events: 92, decisions: 18
+
+[dec None] (no tool)
+
+  [invalid_model_response] ok=False err=protocol_error
+
+  [invalid_model_response] ok=False err=protocol_error
+
+  [invalid_model_response] ok=False err=protocol_error
+
+  [invalid_model_response] ok=False err=protocol_error
+
+  [invalid_model_response] ok=False err=protocol_error
+
+  [invalid_model_response] ok=False err=protocol_error
+
+[dec d31] policy: <think>
+Okay, let's try to figure out this question step by step. The user is asking about a K-pop audition program on Mnet between 2010 and 2017. The group that debuted 
+  [search] ok=True err=None
+    query: Mnet K-pop audition program 2010-2017 group three members same country Japan debut
+
+[dec d37] policy: <think>
+Okay, let's try to figure out this K-pop question. The user is asking about a specific scenario involving a K-pop audition program on Mnet between 2010 and 2017. 
+  [open_page] ok=True err=None
+    open: 31124
+
+[dec d43] policy: <think>
+Okay, let's try to figure this out. The user is asking about a K-pop audition program on Mnet between 2010 and 2017. The key points are that the group debuted wit
+  [submit_answer] ok=False err=pending_observations
+    decision=answer answer=None
+
+[dec d49] policy: <think>
+Okay, let's try to figure out this question. The user is asking about a K-pop audition program on Mnet between 2010 and 2017. The key points are:
+
+1. The program 
+  [verify_answer] ok=False err=pending_observations
+    AUDIT status=None target=None
+
+[dec d55] policy: <think>
+Okay, let's try to figure out this question step by step. The user is asking about a K-pop audition program on Mnet between 2010 and 2017 that led to a group debu
+  [submit_answer] ok=False err=pending_observations
+    decision=answer answer=None
+
+[dec d61] policy: <think>
+Okay, let's try to figure out this K-pop question. The user is asking about a specific scenario involving an Mnet audition program between 2010 and 2017. The key 
+  [verify_answer] ok=False err=pending_observations
+    AUDIT status=None target=None
+
+[dec d67] policy: <think>
+Okay, let's try to figure out this K-pop question. The user is asking about a specific scenario involving an Mnet audition program between 2010 and 2017. The key 
+  [submit_answer] ok=False err=pending_observations
+    decision=answer answer=None
+
+[dec d73] policy: <think>
+Okay, let's tackle this question step by step. The user is asking about a K-pop audition program on Mnet between 2010 and 2017 that led to a group debuting with t
+  [verify_answer] ok=False err=pending_observations
+    AUDIT status=None target=None
+
+[dec d79] policy: <think>
+Okay, let's try to figure out this question step by step. The user is asking about a K-pop audition program on Mnet between 2010 and 2017. The key points are:
+
+1.
+  [verify_answer] ok=False err=pending_observations
+    AUDIT status=None target=None
+
+  [invalid_model_response] ok=False err=protocol_error
+
+[dec d90] (no tool)
+

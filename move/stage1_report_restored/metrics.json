@@ -1,0 +1,380 @@
+{
+  "stage": "stage1_32b_policy_and_verifier",
+  "code_revision": "refactor-esr-state-2.1-stage1-32b",
+  "schema_version": 3,
+  "policy_model": "Qwen3-32B (:8002)",
+  "verifier_model": "same Qwen3-32B",
+  "policy_verifier_same_model": true,
+  "arms": [
+    "baseline/off",
+    "esr/off",
+    "esr/hard",
+    "esr/soft"
+  ],
+  "per_arm": {
+    "baseline/off": {
+      "episodes": 8,
+      "submitted": 8,
+      "abstained": 0,
+      "budget_exhausted": 0,
+      "correct": 3,
+      "total_invalid": 6,
+      "total_attempts": 22,
+      "rows": [
+        {
+          "qid": "324",
+          "outcome": "submitted",
+          "invalid_actions": 1,
+          "attempts": 3,
+          "evidence_status": "unverified",
+          "final_draft": "Jennifer Harman won the event two years before X (Vanessa Hellebuyck) did in 2010, securing victory in the 2008 WSOP Ladies Championship.",
+          "correct": false,
+          "src": "stage1/baseline/off/324.summary.json"
+        },
+        {
+          "qid": "120",
+          "outcome": "submitted",
+          "invalid_actions": 0,
+          "attempts": 3,
+          "evidence_status": "unverified",
+          "final_draft": "3. Why would any graduate want to start a business in Nigeria?",
+          "correct": true,
+          "src": "stage1/baseline/off/120.summary.json"
+        },
+        {
+          "qid": "594",
+          "outcome": "submitted",
+          "invalid_actions": 0,
+          "attempts": 1,
+          "evidence_status": "unverified",
+          "final_draft": "The schedule included a link to a 'gentle' introduction to XML.",
+          "correct": true,
+          "src": "stage1/baseline/off/594.summary.json"
+        },
+        {
+          "qid": "234",
+          "outcome": "submitted",
+          "invalid_actions": 0,
+          "attempts": 1,
+          "evidence_status": "unverified",
+          "final_draft": "Cane River",
+          "correct": false,
+          "src": "stage1/baseline/off/234.summary.json"
+        },
+        {
+          "qid": "364",
+          "outcome": "submitted",
+          "invalid_actions": 0,
+          "attempts": 1,
+          "evidence_status": "unverified",
+          "final_draft": "Justin Bieber",
+          "correct": false,
+          "src": "stage1/baseline/off/364.summary.json"
+        },
+        {
+          "qid": "854",
+          "outcome": "submitted",
+          "invalid_actions": 0,
+          "attempts": 2,
+          "evidence_status": "unverified",
+          "final_draft": "The information about the weight of the animal involved in the accident as described cannot be determined from the provided sources. The available data does not include specific records of the animal's weight in the incident mentioned.",
+          "correct": false,
+          "src": "stage1/baseline/off/854.summary.json"
+        },
+        {
+          "qid": "1000",
+          "outcome": "submitted",
+          "invalid_actions": 5,
+          "attempts": 9,
+          "evidence_status": "unverified",
+          "final_draft": "Matthew Arnum Barnor",
+          "correct": true,
+          "src": "stage1/baseline/off/1000.summary.json"
+        },
+        {
+          "qid": "170",
+          "outcome": "submitted",
+          "invalid_actions": 0,
+          "attempts": 2,
+          "evidence_status": "unverified",
+          "final_draft": "The TV series is Atlanta, and the season is 2. The episode in question is 'Woods,' where a character's injury mirrors an actor's real-life experience. The actor, who had the injury in the 1950s, suggested the plot to writer Stefani Robinson and received a producer's credit. Robinson's hospital background and the actor's advocacy work align with the details provided.",
+          "correct": false,
+          "src": "stage1/baseline/off/170.summary.json"
+        }
+      ]
+    },
+    "esr/off": {
+      "episodes": 8,
+      "submitted": 1,
+      "abstained": 4,
+      "budget_exhausted": 3,
+      "correct": 1,
+      "total_invalid": 76,
+      "total_attempts": 100,
+      "rows": [
+        {
+          "qid": "324",
+          "outcome": "generation_budget_exhausted",
+          "invalid_actions": 31,
+          "attempts": 33,
+          "evidence_status": "unverified",
+          "final_draft": null,
+          "correct": false,
+          "src": "stage1/esr/off/324.summary.json"
+        },
+        {
+          "qid": "120",
+          "outcome": "submitted",
+          "invalid_actions": 11,
+          "attempts": 16,
+          "evidence_status": "unverified",
+          "final_draft": "Why would any graduate want to start a business in Nigeria?",
+          "correct": true,
+          "src": "stage1/esr/off/120.summary.json"
+        },
+        {
+          "qid": "594",
+          "outcome": "generation_budget_exhausted",
+          "invalid_actions": 16,
+          "attempts": 19,
+          "evidence_status": "unverified",
+          "final_draft": null,
+          "correct": false,
+          "src": "stage1/esr/off/594.summary.json"
+        },
+        {
+          "qid": "234",
+          "outcome": "abstained",
+          "invalid_actions": 4,
+          "attempts": 7,
+          "evidence_status": "unverified",
+          "final_draft": null,
+          "correct": false,
+          "src": "stage1/esr/off/234.summary.json"
+        },
+        {
+          "qid": "364",
+          "outcome": "generation_budget_exhausted",
+          "invalid_actions": 13,
+          "attempts": 15,
+          "evidence_status": "unverified",
+          "final_draft": null,
+          "correct": false,
+          "src": "stage1/esr/off/364.summary.json"
+        },
+        {
+          "qid": "854",
+          "outcome": "abstained",
+          "invalid_actions": 0,
+          "attempts": 3,
+          "evidence_status": "unverified",
+          "final_draft": null,
+          "correct": false,
+          "src": "stage1/esr/off/854.summary.json"
+        },
+        {
+          "qid": "1000",
+          "outcome": "abstained",
+          "invalid_actions": 1,
+          "attempts": 3,
+          "evidence_status": "unverified",
+          "final_draft": null,
+          "correct": false,
+          "src": "stage1/esr/off/1000.summary.json"
+        },
+        {
+          "qid": "170",
+          "outcome": "abstained",
+          "invalid_actions": 0,
+          "attempts": 4,
+          "evidence_status": "unverified",
+          "final_draft": null,
+          "correct": false,
+          "src": "stage1/esr/off/170.summary.json"
+        }
+      ]
+    },
+    "esr/hard": {
+      "episodes": 8,
+      "submitted": 1,
+      "abstained": 4,
+      "budget_exhausted": 3,
+      "correct": 1,
+      "total_invalid": 113,
+      "total_attempts": 140,
+      "rows": [
+        {
+          "qid": "324",
+          "outcome": "generation_budget_exhausted",
+          "invalid_actions": 30,
+          "attempts": 32,
+          "evidence_status": "unverified",
+          "final_draft": null,
+          "correct": false,
+          "src": "stage1/esr/hard/324.summary.json"
+        },
+        {
+          "qid": "120",
+          "outcome": "submitted",
+          "invalid_actions": 8,
+          "attempts": 14,
+          "evidence_status": "supported",
+          "final_draft": "The third research question is: 'Why would any graduate want to start a business in Nigeria?'",
+          "correct": true,
+          "src": "stage1/esr/hard/120.summary.json"
+        },
+        {
+          "qid": "594",
+          "outcome": "generation_budget_exhausted",
+          "invalid_actions": 45,
+          "attempts": 48,
+          "evidence_status": "unknown",
+          "final_draft": null,
+          "correct": false,
+          "src": "stage1/esr/hard/594.summary.json"
+        },
+        {
+          "qid": "234",
+          "outcome": "abstained",
+          "invalid_actions": 5,
+          "attempts": 8,
+          "evidence_status": "unverified",
+          "final_draft": null,
+          "correct": false,
+          "src": "stage1/esr/hard/234.summary.json"
+        },
+        {
+          "qid": "364",
+          "outcome": "abstained",
+          "invalid_actions": 1,
+          "attempts": 4,
+          "evidence_status": "unverified",
+          "final_draft": null,
+          "correct": false,
+          "src": "stage1/esr/hard/364.summary.json"
+        },
+        {
+          "qid": "854",
+          "outcome": "abstained",
+          "invalid_actions": 0,
+          "attempts": 3,
+          "evidence_status": "unverified",
+          "final_draft": null,
+          "correct": false,
+          "src": "stage1/esr/hard/854.summary.json"
+        },
+        {
+          "qid": "1000",
+          "outcome": "generation_budget_exhausted",
+          "invalid_actions": 24,
+          "attempts": 26,
+          "evidence_status": "unverified",
+          "final_draft": null,
+          "correct": false,
+          "src": "stage1/esr/hard/1000.summary.json"
+        },
+        {
+          "qid": "170",
+          "outcome": "abstained",
+          "invalid_actions": 0,
+          "attempts": 5,
+          "evidence_status": "unverified",
+          "final_draft": null,
+          "correct": false,
+          "src": "stage1/esr/hard/170.summary.json"
+        }
+      ]
+    },
+    "esr/soft": {
+      "episodes": 8,
+      "submitted": 1,
+      "abstained": 3,
+      "budget_exhausted": 4,
+      "correct": 0,
+      "total_invalid": 112,
+      "total_attempts": 147,
+      "rows": [
+        {
+          "qid": "324",
+          "outcome": "generation_budget_exhausted",
+          "invalid_actions": 27,
+          "attempts": 29,
+          "evidence_status": "unverified",
+          "final_draft": null,
+          "correct": false,
+          "src": "stage1/esr/soft/324.summary.json"
+        },
+        {
+          "qid": "120",
+          "outcome": "abstained",
+          "invalid_actions": 1,
+          "attempts": 14,
+          "evidence_status": "unverified",
+          "final_draft": "The third research question investigates how leadership positions in exclusive institutions, such as HBCUs with established Africa-focused programs, shape the development and effectiveness of entrepreneurship education initiatives in West Africa, particularly within post-2020 international graduate school research frameworks.",
+          "correct": false,
+          "src": "stage1/esr/soft/120.summary.json"
+        },
+        {
+          "qid": "594",
+          "outcome": "generation_budget_exhausted",
+          "invalid_actions": 39,
+          "attempts": 43,
+          "evidence_status": "unknown",
+          "final_draft": null,
+          "correct": false,
+          "src": "stage1/esr/soft/594.summary.json"
+        },
+        {
+          "qid": "234",
+          "outcome": "submitted",
+          "invalid_actions": 5,
+          "attempts": 11,
+          "evidence_status": "supported",
+          "final_draft": "Nancy's Brook",
+          "correct": false,
+          "src": "stage1/esr/soft/234.summary.json"
+        },
+        {
+          "qid": "364",
+          "outcome": "generation_budget_exhausted",
+          "invalid_actions": 14,
+          "attempts": 16,
+          "evidence_status": "unverified",
+          "final_draft": null,
+          "correct": false,
+          "src": "stage1/esr/soft/364.summary.json"
+        },
+        {
+          "qid": "854",
+          "outcome": "abstained",
+          "invalid_actions": 0,
+          "attempts": 3,
+          "evidence_status": "unverified",
+          "final_draft": null,
+          "correct": false,
+          "src": "stage1/esr/soft/854.summary.json"
+        },
+        {
+          "qid": "1000",
+          "outcome": "generation_budget_exhausted",
+          "invalid_actions": 26,
+          "attempts": 28,
+          "evidence_status": "unverified",
+          "final_draft": null,
+          "correct": false,
+          "src": "stage1/esr/soft/1000.summary.json"
+        },
+        {
+          "qid": "170",
+          "outcome": "abstained",
+          "invalid_actions": 0,
+          "attempts": 3,
+          "evidence_status": "unverified",
+          "final_draft": null,
+          "correct": false,
+          "src": "stage1/esr/soft/170.summary.json"
+        }
+      ]
+    }
+  }
+}

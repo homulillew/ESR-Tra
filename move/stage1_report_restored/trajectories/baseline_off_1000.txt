@@ -1,0 +1,35 @@
+### baseline/off / qid 1000
+total events: 49, decisions: 10
+
+[dec None] (no tool)
+
+[dec d1] policy: <think>
+Okay, let's try to figure out the answer to this question step by step using the tools provided. The question is about a Ghanaian doctor who sailed on the Belgian
+  [search] ok=True err=None
+    query: Ghanaian doctor WWII ship Copacabana
+
+  [invalid_model_response] ok=False err=protocol_error
+
+  [invalid_model_response] ok=False err=protocol_error
+
+  [invalid_model_response] ok=False err=protocol_error
+
+  [invalid_model_response] ok=False err=protocol_error
+
+[dec d27] policy: <think>
+Okay, let's try to figure out the answer to this question step by step using the tools provided. The question is about a Ghanaian doctor who sailed on the Belgian
+  [search] ok=True err=None
+    query: Ghanaian doctor Belgian ship Copacabana WWII
+
+  [invalid_model_response] ok=False err=protocol_error
+
+[dec d38] policy: <think>
+Okay, let's try to figure out the answer to this question step by step using the tools provided. The question is about a Ghanaian doctor who sailed on the Belgian
+  [search] ok=True err=None
+    query: Belgian ship Copacabana Second World War
+
+[dec d44] policy: <think>
+Okay, let's try to figure out the answer to this question step by step using the provided tools and the information in the latest tool results. The question is ab
+  [finish] ok=True err=None
+    finish
+

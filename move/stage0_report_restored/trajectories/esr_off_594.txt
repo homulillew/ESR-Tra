@@ -1,0 +1,23 @@
+### esr/off / qid 594
+total events: 22, decisions: 6
+
+  [invalid_model_response] ok=False err=protocol_error elapsed=6.245076656341553e-05
+
+[dec d4] policy: {"action":"search","arguments":{"query":"workshop schedule Islandora Digital Commons early 2000s university sponsored repository research council gentle introduction","focus":{"claim_id":"c0","need":"
+  [search] ok=True err=None elapsed=0.9344790349714458
+    query: workshop schedule Islandora Digital Commons early 2000s university sponsored repository research council gentle introduction
+
+  [invalid_model_response] ok=False err=protocol_error elapsed=6.101280450820923e-05
+
+[dec d11] policy: {"action":"open_page","arguments":{"docid":"9628","search_action_id":"a2"}}
+  [open_page] ok=True err=None elapsed=0.012156951241195202
+    open: 9628
+
+[dec d15] policy: {"action":"update_state","arguments":{"claim_updates":[{"claim_id":"c0","finding":"The workshop schedule (titled 'Editing Modernism in Canada') lists 'Intro to Markup' at 10:45-noon, and includes a li
+  [update_state] ok=True err=None elapsed=0.000983957201242447
+    claim[c0] oids=['o1'] finding=The workshop schedule (titled 'Editing Modernism in Canada') lists 'Intro to Markup' at 10
+
+[dec d19] policy: {"action":"submit_answer","arguments":{"decision":"answer","reason":"The observed workshop schedule explicitly lists a link labeled 'Gentle Introduction to XML' under the 'Intro to Markup' session."}}
+  [submit_answer] ok=True err=None elapsed=0.0007533365860581398
+    decision=answer answer=None reason=The observed workshop schedule explicitly lists a 
+

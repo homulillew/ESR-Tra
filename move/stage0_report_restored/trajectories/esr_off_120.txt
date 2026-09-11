@@ -1,0 +1,45 @@
+### esr/off / qid 120
+total events: 43, decisions: 11
+
+[dec d1] policy: {"action":"search","arguments":{"query":"West African entrepreneurship \"sense of purpose\" research questions graduate school supervisor","focus":{"claim_id":"c0","need":"Find a post-2020 graduate st
+  [search] ok=True err=None elapsed=0.8108416409231722
+    query: West African entrepreneurship "sense of purpose" research questions graduate school supervisor
+
+[dec d5] policy: {"action":"open_page","arguments":{"docid":"37015","search_action_id":"a1"}}
+  [open_page] ok=True err=None elapsed=0.06987305590882897
+    open: 37015
+
+[dec d9] policy: {"action":"update_state","arguments":{"focus":{"claim_id":"c0","need":"Identify the student and document; verify the supervisor heads an exclusivity-focused institution; locate the third focused resea
+  [update_state] ok=False err=protocol_error elapsed=0.000740658026188612
+    claim[c0] oids=['o1'] finding=The viewed document (docid 37015) is a Nigeria-focused graduate research study on entrepre
+
+[dec d13] policy: {"action":"search","arguments":{"query":"West African entrepreneurship \"sense of purpose\" \"make other people's lives better\" research questions","focus":{"claim_id":"c0","need":"Find a post-2020 g
+  [search] ok=True err=None elapsed=0.955276245251298
+    query: West African entrepreneurship "sense of purpose" "make other people's lives better" research questions
+
+[dec d17] policy: {"action":"open_page","arguments":{"docid":"56828","query":"West African entrepreneurship \"sense of purpose\" \"make other people's lives better\" research questions"}}
+  [open_page] ok=True err=None elapsed=0.2023364850319922
+    open: 56828
+
+  [invalid_model_response] ok=False err=protocol_error elapsed=6.667710840702057e-05
+
+[dec d24] policy: {"action":"search","arguments":{"query":"West African entrepreneurship \"sense of purpose\" \"make other people's lives better\" \"focused research questions\"","focus":{"claim_id":"c0","need":"Find t
+  [search] ok=True err=None elapsed=1.1960946121253073
+    query: West African entrepreneurship "sense of purpose" "make other people's lives better" "focused research questions"
+
+[dec d28] policy: {"action":"open_page","arguments":{"docid":"37015","query":"Assessing the Entrepreneurial Orientation of Young Graduates in Nigeria Africapitalism sense of purpose make other people's lives better"}}
+  [open_page] ok=True err=None elapsed=0.07405253266915679
+    open: 37015
+
+[dec d32] policy: {"action":"update_state","arguments":{"claim_updates":[{"claim_id":"c0","finding":"The dissertation 'Assessing the Entrepreneurial Orientation of Young Graduates in Nigeria: A Pathway to Understanding
+  [update_state] ok=True err=None elapsed=0.0010800352320075035
+    claim[c0] oids=['o1', 'o3'] finding=The dissertation 'Assessing the Entrepreneurial Orientation of Young Graduates in Nigeria:
+
+[dec d36] policy: {"action":"search","arguments":{"query":"\"sense of purpose\" \"make other people's lives better\" entrepreneurship Nigeria thesis 2021 2022 2023","focus":{"claim_id":"c0","need":"Find a post-2020 the
+  [search] ok=True err=None elapsed=1.0585505752824247
+    query: "sense of purpose" "make other people's lives better" entrepreneurship Nigeria thesis 2021 2022 2023
+
+[dec d40] policy: {"action":"submit_answer","arguments":{"decision":"abstain","reason":"The candidate document (Selinus University dissertation by Ifeanyi Godwin Akaleme) matches several criteria (post-2020, internatio
+  [submit_answer] ok=True err=None elapsed=0.00038866978138685226
+    decision=abstain answer=None reason=The candidate document (Selinus University dissert
+

@@ -1,0 +1,235 @@
+### esr/hard / qid 234
+total events: 239, decisions: 65
+
+[dec d1] policy: {"action":"search","arguments":{"query":"volunteer group non-profit located dated lost bridge village named river walking stick","top_k":20,"focus":{"claim_id":"c0","need":"Identify the village whose 
+  [search] ok=True err=None elapsed=0.9582788269035518
+    query: volunteer group non-profit located dated lost bridge village named river walking stick
+
+[dec d5] policy: {"action":"search","arguments":{"query":"village named after river and walking stick volunteer group found lost ancient bridge","focus":{"claim_id":"c0","need":"Identify the village whose name derives
+  [search] ok=True err=None elapsed=0.9679789519868791
+    query: village named after river and walking stick volunteer group found lost ancient bridge
+
+[dec d9] policy: {"action":"search","arguments":{"query":"village name derives from river walking stick by-name volunteer group found lost bridge","top_k":50,"focus":{"claim_id":"c0","need":"Identify the village whose
+  [search] ok=True err=None elapsed=1.1474447026848793
+    query: village name derives from river walking stick by-name volunteer group found lost bridge
+
+[dec d13] policy: {"action":"search","arguments":{"query":"village named river walking stick society found lost medieval bridge byname","focus":{"claim_id":"c0","need":"Find the village whose name derives from a river 
+  [search] ok=True err=None elapsed=0.7377390353940427
+    query: village named river walking stick society found lost medieval bridge byname
+
+[dec d17] policy: {"action":"open_page","arguments":{"docid":"20653","search_action_id":"a4"}}
+  [open_page] ok=True err=None elapsed=0.015105969738215208
+    open: 20653
+
+[dec d21] policy: {"action":"search","arguments":{"query":"Ancrum by-name nickname village","focus":{"claim_id":"c0","need":"Find the by-name (nickname) of the village Ancrum, Scotland, where the Ancrum and District He
+  [search] ok=True err=None elapsed=0.42335138423368335
+    query: Ancrum by-name nickname village
+
+[dec d25] policy: {
+  "action": "open_page",
+  "arguments": {
+    "docid": "5120"
+  }
+}
+  [open_page] ok=True err=None elapsed=0.01406436087563634
+    open: 5120
+
+[dec d29] policy: {"action":"verify_answer","arguments":{}}
+  [verify_answer] ok=False err=pending_observations elapsed=0.000482180155813694
+    AUDIT status=None target_status=None
+
+[dec d33] policy: {"action":"update_state","arguments":{"claim_updates":[{"claim_id":"c0","finding":"Ancrum & District Heritage Society (ADHS), a not-for-profit community organisation formed in 2016, located and radioc
+  [update_state] ok=True err=None elapsed=0.0013449611142277718
+    claim[c0] oids=['o1', 'o2'] finding=Ancrum & District Heritage Society (ADHS), a not-for-profit community organisation formed 
+
+  [invalid_model_response] ok=False err=protocol_error elapsed=7.344596087932587e-05
+
+[dec d40] policy: {"action":"search","arguments":{"query":"Ancrum village nickname byname","focus":{"claim_id":"c0","need":"Find the by-name (nickname) of Ancrum village"}},"top_k":10}
+  [invalid_model_response] ok=False err=protocol_error elapsed=6.151897832751274e-05
+
+[dec d44] policy: {"action":"search","arguments":{"query":"Ancrum village nickname by-name Scotland","top_k":10,"focus":{"claim_id":"c0","need":"Find the by-name (nickname) of Ancrum village, e.g. from UK place-nicknam
+  [search] ok=True err=None elapsed=0.46059543918818235
+    query: Ancrum village nickname by-name Scotland
+
+[dec d48] policy: {"action":"open_page","arguments":{"docid":"67220","search_action_id":"a12"}}
+  [open_page] ok=True err=None elapsed=0.029543306678533554
+    open: 67220
+
+[dec d52] policy: {"action":"search","arguments":{"query":"Ancrum village nickname \"by-name\" Scotland","top_k":10,"focus":{"claim_id":"c0","need":"Find the by-name (nickname) of Ancrum village, e.g. from UK place-nic
+  [search] ok=True err=None elapsed=0.45074099441990256
+    query: Ancrum village nickname "by-name" Scotland
+
+[dec d56] policy: {"action":"open_page","arguments":{"docid":"5120","search_action_id":"a12"}}
+  [open_page] ok=True err=None elapsed=0.013186742085963488
+    open: 5120
+
+[dec d60] policy: {"action":"update_state","arguments":{"focus":{"claim_id":"c0","need":"Find the by-name (nickname) of Ancrum village, e.g. from UK place-nickname lists or local history sources."},"attempt_note":"Exis
+  [update_state] ok=True err=None elapsed=0.0011049648746848106
+
+[dec d64] policy: {"action":"search","arguments":{"query":"Ancrum village nickname by-name Scotland","focus":{"claim_id":"c0","need":"Find the by-name (nickname) of Ancrum village, e.g. from UK place-nickname lists or 
+  [search] ok=True err=None elapsed=0.4558951021172106
+    query: Ancrum village nickname by-name Scotland
+
+[dec d68] policy: {
+  "action": "search",
+  "arguments": {
+    "query": "Ancrum \"by-name\" village nickname \"Bishop\"",
+    "focus": {
+      "claim_id": "c0",
+      "need": "Find the by-name (nickname) of Ancrum vill
+  [search] ok=True err=None elapsed=0.45990161038935184
+    query: Ancrum "by-name" village nickname "Bishop"
+
+[dec d72] policy: {"action":"search","arguments":{"query":"Ancrum village nickname by-name \"bishop\" OR \"Alnecrumba\" OR \"Ankrom\"","focus":{"claim_id":"c0","need":"Find the by-name (nickname) of Ancrum village, e.g
+  [search] ok=True err=None elapsed=0.6958782467991114
+    query: Ancrum village nickname by-name "bishop" OR "Alnecrumba" OR "Ankrom"
+
+[dec d76] policy: {"action":"open_page","arguments":{"docid":"3827","search_action_id":"a19"}}
+  [open_page] ok=True err=None elapsed=0.018629577942192554
+    open: 3827
+
+[dec d80] policy: {"action":"update_state","arguments":{"attempt_note":"Searching for by-name; Britannica gives etymology but no by-name. Pending o4 discussion of Bishop's palace may relate to 'Bishop on the river Alne
+  [update_state] ok=False err=protocol_error elapsed=0.0007340381853282452
+    claim[c0] oids=['o3', 'o4'] finding=Ancrum & District Heritage Society located and dendro-dated Old Ancrum Bridge (timbers fel
+
+  [invalid_model_response] ok=False err=protocol_error elapsed=6.750179454684258e-05
+
+  [invalid_model_response] ok=False err=protocol_error elapsed=7.261428982019424e-05
+
+  [invalid_model_response] ok=False err=protocol_error elapsed=6.993720307946205e-05
+
+[dec d93] policy: {"action":"search","arguments":{"query":"Ancrum village nickname \"Bishop\" byname","focus":{"claim_id":"c0","need":"Find the by-name (nickname) of Ancrum village from UK place-nickname lists or local
+  [search] ok=True err=None elapsed=0.3435583272948861
+    query: Ancrum village nickname "Bishop" byname
+
+  [invalid_model_response] ok=False err=protocol_error elapsed=6.880797445774078e-05
+
+  [invalid_model_response] ok=False err=protocol_error elapsed=0.000254560261964798
+
+[dec d103] policy: {"action":"search","arguments":{"query":"Ancrum village nickname \"byname\" OR \"by-name\" OR \"nickname\"","focus":{"claim_id":"c0","need":"Find the by-name (nickname) of Ancrum village from UK place
+  [search] ok=True err=None elapsed=0.7152077360078692
+    query: Ancrum village nickname "byname" OR "by-name" OR "nickname"
+
+[dec d107] policy: {"action":"search","arguments":{"query":"Ancrum village nickname byname bishop of the river","focus":{"claim_id":"c0","need":"Find the by-name (nickname) of Ancrum village from UK place-nickname lists
+  [search] ok=True err=None elapsed=0.49382537696510553
+    query: Ancrum village nickname byname bishop of the river
+
+[dec d111] policy: {"action":"search","arguments":{"query":"Ancrum village nickname \"by-name\" OR \"byename\" OR \"pet name\" OR \"alias\"","focus":{"claim_id":"c0","need":"Find the by-name (nickname) of Ancrum village
+  [search] ok=True err=None elapsed=0.8527384991757572
+    query: Ancrum village nickname "by-name" OR "byename" OR "pet name" OR "alias"
+
+[dec d115] policy: {"action":"search","arguments":{"query":"Ancrum village nickname \"bishop's crook\" OR \"bishop's staff\" OR \"walking stick\"","focus":{"claim_id":"c0","need":"Find the by-name (nickname) of Ancrum v
+  [search] ok=True err=None elapsed=0.9481728551909328
+    query: Ancrum village nickname "bishop's crook" OR "bishop's staff" OR "walking stick"
+
+  [invalid_model_response] ok=False err=protocol_error elapsed=5.5691227316856384e-05
+
+  [invalid_model_response] ok=False err=protocol_error elapsed=6.349803879857063e-05
+
+  [invalid_model_response] ok=False err=protocol_error elapsed=6.905663758516312e-05
+
+[dec d128] policy: {"action":"search","arguments":{"query":"Ancrum village nickname by-name","focus":{"claim_id":"c0","need":"Find the by-name (nickname) of Ancrum village from UK place-nickname lists or local history s
+  [search] ok=True err=None elapsed=0.41596093121916056
+    query: Ancrum village nickname by-name
+
+[dec d132] policy: {"action":"search","arguments":{"query":"Ancrum \"by-name\" village nickname Scotland","focus":{"claim_id":"c0","need":"Find the by-name (nickname) of Ancrum village from UK place-nickname lists or lo
+  [search] ok=True err=None elapsed=0.5115385502576828
+    query: Ancrum "by-name" village nickname Scotland
+
+  [invalid_model_response] ok=False err=protocol_error elapsed=8.194195106625557e-05
+
+[dec d139] policy: {"action":"search","arguments":{"query":"Ancrum village nickname by-name \"Ale\" \"crom\" walking stick","focus":{"claim_id":"c0","need":"Find the by-name (nickname) of Ancrum village from UK place-ni
+  [search] ok=True err=None elapsed=0.6163331940770149
+    query: Ancrum village nickname by-name "Ale" "crom" walking stick
+
+  [invalid_model_response] ok=False err=protocol_error elapsed=5.264626815915108e-05
+
+  [invalid_model_response] ok=False err=protocol_error elapsed=7.077259942889214e-05
+
+  [invalid_model_response] ok=False err=protocol_error elapsed=7.272418588399887e-05
+
+[dec d152] policy: {"action":"search","arguments":{"query":"Ancrum village nickname by-name Scottish Borders place nicknames","focus":{"claim_id":"c0","need":"Find the by-name (nickname) of Ancrum village from UK place-
+  [search] ok=True err=None elapsed=0.7045301194302738
+    query: Ancrum village nickname by-name Scottish Borders place nicknames
+
+[dec d156] policy: {"action":"search","arguments":{"query":"Ancrum \"by-name\" village nickname Scotland","focus":{"claim_id":"c0","need":"Find the specific by-name (nickname) of Ancrum village."},"top_k":20}}
+  [search] ok=True err=None elapsed=0.01572661381214857
+    query: Ancrum "by-name" village nickname Scotland
+
+[dec d160] policy: {"action":"open_page","arguments":{"docid":"20653","search_action_id":"a43"}}
+  [open_page] ok=True err=None elapsed=0.023442796897143126
+    open: 20653
+
+[dec d164] policy: {"action":"search","arguments":{"query":"Ancrum \"by-name\" OR nickname village Scottish Borders","focus":{"claim_id":"c0","need":"Find the specific by-name (nickname) of Ancrum village."},"top_k":20}
+  [search] ok=True err=None elapsed=0.5499373991042376
+    query: Ancrum "by-name" OR nickname village Scottish Borders
+
+  [invalid_model_response] ok=False err=protocol_error elapsed=6.047496572136879e-05
+
+[dec d171] policy: {"action":"search","arguments":{"query":"Ancrum village nickname \"by-name\" Scottish Borders","focus":{"claim_id":"c0","need":"Find the specific by-name (nickname) of Ancrum village."},"top_k":10}}
+  [search] ok=True err=None elapsed=0.31974555598571897
+    query: Ancrum village nickname "by-name" Scottish Borders
+
+  [invalid_model_response] ok=False err=protocol_error elapsed=5.038594827055931e-05
+
+  [invalid_model_response] ok=False err=protocol_error elapsed=5.284091457724571e-05
+
+  [invalid_model_response] ok=False err=protocol_error elapsed=0.00010128132998943329
+
+  [invalid_model_response] ok=False err=protocol_error elapsed=7.130810990929604e-05
+
+[dec d187] policy: {"action":"search","arguments":{"query":"Ancrum village nickname by-name","focus":{"claim_id":"c0","need":"Find the specific by-name (nickname) of Ancrum village."},"top_k":10}}
+  [search] ok=True err=None elapsed=0.25674696220085025
+    query: Ancrum village nickname by-name
+
+[dec d191] policy: {"action":"open_page","arguments":{"docid":"30191","search_action_id":"a52","query":"Ancrum village nickname by-name"}}
+  [open_page] ok=True err=None elapsed=0.03223035391420126
+    open: 30191
+
+[dec d195] policy: {"action":"update_state","arguments":{"claim_updates":[{"claim_id":"c0","finding":"Ancrum & District Heritage Society (ADHS), a not-for-profit community organisation formed in 2016, located and radioc
+  [invalid_model_response] ok=False err=protocol_error elapsed=4.6452973037958145e-05
+
+[dec d199] policy: {"action":"update_state","arguments":{"claim_updates":[{"claim_id":"c0","finding":"Ancrum & District Heritage Society (ADHS), a not-for-profit community organisation formed in 2016, located and radioc
+  [update_state] ok=True err=None elapsed=0.0010761688463389874
+    claim[c0] oids=['o1', 'o2', 'o3', 'o4', 'o5'] finding=Ancrum & District Heritage Society (ADHS), a not-for-profit community organisation formed 
+
+[dec d203] policy: {"action":"verify_answer","arguments":{}}
+  [verify_answer] ok=True err=None elapsed=30.92350632697344
+    AUDIT status=contradicted target_status=unknown
+      claim[c0]: status=contradicted need=The claim relies on a non-verbatim quote. Need
+
+[dec d207] policy: {"action":"verify_answer","arguments":{}}
+  [verify_answer] ok=True err=None elapsed=0.0009121201001107693
+    AUDIT status=contradicted target_status=unknown
+      claim[c0]: status=contradicted need=The claim relies on a non-verbatim quote. Need
+
+[dec d211] policy: {"action":"read_evidence","arguments":{"observation_id":"o5"}}
+  [read_evidence] ok=True err=None elapsed=0.0006859838031232357
+
+[dec d215] policy: {"action":"update_state","arguments":{"claim_updates":[{"claim_id":"c0","finding":"Ancrum & District Heritage Society (ADHS), a not-for-profit community organisation formed in 2016, located and radioc
+  [update_state] ok=False err=protocol_error elapsed=0.001678630243986845
+    claim[c0] oids=['o1', 'o2', 'o3', 'o4', 'o5'] finding=Ancrum & District Heritage Society (ADHS), a not-for-profit community organisation formed 
+
+[dec d219] policy: {"action":"verify_answer","arguments":{}}
+  [verify_answer] ok=True err=None elapsed=0.0008312072604894638
+    AUDIT status=contradicted target_status=unknown
+      claim[c0]: status=contradicted need=The claim relies on a non-verbatim quote. Need
+
+[dec d223] policy: {"action":"verify_answer","arguments":{}}
+  [verify_answer] ok=True err=None elapsed=0.0006997957825660706
+    AUDIT status=contradicted target_status=unknown
+      claim[c0]: status=contradicted need=The claim relies on a non-verbatim quote. Need
+
+[dec d227] policy: {"action":"read_evidence","arguments":{"observation_id":"o5"}}
+  [read_evidence] ok=True err=None elapsed=0.0006759208627045155
+
+[dec d231] policy: {"action":"verify_answer","arguments":{}}
+  [verify_answer] ok=True err=None elapsed=0.0009123110212385654
+    AUDIT status=contradicted target_status=unknown
+      claim[c0]: status=contradicted need=The claim relies on a non-verbatim quote. Need
+
+[dec d235] policy: {"action":"read_evidence","arguments":{"observation_id":"o5"}}
+  [read_evidence] ok=True err=None elapsed=0.0007291687652468681
+
+[dec None] (no tool)
+

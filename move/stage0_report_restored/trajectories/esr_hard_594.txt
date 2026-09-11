@@ -1,0 +1,108 @@
+### esr/hard / qid 594
+total events: 108, decisions: 30
+
+  [invalid_model_response] ok=False err=protocol_error elapsed=5.906028673052788e-05
+
+[dec d4] policy: {"action":"search","arguments":{"query":"workshop schedule Islandora Digital Commons \"gentle introduction\" university repository research council","focus":{"claim_id":"c0","need":"Find the workshop 
+  [search] ok=True err=None elapsed=0.7894828128628433
+    query: workshop schedule Islandora Digital Commons "gentle introduction" university repository research council
+
+[dec d8] policy: {
+  "action": "search",
+  "arguments": {
+    "query": "Islandora Digital Commons workshop schedule \"gentle introduction\"",
+    "focus": {
+      "claim_id": "c0",
+      "need": "Find the workshop sch
+  [search] ok=True err=None elapsed=0.537692713085562
+    query: Islandora Digital Commons workshop schedule "gentle introduction"
+
+[dec d12] policy: {"action":"search","arguments":{"query":"Islandora Digital Commons workshop schedule dinner opening reception hall","focus":{"claim_id":"c0","need":"Identify the specific workshop/symposium schedule t
+  [search] ok=True err=None elapsed=0.5739863351918757
+    query: Islandora Digital Commons workshop schedule dinner opening reception hall
+
+[dec d16] policy: {"action":"search","arguments":{"query":"Islandora Digital Commons workshop schedule early 2000s university","focus":{"claim_id":"c0","need":"Find the specific workshop schedule document with Islandor
+  [search] ok=True err=None elapsed=0.5903090368956327
+    query: Islandora Digital Commons workshop schedule early 2000s university
+
+  [invalid_model_response] ok=False err=protocol_error elapsed=9.995605796575546e-05
+
+  [invalid_model_response] ok=False err=protocol_error elapsed=5.5105891078710556e-05
+
+  [invalid_model_response] ok=False err=protocol_error elapsed=5.443394184112549e-05
+
+[dec d29] policy: {"action":"open_page","arguments":{"docid":"19479","search_action_id":"a4"}}
+  [open_page] ok=True err=None elapsed=0.08570882538333535
+    open: 19479
+
+[dec d33] policy: {"action":"search","arguments":{"query":"Islandora Digital Commons workshop \"gentle introduction\"","focus":{"claim_id":"c0","need":"Find the specific workshop schedule document with Islandora and Di
+  [search] ok=True err=None elapsed=0.42261691205203533
+    query: Islandora Digital Commons workshop "gentle introduction"
+
+[dec d37] policy: {"action":"search","arguments":{"query":"Islandora Digital Commons workshop schedule \"gentle introduction\" repository research council","focus":{"claim_id":"c0","need":"Find the specific workshop sc
+  [search] ok=True err=None elapsed=0.7426379742100835
+    query: Islandora Digital Commons workshop schedule "gentle introduction" repository research council
+
+[dec d41] policy: {"action":"read_evidence","arguments":{"observation_id":"o1"}}
+  [read_evidence] ok=True err=None elapsed=0.0007101190276443958
+
+  [invalid_model_response] ok=False err=protocol_error elapsed=5.401717498898506e-05
+
+  [invalid_model_response] ok=False err=protocol_error elapsed=5.429564043879509e-05
+
+  [invalid_model_response] ok=False err=protocol_error elapsed=6.091594696044922e-05
+
+  [invalid_model_response] ok=False err=protocol_error elapsed=6.1007216572761536e-05
+
+  [invalid_model_response] ok=False err=protocol_error elapsed=5.838694050908089e-05
+
+[dec d60] policy: {"action":"search","arguments":{"query":"\"Islandora\" \"Digital Commons\" workshop schedule \"gentle introduction\"","focus":{"claim_id":"c0","need":"Find the specific workshop schedule document with
+  [search] ok=True err=None elapsed=0.521610960830003
+    query: "Islandora" "Digital Commons" workshop schedule "gentle introduction"
+
+  [invalid_model_response] ok=False err=protocol_error elapsed=5.816807970404625e-05
+
+  [invalid_model_response] ok=False err=protocol_error elapsed=5.911896005272865e-05
+
+[dec d70] policy: {"action":"search","arguments":{"query":"Islandora Digital Commons gentle introduction workshop schedule university repository research council","focus":{"claim_id":"c0","need":"Find the specific work
+  [search] ok=True err=None elapsed=0.7840543040074408
+    query: Islandora Digital Commons gentle introduction workshop schedule university repository research council
+
+  [invalid_model_response] ok=False err=protocol_error elapsed=5.705421790480614e-05
+
+[dec d77] policy: {"action":"search","arguments":{"query":"workshop schedule Islandora Digital Commons \"gentle introduction\" repository research council","focus":{"claim_id":"c0","need":"Find the specific workshop sc
+  [search] ok=True err=None elapsed=0.7260630130767822
+    query: workshop schedule Islandora Digital Commons "gentle introduction" repository research council
+
+[dec d81] policy: {"action":"open_page","arguments":{"docid":"9628","query":"Islandora Digital Commons gentle introduction workshop schedule university repository research council","search_action_id":"a23"}}
+  [open_page] ok=True err=None elapsed=0.016247576102614403
+    open: 9628
+
+[dec d85] policy: {"action":"update_state","arguments":{"claim_updates":[{"claim_id":"c0","finding":"The workshop schedule titled 'Editing Modernism in Canada' (dated 2012-05-08) matches the requested details: sponsore
+  [update_state] ok=True err=None elapsed=0.0011686338111758232
+    claim[c0] oids=['o2'] finding=The workshop schedule titled 'Editing Modernism in Canada' (dated 2012-05-08) matches the 
+
+[dec d89] policy: {"action":"verify_answer","arguments":{}}
+  [verify_answer] ok=True err=None elapsed=9.271220853086561
+    AUDIT status=supported target_status=supported
+      claim[c0]: status=supported need=
+
+[dec d93] policy: {"action":"verify_answer","arguments":{}}
+  [verify_answer] ok=True err=None elapsed=0.000943496823310852
+    AUDIT status=supported target_status=supported
+      claim[c0]: status=supported need=
+
+[dec d97] policy: {"action":"verify_answer","arguments":{}}
+  [verify_answer] ok=True err=None elapsed=0.0008624466136097908
+    AUDIT status=supported target_status=supported
+      claim[c0]: status=supported need=
+
+[dec d101] policy: {"action":"verify_answer","arguments":{}}
+  [verify_answer] ok=True err=None elapsed=0.0008700280450284481
+    AUDIT status=supported target_status=supported
+      claim[c0]: status=supported need=
+
+[dec d105] policy: {"action":"submit_answer","arguments":{"decision":"answer","reason":"The observation o2 directly contains the workshop schedule 'Editing Modernism in Canada' listing 'Gentle Introduction to XML' under
+  [submit_answer] ok=True err=None elapsed=0.0010126768611371517
+    decision=answer answer=None reason=The observation o2 directly contains the workshop 
+

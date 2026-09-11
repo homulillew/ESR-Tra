@@ -1,0 +1,254 @@
+### esr/off / qid 234
+total events: 257, decisions: 65
+
+[dec d1] policy: {"action":"search","arguments":{"query":"volunteer group non-profit located dated lost bridge village ancient bridge 2022","focus":{"claim_id":"c0","need":"Identify the village by-name where a volunte
+  [search] ok=True err=None elapsed=0.9185622641816735
+    query: volunteer group non-profit located dated lost bridge village ancient bridge 2022
+
+[dec d5] policy: {"action":"search","arguments":{"query":"lost ancient bridge located dated volunteers village river walking stick","focus":{"claim_id":"c0","need":"Identify the village by-name where a volunteer group
+  [invalid_model_response] ok=False err=protocol_error elapsed=5.690706893801689e-05
+
+[dec d9] policy: {"action":"search","arguments":{"query":"volunteer group non-profit located dated lost ancient bridge village","top_k":10}}
+  [search] ok=True err=None elapsed=0.7214411878958344
+    query: volunteer group non-profit located dated lost ancient bridge village
+
+[dec d13] policy: {"action":"search","arguments":{"query":"volunteer group located dated ancient bridge village river walking stick by-name","focus":{"claim_id":"c0","need":"Identify the village by-name where a volunte
+  [search] ok=True err=None elapsed=0.8768431330099702
+    query: volunteer group located dated ancient bridge village river walking stick by-name
+
+[dec d17] policy: {"action":"search","arguments":{"query":"volunteer group located dated lost ancient bridge village name river walking stick","top_k":20,"focus":{"claim_id":"c0","need":"Identify the village by-name wh
+  [search] ok=True err=None elapsed=0.919931136071682
+    query: volunteer group located dated lost ancient bridge village name river walking stick
+
+[dec d21] policy: {"action":"search","arguments":{"query":"volunteer group non-profit located dated ancient bridge village river walking stick by-name","focus":{"claim_id":"c0","need":"Identify the village by-name wher
+  [invalid_model_response] ok=False err=protocol_error elapsed=5.942396819591522e-05
+
+[dec d25] policy: {"action":"search","arguments":{"query":"volunteer group located ancient bridge village river walking stick by-name non-profit","top_k":10,"focus":{"claim_id":"c0","need":"Identify the village by-name
+  [search] ok=True err=None elapsed=0.9610360041260719
+    query: volunteer group located ancient bridge village river walking stick by-name non-profit
+
+[dec d29] policy: {"action":"open_page","arguments":{"docid":"5120","search_action_id":"a7"}}
+  [open_page] ok=True err=None elapsed=0.01345278462395072
+    open: 5120
+
+[dec d33] policy: {"action":"update_state","arguments":{"claim_updates":[{"claim_id":"c0","finding":"Ancrum & District Heritage Society is a not-for-profit community organisation formed in 2016 in the historical villag
+  [update_state] ok=True err=None elapsed=0.0009785979054868221
+    claim[c0] oids=['o1'] finding=Ancrum & District Heritage Society is a not-for-profit community organisation formed in 20
+
+[dec d37] policy: {"action":"search","arguments":{"query":"Ancrum Heritage Society located ancient Roman bridge dated village byname","focus":{"claim_id":"c0","need":"Identify the village by-name where a volunteer grou
+  [search] ok=True err=None elapsed=0.5960096842609346
+    query: Ancrum Heritage Society located ancient Roman bridge dated village byname
+
+[dec d41] policy: {"action":"open_page","arguments":{"docid":"3827"}}
+  [open_page] ok=True err=None elapsed=0.017767933197319508
+    open: 3827
+
+[dec d45] policy: {"action":"update_state","arguments":{"claim_updates":[{"claim_id":"c0","finding":"Ancrum & District Heritage Society is a not-for-profit community organisation formed in 2016 in the historical villag
+  [update_state] ok=True err=None elapsed=0.0010637622326612473
+    claim[c0] oids=['o1', 'o2'] finding=Ancrum & District Heritage Society is a not-for-profit community organisation formed in 20
+
+[dec d49] policy: {"action":"search","arguments":{"query":"Ancrum village nickname by-name Crummie walking stick","focus":{"claim_id":"c0","need":"Find explicit by-name for Ancrum village (e.g., 'Crummie' or other nick
+  [search] ok=True err=None elapsed=0.5377924158237875
+    query: Ancrum village nickname by-name Crummie walking stick
+
+[dec d53] policy: {"action":"open_page","arguments":{"docid":"20653","search_action_id":"a13"}}
+  [open_page] ok=True err=None elapsed=0.016226928681135178
+    open: 20653
+
+[dec d57] policy: {"action":"search","arguments":{"query":"Ancrum village byname nickname Crummie","focus":{"claim_id":"c0","need":"Find explicit by-name for Ancrum village (e.g., 'Crummie' or other nickname) in availa
+  [search] ok=True err=None elapsed=0.3555858791805804
+    query: Ancrum village byname nickname Crummie
+
+[dec d61] policy: {"action":"open_page","arguments":{"docid":"30191","search_action_id":"a13"}}
+  [open_page] ok=True err=None elapsed=0.022604939062148333
+    open: 30191
+
+[dec d65] policy: {"action":"update_state","arguments":{"claim_updates":[{"claim_id":"c0","finding":"Ancrum & District Heritage Society is a not-for-profit community organisation formed in 2016 in the historical villag
+  [update_state] ok=True err=None elapsed=0.0009997999295592308
+    claim[c0] oids=['o1', 'o2', 'o4'] finding=Ancrum & District Heritage Society is a not-for-profit community organisation formed in 20
+
+[dec d69] policy: {"action":"search","arguments":{"query":"Ancrum village \"Little Lovely\" byname nickname","focus":{"claim_id":"c0","need":"Confirm 'Little Lovely' is the commonly used by-name for Ancrum village in o
+  [search] ok=True err=None elapsed=0.477517596911639
+    query: Ancrum village "Little Lovely" byname nickname
+
+[dec d73] policy: {"action":"update_state","arguments":{"answer":"Little Lovely","attempt_note":"Found explicit by-name 'Little Lovely' for Ancrum in o4; bridge discovery timing (2016-2023) confirmed by o3 and o1; suff
+  [update_state] ok=True err=None elapsed=0.0009777890518307686
+    claim[c0] oids=['o1', 'o2', 'o4'] finding=Ancrum & District Heritage Society is a not-for-profit community organisation formed in 20
+
+[dec d77] policy: {"action":"submit_answer","arguments":{"decision":"answer","reason":"The by-name for Ancrum is explicitly sourced as 'Little Lovely' from o4, and the bridge discovery by Ancrum and District Heritage S
+  [submit_answer] ok=False err=pending_observations elapsed=0.0007888362742960453
+    decision=answer answer=None reason=The by-name for Ancrum is explicitly sourced as 'L
+
+[dec d81] policy: {"action":"submit_answer","arguments":{"decision":"answer","reason":"The evidence supports that the village is Ancrum, and o4 provides explicit by-name 'Little Lovely' for Ancrum. The bridge discovery
+  [submit_answer] ok=False err=pending_observations elapsed=0.0003260783851146698
+    decision=answer answer=None reason=The evidence supports that the village is Ancrum, 
+
+[dec d85] policy: {"action":"read_evidence","arguments":{"observation_id":"o3"}}
+  [read_evidence] ok=True err=None elapsed=0.0005704467184841633
+
+[dec d89] policy: {"action":"submit_answer","arguments":{"decision":"answer","reason":"The village by-name is 'Little Lovely,' explicitly sourced from a description of Ancrum as 'a pretty place sometimes known as Littl
+  [submit_answer] ok=False err=pending_observations elapsed=0.00042545516043901443
+    decision=answer answer=None reason=The village by-name is 'Little Lovely,' explicitly
+
+[dec d93] policy: {"action":"update_state","arguments":{"dismiss_observation_ids":["o3"],"attempt_note":"Dismissed o3 as it only confirms bridge archaeology and Ancrum village history, not the by-name. The pending obse
+  [update_state] ok=False err=protocol_error elapsed=0.0012267190031707287
+
+[dec d97] policy: {"action":"submit_answer","arguments":{"decision":"answer","reason":"Evidence from o4 identifies Ancrum village by-name as 'Little Lovely', matching the village name origin from river Alne and crwn/wa
+  [submit_answer] ok=False err=pending_observations elapsed=0.0003681238740682602
+    decision=answer answer=None reason=Evidence from o4 identifies Ancrum village by-name
+
+[dec d101] policy: {"action":"read_evidence","arguments":{"observation_id":"o3"}}
+  [read_evidence] ok=True err=None elapsed=0.0005004159174859524
+
+[dec d105] policy: {"action":"read_evidence","arguments":{"observation_id":"o4"}}
+  [read_evidence] ok=True err=None elapsed=0.0004953332245349884
+
+[dec d109] policy: {"action":"submit_answer","arguments":{"decision":"answer","reason":"The evidence in o4 explicitly states Ancrum is 'a pretty place sometimes known as Little Lovely.' This matches the clue about the v
+  [submit_answer] ok=False err=pending_observations elapsed=0.0004467898979783058
+    decision=answer answer=None reason=The evidence in o4 explicitly states Ancrum is 'a 
+
+[dec d113] policy: {"action":"update_state","arguments":{"dismiss_observation_ids":["o3"],"focus":null,"answer":"Little Lovely","claim_updates":[{"claim_id":"c0","finding":"Ancrum & District Heritage Society is a not-fo
+  [update_state] ok=False err=protocol_error elapsed=0.0013065710663795471
+    claim[c0] oids=['o1', 'o2', 'o4'] finding=Ancrum & District Heritage Society is a not-for-profit community organisation formed in 20
+
+[dec d117] policy: {"action":"submit_answer","arguments":{"decision":"answer","reason":"The candidate 'Little Lovely' is supported by observation o4, which explicitly states Ancrum is 'a pretty place sometimes known as 
+  [submit_answer] ok=False err=pending_observations elapsed=0.00036990363150835037
+    decision=answer answer=None reason=The candidate 'Little Lovely' is supported by obse
+
+[dec d121] policy: {"action":"submit_answer","arguments":{"decision":"answer","reason":"The village by-name 'Little Lovely' is directly supported by the source describing Ancrum as 'a pretty place sometimes known as Lit
+  [submit_answer] ok=False err=pending_observations elapsed=0.00043099233880639076
+    decision=answer answer=None reason=The village by-name 'Little Lovely' is directly su
+
+[dec d125] policy: {"action":"update_state","arguments":{"dismiss_observation_ids":["o3"],"focus":{"claim_id":"c0","need":"Confirm 'Little Lovely' is the commonly used by-name for Ancrum village in other sources"},"atte
+  [update_state] ok=False err=protocol_error elapsed=0.0012431149370968342
+
+[dec d129] policy: {"action":"submit_answer","arguments":{"decision":"answer","reason":"Evidence from o4 explicitly states Ancrum is 'a pretty place sometimes known as Little Lovely,' matching the clue about the village
+  [submit_answer] ok=False err=pending_observations elapsed=0.0004099900834262371
+    decision=answer answer=None reason=Evidence from o4 explicitly states Ancrum is 'a pr
+
+[dec d133] policy: {"action":"update_state","arguments":{"attempt_note":"Dismissing pending o3 as already incorporated into c0 via prior observation of the same article. Evidence in o3 (ADHS volunteer discovery of 650-y
+  [update_state] ok=False err=protocol_error elapsed=0.0007026512175798416
+    claim[c0] oids=['o1', 'o2', 'o3', 'o4'] finding=Ancrum & District Heritage Society is a not-for-profit community organisation formed in 20
+
+[dec d137] policy: {"action":"submit_answer","arguments":{"decision":"answer","reason":"Evidence from archived observations supports Ancrum as the village, the Ancrum & District Heritage Society (formed 2016, non-profit
+  [submit_answer] ok=False err=pending_observations elapsed=0.000380741897970438
+    decision=answer answer=None reason=Evidence from archived observations supports Ancru
+
+[dec d141] policy: {"action":"update_state","arguments":{"dismiss_observation_ids":["o3"],"focus":{"claim_id":"c0","need":"Finalize answer with sufficient evidence for 'Little Lovely' as Ancrum village by-name"},"attemp
+  [update_state] ok=False err=protocol_error elapsed=0.0009872708469629288
+
+[dec d145] policy: {"action":"submit_answer","arguments":{"decision":"answer","reason":"Evidence in o3 confirms Ancrum & District Heritage Society volunteers located and dated the Old Ancrum Bridge (medieval, ~650 years
+  [submit_answer] ok=False err=pending_observations elapsed=0.00040274718776345253
+    decision=answer answer=None reason=Evidence in o3 confirms Ancrum & District Heritage
+
+[dec d149] policy: {"action":"read_evidence","arguments":{"observation_id":"o3"}}
+  [read_evidence] ok=True err=None elapsed=0.0006291237659752369
+
+[dec d153] policy: {"action":"submit_answer","arguments":{"decision":"answer","reason":"The question asks for the by-name of the village. Observed sources establish: (1) Ancrum and District Heritage Society discovered t
+  [submit_answer] ok=False err=pending_observations elapsed=0.00036477483808994293
+    decision=answer answer=None reason=The question asks for the by-name of the village. 
+
+[dec d157] policy: {"action":"read_evidence","arguments":{"observation_id":"o3"}}
+  [read_evidence] ok=True err=None elapsed=0.0005157929845154285
+
+[dec d161] policy: {"action":"submit_answer","arguments":{"decision":"answer","reason":"Evidence in o4 explicitly states Ancrum is 'a pretty place sometimes known as Little Lovely,' and o1/o3 confirm the bridge discover
+  [submit_answer] ok=False err=pending_observations elapsed=0.0003878851421177387
+    decision=answer answer=None reason=Evidence in o4 explicitly states Ancrum is 'a pret
+
+[dec d165] policy: {"action":"submit_answer","arguments":{"decision":"answer","reason":"The village is Ancrum, whose society (Ancrum & District Heritage Society) discovered and dated a medieval bridge. A corpus source e
+  [submit_answer] ok=False err=pending_observations elapsed=0.00035905418917536736
+    decision=answer answer=None reason=The village is Ancrum, whose society (Ancrum & Dis
+
+[dec d169] policy: {"action":"submit_answer","arguments":{"decision":"answer","reason":"Evidence confirms Ancrum & District Heritage Society discovered the medieval bridge between 2016 (society formed) and 2020 (article
+  [submit_answer] ok=False err=pending_observations elapsed=0.00044541480019688606
+    decision=answer answer=None reason=Evidence confirms Ancrum & District Heritage Socie
+
+[dec d173] policy: {"action":"update_state","arguments":{"dismiss_observation_ids":["o3"],"focus":{"claim_id":"c0","need":"Confirm 'Little Lovely' is the commonly used by-name for Ancrum village in other sources"},"atte
+  [update_state] ok=False err=protocol_error elapsed=0.0010911799035966396
+
+[dec d177] policy: {"action":"submit_answer","arguments":{"decision":"answer","reason":"Evidence confirmed: ADHS (Ancrum & District Heritage Society) discovered and dated the Old Ancrum Bridge (o3). A Teviot valley sour
+  [submit_answer] ok=False err=pending_observations elapsed=0.00039694178849458694
+    decision=answer answer=None reason=Evidence confirmed: ADHS (Ancrum & District Herita
+
+[dec d181] policy: {"action":"submit_answer","arguments":{"decision":"answer","reason":"Evidence from o4 (Teviot valley source) explicitly states Ancrum is 'a pretty place sometimes known as Little Lovely.' The bridge d
+  [submit_answer] ok=False err=pending_observations elapsed=0.0004123197868466377
+    decision=answer answer=None reason=Evidence from o4 (Teviot valley source) explicitly
+
+[dec d185] policy: {"action":"update_state","arguments":{"dismiss_observation_ids":["o3"],"attempt_note":"o3 already cited; recording archived full text confirms bridge discovery details. Removing pending observation to
+  [update_state] ok=False err=protocol_error elapsed=0.0009708800353109837
+
+[dec d189] policy: {
+  "action": "submit_answer",
+  "arguments": {
+    "decision": "answer",
+    "reason": "The available evidence identifies the village as Ancrum, and the explicit by-name 'Little Lovely' is found in a
+  [submit_answer] ok=False err=pending_observations elapsed=0.0003740079700946808
+    decision=answer answer=None reason=The available evidence identifies the village as A
+
+[dec d193] policy: {"action":"update_state","arguments":{"dismiss_observation_ids":["o3"],"focus":{"claim_id":"c0","need":"No further confirmation needed; evidence sufficient for answer"},"attempt_note":"Dismissing o3 (
+  [update_state] ok=False err=protocol_error elapsed=0.0011367728002369404
+
+[dec d197] policy: {"action":"submit_answer","arguments":{"decision":"answer","reason":"Ancrum & District Heritage Society found the bridge; Ancrum is known by the by-name 'Little Lovely' per sourced evidence."}}
+  [submit_answer] ok=False err=pending_observations elapsed=0.00040928134694695473
+    decision=answer answer=None reason=Ancrum & District Heritage Society found the bridg
+
+[dec d201] policy: {"action":"update_state","arguments":{"dismiss_observation_ids":["o3"],"attempt_note":"Dismissing pending observation o3 (Smithsonian article) as it has already been fully read and cited in claim c0. 
+  [update_state] ok=False err=protocol_error elapsed=0.0009877607226371765
+
+[dec d205] policy: {"action":"submit_answer","arguments":{"decision":"answer","reason":"Evidence from o4 explicitly identifies Ancrum as 'a pretty place sometimes known as Little Lovely,' and o1/o2 confirm the bridge di
+  [submit_answer] ok=False err=pending_observations elapsed=0.00038758572190999985
+    decision=answer answer=None reason=Evidence from o4 explicitly identifies Ancrum as '
+
+[dec d209] policy: {"action":"update_state","arguments":{"dismiss_observation_ids":["o3"],"attempt_note":"Dismissed o3 as evidence for by-name; it confirms bridge discovery but doesn't mention 'Little Lovely'.","revisio
+  [update_state] ok=False err=protocol_error elapsed=0.0012838328257203102
+
+[dec d213] policy: {"action":"submit_answer","arguments":{"decision":"answer","reason":"The village is Ancrum, and the by-name found in the source is 'Little Lovely'."}}
+  [submit_answer] ok=False err=pending_observations elapsed=0.00046597281470894814
+    decision=answer answer=None reason=The village is Ancrum, and the by-name found in th
+
+[dec d217] policy: {"action":"update_state","arguments":{"dismiss_observation_ids":["o3"],"claim_updates":[{"claim_id":"c0","observation_ids":["o3"]}],"focus":{"claim_id":"c0","need":"Confirm 'Little Lovely' is the comm
+  [update_state] ok=False err=protocol_error elapsed=0.0006146440282464027
+    claim[c0] oids=['o3'] finding=None
+
+[dec d221] policy: {"action":"read_evidence","arguments":{"observation_id":"o3"}}
+  [read_evidence] ok=True err=None elapsed=0.0005729221738874912
+
+[dec d225] policy: {
+  "action": "submit_answer",
+  "arguments": {
+    "decision": "answer",
+    "reason": "The evidence in observation o3 confirms the volunteer bridge discovery by Ancrum and District Heritage Society,
+  [submit_answer] ok=False err=pending_observations elapsed=0.00033378228545188904
+    decision=answer answer=None reason=The evidence in observation o3 confirms the volunt
+
+[dec d229] policy: {"action":"read_evidence","arguments":{"observation_id":"o3"}}
+  [read_evidence] ok=True err=None elapsed=0.0005102441646158695
+
+[dec d233] policy: {"action":"submit_answer","arguments":{"decision":"answer","reason":"Evidence from Smithsonian article (o3) confirms Ancrum & District Heritage Society volunteers discovered the Old Ancrum Bridge, wit
+  [submit_answer] ok=False err=pending_observations elapsed=0.00039541861042380333
+    decision=answer answer=None reason=Evidence from Smithsonian article (o3) confirms An
+
+[dec d237] policy: {"action":"update_state","arguments":{"dismiss_observation_ids":["o3"],"attempt_note":"Dismissed o3 (already used as evidence for bridge discovery); confirmed via archive and o4 that 'Little Lovely' i
+  [update_state] ok=False err=protocol_error elapsed=0.000972299836575985
+
+[dec d241] policy: {"action":"submit_answer","arguments":{"decision":"answer","reason":"The candidate 'Little Lovely' is supported by observed source o4, which explicitly states Ancrum is 'a pretty place sometimes known
+  [submit_answer] ok=False err=pending_observations elapsed=0.0006120041944086552
+    decision=answer answer=None reason=The candidate 'Little Lovely' is supported by obse
+
+[dec d245] policy: {"action":"update_state","arguments":{"dismiss_observation_ids":["o3"],"attempt_note":"Dismissed o3 as duplicate context already covered by o1/o2/o4; evidence for 'Little Lovely' is sufficient from o4
+  [update_state] ok=False err=protocol_error elapsed=0.0010938327759504318
+
+[dec d249] policy: {"action":"submit_answer","arguments":{"decision":"answer","reason":"Ancrum & District Heritage Society (a nonprofit volunteer group) located and dendrochronologically dated the Old Ancrum Bridge, wit
+  [submit_answer] ok=False err=pending_observations elapsed=0.0005072993226349354
+    decision=answer answer=None reason=Ancrum & District Heritage Society (a nonprofit vo
+
+[dec d253] policy: {
+  "action": "submit_answer",
+  "arguments": {
+    "decision": "answer",
+    "reason": "Evidence from o4 explicitly states Ancrum is known as 'Little Lovely,' and o1/o2 confirm the village name origi
+  [submit_answer] ok=False err=pending_observations elapsed=0.0003530331887304783
+    decision=answer answer=None reason=Evidence from o4 explicitly states Ancrum is known
+
+[dec None] (no tool)
+

@@ -1,156 +1,108 @@
-# ESR Forward Harness v2：协议先收敛，语义能力再验证
+# ESR forward harness 2.1 — 收口的 State / Action 实现
 
-版本：2.0.0，2026-09-07。本文件取代旧文档作为当前前向推理规范；不定义新训练算法。
+**日期：2026-09-08。状态：前向协议实现；不等于通过真实 4B/BC+ 语义验收。**
+本分支的规范以本文、可执行 `src/esr_harness/protocol.py` 与回归测试为准。此前 RFC 原文及 q324 推演见 [文档索引](../research/state_21/README.md)，它们保留历史的“未实现”等状态说明，不伪改成运行结果。
 
-## 1. 设计目标与边界
+## 1. 核心闭环
 
-保留 ESR 的核心：**外部证据与模型判断分离，研究状态可恢复，动作与证据可追溯**。
-删除按单题症状不断增长的分支式 guidance，不引入新的 controller、复杂知识图谱、过程 reward 或强模型在线依赖。
-所有题共享同一个协议；代码没有 gold 名称、特定 qid、重复 N 次自动放行或关键词兜底 supported。
+研究：`Observation → local Finding delta → Focus.need → next action`。
+认证：`current Answer + original Question + Requirements + raw Evidence → Audit → Submit / Repair`。
 
-v2 的保证是机械可检查的不变量，而不是“4B 永远理解正确”。语义蕴含、题目分解、实体绑定、
-检索召回、数值口径仍需要模型及实测校准。字符位置／quotation 检查不能证明蕴含。
+降低 4B 的非必要维护负担，不省略实体消歧、联合关系和证据理解本身。不增加 planner、知识图谱、独立控制模型、过程奖励或强模型在线依赖。训练算法与 `src/esr_grpo/` 不变。
 
-## 2. 数据模型
+## 2. 谁维护什么
 
-### DocumentSnapshot
+Actor 只维护：
 
-每个 episode 第一次打开某 docid 时保存完整原文及 hash，后续冻结此快照。
-同一 docid 的再次打开可以选择不同片段，但不悄悄覆盖原文。固定语料更新后开启新 episode。
-
-### ObservationView
-
-```text
-observation_id, docid, document_hash
-spans: [start, end) in raw document
-raw_parts, text, view_hash
-source, fallback, query
-created_by_action_id, search_action_id
+```json
+{"target":"最终输出对象/关系位置","answer":null,
+ "claims":[{"claim_id":"c0","requirement":"必要关系","finding":"","observation_ids":[]}],
+ "focus":{"claim_id":"c0","need":"当前具体缺失关系"}}
 ```
 
-`text` 是原样交给调用者的渲染，包含偏移标识；`raw_parts` 是原文片段。
-引用原文检查只接受 raw_parts 内的非空子串，不接受界面 header。
+Harness 管理 claim ID、研究版本、候选作用域、原文/视图、实际暴露、缓存、尝试记录、审核、冲突证据、预算与终态。没有 actor 可写的 supported、confidence、gap_resolved、reward。
 
-视图构造优先使用现有 `/get_doc_chunks`。片段必须能逐字映射回 DocumentSnapshot；
-服务缺失、异常或无法映射时，使用**显式标记**的本地字符分块／词项排序回退。
-`open_page(offset=...)` 提供可达的全文窗口，避免“全文存了但尾部永远看不到”。
-`view_chars` 是观察定义的安全上限，不是之后给 policy/audit 偷偷再截一次的上限。
-实际渲染 hash、偏移、回退原因全部记录。
+原题不可修改。初始化用原题建立 c0/target/focus，不要求首次搜索前完整分解。answer=null 既允许尚未知答案，也允许暂挂候选。finding 是有来源的可修订解释，不是已认证事实。
 
-相同文档快照的相同片段复用 observation_id；不同 query 得到不同片段则产生新视图。
-`read_evidence` 不调用 retriever、不重新排序、不要求先写 finding。
+每条 finding 保留对象、关系、时间、否定与单位。换候选不删除原文或 finding；工作卡将不同候选作用域写入的 finding 标为需要重新解释。相同条件分别找到不同满足对象，不等于同一个对象满足全题，最终审核仍检查联合绑定。
 
-### ResearchState
+## 3. 六个动作的唯一契约
 
-```text
-research_version
-answer, answer_kind: answer | abstain
-target
-claims: [{claim_id, requirement, observation_ids}]
-```
-
-Claim 是题目的必要条件／目标关系，不是为每句话建图。工具一次原子替换小型 state，模型不能写审核状态。
-目标或 requirement 集合发生变化必须提供 revision_reason。普通补引用／换候选不需要重建 requirement ID。
-语义 payload 未变化的 update 保持 research_version 和审核 fingerprint。
-
-没有强制为所有打开文档写 finding 的 coverage gate。新视图先处于 pending：
-有用的进入 claim 引用，无关的通过 `dismiss_observation_ids` 明确归档。
-未处理片段不会在上下文压缩中消失；ESR 在最终 audit/submit 前必须引用或明确 dismiss。
-已引用的同一视图再次读取不创造新 pending 义务。
-
-## 3. 单一工具契约
-
-`protocol.SCHEMAS` 同时用于提示生成和运行时参数检查；没有第二份手写工具 schema。
-
-| 工具 | 职责 |
+| 动作 | 2.1 规则 |
 |---|---|
-| search(query, top_k?) | 只返回导航候选，不创建可引用证据 |
-| open_page(docid, search_action_id, query?, offset?) | 必须引用本 episode 的真实 search hit；创建／复用实际视图 |
-| read_evidence(observation_id) | 重放任意已返回视图，无目录前置条件 |
-| update_state(...) | 原子更新紧凑状态，消费或 dismiss pending |
-| verify_answer() | 独立上下文审核当前逻辑状态；重复输入用缓存 |
-| submit_answer() | 根据实验门禁结束；不接受额外 answer 绕过状态 |
+| search(query, focus?, anchor_refs?, top_k?) | 默认继承 focus，可同动作换焦点；锚点声明可为 question/candidate/已暴露 observation。查询仍是模型选择，不自动包含候选名。 |
+| open_page(docid, search_action_id?, query? / offset?) | docid 必须属于成功 search hit；父ID省略时由系统解析。query/offset互斥。区分 retrieval_parent 与 purpose。 |
+| read_evidence(observation_id / directory_cursor) | 精确恢复已知视图，或用 start/已发放游标读取有界档案目录；不重新检索。 |
+| update_state(delta) | 只写变化。缺席字段保持不变，answer=null表示撤回。finding 与 observation_ids 必须成对。新claim省略ID，收到返回后才能使用。 |
+| verify_answer() | 新上下文全题审核；允许 answer=null 的部分状态，但 target 必须 unknown。不是每读一页就强制审核。 |
+| submit_answer(decision?, reason?) | 默认使用当前 answer，或显式 abstain；不接受第二份 answer 绕过。 |
 
-Baseline 只暴露 search/open_page/read_evidence/finish(answer)，`finish` 无法在 ESR 模式调用。
-基线在下一动作时将上一个响应视为已消费，保留近期历史与可重读 archive；不要求不存在的 update_state。
-`audit_mode=off` 不暴露无法调用的 verify 工具。
-未知动作、未知参数、非法 ID、布尔值冒充整数等均记录为失败动作，不能逃逸预算。
+Baseline 仍只有 search/open/read/finish；共享检索、视图与客户端，不获得 ESR 状态写入或审核功能。旧 answer_kind 已移为 submit decision，这是显式破坏性变更，不接收旧全量 claims 参数。
 
-## 4. 审核：语义反馈与机械门禁分离
+### Delta 与事务
 
-审核输入只包含 Q、目标、当前答案、必要条件以及这些条件引用的**已存实际视图**。
-不包含 gold、policy 历史、旧计划、旧 verifier rationale 或检索 snippet。
-模型默认相同 4B，但每次审核是新的 messages；不会借用 policy session。
+update 的所有验证、引用/容量检查、写盘成功后才应用。未修改字段由系统保持。修改 target/既有 requirement、退役条件要求 revision_reason；不能退役最后一个条件。当前 focus 所指条件退役时，需改选已存在条件或显式置空。不能在同一请求中猜测新分配的claim ID。
 
-输出包括 target、coverage 和逐 claim 的 supported / unknown / contradicted。
-Target 检查答案类型与关系位置；Coverage 检查必要条件是否遗漏；Claim 检查实际证据。
-`unknown` 是缺证，不等于 false；`contradicted` 需要冲突引用。
-每个 claim 必须恰好出现一次。supported/contradicted 必须带合法、逐字可定位的 quote。
-整体状态由 harness 聚合，不采信模型另写的 overall supported 字段。
+search(focus=...) 有两阶段：合法且容量可用的焦点变更可以在外部检索失败时保留；非法参数、非法锚点不会半写状态。失败不得改 finding/answer 或创建 semantic gap。
 
-审核 fingerprint 包含：Q、逻辑 state、被引用视图 ID/hash、审核客户端配置、prompt/schema 版本。
-同 fingerprint 永不因 no-op update 而重复调用审核模型。缓存命中不产生新的语义判定。
-改变候选、目标、必要条件或引用会失效；回到完全相同输入可复用原缓存。
-research_version 是操作历史；fingerprint 才是审核适用性依据。
+## 4. 三个不同的“已读”
 
-Gap 用稳定 claim ID 表示，另有 @target/@coverage。
-旧 unknown 改写 reason 后仍是 unknown；删除 requirement 只记录 removed_claim_ids，不记 resolved。
-只有同一 requirement 从 unknown/contradicted 变为 supported 才记录 resolved_claim_ids。
-这只是可审阅的修复事件，**尚不是训练信用**。
+`stored != returned != delivered in a policy request != understood correctly`。
 
-## 5. 三种明确的提交条件
+文档第一次打开即冻结。Observation 保存实际原文范围与内容hash。每次policy请求记录工作卡与可见ID；请求返回（包括无效JSON）后才授予已交付状态。网络失败记录unknown delivery。日志只能证明请求/响应关系，不证明理解。
 
-| 模式 | 条件 | 输出标签 |
-|---|---|---|
-| hard | 当前输入已审核，整体 supported，无未处理视图 | supported |
-| soft | 当前输入已有有效审核，无未处理视图；不要求支持 | 保留 supported/unknown/contradicted |
-| off | 当前 state 有答案及 requirements，无未处理视图 | unverified |
+非空 finding 只能引用本episode已交付的视图；无视图的新发现不能伪装成文档事实。程序直调execute的测试需显式记录 exposure；在线runner自动管理，不是新模型工具。
 
-构造器默认 hard；在线 CLI 要求显式选择，防止默认变化污染实验。
-软审核不是“把拒绝改通过”。它只改变能否结束，不改变真实性标签，也不给结果奖励。
-任何模式下，显式 `answer_kind=abstain, answer=""` 可结束为 abstained，绝不变为 supported。
-模型把拒答错标成 answer 的语义错误不能靠类型系统完全消除；hard 模式还依赖 target audit。
+latest result 与 pending 分开：重读已引用视图仍受 latest 保护，但不强制再写一次 no-op update。有用观察进入 finding 即消费 pending；无关视图可 dismiss；不能同时引用和 dismiss 同一视图。dismiss 不删除原文或已记录反证。
 
-## 6. 错误、预算与停滞
+## 5. Gap与尝试记忆
 
-JSON/参数错误、服务错误、审核协议错误、超窗与正常 semantic unknown 分开记录。
-审核格式修复最多两次，保留完整原始输入；不在空上下文中请求“再次判定”。
-HTTP 服务重试有固定上限；400 不通过删参数或改变 thinking 配置偷偷重试。
-基础设施错误不会修改 state、审核 cache 或 gap。
+不增加一份可由actor清空的GapList。focus 是工作缺口；audit.unresolved_ids 是确定审核包下的缺口。切换/改写focus不代表解决。
 
-所有策略动作尝试（含错误、缓存操作）受 max_actions 限制，最后一个预算动作仍可合法提交。
-生成预算覆盖 policy 与 audit；服务 usage 缺失明确记 unknown，不能假装拥有完整成本数据。
-实际 tokenizer + chat template 做上下文检查；无 tokenizer 的 CPU stub 仅用于测试。
-近期完整交互可以移出活动上下文，但 state 与 pending 视图不能被静默删除；放不下则明确失败。
+search记录 purpose快照、query与参数、检索锚点声明、cache_source、新hit文档及未打开候选。阅读记录真实检索父关系和本次目的，exposure与action/decision关联。短attempt_note明确标为actor自报告，不作为外部事实。
 
-停滞信号依据同文档快照新增可见字符区间的并集，不因 duplicate open 或换 query 措辞归零。
-这是**原文视图新颖性，不是语义信息增益**，不当 reward，也不强制打开 top-1 或自动换答案。
+attempt_note默认只关联当前条件且同候选作用域的最近一次尝试；歧义或旧作用域需显式attempt_id。这样“换候选后成功”不冒充“旧候选补证成功”。完整尝试在账本，工作卡只显示当前焦点最近两条。
 
-## 7. 账本与可复现性
+重复控制不封禁语义相似query：年份、否定、别名、top-k/offset变化可能关键。固定确定性检索且index revision已声明时，完全相同query字节和参数命中缓存；不跨episode假设索引稳定。未声明revision或非确定性服务不启用缓存。缓存不算新证据，仍计实际生成/action成本。
 
-SQLite 使用不可更新／删除触发器和 hash-chain 记录 header、每个动作、delta、错误和模型请求／响应／usage。
-先生成 transition，持久化成功后才应用到内存；磁盘失败不制造未入账状态。
-一个 episode 只允许一个 writer；检测到竞争 writer 拒绝继续，不合并不一致的状态。
-Replay 以 SQLite mode=ro 打开，校验链条，绝不调用检索或模型，也不创建／迁移旧表。
-触发器和 hash-chain 用于发现意外改写，并不是抵抗可任意重写整库攻击者的外部签名证明。
+“新hit文档为零”只是机械诊断，不是信息增益或候选为假。工作卡显示未读hit、已读视图和剩余关系，提示换原题线索或读不同区间，不强制top-1、不自动换答案、不按失败次数放行。
 
-Header 固定 question、config、model/tokenizer 声明、index revision、代码 revision 和数据文件 hash。
-Resume 不允许换问题／配置。服务实际载入的权重 hash 需要部署端另行核实；客户端声明不是远程证明。
-凭据只从环境变量读入请求 header，不写入配置文件或日志。
+## 6. 审核与反证
 
-## 8. 模块边界及暂不实现项
+审核只使用原题、target/answer、必要条件及待核finding、允许的已存原文视图。模型历史、focus、attempt_note、旧verdict理由不进入证据包。
 
-```text
-protocol.py       schema / Config / typed failures
-views.py          retrieval adapter / exact views / local fallback
-ledger.py         durable append-only journal
-engine.py         deterministic state transitions
-client.py         tokenizer / bounded generation / usage
- audit.py         fresh atomic audit / quote validation
-runner.py         single policy loop / bounded context / read-only replay
-cli.py, demo.py   deployment entry and explicitly synthetic smoke
-```
+每条输出 status/reason/need/quotes，target/coverage亦有status/reason/need。unknown/contradicted需具体need；supported不同时宣称缺口。引用逐字定位，只证明quote合法，不证明蕴含。空answer的target非unknown属于协议错误，不能静默改写通过。
 
-不修改 `esr_grpo.credit`、ECHO/verl integration、原奖励函数。
-不实施自动数据合成、SFT、在线更强裁判依赖、复杂 planner、语义反证发现器或确定性算术工具。
-本次先让语义失败不会被 harness 伪造、吞掉或放大；随后用真实 4B 校准这些语义能力。
+后台保留有效审核中识别的冲突witness，按候选作用域和requirement关联。删除普通引用不能移除已知冲突原文；返回旧候选可恢复witness。审核包只加入来源，不把旧拒绝理由当新证据。系统不宣称发现了所有潜在反证，也不能阻止自然语言改写带来的所有语义规避。
+
+fingerprint绑定实际审核包、视图hash与auditor配置，不绑定focus、attempt_note、操作版本和显示顺序。记录新冲突不得使产生它的当前审核立即失效。
+
+修复事件只在同一候选/requirement作用域比较unknown/contradicted→supported。候选变化、条件修订、缓存重读分开记录，均不是自动RL信用。
+
+hard：当前完整审核supported才可正常提交；soft：有效审核后可提交并保留真实unknown/contradicted；off：unverified。默认hard，CLI要求显式选择。abstain可结束并保存final_draft，但未提交草稿绝不计成绩。q324文档推演未证条件仍保留unknown。
+
+## 7. 上下文与容量
+
+workcard给出原题、全量条件短工作状态、当前focus、适用审核摘要、关键冲突指针、两条尝试、最新结果、pending正文、有限近期目录和预算。存储对象中的raw_parts/hash/delta不重复展开给policy。
+
+最新结果与pending正文必须保留；recent history可减少到0。原文每份只显示一次；诊断reason/need可有标记地限长，完整审核留账本。search snippet是导航，可明确标记缩短，不作为证据引用。
+
+open在冻结/返回视图前用真实客户端tokenizer的fits做容量准入；容量不足时在本次候选片段中减少窗口，不重新调用retriever；始终保留offset访问能力。选片段先按相关性使用预算，再按原文顺序展示。重复文本的远端chunk缺唯一offset时采用有标记回退。
+
+update和read在提交前预检后继工作卡，失败不半写。pending数量有上限，满时返回可修复capacity错误。最小必要上下文仍放不下时明确context_overflow，不删除题目条件。此机制不是任意长任务的容量保证。
+
+## 8. 预算、恢复和边界
+
+policy与audit共用completion预算。每次请求先持久化最大用量预留；成功返回后结算实际usage；超时/崩溃/无usage按请求上限保守记账，不假装零成本。真实已测token和保守占用分别报告。audit保留128 token给后续policy结束决策；不是自动提交保证。
+
+所有模型动作尝试含错误、缓存都计action。服务、协议、容量错误与语义gap分开。end保留final_draft、真实终因，不能打捞成绩。
+
+新账本schema_version=3、implementation=2.1.0。v2代码冻结在esr_harness.v2；root replay按schema分发，只读、不迁移。2.1 live resume拒绝旧账本；旧实验驱动和esr_grpo训练代码保留原样。
+
+精确prompt/response文本、purpose、decision/action/exposure已经记录；采样token、old logprob、真正RL segment mask尚未接入。provenance仍不是因果贡献，不能直接送入旧credit router。
+
+## 9. 实现与验收
+
+纯状态编辑在state.py；渲染在context.py；运行state machine在engine.py；模型I/O在client.py；审核在audit.py；原文/检索在views.py；单循环在runner.py。Schema可用`python -m esr_harness.schema docs/harness/schemas`导出。
+
+见[VALIDATION.md](VALIDATION.md)和[RUNBOOK.md](RUNBOOK.md)。本分支收口的是可实现的协议、错误边界和复现方式，不是未经实验的4B正确率或完美verifier承诺。

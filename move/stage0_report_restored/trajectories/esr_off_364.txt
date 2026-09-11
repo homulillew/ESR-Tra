@@ -1,0 +1,200 @@
+### esr/off / qid 364
+total events: 192, decisions: 48
+
+[dec d1] policy: {"action":"search","arguments":{"query":"Mnet K-pop audition program 2010-2017 group three members same country debut Japan showcase","top_k":10}}
+  [search] ok=True err=None elapsed=1.138893865980208
+    query: Mnet K-pop audition program 2010-2017 group three members same country debut Japan showcase
+
+[dec d5] policy: {"action":"search","arguments":{"query":"Mnet survival show group three Japanese members debuted in Japan showcase original member surprise birthday","focus":{"claim_id":"c0","need":"There is a K-pop 
+  [search] ok=True err=None elapsed=0.9457923090085387
+    query: Mnet survival show group three Japanese members debuted in Japan showcase original member surprise birthday
+
+[dec d9] policy: {"action":"open_page","arguments":{"docid":"85547","search_action_id":"a2"}}
+  [open_page] ok=True err=None elapsed=0.01952158287167549
+    open: 85547
+
+[dec d13] policy: {"action":"search","arguments":{"query":"Mnet survival show group debuted Japan three members same country showcase original member surprise","focus":{"claim_id":"c0","need":"There is a K-pop audition
+  [search] ok=True err=None elapsed=0.9523757891729474
+    query: Mnet survival show group debuted Japan three members same country showcase original member surprise
+
+[dec d17] policy: {"action":"open_page","arguments":{"docid":"62851","search_action_id":"a4"}}
+  [open_page] ok=True err=None elapsed=0.0177792776376009
+    open: 62851
+
+[dec d21] policy: {"action":"update_state","arguments":{"claim_updates":[{"claim_id":"c0","finding":"MiSaMo is a sub-unit of Twice composed of Japanese members Momo, Sana, and Mina, who debuted in 2023 and participated
+  [update_state] ok=True err=None elapsed=0.0011357050389051437
+    claim[c0] oids=['o1', 'o2'] finding=MiSaMo is a sub-unit of Twice composed of Japanese members Momo, Sana, and Mina, who debut
+
+[dec d25] policy: {"action":"search","arguments":{"query":"MiSaMo showcase surprise appearance TWICE member birthday","focus":{"claim_id":"c0","need":"Which original member of Twice/MiSaMo surprised them at a showcase,
+  [search] ok=True err=None elapsed=0.4934604340232909
+    query: MiSaMo showcase surprise appearance TWICE member birthday
+
+[dec d29] policy: {"action":"open_page","arguments":{"docid":"56390"}}
+  [open_page] ok=True err=None elapsed=0.011822542641311884
+    open: 56390
+
+[dec d33] policy: {"action":"update_state","arguments":{"claim_updates":[{"claim_id":"c0","finding":"MiSaMo is a sub-unit of Twice composed of Japanese members Momo, Sana, and Mina, who debuted in 2023 and participated
+  [update_state] ok=True err=None elapsed=0.0010434282012283802
+    claim[c0] oids=['o3'] finding=MiSaMo is a sub-unit of Twice composed of Japanese members Momo, Sana, and Mina, who debut
+
+[dec d37] policy: {"action":"search","arguments":{"query":"September 22 birthday famous dancer popularized dance routine Padi produced song","focus":{"claim_id":"c0","need":"Nayeon (born September 22, 1995) surprised M
+  [search] ok=True err=None elapsed=0.7221804051660001
+    query: September 22 birthday famous dancer popularized dance routine Padi produced song
+
+[dec d41] policy: {"action":"search","arguments":{"query":"Nayeon September 22 1995 birthday person popularized dance routine","focus":{"claim_id":"c0","need":"Find the person born September 22 who is famous for popula
+  [search] ok=True err=None elapsed=0.6556357862427831
+    query: Nayeon September 22 1995 birthday person popularized dance routine
+
+[dec d45] policy: {"action":"search","arguments":{"query":"Padi produced song dance routine popularized September 22 birthday","top_k":20,"focus":{"claim_id":"c0","need":"Find the person born September 22 who is famous
+  [search] ok=True err=None elapsed=0.5981607772409916
+    query: Padi produced song dance routine popularized September 22 birthday
+
+[dec d49] policy: {"action":"search","arguments":{"query":"person born September 22 popularized dance routine song produced by Padi","focus":{"claim_id":"c0","need":"Find the person born September 22 who is famous for 
+  [search] ok=True err=None elapsed=0.7148344716988504
+    query: person born September 22 popularized dance routine song produced by Padi
+
+[dec d53] policy: {"action":"search","arguments":{"query":"Padi producer song dance routine September 22 birthday famous","focus":{"claim_id":"c0","need":"Find the person born September 22 who is famous for popularizin
+  [search] ok=True err=None elapsed=0.6167901149019599
+    query: Padi producer song dance routine September 22 birthday famous
+
+[dec d57] policy: {"action":"search","arguments":{"query":"September 22 birthday famous dance routine popularized song produced by Padi","focus":{"claim_id":"c0","need":"Find the person born September 22 who is famous 
+  [search] ok=True err=None elapsed=0.7543926038779318
+    query: September 22 birthday famous dance routine popularized song produced by Padi
+
+[dec d61] policy: {"action":"search","arguments":{"query":"popularized dance routine song produced by Padi birthdate September 22","focus":{"claim_id":"c0","need":"Identify the person born September 22 who popularized 
+  [search] ok=True err=None elapsed=0.6915957191959023
+    query: popularized dance routine song produced by Padi birthdate September 22
+
+[dec d65] policy: {"action":"search","arguments":{"query":"Nayeon birthday September 22 popularized dance routine song produced by Padi","focus":{"claim_id":"c0","need":"Identify the person born September 22 who popula
+  [search] ok=True err=None elapsed=0.7594807487912476
+    query: Nayeon birthday September 22 popularized dance routine song produced by Padi
+
+[dec d69] policy: {"action":"search","arguments":{"query":"person born September 22 popularized dance routine song produced by Padi","top_k":20}}
+  [search] ok=True err=None elapsed=0.0012201950885355473
+    query: person born September 22 popularized dance routine song produced by Padi
+
+[dec d73] policy: {"action":"search","arguments":{"query":"September 22 birthday dancer popularized dance routine song produced by Padi","focus":{"claim_id":"c0","need":"Identify the person born September 22 who popula
+  [search] ok=True err=None elapsed=0.787147605791688
+    query: September 22 birthday dancer popularized dance routine song produced by Padi
+
+[dec d77] policy: {"action":"search","arguments":{"query":"person born September 22 famous for dance routine song produced by Padi","focus":{"claim_id":"c0","need":"Identify the person born September 22 who popularized
+  [invalid_model_response] ok=False err=protocol_error elapsed=6.108731031417847e-05
+
+[dec d81] policy: {"action":"search","arguments":{"query":"person born September 22 famous popularized dance routine song produced by Padi","focus":{"claim_id":"c0","need":"Identify the person born September 22 who pop
+  [search] ok=True err=None elapsed=0.8544630859978497
+    query: person born September 22 famous popularized dance routine song produced by Padi
+
+[dec d85] policy: {"action":"search","arguments":{"query":"September 22 birthday dancer popularized dance routine song Padi producer","focus":{"claim_id":"c0","need":"Identify the person born September 22 who populariz
+  [search] ok=True err=None elapsed=0.6813720329664648
+    query: September 22 birthday dancer popularized dance routine song Padi producer
+
+[dec d89] policy: {"action":"search","arguments":{"query":"Nayeon September 22 birthday same person popularized dance routine song produced by Padi","focus":{"claim_id":"c0","need":"Identify the person born September 2
+  [search] ok=True err=None elapsed=0.837914913892746
+    query: Nayeon September 22 birthday same person popularized dance routine song produced by Padi
+
+[dec d93] policy: {"action":"search","arguments":{"query":"Nayeon September 22 birthday dance routine popularized song produced by Padi","focus":{"claim_id":"c0","need":"Identify the person born September 22 who popula
+  [search] ok=True err=None elapsed=0.7173622557893395
+    query: Nayeon September 22 birthday dance routine popularized song produced by Padi
+
+[dec d97] policy: {"action":"search","arguments":{"query":"person born September 22 popularized dance routine song Padi producer","focus":{"claim_id":"c0","need":"Identify the person born September 22 who popularized a
+  [search] ok=True err=None elapsed=0.6769771780818701
+    query: person born September 22 popularized dance routine song Padi producer
+
+[dec d101] policy: {
+  "action": "search",
+  "arguments": {
+    "query": "Nayeon September 22 birthday dance routine popularized song Padi producer",
+    "focus": {
+      "claim_id": "c0",
+      "need": "Identify the pe
+  [search] ok=True err=None elapsed=0.6177567369304597
+    query: Nayeon September 22 birthday dance routine popularized song Padi producer
+
+[dec d105] policy: {"action":"search","arguments":{"query":"popularized dance routine song produced by Padi September 22 birthday","focus":{"claim_id":"c0","need":"Identify the person born September 22 who popularized a
+  [search] ok=True err=None elapsed=0.6633292911574244
+    query: popularized dance routine song produced by Padi September 22 birthday
+
+[dec d109] policy: {"action":"search","arguments":{"query":"Nayeon birthday September 22 famous dance popularized song produced by Padi","focus":{"claim_id":"c0","need":"Identify the person born September 22 who popular
+  [search] ok=True err=None elapsed=0.7442557383328676
+    query: Nayeon birthday September 22 famous dance popularized song produced by Padi
+
+[dec d113] policy: {"action":"search","arguments":{"query":"Nayeon September 22 birthday same as popularized dance routine song produced by Padi","focus":{"claim_id":"c0","need":"Identify the person born September 22 wh
+  [search] ok=True err=None elapsed=1.0027328138239682
+    query: Nayeon September 22 birthday same as popularized dance routine song produced by Padi
+
+[dec d117] policy: {"action":"search","arguments":{"query":"famous dance routine popularized song produced by Padi singer","focus":{"claim_id":"c0","need":"Identify the person born September 22 who popularized a dance r
+  [search] ok=True err=None elapsed=0.6266082171350718
+    query: famous dance routine popularized song produced by Padi singer
+
+[dec d121] policy: {"action":"search","arguments":{"query":"born September 22 popularized dance routine song produced by Padi","focus":{"claim_id":"c0","need":"Identify the person born September 22 who popularized a dan
+  [search] ok=True err=None elapsed=0.73080162005499
+    query: born September 22 popularized dance routine song produced by Padi
+
+[dec d125] policy: {"action":"search","arguments":{"query":"dance routine popularized by born September 22 song produced by Padi","focus":{"claim_id":"c0","need":"Identify the person born September 22 who popularized a 
+  [search] ok=True err=None elapsed=0.752818004693836
+    query: dance routine popularized by born September 22 song produced by Padi
+
+[dec d129] policy: {"action":"search","arguments":{"query":"Nayeon September 22 birthday dance routine popularized song produced by Padi","focus":{"claim_id":"c0","need":"Identify the person born September 22 who popula
+  [search] ok=True err=None elapsed=0.014975395053625107
+    query: Nayeon September 22 birthday dance routine popularized song produced by Padi
+
+[dec d133] policy: {"action":"search","arguments":{"query":"September 22 birthday person popularized dance routine song produced by Padi","focus":{"claim_id":"c0","need":"Identify the person born September 22 who popula
+  [search] ok=True err=None elapsed=0.7540579228661954
+    query: September 22 birthday person popularized dance routine song produced by Padi
+
+[dec d137] policy: {"action":"search","arguments":{"query":"Nayeon September 22 birthday dance routine popularized song produced by Padi","focus":{"claim_id":"c0","need":"Identify the person born September 22 who popula
+  [search] ok=True err=None elapsed=0.016405353788286448
+    query: Nayeon September 22 birthday dance routine popularized song produced by Padi
+
+[dec d141] policy: {"action":"search","arguments":{"query":"famous person born September 22 popularized dance routine song produced by Padi","focus":{"claim_id":"c0","need":"Identify the person born September 22 who pop
+  [search] ok=True err=None elapsed=0.8640316752716899
+    query: famous person born September 22 popularized dance routine song produced by Padi
+
+[dec d145] policy: {"action":"search","arguments":{"query":"Nayeon September 22 birthday same birthday famous dancer popularized dance routine","focus":{"claim_id":"c0","need":"Identify the person born September 22 who 
+  [search] ok=True err=None elapsed=0.7639179811812937
+    query: Nayeon September 22 birthday same birthday famous dancer popularized dance routine
+
+[dec d149] policy: {"action":"search","arguments":{"query":"September 22 birthday dancer popularized dance routine song produced by Padi","focus":{"claim_id":"c0","need":"Identify the person born September 22 who popula
+  [search] ok=True err=None elapsed=0.015338480938225985
+    query: September 22 birthday dancer popularized dance routine song produced by Padi
+
+[dec d153] policy: {"action":"search","arguments":{"query":"September 22 birthday popularized dance routine song produced by Padi","focus":{"claim_id":"c0","need":"Identify the person born September 22 who popularized a
+  [search] ok=True err=None elapsed=0.7623612871393561
+    query: September 22 birthday popularized dance routine song produced by Padi
+
+[dec d157] policy: {"action":"search","arguments":{"query":"September 22 birthday person popularized dance routine song produced by Padi","focus":{"claim_id":"c0","need":"Identify the person born September 22 who popula
+  [search] ok=True err=None elapsed=0.7469278881326318
+    query: September 22 birthday person popularized dance routine song produced by Padi
+
+[dec d161] policy: {"action":"search","arguments":{"query":"September 22 birthday popularized dance routine song produced by Padi","focus":{"claim_id":"c0","need":"Identify the person born September 22 who popularized a
+  [search] ok=False err=unexposed_reference elapsed=0.02363608032464981
+    query: September 22 birthday popularized dance routine song produced by Padi
+
+[dec d165] policy: {"action":"search","arguments":{"query":"September 22 birthday popularized dance routine song Padi producer","focus":{"claim_id":"c0","need":"Identify the person born September 22 who popularized a da
+  [search] ok=True err=None elapsed=0.6253137462772429
+    query: September 22 birthday popularized dance routine song Padi producer
+
+[dec d169] policy: {"action":"search","arguments":{"query":"Nayeon birthday September 22 popularized dance routine song produced by Padi","focus":{"claim_id":"c0","need":"Identify the person born September 22 who popula
+  [search] ok=True err=None elapsed=0.744050401262939
+    query: Nayeon birthday September 22 popularized dance routine song produced by Padi
+
+[dec d173] policy: {"action":"open_page","arguments":{"docid":"56909"}}
+  [open_page] ok=True err=None elapsed=0.03559780027717352
+    open: 56909
+
+[dec d177] policy: {"action":"search","arguments":{"query":"September 22 birthday popularized dance routine song produced by Padi","focus":{"claim_id":"c0","need":"Identify the person born September 22 who popularized a
+  [search] ok=True err=None elapsed=0.0172528438270092
+    query: September 22 birthday popularized dance routine song produced by Padi
+
+[dec d181] policy: {"action":"search","arguments":{"query":"born September 22 popularized dance routine song produced by Padi","focus":{"claim_id":"c0","need":"Identify the person born September 22 who popularized a dan
+  [search] ok=True err=None elapsed=0.6414980310946703
+    query: born September 22 popularized dance routine song produced by Padi
+
+[dec d185] policy: {"action":"search","arguments":{"query":"September 22 birthday popularized dance routine song produced by Padi","focus":{"claim_id":"c0","need":"Identify the person born September 22 who popularized a
+  [search] ok=True err=None elapsed=0.019018424209207296
+    query: September 22 birthday popularized dance routine song produced by Padi
+
+[dec d189] policy: {"action":"submit_answer","arguments":{"decision":"abstain","reason":"The chain identifies Nayeon (born Sept 22, 1995) as the original member who surprised MiSaMo at their showcase, but no source has 
+  [submit_answer] ok=True err=None elapsed=0.00032948097214102745
+    decision=abstain answer=None reason=The chain identifies Nayeon (born Sept 22, 1995) a
+

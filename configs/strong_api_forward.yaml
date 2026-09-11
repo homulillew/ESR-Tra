@@ -1,0 +1,39 @@
+max_real_episodes_total: 240
+max_auxiliary_connectivity_requests: 12
+max_major_iterations: 4
+max_concurrency: 1
+max_actions_per_episode: 64
+max_completion_tokens_per_episode_including_audit: 24000
+max_completion_tokens_all_remote_calls: 6000000
+max_input_tokens_all_remote_calls: 30000000
+max_wall_seconds_per_episode: 900
+max_transport_attempts_per_request: 2
+max_protocol_repair_attempts_per_failed_proposal: 1
+confirmation_reserved_episodes: 54
+max_remote_requests_per_episode: 16
+max_execution_errors_per_episode: 6
+max_consecutive_execution_errors: 3
+max_tool_calls_per_decision: 4
+ordered_tool_calls: true
+provider:
+  base_url: http://lanz.hikvision.com/v3/anthropic/model
+  model: EB-GLM-5.2
+  credential_env: ANTHROPIC_AUTH_TOKEN
+  temperature: 0.6
+  max_output_tokens: 4096
+  policy_tool_interface: native
+  # Conservative operating cap, not a verified model context-window specification.
+  context_operating_cap: 128000
+  context_recovery_headroom: 2048
+  thinking: omitted_provider_default_unverified
+  model_revision: gateway_alias_unpinned
+  transport_timeout_seconds: 60
+dataset_root: D:/AgentSearchAssets/BrowseComp-Plus
+auditor:
+  citation_mode: source_spans
+  span_max_chars: 1200
+selection_seed: esr-strong-api-20260909-v1
+targets:
+  accuracy_improvement_percentage_points: 5
+  backend_tool_reduction_percent: 15
+  correct_completion_latency_reduction_percent: 10

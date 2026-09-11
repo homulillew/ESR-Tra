@@ -1,0 +1,253 @@
+### esr/off / qid 170
+total events: 249, decisions: 63
+
+[dec d1] policy: {"action":"search","arguments":{"query":"actor survived injury 1950s suggested plot producer credit TV series writer hospital","focus":{"claim_id":"c0","need":"In which season and TV series does a cha
+  [search] ok=True err=None elapsed=0.8325218870304525
+    query: actor survived injury 1950s suggested plot producer credit TV series writer hospital
+
+[dec d5] policy: {"action":"search","arguments":{"query":"actor survived injury 1950s suggested storyline writer producer credit TV series","focus":{"claim_id":"c0","need":"In which season and TV series does a charact
+  [search] ok=True err=None elapsed=0.7408279269002378
+    query: actor survived injury 1950s suggested storyline writer producer credit TV series
+
+[dec d9] policy: {"action":"search","arguments":{"query":"actor survived injury 1950s suggested story producer credit television series writer worked hospital","focus":{"claim_id":"c0","need":"Which TV series and seas
+  [search] ok=True err=None elapsed=0.844925771933049
+    query: actor survived injury 1950s suggested story producer credit television series writer worked hospital
+
+[dec d13] policy: {"action":"search","arguments":{"query":"actor survived injury 1950s suggested story producer credit TV series writer hospital work","focus":{"claim_id":"c0","need":"Which TV series and season has a c
+  [search] ok=True err=None elapsed=0.7978372201323509
+    query: actor survived injury 1950s suggested story producer credit TV series writer hospital work
+
+[dec d17] policy: {"action":"search","arguments":{"query":"actor survived injury 1950s suggested story producer credit television writer former hospital worker","top_k":20,"focus":{"claim_id":"c0","need":"Which TV seri
+  [search] ok=True err=None elapsed=0.85759766260162
+    query: actor survived injury 1950s suggested story producer credit television writer former hospital worker
+
+[dec d21] policy: {"action":"search","arguments":{"query":"actor survived \"1950s\" injury suggested story producer credit television writer hospital","focus":{"claim_id":"c0","need":"Which TV series and season has a c
+  [search] ok=True err=None elapsed=0.9256004309281707
+    query: actor survived "1950s" injury suggested story producer credit television writer hospital
+
+[dec d25] policy: {"action":"search","arguments":{"query":"actor suggested plot producer credit injury 1950s television series writer hospital","focus":{"claim_id":"c0","need":"Which TV series and season has a characte
+  [search] ok=True err=None elapsed=0.7664158809930086
+    query: actor suggested plot producer credit injury 1950s television series writer hospital
+
+[dec d29] policy: {"action":"open_page","arguments":{"docid":"1939","search_action_id":"a7"}}
+  [open_page] ok=True err=None elapsed=0.04521572310477495
+    open: 1939
+
+[dec d33] policy: {
+  "action": "open_page",
+  "arguments": {
+    "docid": "41035",
+    "query": "actor suggested plot producer credit injury 1950s television series writer hospital"
+  }
+}
+  [open_page] ok=True err=None elapsed=0.05044756131246686
+    open: 41035
+
+[dec d37] policy: {"action":"search","arguments":{"query":"actor survived injury 1950s suggested plot producer credit TV series writer worked hospital advocate charity","focus":{"claim_id":"c0","need":"Which TV series 
+  [search] ok=True err=None elapsed=0.8982860860414803
+    query: actor survived injury 1950s suggested plot producer credit TV series writer worked hospital advocate charity
+
+[dec d41] policy: {"action":"search","arguments":{"query":"actor suggested plot to writer got producer credit survived gunshot 1950s television series","focus":{"claim_id":"c0","need":"Which TV series and season has a 
+  [search] ok=True err=None elapsed=0.9384797560051084
+    query: actor suggested plot to writer got producer credit survived gunshot 1950s television series
+
+[dec d45] policy: {"action":"search","arguments":{"query":"actor survived gunshot wound 1950s suggested plot producer credit TV series writer worked hospital advocate","top_k":20,"focus":{"claim_id":"c0","need":"Which 
+  [search] ok=True err=None elapsed=1.0279306662268937
+    query: actor survived gunshot wound 1950s suggested plot producer credit TV series writer worked hospital advocate
+
+[dec d49] policy: {"action":"search","arguments":{"query":"actor suggested plot received producer credit survived shooting 1950s TV series writer worked hospital advocate","focus":{"claim_id":"c0","need":"Which TV seri
+  [search] ok=True err=None elapsed=1.0020344178192317
+    query: actor suggested plot received producer credit survived shooting 1950s TV series writer worked hospital advocate
+
+[dec d53] policy: {"action":"search","arguments":{"query":"actor survived being shot in the 1950s suggested plot TV series producer credit writer worked hospital advocate","focus":{"claim_id":"c0","need":"Which TV seri
+  [search] ok=True err=None elapsed=1.0466965129598975
+    query: actor survived being shot in the 1950s suggested plot TV series producer credit writer worked hospital advocate
+
+[dec d57] policy: {"action":"search","arguments":{"query":"actor survived gunshot wound 1950s suggested plot producer credit TV series writer hospital worker advocate victims","focus":{"claim_id":"c0","need":"Which TV 
+  [search] ok=True err=None elapsed=0.9939917959272861
+    query: actor survived gunshot wound 1950s suggested plot producer credit TV series writer hospital worker advocate victims
+
+[dec d61] policy: {
+  "action": "open_page",
+  "arguments": {
+    "docid": "85765",
+    "query": "actor survived gunshot wound 1950s suggested plot producer credit TV series writer hospital worker advocate victims"
+  }
+  [open_page] ok=True err=None elapsed=0.056867243722081184
+    open: 85765
+
+[dec d65] policy: {"action":"update_state","arguments":{"attempt_note":"Opened o3 (a general actor/actress database page) which contains brief bios of many actors, none matching the specific scenario. Pending o1 (Rod S
+  [update_state] ok=True err=None elapsed=0.001642389688640833
+
+[dec d69] policy: {"action":"search","arguments":{"query":"actor suggested plot survived attack season TV series producer credit writer previously worked hospital","focus":{"claim_id":"c0","need":"Identify TV series an
+  [search] ok=True err=None elapsed=0.9189978865906596
+    query: actor suggested plot survived attack season TV series producer credit writer previously worked hospital
+
+[dec d73] policy: {"action":"search","arguments":{"query":"actor suggested plot episode writer producer credit injury survived attack TV series season","focus":{"claim_id":"c0","need":"Identify TV series and season whe
+  [search] ok=True err=None elapsed=0.8478052141144872
+    query: actor suggested plot episode writer producer credit injury survived attack TV series season
+
+[dec d77] policy: {"action":"search","arguments":{"query":"actor survived injury 1950s suggested plot writer producer credit TV series attack character","anchor_refs":["1939","41035"],"focus":{"claim_id":"c0","need":"I
+  [search] ok=False err=unexposed_reference elapsed=0.009981529787182808
+    query: actor survived injury 1950s suggested plot writer producer credit TV series attack character
+
+[dec d81] policy: {"action":"search","arguments":{"query":"actor suggested plot writer producer credit injury survived attack season TV series","focus":{"claim_id":"c0","need":"Identify TV series and season where actor
+  [search] ok=True err=None elapsed=0.811383280903101
+    query: actor suggested plot writer producer credit injury survived attack season TV series
+
+[dec d85] policy: {"action":"search","arguments":{"query":"actor survived injury 1950s suggested plot writer producer credit advocate injury victims TV series","focus":{"claim_id":"c0","need":"Identify TV series and se
+  [search] ok=True err=None elapsed=0.8819745262153447
+    query: actor survived injury 1950s suggested plot writer producer credit advocate injury victims TV series
+
+  [invalid_model_response] ok=False err=protocol_error elapsed=7.42301344871521e-05
+
+[dec d92] policy: {"action":"search","arguments":{"query":"actor suggested plot writer received producer credit injury survived attack TV series season","focus":{"claim_id":"c0","need":"Identify TV series and season wh
+  [search] ok=True err=None elapsed=0.8469026507809758
+    query: actor suggested plot writer received producer credit injury survived attack TV series season
+
+[dec d96] policy: {"action":"search","arguments":{"query":"actor survived gunshot wound 1950s suggested plot to writer producer credit TV series episode attack","focus":{"claim_id":"c0","need":"Identify TV series and s
+  [search] ok=True err=None elapsed=0.8864483358338475
+    query: actor survived gunshot wound 1950s suggested plot to writer producer credit TV series episode attack
+
+[dec d100] policy: {"action":"search","arguments":{"query":"actor survived knife attack 1950s suggested episode plot producer credit advocate charity burn victims TV series","focus":{"claim_id":"c0","need":"Identify TV 
+  [search] ok=True err=None elapsed=0.999294641893357
+    query: actor survived knife attack 1950s suggested episode plot producer credit advocate charity burn victims TV series
+
+[dec d104] policy: ```json
+{"action":"search","arguments":{"query":"actor survived 1950s injury suggested plot to writer producer credit TV series character attacked","focus":{"claim_id":"c0","need":"Find the actor who 
+  [search] ok=True err=None elapsed=1.028003924060613
+    query: actor survived 1950s injury suggested plot to writer producer credit TV series character attacked
+
+[dec d108] policy: {"action":"search","arguments":{"query":"actor survived electrocution 1950s suggested episode plot producer credit TV series","focus":{"claim_id":"c0","need":"Find the actor who survived an injury in 
+  [search] ok=True err=None elapsed=0.7215835470706224
+    query: actor survived electrocution 1950s suggested episode plot producer credit TV series
+
+[dec d112] policy: {"action":"search","arguments":{"query":"actor survived 1950s injury suggested plot writer producer credit advocacy charity attack episode","focus":{"claim_id":"c0","need":"Find the actor who survived
+  [search] ok=True err=None elapsed=0.8131983173079789
+    query: actor survived 1950s injury suggested plot writer producer credit advocacy charity attack episode
+
+[dec d116] policy: {"action":"search","arguments":{"query":"actor suggested episode plot received producer credit survived injury 1950s Twilight Zone writer hospital","focus":{"claim_id":"c0","need":"Find the actor who 
+  [search] ok=True err=None elapsed=0.9469110239297152
+    query: actor suggested episode plot received producer credit survived injury 1950s Twilight Zone writer hospital
+
+[dec d120] policy: {"action":"search","arguments":{"query":"actor survived 1950s injury suggested plot writer producer credit advocacy charity attack episode Twilight Zone","focus":{"claim_id":"c0","need":"Find the acto
+  [search] ok=True err=None elapsed=1.1179760699160397
+    query: actor survived 1950s injury suggested plot writer producer credit advocacy charity attack episode Twilight Zone
+
+[dec d124] policy: {"action":"open_page","arguments":{"docid":"71359","search_action_id":"a31"}}
+  [open_page] ok=True err=None elapsed=0.041653303895145655
+    open: 71359
+
+[dec d128] policy: {"action":"search","arguments":{"query":"Twilight Zone actor survived 1950s injury suggested plot producer credit charity advocate","focus":{"claim_id":"c0","need":"Find the actor who survived an inju
+  [search] ok=True err=None elapsed=0.7508491510525346
+    query: Twilight Zone actor survived 1950s injury suggested plot producer credit charity advocate
+
+[dec d132] policy: {"action":"search","arguments":{"query":"Twilight Zone actor survived 1950s injury suggested plot producer credit writer hospital","focus":{"claim_id":"c0","need":"Find the actor who survived an injur
+  [search] ok=True err=None elapsed=0.7766311978921294
+    query: Twilight Zone actor survived 1950s injury suggested plot producer credit writer hospital
+
+[dec d136] policy: {"action":"update_state","arguments":{"attempt_note":"Search returned mostly irrelevant hits (Twilight Zone 1982 accident, stunt performers, actor sets, etc.). Rod Serling/Ida Lupino pages viewed don'
+  [update_state] ok=True err=None elapsed=0.0008678827434778214
+
+[dec d140] policy: {"action":"search","arguments":{"query":"Twilight Zone episode actor suggested plot survived burn injury producer credit writer hospital","focus":{"claim_id":"c0","need":"Find the actor who survived a
+  [search] ok=True err=None elapsed=0.7918302840553224
+    query: Twilight Zone episode actor suggested plot survived burn injury producer credit writer hospital
+
+  [invalid_model_response] ok=False err=protocol_error elapsed=6.509805098176003e-05
+
+[dec d147] policy: {"action":"search","arguments":{"query":"Twilight Zone actor injured 1950s suggested episode plot producer credit","focus":{"claim_id":"c0","need":"Find the actor who suggested a plot based on his own
+  [search] ok=True err=None elapsed=0.6486809342168272
+    query: Twilight Zone actor injured 1950s suggested episode plot producer credit
+
+[dec d151] policy: {"action":"open_page","arguments":{"docid":"95951","search_action_id":"a38"}}
+  [open_page] ok=True err=None elapsed=0.03818556107580662
+    open: 95951
+
+[dec d155] policy: {"action":"search","arguments":{"query":"Twilight Zone actor burn injury survived suggested plot producer credit writer hospital","focus":{"claim_id":"c0","need":"Find the actor who suggested a plot b
+  [search] ok=True err=None elapsed=0.7608976229093969
+    query: Twilight Zone actor burn injury survived suggested plot producer credit writer hospital
+
+[dec d159] policy: {"action":"search","arguments":{"query":"Twilight Zone actor injured 1950s burn suggested plot producer credit writer hospital","focus":{"claim_id":"c0","need":"Find the actor who suggested a plot bas
+  [search] ok=True err=None elapsed=0.7863158490508795
+    query: Twilight Zone actor injured 1950s burn suggested plot producer credit writer hospital
+
+[dec d163] policy: {"action":"open_page","arguments":{"docid":"1939","query":"Twilight Zone actor injured 1950s burn suggested plot producer credit writer hospital"}}
+  [open_page] ok=True err=None elapsed=0.037856834940612316
+    open: 1939
+
+[dec d167] policy: {"action":"search","arguments":{"query":"Twilight Zone actor burn injury 1950s suggested plot producer credit writer hospital","focus":{"claim_id":"c0","need":"Find the actor who suggested a plot base
+  [search] ok=True err=None elapsed=0.7773633692413568
+    query: Twilight Zone actor burn injury 1950s suggested plot producer credit writer hospital
+
+[dec d171] policy: {"action":"open_page","arguments":{"docid":"58978","query":"Twilight Zone actor burn injury 1950s suggested plot producer credit writer hospital"}}
+  [open_page] ok=True err=None elapsed=0.04722112976014614
+    open: 58978
+
+[dec d175] policy: {"action":"search","arguments":{"query":"Twilight Zone episode actor suffered burn injury 1950s suggested plot writer producer credit","focus":{"claim_id":"c0","need":"Find the actor who suggested a p
+  [search] ok=True err=None elapsed=0.8364043049514294
+    query: Twilight Zone episode actor suffered burn injury 1950s suggested plot writer producer credit
+
+[dec d179] policy: {"action":"search","arguments":{"query":"Twilight Zone episode actor burn scars suggested plot writer producer credit 1950s injury","focus":{"claim_id":"c0","need":"Find the actor who suggested a plot
+  [search] ok=True err=None elapsed=0.9209748930297792
+    query: Twilight Zone episode actor burn scars suggested plot writer producer credit 1950s injury
+
+[dec d183] policy: {"action":"update_state","arguments":{"target":"In which season and TV series does a character suffer an attack involving an injury that one of the actors had suffered and survived in real life in the
+  [update_state] ok=True err=None elapsed=0.0010610981844365597
+    claim[c0] oids=['o5', 'o6'] finding=Richard Matheson wrote many Twilight Zone episodes and is associated with the series; Rod 
+
+[dec d187] policy: {"action":"search","arguments":{"query":"Twilight Zone episode actor survived burns 1950s suggested plot writer producer credit","focus":{"claim_id":"c0","need":"Find specific Twilight Zone episode wh
+  [search] ok=True err=None elapsed=0.7716726041398942
+    query: Twilight Zone episode actor survived burns 1950s suggested plot writer producer credit
+
+[dec d191] policy: {"action":"search","arguments":{"query":"Twilight Zone actor suggested episode based on own injury survived 1950s writer hospital producer credit","focus":{"claim_id":"c0","need":"Find specific Twilig
+  [search] ok=True err=None elapsed=0.9245177181437612
+    query: Twilight Zone actor suggested episode based on own injury survived 1950s writer hospital producer credit
+
+[dec d195] policy: {"action":"update_state","arguments":{"dismiss_observation_ids":["o7"],"focus":{"claim_id":"c0","need":"Identify a Twilight Zone episode where the plot was suggested by an actor who survived a burn/sc
+  [update_state] ok=True err=None elapsed=0.0009763222187757492
+
+[dec d199] policy: {"action":"search","arguments":{"query":"Twilight Zone episode actor suggested plot writer hospital burns scalded charity advocate producer credit","focus":{"claim_id":"c0","need":"Find specific Twili
+  [search] ok=True err=None elapsed=0.8688031709752977
+    query: Twilight Zone episode actor suggested plot writer hospital burns scalded charity advocate producer credit
+
+[dec d203] policy: {"action":"search","arguments":{"query":"Twilight Zone episode actor survived scalding burns 1950s suggested plot producer credit writer hospital","focus":{"claim_id":"c0","need":"Find specific Twilig
+  [search] ok=True err=None elapsed=0.8735917820595205
+    query: Twilight Zone episode actor survived scalding burns 1950s suggested plot producer credit writer hospital
+
+[dec d207] policy: {"action":"search","arguments":{"query":"Twilight Zone episode actor suggested plot to writer producer credit survived burns charity advocate","focus":{"claim_id":"c0","need":"Find specific Twilight Z
+  [search] ok=True err=None elapsed=0.8704716167412698
+    query: Twilight Zone episode actor suggested plot to writer producer credit survived burns charity advocate
+
+[dec d211] policy: {"action":"read_evidence","arguments":{"directory_cursor":"start"}}
+  [read_evidence] ok=True err=None elapsed=0.0003553014248609543
+
+  [invalid_model_response] ok=False err=protocol_error elapsed=4.265597090125084e-05
+
+[dec d218] policy: {"action":"read_evidence","arguments":{"directory_cursor":"start"}}
+  [read_evidence] ok=True err=None elapsed=0.0003834720700979233
+
+[dec d222] policy: {"action":"read_evidence","arguments":{"directory_cursor":"start"}}
+  [read_evidence] ok=True err=None elapsed=0.0003703013062477112
+
+[dec d226] policy: {"action":"open_page","arguments":{"docid":"75752"}}
+  [open_page] ok=True err=None elapsed=0.03979894798249006
+    open: 75752
+
+[dec d230] policy: {"action":"read_evidence","arguments":{"directory_cursor":"start"}}
+  [read_evidence] ok=True err=None elapsed=0.0004050629213452339
+
+[dec d234] policy: {"action":"read_evidence","arguments":{"directory_cursor":"start"}}
+  [read_evidence] ok=True err=None elapsed=0.00043469900265336037
+
+[dec d238] policy: {"action":"search","arguments":{"query":"Twilight Zone actor suggested plot survived injury 1950s producer credit charity advocate","focus":{"claim_id":"c0","need":"Find specific Twilight Zone episode
+  [search] ok=True err=None elapsed=0.7417051298543811
+    query: Twilight Zone actor suggested plot survived injury 1950s producer credit charity advocate
+
+[dec d242] policy: {"action":"search","arguments":{"query":"Twilight Zone episode actor suggested plot writer producer credit survived burns charity","focus":{"claim_id":"c0","need":"Identify the Twilight Zone episode w
+  [search] ok=True err=None elapsed=0.8582014171406627
+    query: Twilight Zone episode actor suggested plot writer producer credit survived burns charity
+
+[dec d246] policy: {"action":"submit_answer","arguments":{"decision":"abstain","reason":"Insufficient evidence to identify the specific episode and series. Searches returned only general anthology series and Rod Serling
+  [submit_answer] ok=True err=None elapsed=0.0003882632590830326
+    decision=abstain answer=None reason=Insufficient evidence to identify the specific epi
+

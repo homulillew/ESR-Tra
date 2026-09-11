@@ -1,0 +1,154 @@
+### esr/off / qid 854
+total events: 157, decisions: 40
+
+[dec d1] policy: {"action":"search","arguments":{"query":"February 2017 animal injured car accident road built by orphan widowed 1850s road builder","focus":{"claim_id":"c0","need":"Identify the February 2017 article 
+  [search] ok=True err=None elapsed=1.0445045200176537
+    query: February 2017 animal injured car accident road built by orphan widowed 1850s road builder
+
+[dec d5] policy: {"action":"search","arguments":{"query":"February 2017 animal injured car accident road built by Horace King bridge builder","focus":{"claim_id":"c0","need":"Find the February 2017 article about an an
+  [search] ok=True err=None elapsed=1.088503250386566
+    query: February 2017 animal injured car accident road built by Horace King bridge builder
+
+[dec d9] policy: {"action":"search","arguments":{"query":"February 2017 bear injured car accident road built ","top_k":20,"focus":{"claim_id":"c0","need":"Find the February 2017 article about an animal injured in a ca
+  [search] ok=True err=None elapsed=0.673992611002177
+    query: February 2017 bear injured car accident road built 
+
+[dec d13] policy: {"action":"search","arguments":{"query":"February 2017 deer injured car accident bridge built Horace King Alabama","focus":{"claim_id":"c0","need":"Find the February 2017 article about an animal injur
+  [search] ok=True err=None elapsed=0.9948399378918111
+    query: February 2017 deer injured car accident bridge built Horace King Alabama
+
+[dec d17] policy: {"action":"search","arguments":{"query":"Horace King bridge built road animal car accident 2017 deer weight","top_k":20,"focus":{"claim_id":"c0","need":"Find a February 2017 news article about a deer 
+  [search] ok=True err=None elapsed=0.8936192728579044
+    query: Horace King bridge built road animal car accident 2017 deer weight
+
+[dec d21] policy: {"action":"search","arguments":{"query":"February 2017 deer hit car injured weight kilograms road bridge built","focus":{"claim_id":"c0","need":"Find a February 2017 news article about an animal injur
+  [search] ok=True err=None elapsed=0.8383099269121885
+    query: February 2017 deer hit car injured weight kilograms road bridge built
+
+[dec d25] policy: {"action":"search","arguments":{"query":"Horace King bridge road built deer elk car accident February 2017 weight","focus":{"claim_id":"c0","need":"Find a February 2017 news article about an animal in
+  [search] ok=True err=None elapsed=0.8959965012036264
+    query: Horace King bridge road built deer elk car accident February 2017 weight
+
+[dec d29] policy: {"action":"search","arguments":{"query":"deer injured car accident February 2017 weight pounds road bridge built","focus":{"claim_id":"c0","need":"Find a February 2017 news article about an animal inj
+  [search] ok=True err=None elapsed=0.893719641957432
+    query: deer injured car accident February 2017 weight pounds road bridge built
+
+[dec d33] policy: {"action":"search","arguments":{"query":"bridge built by Horace King deer elk injured car accident road weight","top_k":20,"focus":{"claim_id":"c0","need":"Identify the road/bridge builder (orphan, wi
+  [search] ok=True err=None elapsed=1.2286486839875579
+    query: bridge built by Horace King deer elk injured car accident road weight
+
+  [invalid_model_response] ok=False err=protocol_error elapsed=6.80689699947834e-05
+
+[dec d40] policy: {"action":"search","arguments":{"query":"Horace King bridge builder orphan widowed 1850s married 199 years before 2017 deer injured car accident","focus":{"claim_id":"c0","need":"Find the road/bridge 
+  [search] ok=True err=None elapsed=1.2400376130826771
+    query: Horace King bridge builder orphan widowed 1850s married 199 years before 2017 deer injured car accident
+
+[dec d44] policy: {"action":"search","arguments":{"query":"Horace King bridge builder married orphan widowed 1850s built roads Alabama","focus":{"claim_id":"c0","need":"Identify the road/bridge builder and locate the F
+  [search] ok=True err=None elapsed=0.6645470261573792
+    query: Horace King bridge builder married orphan widowed 1850s built roads Alabama
+
+[dec d48] policy: {"action":"open_page","arguments":{"docid":"21545","search_action_id":"a12"}}
+  [open_page] ok=True err=None elapsed=0.020375019870698452
+    open: 21545
+
+[dec d52] policy: {"action":"search","arguments":{"query":"Horace King bridges built total roads family member wife Frances died widowed 1857 orphan","focus":{"claim_id":"c0","need":"Confirm Horace King as road/bridge 
+  [invalid_model_response] ok=False err=protocol_error elapsed=9.899772703647614e-05
+
+[dec d56] policy: {"action":"update_state","arguments":{"claim_updates":[{"claim_id":"c0","finding":"Horace King (1807-1885) was a bridge-builder in Alabama/Georgia. In 1839 he married Frances Gould Thomas. The page do
+  [update_state] ok=True err=None elapsed=0.001756330020725727
+    claim[c0] oids=['o1'] finding=Horace King (1807-1885) was a bridge-builder in Alabama/Georgia. In 1839 he married France
+
+[dec d60] policy: {"action":"search","arguments":{"query":"Horace King widow 1850s orphan biography","focus":{"claim_id":"c0","need":"Confirm Horace King was orphaned and widowed in late 1850s; confirm he and a family 
+  [search] ok=True err=None elapsed=0.4182813451625407
+    query: Horace King widow 1850s orphan biography
+
+[dec d64] policy: {"action":"open_page","arguments":{"docid":"21545","query":"Horace King bridge builder married orphan widowed 1850s built roads Alabama"}}
+  [open_page] ok=True err=None elapsed=0.023276837076991796
+    open: 21545
+
+[dec d68] policy: {"action":"search","arguments":{"query":"Horace King orphan widowed 1858 wife died","focus":{"claim_id":"c0","need":"Confirm Horace King was orphaned and widowed in the late 1850s, confirm the family 
+  [search] ok=True err=None elapsed=0.5335707413032651
+    query: Horace King orphan widowed 1858 wife died
+
+[dec d72] policy: {"action":"search","arguments":{"query":"Horace King bridge builder orphan widowed sons roads built","focus":{"claim_id":"c0","need":"Confirm Horace King was orphaned and widowed in the late 1850s; co
+  [search] ok=True err=None elapsed=0.7747265761718154
+    query: Horace King bridge builder orphan widowed sons roads built
+
+[dec d76] policy: {"action":"open_page","arguments":{"docid":"21545","search_action_id":"a19"}}
+  [open_page] ok=True err=None elapsed=0.024986532051116228
+    open: 21545
+
+[dec d80] policy: {"action":"search","arguments":{"query":"Horace King widow Frances died 1858 orphan bridge builder","focus":{"claim_id":"c0","need":"Confirm Horace King was orphaned and widowed in the late 1850s; con
+  [search] ok=True err=None elapsed=0.679089224897325
+    query: Horace King widow Frances died 1858 orphan bridge builder
+
+[dec d84] policy: {"action":"search","arguments":{"query":"Horace King orphan widowed 1858 wife died Frances Thomas","focus":{"claim_id":"c0","need":"Confirm Horace King was orphaned and widowed in the late 1850s; conf
+  [search] ok=True err=None elapsed=0.7198240230791271
+    query: Horace King orphan widowed 1858 wife died Frances Thomas
+
+[dec d88] policy: {"action":"open_page","arguments":{"docid":"21545","query":"Horace King Frances died 1858 orphan"}}
+  [open_page] ok=True err=None elapsed=0.020575757138431072
+    open: 21545
+
+[dec d92] policy: {"action":"update_state","arguments":{"claim_updates":[{"claim_id":"c0","finding":"Horace King (1807-1885) was a bridge-builder. He married Frances Gould Thomas in 1839. Frances died about three month
+  [update_state] ok=True err=None elapsed=0.0012754620984196663
+    claim[c0] oids=['o3'] finding=Horace King (1807-1885) was a bridge-builder. He married Frances Gould Thomas in 1839. Fra
+
+[dec d96] policy: {"action":"update_state","arguments":{"attempt_note":"Horace King clue refuted; need to find builder married 1818, orphaned/widowed late 1850s, built 28-40 roads with family member.","focus":{"claim_i
+  [update_state] ok=True err=None elapsed=0.0008328231051564217
+
+[dec d100] policy: {"action":"search","arguments":{"query":"road built 1818 marriage orphan widowed 1850s built 28 roads car accident February 2017","top_k":20,"focus":{"claim_id":"c0","need":"Identify the road builder 
+  [search] ok=True err=None elapsed=1.0347489179112017
+    query: road built 1818 marriage orphan widowed 1850s built 28 roads car accident February 2017
+
+[dec d104] policy: {"action":"search","arguments":{"query":"bridge builder married 1818 orphan widowed 1850s built 30 bridges family","focus":{"claim_id":"c0","need":"Identify road/bridge builder who married in 1818, wa
+  [search] ok=True err=None elapsed=0.6719921408221126
+    query: bridge builder married 1818 orphan widowed 1850s built 30 bridges family
+
+[dec d108] policy: {"action":"search","arguments":{"query":"Horace King bridge builder married 1818 orphan widowed 1850s","focus":{"claim_id":"c0","need":"Identify road/bridge builder who married in 1818, was orphaned a
+  [search] ok=True err=None elapsed=0.6316315429285169
+    query: Horace King bridge builder married 1818 orphan widowed 1850s
+
+[dec d112] policy: {"action":"search","arguments":{"query":"road builder married 1818 orphan widowed 1858 built bridges brother son","focus":{"claim_id":"c0","need":"Identify road/bridge builder who married in 1818, was
+  [search] ok=True err=None elapsed=0.7629385818727314
+    query: road builder married 1818 orphan widowed 1858 built bridges brother son
+
+[dec d116] policy: {"action":"search","arguments":{"query":"Horace King bridge builder orphan widowed married 1818","focus":{"claim_id":"c0","need":"Identify road/bridge builder who married in 1818, was orphaned and wid
+  [search] ok=True err=None elapsed=0.5506895468570292
+    query: Horace King bridge builder orphan widowed married 1818
+
+[dec d120] policy: {"action":"update_state","arguments":{"focus":{"claim_id":"c0","need":"Identify a non-Horace King road/bridge builder who married in 1818, was orphaned and widowed in late 1850s, built 28-40 structure
+  [update_state] ok=True err=None elapsed=0.0008900919929146767
+
+  [invalid_model_response] ok=False err=protocol_error elapsed=0.0002594580873847008
+
+  [invalid_model_response] ok=False err=protocol_error elapsed=5.5890996009111404e-05
+
+[dec d130] policy: {"action":"search","arguments":{"query":"Andrew Geddes Bain married 1818 widowed 1850s built roads","focus":{"claim_id":"c0","need":"Identify road/bridge builder who married in 1818, was orphaned and 
+  [search] ok=True err=None elapsed=0.5898305638693273
+    query: Andrew Geddes Bain married 1818 widowed 1850s built roads
+
+[dec d134] policy: {"action":"open_page","arguments":{"docid":"3817","query":"Andrew Geddes Bain married 1818 widowed 1850s built roads"}}
+  [open_page] ok=True err=None elapsed=0.026506728027015924
+    open: 3817
+
+[dec d138] policy: {"action":"update_state","arguments":{"claim_updates":[{"claim_id":"c0","finding":"Andrew Geddes Bain (born June 1797) married Elizabeth von Backström on 16 November 1818. His wife passed away after t
+  [update_state] ok=True err=None elapsed=0.0010455390438437462
+    claim[c0] oids=['o4'] finding=Andrew Geddes Bain (born June 1797) married Elizabeth von Backström on 16 November 1818. H
+
+[dec d142] policy: {"action":"search","arguments":{"query":"Bainskloof Pass baboon injured car accident February 2017 weight","focus":{"claim_id":"c0","need":"Find February 2017 article about animal injured in car accid
+  [search] ok=True err=None elapsed=0.6380068520084023
+    query: Bainskloof Pass baboon injured car accident February 2017 weight
+
+[dec d146] policy: {"action":"open_page","arguments":{"docid":"41381","search_action_id":"a37"}}
+  [open_page] ok=True err=None elapsed=0.02812032401561737
+    open: 41381
+
+[dec d150] policy: {"action":"update_state","arguments":{"answer":"37 kg","claim_updates":[{"claim_id":"c0","finding":"Andrew Geddes Bain (born June 1797) married Elizabeth von Backström on 16 November 1818. His wife pa
+  [update_state] ok=True err=None elapsed=0.0010629380121827126
+    claim[c0] oids=['o4', 'o5'] finding=Andrew Geddes Bain (born June 1797) married Elizabeth von Backström on 16 November 1818. H
+
+[dec d154] policy: {"action":"submit_answer","arguments":{"decision":"answer","reason":"Evidence o5 from Cape Leopard Trust (2017-02-21) states a leopard was hit by a car on Bainskloof Pass on 16 Feb 2017 and weighed 37
+  [submit_answer] ok=True err=None elapsed=0.0007112547755241394
+    decision=answer answer=None reason=Evidence o5 from Cape Leopard Trust (2017-02-21) s
+
