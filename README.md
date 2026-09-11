@@ -1,3 +1,5 @@
+> **本分支的 v3 入口：[ESR v3 运行与文档](README_V3.md)。** 新实现位于 `src/esr_harness_v3`，使用 `python -m esr_harness_v3`。下方保留从 main 分支继承的 v2 说明，旧入口和历史实验不变。v3 的实际验证范围见 [VALIDATION](docs/v3/VALIDATION.md)。
+
 # ESR: Evidence-State Research
 
 ## 当前入口：前向 Harness v2

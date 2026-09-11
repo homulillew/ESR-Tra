@@ -1,0 +1,63 @@
+{
+  "fixture_only": true,
+  "protocol": "esr-v3-reference-light-1",
+  "terminal": {
+    "outcome": "submitted",
+    "answer": "Mira Vale",
+    "basis": {
+      "direct_refs": [
+        "o1"
+      ],
+      "premises": {},
+      "sources": [
+        "o1"
+      ],
+      "trace": [
+        {
+          "selector": "this",
+          "resolved": "o1",
+          "kind": "raw",
+          "origin": "decision_snapshot"
+        }
+      ]
+    },
+    "bundle": {
+      "question": "Who was the first director of the Orin institute?",
+      "answer": "Mira Vale",
+      "contract": {
+        "require_sources": true,
+        "source_policy": "actual_delivered_raw",
+        "protocol": "esr-v3-reference-light-1"
+      },
+      "direct_refs": [
+        "o1"
+      ],
+      "premises": {},
+      "records": {},
+      "sources": {
+        "o1": {
+          "text": "The first director of the Orin institute was Mira Vale.",
+          "hash": "d2d772496f3c660fcb2dd30a0e7eee23a70cd84ff36a23f178e8fbd2540d71ce",
+          "observation": "o1",
+          "document": "d1",
+          "snapshot": "a44b8b92c5f157eadc5a20649676c5516e8543662abb5183059b6fdc14f0ed8f"
+        }
+      },
+      "conflicts": {},
+      "checks": [
+        "target",
+        "coverage"
+      ]
+    },
+    "audit_status": "unverified",
+    "audit_id": null,
+    "external_basis": true
+  },
+  "model_decisions": 3,
+  "backend_calls": 2,
+  "real_model_calls": 0,
+  "benchmark_accuracy": null,
+  "event_count": 21
+}
+
+STDERR:

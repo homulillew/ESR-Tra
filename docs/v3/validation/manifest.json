@@ -1,0 +1,101 @@
+{
+  "timestamp_utc": "2026-09-11T10:29:39.480798+00:00",
+  "python": "3.13.5",
+  "platform": "Linux-6.18.35-x86_64-with-glibc2.41",
+  "status": "PASS",
+  "legacy_regression": "NOT_RUN",
+  "real_model_calls": 0,
+  "benchmark_accuracy": null,
+  "commands": [
+    {
+      "command": [
+        "/opt/pyvenv/bin/python",
+        "-m",
+        "pytest",
+        "tests/harness_v3",
+        "-q",
+        "--junitxml=/mnt/data/esr_v3_build/acceptance_03/junit.xml"
+      ],
+      "returncode": 0,
+      "log": "01.log"
+    },
+    {
+      "command": [
+        "/opt/pyvenv/bin/python",
+        "-m",
+        "compileall",
+        "-q",
+        "src/esr_harness_v3"
+      ],
+      "returncode": 0,
+      "log": "02.log"
+    },
+    {
+      "command": [
+        "/opt/pyvenv/bin/python",
+        "-m",
+        "esr_harness_v3",
+        "schema"
+      ],
+      "returncode": 0,
+      "log": "03.log"
+    },
+    {
+      "command": [
+        "/opt/pyvenv/bin/python",
+        "-m",
+        "esr_harness_v3",
+        "smoke",
+        "--db",
+        "/tmp/esr-v3-acceptance-p10w7cnw/smoke.sqlite"
+      ],
+      "returncode": 0,
+      "log": "04.log"
+    },
+    {
+      "command": [
+        "/opt/pyvenv/bin/python",
+        "-m",
+        "esr_harness_v3",
+        "replay",
+        "--db",
+        "/tmp/esr-v3-acceptance-p10w7cnw/smoke.sqlite"
+      ],
+      "returncode": 0,
+      "log": "05.log"
+    },
+    {
+      "command": [
+        "/opt/pyvenv/bin/python",
+        "-m",
+        "esr_harness_v3",
+        "export",
+        "--db",
+        "/tmp/esr-v3-acceptance-p10w7cnw/smoke.sqlite",
+        "--output",
+        "/tmp/esr-v3-acceptance-p10w7cnw/trace.json"
+      ],
+      "returncode": 0,
+      "log": "06.log"
+    }
+  ],
+  "sha256": {
+    "src/esr_harness_v3/__init__.py": "eb0eb0f4f156c56cc9e26992111d62f8c2e4f61732eb2051c1bed58d6dc978f3",
+    "src/esr_harness_v3/__main__.py": "935a1c1166b0c1ea35a82256345000bf2c73ded718d77773bc27a71ecce28f7d",
+    "src/esr_harness_v3/adapters.py": "cf0cb7bc1ab0e28d04ddf09ec6f953c3819c14cacf4be78073e69a826674e8c7",
+    "src/esr_harness_v3/audit.py": "e19f20a7bae75c6440767528e358b4fbc2ac5509d135476d15caa69aa0cf6a4d",
+    "src/esr_harness_v3/cli.py": "e3f375bd7a41785f17b2ba9696395fc01d5ea3d17cdc49d667b0ac1c3f5b937c",
+    "src/esr_harness_v3/context.py": "ed056bc2222f9904649a9d90bc139a6d75c39bbacac0f7259bb90d42809d8d1f",
+    "src/esr_harness_v3/engine.py": "fa9de59ce8f2e71a84c6d8aa5e7b3747d8a2eb0f6cb43a45b4a3664441b73ae9",
+    "src/esr_harness_v3/protocol.py": "dfef0cf67c810773e84536e8bdab23866fc96f6930a5294051025384e9061748",
+    "src/esr_harness_v3/state.py": "e2fa3cef7d561f045b571af779476e63c8f0e8e73654d1409488faa15cf46ea7",
+    "src/esr_harness_v3/store.py": "c0ad0731b51ac69cfe38cbe6892e2f080279b3bf20c7c87d5c85a99bb48d19b6",
+    "src/esr_harness_v3/training.py": "38fe6436608505f706c1ba75a1fb2e3cad2acc2657964a56946f54354b40bae6",
+    "tests/harness_v3/__init__.py": "eb98b57ec85634b55219376f912a3bacab45ae5f0a1a4b3f6515e7c8d76538c5",
+    "tests/harness_v3/conftest.py": "8778a211e4e1c2daf5d806c5e3d4733fc4e0ba213e8985777a27c6cc68ab8b00",
+    "tests/harness_v3/test_audit.py": "fe4a3aaafd1af28297f8b6e3870f6392ee9dee32b06c89536948b07a0249bc02",
+    "tests/harness_v3/test_contract.py": "8e9a38756d6a1244205781f44008c9166f09178abbb1550021ba172b1f5e05e0",
+    "tests/harness_v3/test_engine.py": "2b749426644a68622f995ae741608710ed390259d4106ea5fa98014a3ea9cd78",
+    "tests/harness_v3/test_io.py": "468d9aebcb21eab943b60d0a420b5f12333bded9f223edf953fbebbab9ce5b44"
+  }
+}

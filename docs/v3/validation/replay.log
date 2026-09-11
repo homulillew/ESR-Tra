@@ -1,0 +1,58 @@
+{
+  "verified_events": 21,
+  "head": "dc0086468f1354095d2dbb8a1907e079be9a17c7ca095b6a52fe13fafdc6ae29",
+  "terminal": {
+    "answer": "Mira Vale",
+    "audit_id": null,
+    "audit_status": "unverified",
+    "basis": {
+      "direct_refs": [
+        "o1"
+      ],
+      "premises": {},
+      "sources": [
+        "o1"
+      ],
+      "trace": [
+        {
+          "kind": "raw",
+          "origin": "decision_snapshot",
+          "resolved": "o1",
+          "selector": "this"
+        }
+      ]
+    },
+    "bundle": {
+      "answer": "Mira Vale",
+      "checks": [
+        "target",
+        "coverage"
+      ],
+      "conflicts": {},
+      "contract": {
+        "protocol": "esr-v3-reference-light-1",
+        "require_sources": true,
+        "source_policy": "actual_delivered_raw"
+      },
+      "direct_refs": [
+        "o1"
+      ],
+      "premises": {},
+      "question": "Who was the first director of the Orin institute?",
+      "records": {},
+      "sources": {
+        "o1": {
+          "document": "d1",
+          "hash": "d2d772496f3c660fcb2dd30a0e7eee23a70cd84ff36a23f178e8fbd2540d71ce",
+          "observation": "o1",
+          "snapshot": "a44b8b92c5f157eadc5a20649676c5516e8543662abb5183059b6fdc14f0ed8f",
+          "text": "The first director of the Orin institute was Mira Vale."
+        }
+      }
+    },
+    "external_basis": true,
+    "outcome": "submitted"
+  }
+}
+
+STDERR:

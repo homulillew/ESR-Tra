@@ -4,10 +4,10 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "esr-forward-harness"
-version = "2.0.0"
-description = "Evidence-state inference harness with immutable observations and auditable transitions"
+version = "3.0.0a1"
+description = "Versioned ESR harnesses: v2 compatibility and reference-light v3 research"
 requires-python = ">=3.10"
-dependencies = []
+dependencies = ["jsonschema>=4"]
 
 [project.optional-dependencies]
 model = ["transformers"]
@@ -15,11 +15,12 @@ test = ["pytest>=8", "jsonschema>=4"]
 
 [project.scripts]
 esr-harness = "esr_harness.cli:main"
+esr-harness-v3 = "esr_harness_v3.cli:main"
 
 [tool.setuptools.packages.find]
 where = ["src"]
 include = ["esr_harness*", "esr_grpo*"]
 
 [tool.pytest.ini_options]
-testpaths = ["tests/harness_v2"]
+testpaths = ["tests/harness_v2", "tests/harness_v3"]
 pythonpath = ["src"]
