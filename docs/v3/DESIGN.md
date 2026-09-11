@@ -115,7 +115,7 @@ verify 是反馈边界，之后的预生成操作不执行；submit 是终止边
 
 `checks` 使用键映射，不按数组位置猜对象。完整答案必须有 target、coverage；明确选用的 claim 也须完整返回。所有行含 verdict/explanation/refs。取消旧 status/need 空值配对；局部支持/反对要有该 claim 允许的真实原文路径，不能从另一 claim 的引用集合借用。
 
-原文只按实际包范围展开。报告不合法或服务失败不产生候选错误结论；协议修复最多两次，保留原包、原输出和全部成本。不是循环到出现 supported。
+原文只按实际包范围展开。报告不合法或服务失败不产生候选错误结论。`audit_attempts=2` 表示首次请求加最多一次格式修复，总计最多两次请求；保留原包、原输出和全部成本。格式修复耗尽或服务失败后结束相关 episode。
 
 答案包包含准确字符、共同任务契约、直接原文、前提版本、对应来源与相关冲突、检查集合。缓存再绑定审核模型身份与 prompt。只有完全匹配的包能附带该报告。审 A 不替 B 背书，局部全真不代替整题全真。
 
@@ -129,9 +129,11 @@ verify 是反馈边界，之后的预生成操作不执行；submit 是终止边
 
 合法 noop 允许且不刷新版本；changed 不是语义成功。错误审核反例必须进入测试。若反复同参，按共同固定预算结束，不自动延长失败 episode。
 
-模型请求预算统一包含 policy、audit 和审核格式修复；每次真实请求先记尝试，usage 缺失保留 unknown_calls。服务不自动重试；失败可能已计费，保留尝试不伪造 token。后端调用另计，不和模型轮数混为一谈。
+模型请求预算统一包含 policy、audit 和审核格式修复；每次真实请求先记尝试，usage 缺失保留 unknown_calls。只有部分 usage 字段时分别累计已知输入/输出 token，并保留该请求的未知标记。服务不自动重试；失败可能已计费，保留尝试不伪造 token。后端调用另计，不和模型轮数混为一谈。
 
-启动审核前，剩余请求必须覆盖本次审核最大尝试与至少一次后续策略决定。缓存也保留一次策略反应预算。最后一次策略决定可以直接 submit；若仍选择读取，系统不自动替它提交。
+启动审核前，剩余请求必须覆盖本次审核最大尝试与至少一次后续策略决定。动作额度也必须足以记录当前响应的全部后缀，并留下至少一个反应动作；缓存审核同样遵守两种额度。最后一次策略决定可以直接 submit；若仍选择读取，系统不自动替它提交。
+
+原始 provider 响应存在时，执行器从该响应解析工具，忽略另行传入的不同消息。原响应与 usage 先落账；明确的截断/过滤结束、畸形响应外层、审核服务故障、审核格式修复耗尽和检索响应协议错误会停止相关 episode。合法原生调用组中的失败和未执行后缀仍逐项形成回执。旧合成 fixture 可以省略 finish_reason，这种兼容路径不能作为真实 provider 已完整响应的验收证据。
 
 模型答案原样保存。省略最终 refs 表示本次没有明确外部依据，不继承草稿来源。`require_sources=True` 可冻结有来源契约；编号专项必须使用这一模式。budget/service/interrupted 终态保留草稿，正式答案为空。
 
@@ -141,7 +143,7 @@ SQLite 每个事件有序号、前哈希和内容哈希，写入采用 BEGIN IMM
 
 完整 state 快照随关键事件保存，回放只读并核验事件链，不执行历史工具。此版本偏重可核查性，长轨迹快照有存储放大，不宣称已优化大规模吞吐。哈希链是完整性检查，不是对恶意重写全库的认证。
 
-`resume=True` 只恢复已完整结束的决策边界，并核对原题、配置、检索身份和容量单位。若进程在请求/动作组中断，标记 interrupted 而不重新发送未知是否完成的调用。旧 v2 数据库不迁移、不覆盖。
+`resume=True` 只恢复已完整结束的决策边界，并核对原题、配置、检索身份、审核器身份、容量单位和计数器身份。若进程在请求/动作组中断，标记 interrupted 而不重新发送未知是否完成的调用。旧 v2 数据库不迁移、不覆盖。
 
 ## 13. 外部运行入口
 
@@ -174,11 +176,17 @@ python -m esr_harness_v3 run \
 
 API 接口仅声明 OpenAI-compatible chat-completions；没有声称验证了 Lanz/Anthropic 原生格式。真实模型模板、工具 schema 接受度、输出预算参数和 token 计算需先做 provider 联通验收。`hf_counter` 禁用 remote code、只用本地 tokenizer；它必须与服务端模板核对。离线默认计数是 UTF-8 字节，明确不是 provider token。
 
+`run` 的 `--max-model-calls` 是必填参数，覆盖 policy 和 audit 的合计请求。URL 必须有有效主机，不接受用户名、密码、query 或 fragment；认证只从指定的环境变量读取。`hf_counter` 记录词表、chat template 和特殊 token 的指纹；指纹一致仍不证明与服务端实际模板一致。
+
+`cohort-fixture` 只执行合成脚本，先冻结问题、this 开关、共同配置、索引/源码/prompt 指纹和完整队列，再验证首次服务失败停止队列。`cohort-summary` 只读全部登记槽位；未知用量、失败和 NOT_RUN 均保留，缺少独立 judge 时正式准确率与正确完成耗时为空。`this_off` 仍是 ESR，不能命名为无 ESR baseline。当前工具没有接入真实 BC+ 调度、共同 baseline 或正式判分器。
+
+`prefix` 从 SQLite 复制某次已有响应的实际适配器请求与当时的 this/claim 快照，不重建证据或添加标签。缺少原始 wire_request、只有未完成请求时拒绝导出。合成前缀保持合成身份，不能计为模型自然失败前缀。
+
 本轮没有发起上述真实运行。CLI 没有内置从 BC+ gold 计算奖励；外部评测必须独立、冻结。
 
 ## 14. GRPO 与后续学习
 
-`training_export` 导出真实请求、this 绑定、原始响应和动作记录。只有采样端显式提供 token_ids、old_logprobs、action_spans、tokenizer_identity 且通过结构检查，才标记记录采样完整；`--require-rl` 在信息不全时拒绝导出为 RL-ready。OpenAI 适配器当前不会凭响应文字重新 tokenize 来补齐这些量。
+`training_export` 导出真实请求、this 绑定、原始响应和动作记录。只有采样端显式提供 token_ids、old_logprobs、action_spans、tokenizer_identity 且通过结构检查，才标记记录采样完整：跨度非空且精确覆盖已记录动作 ID，logprob 有限且不大于 0，tokenizer_identity 是非空身份字符串。`--require-rl` 在信息不全时拒绝导出为 RL-ready。结构检查不能证明采样端没有伪造字段；当前没有经过真实采样器的训练验收。OpenAI 适配器不会凭响应文字重新 tokenize 来补齐这些量。
 
 这不是完整 GRPO/verl 训练接入，不包含优化器、reward 或已训练权重。后续先建立均匀全链 GRPO，再测试有界来源调制与等集中度随机对照。程序自动上下文重建不算策略 read，后台失效不算模型修复。直接选择、继承来源、导航和因果贡献分开。
 

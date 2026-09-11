@@ -144,3 +144,30 @@ def test_resume_rejects_changed_auditor_identity(tmp_path):
     with pytest.raises(ContractError, match='must match'):
         h = Harness('Q', MemoryRetriever(DOCS), ledger=path, auditor=other, resume=True)
         h.close()
+
+
+def test_raw_provider_action_cannot_be_replaced_by_a_different_extracted_message():
+    h = Harness('Q', MemoryRetriever(DOCS))
+    try:
+        d = h.begin()
+        raw = RepeatingPolicy('submit_answer', {'answer': 'provider A'}).complete(d.payload)
+        other = RepeatingPolicy('submit_answer', {'answer': 'different B'}).complete(d.payload)['choices'][0]['message']
+        h.respond(d, other, raw=raw, usage=raw['usage'])
+        assert h.terminal['answer'] == 'provider A'
+    finally:
+        h.close()
+
+
+@pytest.mark.parametrize('overrides', [{'old_logprobs': [0.5]}, {'tokenizer_identity': ['not-an-identity']}])
+def test_invalid_sampler_probabilities_or_identity_are_not_rl_ready(overrides):
+    h = Harness('Q', MemoryRetriever(DOCS))
+    try:
+        d = h.begin()
+        raw = RepeatingPolicy('submit_answer', {'answer': 'A'}).complete(d.payload)
+        sample = {'token_ids': [1], 'old_logprobs': [-1.0],
+                  'action_spans': [{'tool_call_id': 'call_1', 'start': 0, 'end': 1}], 'tokenizer_identity': 'fixture'}
+        sample.update(overrides)
+        h.respond(d, raw['choices'][0]['message'], raw=raw, sampling=sample)
+        assert training_export(h.ledger)['rl_ready'] is False
+    finally:
+        h.close()

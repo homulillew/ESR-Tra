@@ -1,0 +1,111 @@
+{
+  "run_id": "20260911T111515Z_f67a902",
+  "base_sha": "f67a902d3f08372cc4e1884e861b38e9638bc044",
+  "work_branch": "research/esr-v3-auto-20260911T111515Z-f67a902",
+  "validation": "validation_release",
+  "tests": {
+    "total": 270,
+    "v2": 100,
+    "v3": 170,
+    "failures": 0,
+    "skipped": 0
+  },
+  "first_failed_test_executions": 26,
+  "code_counterexamples": 25,
+  "corrected_test_inputs": 1,
+  "code_tree_measured_before_commit": "81d6ad9be3042d3ccecf76397cc87088267e4aae",
+  "source_sha256": {
+    "pyproject.toml": "e41a106aab596f67924fa7282432ee370cf0a0a27cdccc4fea25f896e0595735",
+    "scripts/validate_v3.py": "7f3429ddf40333d55ed4e4f9c222baf66d94172e32e87dbb4bb45a040a07f1f1",
+    "src/esr_harness/__init__.py": "6c71575ca4a53a9ada3e15d3aed17b833092c204d1f37fbf86d945edb1dece50",
+    "src/esr_harness/__main__.py": "8134dc71036ab6fef7cb605ec59b400b2864890fc00526f9763c447e2937e295",
+    "src/esr_harness/audit.py": "1801c7cd98774d23f62ab26057927a2dd840bc43af2032aad1dbd30e8d3ce8a4",
+    "src/esr_harness/cli.py": "050d785b7b5a6a95574c6b1a9371f9a2aec6d6186304094d3f60520c44c9adbc",
+    "src/esr_harness/client.py": "347ef32d02e57622c54b4f5dad935a7a0f35d4cae197d3c3767178305a2b3311",
+    "src/esr_harness/demo.py": "3530f946947dece383d516e90d2bb20253be3cf1ed93f9f99d35d8dcdb842bcf",
+    "src/esr_harness/engine.py": "decc307f03b00487b67b9fd02b6012e0c2de6e9ac2eefb70fc11a289a117e607",
+    "src/esr_harness/ledger.py": "6512f05cf62474d61ce2cc5100c9e95079c1e1c371ae53998384b3c6cd90ec44",
+    "src/esr_harness/protocol.py": "156df477ed373afd684d2d78f4d39035fc3ffd4e7ae02a458e44abb2f8e4a124",
+    "src/esr_harness/runner.py": "c9333dccc20adf312ca81448ea57c97aba40c06a05c656a145da183935e765de",
+    "src/esr_harness/views.py": "b9be104b40433c8938f78a0ccc4463b209b105426e35a5e04bb9ff1910178919",
+    "src/esr_harness_v3/__init__.py": "b964af3e3b04a56d9b0ad1f1bc0ee402f296e91fd593a8201cb51461dc9e0b3d",
+    "src/esr_harness_v3/__main__.py": "482b8693e2fe6dbd732e3d7961e03827d3efa187bad11d29da188be580ebbeea",
+    "src/esr_harness_v3/adapters.py": "c3b674591cdd0293878df1fac32f65d1e27147dd94c2a470d4015f5b8b908318",
+    "src/esr_harness_v3/audit.py": "f474accf36e4259ef0d196410003ee01ad8c71307ea5472a135672ccbf7368d0",
+    "src/esr_harness_v3/cli.py": "b32e2572518fef206d66580abfcdf8010eb1f5b6cbafcf36f633f1520ffdc6b0",
+    "src/esr_harness_v3/context.py": "830c178d4590c2f30b5d1ac4014560902fa2a7005c8a81a9d57a6bb8fccccacd",
+    "src/esr_harness_v3/engine.py": "b85aeff188747af53f908b85468d7791676ee5e3ac4b093370acb400768b762a",
+    "src/esr_harness_v3/experiments.py": "ddd7726f9a174942ffc89497a150e438d9fecf867db6fa94a37bb0f4f8a398f4",
+    "src/esr_harness_v3/protocol.py": "08096d22bb035d254a4b02eb2b11bb7f93e7271ddb38b890a9fbd1ec4545b482",
+    "src/esr_harness_v3/state.py": "c10e6dc69eb9dce0ff0f2093aeb8c25f69b607a4f23cbdda71f9b3629796c6be",
+    "src/esr_harness_v3/store.py": "a2b21babd37db7baf7235de088a2b52cf75888c00e7da8c41efbb9d338442e63",
+    "src/esr_harness_v3/training.py": "3f380df2a798822dfee5aa42de638f1a1aed96442a642398409d4727b4377ab2",
+    "tests/harness_v2/conftest.py": "7b96cb424066250a313103983e3c36ad360687be7ba4cf3d4e325d20333ee0bd",
+    "tests/harness_v2/test_clients_runner.py": "a4c374993cfdddc22a3f60af812685daa483d3bdbe1dda3a0a7b5c463423193c",
+    "tests/harness_v2/test_engine.py": "c4f6675e4ff498626fd1047b9d1babaab50ddaf01b119153e2000ac6e490a0e4",
+    "tests/harness_v2/test_http_integration.py": "3b21f074e61ffc91643650a0efc12562da8b0899c4101265a31068f325f497c7",
+    "tests/harness_v2/test_protocol_views.py": "17644e667bbb311a9503a3db94b2c149b3b17c7634c843c6fb5745ba4e10820f",
+    "tests/harness_v3/__init__.py": "4105b82c84e87fec1278bf6718a9be4f828417807267a5557cd75a667aaecaba",
+    "tests/harness_v3/conftest.py": "c9a38b39209c268dfca2fcb4bcefc4b875d2bf6f3965704d9cb55d5e7418c6ab",
+    "tests/harness_v3/test_acceptance_boundaries.py": "f944efc275f99dc19439f2f20c16b4347c31b5c82a4b391dca71afc283acc62b",
+    "tests/harness_v3/test_audit.py": "d28dc52c3ab24c14bbebf5047bc0d84a6a2863a38dcd5fba98392e07c00b4b1a",
+    "tests/harness_v3/test_contract.py": "4f7bc8ef3e26c98f713c5d7dd2324611977820a03f7f3f59e466e554a63978db",
+    "tests/harness_v3/test_engine.py": "746861310c097dc5e501bbaa9655b79f165eceecb20968e5199c2a77ca7ca288",
+    "tests/harness_v3/test_experiments.py": "ec0f4bad5dae6f72afcfac3309e6d35a4093f46cc8b8807c13d409a4546f66f6",
+    "tests/harness_v3/test_http_review.py": "ce1778cd5b8449bfd80e4a4271e865be1d328ace1554b98e3510c0ded47de17f",
+    "tests/harness_v3/test_independent_review.py": "0939c3dbbb7e152d1baad93e06eeab6d0a9012eba3db015c061f967ea62ffe79",
+    "tests/harness_v3/test_io.py": "fd8b7a984a5738e7f9c7ae9d255e356ecada213c8755827a2e490601f8826f95",
+    "tests/harness_v3/test_source_review.py": "ccec9bc500c4e39751fa6c11bad3b1d5aa8c217a3f84863cb824f0532fb12043"
+  },
+  "real_model_requests": 0,
+  "real_provider": "NOT_RUN",
+  "bc_plus": "NOT_RUN",
+  "training": "NOT_RUN",
+  "cohort": {
+    "schedule_size": 8,
+    "executed": 5,
+    "submitted": 4,
+    "service_failure": 1,
+    "not_run": 3,
+    "scripted_attempts": 15,
+    "backend_calls": 8,
+    "formal_accuracy": null
+  },
+  "condition_totals": {
+    "this_on": {
+      "planned": 4,
+      "status_counts": {
+        "submitted": 2,
+        "service_error": 1,
+        "NOT_RUN": 1
+      },
+      "model_attempts": 8,
+      "backend_calls": 4,
+      "tool_actions": 7,
+      "known_input_tokens": 0,
+      "known_output_tokens": 0,
+      "unknown_usage_calls": 8,
+      "formal_accuracy": null,
+      "correct_completion_seconds": null
+    },
+    "this_off": {
+      "planned": 4,
+      "status_counts": {
+        "submitted": 2,
+        "NOT_RUN": 2
+      },
+      "model_attempts": 7,
+      "backend_calls": 4,
+      "tool_actions": 7,
+      "known_input_tokens": 0,
+      "known_output_tokens": 0,
+      "unknown_usage_calls": 7,
+      "formal_accuracy": null,
+      "correct_completion_seconds": null
+    }
+  },
+  "decision": {
+    "mechanical_fixes": "keep",
+    "behavioral_improvement": "inconclusive"
+  }
+}

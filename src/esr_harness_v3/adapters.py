@@ -11,10 +11,16 @@ import urllib.request
 from .protocol import ContractError, canonical, digest, parse_json
 
 
-def post_json(url, body, *, api_key=None, timeout=60, max_bytes=50_000_000):
+def validate_endpoint(url):
     parsed = urllib.parse.urlsplit(url)
-    if parsed.scheme not in ('http', 'https') or not parsed.netloc or parsed.username or parsed.password or parsed.query:
-        raise ValueError('Use an http(s) endpoint without embedded credentials or query secrets')
+    if (parsed.scheme not in ('http', 'https') or not parsed.netloc or parsed.username
+            or parsed.password or parsed.query or parsed.fragment):
+        raise ValueError('Use an http(s) endpoint without embedded credentials, query or fragment')
+    return url.rstrip('/')
+
+
+def post_json(url, body, *, api_key=None, timeout=60, max_bytes=50_000_000):
+    validate_endpoint(url)
     headers = {'Content-Type': 'application/json'}
     if api_key:
         headers['Authorization'] = 'Bearer ' + api_key
@@ -38,10 +44,7 @@ def post_json(url, body, *, api_key=None, timeout=60, max_bytes=50_000_000):
 class OpenAICompatible:
     """Native chat-completions only. No text-first-call extraction or hidden retry."""
     def __init__(self, base_url, model, *, api_key=None, timeout=60, temperature=0):
-        parsed = urllib.parse.urlsplit(base_url)
-        if parsed.username or parsed.password or parsed.query or parsed.scheme not in ('http', 'https'):
-            raise ValueError('Invalid base URL; credentials must be passed separately')
-        self.base_url, self.model, self.key = base_url.rstrip('/'), model, api_key
+        self.base_url, self.model, self.key = validate_endpoint(base_url), model, api_key
         self.timeout, self.temperature = timeout, temperature
         self.identity = {'kind': 'openai-compatible', 'endpoint': self.base_url, 'requested_model': model,
                          'temperature': temperature}
@@ -57,12 +60,9 @@ class OpenAICompatible:
 class EchoRetriever:
     """Same /retrieve and /get_doc contracts as the existing ESR main adapter."""
     def __init__(self, base_url, *, index_fingerprint, timeout=60):
-        parsed = urllib.parse.urlsplit(base_url)
-        if parsed.username or parsed.password or parsed.query or parsed.scheme not in ('http', 'https'):
-            raise ValueError('Invalid retrieval endpoint; no embedded credentials')
         if not index_fingerprint:
             raise ValueError('Provide a frozen corpus/index fingerprint for exact-request caching')
-        self.base_url, self.timeout = base_url.rstrip('/'), timeout
+        self.base_url, self.timeout = validate_endpoint(base_url), timeout
         self.identity = {'kind': 'echo-http', 'endpoint': self.base_url, 'index_fingerprint': index_fingerprint}
 
     def search(self, query, top_k):
@@ -116,6 +116,10 @@ def hf_counter(tokenizer_path):
             kwargs['tools'] = definitions
         value = tokenizer.apply_chat_template(messages, **kwargs)
         return len(value)
+    count.identity = {'kind': 'local-hf-chat-template', 'class': type(tokenizer).__name__,
+                      'vocabulary_sha256': digest(tokenizer.get_vocab()),
+                      'chat_template_sha256': digest(tokenizer.chat_template),
+                      'special_tokens_sha256': digest(tokenizer.special_tokens_map)}
     return count, 'local_chat_template_tokens'
 
 
@@ -135,14 +139,15 @@ def run_episode(harness, policy):
             harness.fail(decision, f'policy transport: {type(exc).__name__}')
             break
         harness.ledger.append('policy_timing', {'decision': decision.id, 'seconds': __import__('time').monotonic() - start,
-                                               'requested_identity': policy.identity, 'response_model': raw.get('model'),
+                                               'requested_identity': policy.identity,
+                                               'response_model': raw.get('model') if isinstance(raw, dict) else None,
                                                'wire_request': deepcopy(getattr(policy, 'last_request', None))})
         try:
             message = raw['choices'][0]['message']
         except (KeyError, IndexError, TypeError):
             message = {}
         try:
-            harness.respond(decision, message, raw=raw, usage=raw.get('usage'))
+            harness.respond(decision, message, raw=raw, usage=raw.get('usage') if isinstance(raw, dict) else None)
         except Exception:
             harness.end('execution_error')
             raise  # Implementation failures must not masquerade as a semantic bad case.

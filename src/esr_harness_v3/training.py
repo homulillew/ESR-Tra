@@ -26,10 +26,12 @@ def training_export(ledger, *, require_rl=False):
         valid = isinstance(sample, dict)
         if valid:
             tokens, probs, spans = sample.get('token_ids'), sample.get('old_logprobs'), sample.get('action_spans')
+            identity = sample.get('tokenizer_identity')
             valid = (isinstance(tokens, list) and bool(tokens) and all(type(t) is int and t >= 0 for t in tokens)
                      and isinstance(probs, list) and len(tokens) == len(probs)
-                     and all(type(p) in (int, float) and math.isfinite(p) for p in probs)
-                     and isinstance(spans, list) and bool(spans) and bool(sample.get('tokenizer_identity')))
+                     and all(type(p) in (int, float) and math.isfinite(p) and p <= 0 for p in probs)
+                     and isinstance(spans, list) and bool(spans)
+                     and isinstance(identity, str) and bool(identity.strip()))
             if valid:
                 ids, previous = set(), 0
                 for span in spans:

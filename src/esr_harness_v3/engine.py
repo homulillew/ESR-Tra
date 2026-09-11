@@ -13,6 +13,8 @@ from .protocol import Config, ContractError, VERSION, canonical, completion_mess
 from .state import answer_bundle, apply_update, claim_sources, initial_state, resolve_refs
 from .store import Ledger
 
+_NO_RAW = object()
+
 
 @dataclass(frozen=True)
 class Decision:
@@ -120,9 +122,12 @@ class Harness:
     def _usage(self, state, usage):
         if isinstance(usage, dict):
             p, c = usage.get('prompt_tokens'), usage.get('completion_tokens')
-            if type(p) is int and p >= 0 and type(c) is int and c >= 0:
+            known_p, known_c = type(p) is int and p >= 0, type(c) is int and c >= 0
+            if known_p:
                 state['usage']['input_tokens'] += p
+            if known_c:
                 state['usage']['output_tokens'] += c
+            if known_p and known_c:
                 state['usage']['unknown_calls'] -= 1
 
     def fail(self, decision, error):
@@ -138,7 +143,7 @@ class Harness:
         if not self._active or decision != self._active[0] or self._s.get('inflight') != decision.id:
             raise ContractError('decision_snapshot', 'Unknown, modified, stale or already-consumed decision')
 
-    def respond(self, decision, message, *, raw=None, usage=None, sampling=None):
+    def respond(self, decision, message, *, raw=_NO_RAW, usage=None, sampling=None):
         self._check_decision(decision)
         plan = self._active[1]
         binding = decision.binding
@@ -150,11 +155,11 @@ class Harness:
         state['published_documents'] = binding['documents']
         state['published_cursors'] = binding['cursors']
         # Explicitly retain absent sampling as absent; never re-tokenize to invent training data.
-        self._save('policy_response', {'decision': decision.id, 'raw': deepcopy(raw if raw is not None else message),
+        self._save('policy_response', {'decision': decision.id, 'raw': deepcopy(raw if raw is not _NO_RAW else message),
                                       'usage': usage, 'sampling': deepcopy(sampling)}, state)
         try:
-            if raw is not None:
-                completion_message(raw)
+            if raw is not _NO_RAW:
+                message = completion_message(raw)
             assistant = _normal_message(message)
         except ContractError as exc:
             self._active = None
@@ -164,7 +169,7 @@ class Harness:
             state['history'].append({'messages': [plan['tail'], {'role': 'user', 'content': canonical(state['feedback'])}],
                                      'observations': [], 'claims': {}, 'documents': [], 'cursors': []})
             self._save('policy_protocol_failure', {'decision': decision.id, 'error': str(exc)}, state)
-            if exc.code == 'incomplete_response':
+            if exc.code in ('incomplete_response', 'response_protocol_error'):
                 self.end(exc.code)
             return [{'ok': False, 'code': exc.code, 'message': str(exc), 'executed': False}]
         calls = assistant['tool_calls']
@@ -224,7 +229,7 @@ class Harness:
                                          'legal_sources': [{'ref': o, 'title': state['observations'][o]['title']}
                                                            for o in state['exposed'][-4:]]}
                     self._save('action_rejected', {'action_id': aid, 'name': name, 'result': result}, state)
-                    if exc.code in ('service_error', 'audit_service_error'):
+                    if exc.code in ('service_error', 'retrieval_error', 'audit_service_error', 'audit_protocol_error'):
                         fatal_after_batch = exc.code
                     stop = 'Earlier action failed; no dependent suffix is executed'
             if index in read_indices and not result['ok']:
@@ -330,6 +335,8 @@ class Harness:
             response = self._backend('get_document', {'docid': meta['backend_id']},
                                      lambda: self.retriever.get_document(meta['backend_id']))
             nested = response.get('document', response) if isinstance(response, dict) else {}
+            if not isinstance(nested, dict):
+                raise ContractError('retrieval_error', 'Expected a document object')
             actual = str(response.get('docid', nested.get('docid', meta['backend_id']))) if isinstance(response, dict) else ''
             text = nested.get('content', nested.get('contents', nested.get('text', '')))
             if actual != meta['backend_id'] or not isinstance(text, str) or not text.strip():

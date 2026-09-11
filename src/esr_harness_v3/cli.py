@@ -45,6 +45,12 @@ def main(argv=None):
     sub.add_parser('schema')
     p = sub.add_parser('replay'); p.add_argument('--db', required=True)
     p = sub.add_parser('export'); p.add_argument('--db', required=True); p.add_argument('--output', required=True); p.add_argument('--require-rl', action='store_true')
+    p = sub.add_parser('cohort-fixture', help='Offline frozen this on/off queue; not a benchmark')
+    p.add_argument('--output', required=True)
+    p = sub.add_parser('cohort-summary', help='Read every registered slot, including NOT_RUN')
+    p.add_argument('--run-dir', required=True); p.add_argument('--output', required=True)
+    p = sub.add_parser('prefix', help='Copy the exact recorded request for one completed decision')
+    p.add_argument('--db', required=True); p.add_argument('--decision', required=True); p.add_argument('--output', required=True)
     p = sub.add_parser('run')
     p.add_argument('--question-file', required=True)
     p.add_argument('--db', required=True)
@@ -58,7 +64,7 @@ def main(argv=None):
     p.add_argument('--audit-mode', choices=['diagnostic', 'hard', 'off'], default='diagnostic')
     p.add_argument('--require-sources', action='store_true')
     p.add_argument('--disable-this', action='store_true')
-    p.add_argument('--max-model-calls', type=int, default=32)
+    p.add_argument('--max-model-calls', type=int, required=True, help='Explicit total policy + audit request cap')
     p.add_argument('--max-actions', type=int, default=100)
     p.add_argument('--context-limit', type=int, default=32000)
     p.add_argument('--output-reserve', type=int, default=2048)
@@ -83,6 +89,23 @@ def main(argv=None):
                 result = {'output': str(out), 'rl_ready': result['rl_ready'], 'records': len(result['records'])}
         finally:
             ledger.close()
+    elif args.command in ('cohort-fixture', 'cohort-summary', 'prefix'):
+        from .experiments import exact_prefix, run_fixture_cohort, summarize_cohort, write_new
+        if args.command == 'cohort-fixture':
+            summary = run_fixture_cohort(args.output)
+            result = {k: summary[k] for k in ('fixture_only', 'real_model_calls', 'stopped_because', 'conditions')}
+        elif args.command == 'cohort-summary':
+            result = summarize_cohort(args.run_dir)
+            write_new(args.output, result)
+            result = {'output': args.output, 'scheduled': len(result['rows']), 'formal_accuracy': None}
+        else:
+            ledger = Ledger(args.db, readonly=True)
+            try:
+                result = exact_prefix(ledger, args.decision)
+                write_new(args.output, result)
+                result = {'output': args.output, 'request_sha256': result['request_sha256']}
+            finally:
+                ledger.close()
     else:
         if not args.allow_network:
             parser.error('Live calls require --allow-network and an explicit request cap; smoke never uses credentials')
