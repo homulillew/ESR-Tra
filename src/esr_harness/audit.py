@@ -19,16 +19,35 @@ class AuditConsistencyError(HarnessError):
         super().__init__('audit_protocol_error', problems[0]['rule'])
 
 
+ADMISSIBLE_REPAIR = """\nChoose a status/need combination for each row by checking the original question,
+actual candidate answer, and permitted evidence. These are legal alternatives, not
+recommendations to change a factual verdict:
+- supported: the row's obligation is satisfied; need is exactly the empty string.
+- unknown: an obligation cannot be established from the supplied evidence; need
+  states the specific missing premise or unresolved requirement.
+- contradicted: the candidate or finding conflicts with the obligation or explicit
+  evidence; need states the violated requirement or necessary correction. Fill need
+  even when the evidence is already sufficient to establish the contradiction:
+  it describes what must be corrected, not necessarily a request for more evidence.
+Recheck the status, reason, and need together, including rows not listed as errors.
+A reason acknowledging an unsatisfied obligation cannot establish that same obligation
+as supported. Do not merely erase a missing condition or change a verdict to pass the
+format check. You must generate the complete corrected report from the given inputs.
+"""
+
+
 def protocol_repair_message(error, feedback='generic'):
-    if feedback not in {'generic', 'field_paths'}:
+    if feedback not in {'generic', 'field_paths', 'admissible'}:
         raise ValueError('Unknown audit repair feedback')
     message = 'Repair protocol only; keep all original evidence: ' + str(error)
-    if feedback == 'field_paths' and isinstance(error, AuditConsistencyError):
+    if feedback in {'field_paths', 'admissible'} and isinstance(error, AuditConsistencyError):
         message += ('\nStatus/need conflicts (all listed fields must be checked):\n'
                     + canonical(error.problems)
                     + '\nResolve each conflict using the original question and evidence. '
                     'Do not mark a row supported merely to clear a validation error. '
                     'Return the complete report; do not rewrite the candidate answer or source text.')
+        if feedback == 'admissible':
+            message += ADMISSIBLE_REPAIR
     return message
 
 
@@ -92,7 +111,7 @@ class ModelAuditor:
             raise ValueError('Invalid audit span size')
         if profile not in {'atomic', 'task_first_literal'}:
             raise ValueError('Unknown auditor profile')
-        if repair_feedback not in {'generic', 'field_paths'}:
+        if repair_feedback not in {'generic', 'field_paths', 'admissible'}:
             raise ValueError('Unknown audit repair feedback')
         self.profile, self.repair_feedback = profile, repair_feedback
         self.client, self.attempts = client, attempts
@@ -109,6 +128,8 @@ class ModelAuditor:
             self.identity.update(profile=profile, prompt='literal-answer-2.1.0+' + TASK_FIRST_AUDIT_VERSION + '+' + self.identity['prompt'])
         if repair_feedback != 'generic':
             self.identity['repair_feedback'] = 'field-paths-1.0.0'
+        if repair_feedback == 'admissible':
+            self.identity.update(repair_feedback='admissible-1.0.0', repair_rules_hash=digest(ADMISSIBLE_REPAIR))
 
     def audit(self, question, state, views):
         payload = {"question": question, **state,

@@ -3,7 +3,8 @@ from copy import deepcopy
 import json
 import pytest
 from esr_harness.audit import (ModelAuditor, AuditConsistencyError, validate_report,
-                               protocol_repair_message, literal_answer_packet, status)
+                               protocol_repair_message, literal_answer_packet, status,
+                               ADMISSIBLE_REPAIR)
 from esr_harness.protocol import HarnessError
 from .helpers import env, opened, update
 from .test_audit_spans import ReplyClient, fixture_report
@@ -52,7 +53,7 @@ def test_only_repair_feedback_changes_and_valid_negative_survives(profile):
     assert auditors[0].identity['system_hash'] == auditors[1].identity['system_hash']
 
 
-@pytest.mark.parametrize('feedback', ['generic', 'field_paths'])
+@pytest.mark.parametrize('feedback', ['generic', 'field_paths', 'admissible'])
 def test_invalid_repair_still_fails_after_one_attempt(feedback):
     h, bad = sample(); bad['target'].update(status='contradicted', need='')
     c = ReplyClient([bad, bad])
@@ -98,3 +99,31 @@ def test_unknown_feedback_fails_before_inference():
     with pytest.raises(ValueError, match='Unknown audit repair feedback'):
         ModelAuditor(c, repair_feedback='unbounded')
     assert c.messages == []
+
+
+@pytest.mark.parametrize('verdict', ['supported', 'unknown', 'contradicted'])
+def test_admissible_feedback_adds_rules_without_choosing_a_verdict(verdict):
+    h, good = sample()
+    good['coverage'].update(status=verdict, need='' if verdict == 'supported' else 'The second required item is missing')
+    bad = deepcopy(good)
+    bad['coverage']['need'] = 'A missing obligation' if verdict == 'supported' else ''
+    clients = [ReplyClient([bad, good]) for _ in range(2)]
+    auditors = [ModelAuditor(c, repair_feedback=f) for c, f in zip(clients, ['field_paths', 'admissible'])]
+    reports = [a.audit(h.question, h.audit_packet(), list(h.observations.values())) for a in auditors]
+    assert reports == [good, good]
+    assert clients[0].messages[0] == clients[1].messages[0]
+    assert clients[0].messages[1][:-1] == clients[1].messages[1][:-1]
+    assert clients[1].messages[1][-1]['content'] == clients[0].messages[1][-1]['content'] + ADMISSIBLE_REPAIR
+    assert auditors[0].identity['system_hash'] == auditors[1].identity['system_hash']
+    assert auditors[0].identity['schema_hash'] == auditors[1].identity['schema_hash']
+    assert auditors[0].identity != auditors[1].identity
+
+
+def test_admissible_rules_cannot_repair_other_errors_or_add_a_call():
+    error = HarnessError('protocol_error', 'Wrong claim ID')
+    assert protocol_repair_message(error, 'admissible') == protocol_repair_message(error, 'generic')
+    h, good = sample()
+    clients = [ReplyClient([good]) for _ in range(2)]
+    for c, feedback in zip(clients, ['field_paths', 'admissible']):
+        assert ModelAuditor(c, repair_feedback=feedback).audit(h.question, h.audit_packet(), list(h.observations.values())) == good
+    assert clients[0].messages == clients[1].messages and len(clients[0].messages) == 1
