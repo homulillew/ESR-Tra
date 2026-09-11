@@ -115,7 +115,9 @@ def episode(root, budget, transport, settings, *, question, qid, arm, category, 
         retriever=SQLiteRetriever(index,log=ledger.append)
     audit_settings=settings.get('auditor',{})
     auditor=ModelAuditor(client,citation_mode=audit_settings.get('citation_mode','quotes'),
-                         span_max_chars=audit_settings.get('span_max_chars',1200)) if config.audit_mode!="off" else None
+                         span_max_chars=audit_settings.get('span_max_chars',1200),
+                         profile=audit_settings.get('profile','atomic'),
+                         repair_feedback=audit_settings.get('repair_feedback','generic')) if config.audit_mode!="off" else None
     manifest={**snapshot(),"run_id":rid,"category":category,"qid":qid,"arm":arm,"replicate":replicate,
               'global_request_allowance':budget.request_status(),
               "index_fingerprint":fingerprint,
