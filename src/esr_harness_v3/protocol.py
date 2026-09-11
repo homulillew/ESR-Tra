@@ -44,6 +44,22 @@ def parse_json(text: str) -> Any:
         raise ContractError('invalid_json', str(exc)) from exc
 
 
+def completion_message(response: Any) -> dict:
+    """Validate the response envelope before any returned action can execute."""
+    choices = response.get('choices') if isinstance(response, dict) else None
+    if not isinstance(choices, list) or len(choices) != 1 or not isinstance(choices[0], dict):
+        raise ContractError('response_protocol_error', 'Expected exactly one completion choice')
+    choice = choices[0]
+    # Older local fixtures omit finish_reason. Absence is not a verified provider
+    # completion; explicit truncation/filtering must never execute a partial action.
+    if choice.get('finish_reason') not in (None, 'stop', 'tool_calls'):
+        raise ContractError('incomplete_response', 'Provider did not finish a complete response')
+    message = choice.get('message')
+    if not isinstance(message, dict):
+        raise ContractError('response_protocol_error', 'Expected an assistant message object')
+    return deepcopy(message)
+
+
 def obj(properties, required=(), **extra):
     return {'type': 'object', 'properties': deepcopy(properties), 'required': list(required),
             'additionalProperties': False, **extra}

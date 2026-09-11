@@ -9,7 +9,7 @@ import uuid
 
 from .audit import aggregate, audit_identity, audit_messages, audit_payload, validate_report
 from .context import byte_counter, render, view_card
-from .protocol import Config, ContractError, VERSION, canonical, digest, parse_json, validate_action
+from .protocol import Config, ContractError, VERSION, canonical, completion_message, digest, parse_json, validate_action
 from .state import answer_bundle, apply_update, claim_sources, initial_state, resolve_refs
 from .store import Ledger
 
@@ -57,16 +57,22 @@ class Harness:
         self.config = config or Config()
         self.retriever, self.auditor = retriever, auditor
         self.counter, self.counter_name = counter or byte_counter, counter_name
+        counter_identity = deepcopy(getattr(self.counter, 'identity', None))
+        auditor_identity = audit_identity(auditor) if auditor is not None else None
         self.ledger = Ledger(ledger)
         self._active = None
         saved = self.ledger.latest_state()
         if saved is not None:
             if not resume:
+                self.ledger.close()
                 raise ContractError('ledger_exists', 'Choose a new ledger or explicit resume; old experiments are not overwritten')
             if (saved['question'] != question or self.ledger.events[0]['payload']['config'] != self.config.to_dict()
                     or self.ledger.events[0]['payload']['retriever'] != retriever.identity
-                    or self.ledger.events[0]['payload']['capacity_unit'] != counter_name):
-                raise ContractError('resume_mismatch', 'Question/config must match the saved episode')
+                    or self.ledger.events[0]['payload']['capacity_unit'] != counter_name
+                    or self.ledger.events[0]['payload'].get('counter_identity') != counter_identity
+                    or self.ledger.events[0]['payload'].get('auditor') != auditor_identity):
+                self.ledger.close()
+                raise ContractError('resume_mismatch', 'Question/config/auditor/counter must match the saved episode')
             self._s = saved
             if saved.get('inflight') or saved.get('executing'):
                 self.end('interrupted')
@@ -75,7 +81,8 @@ class Harness:
                 raise ValueError('question must be nonempty')
             self._s = initial_state(question)
             self.ledger.append('header', {'protocol': VERSION, 'config': self.config.to_dict(),
-                                          'retriever': deepcopy(retriever.identity), 'capacity_unit': counter_name}, self._s)
+                                          'retriever': deepcopy(retriever.identity), 'capacity_unit': counter_name,
+                                          'counter_identity': counter_identity, 'auditor': auditor_identity}, self._s)
 
     @property
     def state(self):
@@ -146,6 +153,8 @@ class Harness:
         self._save('policy_response', {'decision': decision.id, 'raw': deepcopy(raw if raw is not None else message),
                                       'usage': usage, 'sampling': deepcopy(sampling)}, state)
         try:
+            if raw is not None:
+                completion_message(raw)
             assistant = _normal_message(message)
         except ContractError as exc:
             self._active = None
@@ -155,6 +164,8 @@ class Harness:
             state['history'].append({'messages': [plan['tail'], {'role': 'user', 'content': canonical(state['feedback'])}],
                                      'observations': [], 'claims': {}, 'documents': [], 'cursors': []})
             self._save('policy_protocol_failure', {'decision': decision.id, 'error': str(exc)}, state)
+            if exc.code == 'incomplete_response':
+                self.end(exc.code)
             return [{'ok': False, 'code': exc.code, 'message': str(exc), 'executed': False}]
         calls = assistant['tool_calls']
         names = [c['function']['name'] for c in calls]
@@ -171,6 +182,7 @@ class Harness:
             state['this_candidate'] = None
             self._save('reading_batch_start', {'decision': decision.id, 'indices': read_indices}, state)
         stop = invalid_group
+        fatal_after_batch = None
         for index, call in enumerate(calls):
             name = call['function']['name']
             aid = f'a{self._s["actions"] + 1}'
@@ -186,6 +198,9 @@ class Harness:
                 try:
                     args = parse_json(call['function']['arguments'])
                     validate_action(name, args)
+                    if (name == 'verify_answer' and self.auditor is not None and self.config.audit_mode != 'off'
+                            and self.config.max_actions - self._s['actions'] < len(calls) - index):
+                        raise ContractError('audit_action_budget', 'Reserve an action for the post-audit decision, including every unexecuted suffix receipt')
                     result, state = self._dispatch(name, args, binding, own, aid)
                     result = {'ok': True, 'executed': True, **result}
                     state['last_action'] = {'name': name, 'result': deepcopy(result)}
@@ -209,6 +224,8 @@ class Harness:
                                          'legal_sources': [{'ref': o, 'title': state['observations'][o]['title']}
                                                            for o in state['exposed'][-4:]]}
                     self._save('action_rejected', {'action_id': aid, 'name': name, 'result': result}, state)
+                    if exc.code in ('service_error', 'audit_service_error'):
+                        fatal_after_batch = exc.code
                     stop = 'Earlier action failed; no dependent suffix is executed'
             if index in read_indices and not result['ok']:
                 any_read_error = True
@@ -223,7 +240,9 @@ class Harness:
         state['executing'] = None
         self._save('batch_complete', {'decision': decision.id, 'receipts': receipts}, state)
         self._active = None
-        if not self._s['terminal'] and self._s['actions'] >= self.config.max_actions:
+        if fatal_after_batch:
+            self.end(fatal_after_batch)
+        elif not self._s['terminal'] and self._s['actions'] >= self.config.max_actions:
             self.end('action_budget_exhausted')
         return receipts
 
@@ -460,18 +479,20 @@ class Harness:
                 self.ledger.append('audit_failure', {'action_id': aid, 'error_type': type(exc).__name__})
                 raise ContractError('audit_service_error', f'Auditor request failed: {type(exc).__name__}') from exc
             state = self.state
-            self._usage(state, raw.get('usage'))
+            self._usage(state, raw.get('usage') if isinstance(raw, dict) else None)
             self._save('audit_response', {'action_id': aid, 'raw': raw,
                                           'wire_request': deepcopy(getattr(self.auditor, 'last_request', None))}, state)
             try:
-                content = raw['choices'][0]['message']['content']
+                content = completion_message(raw).get('content')
                 report = validate_report(parse_json(content), bundle, payload)
                 break
             except (KeyError, IndexError, TypeError, ContractError) as exc:
                 self.ledger.append('audit_protocol_failure', {'action_id': aid, 'error': str(exc)[:2000]})
                 if attempt + 1 == self.config.audit_attempts:
                     raise ContractError('audit_protocol_error', f'Bounded audit repair exhausted: {str(exc)[:1000]}') from exc
-                content = str(raw.get('choices', [{}])[0].get('message', {}).get('content', ''))[:4000]
+                # An empty/ill-typed choices array is itself the malformed report.
+                # Keep its full raw receipt above and never crash while making feedback.
+                content = canonical(raw)[:4000]
                 messages += [{'role': 'assistant', 'content': content},
                              {'role': 'user', 'content': 'Repair the complete report using the unchanged original packet. Do not change verdict merely to pass schema. Error: ' + str(exc)[:1500]}]
         state = self.state

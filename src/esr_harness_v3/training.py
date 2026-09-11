@@ -29,7 +29,7 @@ def training_export(ledger, *, require_rl=False):
             valid = (isinstance(tokens, list) and bool(tokens) and all(type(t) is int and t >= 0 for t in tokens)
                      and isinstance(probs, list) and len(tokens) == len(probs)
                      and all(type(p) in (int, float) and math.isfinite(p) for p in probs)
-                     and isinstance(spans, list) and bool(sample.get('tokenizer_identity')))
+                     and isinstance(spans, list) and bool(spans) and bool(sample.get('tokenizer_identity')))
             if valid:
                 ids, previous = set(), 0
                 for span in spans:
