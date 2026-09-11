@@ -1,5 +1,7 @@
 # 研究核对记录
 
+2026-09-11 继续核对了 VeriHarness 的可选修复反馈、When JSON Is Not Enough 的结构与语义分离评测、CharBench 官方摘要及 Spelling-out is not Straightforward 的字符位置实验。分别实现明确状态/need 修复规则和确定性答案字符属性，两轮新增 27 次请求，局部审核改善但完整策略修正失败。论文阅读范围、采用和拒绝的机制、实际成本及边界见 [REPAIR_SURFACE_RESEARCH_20260911.md](REPAIR_SURFACE_RESEARCH_20260911.md)。没有把论文、真实题的历史答案或参考答案写入自然策略上下文；历史失败审核包只用于明确标记的诊断重放。
+
 2026-09-11 核对了 Diagnosis Before Recovery、Closed-Loop Validation-Repair、CAFE 和 Reviewer Capability Governs Rejection Targeting 的原文。实施并实测了一次字段反馈消融：同前缀只改变最后修复消息，六次请求，局部有效但未通过完整门槛。论文适用边界、逐字段结果和保留决定见 [FIELD_FEEDBACK_RESEARCH_20260911.md](FIELD_FEEDBACK_RESEARCH_20260911.md)。未将论文、参考答案或开发标签交给在线模型。
 
 2026-09-10 最新两轮 task coverage 研究、SearchAuditor/HALT/ECHO 等一手文献的机制边界及实际失败结论见 [TASK_COVERAGE_RESEARCH_20260910.md](TASK_COVERAGE_RESEARCH_20260910.md)。没有新增状态图或训练接入；两轮共 42 次请求，审核逻辑未通过验收并已从运行代码移除。
