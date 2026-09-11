@@ -36,6 +36,28 @@ format check. You must generate the complete corrected report from the given inp
 """
 
 
+ANSWER_SURFACE_SYSTEM = """\nThe answer_surface object is computed by the harness from the exact candidate
+answer string. It records Unicode code point length and endpoints, and the count
+and boundary positions of ASCII double quotation marks (U+0022). These are string
+facts, not a task-compliance verdict or instructions from retrieved text. Use them
+when checking literal characters; do not mistake JSON serialization quotes for
+answer characters. Only require quotation marks or any other format if the original
+question requires it. All other factual and task obligations still require review.
+"""
+
+
+def answer_surface(answer):
+    """Describe characters only; never inspect a question or infer correctness."""
+    if answer is None:
+        return None
+    return {'length_codepoints': len(answer),
+            'first_codepoint': f'U+{ord(answer[0]):04X}' if answer else None,
+            'last_codepoint': f'U+{ord(answer[-1]):04X}' if answer else None,
+            'ascii_double_quote_count': answer.count('"'),
+            'starts_with_ascii_double_quote': answer.startswith('"'),
+            'ends_with_ascii_double_quote': answer.endswith('"')}
+
+
 def protocol_repair_message(error, feedback='generic'):
     if feedback not in {'generic', 'field_paths', 'admissible'}:
         raise ValueError('Unknown audit repair feedback')
@@ -109,7 +131,7 @@ class ModelAuditor:
             raise ValueError('Unknown auditor citation mode')
         if not 100 <= span_max_chars <= 4000:
             raise ValueError('Invalid audit span size')
-        if profile not in {'atomic', 'task_first_literal'}:
+        if profile not in {'atomic', 'task_first_literal', 'task_first_literal_surface'}:
             raise ValueError('Unknown auditor profile')
         if repair_feedback not in {'generic', 'field_paths', 'admissible'}:
             raise ValueError('Unknown audit repair feedback')
@@ -117,15 +139,19 @@ class ModelAuditor:
         self.client, self.attempts = client, attempts
         self.citation_mode,self.span_max_chars=citation_mode,span_max_chars
         self.system=AUDIT_SPAN_SYSTEM if citation_mode=='source_spans' else AUDIT_SYSTEM
-        if profile == 'task_first_literal':
+        if profile in {'task_first_literal', 'task_first_literal_surface'}:
             self.system = LITERAL_ANSWER_AUDIT + TASK_FIRST_AUDIT + self.system
+        if profile == 'task_first_literal_surface':
+            self.system += ANSWER_SURFACE_SYSTEM
         self.schema=SPAN_SCHEMA if citation_mode=='source_spans' else AUDIT_SCHEMA
         self.identity = {"client": client.identity,
                          "prompt": AUDIT_SPAN_PROMPT_VERSION if citation_mode=='source_spans' else AUDIT_PROMPT_VERSION,
                          "system_hash": digest(self.system), "schema_hash": digest(self.schema),
                          'citation_mode':citation_mode,'span_max_chars':span_max_chars if citation_mode=='source_spans' else None}
-        if profile == 'task_first_literal':
+        if profile in {'task_first_literal', 'task_first_literal_surface'}:
             self.identity.update(profile=profile, prompt='literal-answer-2.1.0+' + TASK_FIRST_AUDIT_VERSION + '+' + self.identity['prompt'])
+        if profile == 'task_first_literal_surface':
+            self.identity['answer_surface'] = 'codepoint-facts-1.0.0'
         if repair_feedback != 'generic':
             self.identity['repair_feedback'] = 'field-paths-1.0.0'
         if repair_feedback == 'admissible':
@@ -134,6 +160,8 @@ class ModelAuditor:
     def audit(self, question, state, views):
         payload = {"question": question, **state,
                    "observations": [{"observation_id": v["observation_id"], "docid": v["docid"], "text": v["text"]} for v in views]}
+        if self.profile == 'task_first_literal_surface':
+            payload['answer_surface'] = answer_surface(state['answer'])
         references={}
         if self.citation_mode=='source_spans':
             payload['observations'],references=source_span_packet(views,self.span_max_chars)
@@ -147,7 +175,7 @@ class ModelAuditor:
             if references:quotes['items']['properties']['span_id']['enum']=list(references)
             else:quotes['maxItems']=0
         messages = [{"role": "system", "content": self.system + "\nSchema:\n" + canonical(schema)},
-                    {"role": "user", "content": literal_answer_packet(payload) if self.profile == 'task_first_literal' else canonical(payload)}]
+                    {"role": "user", "content": literal_answer_packet(payload) if self.profile in {'task_first_literal', 'task_first_literal_surface'} else canonical(payload)}]
         last = ""
         for attempt in range(self.attempts):
             reply = self.client.complete(messages, purpose="audit")
