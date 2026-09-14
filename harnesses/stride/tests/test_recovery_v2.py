@@ -301,7 +301,7 @@ def test_package_and_distribution_versions_agree():
     from stride_search import __version__
     text = (Path(__file__).resolve().parents[1] / 'pyproject.toml').read_text()
     assert 'version = "' + __version__ + '"' in text
-    assert __version__ == '0.1.0a2'
+    assert __version__ == '0.1.0a3'
 
 
 def test_critical_error_stays_blocking_after_peripheral_note_failure():
