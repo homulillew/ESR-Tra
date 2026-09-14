@@ -26,3 +26,5 @@ jobs:
       - run: python -m stride_search smoke --output "${{ runner.temp }}/stride-smoke"
       - run: python -m stride_search replay --db "${{ runner.temp }}/stride-smoke/episode.sqlite"
       - run: python -m stride_search cohort-fixture --output "${{ runner.temp }}/stride-cohort"
+      - run: python examples/cpu_evidence_comparison.py --output "${{ runner.temp }}/stride-cpu-a3"
+      - run: python -m stride_search diagnose --db "${{ runner.temp }}/stride-smoke/episode.sqlite"
