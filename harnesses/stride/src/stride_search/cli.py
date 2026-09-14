@@ -5,10 +5,13 @@ import argparse
 import json
 import os
 from pathlib import Path
+import sqlite3
 import sys
 
 from .archive import Archive
 from .contract import Config, ContractError, canonical, loads, tools
+from .cpu_index import SQLiteFTS5
+from .diagnostics import diagnose
 from .engine import Harness
 from .experiment import make_plan, read_cases, run_plan, summarize, write_new
 from .fixtures import smoke_corpus, smoke_model
@@ -34,6 +37,12 @@ def _model(args, http):
                output_parameter=args.output_parameter)
 
 
+def _retriever(args, http):
+    if args.sqlite_index:
+        return SQLiteFTS5(args.sqlite_index, index_id=args.index_id, timeout_seconds=args.timeout)
+    return EchoRetriever(args.retrieval_url, index_id=args.index_id, http=http)
+
+
 def _live_arguments(p):
     p.add_argument("--allow-network", action="store_true")
     p.add_argument("--accept-counter-estimate", action="store_true")
@@ -44,7 +53,9 @@ def _live_arguments(p):
     p.add_argument("--model-api", choices=["openai", "anthropic"], default="openai")
     p.add_argument("--output-parameter", choices=["max_tokens", "max_completion_tokens"], default="max_tokens")
     p.add_argument("--api-key-env", default="STRIDE_API_KEY")
-    p.add_argument("--retrieval-url", required=True)
+    source = p.add_mutually_exclusive_group(required=True)
+    source.add_argument("--retrieval-url")
+    source.add_argument("--sqlite-index", help="Existing read-only CPU FTS5 docs/search/metadata index; no GPU or rebuild")
     p.add_argument("--index-id", required=True)
     p.add_argument("--counter", required=True, choices=["utf8_bytes", "hf_tokens"])
     p.add_argument("--tokenizer", help="Local tokenizer only; no downloads or remote code")
@@ -57,6 +68,9 @@ def parser():
     commands.add_parser("schema").add_argument("--final", action="store_true")
     commands.add_parser("smoke").add_argument("--output", required=True)
     commands.add_parser("replay").add_argument("--db", required=True)
+    dp = commands.add_parser("diagnose")
+    dp.add_argument("--db", required=True)
+    dp.add_argument("--include-text", action="store_true", help="Private local output only; otherwise report query hashes")
     r = commands.add_parser("run")
     _live_arguments(r)
     r.add_argument("--question-file", required=True)
@@ -73,6 +87,11 @@ def parser():
     r.add_argument("--strict-note-failure", action="store_true")
     r.add_argument("--no-repair-context", action="store_true")
     r.add_argument("--no-delivery-preflight", action="store_true")
+    r.add_argument("--hide-retriever-capabilities", action="store_true")
+    r.add_argument("--compiled-query-cache", action="store_true", help="Opt-in exact compiler equivalence cache; raw-query cache is default")
+    r.add_argument("--evidence-shelf-size", type=int, default=3)
+    r.add_argument("--no-recall-navigation", action="store_true")
+    r.add_argument("--prefix-recall-excerpts", action="store_true")
     r.add_argument("--max-batch", type=int, default=4)
     r.add_argument("--max-queries-per-search", type=int, default=3)
     r.add_argument("--context-mode", choices=["full", "rolling"], default="rolling")
@@ -98,6 +117,8 @@ def parser():
 def execute(args):
     if args.command == "schema":
         return tools(notes_enabled=True, final=args.final)
+    if args.command == "diagnose":
+        return diagnose(args.db, include_text=args.include_text)
     if args.command == "replay":
         a = Archive(args.db, readonly=True)
         try:
@@ -142,10 +163,9 @@ def execute(args):
         raise ValueError("Live execution requires --allow-network and --accept-counter-estimate")
     http = HTTP(allow_network=True, timeout=args.timeout)
     counter = _counter(args)
-    retriever = EchoRetriever(args.retrieval_url, index_id=args.index_id, http=http)
     if args.command == "cohort":
         return run_plan(_json(args.plan), args.output, lambda: _model(args, http),
-            lambda: EchoRetriever(args.retrieval_url, index_id=args.index_id, http=http),
+            lambda: _retriever(args, http),
             lambda: counter, max_total_model_calls=args.max_total_model_calls)
     config = Config(max_model_calls=args.max_model_calls, context_limit=args.context_limit,
         response_reserve=args.response_reserve, max_backend_calls=args.max_backend_calls,
@@ -153,26 +173,33 @@ def execute(args):
         max_total_output_tokens=args.max_total_output_tokens, notes_enabled=not args.no_notes,
         reserve_finish=not args.no_final_reserve, nonblocking_notes=not args.strict_note_failure,
         repair_context=not args.no_repair_context, delivery_preflight=not args.no_delivery_preflight,
-        max_batch=args.max_batch,
+        disclose_retriever=not args.hide_retriever_capabilities, compiled_query_cache=args.compiled_query_cache,
+        evidence_shelf_size=args.evidence_shelf_size, recall_navigation=not args.no_recall_navigation,
+        centered_recall=not args.prefix_recall_excerpts, max_batch=args.max_batch,
         max_queries_per_search=args.max_queries_per_search,
         context_mode=args.context_mode, answer_prefix=args.answer_prefix, answer_suffix=args.answer_suffix)
     if args.counter == "hf_tokens" and config.response_reserve < config.max_output_tokens:
         raise ValueError("Token-mode response reserve must cover max-output-tokens")
     model = _model(args, http)
     question = Path(args.question_file).read_text(encoding="utf-8")
-    h = Harness(question, retriever, path=args.db, config=config, counter=counter)
+    retriever = _retriever(args, http)
+    h = None
     try:
+        h = Harness(question, retriever, path=args.db, config=config, counter=counter)
         h.run(model)
         return h.archive.report()
     finally:
-        h.close()
+        if h is not None:
+            h.close()
+        if callable(getattr(retriever, "close", None)):
+            retriever.close()
 
 
 def main(argv=None):
     args = parser().parse_args(argv)
     try:
         result = execute(args)
-    except (ValueError, OSError, ContractError) as exc:
+    except (ValueError, OSError, sqlite3.Error, ContractError) as exc:
         print(canonical({"error": getattr(exc, "code", type(exc).__name__), "detail": str(exc)[:400]}), file=sys.stderr)
         return 2
     print(json.dumps(result, ensure_ascii=False, indent=2))
