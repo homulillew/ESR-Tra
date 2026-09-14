@@ -1,0 +1,24 @@
+{
+  "utc": "2026-09-14T08:56:37.079854+00:00",
+  "selected": [
+    {
+      "qid": "72",
+      "prior": "easy",
+      "reason": "No multiple bridge/counting pattern detected; may still require substantial retrieval; heuristic uncertainty high.",
+      "split": "confirmation"
+    },
+    {
+      "qid": "661",
+      "prior": "hard",
+      "reason": "Explicit counting/exclusion, multiple temporal constraints, or several entity relations; heuristic uncertainty high.",
+      "split": "confirmation"
+    }
+  ],
+  "selection_rule": "First easy and first hard in the previously frozen candidate order; no answers or old trajectories used.",
+  "difficulty_basis": "Pre-existing question-structure heuristic; not empirical accuracy or intrinsic difficulty.",
+  "source_path": "C:\\Users\\USER\\Desktop\\zip\\ESR-Tra\\runs\\strong_api_esr\\20260909T085343Z\\dataset_splits\\selection.json",
+  "source_sha256": "7a4e0a32d4170d7225c260f440c171d9f2e42ad5b2d84e1494628495e1d1e27e",
+  "question_source_sha256": "fd39d6523e9c9d270c11470af95ec6445ebc53e4c0d1250aedb86f5067ca6bae",
+  "split_disposition": "These two cases become development-exposed when their question/trajectory is inspected. Exclude from any future untouched confirmation claim. Original split files left intact.",
+  "policy_input": "Original question only; no difficulty, history, answers, gold, or human strategy."
+}

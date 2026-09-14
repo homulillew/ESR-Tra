@@ -1,0 +1,140 @@
+{
+  "protocol": "stride-search-3",
+  "head": "cfbd6742545d9fbe477a3e784ed9e8cd7a51eb8dd1cef8c0d3b9620420c3cf1f",
+  "outcome": "submitted",
+  "formal_correct": null,
+  "model_attempts": 4,
+  "backend_attempts": 5,
+  "queries": [
+    {
+      "round": 1,
+      "top_k": 5,
+      "equivalence_key": "6c05cd418ae8ac1f894cb46ef83b47374022690c38097ef944491aab273cabfb",
+      "cached": false,
+      "query_sha256": "515e0baa8b3c13f00f381fd348c30b55cb4fe552b35d4200d0878b807987a9c4",
+      "query": "African artist encouraged to use different tool between JFK and RFK assassinations",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"african\" OR \"artist\" OR \"encouraged\" OR \"to\" OR \"use\" OR \"different\" OR \"tool\" OR \"between\" OR \"jfk\" OR \"and\" OR \"rfk\" OR \"assassinations\"",
+        "terms": [
+          "african",
+          "artist",
+          "encouraged",
+          "to",
+          "use",
+          "different",
+          "tool",
+          "between",
+          "jfk",
+          "and",
+          "rfk",
+          "assassinations"
+        ]
+      }
+    },
+    {
+      "round": 1,
+      "top_k": 5,
+      "equivalence_key": "7f711f0753dedfe1dc2df08b55ea20fbccba9905e22686456e84aceaabe75518",
+      "cached": false,
+      "query_sha256": "de76beeaf789e5d9d288fe226db716a847fbf2880514a931d5746d90d15d3060",
+      "query": "artist studied Africa UK US head of department dean built gallery venue 25th anniversary",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"artist\" OR \"studied\" OR \"africa\" OR \"uk\" OR \"us\" OR \"head\" OR \"of\" OR \"department\" OR \"dean\" OR \"built\" OR \"gallery\" OR \"venue\" OR \"25th\" OR \"anniversary\"",
+        "terms": [
+          "artist",
+          "studied",
+          "africa",
+          "uk",
+          "us",
+          "head",
+          "of",
+          "department",
+          "dean",
+          "built",
+          "gallery",
+          "venue",
+          "25th",
+          "anniversary"
+        ]
+      }
+    },
+    {
+      "round": 1,
+      "top_k": 5,
+      "equivalence_key": "0b5efe394afd75eb18b9a7ff029d9837df7e05ac539f38fac3c00ff77c1f1b7d",
+      "cached": false,
+      "query_sha256": "831a244b062ea2715f85f9a0da70668e5be380627876b89219a06533a5021404",
+      "query": "African artist switched tool 1964 continued until 2014",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"african\" OR \"artist\" OR \"switched\" OR \"tool\" OR \"1964\" OR \"continued\" OR \"until\" OR \"2014\"",
+        "terms": [
+          "african",
+          "artist",
+          "switched",
+          "tool",
+          "1964",
+          "continued",
+          "until",
+          "2014"
+        ]
+      }
+    }
+  ],
+  "equivalent_query_repeats": 0,
+  "views": [
+    {
+      "round": 1,
+      "compacted": false,
+      "visible_evidence": [],
+      "shelf": [],
+      "shelf_evicted": []
+    },
+    {
+      "round": 2,
+      "compacted": false,
+      "visible_evidence": [],
+      "shelf": [],
+      "shelf_evicted": []
+    },
+    {
+      "round": 3,
+      "compacted": false,
+      "visible_evidence": [
+        "e1",
+        "e2"
+      ],
+      "shelf": [],
+      "shelf_evicted": []
+    },
+    {
+      "round": 4,
+      "compacted": false,
+      "visible_evidence": [
+        "e1",
+        "e2",
+        "e3"
+      ],
+      "shelf": [],
+      "shelf_evicted": []
+    }
+  ],
+  "delivered_refs": [
+    "e1",
+    "e2",
+    "e3"
+  ],
+  "submitted_refs": [
+    "e1",
+    "e2",
+    "e3"
+  ],
+  "text_included": true,
+  "limitations": [
+    "Equivalence is compiler equality, not semantic identity or wasted-search proof",
+    "Raw-window visibility/selection is not entailment or complete evidence coverage",
+    "No live q26 replay or independent answer scoring is performed"
+  ]
+}

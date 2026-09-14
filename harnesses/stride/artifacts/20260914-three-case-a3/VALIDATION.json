@@ -1,0 +1,46 @@
+{
+  "base_and_collector_tests": "253 passed in 66.80s",
+  "cases": [
+    {
+      "case": "q26",
+      "events": 353,
+      "rounds": 12,
+      "original_head": "d0a8d420ab5e913cdbcd23304c16517e7cd8e83d5e80d43534c6aef1722f4874",
+      "public_head": "83e67edc8f5dc9bc1e0bd706c6c76f212f5bbaf8f01fe7b2e586e43521a04571",
+      "objects_identical": true,
+      "raw_http_bodies_identical": true,
+      "public_trajectory_matches_public_archive": true,
+      "original_seal_unchanged": true
+    },
+    {
+      "case": "q72",
+      "events": 360,
+      "rounds": 14,
+      "original_head": "21422120069393c9ab22ed4640a6ec59af40d9dbb95bf9b1de1f392c7ddd3337",
+      "public_head": "67a4a409700e8dd767ce94980fa8602e3e3aa847ccd7e3e1bcb70098b24c3c52",
+      "objects_identical": true,
+      "raw_http_bodies_identical": true,
+      "public_trajectory_matches_public_archive": true,
+      "original_seal_unchanged": true
+    },
+    {
+      "case": "q661",
+      "events": 66,
+      "rounds": 4,
+      "original_head": "005be44cf19d6670748b2016d40fb37076872438a1f89a19dc2c90abe1f9aba6",
+      "public_head": "cfbd6742545d9fbe477a3e784ed9e8cd7a51eb8dd1cef8c0d3b9620420c3cf1f",
+      "objects_identical": true,
+      "raw_http_bodies_identical": true,
+      "public_trajectory_matches_public_archive": true,
+      "original_seal_unchanged": true
+    }
+  ],
+  "raw_request_and_response_body_files_byte_identical": 66,
+  "judge_requests": 3,
+  "public_judge_heads_match": true,
+  "sensitive_marker_scan_pass": true,
+  "original_local_archives_unchanged": true,
+  "behavioral_objects_and_raw_bodies_unchanged": true,
+  "publication_test": "Synthetic deployment metadata replacement preserves objects and request bodies; public Archive.verify passes",
+  "reading_view_check": "30 round files, all stored documents and evidence windows independently compared against archive"
+}

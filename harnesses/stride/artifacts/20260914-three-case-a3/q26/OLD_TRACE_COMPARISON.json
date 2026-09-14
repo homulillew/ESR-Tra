@@ -1,0 +1,465 @@
+{
+  "source": "private original HTTP read only after new episode finished",
+  "old_http_rounds": 29,
+  "tool_counts": {
+    "search": 32,
+    "open_page": 7,
+    "update_state": 1,
+    "submit_answer": 1
+  },
+  "input_tokens": 422720,
+  "output_tokens": 3301,
+  "cache_read_tokens": 355328,
+  "rows": [
+    {
+      "round": 1,
+      "tools": [
+        "search",
+        "search"
+      ],
+      "query_arguments": [
+        {
+          "query": "Latin music club West Coast 1970s seven nights a week",
+          "top_k": 10
+        },
+        {
+          "query": "weekly magazine founded 1800s sold $100 million",
+          "top_k": 10
+        }
+      ],
+      "answer_name_present": false,
+      "request_sha256": "fba51cda1a05e73e9971852c9a00bfc69f790bae96094324bc68539679382373",
+      "response_sha256": "cb46d0aa2690af2a4f799fe3fbb4f13aa13a854f4b1f6d6a8f79d536eb4b25b7"
+    },
+    {
+      "round": 2,
+      "tools": [
+        "search",
+        "search"
+      ],
+      "query_arguments": [
+        {
+          "query": "magazine sold for $100 million weekly founded 1800s",
+          "top_k": 10
+        },
+        {
+          "query": "Latin music club \"seven nights\" West Coast 1970s salsa",
+          "top_k": 10
+        }
+      ],
+      "answer_name_present": false,
+      "request_sha256": "c7244c4ca6897e6a457f536d50523ccba204fb293fa03ecf2c70c42eb878b782",
+      "response_sha256": "27a343cc45b6bff0418223669a7064a373ecb7448f47fe8fef922cbf0964ef00"
+    },
+    {
+      "round": 3,
+      "tools": [
+        "search",
+        "search"
+      ],
+      "query_arguments": [
+        {
+          "query": "Variety magazine sold $100 million",
+          "top_k": 10
+        },
+        {
+          "query": "New York Magazine sold $100 million weekly founded 1865",
+          "top_k": 10
+        }
+      ],
+      "answer_name_present": false,
+      "request_sha256": "b2477e1b7f6dbbd32bc55ec32fbbc211cc715f9da1eab03fc000614a818a9c47",
+      "response_sha256": "8d323d40bf85bddf7c6a87be398a0c833d54881c0096a6ceda3e10ce062a00aa"
+    },
+    {
+      "round": 4,
+      "tools": [
+        "search",
+        "search"
+      ],
+      "query_arguments": [
+        {
+          "query": "Billboard magazine 1970s Latin music club West Coast \"seven nights\"",
+          "top_k": 10
+        },
+        {
+          "query": "salsa club Los Angeles 1970s name starts with B four syllables Latin music",
+          "top_k": 10
+        }
+      ],
+      "answer_name_present": false,
+      "request_sha256": "0a4d238fb9119dcf2ccba811b0f11cfeb3ba6c6dc7bfe24ec227874aa6ee8bda",
+      "response_sha256": "eb03d9964007a510e46617a13fc8043c0a0ef41abe43bec75358bbc761edc8be"
+    },
+    {
+      "round": 5,
+      "tools": [
+        "search",
+        "search"
+      ],
+      "query_arguments": [
+        {
+          "query": "Billboard 1975 1976 Latin club Los Angeles salsa \"seven nights a week\" owner",
+          "top_k": 10
+        },
+        {
+          "query": "\"Latin music\" club 1970s San Francisco \"seven nights\" owner sound system",
+          "top_k": 10
+        }
+      ],
+      "answer_name_present": false,
+      "request_sha256": "dbc7565ce570fe6e70434cb0bd1f5483722bd920f31169bf079f65f6ac4cdefc",
+      "response_sha256": "b8f6ac074fad9a0aabb0c5cad598acc8a251281d0ad1175b28377f5ba076b717"
+    },
+    {
+      "round": 6,
+      "tools": [
+        "open_page"
+      ],
+      "query_arguments": [],
+      "answer_name_present": true,
+      "request_sha256": "46245d11b075710a28734ba8150997922537045d8546b85c631c405820ee02c5",
+      "response_sha256": "3cfb273f0389076e50ddaaf401a03630a097cb74088fc46be5f72e6b75bcee52"
+    },
+    {
+      "round": 7,
+      "tools": [
+        "search"
+      ],
+      "query_arguments": [
+        {
+          "query": "Filipino southpaw boxer named Rolando",
+          "top_k": 10
+        }
+      ],
+      "answer_name_present": true,
+      "request_sha256": "51cda5a9a864344f7aa4ab219fd38c521e36bd4ae523e17b82d1137e1cab002a",
+      "response_sha256": "2997556c7ab73fa221f64fc5ea18e1be03ab6f785dfd05c4b2a5cdb691da29ad"
+    },
+    {
+      "round": 8,
+      "tools": [
+        "search",
+        "search"
+      ],
+      "query_arguments": [
+        {
+          "query": "Rolando Bohol Filipino boxer southpaw",
+          "top_k": 10
+        },
+        {
+          "query": "\"Rolando\" Filipino boxer left-handed southpaw champion",
+          "top_k": 10
+        }
+      ],
+      "answer_name_present": true,
+      "request_sha256": "a19ead6715d77d8e11a96b96b4e3448e981522da02c91e11b8254a3c770b843b",
+      "response_sha256": "1cff5393ffeacb3b68c9a1b36cd9c52d0f7b68a18ccdd4888498188a0fce674c"
+    },
+    {
+      "round": 9,
+      "tools": [
+        "search",
+        "search"
+      ],
+      "query_arguments": [
+        {
+          "query": "Rolando Pascua Filipino boxer",
+          "top_k": 10
+        },
+        {
+          "query": "Rolando Recio Filipino boxer southpaw",
+          "top_k": 10
+        }
+      ],
+      "answer_name_present": true,
+      "request_sha256": "5c2955b53f07f85d0b0f38549a8e3eef9f1089385718107f3de99b29af9f1ca6",
+      "response_sha256": "394327c3fc6a163ba60d4711ff20b7c74c42749a83bf852e66fd348102c52822"
+    },
+    {
+      "round": 10,
+      "tools": [
+        "search",
+        "search"
+      ],
+      "query_arguments": [
+        {
+          "query": "Rolando Bohol boxer Philippines",
+          "top_k": 10
+        },
+        {
+          "query": "Rolando Navarrete Filipino boxer southpaw super featherweight",
+          "top_k": 10
+        }
+      ],
+      "answer_name_present": true,
+      "request_sha256": "95f9d4cef9d0f6d41f62f487e6a1f0ae16cb83b7dd4f6182e79cd15e12ca926d",
+      "response_sha256": "ae9bec37ad6775b15b7a32122d930d992b229e2ba93b935d582e1c16d1d9432c"
+    },
+    {
+      "round": 11,
+      "tools": [
+        "search"
+      ],
+      "query_arguments": [
+        {
+          "query": "\"Rolando Navarrete\" boxer Philippines southpaw",
+          "top_k": 10
+        }
+      ],
+      "answer_name_present": true,
+      "request_sha256": "8bf1eb70dc74933c5b8f1eb4380a986b01f156d590d0e930c5c5a5dec3e6ef3a",
+      "response_sha256": "b0c89f26f229d244ea4caa95268f14026f01515e96bb1fe7bd8a6340b18c65ea"
+    },
+    {
+      "round": 12,
+      "tools": [
+        "search",
+        "search"
+      ],
+      "query_arguments": [
+        {
+          "query": "Rolando Navarrete WBC super featherweight champion Filipino",
+          "top_k": 10
+        },
+        {
+          "query": "Rolando Elorde Filipino boxer southpaw",
+          "top_k": 10
+        }
+      ],
+      "answer_name_present": true,
+      "request_sha256": "d8aa7b88a200b9a5ddfb7a49b595ec1a72bb5092faaa71c36a45f7b967dadf0c",
+      "response_sha256": "4386f09846af64839d2844871cb4acc43089ed992767d68e3af1b9d2a6f570b9"
+    },
+    {
+      "round": 13,
+      "tools": [
+        "search"
+      ],
+      "query_arguments": [
+        {
+          "query": "Rolando Navarrete Wikipedia boxer",
+          "top_k": 10
+        }
+      ],
+      "answer_name_present": true,
+      "request_sha256": "f28a2b4efb96e1b64ac3d51d8665712951599143c6d8ac0f002f00b8ff4b8db6",
+      "response_sha256": "9d1bd17b8fd907689626ff56f7e137348bfc591d57f4e0f127ab2a396f0b1142"
+    },
+    {
+      "round": 14,
+      "tools": [
+        "search"
+      ],
+      "query_arguments": [
+        {
+          "query": "\"Rolando Navarrete\" boxer",
+          "top_k": 10
+        }
+      ],
+      "answer_name_present": true,
+      "request_sha256": "dcbbd3851507bfadd5a7d59049452b7210912413cec2e0238bed8823a1ac99ad",
+      "response_sha256": "58b52a5d2bc1075f2fdea22f486a8b79cf1d300b8c4325e0c4e85f8406dddc6f"
+    },
+    {
+      "round": 15,
+      "tools": [
+        "search"
+      ],
+      "query_arguments": [
+        {
+          "query": "en.wikipedia.org Rolando Navarrete boxer Philippines southpaw super featherweight",
+          "top_k": 10
+        }
+      ],
+      "answer_name_present": true,
+      "request_sha256": "0ca489513a1c8937fe7f1cf77f970d32239d36245d5ff9fbb3bc7ea90897cab5",
+      "response_sha256": "4eaae4558a78a372f304ec56be46323e42c1e97d543c46a2980e3440c02b2124"
+    },
+    {
+      "round": 16,
+      "tools": [
+        "open_page"
+      ],
+      "query_arguments": [],
+      "answer_name_present": true,
+      "request_sha256": "77f591a0981385833139679f42f2a67787e1b680b803c03075d2e693d115afa6",
+      "response_sha256": "d22ae90273e22cfd6f1dcb4480abccc8825356bffeab7b1219fbc5ecd8366afb"
+    },
+    {
+      "round": 17,
+      "tools": [
+        "search"
+      ],
+      "query_arguments": [
+        {
+          "query": "site:en.wikipedia.org \"Rolando Navarrete\"",
+          "top_k": 10
+        }
+      ],
+      "answer_name_present": true,
+      "request_sha256": "b5382319df7e89db54957b8b7b8f82d362cd3e6ff7f6f8c38db0e72df73566c6",
+      "response_sha256": "411073629c5bbf659c692cc1c48f63242975eec4c4e89f986d4f8baa769bd332"
+    },
+    {
+      "round": 18,
+      "tools": [
+        "search"
+      ],
+      "query_arguments": [
+        {
+          "query": "Rolando Navarrete Filipino boxer southpaw super featherweight champion WBC",
+          "top_k": 10
+        }
+      ],
+      "answer_name_present": false,
+      "request_sha256": "017a6995d61ba13bd870023c90f4bb8ace14b94c87b1722648af70a87fdafefc",
+      "response_sha256": "fab91ad967f65ddae6791e9d4124b490f2a9d2ab91164f25e106e279b12cfde9"
+    },
+    {
+      "round": 19,
+      "tools": [
+        "search",
+        "search"
+      ],
+      "query_arguments": [
+        {
+          "query": "Billboard 1975 Latin music club West Coast seven nights week Bajadera Bernal Francisco",
+          "top_k": 10
+        },
+        {
+          "query": "\"Rolando Navarrete\" boxer Philippines southpaw first name",
+          "top_k": 10
+        }
+      ],
+      "answer_name_present": false,
+      "request_sha256": "e4fab3432121b756d4ecf3c9a875109e9eb8753ba10f5728ada752e5389716d0",
+      "response_sha256": "6228bffb8af9d71bd885bc9e8ddddbe458f0b2a9ade2629b51eee30861f432b0"
+    },
+    {
+      "round": 20,
+      "tools": [
+        "open_page"
+      ],
+      "query_arguments": [],
+      "answer_name_present": false,
+      "request_sha256": "d2c73178b2f7b86431b25442d14631b537c63e058064dfa1aa31219ca6889def",
+      "response_sha256": "b9f14e8e929984b62ec78603f89f732ebfc607a3ffd2067583a51ae0eefacb6a"
+    },
+    {
+      "round": 21,
+      "tools": [
+        "search",
+        "search"
+      ],
+      "query_arguments": [
+        {
+          "query": "Rolando Navarrete Filipino boxer southpaw Wikipedia",
+          "top_k": 10
+        },
+        {
+          "query": "Billboard magazine founded 1894 weekly sold $100 million",
+          "top_k": 10
+        }
+      ],
+      "answer_name_present": true,
+      "request_sha256": "4c5b30af52b1364189f062ee6afb3651b6bad0cd0b95707e28b1427285f073ab",
+      "response_sha256": "bd7f49949dee1545cb7525c830bd8243349a61c7d02685faf56ecf808ea14186"
+    },
+    {
+      "round": 22,
+      "tools": [
+        "search"
+      ],
+      "query_arguments": [
+        {
+          "query": "\"Rolando Navarrete\" boxer Philippines super featherweight WBC champion southpaw",
+          "top_k": 10
+        }
+      ],
+      "answer_name_present": true,
+      "request_sha256": "230e104a23011c46cd93e51fb99609cbe8417263a053953597c6c30e44166fb0",
+      "response_sha256": "42173e1666f02baf89b2cf29915ce8844168877483ce14a4181a93077e1051e4"
+    },
+    {
+      "round": 23,
+      "tools": [
+        "search",
+        "search"
+      ],
+      "query_arguments": [
+        {
+          "query": "Rolando Navarrete Filipino boxer WBC super featherweight champion 1980s",
+          "top_k": 10
+        },
+        {
+          "query": "Billboard magazine sold $100 million",
+          "top_k": 10
+        }
+      ],
+      "answer_name_present": true,
+      "request_sha256": "09b72aa6b850d6aad68bd54106cb87965c8a6beaf7082a8d16c3b9f5264ac47d",
+      "response_sha256": "10bb4dfd2ae38a071131f7b59a56ef856304d0eabc0ca67167dccaaa2e9cee01"
+    },
+    {
+      "round": 24,
+      "tools": [
+        "open_page"
+      ],
+      "query_arguments": [],
+      "answer_name_present": true,
+      "request_sha256": "5f77fca2ebf2ae4b0b1cb93a03d17bac185f3cbe7b2f3d87b6e8241c11ad8abc",
+      "response_sha256": "e006e340a19006e1899bb1e471c7df69af35f3d86845a68102e096c6c0671a16"
+    },
+    {
+      "round": 25,
+      "tools": [
+        "open_page"
+      ],
+      "query_arguments": [],
+      "answer_name_present": true,
+      "request_sha256": "5b787a010305961ecbfbb76e3a4097c52c3b3e35869b787d7b33fb502c189424",
+      "response_sha256": "15eb02290d0e9599486ec6e2214d98de4d34d7cb3bfcca8b33b787d8d2c9f38b"
+    },
+    {
+      "round": 26,
+      "tools": [
+        "open_page"
+      ],
+      "query_arguments": [],
+      "answer_name_present": true,
+      "request_sha256": "60c170509de7135a9e31856cb408d0162bddfa31ed41094296a9e9cb4392c9ae",
+      "response_sha256": "c7f72c06f9281365679745553cc7b5b5f8a2c818a3b60a9e0b7e9937ce12b5e7"
+    },
+    {
+      "round": 27,
+      "tools": [
+        "open_page"
+      ],
+      "query_arguments": [],
+      "answer_name_present": true,
+      "request_sha256": "f759077114a1fbe7293daca050f14ce4eb1952df2e5e7e8c247668dd1d39b3a1",
+      "response_sha256": "26dc221173bf32a11123aabe87541b0d6bed4b5f0d53af035c65b8f87f3210c0"
+    },
+    {
+      "round": 28,
+      "tools": [
+        "update_state"
+      ],
+      "query_arguments": [],
+      "answer_name_present": true,
+      "request_sha256": "9bba129163813db4e021412040b4cf85aa4855baeb69334134923d015f9dd66f",
+      "response_sha256": "cd5ba4e22e6b328add886dc869bfcd7215c536ca87686915db4f9290cc9c2c46"
+    },
+    {
+      "round": 29,
+      "tools": [
+        "submit_answer"
+      ],
+      "query_arguments": [],
+      "answer_name_present": true,
+      "request_sha256": "d6954342300c7a80c9301ebaec3b1222cf5011690df1f8776c3627c810ddbb77",
+      "response_sha256": "dd0ef49561e27b282fb00093f6bb4b1461cf856310e738b252e416567c795da4"
+    }
+  ]
+}

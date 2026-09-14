@@ -1,0 +1,1214 @@
+{
+  "metrics": {
+    "terminal": {
+      "answer": "Binochios",
+      "basis": [
+        {
+          "document": "d103",
+          "document_chars": 525159,
+          "end": 16550,
+          "kind": "raw_evidence",
+          "ref": "e3",
+          "sha256": "355d3a21301ca9b415729a2d5ce765afb76f89b3cffb731805ef2887f0bc705c",
+          "snapshot": "bbe08d96d3032773620f23335015d257b2ddf0cb9eb0dd82dd1d8e496dbb50ef",
+          "start": 15850
+        },
+        {
+          "document": "d103",
+          "document_chars": 525159,
+          "end": 17050,
+          "kind": "raw_evidence",
+          "ref": "e4",
+          "sha256": "3de99dcca472893ff0a64ff849158cdb7b03d0b6112c7ebd694b9dc822ee6a86",
+          "snapshot": "bbe08d96d3032773620f23335015d257b2ddf0cb9eb0dd82dd1d8e496dbb50ef",
+          "start": 16550
+        },
+        {
+          "document": "d22",
+          "document_chars": 19119,
+          "end": 3000,
+          "kind": "raw_evidence",
+          "ref": "e1",
+          "sha256": "474fd85f14d1bfbd6834c60a2a90e1acf1e407b356f046f1a241d1a07a84c218",
+          "snapshot": "ec091dee7ef2d806b0a7b11072f12cf033b317504fbf8cefdaf26b4330363978",
+          "start": 0
+        }
+      ],
+      "elapsed_seconds": 97.49831669998821,
+      "outcome": "submitted",
+      "refs": [
+        "e3",
+        "e4",
+        "e1"
+      ],
+      "semantic_status": "not_automatically_verified"
+    },
+    "formal_correct": null,
+    "model_attempts": 12,
+    "http_attempts": 12,
+    "native_calls": 20,
+    "executed_actions": 20,
+    "action_counts": {
+      "search": 13,
+      "read": 4,
+      "find": 2,
+      "finish": 1
+    },
+    "declared_search_queries": 39,
+    "query_execution_count": 39,
+    "backend_calls": 41,
+    "backend_by_kind": {
+      "search": 39,
+      "get_document": 2
+    },
+    "equivalent_key_repeats": 1,
+    "expression_repeats": 1,
+    "exact_query_cache_hits": 0,
+    "quote_queries": 0,
+    "site_queries": 0,
+    "uppercase_boolean_queries": 0,
+    "identical_previous_result_sets": 4,
+    "compaction_requests": 2,
+    "shelf_restore_requests": 0,
+    "shelf_restored_windows": 0,
+    "shelf_capacity_evictions": 0,
+    "direct_shelf_restore_wire_bytes": 0,
+    "total_wire_body_bytes": 678680,
+    "usage_known": {
+      "input_tokens": 160790,
+      "output_tokens": 1657,
+      "cache_read_tokens": 102912,
+      "cache_write_tokens": 0
+    },
+    "unknown_usage_calls": 0,
+    "http_latency_seconds": 53.64493710003444,
+    "backend_latency_seconds": 42.045499199972255,
+    "final_request_rounds": [],
+    "recovery_events": {
+      "delivery_preflight": 11
+    },
+    "result_withheld": 0,
+    "first_request_question_exact": true,
+    "first_request_capabilities": {
+      "boolean_operators": false,
+      "kind": "sqlite-fts5-bm25",
+      "negative_result": "no hit for this expression is not proof that the fact is absent",
+      "phrase_quotes": false,
+      "query_rule": "lowercase; regex word extraction; first-occurrence deduplication; OR of quoted individual tokens",
+      "ranking": "SQLite bm25(search), ascending; docid tie-break; unchanged from q26 LocalIndex",
+      "scope": "fixed local corpus; not live web",
+      "site_filter": false,
+      "title_kind": "stored URL, not an extracted page title",
+      "warning": "site:, quotes and AND/OR in input are not filters/operators. Their words may become ordinary search terms. Use a few discriminating terms."
+    },
+    "first_request_notes": [],
+    "returned_models": [
+      "glm-5.2"
+    ],
+    "provider_usage_totals": {
+      "input_tokens": 160790,
+      "output_tokens": 1657,
+      "cache_read_tokens": 102912,
+      "cache_write_tokens": null
+    },
+    "usage_field_present_calls": {
+      "input_tokens": 12,
+      "output_tokens": 12,
+      "cache_read_tokens": 12,
+      "cache_write_tokens": 0
+    }
+  },
+  "queries": [
+    {
+      "round": 1,
+      "query": "Latin music club West Coast 1970s seven nights week",
+      "expression": "\"latin\" OR \"music\" OR \"club\" OR \"west\" OR \"coast\" OR \"1970s\" OR \"seven\" OR \"nights\" OR \"week\"",
+      "new_docids": [
+        "16190",
+        "39780",
+        "47850",
+        "4911",
+        "94288"
+      ],
+      "max_previous_result_jaccard": null,
+      "identical_previous_result_set": false,
+      "contains_quote": false,
+      "contains_site": false,
+      "contains_uppercase_boolean": false
+    },
+    {
+      "round": 1,
+      "query": "Bajari Latin music club 1970s",
+      "expression": "\"bajari\" OR \"latin\" OR \"music\" OR \"club\" OR \"1970s\"",
+      "new_docids": [
+        "10515",
+        "25162",
+        "31105",
+        "47763"
+      ],
+      "max_previous_result_jaccard": 0.1111111111111111,
+      "identical_previous_result_set": false,
+      "contains_quote": false,
+      "contains_site": false,
+      "contains_uppercase_boolean": false
+    },
+    {
+      "round": 1,
+      "query": "Latin music club 1970s California owner sound system",
+      "expression": "\"latin\" OR \"music\" OR \"club\" OR \"1970s\" OR \"california\" OR \"owner\" OR \"sound\" OR \"system\"",
+      "new_docids": [
+        "22827",
+        "38249",
+        "47788",
+        "99024"
+      ],
+      "max_previous_result_jaccard": 0.1111111111111111,
+      "identical_previous_result_set": false,
+      "contains_quote": false,
+      "contains_site": false,
+      "contains_uppercase_boolean": false
+    },
+    {
+      "round": 1,
+      "query": "weekly magazine founded 1800s sold $100 million",
+      "expression": "\"weekly\" OR \"magazine\" OR \"founded\" OR \"1800s\" OR \"sold\" OR \"100\" OR \"million\"",
+      "new_docids": [
+        "1361",
+        "36940",
+        "56171",
+        "78737",
+        "9165"
+      ],
+      "max_previous_result_jaccard": 0.0,
+      "identical_previous_result_set": false,
+      "contains_quote": false,
+      "contains_site": false,
+      "contains_uppercase_boolean": false
+    },
+    {
+      "round": 1,
+      "query": "New York magazine sold $100 million history",
+      "expression": "\"new\" OR \"york\" OR \"magazine\" OR \"sold\" OR \"100\" OR \"million\" OR \"history\"",
+      "new_docids": [
+        "52137",
+        "60525",
+        "84189",
+        "96601",
+        "97044"
+      ],
+      "max_previous_result_jaccard": 0.0,
+      "identical_previous_result_set": false,
+      "contains_quote": false,
+      "contains_site": false,
+      "contains_uppercase_boolean": false
+    },
+    {
+      "round": 1,
+      "query": "Village Voice sold $100 million",
+      "expression": "\"village\" OR \"voice\" OR \"sold\" OR \"100\" OR \"million\"",
+      "new_docids": [
+        "16539",
+        "51429",
+        "57190",
+        "79853",
+        "8618"
+      ],
+      "max_previous_result_jaccard": 0.0,
+      "identical_previous_result_set": false,
+      "contains_quote": false,
+      "contains_site": false,
+      "contains_uppercase_boolean": false
+    },
+    {
+      "round": 2,
+      "query": "New York magazine founded 1968 sold $100 million",
+      "expression": "\"new\" OR \"york\" OR \"magazine\" OR \"founded\" OR \"1968\" OR \"sold\" OR \"100\" OR \"million\"",
+      "new_docids": [
+        "11243",
+        "12927",
+        "18662",
+        "31677",
+        "52445"
+      ],
+      "max_previous_result_jaccard": 0.0,
+      "identical_previous_result_set": false,
+      "contains_quote": false,
+      "contains_site": false,
+      "contains_uppercase_boolean": false
+    },
+    {
+      "round": 2,
+      "query": "Village Voice founded 1955 sold $100 million",
+      "expression": "\"village\" OR \"voice\" OR \"founded\" OR \"1955\" OR \"sold\" OR \"100\" OR \"million\"",
+      "new_docids": [
+        "1787",
+        "40580",
+        "546",
+        "69191"
+      ],
+      "max_previous_result_jaccard": 0.1111111111111111,
+      "identical_previous_result_set": false,
+      "contains_quote": false,
+      "contains_site": false,
+      "contains_uppercase_boolean": false
+    },
+    {
+      "round": 2,
+      "query": "weekly magazine founded 1800s sold 100 million dollars",
+      "expression": "\"weekly\" OR \"magazine\" OR \"founded\" OR \"1800s\" OR \"sold\" OR \"100\" OR \"million\" OR \"dollars\"",
+      "new_docids": [
+        "12368",
+        "23522",
+        "32515",
+        "99602"
+      ],
+      "max_previous_result_jaccard": 0.1111111111111111,
+      "identical_previous_result_set": false,
+      "contains_quote": false,
+      "contains_site": false,
+      "contains_uppercase_boolean": false
+    },
+    {
+      "round": 2,
+      "query": "Bajari Latin club San Francisco 1970s",
+      "expression": "\"bajari\" OR \"latin\" OR \"club\" OR \"san\" OR \"francisco\" OR \"1970s\"",
+      "new_docids": [
+        "77756",
+        "78160",
+        "91289"
+      ],
+      "max_previous_result_jaccard": 0.1111111111111111,
+      "identical_previous_result_set": false,
+      "contains_quote": false,
+      "contains_site": false,
+      "contains_uppercase_boolean": false
+    },
+    {
+      "round": 2,
+      "query": "Beso Latin music club 1970s California",
+      "expression": "\"beso\" OR \"latin\" OR \"music\" OR \"club\" OR \"1970s\" OR \"california\"",
+      "new_docids": [
+        "67833",
+        "71761",
+        "78312",
+        "83662",
+        "85902"
+      ],
+      "max_previous_result_jaccard": 0.0,
+      "identical_previous_result_set": false,
+      "contains_quote": false,
+      "contains_site": false,
+      "contains_uppercase_boolean": false
+    },
+    {
+      "round": 2,
+      "query": "Bamba Latin music club 1970s West Coast",
+      "expression": "\"bamba\" OR \"latin\" OR \"music\" OR \"club\" OR \"1970s\" OR \"west\" OR \"coast\"",
+      "new_docids": [
+        "27779",
+        "32172",
+        "35146",
+        "66101",
+        "89776"
+      ],
+      "max_previous_result_jaccard": 0.0,
+      "identical_previous_result_set": false,
+      "contains_quote": false,
+      "contains_site": false,
+      "contains_uppercase_boolean": false
+    },
+    {
+      "round": 3,
+      "query": "The Nation magazine sold $100 million",
+      "expression": "\"the\" OR \"nation\" OR \"magazine\" OR \"sold\" OR \"100\" OR \"million\"",
+      "new_docids": [],
+      "max_previous_result_jaccard": 1.0,
+      "identical_previous_result_set": true,
+      "contains_quote": false,
+      "contains_site": false,
+      "contains_uppercase_boolean": false
+    },
+    {
+      "round": 3,
+      "query": "Harper's Weekly magazine sold 100 million",
+      "expression": "\"harper\" OR \"s\" OR \"weekly\" OR \"magazine\" OR \"sold\" OR \"100\" OR \"million\"",
+      "new_docids": [
+        "43529",
+        "58125",
+        "87815"
+      ],
+      "max_previous_result_jaccard": 0.1111111111111111,
+      "identical_previous_result_set": false,
+      "contains_quote": false,
+      "contains_site": false,
+      "contains_uppercase_boolean": false
+    },
+    {
+      "round": 3,
+      "query": "New York magazine sold 100 million K-III",
+      "expression": "\"new\" OR \"york\" OR \"magazine\" OR \"sold\" OR \"100\" OR \"million\" OR \"k\" OR \"iii\"",
+      "new_docids": [
+        "15043",
+        "20140",
+        "40019",
+        "76031",
+        "76156"
+      ],
+      "max_previous_result_jaccard": 0.0,
+      "identical_previous_result_set": false,
+      "contains_quote": false,
+      "contains_site": false,
+      "contains_uppercase_boolean": false
+    },
+    {
+      "round": 3,
+      "query": "Latin music club 1970s Los Angeles seven nights week owner",
+      "expression": "\"latin\" OR \"music\" OR \"club\" OR \"1970s\" OR \"los\" OR \"angeles\" OR \"seven\" OR \"nights\" OR \"week\" OR \"owner\"",
+      "new_docids": [],
+      "max_previous_result_jaccard": 0.25,
+      "identical_previous_result_set": false,
+      "contains_quote": false,
+      "contains_site": false,
+      "contains_uppercase_boolean": false
+    },
+    {
+      "round": 3,
+      "query": "salsa club 1970s California B name owner Francisco",
+      "expression": "\"salsa\" OR \"club\" OR \"1970s\" OR \"california\" OR \"b\" OR \"name\" OR \"owner\" OR \"francisco\"",
+      "new_docids": [
+        "52794",
+        "63826",
+        "66298"
+      ],
+      "max_previous_result_jaccard": 0.1111111111111111,
+      "identical_previous_result_set": false,
+      "contains_quote": false,
+      "contains_site": false,
+      "contains_uppercase_boolean": false
+    },
+    {
+      "round": 3,
+      "query": "Latin disco club 1970s West Coast four syllables B",
+      "expression": "\"latin\" OR \"disco\" OR \"club\" OR \"1970s\" OR \"west\" OR \"coast\" OR \"four\" OR \"syllables\" OR \"b\"",
+      "new_docids": [
+        "12159",
+        "24831",
+        "49131",
+        "91309"
+      ],
+      "max_previous_result_jaccard": 0.1111111111111111,
+      "identical_previous_result_set": false,
+      "contains_quote": false,
+      "contains_site": false,
+      "contains_uppercase_boolean": false
+    },
+    {
+      "round": 4,
+      "query": "Latin music club 1970s owner surname B Francisco sound system $10000",
+      "expression": "\"latin\" OR \"music\" OR \"club\" OR \"1970s\" OR \"owner\" OR \"surname\" OR \"b\" OR \"francisco\" OR \"sound\" OR \"system\" OR \"10000\"",
+      "new_docids": [
+        "79736",
+        "82705",
+        "88144"
+      ],
+      "max_previous_result_jaccard": 0.25,
+      "identical_previous_result_set": false,
+      "contains_quote": false,
+      "contains_site": false,
+      "contains_uppercase_boolean": false
+    },
+    {
+      "round": 4,
+      "query": "salsa club 1975 Los Angeles owner Bernal Francisco",
+      "expression": "\"salsa\" OR \"club\" OR \"1975\" OR \"los\" OR \"angeles\" OR \"owner\" OR \"bernal\" OR \"francisco\"",
+      "new_docids": [
+        "14467",
+        "46872",
+        "69820",
+        "99334"
+      ],
+      "max_previous_result_jaccard": 0.1111111111111111,
+      "identical_previous_result_set": false,
+      "contains_quote": false,
+      "contains_site": false,
+      "contains_uppercase_boolean": false
+    },
+    {
+      "round": 4,
+      "query": "Latin club 1970s California owner Bautista Francisco sound system",
+      "expression": "\"latin\" OR \"club\" OR \"1970s\" OR \"california\" OR \"owner\" OR \"bautista\" OR \"francisco\" OR \"sound\" OR \"system\"",
+      "new_docids": [
+        "18830",
+        "24843",
+        "56442",
+        "92742",
+        "94701"
+      ],
+      "max_previous_result_jaccard": 0.0,
+      "identical_previous_result_set": false,
+      "contains_quote": false,
+      "contains_site": false,
+      "contains_uppercase_boolean": false
+    },
+    {
+      "round": 4,
+      "query": "Bajari club Latin music 1970s",
+      "expression": "\"bajari\" OR \"club\" OR \"latin\" OR \"music\" OR \"1970s\"",
+      "new_docids": [],
+      "max_previous_result_jaccard": 1.0,
+      "identical_previous_result_set": true,
+      "contains_quote": false,
+      "contains_site": false,
+      "contains_uppercase_boolean": false
+    },
+    {
+      "round": 4,
+      "query": "Beso club Latin music 1970s California",
+      "expression": "\"beso\" OR \"club\" OR \"latin\" OR \"music\" OR \"1970s\" OR \"california\"",
+      "new_docids": [],
+      "max_previous_result_jaccard": 1.0,
+      "identical_previous_result_set": true,
+      "contains_quote": false,
+      "contains_site": false,
+      "contains_uppercase_boolean": false
+    },
+    {
+      "round": 4,
+      "query": "Bembe club Latin music 1970s",
+      "expression": "\"bembe\" OR \"club\" OR \"latin\" OR \"music\" OR \"1970s\"",
+      "new_docids": [
+        "2833",
+        "69324",
+        "81129",
+        "83546"
+      ],
+      "max_previous_result_jaccard": 0.1111111111111111,
+      "identical_previous_result_set": false,
+      "contains_quote": false,
+      "contains_site": false,
+      "contains_uppercase_boolean": false
+    },
+    {
+      "round": 5,
+      "query": "Bajari Latin music club 1970s California owner",
+      "expression": "\"bajari\" OR \"latin\" OR \"music\" OR \"club\" OR \"1970s\" OR \"california\" OR \"owner\"",
+      "new_docids": [],
+      "max_previous_result_jaccard": 0.25,
+      "identical_previous_result_set": false,
+      "contains_quote": false,
+      "contains_site": false,
+      "contains_uppercase_boolean": false
+    },
+    {
+      "round": 5,
+      "query": "Beso Latin music club 1970s California owner Francisco",
+      "expression": "\"beso\" OR \"latin\" OR \"music\" OR \"club\" OR \"1970s\" OR \"california\" OR \"owner\" OR \"francisco\"",
+      "new_docids": [
+        "42836"
+      ],
+      "max_previous_result_jaccard": 0.42857142857142855,
+      "identical_previous_result_set": false,
+      "contains_quote": false,
+      "contains_site": false,
+      "contains_uppercase_boolean": false
+    },
+    {
+      "round": 5,
+      "query": "Bembe Latin music club 1970s California owner",
+      "expression": "\"bembe\" OR \"latin\" OR \"music\" OR \"club\" OR \"1970s\" OR \"california\" OR \"owner\"",
+      "new_docids": [],
+      "max_previous_result_jaccard": 0.6666666666666666,
+      "identical_previous_result_set": false,
+      "contains_quote": false,
+      "contains_site": false,
+      "contains_uppercase_boolean": false
+    },
+    {
+      "round": 5,
+      "query": "Variety magazine sold $100 million",
+      "expression": "\"variety\" OR \"magazine\" OR \"sold\" OR \"100\" OR \"million\"",
+      "new_docids": [
+        "32880",
+        "82584",
+        "91574"
+      ],
+      "max_previous_result_jaccard": 0.1111111111111111,
+      "identical_previous_result_set": false,
+      "contains_quote": false,
+      "contains_site": false,
+      "contains_uppercase_boolean": false
+    },
+    {
+      "round": 5,
+      "query": "New York magazine sold $100 million 1991",
+      "expression": "\"new\" OR \"york\" OR \"magazine\" OR \"sold\" OR \"100\" OR \"million\" OR \"1991\"",
+      "new_docids": [
+        "38285",
+        "63587",
+        "79859"
+      ],
+      "max_previous_result_jaccard": 0.25,
+      "identical_previous_result_set": false,
+      "contains_quote": false,
+      "contains_site": false,
+      "contains_uppercase_boolean": false
+    },
+    {
+      "round": 5,
+      "query": "weekly magazine founded 1800s sold 100 million",
+      "expression": "\"weekly\" OR \"magazine\" OR \"founded\" OR \"1800s\" OR \"sold\" OR \"100\" OR \"million\"",
+      "new_docids": [],
+      "max_previous_result_jaccard": 1.0,
+      "identical_previous_result_set": true,
+      "contains_quote": false,
+      "contains_site": false,
+      "contains_uppercase_boolean": false
+    },
+    {
+      "round": 6,
+      "query": "Billboard magazine Latin music club 1970s California seven nights week",
+      "expression": "\"billboard\" OR \"magazine\" OR \"latin\" OR \"music\" OR \"club\" OR \"1970s\" OR \"california\" OR \"seven\" OR \"nights\" OR \"week\"",
+      "new_docids": [
+        "21224",
+        "28586",
+        "36800",
+        "99736"
+      ],
+      "max_previous_result_jaccard": 0.1111111111111111,
+      "identical_previous_result_set": false,
+      "contains_quote": false,
+      "contains_site": false,
+      "contains_uppercase_boolean": false
+    },
+    {
+      "round": 6,
+      "query": "Billboard magazine 1894 founded weekly",
+      "expression": "\"billboard\" OR \"magazine\" OR \"1894\" OR \"founded\" OR \"weekly\"",
+      "new_docids": [
+        "14320",
+        "15086",
+        "70814",
+        "75132"
+      ],
+      "max_previous_result_jaccard": 0.1111111111111111,
+      "identical_previous_result_set": false,
+      "contains_quote": false,
+      "contains_site": false,
+      "contains_uppercase_boolean": false
+    },
+    {
+      "round": 6,
+      "query": "Latin music club 1970s Billboard article owner sound system",
+      "expression": "\"latin\" OR \"music\" OR \"club\" OR \"1970s\" OR \"billboard\" OR \"article\" OR \"owner\" OR \"sound\" OR \"system\"",
+      "new_docids": [
+        "85245",
+        "95926"
+      ],
+      "max_previous_result_jaccard": 0.1111111111111111,
+      "identical_previous_result_set": false,
+      "contains_quote": false,
+      "contains_site": false,
+      "contains_uppercase_boolean": false
+    },
+    {
+      "round": 7,
+      "query": "Billboard Latin music club West Coast 1975 seven nights week owner",
+      "expression": "\"billboard\" OR \"latin\" OR \"music\" OR \"club\" OR \"west\" OR \"coast\" OR \"1975\" OR \"seven\" OR \"nights\" OR \"week\" OR \"owner\"",
+      "new_docids": [
+        "11992",
+        "37465",
+        "64576"
+      ],
+      "max_previous_result_jaccard": 0.1111111111111111,
+      "identical_previous_result_set": false,
+      "contains_quote": false,
+      "contains_site": false,
+      "contains_uppercase_boolean": false
+    },
+    {
+      "round": 7,
+      "query": "Billboard 1976 Latin club California owner sound system",
+      "expression": "\"billboard\" OR \"1976\" OR \"latin\" OR \"club\" OR \"california\" OR \"owner\" OR \"sound\" OR \"system\"",
+      "new_docids": [
+        "12829",
+        "50187",
+        "63732",
+        "83321"
+      ],
+      "max_previous_result_jaccard": 0.1111111111111111,
+      "identical_previous_result_set": false,
+      "contains_quote": false,
+      "contains_site": false,
+      "contains_uppercase_boolean": false
+    },
+    {
+      "round": 7,
+      "query": "Billboard 1970s salsa club Los Angeles owner B",
+      "expression": "\"billboard\" OR \"1970s\" OR \"salsa\" OR \"club\" OR \"los\" OR \"angeles\" OR \"owner\" OR \"b\"",
+      "new_docids": [
+        "59052",
+        "96062"
+      ],
+      "max_previous_result_jaccard": 0.1111111111111111,
+      "identical_previous_result_set": false,
+      "contains_quote": false,
+      "contains_site": false,
+      "contains_uppercase_boolean": false
+    },
+    {
+      "round": 7,
+      "query": "Bajadera Latin club 1970s",
+      "expression": "\"bajadera\" OR \"latin\" OR \"club\" OR \"1970s\"",
+      "new_docids": [
+        "42429",
+        "63117"
+      ],
+      "max_previous_result_jaccard": 0.1111111111111111,
+      "identical_previous_result_set": false,
+      "contains_quote": false,
+      "contains_site": false,
+      "contains_uppercase_boolean": false
+    },
+    {
+      "round": 7,
+      "query": "Beso Latino club 1970s California owner",
+      "expression": "\"beso\" OR \"latino\" OR \"club\" OR \"1970s\" OR \"california\" OR \"owner\"",
+      "new_docids": [],
+      "max_previous_result_jaccard": 0.6666666666666666,
+      "identical_previous_result_set": false,
+      "contains_quote": false,
+      "contains_site": false,
+      "contains_uppercase_boolean": false
+    },
+    {
+      "round": 7,
+      "query": "Bambu Latin music club 1970s California",
+      "expression": "\"bambu\" OR \"latin\" OR \"music\" OR \"club\" OR \"1970s\" OR \"california\"",
+      "new_docids": [
+        "1846",
+        "42647",
+        "48858",
+        "58970"
+      ],
+      "max_previous_result_jaccard": 0.1111111111111111,
+      "identical_previous_result_set": false,
+      "contains_quote": false,
+      "contains_site": false,
+      "contains_uppercase_boolean": false
+    }
+  ],
+  "shelf": [
+    {
+      "round": 1,
+      "eligible_recent_first_delivered": [],
+      "restored": [],
+      "evicted_for_capacity": [],
+      "visible": [],
+      "direct_restore_wire_bytes": 0,
+      "compacted": false,
+      "restored_was_previously_acked": true
+    },
+    {
+      "round": 2,
+      "eligible_recent_first_delivered": [],
+      "restored": [],
+      "evicted_for_capacity": [],
+      "visible": [],
+      "direct_restore_wire_bytes": 0,
+      "compacted": false,
+      "restored_was_previously_acked": true
+    },
+    {
+      "round": 3,
+      "eligible_recent_first_delivered": [],
+      "restored": [],
+      "evicted_for_capacity": [],
+      "visible": [],
+      "direct_restore_wire_bytes": 0,
+      "compacted": false,
+      "restored_was_previously_acked": true
+    },
+    {
+      "round": 4,
+      "eligible_recent_first_delivered": [],
+      "restored": [],
+      "evicted_for_capacity": [],
+      "visible": [],
+      "direct_restore_wire_bytes": 0,
+      "compacted": false,
+      "restored_was_previously_acked": true
+    },
+    {
+      "round": 5,
+      "eligible_recent_first_delivered": [],
+      "restored": [],
+      "evicted_for_capacity": [],
+      "visible": [],
+      "direct_restore_wire_bytes": 0,
+      "compacted": false,
+      "restored_was_previously_acked": true
+    },
+    {
+      "round": 6,
+      "eligible_recent_first_delivered": [],
+      "restored": [],
+      "evicted_for_capacity": [],
+      "visible": [],
+      "direct_restore_wire_bytes": 0,
+      "compacted": false,
+      "restored_was_previously_acked": true
+    },
+    {
+      "round": 7,
+      "eligible_recent_first_delivered": [],
+      "restored": [],
+      "evicted_for_capacity": [],
+      "visible": [
+        "e1"
+      ],
+      "direct_restore_wire_bytes": 0,
+      "compacted": true,
+      "restored_was_previously_acked": true
+    },
+    {
+      "round": 8,
+      "eligible_recent_first_delivered": [
+        "e1"
+      ],
+      "restored": [],
+      "evicted_for_capacity": [],
+      "visible": [
+        "e1"
+      ],
+      "direct_restore_wire_bytes": 0,
+      "compacted": false,
+      "restored_was_previously_acked": true
+    },
+    {
+      "round": 9,
+      "eligible_recent_first_delivered": [
+        "e1"
+      ],
+      "restored": [],
+      "evicted_for_capacity": [],
+      "visible": [
+        "e1",
+        "e2"
+      ],
+      "direct_restore_wire_bytes": 0,
+      "compacted": false,
+      "restored_was_previously_acked": true
+    },
+    {
+      "round": 10,
+      "eligible_recent_first_delivered": [
+        "e1",
+        "e2"
+      ],
+      "restored": [],
+      "evicted_for_capacity": [],
+      "visible": [
+        "e1",
+        "e2"
+      ],
+      "direct_restore_wire_bytes": 0,
+      "compacted": true,
+      "restored_was_previously_acked": true
+    },
+    {
+      "round": 11,
+      "eligible_recent_first_delivered": [
+        "e1",
+        "e2"
+      ],
+      "restored": [],
+      "evicted_for_capacity": [],
+      "visible": [
+        "e1",
+        "e2",
+        "e3"
+      ],
+      "direct_restore_wire_bytes": 0,
+      "compacted": false,
+      "restored_was_previously_acked": true
+    },
+    {
+      "round": 12,
+      "eligible_recent_first_delivered": [
+        "e1",
+        "e2",
+        "e3"
+      ],
+      "restored": [],
+      "evicted_for_capacity": [],
+      "visible": [
+        "e1",
+        "e2",
+        "e3",
+        "e4"
+      ],
+      "direct_restore_wire_bytes": 0,
+      "compacted": false,
+      "restored_was_previously_acked": true
+    }
+  ],
+  "tool_checks": [
+    {
+      "round": 1,
+      "id": "call_3c9b2747b0424d1999ae9e4d",
+      "native_call_found": true,
+      "name_matches": true,
+      "arguments_exact": true,
+      "action_result_found": true,
+      "execution_result_differs_from_final": false,
+      "withheld": false
+    },
+    {
+      "round": 1,
+      "id": "call_95150a338294465ea5718698",
+      "native_call_found": true,
+      "name_matches": true,
+      "arguments_exact": true,
+      "action_result_found": true,
+      "execution_result_differs_from_final": false,
+      "withheld": false
+    },
+    {
+      "round": 2,
+      "id": "call_0d75729b591f42b3ad14e18c",
+      "native_call_found": true,
+      "name_matches": true,
+      "arguments_exact": true,
+      "action_result_found": true,
+      "execution_result_differs_from_final": false,
+      "withheld": false
+    },
+    {
+      "round": 2,
+      "id": "call_37882380162d44f0bdb1b76e",
+      "native_call_found": true,
+      "name_matches": true,
+      "arguments_exact": true,
+      "action_result_found": true,
+      "execution_result_differs_from_final": false,
+      "withheld": false
+    },
+    {
+      "round": 3,
+      "id": "call_a59094f47f4c4e2898055f4b",
+      "native_call_found": true,
+      "name_matches": true,
+      "arguments_exact": true,
+      "action_result_found": true,
+      "execution_result_differs_from_final": false,
+      "withheld": false
+    },
+    {
+      "round": 3,
+      "id": "call_b919d791c600486981634318",
+      "native_call_found": true,
+      "name_matches": true,
+      "arguments_exact": true,
+      "action_result_found": true,
+      "execution_result_differs_from_final": false,
+      "withheld": false
+    },
+    {
+      "round": 4,
+      "id": "call_ecce8640556444e4bcb5c1fb",
+      "native_call_found": true,
+      "name_matches": true,
+      "arguments_exact": true,
+      "action_result_found": true,
+      "execution_result_differs_from_final": false,
+      "withheld": false
+    },
+    {
+      "round": 4,
+      "id": "call_a36560666b7e49fe9862dc1b",
+      "native_call_found": true,
+      "name_matches": true,
+      "arguments_exact": true,
+      "action_result_found": true,
+      "execution_result_differs_from_final": false,
+      "withheld": false
+    },
+    {
+      "round": 5,
+      "id": "call_76e66fd2977a46aa9bf3765d",
+      "native_call_found": true,
+      "name_matches": true,
+      "arguments_exact": true,
+      "action_result_found": true,
+      "execution_result_differs_from_final": false,
+      "withheld": false
+    },
+    {
+      "round": 5,
+      "id": "call_670d1a3c90b54c48b41ec842",
+      "native_call_found": true,
+      "name_matches": true,
+      "arguments_exact": true,
+      "action_result_found": true,
+      "execution_result_differs_from_final": false,
+      "withheld": false
+    },
+    {
+      "round": 6,
+      "id": "call_56b569ba5af04c0bb0321c7f",
+      "native_call_found": true,
+      "name_matches": true,
+      "arguments_exact": true,
+      "action_result_found": true,
+      "execution_result_differs_from_final": false,
+      "withheld": false
+    },
+    {
+      "round": 6,
+      "id": "call_6b9100b4d4864aefb712cfd1",
+      "native_call_found": true,
+      "name_matches": true,
+      "arguments_exact": true,
+      "action_result_found": true,
+      "execution_result_differs_from_final": false,
+      "withheld": false
+    },
+    {
+      "round": 7,
+      "id": "call_8894982e5e2d4921927a7d27",
+      "native_call_found": true,
+      "name_matches": true,
+      "arguments_exact": true,
+      "action_result_found": true,
+      "execution_result_differs_from_final": false,
+      "withheld": false
+    },
+    {
+      "round": 7,
+      "id": "call_0744bad67bb143539853febf",
+      "native_call_found": true,
+      "name_matches": true,
+      "arguments_exact": true,
+      "action_result_found": true,
+      "execution_result_differs_from_final": false,
+      "withheld": false
+    },
+    {
+      "round": 8,
+      "id": "call_a11d91dbc17148639fdb42cf",
+      "native_call_found": true,
+      "name_matches": true,
+      "arguments_exact": true,
+      "action_result_found": true,
+      "execution_result_differs_from_final": false,
+      "withheld": false
+    },
+    {
+      "round": 9,
+      "id": "call_126096c411d44921854ab133",
+      "native_call_found": true,
+      "name_matches": true,
+      "arguments_exact": true,
+      "action_result_found": true,
+      "execution_result_differs_from_final": false,
+      "withheld": false
+    },
+    {
+      "round": 9,
+      "id": "call_caad43d4e65740bca10c6be5",
+      "native_call_found": true,
+      "name_matches": true,
+      "arguments_exact": true,
+      "action_result_found": true,
+      "execution_result_differs_from_final": false,
+      "withheld": false
+    },
+    {
+      "round": 10,
+      "id": "call_c196cdc4b09b498089efdeb5",
+      "native_call_found": true,
+      "name_matches": true,
+      "arguments_exact": true,
+      "action_result_found": true,
+      "execution_result_differs_from_final": false,
+      "withheld": false
+    },
+    {
+      "round": 11,
+      "id": "call_1b89f38da30b42a982faabf0",
+      "native_call_found": true,
+      "name_matches": true,
+      "arguments_exact": true,
+      "action_result_found": true,
+      "execution_result_differs_from_final": false,
+      "withheld": false
+    },
+    {
+      "round": 12,
+      "id": "call_750845915ad14133be0cfcfd",
+      "native_call_found": true,
+      "name_matches": true,
+      "arguments_exact": true,
+      "action_result_found": true,
+      "execution_result_differs_from_final": false,
+      "withheld": false
+    }
+  ],
+  "find_checks": [
+    {
+      "round": 9,
+      "arguments": {
+        "ref": "d103",
+        "text": "Latin music seven nights"
+      },
+      "matches": [
+        {
+          "end": 15933,
+          "excerpt": "ost here with the opening of Binochios which is playing the Latin music seven nights a week. Owners Marshall Brevetz and Lou Franzini are beginn",
+          "start": 15909
+        }
+      ],
+      "offsets_match_original": true
+    },
+    {
+      "round": 9,
+      "arguments": {
+        "ref": "d103",
+        "text": "Brevetz"
+      },
+      "matches": [
+        {
+          "end": 15965,
+          "excerpt": "laying the Latin music seven nights a week. Owners Marshall Brevetz and Lou Franzini are beginning to book Eastern acts after t",
+          "start": 15958
+        },
+        {
+          "end": 16102,
+          "excerpt": "f local talent. Scheduled for Sunday (4) was Joe Cuba, with Brevetz indicating he is seeking Eddie Palmieri and Tito Puente as ",
+          "start": 16095
+        },
+        {
+          "end": 16462,
+          "excerpt": "th spinner Rolando Ulloa of KMAX -FM controllinZ the music. Brevetz, who formerly managed Bobby Womack and ran the Experi- ence",
+          "start": 16455
+        },
+        {
+          "end": 18037,
+          "excerpt": "iler when he no longer has the pro - (Continued on page 31) Brevetz says salsa is Latin music as differentiated from Mexican mu",
+          "start": 18030
+        },
+        {
+          "end": 19152,
+          "excerpt": "opularity in New York with as much regularity as Binochios, Brevetz claims. More Late News See Page 58 Billboard is published w",
+          "start": 19145
+        }
+      ],
+      "offsets_match_original": true
+    }
+  ],
+  "recall_checks": [],
+  "notes": [],
+  "finish_checks": [
+    {
+      "round": 12,
+      "arguments": {
+        "answer": "Binochios",
+        "refs": [
+          "e3",
+          "e4",
+          "e1"
+        ]
+      },
+      "schema_valid": true,
+      "refs_legal": true,
+      "result": {
+        "action_slot_charged": true,
+        "executed": true,
+        "ok": true,
+        "terminal": {
+          "answer": "Binochios",
+          "basis": [
+            {
+              "document": "d103",
+              "document_chars": 525159,
+              "end": 16550,
+              "kind": "raw_evidence",
+              "ref": "e3",
+              "sha256": "355d3a21301ca9b415729a2d5ce765afb76f89b3cffb731805ef2887f0bc705c",
+              "snapshot": "bbe08d96d3032773620f23335015d257b2ddf0cb9eb0dd82dd1d8e496dbb50ef",
+              "start": 15850
+            },
+            {
+              "document": "d103",
+              "document_chars": 525159,
+              "end": 17050,
+              "kind": "raw_evidence",
+              "ref": "e4",
+              "sha256": "3de99dcca472893ff0a64ff849158cdb7b03d0b6112c7ebd694b9dc822ee6a86",
+              "snapshot": "bbe08d96d3032773620f23335015d257b2ddf0cb9eb0dd82dd1d8e496dbb50ef",
+              "start": 16550
+            },
+            {
+              "document": "d22",
+              "document_chars": 19119,
+              "end": 3000,
+              "kind": "raw_evidence",
+              "ref": "e1",
+              "sha256": "474fd85f14d1bfbd6834c60a2a90e1acf1e407b356f046f1a241d1a07a84c218",
+              "snapshot": "ec091dee7ef2d806b0a7b11072f12cf033b317504fbf8cefdaf26b4330363978",
+              "start": 0
+            }
+          ],
+          "elapsed_seconds": 97.49831669998821,
+          "outcome": "submitted",
+          "refs": [
+            "e3",
+            "e4",
+            "e1"
+          ],
+          "semantic_status": "not_automatically_verified"
+        }
+      }
+    }
+  ],
+  "formal_evidence": {
+    "e3": {
+      "ref": "e3",
+      "document": "d103",
+      "snapshot": "bbe08d96d3032773620f23335015d257b2ddf0cb9eb0dd82dd1d8e496dbb50ef",
+      "start": 15850,
+      "end": 16550,
+      "document_chars": 525159,
+      "text": "st here with the opening of Binochios which is playing the Latin music seven nights a week. Owners Marshall Brevetz and Lou Franzini are beginning to book Eastern acts after two weeks of local talent. Scheduled for Sunday (4) was Joe Cuba, with Brevetz indicating he is seeking Eddie Palmieri and Tito Puente as future special attractions. The club, in North Hollywood in the San Fernando Valley section of the city, holds 250 -300, with bands playing from 8 p.m. to 2 a.m. Sunday afternoon from 4 to 7 the club turns into a Latin discotheque with spinner Rolando Ulloa of KMAX -FM controllinZ the music. Brevetz, who formerly managed Bobby Womack and ran the Experi- ence in Los Angeles, says he's i",
+      "sha256": "355d3a21301ca9b415729a2d5ce765afb76f89b3cffb731805ef2887f0bc705c",
+      "kind": "raw_evidence"
+    },
+    "e4": {
+      "ref": "e4",
+      "document": "d103",
+      "snapshot": "bbe08d96d3032773620f23335015d257b2ddf0cb9eb0dd82dd1d8e496dbb50ef",
+      "start": 16550,
+      "end": 17050,
+      "document_chars": 525159,
+      "text": "n- stalled an $11,000 sound system along with redoing the former Mexi- can restaurant. Hi Fi Makers Clinging To Fair Trade Laws In 3 States NEW YORK -With the possible exception of the Sony Corp. of America, which last week an- nounced that it is dropping its price maintenance policies in New York, New Jersey and Connecticut, most hi fi equipment manufacturers will continue to fair trade their products in the tri -state area until the new laws are actually activated. By RADCLIFFE JOE This decisi",
+      "sha256": "3de99dcca472893ff0a64ff849158cdb7b03d0b6112c7ebd694b9dc822ee6a86",
+      "kind": "raw_evidence"
+    },
+    "e1": {
+      "ref": "e1",
+      "document": "d22",
+      "snapshot": "ec091dee7ef2d806b0a7b11072f12cf033b317504fbf8cefdaf26b4330363978",
+      "start": 0,
+      "end": 3000,
+      "document_chars": 19119,
+      "text": "---\ntitle: Billboard (magazine) - Wikipedia\ndate: 2002-03-19\n---\ntitle: Billboard\nlogo: 220px|class=skin-invert\nlogo_size: 220px\nimage_file: Billboard magazine 16 November 2019 issue 125th anniversary.png\nimage_caption: November 16, 2019, cover featuring Paul McCartney and highlighting the magazine's 125th anniversary\nfounder: William Donaldson, James Hennegan\nwebsite: |}}\npublisher: Penske Media Corporation\neditor: Hannah Karp\nprevious_editor: Lee Zhito, Tony Gervino, Bill Werde, Tamara Conniff\nlanguage: Arabic, English, Korean, Spanish, Portuguese\nfounded: 1 November 1894 (as Billboard Advertising)\nfrequency: Weekly\ncategory: Entertainment\ntotal_circulation: 17, 000 magazines per week15.2 million unique visitors per month Media Kit Billboard June 15, 2016 August 6, 2019\ncompany: Eldridge Industries\ncountry: United States\nbased: New York City\nissn: 0006-2510\noclc: 732913734\n\nBillboard (stylized in lowercase since 2013) is an American music and entertainment magazine published weekly by Penske Media Corporation. The magazine provides music charts, news, video, opinion, reviews, events and styles related to the music industry. Its music charts include the Hot 100, the 200, and the Global 200, tracking the most popular albums and songs in various music genres. It also hosts events, owns a publishing firm and operates several television shows.\n\nBillboard was founded in 1894 by William Donaldson and James Hennegan as a trade publication for bill posters. Donaldson acquired Hennegan's interest in 1900 for $500. In the early years of the 20th century, it covered the entertainment industry, such as circuses, fairs and burlesque shows, and also created a mail service for travelling entertainers. Billboard began focusing more on the music industry as the jukebox, phonograph and radio became commonplace. Many topics that it covered became the subjects of new magazines, including Amusement Business in 1961 to cover outdoor entertainment, so that Billboard could focus on music. After Donaldson died in 1925, Billboard was inherited by his and Hennegan's children, who retained ownership until selling it to private investors in 1985. The magazine has since been owned by various parties.\n\nHistory\n\nEarly history\n\nThe first issue of Billboard was published in Cincinnati, Ohio, by William Donaldson and James Hennegan on November 1, 1894. Initially it covered the advertising and bill-posting industry and was known as Billboard Advertising. At the time, billboards, posters, and paper advertisements placed in public spaces were the primary means of advertising. Donaldson handled editorial and advertising, while Hennegan, who owned Hennegan Printing Co., managed magazine production. The first issues were just eight pages long. The paper had columns such as The Bill Room Gossip and The Indefatigable and Tireless Industry of the Bill Poster. A department for agricultural fairs was established in 1896. The Billboard Advertising publication was renamed The Billboard in 189",
+      "sha256": "474fd85f14d1bfbd6834c60a2a90e1acf1e407b356f046f1a241d1a07a84c218",
+      "kind": "raw_evidence"
+    }
+  },
+  "limitations": [
+    "Direct shelf bytes are serialized request differences, not provider tokens or a causal cost ablation.",
+    "Result overlap is not semantic redundancy.",
+    "No external judge or production query is used."
+  ]
+}

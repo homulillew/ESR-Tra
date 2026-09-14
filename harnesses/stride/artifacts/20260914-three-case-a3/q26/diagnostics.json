@@ -1,0 +1,962 @@
+{
+  "protocol": "stride-search-3",
+  "head": "83e67edc8f5dc9bc1e0bd706c6c76f212f5bbaf8f01fe7b2e586e43521a04571",
+  "outcome": "submitted",
+  "formal_correct": null,
+  "model_attempts": 12,
+  "backend_attempts": 41,
+  "queries": [
+    {
+      "round": 1,
+      "top_k": 5,
+      "equivalence_key": "1e78a4a6f6970ff355d74a7802e78e25bee72402ce6cfa62b0cf862bce4870e9",
+      "cached": false,
+      "query_sha256": "c99dd53de7e20c214f972e68cd45cd68a3ab81d90af69f5ad892759c0167884b",
+      "query": "Latin music club West Coast 1970s seven nights week",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"latin\" OR \"music\" OR \"club\" OR \"west\" OR \"coast\" OR \"1970s\" OR \"seven\" OR \"nights\" OR \"week\"",
+        "terms": [
+          "latin",
+          "music",
+          "club",
+          "west",
+          "coast",
+          "1970s",
+          "seven",
+          "nights",
+          "week"
+        ]
+      }
+    },
+    {
+      "round": 1,
+      "top_k": 5,
+      "equivalence_key": "2064772f428358ee3d9280830cf820df80a052f91991ac170f80d398287bc030",
+      "cached": false,
+      "query_sha256": "3bf76a53cd8f552b7d9086c128904a72107b3b49735f896a8174b7127b0e3967",
+      "query": "Bajari Latin music club 1970s",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"bajari\" OR \"latin\" OR \"music\" OR \"club\" OR \"1970s\"",
+        "terms": [
+          "bajari",
+          "latin",
+          "music",
+          "club",
+          "1970s"
+        ]
+      }
+    },
+    {
+      "round": 1,
+      "top_k": 5,
+      "equivalence_key": "a26c91b655c144cdd9e9e7c11d5b82b312090ac3c3aa28c2aa53c6e00803cfc0",
+      "cached": false,
+      "query_sha256": "aae48a6eb2712584e76881d17edfa08bc2f8a1c08ae58059fecb346761074007",
+      "query": "Latin music club 1970s California owner sound system",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"latin\" OR \"music\" OR \"club\" OR \"1970s\" OR \"california\" OR \"owner\" OR \"sound\" OR \"system\"",
+        "terms": [
+          "latin",
+          "music",
+          "club",
+          "1970s",
+          "california",
+          "owner",
+          "sound",
+          "system"
+        ]
+      }
+    },
+    {
+      "round": 1,
+      "top_k": 5,
+      "equivalence_key": "656ab1f99c2749618aff743f7c57bd440a7186c8b0450a909ac5ffbb3027d359",
+      "cached": false,
+      "query_sha256": "ea520d4c4dc0a5704a7cd69c828d9c1b51ef71526dd2e5fc01f0b81f64caef32",
+      "query": "weekly magazine founded 1800s sold $100 million",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"weekly\" OR \"magazine\" OR \"founded\" OR \"1800s\" OR \"sold\" OR \"100\" OR \"million\"",
+        "terms": [
+          "weekly",
+          "magazine",
+          "founded",
+          "1800s",
+          "sold",
+          "100",
+          "million"
+        ]
+      }
+    },
+    {
+      "round": 1,
+      "top_k": 5,
+      "equivalence_key": "973c1283c6ac520e8520f522e3f21c54dc2a2118ab98f694287ff9c8d281f977",
+      "cached": false,
+      "query_sha256": "61818f7a707cb4fea1646b5c81727ed121e1ca2b8d3c63f64a219d6d4abaa854",
+      "query": "New York magazine sold $100 million history",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"new\" OR \"york\" OR \"magazine\" OR \"sold\" OR \"100\" OR \"million\" OR \"history\"",
+        "terms": [
+          "new",
+          "york",
+          "magazine",
+          "sold",
+          "100",
+          "million",
+          "history"
+        ]
+      }
+    },
+    {
+      "round": 1,
+      "top_k": 5,
+      "equivalence_key": "d7e676a4c84c852a61d16c624e355a4412def0cefcee281ab1dba325ccf6d592",
+      "cached": false,
+      "query_sha256": "bfbda369a042db4421d92f2128c2381121b762abf53738ea9662840852513b52",
+      "query": "Village Voice sold $100 million",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"village\" OR \"voice\" OR \"sold\" OR \"100\" OR \"million\"",
+        "terms": [
+          "village",
+          "voice",
+          "sold",
+          "100",
+          "million"
+        ]
+      }
+    },
+    {
+      "round": 2,
+      "top_k": 5,
+      "equivalence_key": "66150b780cbb85205e21e69298ce97abcf883c4a1d3fef910d35e8be34959784",
+      "cached": false,
+      "query_sha256": "f9b6541a6b05cc3c44b51226247c1772ae32407c8b6e55aa44502552c1a9b9d5",
+      "query": "New York magazine founded 1968 sold $100 million",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"new\" OR \"york\" OR \"magazine\" OR \"founded\" OR \"1968\" OR \"sold\" OR \"100\" OR \"million\"",
+        "terms": [
+          "new",
+          "york",
+          "magazine",
+          "founded",
+          "1968",
+          "sold",
+          "100",
+          "million"
+        ]
+      }
+    },
+    {
+      "round": 2,
+      "top_k": 5,
+      "equivalence_key": "76361e3317e768a56ac45bb3d26b1998625dbb392cab21438ec303599ca880cf",
+      "cached": false,
+      "query_sha256": "e4bee213a0b81f7b2f91fa78f391ab79d21d87855253eafef71e3d97b8f11369",
+      "query": "Village Voice founded 1955 sold $100 million",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"village\" OR \"voice\" OR \"founded\" OR \"1955\" OR \"sold\" OR \"100\" OR \"million\"",
+        "terms": [
+          "village",
+          "voice",
+          "founded",
+          "1955",
+          "sold",
+          "100",
+          "million"
+        ]
+      }
+    },
+    {
+      "round": 2,
+      "top_k": 5,
+      "equivalence_key": "37a91809f070e9f6273fe34b94c2cab25a8ccf79d7a614cf4ad1e297045f66e4",
+      "cached": false,
+      "query_sha256": "71b345bda9593ac3f9f56ed9687ee03f4b15b54ac756dc12c269bee7fcfc7e89",
+      "query": "weekly magazine founded 1800s sold 100 million dollars",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"weekly\" OR \"magazine\" OR \"founded\" OR \"1800s\" OR \"sold\" OR \"100\" OR \"million\" OR \"dollars\"",
+        "terms": [
+          "weekly",
+          "magazine",
+          "founded",
+          "1800s",
+          "sold",
+          "100",
+          "million",
+          "dollars"
+        ]
+      }
+    },
+    {
+      "round": 2,
+      "top_k": 5,
+      "equivalence_key": "4c2a5e5a640ce3e8a7e267a5f0cb524582e1f97c442dd2425db521980173a2bf",
+      "cached": false,
+      "query_sha256": "30624d0aa9e53663f5f66a140dc60d310f734026f18d0c927c178789e89648a8",
+      "query": "Bajari Latin club San Francisco 1970s",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"bajari\" OR \"latin\" OR \"club\" OR \"san\" OR \"francisco\" OR \"1970s\"",
+        "terms": [
+          "bajari",
+          "latin",
+          "club",
+          "san",
+          "francisco",
+          "1970s"
+        ]
+      }
+    },
+    {
+      "round": 2,
+      "top_k": 5,
+      "equivalence_key": "1141ef76a0831d11b7b5cd5fac5343cf987676264ff2c5e58646315dd093623f",
+      "cached": false,
+      "query_sha256": "a7bd9cdfc20fa49f2cd869649b710ce2fbc0282e26141a0bc98fe1e36645ca54",
+      "query": "Beso Latin music club 1970s California",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"beso\" OR \"latin\" OR \"music\" OR \"club\" OR \"1970s\" OR \"california\"",
+        "terms": [
+          "beso",
+          "latin",
+          "music",
+          "club",
+          "1970s",
+          "california"
+        ]
+      }
+    },
+    {
+      "round": 2,
+      "top_k": 5,
+      "equivalence_key": "7ddee4591225794c73ea82b319c33d58b2bd85be8e4d0bd1479ca072a09a59a9",
+      "cached": false,
+      "query_sha256": "7927c8addcba5723a1300cb6e037e91ebccfec7febf85f86eb36e719d85bd746",
+      "query": "Bamba Latin music club 1970s West Coast",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"bamba\" OR \"latin\" OR \"music\" OR \"club\" OR \"1970s\" OR \"west\" OR \"coast\"",
+        "terms": [
+          "bamba",
+          "latin",
+          "music",
+          "club",
+          "1970s",
+          "west",
+          "coast"
+        ]
+      }
+    },
+    {
+      "round": 3,
+      "top_k": 5,
+      "equivalence_key": "7fdf7c2ed165a1afa2437963a7f5c9412a26f143119611f15df51cb05c7ad280",
+      "cached": false,
+      "query_sha256": "aed39ccd553f13e9febfe7cc5340ce0381adb2827d20ff9f6664437793e0e629",
+      "query": "The Nation magazine sold $100 million",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"the\" OR \"nation\" OR \"magazine\" OR \"sold\" OR \"100\" OR \"million\"",
+        "terms": [
+          "the",
+          "nation",
+          "magazine",
+          "sold",
+          "100",
+          "million"
+        ]
+      }
+    },
+    {
+      "round": 3,
+      "top_k": 5,
+      "equivalence_key": "c416135560c489871844d19783e0e45b5804669282271d283ebb7253750b3086",
+      "cached": false,
+      "query_sha256": "aba5dc986ec10870ad77c50aef238ec595dfa6c04959e821e46fb785d2c1a1fd",
+      "query": "Harper's Weekly magazine sold 100 million",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"harper\" OR \"s\" OR \"weekly\" OR \"magazine\" OR \"sold\" OR \"100\" OR \"million\"",
+        "terms": [
+          "harper",
+          "s",
+          "weekly",
+          "magazine",
+          "sold",
+          "100",
+          "million"
+        ]
+      }
+    },
+    {
+      "round": 3,
+      "top_k": 5,
+      "equivalence_key": "f2c906124b357df58e4c5efe6617ec0e31b552d96aa3928e2ee020fe347646dc",
+      "cached": false,
+      "query_sha256": "5dfb77d2a20f5c1c96e71a2d32b27bfbafe331912f27f8dd194caf7d2bbcc7dc",
+      "query": "New York magazine sold 100 million K-III",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"new\" OR \"york\" OR \"magazine\" OR \"sold\" OR \"100\" OR \"million\" OR \"k\" OR \"iii\"",
+        "terms": [
+          "new",
+          "york",
+          "magazine",
+          "sold",
+          "100",
+          "million",
+          "k",
+          "iii"
+        ]
+      }
+    },
+    {
+      "round": 3,
+      "top_k": 5,
+      "equivalence_key": "43b34cce861eae01bfcfaced5df1bbb03a05fd3b7dc4f792760eeab81a9056c7",
+      "cached": false,
+      "query_sha256": "22f0c850fa16801073fe755abeba63fa15a5e6566a517dc0dd6288159b6827ac",
+      "query": "Latin music club 1970s Los Angeles seven nights week owner",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"latin\" OR \"music\" OR \"club\" OR \"1970s\" OR \"los\" OR \"angeles\" OR \"seven\" OR \"nights\" OR \"week\" OR \"owner\"",
+        "terms": [
+          "latin",
+          "music",
+          "club",
+          "1970s",
+          "los",
+          "angeles",
+          "seven",
+          "nights",
+          "week",
+          "owner"
+        ]
+      }
+    },
+    {
+      "round": 3,
+      "top_k": 5,
+      "equivalence_key": "b4100b7027eade9d9caa87aad47a13d09feae4fff9a649d131b5952666401f7a",
+      "cached": false,
+      "query_sha256": "3c0d0cc1a421a82d14e811d72c1e510d6e82d0e4ef52ba50f7ca2c669c6998dd",
+      "query": "salsa club 1970s California B name owner Francisco",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"salsa\" OR \"club\" OR \"1970s\" OR \"california\" OR \"b\" OR \"name\" OR \"owner\" OR \"francisco\"",
+        "terms": [
+          "salsa",
+          "club",
+          "1970s",
+          "california",
+          "b",
+          "name",
+          "owner",
+          "francisco"
+        ]
+      }
+    },
+    {
+      "round": 3,
+      "top_k": 5,
+      "equivalence_key": "0a1be504733e0d4ba00dd2c543e6bf1026b3d330b6a8c117cd41710b9a011569",
+      "cached": false,
+      "query_sha256": "e4f9dfd622d74ec603f8626b31a403dd3ab90984ce1e558ce091a51613aff951",
+      "query": "Latin disco club 1970s West Coast four syllables B",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"latin\" OR \"disco\" OR \"club\" OR \"1970s\" OR \"west\" OR \"coast\" OR \"four\" OR \"syllables\" OR \"b\"",
+        "terms": [
+          "latin",
+          "disco",
+          "club",
+          "1970s",
+          "west",
+          "coast",
+          "four",
+          "syllables",
+          "b"
+        ]
+      }
+    },
+    {
+      "round": 4,
+      "top_k": 5,
+      "equivalence_key": "0a1ca9cea4894f1008bfd30fa840ff6b5743e7bd10bed3cf9769db85ffb0567c",
+      "cached": false,
+      "query_sha256": "7e3bb9e31b6399535b98f20991dcf586ee529f1b9d955329988d1d25083cdecf",
+      "query": "Latin music club 1970s owner surname B Francisco sound system $10000",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"latin\" OR \"music\" OR \"club\" OR \"1970s\" OR \"owner\" OR \"surname\" OR \"b\" OR \"francisco\" OR \"sound\" OR \"system\" OR \"10000\"",
+        "terms": [
+          "latin",
+          "music",
+          "club",
+          "1970s",
+          "owner",
+          "surname",
+          "b",
+          "francisco",
+          "sound",
+          "system",
+          "10000"
+        ]
+      }
+    },
+    {
+      "round": 4,
+      "top_k": 5,
+      "equivalence_key": "3d7390bd80f07e77562cffd3d5017c3f00499747ac1b4dea88b771750f0fc55a",
+      "cached": false,
+      "query_sha256": "beb8d6016bafed7d10b361200b535f612374cc71012ca93fe48c52ab567c368d",
+      "query": "salsa club 1975 Los Angeles owner Bernal Francisco",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"salsa\" OR \"club\" OR \"1975\" OR \"los\" OR \"angeles\" OR \"owner\" OR \"bernal\" OR \"francisco\"",
+        "terms": [
+          "salsa",
+          "club",
+          "1975",
+          "los",
+          "angeles",
+          "owner",
+          "bernal",
+          "francisco"
+        ]
+      }
+    },
+    {
+      "round": 4,
+      "top_k": 5,
+      "equivalence_key": "4aa669bff5616c477ae10e7b47e5649a3b0621551a5264e8e3c79f8ff0f412ca",
+      "cached": false,
+      "query_sha256": "918ddee944dc3b68ab5b64a9876555f471ec190af3f1861befa72d12451928a8",
+      "query": "Latin club 1970s California owner Bautista Francisco sound system",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"latin\" OR \"club\" OR \"1970s\" OR \"california\" OR \"owner\" OR \"bautista\" OR \"francisco\" OR \"sound\" OR \"system\"",
+        "terms": [
+          "latin",
+          "club",
+          "1970s",
+          "california",
+          "owner",
+          "bautista",
+          "francisco",
+          "sound",
+          "system"
+        ]
+      }
+    },
+    {
+      "round": 4,
+      "top_k": 5,
+      "equivalence_key": "83f9f656c562cb3038900a63c13362f8e943dfa3511c7b50d00fc04078f894e8",
+      "cached": false,
+      "query_sha256": "2f0ec69ef68ce2f658ca2333d5c508c70793e91b7c92075e8bf0c680a5f945b7",
+      "query": "Bajari club Latin music 1970s",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"bajari\" OR \"club\" OR \"latin\" OR \"music\" OR \"1970s\"",
+        "terms": [
+          "bajari",
+          "club",
+          "latin",
+          "music",
+          "1970s"
+        ]
+      }
+    },
+    {
+      "round": 4,
+      "top_k": 5,
+      "equivalence_key": "9aa835fc355a25eeab15f2493a3001854b956d9da5d8e2fefff8e8061a51040c",
+      "cached": false,
+      "query_sha256": "a5d9a9e31d88d173ec71b6f54a35a1e9e424fbe7ca287eb2d04378c07b439744",
+      "query": "Beso club Latin music 1970s California",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"beso\" OR \"club\" OR \"latin\" OR \"music\" OR \"1970s\" OR \"california\"",
+        "terms": [
+          "beso",
+          "club",
+          "latin",
+          "music",
+          "1970s",
+          "california"
+        ]
+      }
+    },
+    {
+      "round": 4,
+      "top_k": 5,
+      "equivalence_key": "09c3db7f4634782f0448b593a107b70f411cb5519472555bcf5f5262ce7819f8",
+      "cached": false,
+      "query_sha256": "592a7c223415cd476f738e058ceb5ce26b43937b4bed106c03de73d7e7ce8e3b",
+      "query": "Bembe club Latin music 1970s",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"bembe\" OR \"club\" OR \"latin\" OR \"music\" OR \"1970s\"",
+        "terms": [
+          "bembe",
+          "club",
+          "latin",
+          "music",
+          "1970s"
+        ]
+      }
+    },
+    {
+      "round": 5,
+      "top_k": 5,
+      "equivalence_key": "1b8ca316fabac82c82f36f5b516e3d109ef1427d94c8990ccd504bb3f03ea6dd",
+      "cached": false,
+      "query_sha256": "7fdadf4531264ac15721b4aaa196adb4ea980b53cc2e39c7cf7dfc91c582546e",
+      "query": "Bajari Latin music club 1970s California owner",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"bajari\" OR \"latin\" OR \"music\" OR \"club\" OR \"1970s\" OR \"california\" OR \"owner\"",
+        "terms": [
+          "bajari",
+          "latin",
+          "music",
+          "club",
+          "1970s",
+          "california",
+          "owner"
+        ]
+      }
+    },
+    {
+      "round": 5,
+      "top_k": 5,
+      "equivalence_key": "8a8bb2e74e958639bf99644a4429a1eb284bddb66108bc5228580927f8358266",
+      "cached": false,
+      "query_sha256": "083d78fbf21377c6adde986a50ec293877f6b1ec4c5727a420b14a3f8eb3552c",
+      "query": "Beso Latin music club 1970s California owner Francisco",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"beso\" OR \"latin\" OR \"music\" OR \"club\" OR \"1970s\" OR \"california\" OR \"owner\" OR \"francisco\"",
+        "terms": [
+          "beso",
+          "latin",
+          "music",
+          "club",
+          "1970s",
+          "california",
+          "owner",
+          "francisco"
+        ]
+      }
+    },
+    {
+      "round": 5,
+      "top_k": 5,
+      "equivalence_key": "772952fef23dc0a51edb5a19cfc4cf341322940a26c712314cb0e7a2112c409f",
+      "cached": false,
+      "query_sha256": "f7db34143ec4412a5211b8743686f9b7b51f8cb77d5dd9b70267a689375a372c",
+      "query": "Bembe Latin music club 1970s California owner",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"bembe\" OR \"latin\" OR \"music\" OR \"club\" OR \"1970s\" OR \"california\" OR \"owner\"",
+        "terms": [
+          "bembe",
+          "latin",
+          "music",
+          "club",
+          "1970s",
+          "california",
+          "owner"
+        ]
+      }
+    },
+    {
+      "round": 5,
+      "top_k": 5,
+      "equivalence_key": "12a850bd22a5bbf03bfdedcc2803b73b6830cd4c7017284b8be6a3c52795edcd",
+      "cached": false,
+      "query_sha256": "1559d4211b5c48aeb18242438d0251583aa3448b04cc883f936be8b17674ed3d",
+      "query": "Variety magazine sold $100 million",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"variety\" OR \"magazine\" OR \"sold\" OR \"100\" OR \"million\"",
+        "terms": [
+          "variety",
+          "magazine",
+          "sold",
+          "100",
+          "million"
+        ]
+      }
+    },
+    {
+      "round": 5,
+      "top_k": 5,
+      "equivalence_key": "523059e7a00721b80fde6f103f59058f78f78dd016f74c69a87329e65c235dd4",
+      "cached": false,
+      "query_sha256": "23c64336d7796f6e1edc6d5330ab9831a5109046579493e94124dcc0a8f4ee8c",
+      "query": "New York magazine sold $100 million 1991",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"new\" OR \"york\" OR \"magazine\" OR \"sold\" OR \"100\" OR \"million\" OR \"1991\"",
+        "terms": [
+          "new",
+          "york",
+          "magazine",
+          "sold",
+          "100",
+          "million",
+          "1991"
+        ]
+      }
+    },
+    {
+      "round": 5,
+      "top_k": 5,
+      "equivalence_key": "656ab1f99c2749618aff743f7c57bd440a7186c8b0450a909ac5ffbb3027d359",
+      "cached": false,
+      "query_sha256": "39f5b9a784702788bdecafa0dc64f8d1cc24f6730c49b5761d7734c8ff50d5c2",
+      "query": "weekly magazine founded 1800s sold 100 million",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"weekly\" OR \"magazine\" OR \"founded\" OR \"1800s\" OR \"sold\" OR \"100\" OR \"million\"",
+        "terms": [
+          "weekly",
+          "magazine",
+          "founded",
+          "1800s",
+          "sold",
+          "100",
+          "million"
+        ]
+      }
+    },
+    {
+      "round": 6,
+      "top_k": 5,
+      "equivalence_key": "5153cb6bc5124308c683e8d29537829a1b46c30b2080daee7880b76b410ce3ee",
+      "cached": false,
+      "query_sha256": "a91fe062ceac1fa69219f3930ad6012480118028c2e1e0d6708fd03bffb0d02f",
+      "query": "Billboard magazine Latin music club 1970s California seven nights week",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"billboard\" OR \"magazine\" OR \"latin\" OR \"music\" OR \"club\" OR \"1970s\" OR \"california\" OR \"seven\" OR \"nights\" OR \"week\"",
+        "terms": [
+          "billboard",
+          "magazine",
+          "latin",
+          "music",
+          "club",
+          "1970s",
+          "california",
+          "seven",
+          "nights",
+          "week"
+        ]
+      }
+    },
+    {
+      "round": 6,
+      "top_k": 5,
+      "equivalence_key": "0beff68d95c1bdcbe5c0d61f17cb0bacc09c5ae6d97ac27e40709fc2f2d7ee95",
+      "cached": false,
+      "query_sha256": "77757d68377351fdf834127c3c6b2ecea756f9f50d1b707b4dcd546b329ead30",
+      "query": "Billboard magazine 1894 founded weekly",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"billboard\" OR \"magazine\" OR \"1894\" OR \"founded\" OR \"weekly\"",
+        "terms": [
+          "billboard",
+          "magazine",
+          "1894",
+          "founded",
+          "weekly"
+        ]
+      }
+    },
+    {
+      "round": 6,
+      "top_k": 5,
+      "equivalence_key": "84480ba459aa0b439027f0a35060fcbcc0db4a670fb5f1953d641942572f02ee",
+      "cached": false,
+      "query_sha256": "552e468aaa8f130cd3ea1c5e6833dd2ffdde909e6caa39e96d73b20ff2e63834",
+      "query": "Latin music club 1970s Billboard article owner sound system",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"latin\" OR \"music\" OR \"club\" OR \"1970s\" OR \"billboard\" OR \"article\" OR \"owner\" OR \"sound\" OR \"system\"",
+        "terms": [
+          "latin",
+          "music",
+          "club",
+          "1970s",
+          "billboard",
+          "article",
+          "owner",
+          "sound",
+          "system"
+        ]
+      }
+    },
+    {
+      "round": 7,
+      "top_k": 5,
+      "equivalence_key": "e2bc613401e5304b289bc85d27eb3c8977f1612ec1c069603f8f2496c3de947f",
+      "cached": false,
+      "query_sha256": "0abede90ee79324c41b5622dca7aebf7c39d4bfc6c4396ab30e7149ab85470a3",
+      "query": "Billboard Latin music club West Coast 1975 seven nights week owner",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"billboard\" OR \"latin\" OR \"music\" OR \"club\" OR \"west\" OR \"coast\" OR \"1975\" OR \"seven\" OR \"nights\" OR \"week\" OR \"owner\"",
+        "terms": [
+          "billboard",
+          "latin",
+          "music",
+          "club",
+          "west",
+          "coast",
+          "1975",
+          "seven",
+          "nights",
+          "week",
+          "owner"
+        ]
+      }
+    },
+    {
+      "round": 7,
+      "top_k": 5,
+      "equivalence_key": "ff389612b2ff5b7663ec4e7b7ab13995a62d541860973907f0001158693f5b06",
+      "cached": false,
+      "query_sha256": "58f4f8c8ba6c3d98036f36d0839979974f00c37d545e67aa7fe078fc10860c4c",
+      "query": "Billboard 1976 Latin club California owner sound system",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"billboard\" OR \"1976\" OR \"latin\" OR \"club\" OR \"california\" OR \"owner\" OR \"sound\" OR \"system\"",
+        "terms": [
+          "billboard",
+          "1976",
+          "latin",
+          "club",
+          "california",
+          "owner",
+          "sound",
+          "system"
+        ]
+      }
+    },
+    {
+      "round": 7,
+      "top_k": 5,
+      "equivalence_key": "69eaedd3866daf986f03c82b321f6f00a6eb31c99aa5997f9a239cdc33daad35",
+      "cached": false,
+      "query_sha256": "b485d50026a04db2fb653293e093bd937980131f97c87324cd307d8a4acc6c55",
+      "query": "Billboard 1970s salsa club Los Angeles owner B",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"billboard\" OR \"1970s\" OR \"salsa\" OR \"club\" OR \"los\" OR \"angeles\" OR \"owner\" OR \"b\"",
+        "terms": [
+          "billboard",
+          "1970s",
+          "salsa",
+          "club",
+          "los",
+          "angeles",
+          "owner",
+          "b"
+        ]
+      }
+    },
+    {
+      "round": 7,
+      "top_k": 5,
+      "equivalence_key": "1960fc1bb340d13dab9cb030f0e405f9872fe2c61c4942e383067cd41e1c924d",
+      "cached": false,
+      "query_sha256": "488ee6184a712086fe5f4f798c1e461f30c4764027394afa301022d9170d19c7",
+      "query": "Bajadera Latin club 1970s",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"bajadera\" OR \"latin\" OR \"club\" OR \"1970s\"",
+        "terms": [
+          "bajadera",
+          "latin",
+          "club",
+          "1970s"
+        ]
+      }
+    },
+    {
+      "round": 7,
+      "top_k": 5,
+      "equivalence_key": "01f48fc544cf53fccb30ae19d2504e2aa2f06929d3f3f45675b816ec688e4c2f",
+      "cached": false,
+      "query_sha256": "91068f1c5f8e6049fa17f35c06de8803733e20b082766f69571a3e7e25f8a3eb",
+      "query": "Beso Latino club 1970s California owner",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"beso\" OR \"latino\" OR \"club\" OR \"1970s\" OR \"california\" OR \"owner\"",
+        "terms": [
+          "beso",
+          "latino",
+          "club",
+          "1970s",
+          "california",
+          "owner"
+        ]
+      }
+    },
+    {
+      "round": 7,
+      "top_k": 5,
+      "equivalence_key": "a71edfb543fc14cd63ac3f78e15ca1d34da9e605e31e830d68b10ddd10bb6f56",
+      "cached": false,
+      "query_sha256": "071073ac81041e21315253c3f5c67313c7391eaedc930637dda36e83573e4a09",
+      "query": "Bambu Latin music club 1970s California",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"bambu\" OR \"latin\" OR \"music\" OR \"club\" OR \"1970s\" OR \"california\"",
+        "terms": [
+          "bambu",
+          "latin",
+          "music",
+          "club",
+          "1970s",
+          "california"
+        ]
+      }
+    }
+  ],
+  "equivalent_query_repeats": 1,
+  "views": [
+    {
+      "round": 1,
+      "compacted": false,
+      "visible_evidence": [],
+      "shelf": [],
+      "shelf_evicted": []
+    },
+    {
+      "round": 2,
+      "compacted": false,
+      "visible_evidence": [],
+      "shelf": [],
+      "shelf_evicted": []
+    },
+    {
+      "round": 3,
+      "compacted": false,
+      "visible_evidence": [],
+      "shelf": [],
+      "shelf_evicted": []
+    },
+    {
+      "round": 4,
+      "compacted": false,
+      "visible_evidence": [],
+      "shelf": [],
+      "shelf_evicted": []
+    },
+    {
+      "round": 5,
+      "compacted": false,
+      "visible_evidence": [],
+      "shelf": [],
+      "shelf_evicted": []
+    },
+    {
+      "round": 6,
+      "compacted": false,
+      "visible_evidence": [],
+      "shelf": [],
+      "shelf_evicted": []
+    },
+    {
+      "round": 7,
+      "compacted": true,
+      "visible_evidence": [
+        "e1"
+      ],
+      "shelf": [],
+      "shelf_evicted": []
+    },
+    {
+      "round": 8,
+      "compacted": false,
+      "visible_evidence": [
+        "e1"
+      ],
+      "shelf": [],
+      "shelf_evicted": []
+    },
+    {
+      "round": 9,
+      "compacted": false,
+      "visible_evidence": [
+        "e1",
+        "e2"
+      ],
+      "shelf": [],
+      "shelf_evicted": []
+    },
+    {
+      "round": 10,
+      "compacted": true,
+      "visible_evidence": [
+        "e1",
+        "e2"
+      ],
+      "shelf": [],
+      "shelf_evicted": []
+    },
+    {
+      "round": 11,
+      "compacted": false,
+      "visible_evidence": [
+        "e1",
+        "e2",
+        "e3"
+      ],
+      "shelf": [],
+      "shelf_evicted": []
+    },
+    {
+      "round": 12,
+      "compacted": false,
+      "visible_evidence": [
+        "e1",
+        "e2",
+        "e3",
+        "e4"
+      ],
+      "shelf": [],
+      "shelf_evicted": []
+    }
+  ],
+  "delivered_refs": [
+    "e1",
+    "e2",
+    "e3",
+    "e4"
+  ],
+  "submitted_refs": [
+    "e3",
+    "e4",
+    "e1"
+  ],
+  "text_included": true,
+  "limitations": [
+    "Equivalence is compiler equality, not semantic identity or wasted-search proof",
+    "Raw-window visibility/selection is not entailment or complete evidence coverage",
+    "No live q26 replay or independent answer scoring is performed"
+  ]
+}

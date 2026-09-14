@@ -4,6 +4,10 @@
 
 STRIDE 是独立的读取优先单代理搜索框架，不继承 ESR 的 claim 图、pending、focus 许可、审核门禁或训练路由。程序负责原文、已读范围、工具回执、预算与恢复；模型负责查询、解释和明确提交。没有默认 auditor、额外总结模型、自动答案修正或训练。**当前仍没有真实 BC+ 性能提升证明。**
 
+已完成 q26、q72、q661 的各一次自然运行及事后答案判分，三题均匹配基准答案，同时观察到引用支持不足。参见[三题脱敏分析](docs/THREE_CASE_REVIEW_A3.md)和[采集／判分工具](docs/TRACE_CAPTURE_A3.md)；这是开发案例记录，不是整体准确率评测。
+
+完整 HTTP、SQLite 轨迹、原文证据、逐轮分析与 judge 结果已按用户授权整理至[三题完整资料](artifacts/20260914-three-case-a3/README.md)。让 GPT 分析过程问题并设计下一步实验时，可直接从[审阅任务](artifacts/20260914-three-case-a3/GPT_REVIEW.md)开始。
+
 ## 安装与离线运行
 
 ```bash

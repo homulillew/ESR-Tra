@@ -1,0 +1,178 @@
+{
+  "release_commit": "5d7752be94a9d40aa757383d8899504bc0f81e81",
+  "protocol": "stride-search-3",
+  "config": {
+    "max_model_calls": 32,
+    "max_actions": 100,
+    "max_backend_calls": 60,
+    "max_batch": 4,
+    "max_queries_per_search": 3,
+    "max_output_tokens": 4096,
+    "max_total_output_tokens": 24000,
+    "context_limit": 96000,
+    "response_reserve": 4096,
+    "read_chars": 3000,
+    "recent_groups": 4,
+    "max_notes": 6,
+    "max_document_chars": 2000000,
+    "max_seconds": 900,
+    "nonblocking_notes": true,
+    "repair_context": true,
+    "delivery_preflight": true,
+    "disclose_retriever": true,
+    "compiled_query_cache": false,
+    "evidence_shelf_size": 3,
+    "recall_navigation": true,
+    "centered_recall": true,
+    "notes_enabled": true,
+    "reserve_finish": true,
+    "require_sources": true,
+    "context_mode": "rolling",
+    "answer_prefix": "",
+    "answer_suffix": ""
+  },
+  "index_identity": {
+    "kind": "sqlite-fts5-bm25",
+    "index_id": "esr-sqlite-bm25-20260909",
+    "index_fingerprint": "5d527d6beee29fad0d73fbe0532085a3027603c11e0527ebc271066a81a59de0",
+    "metadata": {
+      "corpus_hash": "086f1914ef7bcf0b9674e5ea435d3e23b5c552159916cba433ebb6fac5a5d39a",
+      "documents": 100195,
+      "sqlite_version": "3.50.4",
+      "retriever": "sqlite_fts5_bm25",
+      "tokenizer": "porter unicode61",
+      "bm25_k1": 1.2,
+      "bm25_b": 0.75,
+      "query_operator": "OR",
+      "format_version": 1,
+      "complete": true
+    },
+    "adapter": "stride-cpu-or-1",
+    "query_timeout_seconds": 45,
+    "sqlite_runtime": "3.50.4",
+    "capabilities_sha256": "4e52078473bc25d06809eef33e5edb9d80d3aa958ae57e00063c1ba8db12f048",
+    "identity_scope": "metadata hash and declared index label; not a new corpus byte audit"
+  },
+  "cases": [
+    {
+      "qid": "26",
+      "model_attempts": 12,
+      "http_attempts": 12,
+      "native_calls": 20,
+      "executed_actions": 20,
+      "action_counts": {
+        "search": 13,
+        "read": 4,
+        "find": 2,
+        "finish": 1
+      },
+      "query_execution_count": 39,
+      "backend_calls": 41,
+      "backend_by_kind": {
+        "search": 39,
+        "get_document": 2
+      },
+      "equivalent_key_repeats": 1,
+      "identical_previous_result_sets": 4,
+      "compaction_requests": 2,
+      "shelf_restore_requests": 0,
+      "direct_shelf_restore_wire_bytes": 0,
+      "total_wire_body_bytes": 678680,
+      "http_latency_seconds": 53.64493710003444,
+      "backend_latency_seconds": 42.045499199972255,
+      "usage": {
+        "input_tokens": 160790,
+        "output_tokens": 1657,
+        "cache_read_tokens": 102912,
+        "cache_write_tokens": null
+      },
+      "elapsed_seconds": 97.49831669998821,
+      "terminal": "submitted",
+      "external_formal_correct": true
+    },
+    {
+      "qid": "72",
+      "model_attempts": 14,
+      "http_attempts": 14,
+      "native_calls": 25,
+      "executed_actions": 25,
+      "action_counts": {
+        "search": 15,
+        "read": 9,
+        "finish": 1
+      },
+      "query_execution_count": 44,
+      "backend_calls": 50,
+      "backend_by_kind": {
+        "search": 44,
+        "get_document": 6
+      },
+      "equivalent_key_repeats": 0,
+      "identical_previous_result_sets": 6,
+      "compaction_requests": 2,
+      "shelf_restore_requests": 1,
+      "direct_shelf_restore_wire_bytes": 935,
+      "total_wire_body_bytes": 747596,
+      "http_latency_seconds": 56.53364580005291,
+      "backend_latency_seconds": 47.70378700000583,
+      "usage": {
+        "input_tokens": 189203,
+        "output_tokens": 1833,
+        "cache_read_tokens": 127744,
+        "cache_write_tokens": null
+      },
+      "elapsed_seconds": 105.88578310000594,
+      "terminal": "submitted",
+      "external_formal_correct": true
+    },
+    {
+      "qid": "661",
+      "model_attempts": 4,
+      "http_attempts": 4,
+      "native_calls": 5,
+      "executed_actions": 5,
+      "action_counts": {
+        "search": 1,
+        "read": 3,
+        "finish": 1
+      },
+      "query_execution_count": 3,
+      "backend_calls": 5,
+      "backend_by_kind": {
+        "search": 3,
+        "get_document": 2
+      },
+      "equivalent_key_repeats": 0,
+      "identical_previous_result_sets": 0,
+      "compaction_requests": 0,
+      "shelf_restore_requests": 0,
+      "direct_shelf_restore_wire_bytes": 0,
+      "total_wire_body_bytes": 80033,
+      "http_latency_seconds": 17.85685859998921,
+      "backend_latency_seconds": 5.717480899998918,
+      "usage": {
+        "input_tokens": 18934,
+        "output_tokens": 718,
+        "cache_read_tokens": 10112,
+        "cache_write_tokens": null
+      },
+      "elapsed_seconds": 24.011447199998656,
+      "terminal": "submitted",
+      "external_formal_correct": true
+    }
+  ],
+  "judge": {
+    "http_attempts": 3,
+    "input_tokens": 636,
+    "output_tokens": 87,
+    "request_body_bytes": 3030,
+    "http_latency_seconds": 8.311854200030211,
+    "cache_read_tokens": 0,
+    "cache_write_tokens": null
+  },
+  "limits": [
+    "Three development-exposed cases only",
+    "Answer correctness is separate from evidence sufficiency",
+    "Missing cache_write usage is null"
+  ]
+}

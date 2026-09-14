@@ -1,0 +1,371 @@
+{
+  "metrics": {
+    "terminal": {
+      "answer": "Ablade Glover",
+      "basis": [
+        {
+          "document": "d6",
+          "document_chars": 7807,
+          "end": 3000,
+          "kind": "raw_evidence",
+          "ref": "e1",
+          "sha256": "fb7f40f22aeeefd702a6d5f4b821c6b7314cec593a9f519028f88d29a3be75c5",
+          "snapshot": "166adba0133277ae436e99e85f56c1f26d3939fb71d5d48cea355a1ca8d41bac",
+          "start": 0
+        },
+        {
+          "document": "d14",
+          "document_chars": 7401,
+          "end": 3000,
+          "kind": "raw_evidence",
+          "ref": "e2",
+          "sha256": "bf0b79250e96460e5697f7655545f98207bb6c61f2e3cb9182fb76a49b34504b",
+          "snapshot": "896f7dddac865e2bf5a84bb768b10f51877ef0e48447b745cf040b7979864d94",
+          "start": 0
+        },
+        {
+          "document": "d14",
+          "document_chars": 7401,
+          "end": 6000,
+          "kind": "raw_evidence",
+          "ref": "e3",
+          "sha256": "2bba8091cc1302dcad34701255a2f21714d279d7bdd91d0d93956d56956af7e2",
+          "snapshot": "896f7dddac865e2bf5a84bb768b10f51877ef0e48447b745cf040b7979864d94",
+          "start": 3000
+        }
+      ],
+      "elapsed_seconds": 24.011447199998656,
+      "outcome": "submitted",
+      "refs": [
+        "e1",
+        "e2",
+        "e3"
+      ],
+      "semantic_status": "not_automatically_verified"
+    },
+    "formal_correct": null,
+    "model_attempts": 4,
+    "http_attempts": 4,
+    "native_calls": 5,
+    "executed_actions": 5,
+    "action_counts": {
+      "search": 1,
+      "read": 3,
+      "finish": 1
+    },
+    "declared_search_queries": 3,
+    "query_execution_count": 3,
+    "backend_calls": 5,
+    "backend_by_kind": {
+      "search": 3,
+      "get_document": 2
+    },
+    "equivalent_key_repeats": 0,
+    "expression_repeats": 0,
+    "exact_query_cache_hits": 0,
+    "quote_queries": 0,
+    "site_queries": 0,
+    "uppercase_boolean_queries": 0,
+    "identical_previous_result_sets": 0,
+    "compaction_requests": 0,
+    "shelf_restore_requests": 0,
+    "shelf_restored_windows": 0,
+    "shelf_capacity_evictions": 0,
+    "direct_shelf_restore_wire_bytes": 0,
+    "total_wire_body_bytes": 80033,
+    "usage_known": {
+      "input_tokens": 18934,
+      "output_tokens": 718,
+      "cache_read_tokens": 10112,
+      "cache_write_tokens": 0
+    },
+    "unknown_usage_calls": 0,
+    "http_latency_seconds": 17.85685859998921,
+    "backend_latency_seconds": 5.717480899998918,
+    "final_request_rounds": [],
+    "recovery_events": {
+      "delivery_preflight": 3
+    },
+    "result_withheld": 0,
+    "first_request_question_exact": true,
+    "first_request_capabilities": {
+      "boolean_operators": false,
+      "kind": "sqlite-fts5-bm25",
+      "negative_result": "no hit for this expression is not proof that the fact is absent",
+      "phrase_quotes": false,
+      "query_rule": "lowercase; regex word extraction; first-occurrence deduplication; OR of quoted individual tokens",
+      "ranking": "SQLite bm25(search), ascending; docid tie-break; unchanged from q26 LocalIndex",
+      "scope": "fixed local corpus; not live web",
+      "site_filter": false,
+      "title_kind": "stored URL, not an extracted page title",
+      "warning": "site:, quotes and AND/OR in input are not filters/operators. Their words may become ordinary search terms. Use a few discriminating terms."
+    },
+    "first_request_notes": [],
+    "returned_models": [
+      "glm-5.2"
+    ]
+  },
+  "queries": [
+    {
+      "round": 1,
+      "query": "African artist encouraged to use different tool between JFK and RFK assassinations",
+      "expression": "\"african\" OR \"artist\" OR \"encouraged\" OR \"to\" OR \"use\" OR \"different\" OR \"tool\" OR \"between\" OR \"jfk\" OR \"and\" OR \"rfk\" OR \"assassinations\"",
+      "new_docids": [
+        "19129",
+        "47026",
+        "59758",
+        "6915",
+        "88051"
+      ],
+      "max_previous_result_jaccard": null,
+      "identical_previous_result_set": false,
+      "contains_quote": false,
+      "contains_site": false,
+      "contains_uppercase_boolean": false
+    },
+    {
+      "round": 1,
+      "query": "artist studied Africa UK US head of department dean built gallery venue 25th anniversary",
+      "expression": "\"artist\" OR \"studied\" OR \"africa\" OR \"uk\" OR \"us\" OR \"head\" OR \"of\" OR \"department\" OR \"dean\" OR \"built\" OR \"gallery\" OR \"venue\" OR \"25th\" OR \"anniversary\"",
+      "new_docids": [
+        "17549",
+        "1927",
+        "37009",
+        "3747",
+        "74869"
+      ],
+      "max_previous_result_jaccard": 0.0,
+      "identical_previous_result_set": false,
+      "contains_quote": false,
+      "contains_site": false,
+      "contains_uppercase_boolean": false
+    },
+    {
+      "round": 1,
+      "query": "African artist switched tool 1964 continued until 2014",
+      "expression": "\"african\" OR \"artist\" OR \"switched\" OR \"tool\" OR \"1964\" OR \"continued\" OR \"until\" OR \"2014\"",
+      "new_docids": [
+        "62174",
+        "70765",
+        "75509",
+        "78617",
+        "95180"
+      ],
+      "max_previous_result_jaccard": 0.0,
+      "identical_previous_result_set": false,
+      "contains_quote": false,
+      "contains_site": false,
+      "contains_uppercase_boolean": false
+    }
+  ],
+  "shelf": [
+    {
+      "round": 1,
+      "eligible_recent_first_delivered": [],
+      "restored": [],
+      "evicted_for_capacity": [],
+      "visible": [],
+      "direct_restore_wire_bytes": 0,
+      "compacted": false,
+      "restored_was_previously_acked": true
+    },
+    {
+      "round": 2,
+      "eligible_recent_first_delivered": [],
+      "restored": [],
+      "evicted_for_capacity": [],
+      "visible": [],
+      "direct_restore_wire_bytes": 0,
+      "compacted": false,
+      "restored_was_previously_acked": true
+    },
+    {
+      "round": 3,
+      "eligible_recent_first_delivered": [],
+      "restored": [],
+      "evicted_for_capacity": [],
+      "visible": [
+        "e1",
+        "e2"
+      ],
+      "direct_restore_wire_bytes": 0,
+      "compacted": false,
+      "restored_was_previously_acked": true
+    },
+    {
+      "round": 4,
+      "eligible_recent_first_delivered": [
+        "e1",
+        "e2"
+      ],
+      "restored": [],
+      "evicted_for_capacity": [],
+      "visible": [
+        "e1",
+        "e2",
+        "e3"
+      ],
+      "direct_restore_wire_bytes": 0,
+      "compacted": false,
+      "restored_was_previously_acked": true
+    }
+  ],
+  "tool_checks": [
+    {
+      "round": 1,
+      "id": "call_6b64174b234b427e9f0d4122",
+      "native_call_found": true,
+      "name_matches": true,
+      "arguments_exact": true,
+      "action_result_found": true,
+      "execution_result_differs_from_final": false,
+      "withheld": false
+    },
+    {
+      "round": 2,
+      "id": "call_30b18be7975c46b29d73ad28",
+      "native_call_found": true,
+      "name_matches": true,
+      "arguments_exact": true,
+      "action_result_found": true,
+      "execution_result_differs_from_final": false,
+      "withheld": false
+    },
+    {
+      "round": 2,
+      "id": "call_31cfe23e6bac4d589f86f34b",
+      "native_call_found": true,
+      "name_matches": true,
+      "arguments_exact": true,
+      "action_result_found": true,
+      "execution_result_differs_from_final": false,
+      "withheld": false
+    },
+    {
+      "round": 3,
+      "id": "call_af4c1e15b309479e9bac3c67",
+      "native_call_found": true,
+      "name_matches": true,
+      "arguments_exact": true,
+      "action_result_found": true,
+      "execution_result_differs_from_final": false,
+      "withheld": false
+    },
+    {
+      "round": 4,
+      "id": "call_b30ff6b6962e4048aba6ec44",
+      "native_call_found": true,
+      "name_matches": true,
+      "arguments_exact": true,
+      "action_result_found": true,
+      "execution_result_differs_from_final": false,
+      "withheld": false
+    }
+  ],
+  "find_checks": [],
+  "recall_checks": [],
+  "notes": [],
+  "finish_checks": [
+    {
+      "round": 4,
+      "arguments": {
+        "answer": "Ablade Glover",
+        "refs": [
+          "e1",
+          "e2",
+          "e3"
+        ]
+      },
+      "schema_valid": true,
+      "refs_legal": true,
+      "result": {
+        "action_slot_charged": true,
+        "executed": true,
+        "ok": true,
+        "terminal": {
+          "answer": "Ablade Glover",
+          "basis": [
+            {
+              "document": "d6",
+              "document_chars": 7807,
+              "end": 3000,
+              "kind": "raw_evidence",
+              "ref": "e1",
+              "sha256": "fb7f40f22aeeefd702a6d5f4b821c6b7314cec593a9f519028f88d29a3be75c5",
+              "snapshot": "166adba0133277ae436e99e85f56c1f26d3939fb71d5d48cea355a1ca8d41bac",
+              "start": 0
+            },
+            {
+              "document": "d14",
+              "document_chars": 7401,
+              "end": 3000,
+              "kind": "raw_evidence",
+              "ref": "e2",
+              "sha256": "bf0b79250e96460e5697f7655545f98207bb6c61f2e3cb9182fb76a49b34504b",
+              "snapshot": "896f7dddac865e2bf5a84bb768b10f51877ef0e48447b745cf040b7979864d94",
+              "start": 0
+            },
+            {
+              "document": "d14",
+              "document_chars": 7401,
+              "end": 6000,
+              "kind": "raw_evidence",
+              "ref": "e3",
+              "sha256": "2bba8091cc1302dcad34701255a2f21714d279d7bdd91d0d93956d56956af7e2",
+              "snapshot": "896f7dddac865e2bf5a84bb768b10f51877ef0e48447b745cf040b7979864d94",
+              "start": 3000
+            }
+          ],
+          "elapsed_seconds": 24.011447199998656,
+          "outcome": "submitted",
+          "refs": [
+            "e1",
+            "e2",
+            "e3"
+          ],
+          "semantic_status": "not_automatically_verified"
+        }
+      }
+    }
+  ],
+  "formal_evidence": {
+    "e1": {
+      "ref": "e1",
+      "document": "d6",
+      "snapshot": "166adba0133277ae436e99e85f56c1f26d3939fb71d5d48cea355a1ca8d41bac",
+      "start": 0,
+      "end": 3000,
+      "document_chars": 7807,
+      "text": "---\ntitle: Ablade Glover\nauthor: CM Gallery\ndate: 2008-01-01\n---\nAblade Glover\n\nDescribed by Bonhams London as one of the fathers of modern African art, Professor Ablade Glover (b. 1934, Accra, Ghana) stands as one of the continent's most influential and pioneering artists. Over a career spanning more than six decades, he has played a vital role in shaping the trajectory of contemporary African art, both as a painter and as an educator. His work is held in major collections worldwide, and at 91 years old, his legacy continues to inspire generations of artists across Africa.\n\nGlover was a student at the College of Art in Kumasi in 1957 when Ghana became the first sub-Saharan African country to gain independence from colonial rule. Under the leadership of Dr. Kwame Nkrumah, the new government championed a vision that embraced both traditional Ghanaian identity and modern education. Nkrumah encouraged young artisans to study abroad and return to Ghana, where they would pass on their skills through apprenticeship and mentorship, helping to build a modern African nation grounded in its own cultural values.\n\nAwarded a scholarship to study textile design at London's Central School of Art and Design, Glover returned to Ghana to discover that the textile factory he was meant to join had not yet been built. After completing a short teaching contract, he was granted a second scholarship—this time personally endorsed by President Nkrumah—to study Art Education at Newcastle University. Glover later earned a master's degree at Kent State University and a doctorate at Ohio University in 1974.\n\nHe returned to Ghana to dedicate the next two decades to teaching at the Kwame Nkrumah University of Science and Technology in Kumasi, where he rose to become both Head of Department and Dean of the College of Art. Following his retirement from academia in 1994, Glover focused fully on painting while also pursuing a long-held dream to support and promote emerging African artists. In 1993, he founded the Artist Alliance Gallery in Accra, and in 2007, using private funds, he built a landmark three-storey arts complex on Accra's oceanfront to house the gallery and a training centre.\n\nGlover remains deeply committed to his country and continent. As both an artist and mentor, he has dedicated his life to creative expression, education, and cultural empowerment—leaving an indelible mark on African art history.\n\nCountry • Ghana\n\nMedium • oil on canvas\n\nFIRST EXHIBITION WITH CHRISTOPHER MOLLER GALLERY • 2016\n\nExplore his Work\n\nPrevious exhibitions by Ablade Glover\n\nSELECTED SOLO EXHIBITIONS\n\n2024 Inner Worlds, Outer Journeys, October Gallery, London, U.K\n\n2022 88, Still At It, Christopher Moller Gallery South Africa. The Passage of Time, Hourglass Gallery, Lagos, Nigeria\n\n2019 Wogbe Jeke - We Have Come a Long Way, October Gallery, London, UK Professor Ablade Glover: The Last 20 Years and Beyond, Gallery 1957, Accra, Ghana\n\n2017 - JPK Gallery, Paris, France\n\n2016 INDIVISIBLE: Abla",
+      "sha256": "fb7f40f22aeeefd702a6d5f4b821c6b7314cec593a9f519028f88d29a3be75c5",
+      "kind": "raw_evidence"
+    },
+    "e2": {
+      "ref": "e2",
+      "document": "d14",
+      "snapshot": "896f7dddac865e2bf5a84bb768b10f51877ef0e48447b745cf040b7979864d94",
+      "start": 0,
+      "end": 3000,
+      "document_chars": 7401,
+      "text": "---\ntitle: Ablade Glover - Wikipedia\nauthor: Authority control databases\ndate: 2015-09-20\n---\nbirth_name: Emmanuel Ablade Glover\nbirth_date: 1934\nbirth_place: Accra, Greater Accra Region, Gold Coast\nfield: Visual art, painting\nnationality: Ghanaian\nawards: Flagstar Award\nalma_mater: Kwame Nkrumah University of Science and Technology, Central School of Art and Design (BA), Kent State University (MA), Ohio State University (PhD)\nhonorific_suffix: GHA FGA 100%, GBR FRSA 100%, , CV\n\nAblade Glover CV (born 1934) is a Ghanaian painter and educator. He has exhibited widely, building an international reputation over several decades, as well as being regarded as a seminal figure on the West African art scene.Juliet Highet, \"Ablade Glover – Ghanaian mirage\" , New African Magazine, 6 August 2014. His work is held in many prestigious private and public collections, which include the Imperial Palace of Japan, the UNESCO headquarters in Paris, France,\"Ablade Glover: 80th Anniversary\", October Gallery, 2014. and O'Hare International Airport, Chicago, United States.\n\nGlover has received several national and international awards, including the Order of the Volta in Ghana, and he is a Life Fellow of the Royal Society of Arts in London.\"Why I paint women, markets; Ablade Glover Digs Deep\", GhanaWeb, 16 July 2012. He was Associate Professor, Head of the Department of Art Education and Dean of the College of Art at the Kwame Nkrumah University of Science and Technology until 1994.\"Ablade Glover\", October Gallery.\n\nEarly life and education\n\nBorn in the La community of Accra, in what was then the Gold Coast (present-day Ghana), Emmanuel Ablade Glover had his early education at Presbyterian mission schools.Gates, Henry Louis, Emmanuel Akyeampong and Steven J. Niven (eds), \"Glover, Emmanuel Ablade (1934–)\", Dictionary of African Biography, Oxford University Press, 2012. He had his teacher training education at the Kwame Nkrumah University of Science and Technology, Kumasi (1957–58), before winning a scholarship to study textile design at London's Central School of Art and Design (1959–62).\n\nGlover returned to Ghana to teach for a while, before another scholarship, given by Kwame Nkrumah, enabled Glover to study art education at the University of Newcastle upon Tyne (1964–65); it was there that Glover began to use the tool that shaped his technique when his teacher suggested a palette knife to apply paint, rather than brushes. Glover went on to further his education in the US, first at Kent State University, where he earned his master's degree, and then at Ohio State University,David Owusu-Ansah, \"Glover, Ablade (1934–)\", Historical Dictionary of Ghana, Rowman & Littlefield, 2014, p. 158. where he was awarded a PhD in 1974.\n\nCareer\n\nAcademic\n\nReturning to Ghana after receiving his doctorate, Glover taught for the next two decades at the College of Art in the University of Kumasi, becoming Department Head and College Dean. He rose to the rank of associate professor within ",
+      "sha256": "bf0b79250e96460e5697f7655545f98207bb6c61f2e3cb9182fb76a49b34504b",
+      "kind": "raw_evidence"
+    },
+    "e3": {
+      "ref": "e3",
+      "document": "d14",
+      "snapshot": "896f7dddac865e2bf5a84bb768b10f51877ef0e48447b745cf040b7979864d94",
+      "start": 3000,
+      "end": 6000,
+      "document_chars": 7401,
+      "text": "that period.\n\nArtists Alliance Gallery\n\nHe founded the Accra-based Artists Alliance Gallery,Artists Alliance Gallery on Facebook.Ruth-Ellen Davis, \"Interview: Ablade Glover — The veteran Ghanaian artist discusses his kaleidoscopic take on African life\", Time Out Accra, 21 November 2016. which has roots in an earlier gallery he founded in the 1960s and in its new incarnation was opened by Kofi Annan in 2008.Safia Dickersbach, \"Ablade Glover — The Black Stars of Ghana\", Modern Ghana, 29 August 2013. As well as being an outlet for Glover's own work, this gallery features the work of other significant Ghanaian artists such as Owusu-Ankomah and George O. Hughes, together with collectible local artifacts.\"Artists Alliance Gallery, Labadi\", Time Out Accra, 15 July 2013.\n\nStyle\n\nGlover's style has been described as \"swirling between abstraction and realism\", and his subject matter typically favours large urban landscapes, lorry parks, shantytowns, thronging markets and studies of the women of Ghana.\"Ablade Glover\", Tasneem Gallery. Asked about his influences, he has said: \"...if you notice, you see a lot of women in my work and people do ask me, why do you paint so many women? The first time I was asked the question, I didn't think about it. I just opened my mouth and said because they are more beautiful than men. That wasn't a serious answer. It was later, thinking about it, that it struck me they have courage. Women of Africa have some courage and they show it. When they walk the street, they are elegant. They are courageous, they are brave. When they are going about, they show it. Men don't do that, do they?\"\n\nHonours and recognition\n\nIn 1998, Glover received the Flagstar Award from ACRAG (the Arts Critics and Reviewers Association of Ghana), and was also honoured with the distinguished alumni award from the African-American Institute in New York City. He has been honoured with several national and international awards, including the Order of the Volta in Ghana in 2007, the Millennium Excellence Award in 2010 and is a Life Fellow of the Royal Society of Arts, London. He is also a Fellow of the Ghana Academy of Arts and Sciences.\n\nIn July 2024, to celebrate Glover's 90th birthday, October Gallery mounted the solo exhibition Inner Worlds, Outer Journeys, having since 1982 devoted 10 shows to his work. As noted by African Business magazine: \"Throughout his lifetime his reputation has grown beyond that of simply an artist, and he has become a mentor and role model for emerging African artists on the global stage, paving the way for the success of African artists.\"\n\nSelected exhibitions\n\n* Visions & Dreams, Tasneem Gallery (13 March–31 May 2008)\n* Ablade Glover: 75 Year Anniversary, October Gallery, London (2 July–1 August 2009)\n* I See You, Tasneem Gallery (6 July–17 November 2010)\n* Transmission Part 2, Tasneem Gallery, Barcelona, Spain (15 November 2012–30 March 2013)\n* Ablade Glover: 80th Anniversary, October Gallery, London (3 July–2 August 2014)\n* Ab",
+      "sha256": "2bba8091cc1302dcad34701255a2f21714d279d7bdd91d0d93956d56956af7e2",
+      "kind": "raw_evidence"
+    }
+  },
+  "limitations": [
+    "Direct shelf bytes are serialized request differences, not provider tokens or a causal cost ablation.",
+    "Result overlap is not semantic redundancy.",
+    "No external judge or production query is used."
+  ]
+}
