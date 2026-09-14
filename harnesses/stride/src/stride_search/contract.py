@@ -9,7 +9,7 @@ from typing import Any
 
 from jsonschema import Draft202012Validator
 
-PROTOCOL = "stride-search-2"
+PROTOCOL = "stride-search-3"
 
 
 class ContractError(ValueError):
@@ -69,7 +69,7 @@ SCHEMAS = {
     "read": obj({"ref": READ_REF, "start": {"type": "integer", "minimum": 0},
                  "length": {"type": "integer", "minimum": 1, "maximum": 6000}}, ("ref",)),
     "find": obj({"ref": DOC, "text": TEXT,
-                 "start": {"type": "integer", "minimum": 0}}, ("ref", "text")),
+                 "start": {"type": "integer", "minimum": 0}, "ignore_case": {"type": "boolean"}}, ("ref", "text")),
     "recall": obj({"query": TEXT}, ("query",)),
     "notes": {"oneOf": [
         obj({"op": {"const": "put"}, "key": NOTE_KEY,
@@ -84,10 +84,10 @@ SCHEMAS = {
 DESCRIPTIONS = {
     "search": "Search up to three independent queries. Results are navigation, NOT raw evidence. No note or plan is required.",
     "read": "Read a previously received document dN at exact Unicode code-point offsets, or replay an eN evidence window exactly. eN replay accepts no start/length. Never guess handles from unread results.",
-    "find": "Locate exact case-sensitive text in a previously received document. Positions/excerpts are navigation; call read at an issued position for citable raw evidence.",
-    "recall": "Search previously delivered evidence and note history by lexical terms. Returned excerpts are navigation only; use read(eN) to restore raw text. Notes are not evidence.",
+    "find": "Locate literal text in a previously received document (case-sensitive by default; ignore_case=true uses Unicode regex case-insensitive matching, preserving original offsets). Positions/excerpts are navigation; call read at an issued position for citable raw evidence.",
+    "recall": "Search previously delivered evidence, received search-hit navigation (when enabled), and note history by lexical terms. Returned excerpts are navigation only; use read(eN) to restore raw text. Notes are not evidence.",
     "notes": "Optional small scratchpad, NOT verified facts or a prerequisite to finishing. Save only candidate distinctions, rejected paths or bridge clues useful later. Explicit replacement/deletion changes the current view; no claims are auto-verified.",
-    "finish": "Submit the exact answer string with previously delivered eN evidence, or explicitly abstain. No prior note, draft, audit or cleanup is required. Must be last in a batch; no automatic answer fixing.",
+    "finish": "Submit the exact answer string with previously delivered eN evidence, or explicitly abstain. No prior note, draft, audit or cleanup is required. Select every raw window used for compound answer assertions; a legal reference is not entailment. Must be last in a batch; no automatic answer fixing.",
 }
 SYSTEM = """You are a research agent. Answer the ORIGINAL question, not a bookkeeping task.
 Search selectively, read the needed passage, and finish directly when ready. You may issue
@@ -150,6 +150,11 @@ class Config:
     nonblocking_notes: bool = True
     repair_context: bool = True
     delivery_preflight: bool = True
+    disclose_retriever: bool = True
+    compiled_query_cache: bool = False
+    evidence_shelf_size: int = 3
+    recall_navigation: bool = True
+    centered_recall: bool = True
     notes_enabled: bool = True
     reserve_finish: bool = True
     require_sources: bool = True
@@ -162,9 +167,11 @@ class Config:
             if key.startswith("max_") or key in ("context_limit", "response_reserve", "read_chars", "recent_groups"):
                 if type(value) is not int or value < 1:
                     raise ValueError(f"{key} must be a positive integer")
-        for key in ("notes_enabled", "reserve_finish", "require_sources", "nonblocking_notes", "repair_context", "delivery_preflight"):
+        for key in ("notes_enabled", "reserve_finish", "require_sources", "nonblocking_notes", "repair_context", "delivery_preflight", "disclose_retriever", "compiled_query_cache", "recall_navigation", "centered_recall"):
             if type(getattr(self, key)) is not bool:
                 raise ValueError(f"{key} must be boolean")
+        if type(self.evidence_shelf_size) is not int or not 0 <= self.evidence_shelf_size <= 4:
+            raise ValueError("evidence_shelf_size must be an integer from 0 to 4")
         if self.max_queries_per_search > 3:
             raise ValueError("max_queries_per_search must be <= 3")
         if self.read_chars > 6000 or self.max_batch > 8:
