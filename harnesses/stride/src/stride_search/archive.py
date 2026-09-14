@@ -113,7 +113,7 @@ class Archive:
             for key in ({"model_response": ("raw",), "backend_response": ("object",),
                          "snapshot": ("object",), "round_end": ("group", "notes"),
                          "action_execution": ("object",), "result_withheld": ("object",),
-                         "repair_context": ("object",)}.get(e["kind"], ())):
+                         "repair_context": ("object",), "navigation_ack": ("object",)}.get(e["kind"], ())):
                 self.get(p[key])
             if e["kind"] == "backend_response" and p.get("raw_wire"):
                 self.get(p["raw_wire"])
@@ -247,7 +247,7 @@ class Archive:
                 actions.append(p)
             elif e["kind"] == "terminal":
                 terminal = p
-        if header is None or header.get("protocol") not in ("stride-search-1", PROTOCOL):
+        if header is None or header.get("protocol") not in ("stride-search-1", "stride-search-2", PROTOCOL):
             raise ContractError("archive_format", "Episode header missing or incompatible")
         totals = {k: sum(u[k] for u in usage if type(u.get(k)) is int) for k in
                   ("input_tokens", "output_tokens", "cache_read_tokens", "cache_write_tokens")}
