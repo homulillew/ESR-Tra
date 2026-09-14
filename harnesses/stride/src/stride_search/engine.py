@@ -6,6 +6,7 @@ import re
 import time
 from typing import Callable
 
+from . import search_support
 from .archive import Archive
 from .context import build
 from .contract import PROTOCOL, Config, ContractError, canonical, digest, loads, text_hash, validate
@@ -27,13 +28,16 @@ class Harness:
         self.evidence_order, self.doc_order = [], []
         self.notes, self.note_history = {}, []
         self.search_cache = {}
+        self.search_capabilities = search_support.capabilities(retriever)
+        self.navigation_history, self.navigation_acked_rounds = [], set()
         self.model_calls = self.action_slots = self.declared_calls = self.backend_calls = 0
         self.output_charged = 0
         self.feedback, self.terminal, self.model_identity = None, None, None
         self.repair = None
         self.archive.append("episode", {"protocol": PROTOCOL, "question": question,
             "config": self.config.to_dict(), "retriever": deepcopy(retriever.identity),
-            "counter": deepcopy(self.counter.identity), "execution": "fresh_episode_only"})
+            "counter": deepcopy(self.counter.identity), "search_capabilities": deepcopy(self.search_capabilities),
+            "execution": "fresh_episode_only"})
 
     def remaining(self):
         return {"model_calls": self.config.max_model_calls - self.model_calls,
@@ -100,15 +104,17 @@ class Harness:
         if name == "search":
             if len(args["queries"]) > self.config.max_queries_per_search:
                 raise ContractError("query_batch_limit", "Too many queries for the current experimental arm")
-            keys = [digest([self.retriever.identity, q, args.get("top_k", 5)]) for q in args["queries"]]
-            needed = sum(k not in self.search_cache for k in keys)
+            specs = [search_support.query_spec(self, q, args.get("top_k", 5)) for q in args["queries"]]
+            keys = [s[0] for s in specs]
+            needed = len(set(keys) - set(self.search_cache))
             if needed > self.config.max_backend_calls - self.backend_calls:
                 raise ContractError("backend_budget", "Not enough remaining backend budget for this query batch; reduce queries")
             outputs, docs = [], []
-            for query in args["queries"]:
+            for query, (key, equivalent, compiled) in zip(args["queries"], specs):
                 top_k = args.get("top_k", 5)
-                key = digest([self.retriever.identity, query, top_k])
                 cached = key in self.search_cache
+                self.archive.append("query_execution", {"round": self.model_calls, "query": query, "top_k": top_k,
+                    "compiled": compiled, "equivalence_key": equivalent, "cache_key": key, "cached": cached})
                 if cached:
                     rows = deepcopy(self.search_cache[key])
                 else:
@@ -147,39 +153,22 @@ class Harness:
                 if start > len(full):
                     raise ContractError("range", "Start exceeds the document length")
                 needle, found, pos = args["text"], [], start
+                pattern = re.compile(re.escape(needle), re.IGNORECASE if args.get("ignore_case", False) else 0)
                 for _ in range(8):
-                    pos = full.find(needle, pos)
-                    if pos < 0:
+                    match = pattern.search(full, pos)
+                    if match is None:
                         break
-                    found.append({"start": pos, "end": pos + len(needle),
-                                  "excerpt": full[max(0, pos - 60):min(len(full), pos + len(needle) + 60)][:250]})
-                    pos += max(1, len(needle))
+                    found.append({"start": match.start(), "end": match.end(),
+                                  "excerpt": full[max(0, match.start() - 60):min(len(full), match.end() + 60)][:250]})
+                    pos = match.end()
                 return {"document": ref, "snapshot": sha, "matches": found,
                         "next_start": pos if len(found) == 8 and pos < len(full) else None,
-                        "kind": "positions_not_evidence", "case_sensitive": True}, [], []
+                        "kind": "positions_not_evidence", "case_sensitive": not args.get("ignore_case", False)}, [], []
             view = self.archive.window(ref, start, args.get("length", self.config.read_chars))
             return {"evidence": view, "previously_received": view["ref"] in self.exposed,
                     "next_start": view["end"] if view["end"] < view["document_chars"] else None}, [], [view["ref"]]
         if name == "recall":
-            terms = re.findall(r"\w+", args["query"].casefold())
-            if not terms:
-                raise ContractError("query_terms", "Recall needs at least one lexical term")
-            scored = []
-            for order, ref in enumerate(self.evidence_order):
-                view = self.archive.evidence(ref)
-                title = self.archive.doc(view["document"])["title"]
-                text = title + " " + view["text"]
-                score = sum(t in text.casefold() for t in terms)
-                if score:
-                    scored.append((score, order, {"ref": ref, "title": title[:160], "excerpt": view["text"][:400],
-                                                  "kind": "evidence_navigation"}))
-            for order, note in enumerate(self.note_history):
-                score = sum(t in note["text"].casefold() for t in terms)
-                if score:
-                    scored.append((score, order, {"key": note["key"], "excerpt": note["text"],
-                        "active": self.notes.get(note["key"]) == note, "kind": "agent_note_not_evidence"}))
-            rows = [r[2] for r in sorted(scored, key=lambda r: (r[0], r[1]), reverse=True)[:8]]
-            return {"matches": rows, "retrieval": "lexical_overlap_not_semantic", "excerpt_only": True}, [], []
+            return search_support.recall(self, args["query"])
         if name == "notes":
             if not self.config.notes_enabled:
                 raise ContractError("notes_disabled", "This experimental arm has no note tool")
@@ -250,7 +239,8 @@ class Harness:
         self.archive.append("model_request", {"round": round_no, "request": self.archive.save_request(plan["wire"]),
             "visible_evidence": plan["visible"], "visible_documents": plan["documents"],
             "final": final, "compacted": plan["compacted"], "capacity": plan["capacity"],
-            "counter": self.counter.identity, "output_reservation": output_limit})
+            "counter": self.counter.identity, "output_reservation": output_limit,
+            "evidence_shelf": plan["shelf"], "shelf_evicted_for_capacity": plan["shelf_evicted"]})
         start = self.clock()
         try:
             raw = model.send(deepcopy(plan["wire"]))
@@ -292,6 +282,7 @@ class Harness:
             if ref not in self.doc_order:
                 self.doc_order.append(ref)
         self.archive.append("delivery_ack", {"round": round_no, "evidence": plan["visible"], "documents": plan["documents"]})
+        search_support.accept_navigation(self, plan["groups"])
         binding = {"documents": frozenset(self.published_docs), "evidence": frozenset(self.exposed)}
         calls = reply.message.get("tool_calls", [])
         if not calls:
