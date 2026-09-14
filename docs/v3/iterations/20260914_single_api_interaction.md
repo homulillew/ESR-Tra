@@ -47,7 +47,7 @@ python -m esr_harness_v3 replay --db runs/single_api_trace/20260914T032110Z_q26/
 
 ## 给独立审阅者的入口
 
-从本文件开始，结合 [逐轮分析与排查问题](20260914_single_api_review.md) 和 [脱敏运行统计](20260914_single_api_metrics.json) 阅读本分支相对基础提交的 diff。代码链接：
+从本文件开始，结合 [逐轮分析与排查问题](20260914_single_api_review.md)、[系统提示、工具定义与 OpenAI 接口分析](20260914_harness_openai_contract.md) 和 [脱敏运行统计](20260914_single_api_metrics.json) 阅读本分支相对基础提交的 diff。代码链接：
 
 - [采集器及本地检索接入](../../../scripts/trace_single_v3.py)
 - [工具执行和回执](../../../src/esr_harness_v3/engine.py)

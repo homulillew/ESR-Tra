@@ -141,3 +141,5 @@ require_sources 检查真实来源路径，不保证每个断言得到语义支�
 每次只建议一个主要机制改动。真实模型请求需在有效预算内另外执行；这份研究报告不可注入被测 policy 或 auditor。不要根据单题、未审核提交或更少调用宣称 ESR 胜过 baseline。
 
 验证记录、复现命令和代码入口见 [运行与修复记录](20260914_single_api_interaction.md)。
+
+系统提示、每轮 messages、六个工具定义、原生 tool_calls 回执、strict 模式边界和审核请求的专项核对，见 [harness 与 OpenAI 接口分析](20260914_harness_openai_contract.md)。该文补充代码审阅，不包含新的模型实验。
