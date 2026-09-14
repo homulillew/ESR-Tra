@@ -3,4 +3,4 @@ from .contract import Config, ContractError
 from .engine import Harness
 
 __all__ = ["Config", "ContractError", "Harness"]
-__version__ = "0.1.0a2"
+__version__ = "0.1.0a3"
