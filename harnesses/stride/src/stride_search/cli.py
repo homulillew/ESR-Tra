@@ -1,0 +1,185 @@
+"""Offline defaults; live calls require explicit authorization and frozen identities."""
+from __future__ import annotations
+
+import argparse
+import json
+import os
+from pathlib import Path
+import sys
+
+from .archive import Archive
+from .contract import Config, ContractError, canonical, loads, tools
+from .engine import Harness
+from .experiment import make_plan, read_cases, run_plan, summarize, write_new
+from .fixtures import smoke_corpus, smoke_model
+from .providers import AnthropicModel, ByteCounter, EchoRetriever, HFCounter, HTTP, OpenAIModel
+
+
+def _json(path):
+    return loads(Path(path).read_text(encoding="utf-8"))
+
+
+def _counter(args):
+    if args.counter == "hf_tokens":
+        if not args.tokenizer or args.model_api != "openai":
+            raise ValueError("HF estimate requires a local tokenizer and OpenAI-compatible messages")
+        return HFCounter(args.tokenizer)
+    return ByteCounter()
+
+
+def _model(args, http):
+    cls = AnthropicModel if args.model_api == "anthropic" else OpenAIModel
+    return cls(args.base_url, args.model, revision=args.model_revision, http=http,
+               api_key=os.environ.get(args.api_key_env), expected_response_model=args.expected_response_model,
+               output_parameter=args.output_parameter)
+
+
+def _live_arguments(p):
+    p.add_argument("--allow-network", action="store_true")
+    p.add_argument("--accept-counter-estimate", action="store_true")
+    p.add_argument("--base-url", required=True, help="OpenAI /v1 base or Anthropic /v1 base, without credentials")
+    p.add_argument("--model", required=True)
+    p.add_argument("--model-revision", required=True, help="Frozen deployment label; not a verified weight hash")
+    p.add_argument("--expected-response-model")
+    p.add_argument("--model-api", choices=["openai", "anthropic"], default="openai")
+    p.add_argument("--output-parameter", choices=["max_tokens", "max_completion_tokens"], default="max_tokens")
+    p.add_argument("--api-key-env", default="STRIDE_API_KEY")
+    p.add_argument("--retrieval-url", required=True)
+    p.add_argument("--index-id", required=True)
+    p.add_argument("--counter", required=True, choices=["utf8_bytes", "hf_tokens"])
+    p.add_argument("--tokenizer", help="Local tokenizer only; no downloads or remote code")
+    p.add_argument("--timeout", type=int, default=45)
+
+
+def parser():
+    p = argparse.ArgumentParser(prog="stride-search", description=__doc__)
+    commands = p.add_subparsers(dest="command", required=True)
+    commands.add_parser("schema").add_argument("--final", action="store_true")
+    commands.add_parser("smoke").add_argument("--output", required=True)
+    commands.add_parser("replay").add_argument("--db", required=True)
+    r = commands.add_parser("run")
+    _live_arguments(r)
+    r.add_argument("--question-file", required=True)
+    r.add_argument("--db", required=True)
+    r.add_argument("--max-model-calls", required=True, type=int)
+    r.add_argument("--context-limit", required=True, type=int, help="Units determined by --counter, not silently tokens")
+    r.add_argument("--response-reserve", required=True, type=int, help="Same unit as --counter; deployment must calibrate")
+    r.add_argument("--max-backend-calls", type=int, default=60)
+    r.add_argument("--max-actions", type=int, default=80)
+    r.add_argument("--max-output-tokens", type=int, default=2048)
+    r.add_argument("--max-total-output-tokens", type=int, default=24000)
+    r.add_argument("--no-notes", action="store_true")
+    r.add_argument("--no-final-reserve", action="store_true")
+    r.add_argument("--strict-note-failure", action="store_true")
+    r.add_argument("--no-repair-context", action="store_true")
+    r.add_argument("--no-delivery-preflight", action="store_true")
+    r.add_argument("--max-batch", type=int, default=4)
+    r.add_argument("--max-queries-per-search", type=int, default=3)
+    r.add_argument("--context-mode", choices=["full", "rolling"], default="rolling")
+    r.add_argument("--answer-prefix", default="")
+    r.add_argument("--answer-suffix", default="")
+    fp = commands.add_parser("plan")
+    for flag in ("questions", "config", "arms", "identities", "output"):
+        fp.add_argument("--" + flag, required=True)
+    fp.add_argument("--seed", type=int, default=0)
+    fp.add_argument("--repeats", type=int, default=1)
+    cp = commands.add_parser("cohort")
+    _live_arguments(cp)
+    cp.add_argument("--plan", required=True)
+    cp.add_argument("--output", required=True)
+    cp.add_argument("--max-total-model-calls", type=int, required=True)
+    commands.add_parser("cohort-fixture").add_argument("--output", required=True)
+    sr = commands.add_parser("summary")
+    sr.add_argument("--output", required=True)
+    sr.add_argument("--judgments", help="Post-run JSONL slot/head/correct only; never sent to policy")
+    return p
+
+
+def execute(args):
+    if args.command == "schema":
+        return tools(notes_enabled=True, final=args.final)
+    if args.command == "replay":
+        a = Archive(args.db, readonly=True)
+        try:
+            return a.report()
+        finally:
+            a.close()
+    if args.command == "smoke":
+        root = Path(args.output)
+        root.mkdir(parents=True, exist_ok=False)
+        h = Harness("Who was the first director of Lumen Observatory?", smoke_corpus(),
+                    path=root / "episode.sqlite", config=Config(max_model_calls=3))
+        try:
+            h.run(smoke_model())
+            report = h.archive.report()
+            report["validation_kind"] = "scripted_protocol_smoke_not_BCPlus"
+            if report["terminal"]["answer"] != "Ada Rowan":
+                raise RuntimeError("Synthetic protocol smoke failed")
+            write_new(root / "report.json", report)
+            return report
+        finally:
+            h.close()
+    if args.command == "plan":
+        identities = _json(args.identities)
+        wrapper = make_plan(read_cases(args.questions), Config(**_json(args.config)), _json(args.arms),
+            model_identity=identities["model"], retriever_identity=identities["retriever"],
+            counter_identity=identities["counter"], seed=args.seed, repeats=args.repeats)
+        write_new(args.output, wrapper)
+        return {"plan_sha256": wrapper["sha256"], "maximum_model_attempts": wrapper["plan"]["maximum_model_attempts"]}
+    if args.command == "summary":
+        judgments = [_json_line for _json_line in (loads(l) for l in Path(args.judgments).read_text(encoding="utf-8").splitlines() if l.strip())] if args.judgments else None
+        return summarize(args.output, judgments=judgments)
+    if args.command == "cohort-fixture":
+        counter, corpus, model = ByteCounter(), smoke_corpus(), smoke_model()
+        wrapper = make_plan([{"id": "synthetic-lumen", "question": "Who was the first director of Lumen Observatory?"}],
+            Config(max_model_calls=3), {"notes_off": {"notes_enabled": False}, "notes_on": {}},
+            model_identity=model.identity, retriever_identity=corpus.identity, counter_identity=counter.identity)
+        result = run_plan(wrapper, args.output, smoke_model, smoke_corpus, ByteCounter, max_total_model_calls=6)
+        result["validation_kind"] = "scripted_not_BCPlus"
+        return result
+    # Reject before reading question, secrets, creating files, or loading a tokenizer.
+    if not args.allow_network or not args.accept_counter_estimate:
+        raise ValueError("Live execution requires --allow-network and --accept-counter-estimate")
+    http = HTTP(allow_network=True, timeout=args.timeout)
+    counter = _counter(args)
+    retriever = EchoRetriever(args.retrieval_url, index_id=args.index_id, http=http)
+    if args.command == "cohort":
+        return run_plan(_json(args.plan), args.output, lambda: _model(args, http),
+            lambda: EchoRetriever(args.retrieval_url, index_id=args.index_id, http=http),
+            lambda: counter, max_total_model_calls=args.max_total_model_calls)
+    config = Config(max_model_calls=args.max_model_calls, context_limit=args.context_limit,
+        response_reserve=args.response_reserve, max_backend_calls=args.max_backend_calls,
+        max_actions=args.max_actions, max_output_tokens=args.max_output_tokens,
+        max_total_output_tokens=args.max_total_output_tokens, notes_enabled=not args.no_notes,
+        reserve_finish=not args.no_final_reserve, nonblocking_notes=not args.strict_note_failure,
+        repair_context=not args.no_repair_context, delivery_preflight=not args.no_delivery_preflight,
+        max_batch=args.max_batch,
+        max_queries_per_search=args.max_queries_per_search,
+        context_mode=args.context_mode, answer_prefix=args.answer_prefix, answer_suffix=args.answer_suffix)
+    if args.counter == "hf_tokens" and config.response_reserve < config.max_output_tokens:
+        raise ValueError("Token-mode response reserve must cover max-output-tokens")
+    model = _model(args, http)
+    question = Path(args.question_file).read_text(encoding="utf-8")
+    h = Harness(question, retriever, path=args.db, config=config, counter=counter)
+    try:
+        h.run(model)
+        return h.archive.report()
+    finally:
+        h.close()
+
+
+def main(argv=None):
+    args = parser().parse_args(argv)
+    try:
+        result = execute(args)
+    except (ValueError, OSError, ContractError) as exc:
+        print(canonical({"error": getattr(exc, "code", type(exc).__name__), "detail": str(exc)[:400]}), file=sys.stderr)
+        return 2
+    print(json.dumps(result, ensure_ascii=False, indent=2))
+    if args.command == "run" and result["terminal"]["outcome"] not in ("submitted", "abstained"):
+        return 2
+    if args.command == "cohort":
+        from .experiment import INFRASTRUCTURE_FAILURES
+        if any(r["status"] == "NOT_RUN" or r["status"] in INFRASTRUCTURE_FAILURES for r in result["rows"]):
+            return 2
+    return 0

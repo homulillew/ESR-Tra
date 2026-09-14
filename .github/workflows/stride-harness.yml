@@ -1,0 +1,28 @@
+name: STRIDE independent harness
+on:
+  push:
+    paths: ['harnesses/stride/**', '.github/workflows/stride-harness.yml']
+  pull_request:
+    paths: ['harnesses/stride/**', '.github/workflows/stride-harness.yml']
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  offline-contracts:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        python: ['3.10', '3.13']
+    defaults:
+      run:
+        working-directory: harnesses/stride
+    steps:
+      - uses: actions/checkout@v6
+      - uses: actions/setup-python@v6
+        with:
+          python-version: ${{ matrix.python }}
+      - run: python -m pip install -e '.[test]'
+      - run: python -m pytest -q
+      - run: python -m stride_search smoke --output "${{ runner.temp }}/stride-smoke"
+      - run: python -m stride_search replay --db "${{ runner.temp }}/stride-smoke/episode.sqlite"
+      - run: python -m stride_search cohort-fixture --output "${{ runner.temp }}/stride-cohort"

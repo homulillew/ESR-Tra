@@ -1,0 +1,76 @@
+{
+  "version": "0.1.0a2",
+  "protocol": "stride-search-2",
+  "date": "2026-09-14",
+  "base_commit": "a4926f3eeceda249817ef0cb93abb8e71d107e45",
+  "target_branch": "research/stride-a2-recovery-20260914",
+  "python": "3.13.5",
+  "platform": "Linux",
+  "dependencies": {
+    "pytest": "9.0.2",
+    "jsonschema": "4.26.0",
+    "coverage": "7.13.3",
+    "setuptools": "82.0.1"
+  },
+  "tests": {
+    "passed": 178,
+    "failed": 0,
+    "skipped": 0,
+    "latest_seconds": 27.36
+  },
+  "coverage": {
+    "covered_lines": 1129,
+    "num_statements": 1281,
+    "percent_covered": 88.13427010148321,
+    "percent_covered_display": "88",
+    "missing_lines": 152,
+    "excluded_lines": 9,
+    "percent_statements_covered": 88.13427010148321,
+    "percent_statements_covered_display": "88"
+  },
+  "core_before_after": {
+    "old_failed": 3,
+    "new_passed": 3,
+    "scope": "synthetic fixed-action tests, not natural trajectories"
+  },
+  "validation": {
+    "compileall": "PASS",
+    "smoke": "PASS",
+    "readonly_replay": "PASS",
+    "wheel_install_smoke": "PASS",
+    "native_http": [
+      "openai",
+      "anthropic"
+    ],
+    "cohort_fixture_slots": 2,
+    "recovery_comparison_slots": 6,
+    "real_model": "NOT_RUN",
+    "BCPlus": "NOT_RUN",
+    "remote_CI": "not observed at manifest creation"
+  },
+  "paid_model_requests": 0,
+  "source_sha256": {
+    "src/stride_search/__init__.py": "0eadf191a721ee50290d948483a1c9f225113ce5d042da413180833677051648",
+    "src/stride_search/__main__.py": "307299fda7b77d22c64cb51430ec75e5f59d78e9c948786afb3b2544fe45e4b7",
+    "src/stride_search/archive.py": "6527138db33b72cf1ffce17c5bc78dcba547a0cef67cc80b475ce13bac6c56ad",
+    "src/stride_search/cli.py": "8c241b805d5d89c72e793fe2232fa0fa68775cb0c500f521c490e64cf4a27c34",
+    "src/stride_search/context.py": "852825cfe3b085070ce3e8f5eeb9a86869c02e7f183a2b6c575a0a858db9a624",
+    "src/stride_search/contract.py": "5246872d4da17bd3c31694c84b2588cfe25ac168d14cce17e6fb6c5106c9786d",
+    "src/stride_search/engine.py": "197891ac4df1bef20293f7af1bbc1366dbb93adef62c4b54d2b6b43d6a9cc5e8",
+    "src/stride_search/experiment.py": "30d0a77e4b6fc1ce2c06f95529e0cb9e9f377718a3a030103fd8352020a08603",
+    "src/stride_search/fixtures.py": "8ad513fbc2ad7473dc0e074aafbfcb5265247ad34ec95d1dcaf2fc94b812559f",
+    "src/stride_search/providers.py": "55407486bc4ea78e61fca50d8f5b204440dace72742866f86f7da2277d4bd99b",
+    "src/stride_search/recovery.py": "e3470fe77abc281bf9673f21c8bd80832b0fafd57ed6f097c17ddea43b3c4060",
+    "tests/test_archive_context.py": "9549fbfdeaf12bb05b9744215f397a2de18a0a4a13b9e1dea26ae224b386815a",
+    "tests/test_contract.py": "a0510d0fe15463cbaceda557aec14e5b4fe8672cc83d8ccdf098325dc620c31a",
+    "tests/test_engine.py": "5904b3718ce34c39534ab969cf3d954b4a08c18ca742f8361e2b9c81c4bb4df1",
+    "tests/test_experiment_cli.py": "1c1c5596596ccee0aeec66a9988eacf0c9fc11309ad2a3e2f39b47fc8b1137dd",
+    "tests/test_independent_review.py": "3a360863af59df3ba2ae74e3c68d3d52dfab7842d8e5c6057f067703d8f6cfb3",
+    "tests/test_providers.py": "21cda61c9d8ca3bdf78a69e238962234ceb223ac903b3dfd13cb31ec9a741204",
+    "tests/test_recovery_http.py": "a35542f875bb4d78807f682d9306b81f4a28ef90917850157b5f8bac0da42828",
+    "tests/test_recovery_v2.py": "ff7d743eb7182e0c37ca7ed193c0b4bef1e024572d9e3fe116bec04033976915",
+    "examples/make_offline_plan.py": "0f2e6b3d59e6a789bb349457f900a4bd94c15c821383449ba0d09f8238cf4be1",
+    "examples/recovery_comparison.py": "acf50839405413dbd19633d56c1a6d994126de4ac5e5a2a837c3905e5715a5a9"
+  },
+  "wheel_sha256": "236a15ec6932a1edc92b73fec97679432be13f331070daa9e4f71288359f648f"
+}

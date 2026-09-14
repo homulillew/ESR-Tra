@@ -1,0 +1,26 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "stride-search-harness"
+version = "0.1.0a2"
+description = "Independent read-first, finish-reserved search harness; no model training or default auditor"
+requires-python = ">=3.10"
+dependencies = ["jsonschema>=4.23,<5"]
+
+[project.optional-dependencies]
+test = ["pytest>=8", "coverage>=7"]
+tokenizer = ["transformers>=4.45"]
+
+[project.scripts]
+stride-search = "stride_search.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+include = ["stride_search*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]
+addopts = "-ra"
