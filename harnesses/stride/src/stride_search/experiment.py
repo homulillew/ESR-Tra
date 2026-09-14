@@ -14,7 +14,8 @@ from .contract import PROTOCOL, Config, ContractError, canonical, digest, loads
 from .engine import Harness
 
 ALLOWED_ABLATIONS = {"notes_enabled", "reserve_finish", "context_mode", "max_batch", "max_queries_per_search",
-                     "nonblocking_notes", "repair_context", "delivery_preflight"}
+                     "nonblocking_notes", "repair_context", "delivery_preflight", "disclose_retriever",
+                     "compiled_query_cache", "evidence_shelf_size", "recall_navigation", "centered_recall"}
 INFRASTRUCTURE_FAILURES = {
     "http_error", "transport_error", "model_transport", "backend_failure", "retrieval_protocol",
     "incomplete_response", "response_envelope", "model_identity_changed", "implementation_error",
@@ -107,26 +108,32 @@ def run_plan(wrapper, output, model_factory: Callable, retriever_factory: Callab
         if source_hashes() != plan["source_hashes"]:
             write_new(root / "queue_stop.json", {"slot": slot["slot"], "reason": "source_changed"})
             break
-        model, retriever, counter = model_factory(), retriever_factory(), counter_factory()
-        if model.identity != plan["model"] or retriever.identity != plan["retriever"] or counter.identity != plan["counter"]:
-            write_new(root / "queue_stop.json", {"slot": slot["slot"], "reason": "identity_mismatch"})
-            break
-        config = Config(**plan["configs"][slot["arm"]])
-        if total + config.max_model_calls > max_total_model_calls:
-            raise ContractError("global_budget", "Insufficient reserved global budget")
-        h = Harness(cases[slot["case_id"]], retriever, path=root / f"{slot['slot']}.sqlite", config=config, counter=counter)
+        retriever = h = None
         try:
+            model = model_factory()
+            retriever = retriever_factory()
+            counter = counter_factory()
+            if model.identity != plan["model"] or retriever.identity != plan["retriever"] or counter.identity != plan["counter"]:
+                write_new(root / "queue_stop.json", {"slot": slot["slot"], "reason": "identity_mismatch"})
+                break
+            config = Config(**plan["configs"][slot["arm"]])
+            if total + config.max_model_calls > max_total_model_calls:
+                raise ContractError("global_budget", "Insufficient reserved global budget")
+            h = Harness(cases[slot["case_id"]], retriever, path=root / f"{slot['slot']}.sqlite", config=config, counter=counter)
             try:
                 h.run(model)
             except Exception as exc:
-                # Harness has recorded implementation_error; persist the full roster before stopping.
+                # Harness has recorded implementation_error; retain the full roster.
                 if h.terminal is None:
                     h._end("implementation_error", exception_type=type(exc).__name__)
             report = h.archive.report()
             total += report["model_attempts"]
             write_new(root / f"{slot['slot']}.result.json", {"head": report["head"], "terminal": h.terminal})
         finally:
-            h.close()
+            if h is not None:
+                h.close()
+            if callable(getattr(retriever, "close", None)):
+                retriever.close()
         if report["terminal"]["outcome"] in INFRASTRUCTURE_FAILURES:
             write_new(root / "queue_stop.json", {"slot": slot["slot"], "reason": report["terminal"]["outcome"]})
             break
