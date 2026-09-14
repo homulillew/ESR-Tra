@@ -8,6 +8,8 @@ STRIDE 是独立的读取优先单代理搜索框架，不继承 ESR 的 claim �
 
 完整 HTTP、SQLite 轨迹、原文证据、逐轮分析与 judge 结果已按用户授权整理至[三题完整资料](artifacts/20260914-three-case-a3/README.md)。让 GPT 分析过程问题并设计下一步实验时，可直接从[审阅任务](artifacts/20260914-three-case-a3/GPT_REVIEW.md)开始。
 
+随后完成用户指定的 12 道难题，各一次自然运行，模型调用上限预先提高至 64。正式得分 6/12，本批共用 489 次 API 调用，累计剩余 449 次。参见[12 题分析](docs/HARD12_A3_REVIEW_20260914.md)、[全部轨迹与评估](artifacts/20260914-hard12-a3/README.md)及 [GPT 审阅任务](artifacts/20260914-hard12-a3/GPT_REVIEW.md)。其中 q778 是候选正确但提交类型错误，q788 是名称判对但解释存在证据矛盾；这些开发案例不代表总体性能。
+
 ## 安装与离线运行
 
 ```bash

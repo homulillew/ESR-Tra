@@ -1,0 +1,376 @@
+{
+  "metrics": {
+    "terminal": {
+      "answer": "The article says the longest-serving employee at the school is Vuyokazi, who serves as the school's secretary.",
+      "basis": [
+        {
+          "document": "d12",
+          "document_chars": 14677,
+          "end": 6000,
+          "kind": "raw_evidence",
+          "ref": "e1",
+          "sha256": "e15f900917c82c74eb0f451bed2dfcf3a995d06cd5fbfe5ab5afdc66615181aa",
+          "snapshot": "d7b0c320e182566ae974c560f3636452277559a7ff8713a9c418680f71b1c0c3",
+          "start": 0
+        },
+        {
+          "document": "d12",
+          "document_chars": 14677,
+          "end": 10000,
+          "kind": "raw_evidence",
+          "ref": "e2",
+          "sha256": "bb69d2de7606641b3d66566e3e558169c90ee3d9afa05e401e7170b34bd8ab70",
+          "snapshot": "d7b0c320e182566ae974c560f3636452277559a7ff8713a9c418680f71b1c0c3",
+          "start": 6000
+        }
+      ],
+      "elapsed_seconds": 19.778630099986913,
+      "outcome": "submitted",
+      "refs": [
+        "e1",
+        "e2"
+      ],
+      "semantic_status": "not_automatically_verified"
+    },
+    "formal_correct": null,
+    "model_attempts": 5,
+    "http_attempts": 5,
+    "native_calls": 5,
+    "executed_actions": 5,
+    "action_counts": {
+      "search": 2,
+      "read": 2,
+      "finish": 1
+    },
+    "declared_search_queries": 6,
+    "query_execution_count": 6,
+    "backend_calls": 7,
+    "backend_by_kind": {
+      "search": 6,
+      "get_document": 1
+    },
+    "equivalent_key_repeats": 0,
+    "expression_repeats": 0,
+    "exact_query_cache_hits": 0,
+    "quote_queries": 0,
+    "site_queries": 0,
+    "uppercase_boolean_queries": 0,
+    "identical_previous_result_sets": 1,
+    "compaction_requests": 0,
+    "shelf_restore_requests": 0,
+    "shelf_restored_windows": 0,
+    "shelf_capacity_evictions": 0,
+    "direct_shelf_restore_wire_bytes": 0,
+    "total_wire_body_bytes": 119300,
+    "usage_known": {
+      "input_tokens": 28059,
+      "output_tokens": 544,
+      "cache_read_tokens": 17024,
+      "cache_write_tokens": 0
+    },
+    "unknown_usage_calls": 0,
+    "http_latency_seconds": 15.323143800051184,
+    "backend_latency_seconds": 4.058433100028196,
+    "final_request_rounds": [],
+    "recovery_events": {
+      "delivery_preflight": 4
+    },
+    "result_withheld": 0,
+    "first_request_question_exact": true,
+    "first_request_capabilities": {
+      "boolean_operators": false,
+      "kind": "sqlite-fts5-bm25",
+      "negative_result": "no hit for this expression is not proof that the fact is absent",
+      "phrase_quotes": false,
+      "query_rule": "lowercase; regex word extraction; first-occurrence deduplication; OR of quoted individual tokens",
+      "ranking": "SQLite bm25(search), ascending; docid tie-break; unchanged from q26 LocalIndex",
+      "scope": "fixed local corpus; not live web",
+      "site_filter": false,
+      "title_kind": "stored URL, not an extracted page title",
+      "warning": "site:, quotes and AND/OR in input are not filters/operators. Their words may become ordinary search terms. Use a few discriminating terms."
+    },
+    "first_request_notes": [],
+    "returned_models": [
+      "glm-5.2"
+    ]
+  },
+  "queries": [
+    {
+      "round": 1,
+      "query": "township established 1960s migrant workers streets renamed prefix",
+      "expression": "\"township\" OR \"established\" OR \"1960s\" OR \"migrant\" OR \"workers\" OR \"streets\" OR \"renamed\" OR \"prefix\"",
+      "new_docids": [
+        "31580",
+        "47881",
+        "68205",
+        "94800",
+        "94939"
+      ],
+      "max_previous_result_jaccard": null,
+      "identical_previous_result_set": false,
+      "contains_quote": false,
+      "contains_site": false,
+      "contains_uppercase_boolean": false
+    },
+    {
+      "round": 1,
+      "query": "township 1960s migrant workers street names prefix renamed late 2010s",
+      "expression": "\"township\" OR \"1960s\" OR \"migrant\" OR \"workers\" OR \"street\" OR \"names\" OR \"prefix\" OR \"renamed\" OR \"late\" OR \"2010s\"",
+      "new_docids": [],
+      "max_previous_result_jaccard": 1.0,
+      "identical_previous_result_set": true,
+      "contains_quote": false,
+      "contains_site": false,
+      "contains_uppercase_boolean": false
+    },
+    {
+      "round": 1,
+      "query": "butchery restaurant township heart early 2000s popular",
+      "expression": "\"butchery\" OR \"restaurant\" OR \"township\" OR \"heart\" OR \"early\" OR \"2000s\" OR \"popular\"",
+      "new_docids": [
+        "19529",
+        "66256",
+        "92455"
+      ],
+      "max_previous_result_jaccard": 0.25,
+      "identical_previous_result_set": false,
+      "contains_quote": false,
+      "contains_site": false,
+      "contains_uppercase_boolean": false
+    },
+    {
+      "round": 2,
+      "query": "Gugulethu school established 1980s started in church",
+      "expression": "\"gugulethu\" OR \"school\" OR \"established\" OR \"1980s\" OR \"started\" OR \"in\" OR \"church\"",
+      "new_docids": [
+        "14901",
+        "25898",
+        "62418"
+      ],
+      "max_previous_result_jaccard": 0.25,
+      "identical_previous_result_set": false,
+      "contains_quote": false,
+      "contains_site": false,
+      "contains_uppercase_boolean": false
+    },
+    {
+      "round": 2,
+      "query": "Gugulethu school 1980s church longest serving employee",
+      "expression": "\"gugulethu\" OR \"school\" OR \"1980s\" OR \"church\" OR \"longest\" OR \"serving\" OR \"employee\"",
+      "new_docids": [
+        "11848",
+        "93372"
+      ],
+      "max_previous_result_jaccard": 0.42857142857142855,
+      "identical_previous_result_set": false,
+      "contains_quote": false,
+      "contains_site": false,
+      "contains_uppercase_boolean": false
+    },
+    {
+      "round": 2,
+      "query": "Gugulethu township school started church 1980s article",
+      "expression": "\"gugulethu\" OR \"township\" OR \"school\" OR \"started\" OR \"church\" OR \"1980s\" OR \"article\"",
+      "new_docids": [],
+      "max_previous_result_jaccard": 0.6666666666666666,
+      "identical_previous_result_set": false,
+      "contains_quote": false,
+      "contains_site": false,
+      "contains_uppercase_boolean": false
+    }
+  ],
+  "shelf": [
+    {
+      "round": 1,
+      "eligible_recent_first_delivered": [],
+      "restored": [],
+      "evicted_for_capacity": [],
+      "visible": [],
+      "direct_restore_wire_bytes": 0,
+      "compacted": false,
+      "restored_was_previously_acked": true
+    },
+    {
+      "round": 2,
+      "eligible_recent_first_delivered": [],
+      "restored": [],
+      "evicted_for_capacity": [],
+      "visible": [],
+      "direct_restore_wire_bytes": 0,
+      "compacted": false,
+      "restored_was_previously_acked": true
+    },
+    {
+      "round": 3,
+      "eligible_recent_first_delivered": [],
+      "restored": [],
+      "evicted_for_capacity": [],
+      "visible": [],
+      "direct_restore_wire_bytes": 0,
+      "compacted": false,
+      "restored_was_previously_acked": true
+    },
+    {
+      "round": 4,
+      "eligible_recent_first_delivered": [],
+      "restored": [],
+      "evicted_for_capacity": [],
+      "visible": [
+        "e1"
+      ],
+      "direct_restore_wire_bytes": 0,
+      "compacted": false,
+      "restored_was_previously_acked": true
+    },
+    {
+      "round": 5,
+      "eligible_recent_first_delivered": [
+        "e1"
+      ],
+      "restored": [],
+      "evicted_for_capacity": [],
+      "visible": [
+        "e1",
+        "e2"
+      ],
+      "direct_restore_wire_bytes": 0,
+      "compacted": false,
+      "restored_was_previously_acked": true
+    }
+  ],
+  "tool_checks": [
+    {
+      "round": 1,
+      "id": "call_5992882bfe51418db1df45ef",
+      "native_call_found": true,
+      "name_matches": true,
+      "arguments_exact": true,
+      "action_result_found": true,
+      "execution_result_differs_from_final": false,
+      "withheld": false
+    },
+    {
+      "round": 2,
+      "id": "call_f59cff6250d34534a123da9e",
+      "native_call_found": true,
+      "name_matches": true,
+      "arguments_exact": true,
+      "action_result_found": true,
+      "execution_result_differs_from_final": false,
+      "withheld": false
+    },
+    {
+      "round": 3,
+      "id": "call_de2235e7710d4d6ea4f04cec",
+      "native_call_found": true,
+      "name_matches": true,
+      "arguments_exact": true,
+      "action_result_found": true,
+      "execution_result_differs_from_final": false,
+      "withheld": false
+    },
+    {
+      "round": 4,
+      "id": "call_e8ea7645f0864a9fa3f32f99",
+      "native_call_found": true,
+      "name_matches": true,
+      "arguments_exact": true,
+      "action_result_found": true,
+      "execution_result_differs_from_final": false,
+      "withheld": false
+    },
+    {
+      "round": 5,
+      "id": "call_6cd850aae194468fac93d2cf",
+      "native_call_found": true,
+      "name_matches": true,
+      "arguments_exact": true,
+      "action_result_found": true,
+      "execution_result_differs_from_final": false,
+      "withheld": false
+    }
+  ],
+  "find_checks": [],
+  "recall_checks": [],
+  "notes": [],
+  "finish_checks": [
+    {
+      "round": 5,
+      "arguments": {
+        "answer": "The article says the longest-serving employee at the school is Vuyokazi, who serves as the school's secretary.",
+        "refs": [
+          "e1",
+          "e2"
+        ]
+      },
+      "schema_valid": true,
+      "refs_legal": true,
+      "result": {
+        "action_slot_charged": true,
+        "executed": true,
+        "ok": true,
+        "terminal": {
+          "answer": "The article says the longest-serving employee at the school is Vuyokazi, who serves as the school's secretary.",
+          "basis": [
+            {
+              "document": "d12",
+              "document_chars": 14677,
+              "end": 6000,
+              "kind": "raw_evidence",
+              "ref": "e1",
+              "sha256": "e15f900917c82c74eb0f451bed2dfcf3a995d06cd5fbfe5ab5afdc66615181aa",
+              "snapshot": "d7b0c320e182566ae974c560f3636452277559a7ff8713a9c418680f71b1c0c3",
+              "start": 0
+            },
+            {
+              "document": "d12",
+              "document_chars": 14677,
+              "end": 10000,
+              "kind": "raw_evidence",
+              "ref": "e2",
+              "sha256": "bb69d2de7606641b3d66566e3e558169c90ee3d9afa05e401e7170b34bd8ab70",
+              "snapshot": "d7b0c320e182566ae974c560f3636452277559a7ff8713a9c418680f71b1c0c3",
+              "start": 6000
+            }
+          ],
+          "elapsed_seconds": 19.778630099986913,
+          "outcome": "submitted",
+          "refs": [
+            "e1",
+            "e2"
+          ],
+          "semantic_status": "not_automatically_verified"
+        }
+      }
+    }
+  ],
+  "formal_evidence": {
+    "e1": {
+      "ref": "e1",
+      "document": "d12",
+      "snapshot": "d7b0c320e182566ae974c560f3636452277559a7ff8713a9c418680f71b1c0c3",
+      "start": 0,
+      "end": 6000,
+      "document_chars": 14677,
+      "text": "---\ntitle: Ballet Rising\nauthor: Hendrick January\ndate: 2021-03-03\n---\nZama Dance School was founded in 1984 in Gugulethu, a township in South Africa, with the goal of using ballet to build confidence among young children in South Africa living under apartheid. Ballet Rising's contributor Lindsay Alissa King recently interviewed Zama Dance School's director Andrew Warth about what the school and its students are up to today. Stay tuned because in a few days, we'll publish some testimonials from Zama Dance School's students.\n\nThis interview has been edited and condensed for clarity.\n\nLindsay Alissa King: Tell me about your own dance trajectory. How did you become interested in ballet as a child?\n\nAndrew Warth: My dance journey began at a very young age in the UK. My earliest childhood memories are of me dancing around my grandparents flat in Bayswater, London to my nan's ballet records. Although my father and I have found it difficult to verify exactly where and when, it seems my nan (his mum) was a professional ballet dancer at some point before the second world war, and ballet was definitely in my genes. At the age of ten I was awarded a full scholarship to study at the Legat School of Russian Ballet, in Tunbridge Wells, Kent. Although \"Legat\" was just an hours' drive from our home, I became a full boarder until I graduated at eighteen. My first professional engagement was in Germany with the Essener ballet, under the directorship of Heidrun Swaartz, and I trained with guest teachers such as David Howard and Sir Anton Dolin and choreographers Hans van Manen, Valery Panov and Patricia Neary from the Balanchine Trust. Heidrun was a former soloist with the Staatsballet Berlin and was one the very few female dancers, at the time, allowed to perform Maurice Bejart's Bolero. I would sit in the studio during lunch break watching her rehearse it over and over again. These were incredibly inspiring times.\n\nFour years later I joined the German Opera on the Rhein in Dusseldorf, under the directorship of Paolo Bortoluzzi (former Bejart principal). The company was a lot bigger than in Essen, and again we worked with incredible choreographers. After four years, I wanted a complete change of scenery.\n\nOne of my colleagues had just returned from a year's contract with the CAPAB Ballet Company (now Cape Town City Ballet), and I recalled a conversation I had some years earlier with South African dancer and Artistic Director of the London City Ballet, Harold King. The seed had been planted, and I wanted to explore. I auditioned via video and flew out in 1990.\n\nGreat changes were afoot when I arrived in South Africa, and if I am totally honest it was probably the thrill of the unknown that attracted me in the first place. The comfort of daily training whilst the whole country was in a state of unrest was weirdly intoxicating. I remember, on one occasion, an extremely enthusiastic crowd of political supporters stormed the building during one of our Carmen rehearsals. They carried banners, some even had weapons, and they chanted and danced for a good half hour. Their intentions were to make a point and not to harm anyone, but their anger was of course justified and real. We sat calmly on the floor, and when they moved on to the next building, we got up and carried on with rehearsal as if nothing had happened!\n\nLater that year I applied for permanent residency, and in 1994 I had the privilege of voting in the first free elections that saw the beginning of the new South Africa.\n\nI danced with the CAPAB Ballet Company under the direction of Veronica Paeper for a number of years, and in 1997 the company became a nonprofit organization with the name Cape Town City Ballet under the leadership of Elizabeth Triegaardt. Elizabeth was both executive director of the company and director of the University of Cape Town (UCT) Ballet School. It was through UCT that I trained as a teacher and acquired my Royal Academy of Dance (RAD) registered teacher status. By now I had retired as a dancer but was still employed with the Cape Town City Ballet within the management team. I taught the first-year UCT students their daily ballet classes, started my Ballet for Adults evening school and assisted Debbie Turner (now CEO of Cape Town City Ballet) with her then-new venture, the Cape Academy of Performing Arts (CAPA). It was during this time that I met Arlene Westergaard, the director of Zama Dance School, who would land up having a profound effect on my life.\n\nLAK: You are now the director of Zama Dance School, which was founded in 1984 by the visionary teacher and leader Arlene Westergaard. Arlene Westergaard appointed you the director of Zama Dance School before her death. How did that come about?\n\nAW: I began teaching at Zama Dance School in January 2008. I soon realised it was going to be an all-or-nothing situation and that juggling my various other teaching engagements would be a challenge. It was a tough first year. I had never taught children under the age of 13 until then and suddenly there I was, literally dropped in the deep end. As I focused more of my time on Zama, it became easier. Arlene encouraged me to get more involved in the day to day running of the school and I soon felt rooted in the Zama family. Towards the end of 2010, Arlene announced her retirement and asked me to take her place as head of the school. I knew these would-be big shoes to fill, and that I would need help. So, I approached former CAPAB Ballet Principal dancer Leanne Voysey and asked her to join me. Leanne and I had danced in the ballet company together in the 90's and we had both taught classes at UCT's evening ballet school. We had also worked on a number of 'high stress' projects together and I knew that I wanted her by my side and that she would be a huge asset to Zama. I must also mention Vuyokazi, the school's secretary. Thank goodness for Vuyo who worked alongside Arlene for many years. She is our longest serving employee and a valuable ",
+      "sha256": "e15f900917c82c74eb0f451bed2dfcf3a995d06cd5fbfe5ab5afdc66615181aa",
+      "kind": "raw_evidence"
+    },
+    "e2": {
+      "ref": "e2",
+      "document": "d12",
+      "snapshot": "d7b0c320e182566ae974c560f3636452277559a7ff8713a9c418680f71b1c0c3",
+      "start": 6000,
+      "end": 10000,
+      "document_chars": 14677,
+      "text": "part of the team today.\n\nLAK: Zama Dance School was founded with the goal of empowering young children from South Africa townships to use ballet as a way to express themselves. Students and faculty have also explicitly addressed racism and anti-Blackness is ballet. Can you tell me about this legacy and how Zama Dance School views its current social and political role in South Africa?\n\nAW: Zama Dance School first opened its doors in 1984 when the school's founder, the late Arlene Westergaard, became aware of a lack of dance opportunities (specifically classical ballet) in the Black townships. The school started in a church hall with just six dancers, but after Arlene teamed up with Pick n Pay's Raymond Ackerman* five years later in 1989, a trust was established, and a purpose-designed studio was built in the heart of Gugulethu.\n\nToday Zama serves 100 students annually. Its vision to provide a safe learning space whilst introducing students to classical ballet and other dance forms remains the same. Students come to structured ballet classes three times a week and are equipped with dance togs and ballet shoes at the beginning of each year and receive a meal through our feeding scheme after each class.\n\nAlthough there are other dance schools in Cape Town that offer ballet to children in under-resourced communities such as ours, Zama Dance School is one of the few that operates within the neighborhood where its students actually live. This allows us to forge a close relationship with our immediate community. Our school exists to offer good ballet training and provide a safe venue where our children can spend their time after school, do homework and have a nutritious meal. Any social or political role is played incidentally.\n\n*Until 2010 Raymond Ackerman was the chairman of one of Africa's largest supermarket chains, Pick n Pay. Zama Dance School is funded largely by the Ackerman Family Foundation. Mr. Ackerman celebrates his 90th birthday this year and is the Chairman of the Zama Dance School Trust Board of Trustees.\n\nLAK: How do you convey some of these more abstract lessons—about body positivity, health, and self-expression—when you teach dance classes?\n\nAW: One of the best things about dance is that most boxes get ticked automatically. Multi-tasking, punctuality, cleanliness, teamwork, self-respect, body/brain fine tuning, appreciation of art, drama, and music. Just the opportunity to attend properly constructed ballet classes and to watch productions and take part in competitions teaches our students a plethora of valuable life skills\n\nLAK: How does Zama Dance School work to change perceptions of Black dancers and Black bodies in the ballet community as a whole? And how do you incorporate this important work into the everyday activities at the school?\n\nAW: Zama is a dance school, which, while concentrating on the Russian Ballet teaching method, also incorporates pointe work, tap, contemporary, body conditioning, and African fusion classes. Because we are involved in the Western Cape's dance community, both amateur and professional, our dancers are exposed to many artists from a range of backgrounds and cultures.\n\nThe school itself has never tried to make statements about Black bodies or dancers of color. The school's mission is to provide a safe space whilst instilling a sense of pride, confidence, and respect to our young South African citizens.\n\nLAK: How do the parents of your students engage with ballet? Do you often work directly with parents and other community members?\n\nAW: This is a good question. When Arlene started the school in the thick of apartheid, the entire mood of the country was dark and forcibly divided. Over the years most Zama parents have become steadily more involved and interested, which is fantastic for all of us. We have an annual watching day that is well attended and an end of year concert that is truly packed to the roof. Many of our parents have severe financial constraints and depend on Zama's lun",
+      "sha256": "bb69d2de7606641b3d66566e3e558169c90ee3d9afa05e401e7170b34bd8ab70",
+      "kind": "raw_evidence"
+    }
+  },
+  "limitations": [
+    "Direct shelf bytes are serialized request differences, not provider tokens or a causal cost ablation.",
+    "Result overlap is not semantic redundancy.",
+    "No external judge or production query is used."
+  ]
+}

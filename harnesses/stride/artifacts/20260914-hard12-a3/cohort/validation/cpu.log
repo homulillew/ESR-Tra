@@ -1,0 +1,66 @@
+{
+  "scope": "scripted synthetic comparisons, not live q26, not accuracy/efficiency estimates",
+  "paid_model_calls": 0,
+  "rows": [
+    {
+      "mechanism": "cache",
+      "enabled": false,
+      "outcome": "abstained",
+      "model_attempts": 2,
+      "backend_attempts": 2,
+      "queries": 2,
+      "last_input_contains_marker": true,
+      "actual_last_wire_bytes": 7616,
+      "capacity_unit": {
+        "kind": "utf8_bytes",
+        "calibrated_provider_tokens": false
+      },
+      "formal_correct": null
+    },
+    {
+      "mechanism": "cache",
+      "enabled": true,
+      "outcome": "abstained",
+      "model_attempts": 2,
+      "backend_attempts": 1,
+      "queries": 2,
+      "last_input_contains_marker": true,
+      "actual_last_wire_bytes": 7615,
+      "capacity_unit": {
+        "kind": "utf8_bytes",
+        "calibrated_provider_tokens": false
+      },
+      "formal_correct": null
+    },
+    {
+      "mechanism": "shelf",
+      "enabled": false,
+      "outcome": "submitted",
+      "model_attempts": 6,
+      "backend_attempts": 5,
+      "queries": 3,
+      "last_input_contains_marker": false,
+      "actual_last_wire_bytes": 4656,
+      "capacity_unit": {
+        "kind": "synthetic_one_group_pressure",
+        "calibrated_provider_tokens": false
+      },
+      "formal_correct": null
+    },
+    {
+      "mechanism": "shelf",
+      "enabled": true,
+      "outcome": "submitted",
+      "model_attempts": 6,
+      "backend_attempts": 5,
+      "queries": 3,
+      "last_input_contains_marker": true,
+      "actual_last_wire_bytes": 5511,
+      "capacity_unit": {
+        "kind": "synthetic_one_group_pressure",
+        "calibrated_provider_tokens": false
+      },
+      "formal_correct": null
+    }
+  ]
+}

@@ -1,0 +1,36 @@
+{
+  "utc": "2026-09-14T10:01:18.665708+00:00",
+  "authorization": "User requested this ordered twelve-question hard cohort and explicitly allowed larger budgets within total 1000.",
+  "supersedes": "selection.json registered_max_policy_attempts=384 was preliminary before any paid attempt",
+  "max_policy_per_question": 64,
+  "max_policy_cohort": 768,
+  "max_judges": 12,
+  "total_reserved": 780,
+  "global_cap": 1000,
+  "used_before": 62,
+  "remaining_before": 938,
+  "remaining_if_all_reserved_used": 158,
+  "reruns": 0,
+  "budget_changes": {
+    "max_model_calls": [
+      32,
+      64
+    ],
+    "max_actions": [
+      100,
+      200
+    ],
+    "max_backend_calls": [
+      60,
+      120
+    ],
+    "max_total_output_tokens": [
+      24000,
+      48000
+    ],
+    "max_seconds": [
+      900,
+      1800
+    ]
+  }
+}

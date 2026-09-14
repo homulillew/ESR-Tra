@@ -1,0 +1,2867 @@
+{
+  "metrics": {
+    "terminal": {
+      "answer": "",
+      "elapsed_seconds": 188.6569866000209,
+      "outcome": "model_budget"
+    },
+    "formal_correct": null,
+    "model_attempts": 64,
+    "http_attempts": 64,
+    "native_calls": 64,
+    "executed_actions": 3,
+    "action_counts": {
+      "search": 2,
+      "read": 1,
+      "finish": 61
+    },
+    "declared_search_queries": 6,
+    "query_execution_count": 6,
+    "backend_calls": 7,
+    "backend_by_kind": {
+      "search": 6,
+      "get_document": 1
+    },
+    "equivalent_key_repeats": 0,
+    "expression_repeats": 0,
+    "exact_query_cache_hits": 0,
+    "quote_queries": 0,
+    "site_queries": 0,
+    "uppercase_boolean_queries": 0,
+    "identical_previous_result_sets": 0,
+    "compaction_requests": 0,
+    "shelf_restore_requests": 0,
+    "shelf_restored_windows": 0,
+    "shelf_capacity_evictions": 0,
+    "direct_shelf_restore_wire_bytes": 0,
+    "total_wire_body_bytes": 3245697,
+    "usage_known": {
+      "input_tokens": 714035,
+      "output_tokens": 5323,
+      "cache_read_tokens": 622208,
+      "cache_write_tokens": 0
+    },
+    "unknown_usage_calls": 0,
+    "http_latency_seconds": 177.20470119998208,
+    "backend_latency_seconds": 6.805606399982935,
+    "final_request_rounds": [
+      64
+    ],
+    "recovery_events": {
+      "delivery_preflight": 63
+    },
+    "result_withheld": 0,
+    "first_request_question_exact": true,
+    "first_request_capabilities": {
+      "boolean_operators": false,
+      "kind": "sqlite-fts5-bm25",
+      "negative_result": "no hit for this expression is not proof that the fact is absent",
+      "phrase_quotes": false,
+      "query_rule": "lowercase; regex word extraction; first-occurrence deduplication; OR of quoted individual tokens",
+      "ranking": "SQLite bm25(search), ascending; docid tie-break; unchanged from q26 LocalIndex",
+      "scope": "fixed local corpus; not live web",
+      "site_filter": false,
+      "title_kind": "stored URL, not an extracted page title",
+      "warning": "site:, quotes and AND/OR in input are not filters/operators. Their words may become ordinary search terms. Use a few discriminating terms."
+    },
+    "first_request_notes": [],
+    "returned_models": [
+      "glm-5.2"
+    ]
+  },
+  "queries": [
+    {
+      "round": 1,
+      "query": "CEO founded company mid-1990s raised Southern Africa father engineer",
+      "expression": "\"ceo\" OR \"founded\" OR \"company\" OR \"mid\" OR \"1990s\" OR \"raised\" OR \"southern\" OR \"africa\" OR \"father\" OR \"engineer\"",
+      "new_docids": [
+        "22131",
+        "24484",
+        "27039",
+        "70530",
+        "7853"
+      ],
+      "max_previous_result_jaccard": null,
+      "identical_previous_result_set": false,
+      "contains_quote": false,
+      "contains_site": false,
+      "contains_uppercase_boolean": false
+    },
+    {
+      "round": 1,
+      "query": "CEO first child SIDS early 2020s baby name internet buzzing",
+      "expression": "\"ceo\" OR \"first\" OR \"child\" OR \"sids\" OR \"early\" OR \"2020s\" OR \"baby\" OR \"name\" OR \"internet\" OR \"buzzing\"",
+      "new_docids": [
+        "21038",
+        "22160",
+        "407",
+        "45462",
+        "46556"
+      ],
+      "max_previous_result_jaccard": 0.0,
+      "identical_previous_result_set": false,
+      "contains_quote": false,
+      "contains_site": false,
+      "contains_uppercase_boolean": false
+    },
+    {
+      "round": 1,
+      "query": "younger sister co-founded film streaming service CEO Southern Africa",
+      "expression": "\"younger\" OR \"sister\" OR \"co\" OR \"founded\" OR \"film\" OR \"streaming\" OR \"service\" OR \"ceo\" OR \"southern\" OR \"africa\"",
+      "new_docids": [
+        "25969",
+        "42179",
+        "54887",
+        "55040",
+        "85373"
+      ],
+      "max_previous_result_jaccard": 0.0,
+      "identical_previous_result_set": false,
+      "contains_quote": false,
+      "contains_site": false,
+      "contains_uppercase_boolean": false
+    },
+    {
+      "round": 2,
+      "query": "woman claimed to be related to Elon Musk sister daughter",
+      "expression": "\"woman\" OR \"claimed\" OR \"to\" OR \"be\" OR \"related\" OR \"elon\" OR \"musk\" OR \"sister\" OR \"daughter\"",
+      "new_docids": [
+        "29008",
+        "33771",
+        "47858",
+        "61176",
+        "68457"
+      ],
+      "max_previous_result_jaccard": 0.0,
+      "identical_previous_result_set": false,
+      "contains_quote": false,
+      "contains_site": false,
+      "contains_uppercase_boolean": false
+    },
+    {
+      "round": 2,
+      "query": "lady claimed relation to Elon Musk mother age gave birth",
+      "expression": "\"lady\" OR \"claimed\" OR \"relation\" OR \"to\" OR \"elon\" OR \"musk\" OR \"mother\" OR \"age\" OR \"gave\" OR \"birth\"",
+      "new_docids": [
+        "1031",
+        "80337"
+      ],
+      "max_previous_result_jaccard": 0.25,
+      "identical_previous_result_set": false,
+      "contains_quote": false,
+      "contains_site": false,
+      "contains_uppercase_boolean": false
+    },
+    {
+      "round": 2,
+      "query": "Elon Musk relative claim woman article 2020 2021 2022",
+      "expression": "\"elon\" OR \"musk\" OR \"relative\" OR \"claim\" OR \"woman\" OR \"article\" OR \"2020\" OR \"2021\" OR \"2022\"",
+      "new_docids": [
+        "11226",
+        "5496",
+        "66428"
+      ],
+      "max_previous_result_jaccard": 0.25,
+      "identical_previous_result_set": false,
+      "contains_quote": false,
+      "contains_site": false,
+      "contains_uppercase_boolean": false
+    }
+  ],
+  "shelf": [
+    {
+      "round": 1,
+      "eligible_recent_first_delivered": [],
+      "restored": [],
+      "evicted_for_capacity": [],
+      "visible": [],
+      "direct_restore_wire_bytes": 0,
+      "compacted": false,
+      "restored_was_previously_acked": true
+    },
+    {
+      "round": 2,
+      "eligible_recent_first_delivered": [],
+      "restored": [],
+      "evicted_for_capacity": [],
+      "visible": [],
+      "direct_restore_wire_bytes": 0,
+      "compacted": false,
+      "restored_was_previously_acked": true
+    },
+    {
+      "round": 3,
+      "eligible_recent_first_delivered": [],
+      "restored": [],
+      "evicted_for_capacity": [],
+      "visible": [],
+      "direct_restore_wire_bytes": 0,
+      "compacted": false,
+      "restored_was_previously_acked": true
+    },
+    {
+      "round": 4,
+      "eligible_recent_first_delivered": [],
+      "restored": [],
+      "evicted_for_capacity": [],
+      "visible": [
+        "e1"
+      ],
+      "direct_restore_wire_bytes": 0,
+      "compacted": false,
+      "restored_was_previously_acked": true
+    },
+    {
+      "round": 5,
+      "eligible_recent_first_delivered": [
+        "e1"
+      ],
+      "restored": [],
+      "evicted_for_capacity": [],
+      "visible": [
+        "e1"
+      ],
+      "direct_restore_wire_bytes": 0,
+      "compacted": false,
+      "restored_was_previously_acked": true
+    },
+    {
+      "round": 6,
+      "eligible_recent_first_delivered": [
+        "e1"
+      ],
+      "restored": [],
+      "evicted_for_capacity": [],
+      "visible": [
+        "e1"
+      ],
+      "direct_restore_wire_bytes": 0,
+      "compacted": false,
+      "restored_was_previously_acked": true
+    },
+    {
+      "round": 7,
+      "eligible_recent_first_delivered": [
+        "e1"
+      ],
+      "restored": [],
+      "evicted_for_capacity": [],
+      "visible": [
+        "e1"
+      ],
+      "direct_restore_wire_bytes": 0,
+      "compacted": false,
+      "restored_was_previously_acked": true
+    },
+    {
+      "round": 8,
+      "eligible_recent_first_delivered": [
+        "e1"
+      ],
+      "restored": [],
+      "evicted_for_capacity": [],
+      "visible": [
+        "e1"
+      ],
+      "direct_restore_wire_bytes": 0,
+      "compacted": false,
+      "restored_was_previously_acked": true
+    },
+    {
+      "round": 9,
+      "eligible_recent_first_delivered": [
+        "e1"
+      ],
+      "restored": [],
+      "evicted_for_capacity": [],
+      "visible": [
+        "e1"
+      ],
+      "direct_restore_wire_bytes": 0,
+      "compacted": false,
+      "restored_was_previously_acked": true
+    },
+    {
+      "round": 10,
+      "eligible_recent_first_delivered": [
+        "e1"
+      ],
+      "restored": [],
+      "evicted_for_capacity": [],
+      "visible": [
+        "e1"
+      ],
+      "direct_restore_wire_bytes": 0,
+      "compacted": false,
+      "restored_was_previously_acked": true
+    },
+    {
+      "round": 11,
+      "eligible_recent_first_delivered": [
+        "e1"
+      ],
+      "restored": [],
+      "evicted_for_capacity": [],
+      "visible": [
+        "e1"
+      ],
+      "direct_restore_wire_bytes": 0,
+      "compacted": false,
+      "restored_was_previously_acked": true
+    },
+    {
+      "round": 12,
+      "eligible_recent_first_delivered": [
+        "e1"
+      ],
+      "restored": [],
+      "evicted_for_capacity": [],
+      "visible": [
+        "e1"
+      ],
+      "direct_restore_wire_bytes": 0,
+      "compacted": false,
+      "restored_was_previously_acked": true
+    },
+    {
+      "round": 13,
+      "eligible_recent_first_delivered": [
+        "e1"
+      ],
+      "restored": [],
+      "evicted_for_capacity": [],
+      "visible": [
+        "e1"
+      ],
+      "direct_restore_wire_bytes": 0,
+      "compacted": false,
+      "restored_was_previously_acked": true
+    },
+    {
+      "round": 14,
+      "eligible_recent_first_delivered": [
+        "e1"
+      ],
+      "restored": [],
+      "evicted_for_capacity": [],
+      "visible": [
+        "e1"
+      ],
+      "direct_restore_wire_bytes": 0,
+      "compacted": false,
+      "restored_was_previously_acked": true
+    },
+    {
+      "round": 15,
+      "eligible_recent_first_delivered": [
+        "e1"
+      ],
+      "restored": [],
+      "evicted_for_capacity": [],
+      "visible": [
+        "e1"
+      ],
+      "direct_restore_wire_bytes": 0,
+      "compacted": false,
+      "restored_was_previously_acked": true
+    },
+    {
+      "round": 16,
+      "eligible_recent_first_delivered": [
+        "e1"
+      ],
+      "restored": [],
+      "evicted_for_capacity": [],
+      "visible": [
+        "e1"
+      ],
+      "direct_restore_wire_bytes": 0,
+      "compacted": false,
+      "restored_was_previously_acked": true
+    },
+    {
+      "round": 17,
+      "eligible_recent_first_delivered": [
+        "e1"
+      ],
+      "restored": [],
+      "evicted_for_capacity": [],
+      "visible": [
+        "e1"
+      ],
+      "direct_restore_wire_bytes": 0,
+      "compacted": false,
+      "restored_was_previously_acked": true
+    },
+    {
+      "round": 18,
+      "eligible_recent_first_delivered": [
+        "e1"
+      ],
+      "restored": [],
+      "evicted_for_capacity": [],
+      "visible": [
+        "e1"
+      ],
+      "direct_restore_wire_bytes": 0,
+      "compacted": false,
+      "restored_was_previously_acked": true
+    },
+    {
+      "round": 19,
+      "eligible_recent_first_delivered": [
+        "e1"
+      ],
+      "restored": [],
+      "evicted_for_capacity": [],
+      "visible": [
+        "e1"
+      ],
+      "direct_restore_wire_bytes": 0,
+      "compacted": false,
+      "restored_was_previously_acked": true
+    },
+    {
+      "round": 20,
+      "eligible_recent_first_delivered": [
+        "e1"
+      ],
+      "restored": [],
+      "evicted_for_capacity": [],
+      "visible": [
+        "e1"
+      ],
+      "direct_restore_wire_bytes": 0,
+      "compacted": false,
+      "restored_was_previously_acked": true
+    },
+    {
+      "round": 21,
+      "eligible_recent_first_delivered": [
+        "e1"
+      ],
+      "restored": [],
+      "evicted_for_capacity": [],
+      "visible": [
+        "e1"
+      ],
+      "direct_restore_wire_bytes": 0,
+      "compacted": false,
+      "restored_was_previously_acked": true
+    },
+    {
+      "round": 22,
+      "eligible_recent_first_delivered": [
+        "e1"
+      ],
+      "restored": [],
+      "evicted_for_capacity": [],
+      "visible": [
+        "e1"
+      ],
+      "direct_restore_wire_bytes": 0,
+      "compacted": false,
+      "restored_was_previously_acked": true
+    },
+    {
+      "round": 23,
+      "eligible_recent_first_delivered": [
+        "e1"
+      ],
+      "restored": [],
+      "evicted_for_capacity": [],
+      "visible": [
+        "e1"
+      ],
+      "direct_restore_wire_bytes": 0,
+      "compacted": false,
+      "restored_was_previously_acked": true
+    },
+    {
+      "round": 24,
+      "eligible_recent_first_delivered": [
+        "e1"
+      ],
+      "restored": [],
+      "evicted_for_capacity": [],
+      "visible": [
+        "e1"
+      ],
+      "direct_restore_wire_bytes": 0,
+      "compacted": false,
+      "restored_was_previously_acked": true
+    },
+    {
+      "round": 25,
+      "eligible_recent_first_delivered": [
+        "e1"
+      ],
+      "restored": [],
+      "evicted_for_capacity": [],
+      "visible": [
+        "e1"
+      ],
+      "direct_restore_wire_bytes": 0,
+      "compacted": false,
+      "restored_was_previously_acked": true
+    },
+    {
+      "round": 26,
+      "eligible_recent_first_delivered": [
+        "e1"
+      ],
+      "restored": [],
+      "evicted_for_capacity": [],
+      "visible": [
+        "e1"
+      ],
+      "direct_restore_wire_bytes": 0,
+      "compacted": false,
+      "restored_was_previously_acked": true
+    },
+    {
+      "round": 27,
+      "eligible_recent_first_delivered": [
+        "e1"
+      ],
+      "restored": [],
+      "evicted_for_capacity": [],
+      "visible": [
+        "e1"
+      ],
+      "direct_restore_wire_bytes": 0,
+      "compacted": false,
+      "restored_was_previously_acked": true
+    },
+    {
+      "round": 28,
+      "eligible_recent_first_delivered": [
+        "e1"
+      ],
+      "restored": [],
+      "evicted_for_capacity": [],
+      "visible": [
+        "e1"
+      ],
+      "direct_restore_wire_bytes": 0,
+      "compacted": false,
+      "restored_was_previously_acked": true
+    },
+    {
+      "round": 29,
+      "eligible_recent_first_delivered": [
+        "e1"
+      ],
+      "restored": [],
+      "evicted_for_capacity": [],
+      "visible": [
+        "e1"
+      ],
+      "direct_restore_wire_bytes": 0,
+      "compacted": false,
+      "restored_was_previously_acked": true
+    },
+    {
+      "round": 30,
+      "eligible_recent_first_delivered": [
+        "e1"
+      ],
+      "restored": [],
+      "evicted_for_capacity": [],
+      "visible": [
+        "e1"
+      ],
+      "direct_restore_wire_bytes": 0,
+      "compacted": false,
+      "restored_was_previously_acked": true
+    },
+    {
+      "round": 31,
+      "eligible_recent_first_delivered": [
+        "e1"
+      ],
+      "restored": [],
+      "evicted_for_capacity": [],
+      "visible": [
+        "e1"
+      ],
+      "direct_restore_wire_bytes": 0,
+      "compacted": false,
+      "restored_was_previously_acked": true
+    },
+    {
+      "round": 32,
+      "eligible_recent_first_delivered": [
+        "e1"
+      ],
+      "restored": [],
+      "evicted_for_capacity": [],
+      "visible": [
+        "e1"
+      ],
+      "direct_restore_wire_bytes": 0,
+      "compacted": false,
+      "restored_was_previously_acked": true
+    },
+    {
+      "round": 33,
+      "eligible_recent_first_delivered": [
+        "e1"
+      ],
+      "restored": [],
+      "evicted_for_capacity": [],
+      "visible": [
+        "e1"
+      ],
+      "direct_restore_wire_bytes": 0,
+      "compacted": false,
+      "restored_was_previously_acked": true
+    },
+    {
+      "round": 34,
+      "eligible_recent_first_delivered": [
+        "e1"
+      ],
+      "restored": [],
+      "evicted_for_capacity": [],
+      "visible": [
+        "e1"
+      ],
+      "direct_restore_wire_bytes": 0,
+      "compacted": false,
+      "restored_was_previously_acked": true
+    },
+    {
+      "round": 35,
+      "eligible_recent_first_delivered": [
+        "e1"
+      ],
+      "restored": [],
+      "evicted_for_capacity": [],
+      "visible": [
+        "e1"
+      ],
+      "direct_restore_wire_bytes": 0,
+      "compacted": false,
+      "restored_was_previously_acked": true
+    },
+    {
+      "round": 36,
+      "eligible_recent_first_delivered": [
+        "e1"
+      ],
+      "restored": [],
+      "evicted_for_capacity": [],
+      "visible": [
+        "e1"
+      ],
+      "direct_restore_wire_bytes": 0,
+      "compacted": false,
+      "restored_was_previously_acked": true
+    },
+    {
+      "round": 37,
+      "eligible_recent_first_delivered": [
+        "e1"
+      ],
+      "restored": [],
+      "evicted_for_capacity": [],
+      "visible": [
+        "e1"
+      ],
+      "direct_restore_wire_bytes": 0,
+      "compacted": false,
+      "restored_was_previously_acked": true
+    },
+    {
+      "round": 38,
+      "eligible_recent_first_delivered": [
+        "e1"
+      ],
+      "restored": [],
+      "evicted_for_capacity": [],
+      "visible": [
+        "e1"
+      ],
+      "direct_restore_wire_bytes": 0,
+      "compacted": false,
+      "restored_was_previously_acked": true
+    },
+    {
+      "round": 39,
+      "eligible_recent_first_delivered": [
+        "e1"
+      ],
+      "restored": [],
+      "evicted_for_capacity": [],
+      "visible": [
+        "e1"
+      ],
+      "direct_restore_wire_bytes": 0,
+      "compacted": false,
+      "restored_was_previously_acked": true
+    },
+    {
+      "round": 40,
+      "eligible_recent_first_delivered": [
+        "e1"
+      ],
+      "restored": [],
+      "evicted_for_capacity": [],
+      "visible": [
+        "e1"
+      ],
+      "direct_restore_wire_bytes": 0,
+      "compacted": false,
+      "restored_was_previously_acked": true
+    },
+    {
+      "round": 41,
+      "eligible_recent_first_delivered": [
+        "e1"
+      ],
+      "restored": [],
+      "evicted_for_capacity": [],
+      "visible": [
+        "e1"
+      ],
+      "direct_restore_wire_bytes": 0,
+      "compacted": false,
+      "restored_was_previously_acked": true
+    },
+    {
+      "round": 42,
+      "eligible_recent_first_delivered": [
+        "e1"
+      ],
+      "restored": [],
+      "evicted_for_capacity": [],
+      "visible": [
+        "e1"
+      ],
+      "direct_restore_wire_bytes": 0,
+      "compacted": false,
+      "restored_was_previously_acked": true
+    },
+    {
+      "round": 43,
+      "eligible_recent_first_delivered": [
+        "e1"
+      ],
+      "restored": [],
+      "evicted_for_capacity": [],
+      "visible": [
+        "e1"
+      ],
+      "direct_restore_wire_bytes": 0,
+      "compacted": false,
+      "restored_was_previously_acked": true
+    },
+    {
+      "round": 44,
+      "eligible_recent_first_delivered": [
+        "e1"
+      ],
+      "restored": [],
+      "evicted_for_capacity": [],
+      "visible": [
+        "e1"
+      ],
+      "direct_restore_wire_bytes": 0,
+      "compacted": false,
+      "restored_was_previously_acked": true
+    },
+    {
+      "round": 45,
+      "eligible_recent_first_delivered": [
+        "e1"
+      ],
+      "restored": [],
+      "evicted_for_capacity": [],
+      "visible": [
+        "e1"
+      ],
+      "direct_restore_wire_bytes": 0,
+      "compacted": false,
+      "restored_was_previously_acked": true
+    },
+    {
+      "round": 46,
+      "eligible_recent_first_delivered": [
+        "e1"
+      ],
+      "restored": [],
+      "evicted_for_capacity": [],
+      "visible": [
+        "e1"
+      ],
+      "direct_restore_wire_bytes": 0,
+      "compacted": false,
+      "restored_was_previously_acked": true
+    },
+    {
+      "round": 47,
+      "eligible_recent_first_delivered": [
+        "e1"
+      ],
+      "restored": [],
+      "evicted_for_capacity": [],
+      "visible": [
+        "e1"
+      ],
+      "direct_restore_wire_bytes": 0,
+      "compacted": false,
+      "restored_was_previously_acked": true
+    },
+    {
+      "round": 48,
+      "eligible_recent_first_delivered": [
+        "e1"
+      ],
+      "restored": [],
+      "evicted_for_capacity": [],
+      "visible": [
+        "e1"
+      ],
+      "direct_restore_wire_bytes": 0,
+      "compacted": false,
+      "restored_was_previously_acked": true
+    },
+    {
+      "round": 49,
+      "eligible_recent_first_delivered": [
+        "e1"
+      ],
+      "restored": [],
+      "evicted_for_capacity": [],
+      "visible": [
+        "e1"
+      ],
+      "direct_restore_wire_bytes": 0,
+      "compacted": false,
+      "restored_was_previously_acked": true
+    },
+    {
+      "round": 50,
+      "eligible_recent_first_delivered": [
+        "e1"
+      ],
+      "restored": [],
+      "evicted_for_capacity": [],
+      "visible": [
+        "e1"
+      ],
+      "direct_restore_wire_bytes": 0,
+      "compacted": false,
+      "restored_was_previously_acked": true
+    },
+    {
+      "round": 51,
+      "eligible_recent_first_delivered": [
+        "e1"
+      ],
+      "restored": [],
+      "evicted_for_capacity": [],
+      "visible": [
+        "e1"
+      ],
+      "direct_restore_wire_bytes": 0,
+      "compacted": false,
+      "restored_was_previously_acked": true
+    },
+    {
+      "round": 52,
+      "eligible_recent_first_delivered": [
+        "e1"
+      ],
+      "restored": [],
+      "evicted_for_capacity": [],
+      "visible": [
+        "e1"
+      ],
+      "direct_restore_wire_bytes": 0,
+      "compacted": false,
+      "restored_was_previously_acked": true
+    },
+    {
+      "round": 53,
+      "eligible_recent_first_delivered": [
+        "e1"
+      ],
+      "restored": [],
+      "evicted_for_capacity": [],
+      "visible": [
+        "e1"
+      ],
+      "direct_restore_wire_bytes": 0,
+      "compacted": false,
+      "restored_was_previously_acked": true
+    },
+    {
+      "round": 54,
+      "eligible_recent_first_delivered": [
+        "e1"
+      ],
+      "restored": [],
+      "evicted_for_capacity": [],
+      "visible": [
+        "e1"
+      ],
+      "direct_restore_wire_bytes": 0,
+      "compacted": false,
+      "restored_was_previously_acked": true
+    },
+    {
+      "round": 55,
+      "eligible_recent_first_delivered": [
+        "e1"
+      ],
+      "restored": [],
+      "evicted_for_capacity": [],
+      "visible": [
+        "e1"
+      ],
+      "direct_restore_wire_bytes": 0,
+      "compacted": false,
+      "restored_was_previously_acked": true
+    },
+    {
+      "round": 56,
+      "eligible_recent_first_delivered": [
+        "e1"
+      ],
+      "restored": [],
+      "evicted_for_capacity": [],
+      "visible": [
+        "e1"
+      ],
+      "direct_restore_wire_bytes": 0,
+      "compacted": false,
+      "restored_was_previously_acked": true
+    },
+    {
+      "round": 57,
+      "eligible_recent_first_delivered": [
+        "e1"
+      ],
+      "restored": [],
+      "evicted_for_capacity": [],
+      "visible": [
+        "e1"
+      ],
+      "direct_restore_wire_bytes": 0,
+      "compacted": false,
+      "restored_was_previously_acked": true
+    },
+    {
+      "round": 58,
+      "eligible_recent_first_delivered": [
+        "e1"
+      ],
+      "restored": [],
+      "evicted_for_capacity": [],
+      "visible": [
+        "e1"
+      ],
+      "direct_restore_wire_bytes": 0,
+      "compacted": false,
+      "restored_was_previously_acked": true
+    },
+    {
+      "round": 59,
+      "eligible_recent_first_delivered": [
+        "e1"
+      ],
+      "restored": [],
+      "evicted_for_capacity": [],
+      "visible": [
+        "e1"
+      ],
+      "direct_restore_wire_bytes": 0,
+      "compacted": false,
+      "restored_was_previously_acked": true
+    },
+    {
+      "round": 60,
+      "eligible_recent_first_delivered": [
+        "e1"
+      ],
+      "restored": [],
+      "evicted_for_capacity": [],
+      "visible": [
+        "e1"
+      ],
+      "direct_restore_wire_bytes": 0,
+      "compacted": false,
+      "restored_was_previously_acked": true
+    },
+    {
+      "round": 61,
+      "eligible_recent_first_delivered": [
+        "e1"
+      ],
+      "restored": [],
+      "evicted_for_capacity": [],
+      "visible": [
+        "e1"
+      ],
+      "direct_restore_wire_bytes": 0,
+      "compacted": false,
+      "restored_was_previously_acked": true
+    },
+    {
+      "round": 62,
+      "eligible_recent_first_delivered": [
+        "e1"
+      ],
+      "restored": [],
+      "evicted_for_capacity": [],
+      "visible": [
+        "e1"
+      ],
+      "direct_restore_wire_bytes": 0,
+      "compacted": false,
+      "restored_was_previously_acked": true
+    },
+    {
+      "round": 63,
+      "eligible_recent_first_delivered": [
+        "e1"
+      ],
+      "restored": [],
+      "evicted_for_capacity": [],
+      "visible": [
+        "e1"
+      ],
+      "direct_restore_wire_bytes": 0,
+      "compacted": false,
+      "restored_was_previously_acked": true
+    },
+    {
+      "round": 64,
+      "eligible_recent_first_delivered": [
+        "e1"
+      ],
+      "restored": [],
+      "evicted_for_capacity": [],
+      "visible": [
+        "e1"
+      ],
+      "direct_restore_wire_bytes": 0,
+      "compacted": false,
+      "restored_was_previously_acked": true
+    }
+  ],
+  "tool_checks": [
+    {
+      "round": 1,
+      "id": "call_dd4f271b21014629a16d41f9",
+      "native_call_found": true,
+      "name_matches": true,
+      "arguments_exact": true,
+      "action_result_found": true,
+      "execution_result_differs_from_final": false,
+      "withheld": false
+    },
+    {
+      "round": 2,
+      "id": "call_c22c04a0e337493597f49308",
+      "native_call_found": true,
+      "name_matches": true,
+      "arguments_exact": true,
+      "action_result_found": true,
+      "execution_result_differs_from_final": false,
+      "withheld": false
+    },
+    {
+      "round": 3,
+      "id": "call_2883c1be48d54a07be6db70c",
+      "native_call_found": true,
+      "name_matches": true,
+      "arguments_exact": true,
+      "action_result_found": true,
+      "execution_result_differs_from_final": false,
+      "withheld": false
+    },
+    {
+      "round": 4,
+      "id": "call_35b76dac3be54ba1bb208e7a",
+      "native_call_found": true,
+      "name_matches": true,
+      "arguments_exact": true,
+      "action_result_found": true,
+      "execution_result_differs_from_final": false,
+      "withheld": false
+    },
+    {
+      "round": 5,
+      "id": "call_8c0e1486808041199daa0508",
+      "native_call_found": true,
+      "name_matches": true,
+      "arguments_exact": true,
+      "action_result_found": true,
+      "execution_result_differs_from_final": false,
+      "withheld": false
+    },
+    {
+      "round": 6,
+      "id": "call_cecf56a664e0425a9f72c0bc",
+      "native_call_found": true,
+      "name_matches": true,
+      "arguments_exact": true,
+      "action_result_found": true,
+      "execution_result_differs_from_final": false,
+      "withheld": false
+    },
+    {
+      "round": 7,
+      "id": "call_397f977acaea434bbd7004e4",
+      "native_call_found": true,
+      "name_matches": true,
+      "arguments_exact": true,
+      "action_result_found": true,
+      "execution_result_differs_from_final": false,
+      "withheld": false
+    },
+    {
+      "round": 8,
+      "id": "call_2370065891a348738e6bbe6f",
+      "native_call_found": true,
+      "name_matches": true,
+      "arguments_exact": true,
+      "action_result_found": true,
+      "execution_result_differs_from_final": false,
+      "withheld": false
+    },
+    {
+      "round": 9,
+      "id": "call_6b6065b4d80e41fe86ea1bc6",
+      "native_call_found": true,
+      "name_matches": true,
+      "arguments_exact": true,
+      "action_result_found": true,
+      "execution_result_differs_from_final": false,
+      "withheld": false
+    },
+    {
+      "round": 10,
+      "id": "call_77cc0fbd74c846649e0e0de8",
+      "native_call_found": true,
+      "name_matches": true,
+      "arguments_exact": true,
+      "action_result_found": true,
+      "execution_result_differs_from_final": false,
+      "withheld": false
+    },
+    {
+      "round": 11,
+      "id": "call_4f9772f5241e48f291e141a6",
+      "native_call_found": true,
+      "name_matches": true,
+      "arguments_exact": true,
+      "action_result_found": true,
+      "execution_result_differs_from_final": false,
+      "withheld": false
+    },
+    {
+      "round": 12,
+      "id": "call_861e4d0a1adb447ea49c4d0f",
+      "native_call_found": true,
+      "name_matches": true,
+      "arguments_exact": true,
+      "action_result_found": true,
+      "execution_result_differs_from_final": false,
+      "withheld": false
+    },
+    {
+      "round": 13,
+      "id": "call_ad918d15543d452c8d496f99",
+      "native_call_found": true,
+      "name_matches": true,
+      "arguments_exact": true,
+      "action_result_found": true,
+      "execution_result_differs_from_final": false,
+      "withheld": false
+    },
+    {
+      "round": 14,
+      "id": "call_4fc759ccecc34fd39e3c1032",
+      "native_call_found": true,
+      "name_matches": true,
+      "arguments_exact": true,
+      "action_result_found": true,
+      "execution_result_differs_from_final": false,
+      "withheld": false
+    },
+    {
+      "round": 15,
+      "id": "call_4f0e123ad4654da3affa5cee",
+      "native_call_found": true,
+      "name_matches": true,
+      "arguments_exact": true,
+      "action_result_found": true,
+      "execution_result_differs_from_final": false,
+      "withheld": false
+    },
+    {
+      "round": 16,
+      "id": "call_78190a27a49d48908d0bcce8",
+      "native_call_found": true,
+      "name_matches": true,
+      "arguments_exact": true,
+      "action_result_found": true,
+      "execution_result_differs_from_final": false,
+      "withheld": false
+    },
+    {
+      "round": 17,
+      "id": "call_4cc524e2b0ee4082b77e875d",
+      "native_call_found": true,
+      "name_matches": true,
+      "arguments_exact": true,
+      "action_result_found": true,
+      "execution_result_differs_from_final": false,
+      "withheld": false
+    },
+    {
+      "round": 18,
+      "id": "call_b43d09580e1842f481d28874",
+      "native_call_found": true,
+      "name_matches": true,
+      "arguments_exact": true,
+      "action_result_found": true,
+      "execution_result_differs_from_final": false,
+      "withheld": false
+    },
+    {
+      "round": 19,
+      "id": "call_a527777b452441a09d315384",
+      "native_call_found": true,
+      "name_matches": true,
+      "arguments_exact": true,
+      "action_result_found": true,
+      "execution_result_differs_from_final": false,
+      "withheld": false
+    },
+    {
+      "round": 20,
+      "id": "call_853bc20a5ce34c72a48b009d",
+      "native_call_found": true,
+      "name_matches": true,
+      "arguments_exact": true,
+      "action_result_found": true,
+      "execution_result_differs_from_final": false,
+      "withheld": false
+    },
+    {
+      "round": 21,
+      "id": "call_346f0f1ea5c64d90941d1477",
+      "native_call_found": true,
+      "name_matches": true,
+      "arguments_exact": true,
+      "action_result_found": true,
+      "execution_result_differs_from_final": false,
+      "withheld": false
+    },
+    {
+      "round": 22,
+      "id": "call_2547f25869f94870a8e616dd",
+      "native_call_found": true,
+      "name_matches": true,
+      "arguments_exact": true,
+      "action_result_found": true,
+      "execution_result_differs_from_final": false,
+      "withheld": false
+    },
+    {
+      "round": 23,
+      "id": "call_2d167871f4e04ac6a81ecc7c",
+      "native_call_found": true,
+      "name_matches": true,
+      "arguments_exact": true,
+      "action_result_found": true,
+      "execution_result_differs_from_final": false,
+      "withheld": false
+    },
+    {
+      "round": 24,
+      "id": "call_642061ec5c7b4ca6bf76eb3b",
+      "native_call_found": true,
+      "name_matches": true,
+      "arguments_exact": true,
+      "action_result_found": true,
+      "execution_result_differs_from_final": false,
+      "withheld": false
+    },
+    {
+      "round": 25,
+      "id": "call_9549eaa17e0241d7aa1e99a1",
+      "native_call_found": true,
+      "name_matches": true,
+      "arguments_exact": true,
+      "action_result_found": true,
+      "execution_result_differs_from_final": false,
+      "withheld": false
+    },
+    {
+      "round": 26,
+      "id": "call_11448707eb964648bc713982",
+      "native_call_found": true,
+      "name_matches": true,
+      "arguments_exact": true,
+      "action_result_found": true,
+      "execution_result_differs_from_final": false,
+      "withheld": false
+    },
+    {
+      "round": 27,
+      "id": "call_f46b6810d64a40fb9cb8002c",
+      "native_call_found": true,
+      "name_matches": true,
+      "arguments_exact": true,
+      "action_result_found": true,
+      "execution_result_differs_from_final": false,
+      "withheld": false
+    },
+    {
+      "round": 28,
+      "id": "call_18bce25ab2134458b5c5c7ba",
+      "native_call_found": true,
+      "name_matches": true,
+      "arguments_exact": true,
+      "action_result_found": true,
+      "execution_result_differs_from_final": false,
+      "withheld": false
+    },
+    {
+      "round": 29,
+      "id": "call_43f576519f6a4454acdb0e6b",
+      "native_call_found": true,
+      "name_matches": true,
+      "arguments_exact": true,
+      "action_result_found": true,
+      "execution_result_differs_from_final": false,
+      "withheld": false
+    },
+    {
+      "round": 30,
+      "id": "call_28dafdb8b45244da91573d1e",
+      "native_call_found": true,
+      "name_matches": true,
+      "arguments_exact": true,
+      "action_result_found": true,
+      "execution_result_differs_from_final": false,
+      "withheld": false
+    },
+    {
+      "round": 31,
+      "id": "call_c0e6031f54974973b6c4b5e5",
+      "native_call_found": true,
+      "name_matches": true,
+      "arguments_exact": true,
+      "action_result_found": true,
+      "execution_result_differs_from_final": false,
+      "withheld": false
+    },
+    {
+      "round": 32,
+      "id": "call_a9ca649d688d4a2f9ae3f24f",
+      "native_call_found": true,
+      "name_matches": true,
+      "arguments_exact": true,
+      "action_result_found": true,
+      "execution_result_differs_from_final": false,
+      "withheld": false
+    },
+    {
+      "round": 33,
+      "id": "call_5986cd0d76ee47e2859f32c4",
+      "native_call_found": true,
+      "name_matches": true,
+      "arguments_exact": true,
+      "action_result_found": true,
+      "execution_result_differs_from_final": false,
+      "withheld": false
+    },
+    {
+      "round": 34,
+      "id": "call_5b2224f64ed3429f928c1a7b",
+      "native_call_found": true,
+      "name_matches": true,
+      "arguments_exact": true,
+      "action_result_found": true,
+      "execution_result_differs_from_final": false,
+      "withheld": false
+    },
+    {
+      "round": 35,
+      "id": "call_9beaa0f3c95444dfac68d980",
+      "native_call_found": true,
+      "name_matches": true,
+      "arguments_exact": true,
+      "action_result_found": true,
+      "execution_result_differs_from_final": false,
+      "withheld": false
+    },
+    {
+      "round": 36,
+      "id": "call_eaa7e9a42ded4d118296f2f4",
+      "native_call_found": true,
+      "name_matches": true,
+      "arguments_exact": true,
+      "action_result_found": true,
+      "execution_result_differs_from_final": false,
+      "withheld": false
+    },
+    {
+      "round": 37,
+      "id": "call_07fa455d571040819c12cd77",
+      "native_call_found": true,
+      "name_matches": true,
+      "arguments_exact": true,
+      "action_result_found": true,
+      "execution_result_differs_from_final": false,
+      "withheld": false
+    },
+    {
+      "round": 38,
+      "id": "call_5ee4371ad9384748a9d05908",
+      "native_call_found": true,
+      "name_matches": true,
+      "arguments_exact": true,
+      "action_result_found": true,
+      "execution_result_differs_from_final": false,
+      "withheld": false
+    },
+    {
+      "round": 39,
+      "id": "call_61becc71c85745eebca2e8ef",
+      "native_call_found": true,
+      "name_matches": true,
+      "arguments_exact": true,
+      "action_result_found": true,
+      "execution_result_differs_from_final": false,
+      "withheld": false
+    },
+    {
+      "round": 40,
+      "id": "call_aa62b7c28c5a452a8e5a481d",
+      "native_call_found": true,
+      "name_matches": true,
+      "arguments_exact": true,
+      "action_result_found": true,
+      "execution_result_differs_from_final": false,
+      "withheld": false
+    },
+    {
+      "round": 41,
+      "id": "call_3849162426794ca7a73b6b24",
+      "native_call_found": true,
+      "name_matches": true,
+      "arguments_exact": true,
+      "action_result_found": true,
+      "execution_result_differs_from_final": false,
+      "withheld": false
+    },
+    {
+      "round": 42,
+      "id": "call_04e56ad6e68c428c87d91dd8",
+      "native_call_found": true,
+      "name_matches": true,
+      "arguments_exact": true,
+      "action_result_found": true,
+      "execution_result_differs_from_final": false,
+      "withheld": false
+    },
+    {
+      "round": 43,
+      "id": "call_7139e1c6ebae4777a63803f5",
+      "native_call_found": true,
+      "name_matches": true,
+      "arguments_exact": true,
+      "action_result_found": true,
+      "execution_result_differs_from_final": false,
+      "withheld": false
+    },
+    {
+      "round": 44,
+      "id": "call_a72718116e9e4231b7f5870e",
+      "native_call_found": true,
+      "name_matches": true,
+      "arguments_exact": true,
+      "action_result_found": true,
+      "execution_result_differs_from_final": false,
+      "withheld": false
+    },
+    {
+      "round": 45,
+      "id": "call_e851e21640fc4d73a351aa21",
+      "native_call_found": true,
+      "name_matches": true,
+      "arguments_exact": true,
+      "action_result_found": true,
+      "execution_result_differs_from_final": false,
+      "withheld": false
+    },
+    {
+      "round": 46,
+      "id": "call_c06760d89dfd49ac81b1376e",
+      "native_call_found": true,
+      "name_matches": true,
+      "arguments_exact": true,
+      "action_result_found": true,
+      "execution_result_differs_from_final": false,
+      "withheld": false
+    },
+    {
+      "round": 47,
+      "id": "call_7247e3eccd9d46a291a808ce",
+      "native_call_found": true,
+      "name_matches": true,
+      "arguments_exact": true,
+      "action_result_found": true,
+      "execution_result_differs_from_final": false,
+      "withheld": false
+    },
+    {
+      "round": 48,
+      "id": "call_1c132bbb3c334e4cb3bc7c28",
+      "native_call_found": true,
+      "name_matches": true,
+      "arguments_exact": true,
+      "action_result_found": true,
+      "execution_result_differs_from_final": false,
+      "withheld": false
+    },
+    {
+      "round": 49,
+      "id": "call_7217c892cf564069bb8b700f",
+      "native_call_found": true,
+      "name_matches": true,
+      "arguments_exact": true,
+      "action_result_found": true,
+      "execution_result_differs_from_final": false,
+      "withheld": false
+    },
+    {
+      "round": 50,
+      "id": "call_e304274f3eae493e83ef484b",
+      "native_call_found": true,
+      "name_matches": true,
+      "arguments_exact": true,
+      "action_result_found": true,
+      "execution_result_differs_from_final": false,
+      "withheld": false
+    },
+    {
+      "round": 51,
+      "id": "call_1d38595e48254c6ab6b4ddaa",
+      "native_call_found": true,
+      "name_matches": true,
+      "arguments_exact": true,
+      "action_result_found": true,
+      "execution_result_differs_from_final": false,
+      "withheld": false
+    },
+    {
+      "round": 52,
+      "id": "call_2952244d3b3c45f2bb7e72ed",
+      "native_call_found": true,
+      "name_matches": true,
+      "arguments_exact": true,
+      "action_result_found": true,
+      "execution_result_differs_from_final": false,
+      "withheld": false
+    },
+    {
+      "round": 53,
+      "id": "call_297e70e9c92c4fa8abca8d0d",
+      "native_call_found": true,
+      "name_matches": true,
+      "arguments_exact": true,
+      "action_result_found": true,
+      "execution_result_differs_from_final": false,
+      "withheld": false
+    },
+    {
+      "round": 54,
+      "id": "call_03faadf346754675ba0cd868",
+      "native_call_found": true,
+      "name_matches": true,
+      "arguments_exact": true,
+      "action_result_found": true,
+      "execution_result_differs_from_final": false,
+      "withheld": false
+    },
+    {
+      "round": 55,
+      "id": "call_e4544b9b060e4e03bed42524",
+      "native_call_found": true,
+      "name_matches": true,
+      "arguments_exact": true,
+      "action_result_found": true,
+      "execution_result_differs_from_final": false,
+      "withheld": false
+    },
+    {
+      "round": 56,
+      "id": "call_ac7b591f231c4be9be360645",
+      "native_call_found": true,
+      "name_matches": true,
+      "arguments_exact": true,
+      "action_result_found": true,
+      "execution_result_differs_from_final": false,
+      "withheld": false
+    },
+    {
+      "round": 57,
+      "id": "call_fe416317b29341acb6597650",
+      "native_call_found": true,
+      "name_matches": true,
+      "arguments_exact": true,
+      "action_result_found": true,
+      "execution_result_differs_from_final": false,
+      "withheld": false
+    },
+    {
+      "round": 58,
+      "id": "call_e5f866ff78f9457db7a36e44",
+      "native_call_found": true,
+      "name_matches": true,
+      "arguments_exact": true,
+      "action_result_found": true,
+      "execution_result_differs_from_final": false,
+      "withheld": false
+    },
+    {
+      "round": 59,
+      "id": "call_2ddcc5df9b7f42d6a5f96449",
+      "native_call_found": true,
+      "name_matches": true,
+      "arguments_exact": true,
+      "action_result_found": true,
+      "execution_result_differs_from_final": false,
+      "withheld": false
+    },
+    {
+      "round": 60,
+      "id": "call_553199fc21af4cd6832887ae",
+      "native_call_found": true,
+      "name_matches": true,
+      "arguments_exact": true,
+      "action_result_found": true,
+      "execution_result_differs_from_final": false,
+      "withheld": false
+    },
+    {
+      "round": 61,
+      "id": "call_9498afb5ab0a4d829e39712d",
+      "native_call_found": true,
+      "name_matches": true,
+      "arguments_exact": true,
+      "action_result_found": true,
+      "execution_result_differs_from_final": false,
+      "withheld": false
+    },
+    {
+      "round": 62,
+      "id": "call_a4f302af8e9e4805b1e0ff22",
+      "native_call_found": true,
+      "name_matches": true,
+      "arguments_exact": true,
+      "action_result_found": true,
+      "execution_result_differs_from_final": false,
+      "withheld": false
+    },
+    {
+      "round": 63,
+      "id": "call_482120ccef9247ff93f76786",
+      "native_call_found": true,
+      "name_matches": true,
+      "arguments_exact": true,
+      "action_result_found": true,
+      "execution_result_differs_from_final": false,
+      "withheld": false
+    },
+    {
+      "round": 64,
+      "id": "call_63b078eb90664dd0982685cf",
+      "native_call_found": true,
+      "name_matches": true,
+      "arguments_exact": true,
+      "action_result_found": true,
+      "execution_result_differs_from_final": false,
+      "withheld": false
+    }
+  ],
+  "find_checks": [],
+  "recall_checks": [],
+  "notes": [],
+  "finish_checks": [
+    {
+      "round": 4,
+      "arguments": {
+        "answer": 21,
+        "refs": [
+          "e1"
+        ]
+      },
+      "schema_valid": false,
+      "refs_legal": true,
+      "result": {
+        "action_slot_charged": true,
+        "blocks_finish": true,
+        "code": "arguments_invalid",
+        "executed": false,
+        "message": "finish: invalid fields near []; follow the supplied schema",
+        "ok": false
+      }
+    },
+    {
+      "round": 5,
+      "arguments": {
+        "answer": 21,
+        "refs": [
+          "e1"
+        ]
+      },
+      "schema_valid": false,
+      "refs_legal": true,
+      "result": {
+        "action_slot_charged": true,
+        "blocks_finish": true,
+        "code": "arguments_invalid",
+        "executed": false,
+        "message": "finish: invalid fields near []; follow the supplied schema",
+        "ok": false
+      }
+    },
+    {
+      "round": 6,
+      "arguments": {
+        "answer": 21,
+        "refs": [
+          "e1"
+        ]
+      },
+      "schema_valid": false,
+      "refs_legal": true,
+      "result": {
+        "action_slot_charged": true,
+        "blocks_finish": true,
+        "code": "arguments_invalid",
+        "executed": false,
+        "message": "finish: invalid fields near []; follow the supplied schema",
+        "ok": false
+      }
+    },
+    {
+      "round": 7,
+      "arguments": {
+        "answer": 21,
+        "refs": [
+          "e1"
+        ]
+      },
+      "schema_valid": false,
+      "refs_legal": true,
+      "result": {
+        "action_slot_charged": true,
+        "blocks_finish": true,
+        "code": "arguments_invalid",
+        "executed": false,
+        "message": "finish: invalid fields near []; follow the supplied schema",
+        "ok": false
+      }
+    },
+    {
+      "round": 8,
+      "arguments": {
+        "answer": 21,
+        "refs": [
+          "e1"
+        ]
+      },
+      "schema_valid": false,
+      "refs_legal": true,
+      "result": {
+        "action_slot_charged": true,
+        "blocks_finish": true,
+        "code": "arguments_invalid",
+        "executed": false,
+        "message": "finish: invalid fields near []; follow the supplied schema",
+        "ok": false
+      }
+    },
+    {
+      "round": 9,
+      "arguments": {
+        "answer": 21,
+        "refs": [
+          "e1"
+        ]
+      },
+      "schema_valid": false,
+      "refs_legal": true,
+      "result": {
+        "action_slot_charged": true,
+        "blocks_finish": true,
+        "code": "arguments_invalid",
+        "executed": false,
+        "message": "finish: invalid fields near []; follow the supplied schema",
+        "ok": false
+      }
+    },
+    {
+      "round": 10,
+      "arguments": {
+        "answer": 21,
+        "refs": [
+          "e1"
+        ]
+      },
+      "schema_valid": false,
+      "refs_legal": true,
+      "result": {
+        "action_slot_charged": true,
+        "blocks_finish": true,
+        "code": "arguments_invalid",
+        "executed": false,
+        "message": "finish: invalid fields near []; follow the supplied schema",
+        "ok": false
+      }
+    },
+    {
+      "round": 11,
+      "arguments": {
+        "answer": 21,
+        "refs": [
+          "e1"
+        ]
+      },
+      "schema_valid": false,
+      "refs_legal": true,
+      "result": {
+        "action_slot_charged": true,
+        "blocks_finish": true,
+        "code": "arguments_invalid",
+        "executed": false,
+        "message": "finish: invalid fields near []; follow the supplied schema",
+        "ok": false
+      }
+    },
+    {
+      "round": 12,
+      "arguments": {
+        "answer": 21,
+        "refs": [
+          "e1"
+        ]
+      },
+      "schema_valid": false,
+      "refs_legal": true,
+      "result": {
+        "action_slot_charged": true,
+        "blocks_finish": true,
+        "code": "arguments_invalid",
+        "executed": false,
+        "message": "finish: invalid fields near []; follow the supplied schema",
+        "ok": false
+      }
+    },
+    {
+      "round": 13,
+      "arguments": {
+        "answer": 21,
+        "refs": [
+          "e1"
+        ]
+      },
+      "schema_valid": false,
+      "refs_legal": true,
+      "result": {
+        "action_slot_charged": true,
+        "blocks_finish": true,
+        "code": "arguments_invalid",
+        "executed": false,
+        "message": "finish: invalid fields near []; follow the supplied schema",
+        "ok": false
+      }
+    },
+    {
+      "round": 14,
+      "arguments": {
+        "answer": 21,
+        "refs": [
+          "e1"
+        ]
+      },
+      "schema_valid": false,
+      "refs_legal": true,
+      "result": {
+        "action_slot_charged": true,
+        "blocks_finish": true,
+        "code": "arguments_invalid",
+        "executed": false,
+        "message": "finish: invalid fields near []; follow the supplied schema",
+        "ok": false
+      }
+    },
+    {
+      "round": 15,
+      "arguments": {
+        "answer": 21,
+        "refs": [
+          "e1"
+        ]
+      },
+      "schema_valid": false,
+      "refs_legal": true,
+      "result": {
+        "action_slot_charged": true,
+        "blocks_finish": true,
+        "code": "arguments_invalid",
+        "executed": false,
+        "message": "finish: invalid fields near []; follow the supplied schema",
+        "ok": false
+      }
+    },
+    {
+      "round": 16,
+      "arguments": {
+        "answer": 21,
+        "refs": [
+          "e1"
+        ]
+      },
+      "schema_valid": false,
+      "refs_legal": true,
+      "result": {
+        "action_slot_charged": true,
+        "blocks_finish": true,
+        "code": "arguments_invalid",
+        "executed": false,
+        "message": "finish: invalid fields near []; follow the supplied schema",
+        "ok": false
+      }
+    },
+    {
+      "round": 17,
+      "arguments": {
+        "answer": 21,
+        "refs": [
+          "e1"
+        ]
+      },
+      "schema_valid": false,
+      "refs_legal": true,
+      "result": {
+        "action_slot_charged": true,
+        "blocks_finish": true,
+        "code": "arguments_invalid",
+        "executed": false,
+        "message": "finish: invalid fields near []; follow the supplied schema",
+        "ok": false
+      }
+    },
+    {
+      "round": 18,
+      "arguments": {
+        "answer": 21,
+        "refs": [
+          "e1"
+        ]
+      },
+      "schema_valid": false,
+      "refs_legal": true,
+      "result": {
+        "action_slot_charged": true,
+        "blocks_finish": true,
+        "code": "arguments_invalid",
+        "executed": false,
+        "message": "finish: invalid fields near []; follow the supplied schema",
+        "ok": false
+      }
+    },
+    {
+      "round": 19,
+      "arguments": {
+        "answer": 21,
+        "refs": [
+          "e1"
+        ]
+      },
+      "schema_valid": false,
+      "refs_legal": true,
+      "result": {
+        "action_slot_charged": true,
+        "blocks_finish": true,
+        "code": "arguments_invalid",
+        "executed": false,
+        "message": "finish: invalid fields near []; follow the supplied schema",
+        "ok": false
+      }
+    },
+    {
+      "round": 20,
+      "arguments": {
+        "answer": 21,
+        "refs": [
+          "e1"
+        ]
+      },
+      "schema_valid": false,
+      "refs_legal": true,
+      "result": {
+        "action_slot_charged": true,
+        "blocks_finish": true,
+        "code": "arguments_invalid",
+        "executed": false,
+        "message": "finish: invalid fields near []; follow the supplied schema",
+        "ok": false
+      }
+    },
+    {
+      "round": 21,
+      "arguments": {
+        "answer": 21,
+        "refs": [
+          "e1"
+        ]
+      },
+      "schema_valid": false,
+      "refs_legal": true,
+      "result": {
+        "action_slot_charged": true,
+        "blocks_finish": true,
+        "code": "arguments_invalid",
+        "executed": false,
+        "message": "finish: invalid fields near []; follow the supplied schema",
+        "ok": false
+      }
+    },
+    {
+      "round": 22,
+      "arguments": {
+        "answer": 21,
+        "refs": [
+          "e1"
+        ]
+      },
+      "schema_valid": false,
+      "refs_legal": true,
+      "result": {
+        "action_slot_charged": true,
+        "blocks_finish": true,
+        "code": "arguments_invalid",
+        "executed": false,
+        "message": "finish: invalid fields near []; follow the supplied schema",
+        "ok": false
+      }
+    },
+    {
+      "round": 23,
+      "arguments": {
+        "answer": 21,
+        "refs": [
+          "e1"
+        ]
+      },
+      "schema_valid": false,
+      "refs_legal": true,
+      "result": {
+        "action_slot_charged": true,
+        "blocks_finish": true,
+        "code": "arguments_invalid",
+        "executed": false,
+        "message": "finish: invalid fields near []; follow the supplied schema",
+        "ok": false
+      }
+    },
+    {
+      "round": 24,
+      "arguments": {
+        "answer": 21,
+        "refs": [
+          "e1"
+        ]
+      },
+      "schema_valid": false,
+      "refs_legal": true,
+      "result": {
+        "action_slot_charged": true,
+        "blocks_finish": true,
+        "code": "arguments_invalid",
+        "executed": false,
+        "message": "finish: invalid fields near []; follow the supplied schema",
+        "ok": false
+      }
+    },
+    {
+      "round": 25,
+      "arguments": {
+        "answer": 21,
+        "refs": [
+          "e1"
+        ]
+      },
+      "schema_valid": false,
+      "refs_legal": true,
+      "result": {
+        "action_slot_charged": true,
+        "blocks_finish": true,
+        "code": "arguments_invalid",
+        "executed": false,
+        "message": "finish: invalid fields near []; follow the supplied schema",
+        "ok": false
+      }
+    },
+    {
+      "round": 26,
+      "arguments": {
+        "answer": 21,
+        "refs": [
+          "e1"
+        ]
+      },
+      "schema_valid": false,
+      "refs_legal": true,
+      "result": {
+        "action_slot_charged": true,
+        "blocks_finish": true,
+        "code": "arguments_invalid",
+        "executed": false,
+        "message": "finish: invalid fields near []; follow the supplied schema",
+        "ok": false
+      }
+    },
+    {
+      "round": 27,
+      "arguments": {
+        "answer": 21,
+        "refs": [
+          "e1"
+        ]
+      },
+      "schema_valid": false,
+      "refs_legal": true,
+      "result": {
+        "action_slot_charged": true,
+        "blocks_finish": true,
+        "code": "arguments_invalid",
+        "executed": false,
+        "message": "finish: invalid fields near []; follow the supplied schema",
+        "ok": false
+      }
+    },
+    {
+      "round": 28,
+      "arguments": {
+        "answer": 21,
+        "refs": [
+          "e1"
+        ]
+      },
+      "schema_valid": false,
+      "refs_legal": true,
+      "result": {
+        "action_slot_charged": true,
+        "blocks_finish": true,
+        "code": "arguments_invalid",
+        "executed": false,
+        "message": "finish: invalid fields near []; follow the supplied schema",
+        "ok": false
+      }
+    },
+    {
+      "round": 29,
+      "arguments": {
+        "answer": 21,
+        "refs": [
+          "e1"
+        ]
+      },
+      "schema_valid": false,
+      "refs_legal": true,
+      "result": {
+        "action_slot_charged": true,
+        "blocks_finish": true,
+        "code": "arguments_invalid",
+        "executed": false,
+        "message": "finish: invalid fields near []; follow the supplied schema",
+        "ok": false
+      }
+    },
+    {
+      "round": 30,
+      "arguments": {
+        "answer": 21,
+        "refs": [
+          "e1"
+        ]
+      },
+      "schema_valid": false,
+      "refs_legal": true,
+      "result": {
+        "action_slot_charged": true,
+        "blocks_finish": true,
+        "code": "arguments_invalid",
+        "executed": false,
+        "message": "finish: invalid fields near []; follow the supplied schema",
+        "ok": false
+      }
+    },
+    {
+      "round": 31,
+      "arguments": {
+        "answer": 21,
+        "refs": [
+          "e1"
+        ]
+      },
+      "schema_valid": false,
+      "refs_legal": true,
+      "result": {
+        "action_slot_charged": true,
+        "blocks_finish": true,
+        "code": "arguments_invalid",
+        "executed": false,
+        "message": "finish: invalid fields near []; follow the supplied schema",
+        "ok": false
+      }
+    },
+    {
+      "round": 32,
+      "arguments": {
+        "answer": 21,
+        "refs": [
+          "e1"
+        ]
+      },
+      "schema_valid": false,
+      "refs_legal": true,
+      "result": {
+        "action_slot_charged": true,
+        "blocks_finish": true,
+        "code": "arguments_invalid",
+        "executed": false,
+        "message": "finish: invalid fields near []; follow the supplied schema",
+        "ok": false
+      }
+    },
+    {
+      "round": 33,
+      "arguments": {
+        "answer": 21,
+        "refs": [
+          "e1"
+        ]
+      },
+      "schema_valid": false,
+      "refs_legal": true,
+      "result": {
+        "action_slot_charged": true,
+        "blocks_finish": true,
+        "code": "arguments_invalid",
+        "executed": false,
+        "message": "finish: invalid fields near []; follow the supplied schema",
+        "ok": false
+      }
+    },
+    {
+      "round": 34,
+      "arguments": {
+        "answer": 21,
+        "refs": [
+          "e1"
+        ]
+      },
+      "schema_valid": false,
+      "refs_legal": true,
+      "result": {
+        "action_slot_charged": true,
+        "blocks_finish": true,
+        "code": "arguments_invalid",
+        "executed": false,
+        "message": "finish: invalid fields near []; follow the supplied schema",
+        "ok": false
+      }
+    },
+    {
+      "round": 35,
+      "arguments": {
+        "answer": 21,
+        "refs": [
+          "e1"
+        ]
+      },
+      "schema_valid": false,
+      "refs_legal": true,
+      "result": {
+        "action_slot_charged": true,
+        "blocks_finish": true,
+        "code": "arguments_invalid",
+        "executed": false,
+        "message": "finish: invalid fields near []; follow the supplied schema",
+        "ok": false
+      }
+    },
+    {
+      "round": 36,
+      "arguments": {
+        "answer": 21,
+        "refs": [
+          "e1"
+        ]
+      },
+      "schema_valid": false,
+      "refs_legal": true,
+      "result": {
+        "action_slot_charged": true,
+        "blocks_finish": true,
+        "code": "arguments_invalid",
+        "executed": false,
+        "message": "finish: invalid fields near []; follow the supplied schema",
+        "ok": false
+      }
+    },
+    {
+      "round": 37,
+      "arguments": {
+        "answer": 21,
+        "refs": [
+          "e1"
+        ]
+      },
+      "schema_valid": false,
+      "refs_legal": true,
+      "result": {
+        "action_slot_charged": true,
+        "blocks_finish": true,
+        "code": "arguments_invalid",
+        "executed": false,
+        "message": "finish: invalid fields near []; follow the supplied schema",
+        "ok": false
+      }
+    },
+    {
+      "round": 38,
+      "arguments": {
+        "answer": 21,
+        "refs": [
+          "e1"
+        ]
+      },
+      "schema_valid": false,
+      "refs_legal": true,
+      "result": {
+        "action_slot_charged": true,
+        "blocks_finish": true,
+        "code": "arguments_invalid",
+        "executed": false,
+        "message": "finish: invalid fields near []; follow the supplied schema",
+        "ok": false
+      }
+    },
+    {
+      "round": 39,
+      "arguments": {
+        "answer": 21,
+        "refs": [
+          "e1"
+        ]
+      },
+      "schema_valid": false,
+      "refs_legal": true,
+      "result": {
+        "action_slot_charged": true,
+        "blocks_finish": true,
+        "code": "arguments_invalid",
+        "executed": false,
+        "message": "finish: invalid fields near []; follow the supplied schema",
+        "ok": false
+      }
+    },
+    {
+      "round": 40,
+      "arguments": {
+        "answer": 21,
+        "refs": [
+          "e1"
+        ]
+      },
+      "schema_valid": false,
+      "refs_legal": true,
+      "result": {
+        "action_slot_charged": true,
+        "blocks_finish": true,
+        "code": "arguments_invalid",
+        "executed": false,
+        "message": "finish: invalid fields near []; follow the supplied schema",
+        "ok": false
+      }
+    },
+    {
+      "round": 41,
+      "arguments": {
+        "answer": 21,
+        "refs": [
+          "e1"
+        ]
+      },
+      "schema_valid": false,
+      "refs_legal": true,
+      "result": {
+        "action_slot_charged": true,
+        "blocks_finish": true,
+        "code": "arguments_invalid",
+        "executed": false,
+        "message": "finish: invalid fields near []; follow the supplied schema",
+        "ok": false
+      }
+    },
+    {
+      "round": 42,
+      "arguments": {
+        "answer": 21,
+        "refs": [
+          "e1"
+        ]
+      },
+      "schema_valid": false,
+      "refs_legal": true,
+      "result": {
+        "action_slot_charged": true,
+        "blocks_finish": true,
+        "code": "arguments_invalid",
+        "executed": false,
+        "message": "finish: invalid fields near []; follow the supplied schema",
+        "ok": false
+      }
+    },
+    {
+      "round": 43,
+      "arguments": {
+        "answer": 21,
+        "refs": [
+          "e1"
+        ]
+      },
+      "schema_valid": false,
+      "refs_legal": true,
+      "result": {
+        "action_slot_charged": true,
+        "blocks_finish": true,
+        "code": "arguments_invalid",
+        "executed": false,
+        "message": "finish: invalid fields near []; follow the supplied schema",
+        "ok": false
+      }
+    },
+    {
+      "round": 44,
+      "arguments": {
+        "answer": 21,
+        "refs": [
+          "e1"
+        ]
+      },
+      "schema_valid": false,
+      "refs_legal": true,
+      "result": {
+        "action_slot_charged": true,
+        "blocks_finish": true,
+        "code": "arguments_invalid",
+        "executed": false,
+        "message": "finish: invalid fields near []; follow the supplied schema",
+        "ok": false
+      }
+    },
+    {
+      "round": 45,
+      "arguments": {
+        "answer": 21,
+        "refs": [
+          "e1"
+        ]
+      },
+      "schema_valid": false,
+      "refs_legal": true,
+      "result": {
+        "action_slot_charged": true,
+        "blocks_finish": true,
+        "code": "arguments_invalid",
+        "executed": false,
+        "message": "finish: invalid fields near []; follow the supplied schema",
+        "ok": false
+      }
+    },
+    {
+      "round": 46,
+      "arguments": {
+        "answer": 21,
+        "refs": [
+          "e1"
+        ]
+      },
+      "schema_valid": false,
+      "refs_legal": true,
+      "result": {
+        "action_slot_charged": true,
+        "blocks_finish": true,
+        "code": "arguments_invalid",
+        "executed": false,
+        "message": "finish: invalid fields near []; follow the supplied schema",
+        "ok": false
+      }
+    },
+    {
+      "round": 47,
+      "arguments": {
+        "answer": 21,
+        "refs": [
+          "e1"
+        ]
+      },
+      "schema_valid": false,
+      "refs_legal": true,
+      "result": {
+        "action_slot_charged": true,
+        "blocks_finish": true,
+        "code": "arguments_invalid",
+        "executed": false,
+        "message": "finish: invalid fields near []; follow the supplied schema",
+        "ok": false
+      }
+    },
+    {
+      "round": 48,
+      "arguments": {
+        "answer": 21,
+        "refs": [
+          "e1"
+        ]
+      },
+      "schema_valid": false,
+      "refs_legal": true,
+      "result": {
+        "action_slot_charged": true,
+        "blocks_finish": true,
+        "code": "arguments_invalid",
+        "executed": false,
+        "message": "finish: invalid fields near []; follow the supplied schema",
+        "ok": false
+      }
+    },
+    {
+      "round": 49,
+      "arguments": {
+        "answer": 21,
+        "refs": [
+          "e1"
+        ]
+      },
+      "schema_valid": false,
+      "refs_legal": true,
+      "result": {
+        "action_slot_charged": true,
+        "blocks_finish": true,
+        "code": "arguments_invalid",
+        "executed": false,
+        "message": "finish: invalid fields near []; follow the supplied schema",
+        "ok": false
+      }
+    },
+    {
+      "round": 50,
+      "arguments": {
+        "answer": 21,
+        "refs": [
+          "e1"
+        ]
+      },
+      "schema_valid": false,
+      "refs_legal": true,
+      "result": {
+        "action_slot_charged": true,
+        "blocks_finish": true,
+        "code": "arguments_invalid",
+        "executed": false,
+        "message": "finish: invalid fields near []; follow the supplied schema",
+        "ok": false
+      }
+    },
+    {
+      "round": 51,
+      "arguments": {
+        "answer": 21,
+        "refs": [
+          "e1"
+        ]
+      },
+      "schema_valid": false,
+      "refs_legal": true,
+      "result": {
+        "action_slot_charged": true,
+        "blocks_finish": true,
+        "code": "arguments_invalid",
+        "executed": false,
+        "message": "finish: invalid fields near []; follow the supplied schema",
+        "ok": false
+      }
+    },
+    {
+      "round": 52,
+      "arguments": {
+        "answer": 21,
+        "refs": [
+          "e1"
+        ]
+      },
+      "schema_valid": false,
+      "refs_legal": true,
+      "result": {
+        "action_slot_charged": true,
+        "blocks_finish": true,
+        "code": "arguments_invalid",
+        "executed": false,
+        "message": "finish: invalid fields near []; follow the supplied schema",
+        "ok": false
+      }
+    },
+    {
+      "round": 53,
+      "arguments": {
+        "answer": 21,
+        "refs": [
+          "e1"
+        ]
+      },
+      "schema_valid": false,
+      "refs_legal": true,
+      "result": {
+        "action_slot_charged": true,
+        "blocks_finish": true,
+        "code": "arguments_invalid",
+        "executed": false,
+        "message": "finish: invalid fields near []; follow the supplied schema",
+        "ok": false
+      }
+    },
+    {
+      "round": 54,
+      "arguments": {
+        "answer": 21,
+        "refs": [
+          "e1"
+        ]
+      },
+      "schema_valid": false,
+      "refs_legal": true,
+      "result": {
+        "action_slot_charged": true,
+        "blocks_finish": true,
+        "code": "arguments_invalid",
+        "executed": false,
+        "message": "finish: invalid fields near []; follow the supplied schema",
+        "ok": false
+      }
+    },
+    {
+      "round": 55,
+      "arguments": {
+        "answer": 21,
+        "refs": [
+          "e1"
+        ]
+      },
+      "schema_valid": false,
+      "refs_legal": true,
+      "result": {
+        "action_slot_charged": true,
+        "blocks_finish": true,
+        "code": "arguments_invalid",
+        "executed": false,
+        "message": "finish: invalid fields near []; follow the supplied schema",
+        "ok": false
+      }
+    },
+    {
+      "round": 56,
+      "arguments": {
+        "answer": 21,
+        "refs": [
+          "e1"
+        ]
+      },
+      "schema_valid": false,
+      "refs_legal": true,
+      "result": {
+        "action_slot_charged": true,
+        "blocks_finish": true,
+        "code": "arguments_invalid",
+        "executed": false,
+        "message": "finish: invalid fields near []; follow the supplied schema",
+        "ok": false
+      }
+    },
+    {
+      "round": 57,
+      "arguments": {
+        "answer": 21,
+        "refs": [
+          "e1"
+        ]
+      },
+      "schema_valid": false,
+      "refs_legal": true,
+      "result": {
+        "action_slot_charged": true,
+        "blocks_finish": true,
+        "code": "arguments_invalid",
+        "executed": false,
+        "message": "finish: invalid fields near []; follow the supplied schema",
+        "ok": false
+      }
+    },
+    {
+      "round": 58,
+      "arguments": {
+        "answer": 21,
+        "refs": [
+          "e1"
+        ]
+      },
+      "schema_valid": false,
+      "refs_legal": true,
+      "result": {
+        "action_slot_charged": true,
+        "blocks_finish": true,
+        "code": "arguments_invalid",
+        "executed": false,
+        "message": "finish: invalid fields near []; follow the supplied schema",
+        "ok": false
+      }
+    },
+    {
+      "round": 59,
+      "arguments": {
+        "answer": 21,
+        "refs": [
+          "e1"
+        ]
+      },
+      "schema_valid": false,
+      "refs_legal": true,
+      "result": {
+        "action_slot_charged": true,
+        "blocks_finish": true,
+        "code": "arguments_invalid",
+        "executed": false,
+        "message": "finish: invalid fields near []; follow the supplied schema",
+        "ok": false
+      }
+    },
+    {
+      "round": 60,
+      "arguments": {
+        "answer": 21,
+        "refs": [
+          "e1"
+        ]
+      },
+      "schema_valid": false,
+      "refs_legal": true,
+      "result": {
+        "action_slot_charged": true,
+        "blocks_finish": true,
+        "code": "arguments_invalid",
+        "executed": false,
+        "message": "finish: invalid fields near []; follow the supplied schema",
+        "ok": false
+      }
+    },
+    {
+      "round": 61,
+      "arguments": {
+        "answer": 21,
+        "refs": [
+          "e1"
+        ]
+      },
+      "schema_valid": false,
+      "refs_legal": true,
+      "result": {
+        "action_slot_charged": true,
+        "blocks_finish": true,
+        "code": "arguments_invalid",
+        "executed": false,
+        "message": "finish: invalid fields near []; follow the supplied schema",
+        "ok": false
+      }
+    },
+    {
+      "round": 62,
+      "arguments": {
+        "answer": 21,
+        "refs": [
+          "e1"
+        ]
+      },
+      "schema_valid": false,
+      "refs_legal": true,
+      "result": {
+        "action_slot_charged": true,
+        "blocks_finish": true,
+        "code": "arguments_invalid",
+        "executed": false,
+        "message": "finish: invalid fields near []; follow the supplied schema",
+        "ok": false
+      }
+    },
+    {
+      "round": 63,
+      "arguments": {
+        "answer": 21,
+        "refs": [
+          "e1"
+        ]
+      },
+      "schema_valid": false,
+      "refs_legal": true,
+      "result": {
+        "action_slot_charged": true,
+        "blocks_finish": true,
+        "code": "arguments_invalid",
+        "executed": false,
+        "message": "finish: invalid fields near []; follow the supplied schema",
+        "ok": false
+      }
+    },
+    {
+      "round": 64,
+      "arguments": {
+        "answer": 21,
+        "refs": [
+          "e1"
+        ]
+      },
+      "schema_valid": false,
+      "refs_legal": true,
+      "result": {
+        "action_slot_charged": true,
+        "blocks_finish": true,
+        "code": "arguments_invalid",
+        "executed": false,
+        "message": "finish: invalid fields near []; follow the supplied schema",
+        "ok": false
+      }
+    }
+  ],
+  "formal_evidence": {},
+  "limitations": [
+    "Direct shelf bytes are serialized request differences, not provider tokens or a causal cost ablation.",
+    "Result overlap is not semantic redundancy.",
+    "No external judge or production query is used."
+  ]
+}

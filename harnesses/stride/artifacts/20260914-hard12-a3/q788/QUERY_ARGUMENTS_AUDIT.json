@@ -1,0 +1,57 @@
+{
+  "declared_array_query_items": 12,
+  "invalid_shape_calls": 1,
+  "calls": [
+    {
+      "round": 1,
+      "tool_call_id": "call_14d0618795c649e9b3f6713a",
+      "queries_type": "list",
+      "declared_array_items": 3,
+      "valid_shape": true
+    },
+    {
+      "round": 2,
+      "tool_call_id": "call_c59049ffcb834d81a935c643",
+      "queries_type": "str",
+      "declared_array_items": null,
+      "valid_shape": false
+    },
+    {
+      "round": 3,
+      "tool_call_id": "call_dfefe30e905a4c09b03bea6b",
+      "queries_type": "list",
+      "declared_array_items": 3,
+      "valid_shape": true
+    },
+    {
+      "round": 5,
+      "tool_call_id": "call_342e7b88f7ab470896e04ea5",
+      "queries_type": "list",
+      "declared_array_items": 3,
+      "valid_shape": true
+    },
+    {
+      "round": 6,
+      "tool_call_id": "call_994861a819854330b8393210",
+      "queries_type": "list",
+      "declared_array_items": 3,
+      "valid_shape": true
+    }
+  ],
+  "corrections": [
+    {
+      "file": "POSTHOC_CHECKS.json",
+      "before": 177,
+      "after": 12,
+      "preserved_original": "POSTHOC_CHECKS.before-query-count-correction.json"
+    },
+    {
+      "file": "REVIEW_DIGEST.json",
+      "before": 177,
+      "after": 12,
+      "preserved_original": "REVIEW_DIGEST.before-query-count-correction.json"
+    }
+  ],
+  "original_http_archive_and_executed_queries_unchanged": true,
+  "production_calls": 0
+}

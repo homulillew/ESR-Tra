@@ -1,0 +1,91 @@
+{
+  "utc": "2026-09-14T10:51:39.891120+00:00",
+  "qids": [
+    "770",
+    "778",
+    "772",
+    "774",
+    "769",
+    "775",
+    "786",
+    "776",
+    "771",
+    "788",
+    "793",
+    "794"
+  ],
+  "total": 12,
+  "submitted": 6,
+  "outcomes": {
+    "model_budget": 4,
+    "submitted": 6,
+    "abstained": 2
+  },
+  "correct": 6,
+  "policy_attempts": 483,
+  "judge_attempts": 6,
+  "total_attempts": 489,
+  "budget_after": {
+    "cap": 1000,
+    "used": 551,
+    "remaining": 449,
+    "role_counts": {
+      "judge": 9,
+      "policy": 542
+    }
+  },
+  "policy_usage": {
+    "input_tokens": {
+      "total": 8027312,
+      "known_sum": 8027312,
+      "missing_calls": 0
+    },
+    "output_tokens": {
+      "total": 78263,
+      "known_sum": 78263,
+      "missing_calls": 0
+    },
+    "cache_read_tokens": {
+      "total": 6549888,
+      "known_sum": 6549888,
+      "missing_calls": 0
+    },
+    "cache_write_tokens": {
+      "total": null,
+      "known_sum": 0,
+      "missing_calls": 483
+    }
+  },
+  "judge_usage": {
+    "input_tokens": {
+      "total": 1476,
+      "known_sum": 1476,
+      "missing_calls": 0
+    },
+    "output_tokens": {
+      "total": 271,
+      "known_sum": 271,
+      "missing_calls": 0
+    },
+    "cache_read_tokens": {
+      "total": 0,
+      "known_sum": 0,
+      "missing_calls": 0
+    },
+    "cache_write_tokens": {
+      "total": null,
+      "known_sum": 0,
+      "missing_calls": 6
+    }
+  },
+  "policy_wire_bytes": 33191748,
+  "judge_wire_bytes": 7165,
+  "policy_http_seconds": 2092.699883899797,
+  "judge_http_seconds": 11.102977600006852,
+  "policy_elapsed_seconds_sum": 2360.7902847000223,
+  "money_cost": null,
+  "money_cost_reason": "No verified service pricing supplied",
+  "scoring_note": "Non-submission scores false, judge_correct remains null; no fabricated semantic judge calls",
+  "confidence_note": "project_judge_result.confidence is parsed from candidate response/default 1.0, not judge certainty",
+  "independence_note": "Separate post-run calls to the same configured model family, not a different judge deployment"
+}

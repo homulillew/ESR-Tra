@@ -1,0 +1,64 @@
+﻿Obtaining file:///C:/Users/USER/Desktop/zip/ESR-Tra-stride-a3-hard12/harnesses/stride
+  Installing build dependencies: started
+  Installing build dependencies: finished with status 'done'
+  Checking if build backend supports build_editable: started
+  Checking if build backend supports build_editable: finished with status 'done'
+  Getting requirements to build editable: started
+  Getting requirements to build editable: finished with status 'done'
+  Preparing editable metadata (pyproject.toml): started
+  Preparing editable metadata (pyproject.toml): finished with status 'done'
+Collecting jsonschema<5,>=4.23 (from stride-search-harness==0.1.0a3)
+  Using cached jsonschema-4.26.0-py3-none-any.whl.metadata (7.6 kB)
+Collecting pytest>=8 (from stride-search-harness==0.1.0a3)
+  Using cached pytest-9.1.1-py3-none-any.whl.metadata (7.6 kB)
+Collecting coverage>=7 (from stride-search-harness==0.1.0a3)
+  Using cached coverage-7.16.1-cp313-cp313-win_amd64.whl.metadata (8.4 kB)
+Collecting attrs>=22.2.0 (from jsonschema<5,>=4.23->stride-search-harness==0.1.0a3)
+  Using cached attrs-26.1.0-py3-none-any.whl.metadata (8.8 kB)
+Collecting jsonschema-specifications>=2023.03.6 (from jsonschema<5,>=4.23->stride-search-harness==0.1.0a3)
+  Using cached jsonschema_specifications-2025.9.1-py3-none-any.whl.metadata (2.9 kB)
+Collecting referencing>=0.28.4 (from jsonschema<5,>=4.23->stride-search-harness==0.1.0a3)
+  Using cached referencing-0.37.0-py3-none-any.whl.metadata (2.8 kB)
+Collecting rpds-py>=0.25.0 (from jsonschema<5,>=4.23->stride-search-harness==0.1.0a3)
+  Using cached rpds_py-2026.6.3-cp313-cp313-win_amd64.whl.metadata (4.2 kB)
+Collecting colorama>=0.4 (from pytest>=8->stride-search-harness==0.1.0a3)
+  Using cached colorama-0.4.6-py2.py3-none-any.whl.metadata (17 kB)
+Collecting iniconfig>=1.0.1 (from pytest>=8->stride-search-harness==0.1.0a3)
+  Using cached iniconfig-2.3.0-py3-none-any.whl.metadata (2.5 kB)
+Collecting packaging>=22 (from pytest>=8->stride-search-harness==0.1.0a3)
+  Using cached packaging-26.3-py3-none-any.whl.metadata (3.5 kB)
+Collecting pluggy<2,>=1.5 (from pytest>=8->stride-search-harness==0.1.0a3)
+  Using cached pluggy-1.6.0-py3-none-any.whl.metadata (4.8 kB)
+Collecting pygments>=2.7.2 (from pytest>=8->stride-search-harness==0.1.0a3)
+  Using cached pygments-2.21.0-py3-none-any.whl.metadata (2.5 kB)
+Using cached jsonschema-4.26.0-py3-none-any.whl (90 kB)
+Using cached attrs-26.1.0-py3-none-any.whl (67 kB)
+Using cached coverage-7.16.1-cp313-cp313-win_amd64.whl (226 kB)
+Using cached jsonschema_specifications-2025.9.1-py3-none-any.whl (18 kB)
+Using cached pytest-9.1.1-py3-none-any.whl (386 kB)
+Using cached pluggy-1.6.0-py3-none-any.whl (20 kB)
+Using cached colorama-0.4.6-py2.py3-none-any.whl (25 kB)
+Using cached iniconfig-2.3.0-py3-none-any.whl (7.5 kB)
+Using cached packaging-26.3-py3-none-any.whl (129 kB)
+Using cached pygments-2.21.0-py3-none-any.whl (1.3 MB)
+Using cached referencing-0.37.0-py3-none-any.whl (26 kB)
+Using cached rpds_py-2026.6.3-cp313-cp313-win_amd64.whl (219 kB)
+Building wheels for collected packages: stride-search-harness
+  Building editable for stride-search-harness (pyproject.toml): started
+  Building editable for stride-search-harness (pyproject.toml): finished with status 'done'
+  Created wheel for stride-search-harness: filename=stride_search_harness-0.1.0a3-0.editable-py3-none-any.whl size=1865 sha256=d4d6afed90170a52aad090b104b25aaac57a1a4fd6ae5b64c1a218587ac8f2cc
+  Stored in directory: C:\Users\USER\AppData\Local\Temp\pip-ephem-wheel-cache-6zunf0f_\wheels\82\1b\50\4419e1b78dc48e80677e6dbb2818b32f772fe37258ce799700
+Successfully built stride-search-harness
+Installing collected packages: rpds-py, pygments, pluggy, packaging, iniconfig, coverage, colorama, attrs, referencing, pytest, jsonschema-specifications, jsonschema, stride-search-harness
+
+Successfully installed attrs-26.1.0 colorama-0.4.6 coverage-7.16.1 iniconfig-2.3.0 jsonschema-4.26.0 jsonschema-specifications-2025.9.1 packaging-26.3 pluggy-1.6.0 pygments-2.21.0 pytest-9.1.1 referencing-0.37.0 rpds-py-2026.6.3 stride-search-harness-0.1.0a3
+python.exe : 
+At line:4 char:1
++ & "$validationRoot/venv/Scripts/python.exe" -m pip install -e 'harnes ...
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+[notice] A new release of pip is available: 26.1.2 -> 26.2.1
+[notice] To update, run: C:\Users\USER\Desktop\zip\ESR-Tra-stride-a3-hard12\runs\hard12-20260914T095418Z\venv\Scri
+pts\python.exe -m pip install --upgrade pip

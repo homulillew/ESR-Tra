@@ -1,0 +1,197 @@
+{
+  "protocol": "stride-search-3",
+  "head": "07504c00659ac2d909947aa9548b7f8fadcc7db670b5a267b259c882c02bf552",
+  "outcome": "submitted",
+  "formal_correct": null,
+  "model_attempts": 5,
+  "backend_attempts": 7,
+  "queries": [
+    {
+      "round": 1,
+      "top_k": 5,
+      "equivalence_key": "9aa350f10b0a7e51db0a7f0745d9bad1a483b70792556e72a8151f1f77c0dd4a",
+      "cached": false,
+      "query_sha256": "67d62d1c6a46428878b9b7adbec7ef2ed2b0700c9bafc2ab82c90fa38b572829",
+      "query": "township established 1960s migrant workers streets renamed prefix",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"township\" OR \"established\" OR \"1960s\" OR \"migrant\" OR \"workers\" OR \"streets\" OR \"renamed\" OR \"prefix\"",
+        "terms": [
+          "township",
+          "established",
+          "1960s",
+          "migrant",
+          "workers",
+          "streets",
+          "renamed",
+          "prefix"
+        ]
+      }
+    },
+    {
+      "round": 1,
+      "top_k": 5,
+      "equivalence_key": "8412ca3b888cf240a27b920291973efdf18f8aba1d87f8551381369b9c40d716",
+      "cached": false,
+      "query_sha256": "28ae1464b686b55fd277d1ef6af66dbe2153fa91bb4792e211d64558b7d201bd",
+      "query": "township 1960s migrant workers street names prefix renamed late 2010s",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"township\" OR \"1960s\" OR \"migrant\" OR \"workers\" OR \"street\" OR \"names\" OR \"prefix\" OR \"renamed\" OR \"late\" OR \"2010s\"",
+        "terms": [
+          "township",
+          "1960s",
+          "migrant",
+          "workers",
+          "street",
+          "names",
+          "prefix",
+          "renamed",
+          "late",
+          "2010s"
+        ]
+      }
+    },
+    {
+      "round": 1,
+      "top_k": 5,
+      "equivalence_key": "40348e01c78244b0a7069086b208ef3e2213d1909ebab8087af28917f5f02c4d",
+      "cached": false,
+      "query_sha256": "95d6ea14e9c3a353b2d8e3f1d48e1a6803977cd7943e7bac4a86a6c14eff5884",
+      "query": "butchery restaurant township heart early 2000s popular",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"butchery\" OR \"restaurant\" OR \"township\" OR \"heart\" OR \"early\" OR \"2000s\" OR \"popular\"",
+        "terms": [
+          "butchery",
+          "restaurant",
+          "township",
+          "heart",
+          "early",
+          "2000s",
+          "popular"
+        ]
+      }
+    },
+    {
+      "round": 2,
+      "top_k": 5,
+      "equivalence_key": "b205f480de4e57e060fb1a8e4ee0c4a6eae22f9270bf336cc61409347b78d30e",
+      "cached": false,
+      "query_sha256": "6f7bd40e703f8732f3e596217f39c149c25648f3e3ae093d81a2c2aa865eef75",
+      "query": "Gugulethu school established 1980s started in church",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"gugulethu\" OR \"school\" OR \"established\" OR \"1980s\" OR \"started\" OR \"in\" OR \"church\"",
+        "terms": [
+          "gugulethu",
+          "school",
+          "established",
+          "1980s",
+          "started",
+          "in",
+          "church"
+        ]
+      }
+    },
+    {
+      "round": 2,
+      "top_k": 5,
+      "equivalence_key": "06d9c17930d69ddc8f714303aa8c7fea21a60e23b0a690a6ed00fb8886dbcb6e",
+      "cached": false,
+      "query_sha256": "11ad02b62142b1b7e91407c7b07040f3b9b799963125528efd2eac46c40de845",
+      "query": "Gugulethu school 1980s church longest serving employee",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"gugulethu\" OR \"school\" OR \"1980s\" OR \"church\" OR \"longest\" OR \"serving\" OR \"employee\"",
+        "terms": [
+          "gugulethu",
+          "school",
+          "1980s",
+          "church",
+          "longest",
+          "serving",
+          "employee"
+        ]
+      }
+    },
+    {
+      "round": 2,
+      "top_k": 5,
+      "equivalence_key": "af3456c88467088450fe2e85f834989f339cfdf9ff6a56a961d928b8732539dd",
+      "cached": false,
+      "query_sha256": "87217af0075972625135ba8bf4e17cd7f0ef20b4c9818091adac4ddf391e4582",
+      "query": "Gugulethu township school started church 1980s article",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"gugulethu\" OR \"township\" OR \"school\" OR \"started\" OR \"church\" OR \"1980s\" OR \"article\"",
+        "terms": [
+          "gugulethu",
+          "township",
+          "school",
+          "started",
+          "church",
+          "1980s",
+          "article"
+        ]
+      }
+    }
+  ],
+  "equivalent_query_repeats": 0,
+  "views": [
+    {
+      "round": 1,
+      "compacted": false,
+      "visible_evidence": [],
+      "shelf": [],
+      "shelf_evicted": []
+    },
+    {
+      "round": 2,
+      "compacted": false,
+      "visible_evidence": [],
+      "shelf": [],
+      "shelf_evicted": []
+    },
+    {
+      "round": 3,
+      "compacted": false,
+      "visible_evidence": [],
+      "shelf": [],
+      "shelf_evicted": []
+    },
+    {
+      "round": 4,
+      "compacted": false,
+      "visible_evidence": [
+        "e1"
+      ],
+      "shelf": [],
+      "shelf_evicted": []
+    },
+    {
+      "round": 5,
+      "compacted": false,
+      "visible_evidence": [
+        "e1",
+        "e2"
+      ],
+      "shelf": [],
+      "shelf_evicted": []
+    }
+  ],
+  "delivered_refs": [
+    "e1",
+    "e2"
+  ],
+  "submitted_refs": [
+    "e1",
+    "e2"
+  ],
+  "text_included": true,
+  "limitations": [
+    "Equivalence is compiler equality, not semantic identity or wasted-search proof",
+    "Raw-window visibility/selection is not entailment or complete evidence coverage",
+    "No live q26 replay or independent answer scoring is performed"
+  ]
+}

@@ -1,0 +1,63 @@
+{
+  "event_count": 499,
+  "head": "1bb75f4b1e55f681d290240a7646808f5362a40d9e89fae16cdfc9e7cd480aba",
+  "protocol": "stride-search-3",
+  "model_attempts": 64,
+  "backend_attempts": 7,
+  "actions_recorded": 64,
+  "executed_actions": 3,
+  "usage_known": {
+    "input_tokens": 714035,
+    "output_tokens": 5323,
+    "cache_read_tokens": 622208,
+    "cache_write_tokens": 0
+  },
+  "unknown_usage_calls": 0,
+  "outstanding_requests": [],
+  "formal_correct": null,
+  "recovery_events": {
+    "delivery_preflight": 63
+  },
+  "nonblocking_note_failures": 0,
+  "action_counts": {
+    "search": 2,
+    "read": 1,
+    "finish": 61
+  },
+  "action_error_counts": {
+    "arguments_invalid": 61
+  },
+  "final_phase_requests": 1,
+  "compaction_requests": 0,
+  "rounds_receiving_new_raw": 1,
+  "cache_query_hits": 0,
+  "unchanged_note_updates": 0,
+  "limitations": [
+    "No semantic judge has run",
+    "No resume or automatic reissue",
+    "Hashes are not adversarial authentication"
+  ],
+  "usage_normalized": {
+    "input_tokens": {
+      "total": 714035,
+      "known_sum": 714035,
+      "missing_calls": 0
+    },
+    "output_tokens": {
+      "total": 5323,
+      "known_sum": 5323,
+      "missing_calls": 0
+    },
+    "cache_read_tokens": {
+      "total": 622208,
+      "known_sum": 622208,
+      "missing_calls": 0
+    },
+    "cache_write_tokens": {
+      "total": null,
+      "known_sum": 0,
+      "missing_calls": 64
+    }
+  },
+  "usage_note": "Archive empty sums are preserved in usage_known; absent provider fields are null in usage_normalized."
+}

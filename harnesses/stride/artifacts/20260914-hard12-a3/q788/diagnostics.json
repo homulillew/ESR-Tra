@@ -1,0 +1,414 @@
+{
+  "protocol": "stride-search-3",
+  "head": "47d2d4b50bf224e47c82975176ee9fd4079fc5331c880cb8435e7c3cb5c8a520",
+  "outcome": "submitted",
+  "formal_correct": null,
+  "model_attempts": 12,
+  "backend_attempts": 18,
+  "queries": [
+    {
+      "round": 1,
+      "top_k": 5,
+      "equivalence_key": "b4f2df87e8b06aa31f0f4ae76506d6425330904a0eb4da5c06a1bf826f3a58fc",
+      "cached": false,
+      "query_sha256": "1b447e968c18f6894fb1dbc8eba9c672dc890f6a9737e2596fb16d571435657e",
+      "query": "mosque capacity 150000 people interior area 400000 square feet",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"mosque\" OR \"capacity\" OR \"150000\" OR \"people\" OR \"interior\" OR \"area\" OR \"400000\" OR \"square\" OR \"feet\"",
+        "terms": [
+          "mosque",
+          "capacity",
+          "150000",
+          "people",
+          "interior",
+          "area",
+          "400000",
+          "square",
+          "feet"
+        ]
+      }
+    },
+    {
+      "round": 1,
+      "top_k": 5,
+      "equivalence_key": "38633ea5f70876aa48939a224f0a5553ccae1e1c0b7a79b0a4a1da031c4147d1",
+      "cached": false,
+      "query_sha256": "a112a853c14b32f9ffee3a7d086ed06889e22ac5004396232e94e82bf41545e9",
+      "query": "Masjid al-Haram capacity expansion before 1990",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"masjid\" OR \"al\" OR \"haram\" OR \"capacity\" OR \"expansion\" OR \"before\" OR \"1990\"",
+        "terms": [
+          "masjid",
+          "al",
+          "haram",
+          "capacity",
+          "expansion",
+          "before",
+          "1990"
+        ]
+      }
+    },
+    {
+      "round": 1,
+      "top_k": 5,
+      "equivalence_key": "5e2c40d2548ef056fde43308ecb56fd3ee8ab168e1f68cd0eb0e828b7c2c48fd",
+      "cached": false,
+      "query_sha256": "82b63da0673f7c9b6393751d671a28c90ff3d976f4ba71d13dafa71799180151",
+      "query": "Prophets Mosque Medina capacity interior area square feet",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"prophets\" OR \"mosque\" OR \"medina\" OR \"capacity\" OR \"interior\" OR \"area\" OR \"square\" OR \"feet\"",
+        "terms": [
+          "prophets",
+          "mosque",
+          "medina",
+          "capacity",
+          "interior",
+          "area",
+          "square",
+          "feet"
+        ]
+      }
+    },
+    {
+      "round": 3,
+      "top_k": 5,
+      "equivalence_key": "f10ba7d2a6f6341735f8c10abbdcba1aaa05b0f558e220dde6132324b7ef6b39",
+      "cached": false,
+      "query_sha256": "1dac58d8fde43ef9ca64d43bcd1e58bda37b5d1ed9445b232c58d63eb7dde96e",
+      "query": "Taj-ul-Masajid Bhopal construction completed year history",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"taj\" OR \"ul\" OR \"masajid\" OR \"bhopal\" OR \"construction\" OR \"completed\" OR \"year\" OR \"history\"",
+        "terms": [
+          "taj",
+          "ul",
+          "masajid",
+          "bhopal",
+          "construction",
+          "completed",
+          "year",
+          "history"
+        ]
+      }
+    },
+    {
+      "round": 3,
+      "top_k": 5,
+      "equivalence_key": "25311918adf442963b1fb34d23ab7c68dcbf435d0bce9f353f00d6780ee1a132",
+      "cached": false,
+      "query_sha256": "a1b1e2f1a95c16f0ebac1ad7c64958b2dae75929dff51e3b9272e395d91c3f9d",
+      "query": "Taj-ul-Masajid Bhopal nearby mosque hospital",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"taj\" OR \"ul\" OR \"masajid\" OR \"bhopal\" OR \"nearby\" OR \"mosque\" OR \"hospital\"",
+        "terms": [
+          "taj",
+          "ul",
+          "masajid",
+          "bhopal",
+          "nearby",
+          "mosque",
+          "hospital"
+        ]
+      }
+    },
+    {
+      "round": 3,
+      "top_k": 5,
+      "equivalence_key": "9ace51fa3aa59d88ff96485aeb01d4a3f4b5893ceafbdbf3460ebb2304e9596b",
+      "cached": false,
+      "query_sha256": "8c73914e92147f55e6a739c6be1ca1cb6398b198d256f4854329583cc827118f",
+      "query": "Taj-ul-Masajid Bhopal capacity 175000 interior area 430000",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"taj\" OR \"ul\" OR \"masajid\" OR \"bhopal\" OR \"capacity\" OR \"175000\" OR \"interior\" OR \"area\" OR \"430000\"",
+        "terms": [
+          "taj",
+          "ul",
+          "masajid",
+          "bhopal",
+          "capacity",
+          "175000",
+          "interior",
+          "area",
+          "430000"
+        ]
+      }
+    },
+    {
+      "round": 5,
+      "top_k": 5,
+      "equivalence_key": "f63384695b77b10064b39aca9c303a5e97f8f50d0f6fa4ed4d09f9ef821a972b",
+      "cached": false,
+      "query_sha256": "d064952dd8d777712911ef49b7a8394e0d440f0fb7c50e0f2335d5ca81967768",
+      "query": "Moti Masjid Bhopal built year Sikander Jahan Begum",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"moti\" OR \"masjid\" OR \"bhopal\" OR \"built\" OR \"year\" OR \"sikander\" OR \"jahan\" OR \"begum\"",
+        "terms": [
+          "moti",
+          "masjid",
+          "bhopal",
+          "built",
+          "year",
+          "sikander",
+          "jahan",
+          "begum"
+        ]
+      }
+    },
+    {
+      "round": 5,
+      "top_k": 5,
+      "equivalence_key": "3812a1bd949f057d5f672283dc217fc1b8eb3fd961160b3d8565c20adefe9abe",
+      "cached": false,
+      "query_sha256": "5b20c0d67ced03676ee448077b3c7fd03aaa3173fc0c51ffecd7c9d9c326e7c5",
+      "query": "Taj-ul-Masajid interior area 430000 square feet 23900 square meters",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"taj\" OR \"ul\" OR \"masajid\" OR \"interior\" OR \"area\" OR \"430000\" OR \"square\" OR \"feet\" OR \"23900\" OR \"meters\"",
+        "terms": [
+          "taj",
+          "ul",
+          "masajid",
+          "interior",
+          "area",
+          "430000",
+          "square",
+          "feet",
+          "23900",
+          "meters"
+        ]
+      }
+    },
+    {
+      "round": 5,
+      "top_k": 5,
+      "equivalence_key": "f67a9185cb4826e40115a318d6c1231f95dbc52956f8bd40fba7f190296b02de",
+      "cached": false,
+      "query_sha256": "2055648864920e33a9bde3316dafd1872abdbd1d67eeb8db1bea2b4e414b8459",
+      "query": "hospital near Taj-ul-Masajid Bhopal established",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"hospital\" OR \"near\" OR \"taj\" OR \"ul\" OR \"masajid\" OR \"bhopal\" OR \"established\"",
+        "terms": [
+          "hospital",
+          "near",
+          "taj",
+          "ul",
+          "masajid",
+          "bhopal",
+          "established"
+        ]
+      }
+    },
+    {
+      "round": 6,
+      "top_k": 5,
+      "equivalence_key": "93a16bf5e3cb2bd64eb13c9480d5dfda05a7413475917739d5986a169e142acb",
+      "cached": false,
+      "query_sha256": "949b392b57ea9626d90d16f6dbe0e08f61e0192dd49fdc51916d6aaba98bd070",
+      "query": "Hamidia Hospital Bhopal established year history",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"hamidia\" OR \"hospital\" OR \"bhopal\" OR \"established\" OR \"year\" OR \"history\"",
+        "terms": [
+          "hamidia",
+          "hospital",
+          "bhopal",
+          "established",
+          "year",
+          "history"
+        ]
+      }
+    },
+    {
+      "round": 6,
+      "top_k": 5,
+      "equivalence_key": "eff683a933a005773ff1726296f3b327464bc4a40f35df0326acd370768310bb",
+      "cached": false,
+      "query_sha256": "b8a75bbc8a16108fc035a249a82337fcd86073e738a237ba6394b5f262dc448f",
+      "query": "Moti Masjid Bhopal built 1860 Sikander Begum",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"moti\" OR \"masjid\" OR \"bhopal\" OR \"built\" OR \"1860\" OR \"sikander\" OR \"begum\"",
+        "terms": [
+          "moti",
+          "masjid",
+          "bhopal",
+          "built",
+          "1860",
+          "sikander",
+          "begum"
+        ]
+      }
+    },
+    {
+      "round": 6,
+      "top_k": 5,
+      "equivalence_key": "c99215b48f08400206694c5a8ae95a9df1b4057845f1a7ef7fe7bf288cb16621",
+      "cached": false,
+      "query_sha256": "f3dc8058c8304eaa7ea7a7858882829969a30a9398202754e0f8bf6784957413",
+      "query": "Taj-ul-Masajid Bhopal walking distance Moti Masjid Hamidia Hospital",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"taj\" OR \"ul\" OR \"masajid\" OR \"bhopal\" OR \"walking\" OR \"distance\" OR \"moti\" OR \"masjid\" OR \"hamidia\" OR \"hospital\"",
+        "terms": [
+          "taj",
+          "ul",
+          "masajid",
+          "bhopal",
+          "walking",
+          "distance",
+          "moti",
+          "masjid",
+          "hamidia",
+          "hospital"
+        ]
+      }
+    }
+  ],
+  "equivalent_query_repeats": 0,
+  "views": [
+    {
+      "round": 1,
+      "compacted": false,
+      "visible_evidence": [],
+      "shelf": [],
+      "shelf_evicted": []
+    },
+    {
+      "round": 2,
+      "compacted": false,
+      "visible_evidence": [],
+      "shelf": [],
+      "shelf_evicted": []
+    },
+    {
+      "round": 3,
+      "compacted": false,
+      "visible_evidence": [],
+      "shelf": [],
+      "shelf_evicted": []
+    },
+    {
+      "round": 4,
+      "compacted": false,
+      "visible_evidence": [],
+      "shelf": [],
+      "shelf_evicted": []
+    },
+    {
+      "round": 5,
+      "compacted": false,
+      "visible_evidence": [
+        "e1"
+      ],
+      "shelf": [],
+      "shelf_evicted": []
+    },
+    {
+      "round": 6,
+      "compacted": false,
+      "visible_evidence": [
+        "e1"
+      ],
+      "shelf": [],
+      "shelf_evicted": []
+    },
+    {
+      "round": 7,
+      "compacted": false,
+      "visible_evidence": [
+        "e1"
+      ],
+      "shelf": [],
+      "shelf_evicted": []
+    },
+    {
+      "round": 8,
+      "compacted": false,
+      "visible_evidence": [
+        "e1",
+        "e2"
+      ],
+      "shelf": [],
+      "shelf_evicted": []
+    },
+    {
+      "round": 9,
+      "compacted": false,
+      "visible_evidence": [
+        "e1",
+        "e2",
+        "e3"
+      ],
+      "shelf": [],
+      "shelf_evicted": []
+    },
+    {
+      "round": 10,
+      "compacted": false,
+      "visible_evidence": [
+        "e1",
+        "e2",
+        "e3",
+        "e4"
+      ],
+      "shelf": [],
+      "shelf_evicted": []
+    },
+    {
+      "round": 11,
+      "compacted": false,
+      "visible_evidence": [
+        "e1",
+        "e2",
+        "e3",
+        "e4",
+        "e5"
+      ],
+      "shelf": [],
+      "shelf_evicted": []
+    },
+    {
+      "round": 12,
+      "compacted": false,
+      "visible_evidence": [
+        "e1",
+        "e2",
+        "e3",
+        "e4",
+        "e5",
+        "e6"
+      ],
+      "shelf": [],
+      "shelf_evicted": []
+    }
+  ],
+  "delivered_refs": [
+    "e1",
+    "e2",
+    "e3",
+    "e4",
+    "e5",
+    "e6"
+  ],
+  "submitted_refs": [
+    "e1",
+    "e2",
+    "e3",
+    "e4",
+    "e5",
+    "e6"
+  ],
+  "text_included": true,
+  "limitations": [
+    "Equivalence is compiler equality, not semantic identity or wasted-search proof",
+    "Raw-window visibility/selection is not entailment or complete evidence coverage",
+    "No live q26 replay or independent answer scoring is performed"
+  ]
+}

@@ -1,0 +1,878 @@
+{
+  "metrics": {
+    "terminal": {
+      "answer": "The Dorset Culture of the Eastern Arctic",
+      "basis": [
+        {
+          "document": "d37",
+          "document_chars": 5147,
+          "end": 5147,
+          "kind": "raw_evidence",
+          "ref": "e4",
+          "sha256": "eef09a784c75341350344114eba1f20877848442268d02f73a0e875e5e87c924",
+          "snapshot": "eef09a784c75341350344114eba1f20877848442268d02f73a0e875e5e87c924",
+          "start": 0
+        },
+        {
+          "document": "d21",
+          "document_chars": 35979,
+          "end": 6000,
+          "kind": "raw_evidence",
+          "ref": "e1",
+          "sha256": "525e278daf75c0d7b7d70d60c8b073af9ce4fe7433f9e5c5553b4e167b771c12",
+          "snapshot": "237346b59dc624f079566d064de401b4387fd9cb14ff14376d48b1c0ba57867b",
+          "start": 0
+        },
+        {
+          "document": "d38",
+          "document_chars": 3229,
+          "end": 3229,
+          "kind": "raw_evidence",
+          "ref": "e6",
+          "sha256": "91cabfeb55d4c249c456c4111e140c7101078f737f21d73637f040448d29a517",
+          "snapshot": "91cabfeb55d4c249c456c4111e140c7101078f737f21d73637f040448d29a517",
+          "start": 0
+        }
+      ],
+      "elapsed_seconds": 62.992539300001226,
+      "outcome": "submitted",
+      "refs": [
+        "e4",
+        "e1",
+        "e6"
+      ],
+      "semantic_status": "not_automatically_verified"
+    },
+    "formal_correct": null,
+    "model_attempts": 9,
+    "http_attempts": 9,
+    "native_calls": 16,
+    "executed_actions": 16,
+    "action_counts": {
+      "search": 9,
+      "read": 6,
+      "finish": 1
+    },
+    "declared_search_queries": 26,
+    "query_execution_count": 26,
+    "backend_calls": 30,
+    "backend_by_kind": {
+      "search": 26,
+      "get_document": 4
+    },
+    "equivalent_key_repeats": 0,
+    "expression_repeats": 0,
+    "exact_query_cache_hits": 0,
+    "quote_queries": 2,
+    "site_queries": 0,
+    "uppercase_boolean_queries": 0,
+    "identical_previous_result_sets": 3,
+    "compaction_requests": 1,
+    "shelf_restore_requests": 0,
+    "shelf_restored_windows": 0,
+    "shelf_capacity_evictions": 0,
+    "direct_shelf_restore_wire_bytes": 0,
+    "total_wire_body_bytes": 528431,
+    "usage_known": {
+      "input_tokens": 125014,
+      "output_tokens": 1666,
+      "cache_read_tokens": 80128,
+      "cache_write_tokens": 0
+    },
+    "unknown_usage_calls": 0,
+    "http_latency_seconds": 40.680391700036125,
+    "backend_latency_seconds": 21.349658600025577,
+    "final_request_rounds": [],
+    "recovery_events": {
+      "delivery_preflight": 8
+    },
+    "result_withheld": 0,
+    "first_request_question_exact": true,
+    "first_request_capabilities": {
+      "boolean_operators": false,
+      "kind": "sqlite-fts5-bm25",
+      "negative_result": "no hit for this expression is not proof that the fact is absent",
+      "phrase_quotes": false,
+      "query_rule": "lowercase; regex word extraction; first-occurrence deduplication; OR of quoted individual tokens",
+      "ranking": "SQLite bm25(search), ascending; docid tie-break; unchanged from q26 LocalIndex",
+      "scope": "fixed local corpus; not live web",
+      "site_filter": false,
+      "title_kind": "stored URL, not an extracted page title",
+      "warning": "site:, quotes and AND/OR in input are not filters/operators. Their words may become ordinary search terms. Use a few discriminating terms."
+    },
+    "first_request_notes": [],
+    "returned_models": [
+      "glm-5.2"
+    ]
+  },
+  "queries": [
+    {
+      "round": 1,
+      "query": "born 1886 mistaken for shaman 1915 trip foreign language",
+      "expression": "\"born\" OR \"1886\" OR \"mistaken\" OR \"for\" OR \"shaman\" OR \"1915\" OR \"trip\" OR \"foreign\" OR \"language\"",
+      "new_docids": [
+        "34631",
+        "40447",
+        "61847",
+        "64024",
+        "6555"
+      ],
+      "max_previous_result_jaccard": null,
+      "identical_previous_result_set": false,
+      "contains_quote": false,
+      "contains_site": false,
+      "contains_uppercase_boolean": false
+    },
+    {
+      "round": 1,
+      "query": "person born 1886 shaman 1915 inadvertent word misuse",
+      "expression": "\"person\" OR \"born\" OR \"1886\" OR \"shaman\" OR \"1915\" OR \"inadvertent\" OR \"word\" OR \"misuse\"",
+      "new_docids": [
+        "48516",
+        "49821",
+        "67324"
+      ],
+      "max_previous_result_jaccard": 0.25,
+      "identical_previous_result_set": false,
+      "contains_quote": false,
+      "contains_site": false,
+      "contains_uppercase_boolean": false
+    },
+    {
+      "round": 1,
+      "query": "1915 trip shaman mistaken foreign language word misuse 1886",
+      "expression": "\"1915\" OR \"trip\" OR \"shaman\" OR \"mistaken\" OR \"foreign\" OR \"language\" OR \"word\" OR \"misuse\" OR \"1886\"",
+      "new_docids": [
+        "59688",
+        "88507"
+      ],
+      "max_previous_result_jaccard": 0.42857142857142855,
+      "identical_previous_result_set": false,
+      "contains_quote": false,
+      "contains_site": false,
+      "contains_uppercase_boolean": false
+    },
+    {
+      "round": 1,
+      "query": "quarterly journal initiated 1888 cultural discoveries report 1940",
+      "expression": "\"quarterly\" OR \"journal\" OR \"initiated\" OR \"1888\" OR \"cultural\" OR \"discoveries\" OR \"report\" OR \"1940\"",
+      "new_docids": [
+        "14320",
+        "18017",
+        "18125",
+        "34541",
+        "81566"
+      ],
+      "max_previous_result_jaccard": 0.0,
+      "identical_previous_result_set": false,
+      "contains_quote": false,
+      "contains_site": false,
+      "contains_uppercase_boolean": false
+    },
+    {
+      "round": 1,
+      "query": "journal founded 1888 quarterly 1940 report cultural discoveries",
+      "expression": "\"journal\" OR \"founded\" OR \"1888\" OR \"quarterly\" OR \"1940\" OR \"report\" OR \"cultural\" OR \"discoveries\"",
+      "new_docids": [
+        "78904"
+      ],
+      "max_previous_result_jaccard": 0.6666666666666666,
+      "identical_previous_result_set": false,
+      "contains_quote": false,
+      "contains_site": false,
+      "contains_uppercase_boolean": false
+    },
+    {
+      "round": 1,
+      "query": "quarterly journal started 1888 published 1940 cultural report",
+      "expression": "\"quarterly\" OR \"journal\" OR \"started\" OR \"1888\" OR \"published\" OR \"1940\" OR \"cultural\" OR \"report\"",
+      "new_docids": [
+        "89271"
+      ],
+      "max_previous_result_jaccard": 0.42857142857142855,
+      "identical_previous_result_set": false,
+      "contains_quote": false,
+      "contains_site": false,
+      "contains_uppercase_boolean": false
+    },
+    {
+      "round": 2,
+      "query": "anthropologist born 1886 mistaken for shaman 1915 trip",
+      "expression": "\"anthropologist\" OR \"born\" OR \"1886\" OR \"mistaken\" OR \"for\" OR \"shaman\" OR \"1915\" OR \"trip\"",
+      "new_docids": [
+        "24452",
+        "67128",
+        "72439",
+        "78189"
+      ],
+      "max_previous_result_jaccard": 0.1111111111111111,
+      "identical_previous_result_set": false,
+      "contains_quote": false,
+      "contains_site": false,
+      "contains_uppercase_boolean": false
+    },
+    {
+      "round": 2,
+      "query": "archaeologist born 1886 1915 expedition shaman word misuse foreign language",
+      "expression": "\"archaeologist\" OR \"born\" OR \"1886\" OR \"1915\" OR \"expedition\" OR \"shaman\" OR \"word\" OR \"misuse\" OR \"foreign\" OR \"language\"",
+      "new_docids": [
+        "23590",
+        "30924",
+        "72006",
+        "8863"
+      ],
+      "max_previous_result_jaccard": 0.1111111111111111,
+      "identical_previous_result_set": false,
+      "contains_quote": false,
+      "contains_site": false,
+      "contains_uppercase_boolean": false
+    },
+    {
+      "round": 2,
+      "query": "anthropologist 1886 1915 trip mistaken shaman three children same house 35 years",
+      "expression": "\"anthropologist\" OR \"1886\" OR \"1915\" OR \"trip\" OR \"mistaken\" OR \"shaman\" OR \"three\" OR \"children\" OR \"same\" OR \"house\" OR \"35\" OR \"years\"",
+      "new_docids": [
+        "32509"
+      ],
+      "max_previous_result_jaccard": 0.6666666666666666,
+      "identical_previous_result_set": false,
+      "contains_quote": false,
+      "contains_site": false,
+      "contains_uppercase_boolean": false
+    },
+    {
+      "round": 2,
+      "query": "quarterly journal founded 1888 anthropology archaeology",
+      "expression": "\"quarterly\" OR \"journal\" OR \"founded\" OR \"1888\" OR \"anthropology\" OR \"archaeology\"",
+      "new_docids": [
+        "54313",
+        "64357",
+        "87432"
+      ],
+      "max_previous_result_jaccard": 0.25,
+      "identical_previous_result_set": false,
+      "contains_quote": false,
+      "contains_site": false,
+      "contains_uppercase_boolean": false
+    },
+    {
+      "round": 2,
+      "query": "American Anthropologist founded 1888 quarterly",
+      "expression": "\"american\" OR \"anthropologist\" OR \"founded\" OR \"1888\" OR \"quarterly\"",
+      "new_docids": [
+        "47170",
+        "74652",
+        "76542"
+      ],
+      "max_previous_result_jaccard": 0.25,
+      "identical_previous_result_set": false,
+      "contains_quote": false,
+      "contains_site": false,
+      "contains_uppercase_boolean": false
+    },
+    {
+      "round": 2,
+      "query": "Journal of American Folklore founded 1888 quarterly",
+      "expression": "\"journal\" OR \"of\" OR \"american\" OR \"folklore\" OR \"founded\" OR \"1888\" OR \"quarterly\"",
+      "new_docids": [],
+      "max_previous_result_jaccard": 0.6666666666666666,
+      "identical_previous_result_set": false,
+      "contains_quote": false,
+      "contains_site": false,
+      "contains_uppercase_boolean": false
+    },
+    {
+      "round": 4,
+      "query": "Diamond Jenness mistaken for shaman word misuse Inuit language",
+      "expression": "\"diamond\" OR \"jenness\" OR \"mistaken\" OR \"for\" OR \"shaman\" OR \"word\" OR \"misuse\" OR \"inuit\" OR \"language\"",
+      "new_docids": [
+        "10838",
+        "25511",
+        "53714"
+      ],
+      "max_previous_result_jaccard": 0.25,
+      "identical_previous_result_set": false,
+      "contains_quote": false,
+      "contains_site": false,
+      "contains_uppercase_boolean": false
+    },
+    {
+      "round": 4,
+      "query": "Diamond Jenness shaman angakkuq word mistake 1915",
+      "expression": "\"diamond\" OR \"jenness\" OR \"shaman\" OR \"angakkuq\" OR \"word\" OR \"mistake\" OR \"1915\"",
+      "new_docids": [
+        "23009"
+      ],
+      "max_previous_result_jaccard": 0.42857142857142855,
+      "identical_previous_result_set": false,
+      "contains_quote": false,
+      "contains_site": false,
+      "contains_uppercase_boolean": false
+    },
+    {
+      "round": 4,
+      "query": "Diamond Jenness accidentally called himself shaman Inuit",
+      "expression": "\"diamond\" OR \"jenness\" OR \"accidentally\" OR \"called\" OR \"himself\" OR \"shaman\" OR \"inuit\"",
+      "new_docids": [
+        "61556"
+      ],
+      "max_previous_result_jaccard": 0.6666666666666666,
+      "identical_previous_result_set": false,
+      "contains_quote": false,
+      "contains_site": false,
+      "contains_uppercase_boolean": false
+    },
+    {
+      "round": 6,
+      "query": "The Dorset Culture of the Eastern Arctic American Anthropologist 1940 Rowley",
+      "expression": "\"the\" OR \"dorset\" OR \"culture\" OR \"of\" OR \"eastern\" OR \"arctic\" OR \"american\" OR \"anthropologist\" OR \"1940\" OR \"rowley\"",
+      "new_docids": [
+        "31368",
+        "70260",
+        "83465"
+      ],
+      "max_previous_result_jaccard": 0.25,
+      "identical_previous_result_set": false,
+      "contains_quote": false,
+      "contains_site": false,
+      "contains_uppercase_boolean": false
+    },
+    {
+      "round": 6,
+      "query": "Rowley Dorset Culture Eastern Arctic American Anthropologist volume 42 1940",
+      "expression": "\"rowley\" OR \"dorset\" OR \"culture\" OR \"eastern\" OR \"arctic\" OR \"american\" OR \"anthropologist\" OR \"volume\" OR \"42\" OR \"1940\"",
+      "new_docids": [],
+      "max_previous_result_jaccard": 0.6666666666666666,
+      "identical_previous_result_set": false,
+      "contains_quote": false,
+      "contains_site": false,
+      "contains_uppercase_boolean": false
+    },
+    {
+      "round": 6,
+      "query": "Graham Rowley Dorset culture American Anthropologist 1940 citation",
+      "expression": "\"graham\" OR \"rowley\" OR \"dorset\" OR \"culture\" OR \"american\" OR \"anthropologist\" OR \"1940\" OR \"citation\"",
+      "new_docids": [
+        "49657"
+      ],
+      "max_previous_result_jaccard": 0.6666666666666666,
+      "identical_previous_result_set": false,
+      "contains_quote": false,
+      "contains_site": false,
+      "contains_uppercase_boolean": false
+    },
+    {
+      "round": 6,
+      "query": "Graham Rowley born England 1912 archaeologist",
+      "expression": "\"graham\" OR \"rowley\" OR \"born\" OR \"england\" OR \"1912\" OR \"archaeologist\"",
+      "new_docids": [
+        "34720",
+        "49203"
+      ],
+      "max_previous_result_jaccard": 0.25,
+      "identical_previous_result_set": false,
+      "contains_quote": false,
+      "contains_site": false,
+      "contains_uppercase_boolean": false
+    },
+    {
+      "round": 6,
+      "query": "Graham Westbrook Rowley born 1912 England birthplace",
+      "expression": "\"graham\" OR \"westbrook\" OR \"rowley\" OR \"born\" OR \"1912\" OR \"england\" OR \"birthplace\"",
+      "new_docids": [
+        "80338",
+        "97045",
+        "98857"
+      ],
+      "max_previous_result_jaccard": 0.25,
+      "identical_previous_result_set": false,
+      "contains_quote": false,
+      "contains_site": false,
+      "contains_uppercase_boolean": false
+    },
+    {
+      "round": 7,
+      "query": "Rowley \"The Dorset Culture of the Eastern Arctic\" American Anthropologist 1940 pages",
+      "expression": "\"rowley\" OR \"the\" OR \"dorset\" OR \"culture\" OR \"of\" OR \"eastern\" OR \"arctic\" OR \"american\" OR \"anthropologist\" OR \"1940\" OR \"pages\"",
+      "new_docids": [],
+      "max_previous_result_jaccard": 1.0,
+      "identical_previous_result_set": true,
+      "contains_quote": true,
+      "contains_site": false,
+      "contains_uppercase_boolean": false
+    },
+    {
+      "round": 7,
+      "query": "American Anthropologist 1940 Rowley Dorset culture table of contents",
+      "expression": "\"american\" OR \"anthropologist\" OR \"1940\" OR \"rowley\" OR \"dorset\" OR \"culture\" OR \"table\" OR \"of\" OR \"contents\"",
+      "new_docids": [
+        "75104"
+      ],
+      "max_previous_result_jaccard": 0.6666666666666666,
+      "identical_previous_result_set": false,
+      "contains_quote": false,
+      "contains_site": false,
+      "contains_uppercase_boolean": false
+    },
+    {
+      "round": 7,
+      "query": "\"Dorset Culture of the Eastern Arctic\" Rowley 1940 citation pages",
+      "expression": "\"dorset\" OR \"culture\" OR \"of\" OR \"the\" OR \"eastern\" OR \"arctic\" OR \"rowley\" OR \"1940\" OR \"citation\" OR \"pages\"",
+      "new_docids": [
+        "22480"
+      ],
+      "max_previous_result_jaccard": 0.6666666666666666,
+      "identical_previous_result_set": false,
+      "contains_quote": true,
+      "contains_site": false,
+      "contains_uppercase_boolean": false
+    },
+    {
+      "round": 8,
+      "query": "Rowley Dorset Culture Eastern Arctic American Anthropologist 1940 volume 42 number pages",
+      "expression": "\"rowley\" OR \"dorset\" OR \"culture\" OR \"eastern\" OR \"arctic\" OR \"american\" OR \"anthropologist\" OR \"1940\" OR \"volume\" OR \"42\" OR \"number\" OR \"pages\"",
+      "new_docids": [],
+      "max_previous_result_jaccard": 1.0,
+      "identical_previous_result_set": true,
+      "contains_quote": false,
+      "contains_site": false,
+      "contains_uppercase_boolean": false
+    },
+    {
+      "round": 8,
+      "query": "Graham Rowley 1940 American Anthropologist Dorset culture article citation",
+      "expression": "\"graham\" OR \"rowley\" OR \"1940\" OR \"american\" OR \"anthropologist\" OR \"dorset\" OR \"culture\" OR \"article\" OR \"citation\"",
+      "new_docids": [],
+      "max_previous_result_jaccard": 1.0,
+      "identical_previous_result_set": true,
+      "contains_quote": false,
+      "contains_site": false,
+      "contains_uppercase_boolean": false
+    },
+    {
+      "round": 8,
+      "query": "American Anthropologist new series volume 42 1940 Rowley Dorset",
+      "expression": "\"american\" OR \"anthropologist\" OR \"new\" OR \"series\" OR \"volume\" OR \"42\" OR \"1940\" OR \"rowley\" OR \"dorset\"",
+      "new_docids": [
+        "34597"
+      ],
+      "max_previous_result_jaccard": 0.6666666666666666,
+      "identical_previous_result_set": false,
+      "contains_quote": false,
+      "contains_site": false,
+      "contains_uppercase_boolean": false
+    }
+  ],
+  "shelf": [
+    {
+      "round": 1,
+      "eligible_recent_first_delivered": [],
+      "restored": [],
+      "evicted_for_capacity": [],
+      "visible": [],
+      "direct_restore_wire_bytes": 0,
+      "compacted": false,
+      "restored_was_previously_acked": true
+    },
+    {
+      "round": 2,
+      "eligible_recent_first_delivered": [],
+      "restored": [],
+      "evicted_for_capacity": [],
+      "visible": [],
+      "direct_restore_wire_bytes": 0,
+      "compacted": false,
+      "restored_was_previously_acked": true
+    },
+    {
+      "round": 3,
+      "eligible_recent_first_delivered": [],
+      "restored": [],
+      "evicted_for_capacity": [],
+      "visible": [],
+      "direct_restore_wire_bytes": 0,
+      "compacted": false,
+      "restored_was_previously_acked": true
+    },
+    {
+      "round": 4,
+      "eligible_recent_first_delivered": [],
+      "restored": [],
+      "evicted_for_capacity": [],
+      "visible": [
+        "e1",
+        "e2"
+      ],
+      "direct_restore_wire_bytes": 0,
+      "compacted": false,
+      "restored_was_previously_acked": true
+    },
+    {
+      "round": 5,
+      "eligible_recent_first_delivered": [
+        "e1",
+        "e2"
+      ],
+      "restored": [],
+      "evicted_for_capacity": [],
+      "visible": [
+        "e1",
+        "e2",
+        "e3"
+      ],
+      "direct_restore_wire_bytes": 0,
+      "compacted": false,
+      "restored_was_previously_acked": true
+    },
+    {
+      "round": 6,
+      "eligible_recent_first_delivered": [
+        "e1",
+        "e2",
+        "e3"
+      ],
+      "restored": [],
+      "evicted_for_capacity": [],
+      "visible": [
+        "e1",
+        "e2",
+        "e3",
+        "e4",
+        "e5"
+      ],
+      "direct_restore_wire_bytes": 0,
+      "compacted": false,
+      "restored_was_previously_acked": true
+    },
+    {
+      "round": 7,
+      "eligible_recent_first_delivered": [
+        "e3",
+        "e4",
+        "e5"
+      ],
+      "restored": [],
+      "evicted_for_capacity": [],
+      "visible": [
+        "e1",
+        "e2",
+        "e3",
+        "e4",
+        "e5"
+      ],
+      "direct_restore_wire_bytes": 0,
+      "compacted": true,
+      "restored_was_previously_acked": true
+    },
+    {
+      "round": 8,
+      "eligible_recent_first_delivered": [
+        "e3",
+        "e4",
+        "e5"
+      ],
+      "restored": [],
+      "evicted_for_capacity": [],
+      "visible": [
+        "e1",
+        "e2",
+        "e3",
+        "e4",
+        "e5",
+        "e6"
+      ],
+      "direct_restore_wire_bytes": 0,
+      "compacted": false,
+      "restored_was_previously_acked": true
+    },
+    {
+      "round": 9,
+      "eligible_recent_first_delivered": [
+        "e4",
+        "e5",
+        "e6"
+      ],
+      "restored": [],
+      "evicted_for_capacity": [],
+      "visible": [
+        "e1",
+        "e2",
+        "e3",
+        "e4",
+        "e5",
+        "e6"
+      ],
+      "direct_restore_wire_bytes": 0,
+      "compacted": false,
+      "restored_was_previously_acked": true
+    }
+  ],
+  "tool_checks": [
+    {
+      "round": 1,
+      "id": "call_289aaab3688b46e7a7086820",
+      "native_call_found": true,
+      "name_matches": true,
+      "arguments_exact": true,
+      "action_result_found": true,
+      "execution_result_differs_from_final": false,
+      "withheld": false
+    },
+    {
+      "round": 1,
+      "id": "call_2d391a257c2048b88e2ae12c",
+      "native_call_found": true,
+      "name_matches": true,
+      "arguments_exact": true,
+      "action_result_found": true,
+      "execution_result_differs_from_final": false,
+      "withheld": false
+    },
+    {
+      "round": 2,
+      "id": "call_e722c1ced9004bcd8c44988c",
+      "native_call_found": true,
+      "name_matches": true,
+      "arguments_exact": true,
+      "action_result_found": true,
+      "execution_result_differs_from_final": false,
+      "withheld": false
+    },
+    {
+      "round": 2,
+      "id": "call_6c20c941da8e4634b64b0936",
+      "native_call_found": true,
+      "name_matches": true,
+      "arguments_exact": true,
+      "action_result_found": true,
+      "execution_result_differs_from_final": false,
+      "withheld": false
+    },
+    {
+      "round": 3,
+      "id": "call_8374346e782740b19fba5b2c",
+      "native_call_found": true,
+      "name_matches": true,
+      "arguments_exact": true,
+      "action_result_found": true,
+      "execution_result_differs_from_final": false,
+      "withheld": false
+    },
+    {
+      "round": 3,
+      "id": "call_25135277014f4f1c832ef0e5",
+      "native_call_found": true,
+      "name_matches": true,
+      "arguments_exact": true,
+      "action_result_found": true,
+      "execution_result_differs_from_final": false,
+      "withheld": false
+    },
+    {
+      "round": 4,
+      "id": "call_f6fca139a9f74fd9b49f3ef3",
+      "native_call_found": true,
+      "name_matches": true,
+      "arguments_exact": true,
+      "action_result_found": true,
+      "execution_result_differs_from_final": false,
+      "withheld": false
+    },
+    {
+      "round": 4,
+      "id": "call_22be3de91a784c76a3a48da4",
+      "native_call_found": true,
+      "name_matches": true,
+      "arguments_exact": true,
+      "action_result_found": true,
+      "execution_result_differs_from_final": false,
+      "withheld": false
+    },
+    {
+      "round": 5,
+      "id": "call_55286bd92702424d9806a84e",
+      "native_call_found": true,
+      "name_matches": true,
+      "arguments_exact": true,
+      "action_result_found": true,
+      "execution_result_differs_from_final": false,
+      "withheld": false
+    },
+    {
+      "round": 5,
+      "id": "call_51ceff03f81a4ee69738a62f",
+      "native_call_found": true,
+      "name_matches": true,
+      "arguments_exact": true,
+      "action_result_found": true,
+      "execution_result_differs_from_final": false,
+      "withheld": false
+    },
+    {
+      "round": 6,
+      "id": "call_d717e4fa7457442280a00bc0",
+      "native_call_found": true,
+      "name_matches": true,
+      "arguments_exact": true,
+      "action_result_found": true,
+      "execution_result_differs_from_final": false,
+      "withheld": false
+    },
+    {
+      "round": 6,
+      "id": "call_db6ad88b197e491db8177502",
+      "native_call_found": true,
+      "name_matches": true,
+      "arguments_exact": true,
+      "action_result_found": true,
+      "execution_result_differs_from_final": false,
+      "withheld": false
+    },
+    {
+      "round": 7,
+      "id": "call_fb5cbafb0b964f7b94d919a4",
+      "native_call_found": true,
+      "name_matches": true,
+      "arguments_exact": true,
+      "action_result_found": true,
+      "execution_result_differs_from_final": false,
+      "withheld": false
+    },
+    {
+      "round": 7,
+      "id": "call_bd2a88146115459fb87d0e82",
+      "native_call_found": true,
+      "name_matches": true,
+      "arguments_exact": true,
+      "action_result_found": true,
+      "execution_result_differs_from_final": false,
+      "withheld": false
+    },
+    {
+      "round": 8,
+      "id": "call_2d630207dd294bf689a99d06",
+      "native_call_found": true,
+      "name_matches": true,
+      "arguments_exact": true,
+      "action_result_found": true,
+      "execution_result_differs_from_final": false,
+      "withheld": false
+    },
+    {
+      "round": 9,
+      "id": "call_7d620c238a7441228d5b897b",
+      "native_call_found": true,
+      "name_matches": true,
+      "arguments_exact": true,
+      "action_result_found": true,
+      "execution_result_differs_from_final": false,
+      "withheld": false
+    }
+  ],
+  "find_checks": [],
+  "recall_checks": [],
+  "notes": [],
+  "finish_checks": [
+    {
+      "round": 9,
+      "arguments": {
+        "answer": "The Dorset Culture of the Eastern Arctic",
+        "refs": [
+          "e4",
+          "e1",
+          "e6"
+        ]
+      },
+      "schema_valid": true,
+      "refs_legal": true,
+      "result": {
+        "action_slot_charged": true,
+        "executed": true,
+        "ok": true,
+        "terminal": {
+          "answer": "The Dorset Culture of the Eastern Arctic",
+          "basis": [
+            {
+              "document": "d37",
+              "document_chars": 5147,
+              "end": 5147,
+              "kind": "raw_evidence",
+              "ref": "e4",
+              "sha256": "eef09a784c75341350344114eba1f20877848442268d02f73a0e875e5e87c924",
+              "snapshot": "eef09a784c75341350344114eba1f20877848442268d02f73a0e875e5e87c924",
+              "start": 0
+            },
+            {
+              "document": "d21",
+              "document_chars": 35979,
+              "end": 6000,
+              "kind": "raw_evidence",
+              "ref": "e1",
+              "sha256": "525e278daf75c0d7b7d70d60c8b073af9ce4fe7433f9e5c5553b4e167b771c12",
+              "snapshot": "237346b59dc624f079566d064de401b4387fd9cb14ff14376d48b1c0ba57867b",
+              "start": 0
+            },
+            {
+              "document": "d38",
+              "document_chars": 3229,
+              "end": 3229,
+              "kind": "raw_evidence",
+              "ref": "e6",
+              "sha256": "91cabfeb55d4c249c456c4111e140c7101078f737f21d73637f040448d29a517",
+              "snapshot": "91cabfeb55d4c249c456c4111e140c7101078f737f21d73637f040448d29a517",
+              "start": 0
+            }
+          ],
+          "elapsed_seconds": 62.992539300001226,
+          "outcome": "submitted",
+          "refs": [
+            "e4",
+            "e1",
+            "e6"
+          ],
+          "semantic_status": "not_automatically_verified"
+        }
+      }
+    }
+  ],
+  "formal_evidence": {
+    "e4": {
+      "ref": "e4",
+      "document": "d37",
+      "snapshot": "eef09a784c75341350344114eba1f20877848442268d02f73a0e875e5e87c924",
+      "start": 0,
+      "end": 5147,
+      "document_chars": 5147,
+      "text": "---\ntitle: Graham Westbrook Rowley (1912-2003)\ndate: 2004-01-01\n---\nGraham Westbrook Rowley (1912-2003)\n\nDOI:\n\nArchaeologists, Arctic Institute of North America, Inuit archaeology, Biographies, Civil servants, Dorset culture, Expeditions, Exploration, Military operations, Operation Musk-ox, Research, Research funding, Research stations, Rowley, Graham Westbrook, 1912-2003, Science, Baker Lake (Hamlet), Nunavut, Canadian Arctic, Foxe Basin, Igloolik, Igloolik Island (69 23 N, 81 40 W)Abstract\n\nMost readers of Arctic will have heard with sadness the news of Graham Rowley's death in Ottawa on December 31, 2003. And many will have read with gratitude the heartfelt tributes his passing occasioned in the press on both sides of the Atlantic, which variously detailed Graham's lifelong, wonderfully eclectic engagement with the Canadian Arctic through exploration, administration, scholarship, and scientific enterprise. Graham's introduction to the Arctic came in 1936. ... he seized the chance to join Tom Manning's British Canadian Arctic Expedition (1936-39), which was headed for northern Baffin Island and the largely unexplored east coast of Foxe Basin. ... As the expedition's archaeologist, Graham had one main quest, set for him by Diamond Jenness at the National Museum in Ottawa: to unearth conclusive evidence of an ancient Arctic culture quite distinct from the so-called Thule culture described by Danish archaeologist Therkel Mathiassen. ... At Avvajja, [near Igloolik Island] he was able to excavate a uniquely \"Dorset\" site, confirming Jenness's hunch, and establishing the Dorset culture as archaeological fact. He published the results of his archaeological investigations in an article entitled \"The Dorset Culture of the Eastern Arctic,\" which appeared in the American Anthropologist (New Series 42, 1940). ... The British Canadian Arctic Expedition left its mark on Igloolik's recorded oral history. Graham and Reynold Bray (who tragically drowned in September 1938) are especially remembered. They both had Inuktitut names, Graham being Makkuktu'naaq ('the little, or likeable, young man'), and Reynold, Umiligaarjuk ('the little bearded one'). A mixture of surprise, amusement, and admiration had greeted their arrival in Igloolik by dog team in February 1937. Here were two young white men, remarkably ill-dressed, lice-infested, walking on the shanks of their skin boots, and almost out of supplies, who had journeyed more or less alone from Repulse Bay, some 200 miles away, in the middle of winter. Even more remarkably, they knew how to manage a dog team, build snow houses, and (especially Graham) communicate in basic Inuktitut. Inuit elders interviewed in Igloolik during the 1990s still remembered Graham's departure for the war and the doubts they had entertained at the time about his chances of survival. But survive he did. Graham returned to Ottawa after the war. Still serving in the Canadian Army, he commanded the advance party of \"Exercise Musk-Ox,\" an operation designed to test the effectiveness of motorized vehicles in the Arctic and Subarctic regions of Canada. The assignment took him from Churchill, Manitoba, across the barrens by tractor-train to Baker Lake. Retiring from the Army in 1946, he joined the Defence Research Board, where he was responsible for Arctic research. He oversaw the Board's sponsorship and support of Operation Lyon, which brought a medical research team, including Graham, to Igloolik by R.C.A.F Canso aircraft in the late summer of 1949. Needless to say, he took the opportunity to engage again in archaeological excavation, picking up where he had left off ten years previously, and uncovered some interesting Dorset and Thule material. In 1947, ... Graham and ... like-minded friends, founded the Arctic Circle Club, an Ottawa-based association that quickly became the focus for all those with northern interests. ... In 1951, Graham began his 23-year career with the Department of Northern Affairs and National Resources ..., serving first as Secretary of the Advisory Committee on Northern Development, responsible for the coordination of government activities in the North, then as Scientific Adviser. ... he was closely involved with the planning and establishment for the Eastern Arctic Scientific Resource Centre, now the Igloolik Research Centre, which opened in 1975 and, through federal and now territorial administration, has supported scientific research in northern Foxe Basin ever since. ... Graham re tired from the Public Service in 1974, .... The archaeological work of Graham's daughter Susan on Igloolik Island, which spanned a decade beginning in the mid-1980s, happily gave Graham the opportunity to return frequently to his old haunts. ... Graham's professional achievements were widely acknowledged: investiture in the Order of Canada, honorary doctorates from Carleton Univesity and the University of Saskatchewan, the Massey Medal of the Royal Canadian Geographical Society, and the Northern Science Award, to name a few. He was also a past Chairman of the Arctic Institute of North America. ...Downloads\n\nDownload data is not yet available.",
+      "sha256": "eef09a784c75341350344114eba1f20877848442268d02f73a0e875e5e87c924",
+      "kind": "raw_evidence"
+    },
+    "e1": {
+      "ref": "e1",
+      "document": "d21",
+      "snapshot": "237346b59dc624f079566d064de401b4387fd9cb14ff14376d48b1c0ba57867b",
+      "start": 0,
+      "end": 6000,
+      "document_chars": 35979,
+      "text": "---\ntitle: Diamond Jenness - Wikipedia\nauthor: Authority control databases\ndate: 2005-02-07\n---\nname: Diamond Jenness\nalt: Colourized studio portrait of Diamond Jenness, circa 1950\nbirth_date: 10 February 1886\nbirth_place: Wellington, New Zealand\ndeath_date: 29 November 1969\ndeath_place: Chelsea, Quebec, Canada\nresting_place: Beechwood Cemetery, Ottawa, Ontario, Canada\nknown_for: His comprehensive early studies of Canada's First Nation's people and the Copper Inuit.\neducation: University of New Zealand (from the constituent college in Wellington, then called Victoria University College)Balliol College, University of Oxford\nemployer: National Museum of Canada\noccupation: Anthropologist\npredecessor: Dr. Edward Sapir\nspouse: Frances Eilleen Jenness\nchildren: John L. Jenness, Stuart E. Jenness, Robert A. Jenness\n\nDiamond Jenness, (February 10, 1886, Wellington, New Zealand – November 29, 1969, Chelsea, Quebec, Canada) was one of Canada's greatest early scientistsGranatstein, J., 1998. \"Sir William Logan\", Maclean's magazine, vol. 111, no. 26, (July 1), pp. 38–40. and a pioneer of Canadian anthropology.\n\nEarly life (1886–1910)\n\nFamily and childhood\n\nDiamond Jenness was the second youngest son in a middle-class family of ten children. His father's profession was that of a watchmaker/jeweler, though he also installed several clocks in municipal building towers in New Zealand. The family was encouraged to read, learn music, and engage in sports. Richling, in his biography \"In Twilight and in Dawn,\" writes that the young Jenness \"was a proficient outdoorsman and an accomplished sharpshooter,\" skills that helped prepare him for his experience in the arctic years later.\n\nEducation\n\nAt an early age, Jenness showed proficiency for learning. He earned his first scholarship at the age of twelve by entering a composition competition for children under fourteen. In those days, in New Zealand, secondary education was only available to the wealthier families, so this scholarship enabled Jenness to complete high school and three years of college. He finished his final year of secondary education with six prizes: mathematics, science, Latin, French and English, and was named top student. He attended Lower Hutt School, then Wellington College. He and sister May were the only two siblings to proceed on to college.\n\nJenness graduated from the University of New Zealand (from the constituent college then called Victoria University College) (B.A. 1907; M.A. 1908), receiving first class honors for both degrees. Then, when 22 years old, he received a scholarship that allowed him to pursue further education at Balliol College, University of Oxford (Diploma in Anthropology, 1910; M.A. 1916).\n\nCareer (1911–1948)\n\nField work – Northern D'Entrecasteaux\n\nFrom 1911 to 1912, as an Oxford Scholar, he studied a little-known group of people on the D'Entrecasteaux Islands in eastern Papua New Guinea. Jenness comments:\n\n:::\"They peered at me from out-of-the-way corners, or through the doors of their huts, always at a safe distance. Recalling a children's [game] I had learned in one of the coast villages, I stooped down, tapped the ground with my fingers and chanted the refrain. The children drew nearer and nearer, and one or two with broad smiles began to imitate me. Then with a piece of string, I made some of their own cat's cradle figures and held them out for their inspection. This turned the scale. Five minutes later a laughing crowd surrounded me…The natives could hardly believe that I was a white man, and kept asking my [guides] who I was, how I came to speak their language and where I had learned their game.\"Jenness, Diamond and Stuart E. Jenness, 2008. \"Through Darkening Spectacles: Memoirs of Diamond Jenness\" Mercury Series, History Paper 55, Gatineau, QC: Canadian Museum of Civilization, p.33\n\nCanadian Arctic Expedition\n\nIn 1913, Jenness was invited to join the government-funded Canadian Arctic Expedition (CAE) that was led by two Arctic explorers - Vilhjalmur Stefansson and R.M. Anderson.Collins, Henry B. & Taylor, William E. Jr. \"Diamond Jenness (1886–1969)\" . He would be one of the two anthropologists on board; the other was Henri Beuchat.Helmer, James. \"Arctic Profiles \". Department of Archaeology. Calgary, Canada. In June of that year, having barely recuperated from yellow fever contracted while in New Guinea, Jenness boarded the whaling vessel Karluk along with 12 other scientists. The ship steamed up the British Columbia coastline towards Nome, Alaska, where they met up with Stefansson who had purchased two 60-foot schooners to assist in the expedition work. The three vessels then proceeded towards their rendezvous point, Herschel Island, just east of the mouth of the Mackenzie River, Northwest Territories.\n\nThe rendezvous never took place. On 12 August, the Karluk became locked in the sea ice. Stefansson, with his secretary McConnell, Jenness, Wilkins (later Sir Hubert Wilkins), and two Eskimos, set out to procure meat for the crew. While they were ashore, the Karluk drifted westward to the East Siberian Sea, where it was eventually crushed in the ice off Wrangel Island. Thirteen of the crew perished on board, including Henri Beuchat.Natural Resources Canada. Diamond Jenness profile , nrcan.gc.ca; accessed February 3, 2018.\n\nWith the ship gone, the hunting party set off on foot towards Barrow, Alaska (Utqiaġvik), 150 miles away, hoping to meet the two other vessels involved in the expedition: the Mary Sachs and Alaska. In Barrow, they learned that the two ships had anchored in Camden Bay, making it their winter base. Jenness remained behind and spent the first winter at Harrison Bay, Alaska, where he learned how to speak the Northern Eskimo language, and compiled information about their customs and folklore. The next year, in 1914, assisted by interpreter Patsy Klengenberg (son of Gremnia, a Tikigaq from Tigerah (Point Hope), Noatak-Kobuk, and the trader Christian Klengenberg), Jenness commenced studying the Co",
+      "sha256": "525e278daf75c0d7b7d70d60c8b073af9ce4fe7433f9e5c5553b4e167b771c12",
+      "kind": "raw_evidence"
+    },
+    "e6": {
+      "ref": "e6",
+      "document": "d38",
+      "snapshot": "91cabfeb55d4c249c456c4111e140c7101078f737f21d73637f040448d29a517",
+      "start": 0,
+      "end": 3229,
+      "document_chars": 3229,
+      "text": "---\ntitle: Graham Westbrook Rowley - Wikipedia\nauthor: Authority control databases\ndate: 2011-11-08\n---\nname: Graham Rowley\nbirth_name: Graham Wesbrook Rowley\nbirth_date: 31 October 1912\nbirth_place: Manchester, England\ndeath_date: 31 December 2003\ndeath_place: Ottawa, Canada\nmonuments: Rowley Island, Foxe Bain, Rowley River, Baffin Island\nnationality: British-Canadian\nalma_mater: University of Cambridge\nnotable_works: Cold Comfort\nspouse: Diana May (Mary) Rustat Crowfoot Rowley (m. 1944, d. 2018)\nchildren: Anne, Susan and Jane\n\nGraham Westbrook Rowley (October 31, 1912 – December 31, 2003) was an Arctic explorer, hailed as \"one of the last true explorers of North America\" (The Telegraph).\n\nEarly life and family\n\nRowley was born on October 31, 1912, in Manchester, England.\n\nAs the youngest of four, Rowley always had a playful, ambitious edge; which only helped his future highly demanding career.\n\nHe met his wife Diana at the Royal Geographical Society in Cambridge, where she was a student editor, and after many failed accounts on asking her to go out on a date with him, she finally gave in and they were inseparable from that day forth.\n\nThey married twice, once in 1944 (a civil wedding before he left for the army) and again in 1945 in a Church setting.\n\nTogether they had three healthy daughters: Anne, Sue (Susan) and Jane.\n\nRowley and Diana were married for 69 years, and shared their passions for the Arctic together.\n\nEducation\n\nHe attended Clare College, Cambridge, and received his B.A. from the University of Cambridge in 1934 and his M.A. from the same institution in 1936.\n\nFrom 1936 to 1939, Rowley engaged in an archaeological excavation in the Eastern Canadian Arctic. During this time, he discovered new islands in Fox Basin, carried out the original exploration of the Baffin Island coast, crossed Baffin Island by a new route, and excavated the first major site in Dorset culture. Because of his work with the Inuit and Dorset peoples, Rowley had a large island and river in the Arctic named after him.\n\nHe served in the Canadian Army in World War II and received the Member of the Order of the British Empire in 1945.\n\nA Fellow of the Royal Canadian Geographical Society, Rowley was awarded the Society's prestigious Massey Medal in 1963 for his geographical work.\n\nAs a scientist with the Department of Indian Affairs and Northern Development in the early 1970s, he created a training program for Northern scientists and developed ground and air support services for scientific groups working in the Arctic.\n\nHe was made an honorary member of the American Polar Society in 1985, due to his countless advancements and discoveries in the field.\n\nHe died in Ottawa, Ontario, Canada on December 31, 2003, surrounded by his wife, daughters and grandchildren.\n\nPublications\n\n* Cold Comfort: My Love Affair with the Arctic (1996)\n\nSee also\n\n* John Winter Crowfoot\n\nReferences\n\nCategory:Fellows of the Royal Canadian Geographical Society\nCategory:American Polar Society honorary members\nCategory:Massey Medal recipients\nCategory:Members of the Order of the British Empire\nCategory:Members of the Order of Canada\nCategory:1912 births\nCategory:2003 deaths\nCategory:Alumni of the University of Cambridge",
+      "sha256": "91cabfeb55d4c249c456c4111e140c7101078f737f21d73637f040448d29a517",
+      "kind": "raw_evidence"
+    }
+  },
+  "limitations": [
+    "Direct shelf bytes are serialized request differences, not provider tokens or a causal cost ablation.",
+    "Result overlap is not semantic redundancy.",
+    "No external judge or production query is used."
+  ]
+}

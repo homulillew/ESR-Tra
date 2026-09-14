@@ -1,0 +1,43 @@
+{
+  "utc": "2026-09-14T10:01:18.656037+00:00",
+  "release_commit": "5d7752be94a9d40aa757383d8899504bc0f81e81",
+  "source_matches_git": {
+    "__init__.py": true,
+    "__main__.py": true,
+    "archive.py": true,
+    "cli.py": true,
+    "context.py": true,
+    "contract.py": true,
+    "cpu_index.py": true,
+    "diagnostics.py": true,
+    "engine.py": true,
+    "experiment.py": true,
+    "fixtures.py": true,
+    "providers.py": true,
+    "recovery.py": true,
+    "search_support.py": true
+  },
+  "index_identity": {
+    "kind": "sqlite-fts5-bm25",
+    "index_id": "esr-sqlite-bm25-20260909",
+    "index_fingerprint": "5d527d6beee29fad0d73fbe0532085a3027603c11e0527ebc271066a81a59de0",
+    "metadata": {
+      "corpus_hash": "086f1914ef7bcf0b9674e5ea435d3e23b5c552159916cba433ebb6fac5a5d39a",
+      "documents": 100195,
+      "sqlite_version": "3.50.4",
+      "retriever": "sqlite_fts5_bm25",
+      "tokenizer": "porter unicode61",
+      "bm25_k1": 1.2,
+      "bm25_b": 0.75,
+      "query_operator": "OR",
+      "format_version": 1,
+      "complete": true
+    },
+    "adapter": "stride-cpu-or-1",
+    "query_timeout_seconds": 45,
+    "sqlite_runtime": "3.50.4",
+    "capabilities_sha256": "4e52078473bc25d06809eef33e5edb9d80d3aa958ae57e00063c1ba8db12f048",
+    "identity_scope": "metadata hash and declared index label; not a new corpus byte audit"
+  },
+  "index_read_only": true
+}

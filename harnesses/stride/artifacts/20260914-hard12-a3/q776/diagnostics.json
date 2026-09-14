@@ -1,0 +1,714 @@
+{
+  "protocol": "stride-search-3",
+  "head": "34ed86de9a991ededa2b210b7f3222fc15035798ae0c6a9ed59a5ad2fb765346",
+  "outcome": "submitted",
+  "formal_correct": null,
+  "model_attempts": 9,
+  "backend_attempts": 30,
+  "queries": [
+    {
+      "round": 1,
+      "top_k": 5,
+      "equivalence_key": "1d2ea70f16cfc776ed6a5777a481f1c4d3440b7661550f2f9f118f243e463f13",
+      "cached": false,
+      "query_sha256": "a3b06f4eb8e7ca6bb648d4a27d7e1ac2a4a0c0bada33e6bd6eb8471b5a97cf8f",
+      "query": "born 1886 mistaken for shaman 1915 trip foreign language",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"born\" OR \"1886\" OR \"mistaken\" OR \"for\" OR \"shaman\" OR \"1915\" OR \"trip\" OR \"foreign\" OR \"language\"",
+        "terms": [
+          "born",
+          "1886",
+          "mistaken",
+          "for",
+          "shaman",
+          "1915",
+          "trip",
+          "foreign",
+          "language"
+        ]
+      }
+    },
+    {
+      "round": 1,
+      "top_k": 5,
+      "equivalence_key": "1d4332e738ab671b85cb5160605e1c0555bff4c02523121ee01ad744693c8dc4",
+      "cached": false,
+      "query_sha256": "e3b47ccbc683f9884bb575a16942f97602fe8be8e355a1182779131242ead60e",
+      "query": "person born 1886 shaman 1915 inadvertent word misuse",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"person\" OR \"born\" OR \"1886\" OR \"shaman\" OR \"1915\" OR \"inadvertent\" OR \"word\" OR \"misuse\"",
+        "terms": [
+          "person",
+          "born",
+          "1886",
+          "shaman",
+          "1915",
+          "inadvertent",
+          "word",
+          "misuse"
+        ]
+      }
+    },
+    {
+      "round": 1,
+      "top_k": 5,
+      "equivalence_key": "89ee3f0de28046a6ae03a2d9c75aa1fff9171bdfe9788dbcab56ce96403d4992",
+      "cached": false,
+      "query_sha256": "14819a9ce6e20153a3dcd383065cbbfa3dca0ec42887956525fdfcec3099758f",
+      "query": "1915 trip shaman mistaken foreign language word misuse 1886",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"1915\" OR \"trip\" OR \"shaman\" OR \"mistaken\" OR \"foreign\" OR \"language\" OR \"word\" OR \"misuse\" OR \"1886\"",
+        "terms": [
+          "1915",
+          "trip",
+          "shaman",
+          "mistaken",
+          "foreign",
+          "language",
+          "word",
+          "misuse",
+          "1886"
+        ]
+      }
+    },
+    {
+      "round": 1,
+      "top_k": 5,
+      "equivalence_key": "e9744c1becb502bc859cad830cc2670d350d7e7362201ca576afa97e97d02512",
+      "cached": false,
+      "query_sha256": "a02e3994dbde5917846b9c79ed7a722f7587caf82345a3e14f2a5fe07d30095f",
+      "query": "quarterly journal initiated 1888 cultural discoveries report 1940",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"quarterly\" OR \"journal\" OR \"initiated\" OR \"1888\" OR \"cultural\" OR \"discoveries\" OR \"report\" OR \"1940\"",
+        "terms": [
+          "quarterly",
+          "journal",
+          "initiated",
+          "1888",
+          "cultural",
+          "discoveries",
+          "report",
+          "1940"
+        ]
+      }
+    },
+    {
+      "round": 1,
+      "top_k": 5,
+      "equivalence_key": "4996678bc319a5a36189dd97665c7b722a69da26342ac24377498b195433e030",
+      "cached": false,
+      "query_sha256": "065fe598cb5432eaf82abbfd19fad5c682ad740954b80b80a467c4cd166efd13",
+      "query": "journal founded 1888 quarterly 1940 report cultural discoveries",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"journal\" OR \"founded\" OR \"1888\" OR \"quarterly\" OR \"1940\" OR \"report\" OR \"cultural\" OR \"discoveries\"",
+        "terms": [
+          "journal",
+          "founded",
+          "1888",
+          "quarterly",
+          "1940",
+          "report",
+          "cultural",
+          "discoveries"
+        ]
+      }
+    },
+    {
+      "round": 1,
+      "top_k": 5,
+      "equivalence_key": "6b72e375e5214dadba5955bae9b02a5351f007cd30d140cc53b17794d75a7585",
+      "cached": false,
+      "query_sha256": "cc29a32b5da1dcc59ba4a4106f6337f7b794ca5319eb456fe49130d19112b920",
+      "query": "quarterly journal started 1888 published 1940 cultural report",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"quarterly\" OR \"journal\" OR \"started\" OR \"1888\" OR \"published\" OR \"1940\" OR \"cultural\" OR \"report\"",
+        "terms": [
+          "quarterly",
+          "journal",
+          "started",
+          "1888",
+          "published",
+          "1940",
+          "cultural",
+          "report"
+        ]
+      }
+    },
+    {
+      "round": 2,
+      "top_k": 5,
+      "equivalence_key": "456682c06705661a78cdff47aa10d56e75dcdb834705f858f418f1bd07ae515a",
+      "cached": false,
+      "query_sha256": "c6c4dc6c4c8bf5044bffdf3188902c2dd18f3a9c16f9c18c1988f7a82f107275",
+      "query": "anthropologist born 1886 mistaken for shaman 1915 trip",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"anthropologist\" OR \"born\" OR \"1886\" OR \"mistaken\" OR \"for\" OR \"shaman\" OR \"1915\" OR \"trip\"",
+        "terms": [
+          "anthropologist",
+          "born",
+          "1886",
+          "mistaken",
+          "for",
+          "shaman",
+          "1915",
+          "trip"
+        ]
+      }
+    },
+    {
+      "round": 2,
+      "top_k": 5,
+      "equivalence_key": "112038db9da24f4fae15f95b6dbf8b0b4843db3a341123f3530d5f0b2403fc8c",
+      "cached": false,
+      "query_sha256": "4b594ac8e697ad5839389585f1fbab9656730741f4931237518670608efd2d65",
+      "query": "archaeologist born 1886 1915 expedition shaman word misuse foreign language",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"archaeologist\" OR \"born\" OR \"1886\" OR \"1915\" OR \"expedition\" OR \"shaman\" OR \"word\" OR \"misuse\" OR \"foreign\" OR \"language\"",
+        "terms": [
+          "archaeologist",
+          "born",
+          "1886",
+          "1915",
+          "expedition",
+          "shaman",
+          "word",
+          "misuse",
+          "foreign",
+          "language"
+        ]
+      }
+    },
+    {
+      "round": 2,
+      "top_k": 5,
+      "equivalence_key": "df164433539e4511ed8c47a34255b25a1e66a7698380f463769890fda8cade00",
+      "cached": false,
+      "query_sha256": "9ac12a01e4340eeb69ce2d156e4eb68269914771fef724d1913f9388b0083e3a",
+      "query": "anthropologist 1886 1915 trip mistaken shaman three children same house 35 years",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"anthropologist\" OR \"1886\" OR \"1915\" OR \"trip\" OR \"mistaken\" OR \"shaman\" OR \"three\" OR \"children\" OR \"same\" OR \"house\" OR \"35\" OR \"years\"",
+        "terms": [
+          "anthropologist",
+          "1886",
+          "1915",
+          "trip",
+          "mistaken",
+          "shaman",
+          "three",
+          "children",
+          "same",
+          "house",
+          "35",
+          "years"
+        ]
+      }
+    },
+    {
+      "round": 2,
+      "top_k": 5,
+      "equivalence_key": "5edd3df922564534be07d408325b08988a51e324cbe913fef283e993d25d465a",
+      "cached": false,
+      "query_sha256": "418f37ac950aa8317face3d558775e19c9520988d5c2a3b10f18a0289da5e8dd",
+      "query": "quarterly journal founded 1888 anthropology archaeology",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"quarterly\" OR \"journal\" OR \"founded\" OR \"1888\" OR \"anthropology\" OR \"archaeology\"",
+        "terms": [
+          "quarterly",
+          "journal",
+          "founded",
+          "1888",
+          "anthropology",
+          "archaeology"
+        ]
+      }
+    },
+    {
+      "round": 2,
+      "top_k": 5,
+      "equivalence_key": "3602835b0bde91832f35fbf9688bee0dfa396ce3d482f6dd6f37579fd83a0f80",
+      "cached": false,
+      "query_sha256": "a0e49738731c472622d0b80950948307853a3279906cb28907c69ab396c034a9",
+      "query": "American Anthropologist founded 1888 quarterly",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"american\" OR \"anthropologist\" OR \"founded\" OR \"1888\" OR \"quarterly\"",
+        "terms": [
+          "american",
+          "anthropologist",
+          "founded",
+          "1888",
+          "quarterly"
+        ]
+      }
+    },
+    {
+      "round": 2,
+      "top_k": 5,
+      "equivalence_key": "3008156b24d465ba8aeafe3d8207ea369721d20567011386e9a210b28f42fd20",
+      "cached": false,
+      "query_sha256": "9ea82b2892477875a1d158ee4c3393719d9cf846cc63e3bb680b65220a8677c1",
+      "query": "Journal of American Folklore founded 1888 quarterly",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"journal\" OR \"of\" OR \"american\" OR \"folklore\" OR \"founded\" OR \"1888\" OR \"quarterly\"",
+        "terms": [
+          "journal",
+          "of",
+          "american",
+          "folklore",
+          "founded",
+          "1888",
+          "quarterly"
+        ]
+      }
+    },
+    {
+      "round": 4,
+      "top_k": 5,
+      "equivalence_key": "781fee562f437a7baee9a1d1ae05e60dd13e9c9b411396dfd0d70a1e938181b9",
+      "cached": false,
+      "query_sha256": "e601aa8d0db23ac7aefe4df59c08193096ca0eddde7f3f77f6bc1dd6ff956a98",
+      "query": "Diamond Jenness mistaken for shaman word misuse Inuit language",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"diamond\" OR \"jenness\" OR \"mistaken\" OR \"for\" OR \"shaman\" OR \"word\" OR \"misuse\" OR \"inuit\" OR \"language\"",
+        "terms": [
+          "diamond",
+          "jenness",
+          "mistaken",
+          "for",
+          "shaman",
+          "word",
+          "misuse",
+          "inuit",
+          "language"
+        ]
+      }
+    },
+    {
+      "round": 4,
+      "top_k": 5,
+      "equivalence_key": "b227785d05fcee94038e70846d70ae0733f2b7be70cbf3c93ae26aec7d0756cf",
+      "cached": false,
+      "query_sha256": "f19c1817b3d154118355a17f1dc029bdf8751424fb64bce548dc48594e1d770f",
+      "query": "Diamond Jenness shaman angakkuq word mistake 1915",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"diamond\" OR \"jenness\" OR \"shaman\" OR \"angakkuq\" OR \"word\" OR \"mistake\" OR \"1915\"",
+        "terms": [
+          "diamond",
+          "jenness",
+          "shaman",
+          "angakkuq",
+          "word",
+          "mistake",
+          "1915"
+        ]
+      }
+    },
+    {
+      "round": 4,
+      "top_k": 5,
+      "equivalence_key": "cf5d3f061fe1a77ec8dbe642a87807b39cd5086ef2315ceacca64ca18e301faf",
+      "cached": false,
+      "query_sha256": "ddb7711b5e3fd61bcad0725348b210c4affe77dc841f9c28497d59439760866b",
+      "query": "Diamond Jenness accidentally called himself shaman Inuit",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"diamond\" OR \"jenness\" OR \"accidentally\" OR \"called\" OR \"himself\" OR \"shaman\" OR \"inuit\"",
+        "terms": [
+          "diamond",
+          "jenness",
+          "accidentally",
+          "called",
+          "himself",
+          "shaman",
+          "inuit"
+        ]
+      }
+    },
+    {
+      "round": 6,
+      "top_k": 5,
+      "equivalence_key": "882bc1205ad0f9439d575eec74258ccbcc77ed3e3103f6fd842c77c47241a695",
+      "cached": false,
+      "query_sha256": "506aa31a938ec0250fc71a92aea3ceeb530530f8114b4feda5be1f9ea45ed94a",
+      "query": "The Dorset Culture of the Eastern Arctic American Anthropologist 1940 Rowley",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"the\" OR \"dorset\" OR \"culture\" OR \"of\" OR \"eastern\" OR \"arctic\" OR \"american\" OR \"anthropologist\" OR \"1940\" OR \"rowley\"",
+        "terms": [
+          "the",
+          "dorset",
+          "culture",
+          "of",
+          "eastern",
+          "arctic",
+          "american",
+          "anthropologist",
+          "1940",
+          "rowley"
+        ]
+      }
+    },
+    {
+      "round": 6,
+      "top_k": 5,
+      "equivalence_key": "1879c0d7669eea62471089ac872ea8b1414003e72880f48211808b48d5176cce",
+      "cached": false,
+      "query_sha256": "d65fc71fe1e1672cbdda3f09e9741da67185dcd8064d7cbb9fab669ebb9b4c7e",
+      "query": "Rowley Dorset Culture Eastern Arctic American Anthropologist volume 42 1940",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"rowley\" OR \"dorset\" OR \"culture\" OR \"eastern\" OR \"arctic\" OR \"american\" OR \"anthropologist\" OR \"volume\" OR \"42\" OR \"1940\"",
+        "terms": [
+          "rowley",
+          "dorset",
+          "culture",
+          "eastern",
+          "arctic",
+          "american",
+          "anthropologist",
+          "volume",
+          "42",
+          "1940"
+        ]
+      }
+    },
+    {
+      "round": 6,
+      "top_k": 5,
+      "equivalence_key": "de0d4a6ecfded48d06c5b80e733a2f6544769f88b02b40db67a06c4dc1ea2df9",
+      "cached": false,
+      "query_sha256": "7a516a3ed1ee3ffa0a7211f8eea2edff37890a83bc7b2372f436517caf94833e",
+      "query": "Graham Rowley Dorset culture American Anthropologist 1940 citation",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"graham\" OR \"rowley\" OR \"dorset\" OR \"culture\" OR \"american\" OR \"anthropologist\" OR \"1940\" OR \"citation\"",
+        "terms": [
+          "graham",
+          "rowley",
+          "dorset",
+          "culture",
+          "american",
+          "anthropologist",
+          "1940",
+          "citation"
+        ]
+      }
+    },
+    {
+      "round": 6,
+      "top_k": 5,
+      "equivalence_key": "c4caa73d7bc36b970b9db895084c0114be43ca6b42c5cf3efe8583ba62ae8baf",
+      "cached": false,
+      "query_sha256": "805e3a85648c1096f6787356bc80334387a9b0edb58013085698a441ada19f3b",
+      "query": "Graham Rowley born England 1912 archaeologist",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"graham\" OR \"rowley\" OR \"born\" OR \"england\" OR \"1912\" OR \"archaeologist\"",
+        "terms": [
+          "graham",
+          "rowley",
+          "born",
+          "england",
+          "1912",
+          "archaeologist"
+        ]
+      }
+    },
+    {
+      "round": 6,
+      "top_k": 5,
+      "equivalence_key": "5077fd700dd42c75c442cfa5073ddad4906187eb14ffe8c8d8ca170a6d71edce",
+      "cached": false,
+      "query_sha256": "53d8ffafd68d2c9be9eb10e99fe8b1e30d5c138c9a80024e7da1985da4f8a2f8",
+      "query": "Graham Westbrook Rowley born 1912 England birthplace",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"graham\" OR \"westbrook\" OR \"rowley\" OR \"born\" OR \"1912\" OR \"england\" OR \"birthplace\"",
+        "terms": [
+          "graham",
+          "westbrook",
+          "rowley",
+          "born",
+          "1912",
+          "england",
+          "birthplace"
+        ]
+      }
+    },
+    {
+      "round": 7,
+      "top_k": 5,
+      "equivalence_key": "8c884e0818c7706c2cd66c2c2fa24e4579d5fd72ae1dc109660ec247336e38ee",
+      "cached": false,
+      "query_sha256": "e9af02088c24d01256a033b417f4908f19595011f14f8ada0c0a46184c6d0d03",
+      "query": "Rowley \"The Dorset Culture of the Eastern Arctic\" American Anthropologist 1940 pages",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"rowley\" OR \"the\" OR \"dorset\" OR \"culture\" OR \"of\" OR \"eastern\" OR \"arctic\" OR \"american\" OR \"anthropologist\" OR \"1940\" OR \"pages\"",
+        "terms": [
+          "rowley",
+          "the",
+          "dorset",
+          "culture",
+          "of",
+          "eastern",
+          "arctic",
+          "american",
+          "anthropologist",
+          "1940",
+          "pages"
+        ]
+      }
+    },
+    {
+      "round": 7,
+      "top_k": 5,
+      "equivalence_key": "aeb4032ce443c4cb8dccaccef893639ea39d95ad79c584101c416ee84c503b6a",
+      "cached": false,
+      "query_sha256": "fb047965889ebe494de582adaa9d8b099104675227f71ec328a7e7d61e7749c5",
+      "query": "American Anthropologist 1940 Rowley Dorset culture table of contents",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"american\" OR \"anthropologist\" OR \"1940\" OR \"rowley\" OR \"dorset\" OR \"culture\" OR \"table\" OR \"of\" OR \"contents\"",
+        "terms": [
+          "american",
+          "anthropologist",
+          "1940",
+          "rowley",
+          "dorset",
+          "culture",
+          "table",
+          "of",
+          "contents"
+        ]
+      }
+    },
+    {
+      "round": 7,
+      "top_k": 5,
+      "equivalence_key": "42f06ee5c34d627512610fafeb0b49b6b38a57be438f930dae4a923e02444d3d",
+      "cached": false,
+      "query_sha256": "822791a9925a120e7288f9ca83a823d2a72d1f6ce3103be51122e232bc078fd5",
+      "query": "\"Dorset Culture of the Eastern Arctic\" Rowley 1940 citation pages",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"dorset\" OR \"culture\" OR \"of\" OR \"the\" OR \"eastern\" OR \"arctic\" OR \"rowley\" OR \"1940\" OR \"citation\" OR \"pages\"",
+        "terms": [
+          "dorset",
+          "culture",
+          "of",
+          "the",
+          "eastern",
+          "arctic",
+          "rowley",
+          "1940",
+          "citation",
+          "pages"
+        ]
+      }
+    },
+    {
+      "round": 8,
+      "top_k": 5,
+      "equivalence_key": "746930afa290039158961f946502866ef351d10f44a8beedd6b1556cc126cd50",
+      "cached": false,
+      "query_sha256": "4cb99d974da25885d05295cb9498df3b27463f937435eae890276ac17e8114fb",
+      "query": "Rowley Dorset Culture Eastern Arctic American Anthropologist 1940 volume 42 number pages",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"rowley\" OR \"dorset\" OR \"culture\" OR \"eastern\" OR \"arctic\" OR \"american\" OR \"anthropologist\" OR \"1940\" OR \"volume\" OR \"42\" OR \"number\" OR \"pages\"",
+        "terms": [
+          "rowley",
+          "dorset",
+          "culture",
+          "eastern",
+          "arctic",
+          "american",
+          "anthropologist",
+          "1940",
+          "volume",
+          "42",
+          "number",
+          "pages"
+        ]
+      }
+    },
+    {
+      "round": 8,
+      "top_k": 5,
+      "equivalence_key": "3e1513745acfe33c2a5a521b077c82e7971104d679e702510a5ab649fcbcd82c",
+      "cached": false,
+      "query_sha256": "40ee824c674c68fb1fdba92c2926a40f20a4da90f9f764a6889a102c6e1c85ff",
+      "query": "Graham Rowley 1940 American Anthropologist Dorset culture article citation",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"graham\" OR \"rowley\" OR \"1940\" OR \"american\" OR \"anthropologist\" OR \"dorset\" OR \"culture\" OR \"article\" OR \"citation\"",
+        "terms": [
+          "graham",
+          "rowley",
+          "1940",
+          "american",
+          "anthropologist",
+          "dorset",
+          "culture",
+          "article",
+          "citation"
+        ]
+      }
+    },
+    {
+      "round": 8,
+      "top_k": 5,
+      "equivalence_key": "9d452e9b14a8b44ceeec68a77e1ec59e5e0c7ad40a5d88a1b70bedfe566a59ef",
+      "cached": false,
+      "query_sha256": "4756d3c97ef51ef1c8f883190bc5c68bfa9f17b38caffd1a48ed51d05be938ff",
+      "query": "American Anthropologist new series volume 42 1940 Rowley Dorset",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"american\" OR \"anthropologist\" OR \"new\" OR \"series\" OR \"volume\" OR \"42\" OR \"1940\" OR \"rowley\" OR \"dorset\"",
+        "terms": [
+          "american",
+          "anthropologist",
+          "new",
+          "series",
+          "volume",
+          "42",
+          "1940",
+          "rowley",
+          "dorset"
+        ]
+      }
+    }
+  ],
+  "equivalent_query_repeats": 0,
+  "views": [
+    {
+      "round": 1,
+      "compacted": false,
+      "visible_evidence": [],
+      "shelf": [],
+      "shelf_evicted": []
+    },
+    {
+      "round": 2,
+      "compacted": false,
+      "visible_evidence": [],
+      "shelf": [],
+      "shelf_evicted": []
+    },
+    {
+      "round": 3,
+      "compacted": false,
+      "visible_evidence": [],
+      "shelf": [],
+      "shelf_evicted": []
+    },
+    {
+      "round": 4,
+      "compacted": false,
+      "visible_evidence": [
+        "e1",
+        "e2"
+      ],
+      "shelf": [],
+      "shelf_evicted": []
+    },
+    {
+      "round": 5,
+      "compacted": false,
+      "visible_evidence": [
+        "e1",
+        "e2",
+        "e3"
+      ],
+      "shelf": [],
+      "shelf_evicted": []
+    },
+    {
+      "round": 6,
+      "compacted": false,
+      "visible_evidence": [
+        "e1",
+        "e2",
+        "e3",
+        "e4",
+        "e5"
+      ],
+      "shelf": [],
+      "shelf_evicted": []
+    },
+    {
+      "round": 7,
+      "compacted": true,
+      "visible_evidence": [
+        "e1",
+        "e2",
+        "e3",
+        "e4",
+        "e5"
+      ],
+      "shelf": [],
+      "shelf_evicted": []
+    },
+    {
+      "round": 8,
+      "compacted": false,
+      "visible_evidence": [
+        "e1",
+        "e2",
+        "e3",
+        "e4",
+        "e5",
+        "e6"
+      ],
+      "shelf": [],
+      "shelf_evicted": []
+    },
+    {
+      "round": 9,
+      "compacted": false,
+      "visible_evidence": [
+        "e1",
+        "e2",
+        "e3",
+        "e4",
+        "e5",
+        "e6"
+      ],
+      "shelf": [],
+      "shelf_evicted": []
+    }
+  ],
+  "delivered_refs": [
+    "e1",
+    "e2",
+    "e3",
+    "e4",
+    "e5",
+    "e6"
+  ],
+  "submitted_refs": [
+    "e4",
+    "e1",
+    "e6"
+  ],
+  "text_included": true,
+  "limitations": [
+    "Equivalence is compiler equality, not semantic identity or wasted-search proof",
+    "Raw-window visibility/selection is not entailment or complete evidence coverage",
+    "No live q26 replay or independent answer scoring is performed"
+  ]
+}

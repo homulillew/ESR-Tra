@@ -1,0 +1,32 @@
+{
+  "scope": "offline schema reproduction only, no model/index calls, does not repair original trajectory",
+  "rows": [
+    {
+      "arguments": {
+        "answer": 21,
+        "refs": [
+          "e1"
+        ]
+      },
+      "schema_valid": false,
+      "code": "arguments_invalid",
+      "message": "finish: invalid fields near []; follow the supplied schema"
+    },
+    {
+      "arguments": {
+        "answer": "21",
+        "refs": [
+          "e1"
+        ]
+      },
+      "schema_valid": true
+    },
+    {
+      "arguments": {
+        "abstain": true,
+        "reason": "synthetic no-evidence example"
+      },
+      "schema_valid": true
+    }
+  ]
+}

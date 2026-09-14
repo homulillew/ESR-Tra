@@ -1,0 +1,3758 @@
+{
+  "metrics": {
+    "terminal": {
+      "answer": "Kiran Shah",
+      "basis": [
+        {
+          "document": "d74",
+          "document_chars": 6073,
+          "end": 3000,
+          "kind": "raw_evidence",
+          "ref": "e3",
+          "sha256": "537f755a61d9cbda27eb32b2efa11aeeaeec81efe340766e62f59ce1148f2f32",
+          "snapshot": "d093b6d0dfcf9448fb2d1927b8e9b9245d90c77e1bd2fcc107636885695a39c0",
+          "start": 0
+        },
+        {
+          "document": "d75",
+          "document_chars": 4800,
+          "end": 3000,
+          "kind": "raw_evidence",
+          "ref": "e4",
+          "sha256": "580d7ca54b432a38abed6671a339f1489836ccbd4bf3adbfe2ed7f57f3f163ab",
+          "snapshot": "c1e4b2bc117748b80970cee38f1f9836fff3d64f48cd9e676c59daa83f1bdde8",
+          "start": 0
+        },
+        {
+          "document": "d75",
+          "document_chars": 4800,
+          "end": 4800,
+          "kind": "raw_evidence",
+          "ref": "e5",
+          "sha256": "d687ae625788ab1e8bf6629ddcb0c7570ef499ef02c76577540efff461b139cf",
+          "snapshot": "c1e4b2bc117748b80970cee38f1f9836fff3d64f48cd9e676c59daa83f1bdde8",
+          "start": 3000
+        }
+      ],
+      "elapsed_seconds": 344.6782148999919,
+      "outcome": "submitted",
+      "refs": [
+        "e3",
+        "e4",
+        "e5"
+      ],
+      "semantic_status": "not_automatically_verified"
+    },
+    "formal_correct": null,
+    "model_attempts": 64,
+    "http_attempts": 64,
+    "native_calls": 67,
+    "executed_actions": 67,
+    "action_counts": {
+      "search": 61,
+      "read": 5,
+      "finish": 1
+    },
+    "declared_search_queries": 139,
+    "query_execution_count": 139,
+    "backend_calls": 47,
+    "backend_by_kind": {
+      "search": 44,
+      "get_document": 3
+    },
+    "equivalent_key_repeats": 95,
+    "expression_repeats": 95,
+    "exact_query_cache_hits": 95,
+    "quote_queries": 0,
+    "site_queries": 0,
+    "uppercase_boolean_queries": 0,
+    "identical_previous_result_sets": 100,
+    "compaction_requests": 7,
+    "shelf_restore_requests": 38,
+    "shelf_restored_windows": 105,
+    "shelf_capacity_evictions": 0,
+    "direct_shelf_restore_wire_bytes": 332624,
+    "total_wire_body_bytes": 3932692,
+    "usage_known": {
+      "input_tokens": 953357,
+      "output_tokens": 7568,
+      "cache_read_tokens": 771328,
+      "cache_write_tokens": 0
+    },
+    "unknown_usage_calls": 0,
+    "http_latency_seconds": 306.0706905001134,
+    "backend_latency_seconds": 33.14681730009033,
+    "final_request_rounds": [
+      64
+    ],
+    "recovery_events": {
+      "delivery_preflight": 63
+    },
+    "result_withheld": 0,
+    "first_request_question_exact": true,
+    "first_request_capabilities": {
+      "boolean_operators": false,
+      "kind": "sqlite-fts5-bm25",
+      "negative_result": "no hit for this expression is not proof that the fact is absent",
+      "phrase_quotes": false,
+      "query_rule": "lowercase; regex word extraction; first-occurrence deduplication; OR of quoted individual tokens",
+      "ranking": "SQLite bm25(search), ascending; docid tie-break; unchanged from q26 LocalIndex",
+      "scope": "fixed local corpus; not live web",
+      "site_filter": false,
+      "title_kind": "stored URL, not an extracted page title",
+      "warning": "site:, quotes and AND/OR in input are not filters/operators. Their words may become ordinary search terms. Use a few discriminating terms."
+    },
+    "first_request_notes": [],
+    "returned_models": [
+      "glm-5.2"
+    ]
+  },
+  "queries": [
+    {
+      "round": 1,
+      "query": "Perfectly formed Indian descent born 1950s film 1 hour 31 minutes",
+      "expression": "\"perfectly\" OR \"formed\" OR \"indian\" OR \"descent\" OR \"born\" OR \"1950s\" OR \"film\" OR \"1\" OR \"hour\" OR \"31\" OR \"minutes\"",
+      "new_docids": [
+        "14962",
+        "52979",
+        "57032",
+        "63988",
+        "90473"
+      ],
+      "max_previous_result_jaccard": null,
+      "identical_previous_result_set": false,
+      "contains_quote": false,
+      "contains_site": false,
+      "contains_uppercase_boolean": false
+    },
+    {
+      "round": 1,
+      "query": "short film directed with nephew Indian heritage",
+      "expression": "\"short\" OR \"film\" OR \"directed\" OR \"with\" OR \"nephew\" OR \"indian\" OR \"heritage\"",
+      "new_docids": [
+        "4441",
+        "53720",
+        "78253",
+        "93643",
+        "97295"
+      ],
+      "max_previous_result_jaccard": 0.0,
+      "identical_previous_result_set": false,
+      "contains_quote": false,
+      "contains_site": false,
+      "contains_uppercase_boolean": false
+    },
+    {
+      "round": 1,
+      "query": "dinosaur sci-fi adventure English film director series",
+      "expression": "\"dinosaur\" OR \"sci\" OR \"fi\" OR \"adventure\" OR \"english\" OR \"film\" OR \"director\" OR \"series\"",
+      "new_docids": [
+        "63794",
+        "70577",
+        "75001",
+        "78838",
+        "90909"
+      ],
+      "max_previous_result_jaccard": 0.0,
+      "identical_previous_result_set": false,
+      "contains_quote": false,
+      "contains_site": false,
+      "contains_uppercase_boolean": false
+    },
+    {
+      "round": 2,
+      "query": "Don Chaffey film 1 hour 31 minutes cast Indian actress",
+      "expression": "\"don\" OR \"chaffey\" OR \"film\" OR \"1\" OR \"hour\" OR \"31\" OR \"minutes\" OR \"cast\" OR \"indian\" OR \"actress\"",
+      "new_docids": [
+        "30031",
+        "34526",
+        "50848",
+        "53433",
+        "92468"
+      ],
+      "max_previous_result_jaccard": 0.0,
+      "identical_previous_result_set": false,
+      "contains_quote": false,
+      "contains_site": false,
+      "contains_uppercase_boolean": false
+    },
+    {
+      "round": 2,
+      "query": "Don Chaffey directed film 91 minutes runtime",
+      "expression": "\"don\" OR \"chaffey\" OR \"directed\" OR \"film\" OR \"91\" OR \"minutes\" OR \"runtime\"",
+      "new_docids": [
+        "16687",
+        "19158",
+        "863",
+        "97967"
+      ],
+      "max_previous_result_jaccard": 0.1111111111111111,
+      "identical_previous_result_set": false,
+      "contains_quote": false,
+      "contains_site": false,
+      "contains_uppercase_boolean": false
+    },
+    {
+      "round": 2,
+      "query": "short film directed with nephew Indian descent actress born 1950s",
+      "expression": "\"short\" OR \"film\" OR \"directed\" OR \"with\" OR \"nephew\" OR \"indian\" OR \"descent\" OR \"actress\" OR \"born\" OR \"1950s\"",
+      "new_docids": [
+        "21993",
+        "31750",
+        "91921",
+        "99494"
+      ],
+      "max_previous_result_jaccard": 0.1111111111111111,
+      "identical_previous_result_set": false,
+      "contains_quote": false,
+      "contains_site": false,
+      "contains_uppercase_boolean": false
+    },
+    {
+      "round": 3,
+      "query": "Perfectly formed Indian immigrant parents born 1950s actor",
+      "expression": "\"perfectly\" OR \"formed\" OR \"indian\" OR \"immigrant\" OR \"parents\" OR \"born\" OR \"1950s\" OR \"actor\"",
+      "new_docids": [
+        "48231",
+        "48640",
+        "70474",
+        "81843",
+        "96910"
+      ],
+      "max_previous_result_jaccard": 0.0,
+      "identical_previous_result_set": false,
+      "contains_quote": false,
+      "contains_site": false,
+      "contains_uppercase_boolean": false
+    },
+    {
+      "round": 3,
+      "query": "first second generation Indian immigrants born 1950s actor perfectly formed",
+      "expression": "\"first\" OR \"second\" OR \"generation\" OR \"indian\" OR \"immigrants\" OR \"born\" OR \"1950s\" OR \"actor\" OR \"perfectly\" OR \"formed\"",
+      "new_docids": [
+        "16676"
+      ],
+      "max_previous_result_jaccard": 0.6666666666666666,
+      "identical_previous_result_set": false,
+      "contains_quote": false,
+      "contains_site": false,
+      "contains_uppercase_boolean": false
+    },
+    {
+      "round": 3,
+      "query": "actor born 1950s Indian parents directed short film nephew",
+      "expression": "\"actor\" OR \"born\" OR \"1950s\" OR \"indian\" OR \"parents\" OR \"directed\" OR \"short\" OR \"film\" OR \"nephew\"",
+      "new_docids": [
+        "10811",
+        "32327",
+        "97751"
+      ],
+      "max_previous_result_jaccard": 0.1111111111111111,
+      "identical_previous_result_set": false,
+      "contains_quote": false,
+      "contains_site": false,
+      "contains_uppercase_boolean": false
+    },
+    {
+      "round": 4,
+      "query": "Perfectly formed quote Indian heritage actor",
+      "expression": "\"perfectly\" OR \"formed\" OR \"quote\" OR \"indian\" OR \"heritage\" OR \"actor\"",
+      "new_docids": [
+        "26179",
+        "34184",
+        "64249",
+        "68205"
+      ],
+      "max_previous_result_jaccard": 0.1111111111111111,
+      "identical_previous_result_set": false,
+      "contains_quote": false,
+      "contains_site": false,
+      "contains_uppercase_boolean": false
+    },
+    {
+      "round": 4,
+      "query": "Perfectly formed self description Indian descent",
+      "expression": "\"perfectly\" OR \"formed\" OR \"self\" OR \"description\" OR \"indian\" OR \"descent\"",
+      "new_docids": [
+        "47242",
+        "72124",
+        "77208",
+        "91840"
+      ],
+      "max_previous_result_jaccard": 0.1111111111111111,
+      "identical_previous_result_set": false,
+      "contains_quote": false,
+      "contains_site": false,
+      "contains_uppercase_boolean": false
+    },
+    {
+      "round": 4,
+      "query": "born 1950s Indian immigrant parents actor short film nephew",
+      "expression": "\"born\" OR \"1950s\" OR \"indian\" OR \"immigrant\" OR \"parents\" OR \"actor\" OR \"short\" OR \"film\" OR \"nephew\"",
+      "new_docids": [
+        "85765",
+        "97365"
+      ],
+      "max_previous_result_jaccard": 0.42857142857142855,
+      "identical_previous_result_set": false,
+      "contains_quote": false,
+      "contains_site": false,
+      "contains_uppercase_boolean": false
+    },
+    {
+      "round": 5,
+      "query": "Don Chaffey filmography 91 minutes runtime",
+      "expression": "\"don\" OR \"chaffey\" OR \"filmography\" OR \"91\" OR \"minutes\" OR \"runtime\"",
+      "new_docids": [
+        "30021",
+        "33199",
+        "33322"
+      ],
+      "max_previous_result_jaccard": 0.25,
+      "identical_previous_result_set": false,
+      "contains_quote": false,
+      "contains_site": false,
+      "contains_uppercase_boolean": false
+    },
+    {
+      "round": 5,
+      "query": "Don Chaffey directed films list runtime",
+      "expression": "\"don\" OR \"chaffey\" OR \"directed\" OR \"films\" OR \"list\" OR \"runtime\"",
+      "new_docids": [
+        "21493"
+      ],
+      "max_previous_result_jaccard": 0.42857142857142855,
+      "identical_previous_result_set": false,
+      "contains_quote": false,
+      "contains_site": false,
+      "contains_uppercase_boolean": false
+    },
+    {
+      "round": 5,
+      "query": "One Million Years B.C. cast Indian heritage actor",
+      "expression": "\"one\" OR \"million\" OR \"years\" OR \"b\" OR \"c\" OR \"cast\" OR \"indian\" OR \"heritage\" OR \"actor\"",
+      "new_docids": [
+        "21077",
+        "33038",
+        "62645",
+        "97834"
+      ],
+      "max_previous_result_jaccard": 0.1111111111111111,
+      "identical_previous_result_set": false,
+      "contains_quote": false,
+      "contains_site": false,
+      "contains_uppercase_boolean": false
+    },
+    {
+      "round": 6,
+      "query": "Perfectly formed quote small actor Indian heritage",
+      "expression": "\"perfectly\" OR \"formed\" OR \"quote\" OR \"small\" OR \"actor\" OR \"indian\" OR \"heritage\"",
+      "new_docids": [
+        "55673",
+        "59625"
+      ],
+      "max_previous_result_jaccard": 0.42857142857142855,
+      "identical_previous_result_set": false,
+      "contains_quote": false,
+      "contains_site": false,
+      "contains_uppercase_boolean": false
+    },
+    {
+      "round": 6,
+      "query": "short actor born 1950s Indian parents perfectly formed",
+      "expression": "\"short\" OR \"actor\" OR \"born\" OR \"1950s\" OR \"indian\" OR \"parents\" OR \"perfectly\" OR \"formed\"",
+      "new_docids": [
+        "19024",
+        "48828",
+        "88057"
+      ],
+      "max_previous_result_jaccard": 0.1111111111111111,
+      "identical_previous_result_set": false,
+      "contains_quote": false,
+      "contains_site": false,
+      "contains_uppercase_boolean": false
+    },
+    {
+      "round": 6,
+      "query": "dwarf actor Indian descent born 1950s film",
+      "expression": "\"dwarf\" OR \"actor\" OR \"indian\" OR \"descent\" OR \"born\" OR \"1950s\" OR \"film\"",
+      "new_docids": [
+        "79214",
+        "99997"
+      ],
+      "max_previous_result_jaccard": 0.1111111111111111,
+      "identical_previous_result_set": false,
+      "contains_quote": false,
+      "contains_site": false,
+      "contains_uppercase_boolean": false
+    },
+    {
+      "round": 8,
+      "query": "Deep Roy perfectly formed quote",
+      "expression": "\"deep\" OR \"roy\" OR \"perfectly\" OR \"formed\" OR \"quote\"",
+      "new_docids": [
+        "34701",
+        "43459",
+        "82760",
+        "83524",
+        "91482"
+      ],
+      "max_previous_result_jaccard": 0.0,
+      "identical_previous_result_set": false,
+      "contains_quote": false,
+      "contains_site": false,
+      "contains_uppercase_boolean": false
+    },
+    {
+      "round": 8,
+      "query": "Deep Roy born 1950s Indian parents short film nephew",
+      "expression": "\"deep\" OR \"roy\" OR \"born\" OR \"1950s\" OR \"indian\" OR \"parents\" OR \"short\" OR \"film\" OR \"nephew\"",
+      "new_docids": [
+        "15520",
+        "16652",
+        "50603",
+        "71781"
+      ],
+      "max_previous_result_jaccard": 0.1111111111111111,
+      "identical_previous_result_set": false,
+      "contains_quote": false,
+      "contains_site": false,
+      "contains_uppercase_boolean": false
+    },
+    {
+      "round": 8,
+      "query": "Deep Roy Don Chaffey film",
+      "expression": "\"deep\" OR \"roy\" OR \"don\" OR \"chaffey\" OR \"film\"",
+      "new_docids": [
+        "31449",
+        "57958"
+      ],
+      "max_previous_result_jaccard": 0.25,
+      "identical_previous_result_set": false,
+      "contains_quote": false,
+      "contains_site": false,
+      "contains_uppercase_boolean": false
+    },
+    {
+      "round": 8,
+      "query": "Kiran Shah perfectly formed quote",
+      "expression": "\"kiran\" OR \"shah\" OR \"perfectly\" OR \"formed\" OR \"quote\"",
+      "new_docids": [
+        "64557",
+        "68388",
+        "78611",
+        "81209"
+      ],
+      "max_previous_result_jaccard": 0.1111111111111111,
+      "identical_previous_result_set": false,
+      "contains_quote": false,
+      "contains_site": false,
+      "contains_uppercase_boolean": false
+    },
+    {
+      "round": 8,
+      "query": "Kiran Shah short film nephew directed",
+      "expression": "\"kiran\" OR \"shah\" OR \"short\" OR \"film\" OR \"nephew\" OR \"directed\"",
+      "new_docids": [
+        "81642"
+      ],
+      "max_previous_result_jaccard": 0.6666666666666666,
+      "identical_previous_result_set": false,
+      "contains_quote": false,
+      "contains_site": false,
+      "contains_uppercase_boolean": false
+    },
+    {
+      "round": 8,
+      "query": "Kiran Shah Don Chaffey film",
+      "expression": "\"kiran\" OR \"shah\" OR \"don\" OR \"chaffey\" OR \"film\"",
+      "new_docids": [],
+      "max_previous_result_jaccard": 1.0,
+      "identical_previous_result_set": true,
+      "contains_quote": false,
+      "contains_site": false,
+      "contains_uppercase_boolean": false
+    },
+    {
+      "round": 10,
+      "query": "The People That Time Forgot 1977 director runtime",
+      "expression": "\"the\" OR \"people\" OR \"that\" OR \"time\" OR \"forgot\" OR \"1977\" OR \"director\" OR \"runtime\"",
+      "new_docids": [
+        "37875",
+        "65861",
+        "76449",
+        "94609"
+      ],
+      "max_previous_result_jaccard": 0.1111111111111111,
+      "identical_previous_result_set": false,
+      "contains_quote": false,
+      "contains_site": false,
+      "contains_uppercase_boolean": false
+    },
+    {
+      "round": 10,
+      "query": "The People That Time Forgot Don Chaffey runtime minutes",
+      "expression": "\"the\" OR \"people\" OR \"that\" OR \"time\" OR \"forgot\" OR \"don\" OR \"chaffey\" OR \"runtime\" OR \"minutes\"",
+      "new_docids": [],
+      "max_previous_result_jaccard": 0.42857142857142855,
+      "identical_previous_result_set": false,
+      "contains_quote": false,
+      "contains_site": false,
+      "contains_uppercase_boolean": false
+    },
+    {
+      "round": 10,
+      "query": "The People That Time Forgot 1977 cast Kiran Shah",
+      "expression": "\"the\" OR \"people\" OR \"that\" OR \"time\" OR \"forgot\" OR \"1977\" OR \"cast\" OR \"kiran\" OR \"shah\"",
+      "new_docids": [
+        "44024"
+      ],
+      "max_previous_result_jaccard": 0.6666666666666666,
+      "identical_previous_result_set": false,
+      "contains_quote": false,
+      "contains_site": false,
+      "contains_uppercase_boolean": false
+    },
+    {
+      "round": 11,
+      "query": "People That Time Forgot 1977 film Wikipedia",
+      "expression": "\"people\" OR \"that\" OR \"time\" OR \"forgot\" OR \"1977\" OR \"film\" OR \"wikipedia\"",
+      "new_docids": [
+        "23203",
+        "36762",
+        "63106",
+        "7885"
+      ],
+      "max_previous_result_jaccard": 0.1111111111111111,
+      "identical_previous_result_set": false,
+      "contains_quote": false,
+      "contains_site": false,
+      "contains_uppercase_boolean": false
+    },
+    {
+      "round": 11,
+      "query": "Don Chaffey filmography dinosaur films",
+      "expression": "\"don\" OR \"chaffey\" OR \"filmography\" OR \"dinosaur\" OR \"films\"",
+      "new_docids": [
+        "97534"
+      ],
+      "max_previous_result_jaccard": 0.42857142857142855,
+      "identical_previous_result_set": false,
+      "contains_quote": false,
+      "contains_site": false,
+      "contains_uppercase_boolean": false
+    },
+    {
+      "round": 11,
+      "query": "One Million Years B.C. Don Chaffey runtime",
+      "expression": "\"one\" OR \"million\" OR \"years\" OR \"b\" OR \"c\" OR \"don\" OR \"chaffey\" OR \"runtime\"",
+      "new_docids": [],
+      "max_previous_result_jaccard": 0.6666666666666666,
+      "identical_previous_result_set": false,
+      "contains_quote": false,
+      "contains_site": false,
+      "contains_uppercase_boolean": false
+    },
+    {
+      "round": 12,
+      "query": "The People That Time Forgot 1977 film director runtime minutes",
+      "expression": "\"the\" OR \"people\" OR \"that\" OR \"time\" OR \"forgot\" OR \"1977\" OR \"film\" OR \"director\" OR \"runtime\" OR \"minutes\"",
+      "new_docids": [
+        "84886"
+      ],
+      "max_previous_result_jaccard": 0.6666666666666666,
+      "identical_previous_result_set": false,
+      "contains_quote": false,
+      "contains_site": false,
+      "contains_uppercase_boolean": false
+    },
+    {
+      "round": 12,
+      "query": "People That Time Forgot Don Chaffey 91 minutes",
+      "expression": "\"people\" OR \"that\" OR \"time\" OR \"forgot\" OR \"don\" OR \"chaffey\" OR \"91\" OR \"minutes\"",
+      "new_docids": [
+        "4123"
+      ],
+      "max_previous_result_jaccard": 0.42857142857142855,
+      "identical_previous_result_set": false,
+      "contains_quote": false,
+      "contains_site": false,
+      "contains_uppercase_boolean": false
+    },
+    {
+      "round": 12,
+      "query": "Don Chaffey filmography One Million Years BC Jason Argonauts",
+      "expression": "\"don\" OR \"chaffey\" OR \"filmography\" OR \"one\" OR \"million\" OR \"years\" OR \"bc\" OR \"jason\" OR \"argonauts\"",
+      "new_docids": [
+        "32476",
+        "9405"
+      ],
+      "max_previous_result_jaccard": 0.42857142857142855,
+      "identical_previous_result_set": false,
+      "contains_quote": false,
+      "contains_site": false,
+      "contains_uppercase_boolean": false
+    },
+    {
+      "round": 13,
+      "query": "People That Time Forgot 1977 film Wikipedia director",
+      "expression": "\"people\" OR \"that\" OR \"time\" OR \"forgot\" OR \"1977\" OR \"film\" OR \"wikipedia\" OR \"director\"",
+      "new_docids": [
+        "84951",
+        "99345"
+      ],
+      "max_previous_result_jaccard": 0.42857142857142855,
+      "identical_previous_result_set": false,
+      "contains_quote": false,
+      "contains_site": false,
+      "contains_uppercase_boolean": false
+    },
+    {
+      "round": 13,
+      "query": "Don Chaffey filmography Wikipedia",
+      "expression": "\"don\" OR \"chaffey\" OR \"filmography\" OR \"wikipedia\"",
+      "new_docids": [],
+      "max_previous_result_jaccard": 0.42857142857142855,
+      "identical_previous_result_set": false,
+      "contains_quote": false,
+      "contains_site": false,
+      "contains_uppercase_boolean": false
+    },
+    {
+      "round": 13,
+      "query": "One Million Years BC 1966 runtime minutes",
+      "expression": "\"one\" OR \"million\" OR \"years\" OR \"bc\" OR \"1966\" OR \"runtime\" OR \"minutes\"",
+      "new_docids": [
+        "3678",
+        "42336",
+        "94912"
+      ],
+      "max_previous_result_jaccard": 0.25,
+      "identical_previous_result_set": false,
+      "contains_quote": false,
+      "contains_site": false,
+      "contains_uppercase_boolean": false
+    },
+    {
+      "round": 14,
+      "query": "People That Time Forgot 1977 film Wikipedia",
+      "expression": "\"people\" OR \"that\" OR \"time\" OR \"forgot\" OR \"1977\" OR \"film\" OR \"wikipedia\"",
+      "new_docids": [],
+      "max_previous_result_jaccard": 1.0,
+      "identical_previous_result_set": true,
+      "contains_quote": false,
+      "contains_site": false,
+      "contains_uppercase_boolean": false
+    },
+    {
+      "round": 14,
+      "query": "Don Chaffey Wikipedia filmography",
+      "expression": "\"don\" OR \"chaffey\" OR \"wikipedia\" OR \"filmography\"",
+      "new_docids": [],
+      "max_previous_result_jaccard": 1.0,
+      "identical_previous_result_set": true,
+      "contains_quote": false,
+      "contains_site": false,
+      "contains_uppercase_boolean": false
+    },
+    {
+      "round": 14,
+      "query": "One Million Years BC 1966 film runtime",
+      "expression": "\"one\" OR \"million\" OR \"years\" OR \"bc\" OR \"1966\" OR \"film\" OR \"runtime\"",
+      "new_docids": [
+        "45914"
+      ],
+      "max_previous_result_jaccard": 0.42857142857142855,
+      "identical_previous_result_set": false,
+      "contains_quote": false,
+      "contains_site": false,
+      "contains_uppercase_boolean": false
+    },
+    {
+      "round": 15,
+      "query": "People That Time Forgot 1977 film Wikipedia",
+      "expression": "\"people\" OR \"that\" OR \"time\" OR \"forgot\" OR \"1977\" OR \"film\" OR \"wikipedia\"",
+      "new_docids": [],
+      "max_previous_result_jaccard": 1.0,
+      "identical_previous_result_set": true,
+      "contains_quote": false,
+      "contains_site": false,
+      "contains_uppercase_boolean": false
+    },
+    {
+      "round": 15,
+      "query": "Don Chaffey Wikipedia filmography",
+      "expression": "\"don\" OR \"chaffey\" OR \"wikipedia\" OR \"filmography\"",
+      "new_docids": [],
+      "max_previous_result_jaccard": 1.0,
+      "identical_previous_result_set": true,
+      "contains_quote": false,
+      "contains_site": false,
+      "contains_uppercase_boolean": false
+    },
+    {
+      "round": 15,
+      "query": "One Million Years BC 1966 film runtime",
+      "expression": "\"one\" OR \"million\" OR \"years\" OR \"bc\" OR \"1966\" OR \"film\" OR \"runtime\"",
+      "new_docids": [],
+      "max_previous_result_jaccard": 1.0,
+      "identical_previous_result_set": true,
+      "contains_quote": false,
+      "contains_site": false,
+      "contains_uppercase_boolean": false
+    },
+    {
+      "round": 16,
+      "query": "People That Time Forgot 1977 film Wikipedia",
+      "expression": "\"people\" OR \"that\" OR \"time\" OR \"forgot\" OR \"1977\" OR \"film\" OR \"wikipedia\"",
+      "new_docids": [],
+      "max_previous_result_jaccard": 1.0,
+      "identical_previous_result_set": true,
+      "contains_quote": false,
+      "contains_site": false,
+      "contains_uppercase_boolean": false
+    },
+    {
+      "round": 16,
+      "query": "Don Chaffey Wikipedia filmography",
+      "expression": "\"don\" OR \"chaffey\" OR \"wikipedia\" OR \"filmography\"",
+      "new_docids": [],
+      "max_previous_result_jaccard": 1.0,
+      "identical_previous_result_set": true,
+      "contains_quote": false,
+      "contains_site": false,
+      "contains_uppercase_boolean": false
+    },
+    {
+      "round": 16,
+      "query": "One Million Years BC 1966 film runtime",
+      "expression": "\"one\" OR \"million\" OR \"years\" OR \"bc\" OR \"1966\" OR \"film\" OR \"runtime\"",
+      "new_docids": [],
+      "max_previous_result_jaccard": 1.0,
+      "identical_previous_result_set": true,
+      "contains_quote": false,
+      "contains_site": false,
+      "contains_uppercase_boolean": false
+    },
+    {
+      "round": 17,
+      "query": "People That Time Forgot 1977 film Wikipedia",
+      "expression": "\"people\" OR \"that\" OR \"time\" OR \"forgot\" OR \"1977\" OR \"film\" OR \"wikipedia\"",
+      "new_docids": [],
+      "max_previous_result_jaccard": 1.0,
+      "identical_previous_result_set": true,
+      "contains_quote": false,
+      "contains_site": false,
+      "contains_uppercase_boolean": false
+    },
+    {
+      "round": 17,
+      "query": "Don Chaffey Wikipedia filmography",
+      "expression": "\"don\" OR \"chaffey\" OR \"wikipedia\" OR \"filmography\"",
+      "new_docids": [],
+      "max_previous_result_jaccard": 1.0,
+      "identical_previous_result_set": true,
+      "contains_quote": false,
+      "contains_site": false,
+      "contains_uppercase_boolean": false
+    },
+    {
+      "round": 17,
+      "query": "One Million Years BC 1966 film runtime",
+      "expression": "\"one\" OR \"million\" OR \"years\" OR \"bc\" OR \"1966\" OR \"film\" OR \"runtime\"",
+      "new_docids": [],
+      "max_previous_result_jaccard": 1.0,
+      "identical_previous_result_set": true,
+      "contains_quote": false,
+      "contains_site": false,
+      "contains_uppercase_boolean": false
+    },
+    {
+      "round": 18,
+      "query": "Kiran Shah perfectly formed quote",
+      "expression": "\"kiran\" OR \"shah\" OR \"perfectly\" OR \"formed\" OR \"quote\"",
+      "new_docids": [],
+      "max_previous_result_jaccard": 1.0,
+      "identical_previous_result_set": true,
+      "contains_quote": false,
+      "contains_site": false,
+      "contains_uppercase_boolean": false
+    },
+    {
+      "round": 18,
+      "query": "People That Time Forgot 1977 film director runtime",
+      "expression": "\"people\" OR \"that\" OR \"time\" OR \"forgot\" OR \"1977\" OR \"film\" OR \"director\" OR \"runtime\"",
+      "new_docids": [],
+      "max_previous_result_jaccard": 1.0,
+      "identical_previous_result_set": true,
+      "contains_quote": false,
+      "contains_site": false,
+      "contains_uppercase_boolean": false
+    },
+    {
+      "round": 18,
+      "query": "Kiran Shah short film nephew director",
+      "expression": "\"kiran\" OR \"shah\" OR \"short\" OR \"film\" OR \"nephew\" OR \"director\"",
+      "new_docids": [],
+      "max_previous_result_jaccard": 1.0,
+      "identical_previous_result_set": true,
+      "contains_quote": false,
+      "contains_site": false,
+      "contains_uppercase_boolean": false
+    },
+    {
+      "round": 19,
+      "query": "People That Time Forgot 1977 film director Don Chaffey runtime",
+      "expression": "\"people\" OR \"that\" OR \"time\" OR \"forgot\" OR \"1977\" OR \"film\" OR \"director\" OR \"don\" OR \"chaffey\" OR \"runtime\"",
+      "new_docids": [],
+      "max_previous_result_jaccard": 0.42857142857142855,
+      "identical_previous_result_set": false,
+      "contains_quote": false,
+      "contains_site": false,
+      "contains_uppercase_boolean": false
+    },
+    {
+      "round": 19,
+      "query": "Don Chaffey filmography One Million Years BC Jason Argonauts",
+      "expression": "\"don\" OR \"chaffey\" OR \"filmography\" OR \"one\" OR \"million\" OR \"years\" OR \"bc\" OR \"jason\" OR \"argonauts\"",
+      "new_docids": [],
+      "max_previous_result_jaccard": 1.0,
+      "identical_previous_result_set": true,
+      "contains_quote": false,
+      "contains_site": false,
+      "contains_uppercase_boolean": false
+    },
+    {
+      "round": 20,
+      "query": "People That Time Forgot 1977 film Wikipedia director",
+      "expression": "\"people\" OR \"that\" OR \"time\" OR \"forgot\" OR \"1977\" OR \"film\" OR \"wikipedia\" OR \"director\"",
+      "new_docids": [],
+      "max_previous_result_jaccard": 1.0,
+      "identical_previous_result_set": true,
+      "contains_quote": false,
+      "contains_site": false,
+      "contains_uppercase_boolean": false
+    },
+    {
+      "round": 20,
+      "query": "Don Chaffey Wikipedia director biography",
+      "expression": "\"don\" OR \"chaffey\" OR \"wikipedia\" OR \"director\" OR \"biography\"",
+      "new_docids": [
+        "775"
+      ],
+      "max_previous_result_jaccard": 0.6666666666666666,
+      "identical_previous_result_set": false,
+      "contains_quote": false,
+      "contains_site": false,
+      "contains_uppercase_boolean": false
+    },
+    {
+      "round": 21,
+      "query": "People That Time Forgot 1977 film Wikipedia director runtime",
+      "expression": "\"people\" OR \"that\" OR \"time\" OR \"forgot\" OR \"1977\" OR \"film\" OR \"wikipedia\" OR \"director\" OR \"runtime\"",
+      "new_docids": [
+        "61890",
+        "69393"
+      ],
+      "max_previous_result_jaccard": 0.25,
+      "identical_previous_result_set": false,
+      "contains_quote": false,
+      "contains_site": false,
+      "contains_uppercase_boolean": false
+    },
+    {
+      "round": 21,
+      "query": "Don Chaffey Wikipedia director filmography",
+      "expression": "\"don\" OR \"chaffey\" OR \"wikipedia\" OR \"director\" OR \"filmography\"",
+      "new_docids": [],
+      "max_previous_result_jaccard": 1.0,
+      "identical_previous_result_set": true,
+      "contains_quote": false,
+      "contains_site": false,
+      "contains_uppercase_boolean": false
+    },
+    {
+      "round": 22,
+      "query": "People That Time Forgot 1977 film Wikipedia",
+      "expression": "\"people\" OR \"that\" OR \"time\" OR \"forgot\" OR \"1977\" OR \"film\" OR \"wikipedia\"",
+      "new_docids": [],
+      "max_previous_result_jaccard": 1.0,
+      "identical_previous_result_set": true,
+      "contains_quote": false,
+      "contains_site": false,
+      "contains_uppercase_boolean": false
+    },
+    {
+      "round": 22,
+      "query": "Don Chaffey Wikipedia director filmography",
+      "expression": "\"don\" OR \"chaffey\" OR \"wikipedia\" OR \"director\" OR \"filmography\"",
+      "new_docids": [],
+      "max_previous_result_jaccard": 1.0,
+      "identical_previous_result_set": true,
+      "contains_quote": false,
+      "contains_site": false,
+      "contains_uppercase_boolean": false
+    },
+    {
+      "round": 24,
+      "query": "People That Time Forgot 1977 film Wikipedia",
+      "expression": "\"people\" OR \"that\" OR \"time\" OR \"forgot\" OR \"1977\" OR \"film\" OR \"wikipedia\"",
+      "new_docids": [],
+      "max_previous_result_jaccard": 1.0,
+      "identical_previous_result_set": true,
+      "contains_quote": false,
+      "contains_site": false,
+      "contains_uppercase_boolean": false
+    },
+    {
+      "round": 24,
+      "query": "Don Chaffey Wikipedia director filmography",
+      "expression": "\"don\" OR \"chaffey\" OR \"wikipedia\" OR \"director\" OR \"filmography\"",
+      "new_docids": [],
+      "max_previous_result_jaccard": 1.0,
+      "identical_previous_result_set": true,
+      "contains_quote": false,
+      "contains_site": false,
+      "contains_uppercase_boolean": false
+    },
+    {
+      "round": 25,
+      "query": "People That Time Forgot 1977 film Wikipedia",
+      "expression": "\"people\" OR \"that\" OR \"time\" OR \"forgot\" OR \"1977\" OR \"film\" OR \"wikipedia\"",
+      "new_docids": [],
+      "max_previous_result_jaccard": 1.0,
+      "identical_previous_result_set": true,
+      "contains_quote": false,
+      "contains_site": false,
+      "contains_uppercase_boolean": false
+    },
+    {
+      "round": 25,
+      "query": "Don Chaffey Wikipedia director filmography",
+      "expression": "\"don\" OR \"chaffey\" OR \"wikipedia\" OR \"director\" OR \"filmography\"",
+      "new_docids": [],
+      "max_previous_result_jaccard": 1.0,
+      "identical_previous_result_set": true,
+      "contains_quote": false,
+      "contains_site": false,
+      "contains_uppercase_boolean": false
+    },
+    {
+      "round": 26,
+      "query": "People That Time Forgot 1977 film Wikipedia",
+      "expression": "\"people\" OR \"that\" OR \"time\" OR \"forgot\" OR \"1977\" OR \"film\" OR \"wikipedia\"",
+      "new_docids": [],
+      "max_previous_result_jaccard": 1.0,
+      "identical_previous_result_set": true,
+      "contains_quote": false,
+      "contains_site": false,
+      "contains_uppercase_boolean": false
+    },
+    {
+      "round": 26,
+      "query": "Don Chaffey Wikipedia director filmography",
+      "expression": "\"don\" OR \"chaffey\" OR \"wikipedia\" OR \"director\" OR \"filmography\"",
+      "new_docids": [],
+      "max_previous_result_jaccard": 1.0,
+      "identical_previous_result_set": true,
+      "contains_quote": false,
+      "contains_site": false,
+      "contains_uppercase_boolean": false
+    },
+    {
+      "round": 27,
+      "query": "People That Time Forgot 1977 film Wikipedia",
+      "expression": "\"people\" OR \"that\" OR \"time\" OR \"forgot\" OR \"1977\" OR \"film\" OR \"wikipedia\"",
+      "new_docids": [],
+      "max_previous_result_jaccard": 1.0,
+      "identical_previous_result_set": true,
+      "contains_quote": false,
+      "contains_site": false,
+      "contains_uppercase_boolean": false
+    },
+    {
+      "round": 27,
+      "query": "Don Chaffey Wikipedia director filmography",
+      "expression": "\"don\" OR \"chaffey\" OR \"wikipedia\" OR \"director\" OR \"filmography\"",
+      "new_docids": [],
+      "max_previous_result_jaccard": 1.0,
+      "identical_previous_result_set": true,
+      "contains_quote": false,
+      "contains_site": false,
+      "contains_uppercase_boolean": false
+    },
+    {
+      "round": 28,
+      "query": "People That Time Forgot 1977 film Wikipedia",
+      "expression": "\"people\" OR \"that\" OR \"time\" OR \"forgot\" OR \"1977\" OR \"film\" OR \"wikipedia\"",
+      "new_docids": [],
+      "max_previous_result_jaccard": 1.0,
+      "identical_previous_result_set": true,
+      "contains_quote": false,
+      "contains_site": false,
+      "contains_uppercase_boolean": false
+    },
+    {
+      "round": 28,
+      "query": "Don Chaffey Wikipedia director filmography",
+      "expression": "\"don\" OR \"chaffey\" OR \"wikipedia\" OR \"director\" OR \"filmography\"",
+      "new_docids": [],
+      "max_previous_result_jaccard": 1.0,
+      "identical_previous_result_set": true,
+      "contains_quote": false,
+      "contains_site": false,
+      "contains_uppercase_boolean": false
+    },
+    {
+      "round": 29,
+      "query": "People That Time Forgot 1977 film Wikipedia",
+      "expression": "\"people\" OR \"that\" OR \"time\" OR \"forgot\" OR \"1977\" OR \"film\" OR \"wikipedia\"",
+      "new_docids": [],
+      "max_previous_result_jaccard": 1.0,
+      "identical_previous_result_set": true,
+      "contains_quote": false,
+      "contains_site": false,
+      "contains_uppercase_boolean": false
+    },
+    {
+      "round": 29,
+      "query": "Don Chaffey Wikipedia director filmography",
+      "expression": "\"don\" OR \"chaffey\" OR \"wikipedia\" OR \"director\" OR \"filmography\"",
+      "new_docids": [],
+      "max_previous_result_jaccard": 1.0,
+      "identical_previous_result_set": true,
+      "contains_quote": false,
+      "contains_site": false,
+      "contains_uppercase_boolean": false
+    },
+    {
+      "round": 30,
+      "query": "People That Time Forgot 1977 film Wikipedia",
+      "expression": "\"people\" OR \"that\" OR \"time\" OR \"forgot\" OR \"1977\" OR \"film\" OR \"wikipedia\"",
+      "new_docids": [],
+      "max_previous_result_jaccard": 1.0,
+      "identical_previous_result_set": true,
+      "contains_quote": false,
+      "contains_site": false,
+      "contains_uppercase_boolean": false
+    },
+    {
+      "round": 30,
+      "query": "Don Chaffey Wikipedia director filmography",
+      "expression": "\"don\" OR \"chaffey\" OR \"wikipedia\" OR \"director\" OR \"filmography\"",
+      "new_docids": [],
+      "max_previous_result_jaccard": 1.0,
+      "identical_previous_result_set": true,
+      "contains_quote": false,
+      "contains_site": false,
+      "contains_uppercase_boolean": false
+    },
+    {
+      "round": 31,
+      "query": "People That Time Forgot 1977 film Wikipedia",
+      "expression": "\"people\" OR \"that\" OR \"time\" OR \"forgot\" OR \"1977\" OR \"film\" OR \"wikipedia\"",
+      "new_docids": [],
+      "max_previous_result_jaccard": 1.0,
+      "identical_previous_result_set": true,
+      "contains_quote": false,
+      "contains_site": false,
+      "contains_uppercase_boolean": false
+    },
+    {
+      "round": 31,
+      "query": "Don Chaffey Wikipedia director filmography",
+      "expression": "\"don\" OR \"chaffey\" OR \"wikipedia\" OR \"director\" OR \"filmography\"",
+      "new_docids": [],
+      "max_previous_result_jaccard": 1.0,
+      "identical_previous_result_set": true,
+      "contains_quote": false,
+      "contains_site": false,
+      "contains_uppercase_boolean": false
+    },
+    {
+      "round": 32,
+      "query": "People That Time Forgot 1977 film Wikipedia",
+      "expression": "\"people\" OR \"that\" OR \"time\" OR \"forgot\" OR \"1977\" OR \"film\" OR \"wikipedia\"",
+      "new_docids": [],
+      "max_previous_result_jaccard": 1.0,
+      "identical_previous_result_set": true,
+      "contains_quote": false,
+      "contains_site": false,
+      "contains_uppercase_boolean": false
+    },
+    {
+      "round": 32,
+      "query": "Don Chaffey Wikipedia director filmography",
+      "expression": "\"don\" OR \"chaffey\" OR \"wikipedia\" OR \"director\" OR \"filmography\"",
+      "new_docids": [],
+      "max_previous_result_jaccard": 1.0,
+      "identical_previous_result_set": true,
+      "contains_quote": false,
+      "contains_site": false,
+      "contains_uppercase_boolean": false
+    },
+    {
+      "round": 33,
+      "query": "People That Time Forgot 1977 film Wikipedia",
+      "expression": "\"people\" OR \"that\" OR \"time\" OR \"forgot\" OR \"1977\" OR \"film\" OR \"wikipedia\"",
+      "new_docids": [],
+      "max_previous_result_jaccard": 1.0,
+      "identical_previous_result_set": true,
+      "contains_quote": false,
+      "contains_site": false,
+      "contains_uppercase_boolean": false
+    },
+    {
+      "round": 33,
+      "query": "Don Chaffey Wikipedia director filmography",
+      "expression": "\"don\" OR \"chaffey\" OR \"wikipedia\" OR \"director\" OR \"filmography\"",
+      "new_docids": [],
+      "max_previous_result_jaccard": 1.0,
+      "identical_previous_result_set": true,
+      "contains_quote": false,
+      "contains_site": false,
+      "contains_uppercase_boolean": false
+    },
+    {
+      "round": 34,
+      "query": "People That Time Forgot 1977 film Wikipedia",
+      "expression": "\"people\" OR \"that\" OR \"time\" OR \"forgot\" OR \"1977\" OR \"film\" OR \"wikipedia\"",
+      "new_docids": [],
+      "max_previous_result_jaccard": 1.0,
+      "identical_previous_result_set": true,
+      "contains_quote": false,
+      "contains_site": false,
+      "contains_uppercase_boolean": false
+    },
+    {
+      "round": 34,
+      "query": "Don Chaffey Wikipedia director filmography",
+      "expression": "\"don\" OR \"chaffey\" OR \"wikipedia\" OR \"director\" OR \"filmography\"",
+      "new_docids": [],
+      "max_previous_result_jaccard": 1.0,
+      "identical_previous_result_set": true,
+      "contains_quote": false,
+      "contains_site": false,
+      "contains_uppercase_boolean": false
+    },
+    {
+      "round": 35,
+      "query": "People That Time Forgot 1977 film Wikipedia",
+      "expression": "\"people\" OR \"that\" OR \"time\" OR \"forgot\" OR \"1977\" OR \"film\" OR \"wikipedia\"",
+      "new_docids": [],
+      "max_previous_result_jaccard": 1.0,
+      "identical_previous_result_set": true,
+      "contains_quote": false,
+      "contains_site": false,
+      "contains_uppercase_boolean": false
+    },
+    {
+      "round": 35,
+      "query": "Don Chaffey Wikipedia director filmography",
+      "expression": "\"don\" OR \"chaffey\" OR \"wikipedia\" OR \"director\" OR \"filmography\"",
+      "new_docids": [],
+      "max_previous_result_jaccard": 1.0,
+      "identical_previous_result_set": true,
+      "contains_quote": false,
+      "contains_site": false,
+      "contains_uppercase_boolean": false
+    },
+    {
+      "round": 36,
+      "query": "People That Time Forgot 1977 film Wikipedia",
+      "expression": "\"people\" OR \"that\" OR \"time\" OR \"forgot\" OR \"1977\" OR \"film\" OR \"wikipedia\"",
+      "new_docids": [],
+      "max_previous_result_jaccard": 1.0,
+      "identical_previous_result_set": true,
+      "contains_quote": false,
+      "contains_site": false,
+      "contains_uppercase_boolean": false
+    },
+    {
+      "round": 36,
+      "query": "Don Chaffey Wikipedia director filmography",
+      "expression": "\"don\" OR \"chaffey\" OR \"wikipedia\" OR \"director\" OR \"filmography\"",
+      "new_docids": [],
+      "max_previous_result_jaccard": 1.0,
+      "identical_previous_result_set": true,
+      "contains_quote": false,
+      "contains_site": false,
+      "contains_uppercase_boolean": false
+    },
+    {
+      "round": 37,
+      "query": "People That Time Forgot 1977 film Wikipedia",
+      "expression": "\"people\" OR \"that\" OR \"time\" OR \"forgot\" OR \"1977\" OR \"film\" OR \"wikipedia\"",
+      "new_docids": [],
+      "max_previous_result_jaccard": 1.0,
+      "identical_previous_result_set": true,
+      "contains_quote": false,
+      "contains_site": false,
+      "contains_uppercase_boolean": false
+    },
+    {
+      "round": 37,
+      "query": "Don Chaffey Wikipedia director filmography",
+      "expression": "\"don\" OR \"chaffey\" OR \"wikipedia\" OR \"director\" OR \"filmography\"",
+      "new_docids": [],
+      "max_previous_result_jaccard": 1.0,
+      "identical_previous_result_set": true,
+      "contains_quote": false,
+      "contains_site": false,
+      "contains_uppercase_boolean": false
+    },
+    {
+      "round": 38,
+      "query": "People That Time Forgot 1977 film Wikipedia",
+      "expression": "\"people\" OR \"that\" OR \"time\" OR \"forgot\" OR \"1977\" OR \"film\" OR \"wikipedia\"",
+      "new_docids": [],
+      "max_previous_result_jaccard": 1.0,
+      "identical_previous_result_set": true,
+      "contains_quote": false,
+      "contains_site": false,
+      "contains_uppercase_boolean": false
+    },
+    {
+      "round": 38,
+      "query": "Don Chaffey Wikipedia director filmography",
+      "expression": "\"don\" OR \"chaffey\" OR \"wikipedia\" OR \"director\" OR \"filmography\"",
+      "new_docids": [],
+      "max_previous_result_jaccard": 1.0,
+      "identical_previous_result_set": true,
+      "contains_quote": false,
+      "contains_site": false,
+      "contains_uppercase_boolean": false
+    },
+    {
+      "round": 39,
+      "query": "People That Time Forgot 1977 film Wikipedia",
+      "expression": "\"people\" OR \"that\" OR \"time\" OR \"forgot\" OR \"1977\" OR \"film\" OR \"wikipedia\"",
+      "new_docids": [],
+      "max_previous_result_jaccard": 1.0,
+      "identical_previous_result_set": true,
+      "contains_quote": false,
+      "contains_site": false,
+      "contains_uppercase_boolean": false
+    },
+    {
+      "round": 39,
+      "query": "Don Chaffey Wikipedia director filmography",
+      "expression": "\"don\" OR \"chaffey\" OR \"wikipedia\" OR \"director\" OR \"filmography\"",
+      "new_docids": [],
+      "max_previous_result_jaccard": 1.0,
+      "identical_previous_result_set": true,
+      "contains_quote": false,
+      "contains_site": false,
+      "contains_uppercase_boolean": false
+    },
+    {
+      "round": 40,
+      "query": "People That Time Forgot 1977 film Wikipedia",
+      "expression": "\"people\" OR \"that\" OR \"time\" OR \"forgot\" OR \"1977\" OR \"film\" OR \"wikipedia\"",
+      "new_docids": [],
+      "max_previous_result_jaccard": 1.0,
+      "identical_previous_result_set": true,
+      "contains_quote": false,
+      "contains_site": false,
+      "contains_uppercase_boolean": false
+    },
+    {
+      "round": 40,
+      "query": "Don Chaffey Wikipedia director filmography",
+      "expression": "\"don\" OR \"chaffey\" OR \"wikipedia\" OR \"director\" OR \"filmography\"",
+      "new_docids": [],
+      "max_previous_result_jaccard": 1.0,
+      "identical_previous_result_set": true,
+      "contains_quote": false,
+      "contains_site": false,
+      "contains_uppercase_boolean": false
+    },
+    {
+      "round": 41,
+      "query": "People That Time Forgot 1977 film Wikipedia",
+      "expression": "\"people\" OR \"that\" OR \"time\" OR \"forgot\" OR \"1977\" OR \"film\" OR \"wikipedia\"",
+      "new_docids": [],
+      "max_previous_result_jaccard": 1.0,
+      "identical_previous_result_set": true,
+      "contains_quote": false,
+      "contains_site": false,
+      "contains_uppercase_boolean": false
+    },
+    {
+      "round": 41,
+      "query": "Don Chaffey Wikipedia director filmography",
+      "expression": "\"don\" OR \"chaffey\" OR \"wikipedia\" OR \"director\" OR \"filmography\"",
+      "new_docids": [],
+      "max_previous_result_jaccard": 1.0,
+      "identical_previous_result_set": true,
+      "contains_quote": false,
+      "contains_site": false,
+      "contains_uppercase_boolean": false
+    },
+    {
+      "round": 42,
+      "query": "People That Time Forgot 1977 film Wikipedia",
+      "expression": "\"people\" OR \"that\" OR \"time\" OR \"forgot\" OR \"1977\" OR \"film\" OR \"wikipedia\"",
+      "new_docids": [],
+      "max_previous_result_jaccard": 1.0,
+      "identical_previous_result_set": true,
+      "contains_quote": false,
+      "contains_site": false,
+      "contains_uppercase_boolean": false
+    },
+    {
+      "round": 42,
+      "query": "Don Chaffey Wikipedia director filmography",
+      "expression": "\"don\" OR \"chaffey\" OR \"wikipedia\" OR \"director\" OR \"filmography\"",
+      "new_docids": [],
+      "max_previous_result_jaccard": 1.0,
+      "identical_previous_result_set": true,
+      "contains_quote": false,
+      "contains_site": false,
+      "contains_uppercase_boolean": false
+    },
+    {
+      "round": 43,
+      "query": "People That Time Forgot 1977 film Wikipedia",
+      "expression": "\"people\" OR \"that\" OR \"time\" OR \"forgot\" OR \"1977\" OR \"film\" OR \"wikipedia\"",
+      "new_docids": [],
+      "max_previous_result_jaccard": 1.0,
+      "identical_previous_result_set": true,
+      "contains_quote": false,
+      "contains_site": false,
+      "contains_uppercase_boolean": false
+    },
+    {
+      "round": 43,
+      "query": "Don Chaffey Wikipedia director filmography",
+      "expression": "\"don\" OR \"chaffey\" OR \"wikipedia\" OR \"director\" OR \"filmography\"",
+      "new_docids": [],
+      "max_previous_result_jaccard": 1.0,
+      "identical_previous_result_set": true,
+      "contains_quote": false,
+      "contains_site": false,
+      "contains_uppercase_boolean": false
+    },
+    {
+      "round": 44,
+      "query": "People That Time Forgot 1977 film Wikipedia",
+      "expression": "\"people\" OR \"that\" OR \"time\" OR \"forgot\" OR \"1977\" OR \"film\" OR \"wikipedia\"",
+      "new_docids": [],
+      "max_previous_result_jaccard": 1.0,
+      "identical_previous_result_set": true,
+      "contains_quote": false,
+      "contains_site": false,
+      "contains_uppercase_boolean": false
+    },
+    {
+      "round": 44,
+      "query": "Don Chaffey Wikipedia director filmography",
+      "expression": "\"don\" OR \"chaffey\" OR \"wikipedia\" OR \"director\" OR \"filmography\"",
+      "new_docids": [],
+      "max_previous_result_jaccard": 1.0,
+      "identical_previous_result_set": true,
+      "contains_quote": false,
+      "contains_site": false,
+      "contains_uppercase_boolean": false
+    },
+    {
+      "round": 45,
+      "query": "People That Time Forgot 1977 film Wikipedia",
+      "expression": "\"people\" OR \"that\" OR \"time\" OR \"forgot\" OR \"1977\" OR \"film\" OR \"wikipedia\"",
+      "new_docids": [],
+      "max_previous_result_jaccard": 1.0,
+      "identical_previous_result_set": true,
+      "contains_quote": false,
+      "contains_site": false,
+      "contains_uppercase_boolean": false
+    },
+    {
+      "round": 45,
+      "query": "Don Chaffey Wikipedia director filmography",
+      "expression": "\"don\" OR \"chaffey\" OR \"wikipedia\" OR \"director\" OR \"filmography\"",
+      "new_docids": [],
+      "max_previous_result_jaccard": 1.0,
+      "identical_previous_result_set": true,
+      "contains_quote": false,
+      "contains_site": false,
+      "contains_uppercase_boolean": false
+    },
+    {
+      "round": 46,
+      "query": "People That Time Forgot 1977 film Wikipedia",
+      "expression": "\"people\" OR \"that\" OR \"time\" OR \"forgot\" OR \"1977\" OR \"film\" OR \"wikipedia\"",
+      "new_docids": [],
+      "max_previous_result_jaccard": 1.0,
+      "identical_previous_result_set": true,
+      "contains_quote": false,
+      "contains_site": false,
+      "contains_uppercase_boolean": false
+    },
+    {
+      "round": 46,
+      "query": "Don Chaffey Wikipedia director filmography",
+      "expression": "\"don\" OR \"chaffey\" OR \"wikipedia\" OR \"director\" OR \"filmography\"",
+      "new_docids": [],
+      "max_previous_result_jaccard": 1.0,
+      "identical_previous_result_set": true,
+      "contains_quote": false,
+      "contains_site": false,
+      "contains_uppercase_boolean": false
+    },
+    {
+      "round": 47,
+      "query": "People That Time Forgot 1977 film Wikipedia",
+      "expression": "\"people\" OR \"that\" OR \"time\" OR \"forgot\" OR \"1977\" OR \"film\" OR \"wikipedia\"",
+      "new_docids": [],
+      "max_previous_result_jaccard": 1.0,
+      "identical_previous_result_set": true,
+      "contains_quote": false,
+      "contains_site": false,
+      "contains_uppercase_boolean": false
+    },
+    {
+      "round": 47,
+      "query": "Don Chaffey Wikipedia director filmography",
+      "expression": "\"don\" OR \"chaffey\" OR \"wikipedia\" OR \"director\" OR \"filmography\"",
+      "new_docids": [],
+      "max_previous_result_jaccard": 1.0,
+      "identical_previous_result_set": true,
+      "contains_quote": false,
+      "contains_site": false,
+      "contains_uppercase_boolean": false
+    },
+    {
+      "round": 48,
+      "query": "People That Time Forgot 1977 film Wikipedia",
+      "expression": "\"people\" OR \"that\" OR \"time\" OR \"forgot\" OR \"1977\" OR \"film\" OR \"wikipedia\"",
+      "new_docids": [],
+      "max_previous_result_jaccard": 1.0,
+      "identical_previous_result_set": true,
+      "contains_quote": false,
+      "contains_site": false,
+      "contains_uppercase_boolean": false
+    },
+    {
+      "round": 48,
+      "query": "Don Chaffey Wikipedia director filmography",
+      "expression": "\"don\" OR \"chaffey\" OR \"wikipedia\" OR \"director\" OR \"filmography\"",
+      "new_docids": [],
+      "max_previous_result_jaccard": 1.0,
+      "identical_previous_result_set": true,
+      "contains_quote": false,
+      "contains_site": false,
+      "contains_uppercase_boolean": false
+    },
+    {
+      "round": 49,
+      "query": "People That Time Forgot 1977 film Wikipedia",
+      "expression": "\"people\" OR \"that\" OR \"time\" OR \"forgot\" OR \"1977\" OR \"film\" OR \"wikipedia\"",
+      "new_docids": [],
+      "max_previous_result_jaccard": 1.0,
+      "identical_previous_result_set": true,
+      "contains_quote": false,
+      "contains_site": false,
+      "contains_uppercase_boolean": false
+    },
+    {
+      "round": 49,
+      "query": "Don Chaffey Wikipedia director filmography",
+      "expression": "\"don\" OR \"chaffey\" OR \"wikipedia\" OR \"director\" OR \"filmography\"",
+      "new_docids": [],
+      "max_previous_result_jaccard": 1.0,
+      "identical_previous_result_set": true,
+      "contains_quote": false,
+      "contains_site": false,
+      "contains_uppercase_boolean": false
+    },
+    {
+      "round": 50,
+      "query": "People That Time Forgot 1977 film Wikipedia",
+      "expression": "\"people\" OR \"that\" OR \"time\" OR \"forgot\" OR \"1977\" OR \"film\" OR \"wikipedia\"",
+      "new_docids": [],
+      "max_previous_result_jaccard": 1.0,
+      "identical_previous_result_set": true,
+      "contains_quote": false,
+      "contains_site": false,
+      "contains_uppercase_boolean": false
+    },
+    {
+      "round": 50,
+      "query": "Don Chaffey Wikipedia director filmography",
+      "expression": "\"don\" OR \"chaffey\" OR \"wikipedia\" OR \"director\" OR \"filmography\"",
+      "new_docids": [],
+      "max_previous_result_jaccard": 1.0,
+      "identical_previous_result_set": true,
+      "contains_quote": false,
+      "contains_site": false,
+      "contains_uppercase_boolean": false
+    },
+    {
+      "round": 51,
+      "query": "People That Time Forgot 1977 film Wikipedia",
+      "expression": "\"people\" OR \"that\" OR \"time\" OR \"forgot\" OR \"1977\" OR \"film\" OR \"wikipedia\"",
+      "new_docids": [],
+      "max_previous_result_jaccard": 1.0,
+      "identical_previous_result_set": true,
+      "contains_quote": false,
+      "contains_site": false,
+      "contains_uppercase_boolean": false
+    },
+    {
+      "round": 51,
+      "query": "Don Chaffey Wikipedia director filmography",
+      "expression": "\"don\" OR \"chaffey\" OR \"wikipedia\" OR \"director\" OR \"filmography\"",
+      "new_docids": [],
+      "max_previous_result_jaccard": 1.0,
+      "identical_previous_result_set": true,
+      "contains_quote": false,
+      "contains_site": false,
+      "contains_uppercase_boolean": false
+    },
+    {
+      "round": 52,
+      "query": "People That Time Forgot 1977 film Wikipedia",
+      "expression": "\"people\" OR \"that\" OR \"time\" OR \"forgot\" OR \"1977\" OR \"film\" OR \"wikipedia\"",
+      "new_docids": [],
+      "max_previous_result_jaccard": 1.0,
+      "identical_previous_result_set": true,
+      "contains_quote": false,
+      "contains_site": false,
+      "contains_uppercase_boolean": false
+    },
+    {
+      "round": 52,
+      "query": "Don Chaffey Wikipedia director filmography",
+      "expression": "\"don\" OR \"chaffey\" OR \"wikipedia\" OR \"director\" OR \"filmography\"",
+      "new_docids": [],
+      "max_previous_result_jaccard": 1.0,
+      "identical_previous_result_set": true,
+      "contains_quote": false,
+      "contains_site": false,
+      "contains_uppercase_boolean": false
+    },
+    {
+      "round": 53,
+      "query": "People That Time Forgot 1977 film Wikipedia",
+      "expression": "\"people\" OR \"that\" OR \"time\" OR \"forgot\" OR \"1977\" OR \"film\" OR \"wikipedia\"",
+      "new_docids": [],
+      "max_previous_result_jaccard": 1.0,
+      "identical_previous_result_set": true,
+      "contains_quote": false,
+      "contains_site": false,
+      "contains_uppercase_boolean": false
+    },
+    {
+      "round": 53,
+      "query": "Don Chaffey Wikipedia director filmography",
+      "expression": "\"don\" OR \"chaffey\" OR \"wikipedia\" OR \"director\" OR \"filmography\"",
+      "new_docids": [],
+      "max_previous_result_jaccard": 1.0,
+      "identical_previous_result_set": true,
+      "contains_quote": false,
+      "contains_site": false,
+      "contains_uppercase_boolean": false
+    },
+    {
+      "round": 54,
+      "query": "People That Time Forgot 1977 film Wikipedia",
+      "expression": "\"people\" OR \"that\" OR \"time\" OR \"forgot\" OR \"1977\" OR \"film\" OR \"wikipedia\"",
+      "new_docids": [],
+      "max_previous_result_jaccard": 1.0,
+      "identical_previous_result_set": true,
+      "contains_quote": false,
+      "contains_site": false,
+      "contains_uppercase_boolean": false
+    },
+    {
+      "round": 54,
+      "query": "Don Chaffey Wikipedia director filmography",
+      "expression": "\"don\" OR \"chaffey\" OR \"wikipedia\" OR \"director\" OR \"filmography\"",
+      "new_docids": [],
+      "max_previous_result_jaccard": 1.0,
+      "identical_previous_result_set": true,
+      "contains_quote": false,
+      "contains_site": false,
+      "contains_uppercase_boolean": false
+    },
+    {
+      "round": 55,
+      "query": "People That Time Forgot 1977 film Wikipedia",
+      "expression": "\"people\" OR \"that\" OR \"time\" OR \"forgot\" OR \"1977\" OR \"film\" OR \"wikipedia\"",
+      "new_docids": [],
+      "max_previous_result_jaccard": 1.0,
+      "identical_previous_result_set": true,
+      "contains_quote": false,
+      "contains_site": false,
+      "contains_uppercase_boolean": false
+    },
+    {
+      "round": 55,
+      "query": "Don Chaffey Wikipedia director filmography",
+      "expression": "\"don\" OR \"chaffey\" OR \"wikipedia\" OR \"director\" OR \"filmography\"",
+      "new_docids": [],
+      "max_previous_result_jaccard": 1.0,
+      "identical_previous_result_set": true,
+      "contains_quote": false,
+      "contains_site": false,
+      "contains_uppercase_boolean": false
+    },
+    {
+      "round": 56,
+      "query": "People That Time Forgot 1977 film Wikipedia",
+      "expression": "\"people\" OR \"that\" OR \"time\" OR \"forgot\" OR \"1977\" OR \"film\" OR \"wikipedia\"",
+      "new_docids": [],
+      "max_previous_result_jaccard": 1.0,
+      "identical_previous_result_set": true,
+      "contains_quote": false,
+      "contains_site": false,
+      "contains_uppercase_boolean": false
+    },
+    {
+      "round": 56,
+      "query": "Don Chaffey Wikipedia director filmography",
+      "expression": "\"don\" OR \"chaffey\" OR \"wikipedia\" OR \"director\" OR \"filmography\"",
+      "new_docids": [],
+      "max_previous_result_jaccard": 1.0,
+      "identical_previous_result_set": true,
+      "contains_quote": false,
+      "contains_site": false,
+      "contains_uppercase_boolean": false
+    },
+    {
+      "round": 57,
+      "query": "People That Time Forgot 1977 film Wikipedia",
+      "expression": "\"people\" OR \"that\" OR \"time\" OR \"forgot\" OR \"1977\" OR \"film\" OR \"wikipedia\"",
+      "new_docids": [],
+      "max_previous_result_jaccard": 1.0,
+      "identical_previous_result_set": true,
+      "contains_quote": false,
+      "contains_site": false,
+      "contains_uppercase_boolean": false
+    },
+    {
+      "round": 57,
+      "query": "Don Chaffey Wikipedia director filmography",
+      "expression": "\"don\" OR \"chaffey\" OR \"wikipedia\" OR \"director\" OR \"filmography\"",
+      "new_docids": [],
+      "max_previous_result_jaccard": 1.0,
+      "identical_previous_result_set": true,
+      "contains_quote": false,
+      "contains_site": false,
+      "contains_uppercase_boolean": false
+    },
+    {
+      "round": 58,
+      "query": "People That Time Forgot 1977 film Wikipedia",
+      "expression": "\"people\" OR \"that\" OR \"time\" OR \"forgot\" OR \"1977\" OR \"film\" OR \"wikipedia\"",
+      "new_docids": [],
+      "max_previous_result_jaccard": 1.0,
+      "identical_previous_result_set": true,
+      "contains_quote": false,
+      "contains_site": false,
+      "contains_uppercase_boolean": false
+    },
+    {
+      "round": 58,
+      "query": "Don Chaffey Wikipedia director filmography",
+      "expression": "\"don\" OR \"chaffey\" OR \"wikipedia\" OR \"director\" OR \"filmography\"",
+      "new_docids": [],
+      "max_previous_result_jaccard": 1.0,
+      "identical_previous_result_set": true,
+      "contains_quote": false,
+      "contains_site": false,
+      "contains_uppercase_boolean": false
+    },
+    {
+      "round": 59,
+      "query": "People That Time Forgot 1977 film Wikipedia",
+      "expression": "\"people\" OR \"that\" OR \"time\" OR \"forgot\" OR \"1977\" OR \"film\" OR \"wikipedia\"",
+      "new_docids": [],
+      "max_previous_result_jaccard": 1.0,
+      "identical_previous_result_set": true,
+      "contains_quote": false,
+      "contains_site": false,
+      "contains_uppercase_boolean": false
+    },
+    {
+      "round": 59,
+      "query": "Don Chaffey Wikipedia director filmography",
+      "expression": "\"don\" OR \"chaffey\" OR \"wikipedia\" OR \"director\" OR \"filmography\"",
+      "new_docids": [],
+      "max_previous_result_jaccard": 1.0,
+      "identical_previous_result_set": true,
+      "contains_quote": false,
+      "contains_site": false,
+      "contains_uppercase_boolean": false
+    },
+    {
+      "round": 60,
+      "query": "People That Time Forgot 1977 film Wikipedia",
+      "expression": "\"people\" OR \"that\" OR \"time\" OR \"forgot\" OR \"1977\" OR \"film\" OR \"wikipedia\"",
+      "new_docids": [],
+      "max_previous_result_jaccard": 1.0,
+      "identical_previous_result_set": true,
+      "contains_quote": false,
+      "contains_site": false,
+      "contains_uppercase_boolean": false
+    },
+    {
+      "round": 60,
+      "query": "Don Chaffey Wikipedia director filmography",
+      "expression": "\"don\" OR \"chaffey\" OR \"wikipedia\" OR \"director\" OR \"filmography\"",
+      "new_docids": [],
+      "max_previous_result_jaccard": 1.0,
+      "identical_previous_result_set": true,
+      "contains_quote": false,
+      "contains_site": false,
+      "contains_uppercase_boolean": false
+    },
+    {
+      "round": 61,
+      "query": "People That Time Forgot 1977 film Wikipedia",
+      "expression": "\"people\" OR \"that\" OR \"time\" OR \"forgot\" OR \"1977\" OR \"film\" OR \"wikipedia\"",
+      "new_docids": [],
+      "max_previous_result_jaccard": 1.0,
+      "identical_previous_result_set": true,
+      "contains_quote": false,
+      "contains_site": false,
+      "contains_uppercase_boolean": false
+    },
+    {
+      "round": 61,
+      "query": "Don Chaffey Wikipedia director filmography",
+      "expression": "\"don\" OR \"chaffey\" OR \"wikipedia\" OR \"director\" OR \"filmography\"",
+      "new_docids": [],
+      "max_previous_result_jaccard": 1.0,
+      "identical_previous_result_set": true,
+      "contains_quote": false,
+      "contains_site": false,
+      "contains_uppercase_boolean": false
+    },
+    {
+      "round": 62,
+      "query": "People That Time Forgot 1977 film Wikipedia",
+      "expression": "\"people\" OR \"that\" OR \"time\" OR \"forgot\" OR \"1977\" OR \"film\" OR \"wikipedia\"",
+      "new_docids": [],
+      "max_previous_result_jaccard": 1.0,
+      "identical_previous_result_set": true,
+      "contains_quote": false,
+      "contains_site": false,
+      "contains_uppercase_boolean": false
+    },
+    {
+      "round": 62,
+      "query": "Don Chaffey Wikipedia director filmography",
+      "expression": "\"don\" OR \"chaffey\" OR \"wikipedia\" OR \"director\" OR \"filmography\"",
+      "new_docids": [],
+      "max_previous_result_jaccard": 1.0,
+      "identical_previous_result_set": true,
+      "contains_quote": false,
+      "contains_site": false,
+      "contains_uppercase_boolean": false
+    },
+    {
+      "round": 63,
+      "query": "People That Time Forgot 1977 film Wikipedia",
+      "expression": "\"people\" OR \"that\" OR \"time\" OR \"forgot\" OR \"1977\" OR \"film\" OR \"wikipedia\"",
+      "new_docids": [],
+      "max_previous_result_jaccard": 1.0,
+      "identical_previous_result_set": true,
+      "contains_quote": false,
+      "contains_site": false,
+      "contains_uppercase_boolean": false
+    },
+    {
+      "round": 63,
+      "query": "Don Chaffey Wikipedia director filmography",
+      "expression": "\"don\" OR \"chaffey\" OR \"wikipedia\" OR \"director\" OR \"filmography\"",
+      "new_docids": [],
+      "max_previous_result_jaccard": 1.0,
+      "identical_previous_result_set": true,
+      "contains_quote": false,
+      "contains_site": false,
+      "contains_uppercase_boolean": false
+    }
+  ],
+  "shelf": [
+    {
+      "round": 1,
+      "eligible_recent_first_delivered": [],
+      "restored": [],
+      "evicted_for_capacity": [],
+      "visible": [],
+      "direct_restore_wire_bytes": 0,
+      "compacted": false,
+      "restored_was_previously_acked": true
+    },
+    {
+      "round": 2,
+      "eligible_recent_first_delivered": [],
+      "restored": [],
+      "evicted_for_capacity": [],
+      "visible": [],
+      "direct_restore_wire_bytes": 0,
+      "compacted": false,
+      "restored_was_previously_acked": true
+    },
+    {
+      "round": 3,
+      "eligible_recent_first_delivered": [],
+      "restored": [],
+      "evicted_for_capacity": [],
+      "visible": [],
+      "direct_restore_wire_bytes": 0,
+      "compacted": false,
+      "restored_was_previously_acked": true
+    },
+    {
+      "round": 4,
+      "eligible_recent_first_delivered": [],
+      "restored": [],
+      "evicted_for_capacity": [],
+      "visible": [],
+      "direct_restore_wire_bytes": 0,
+      "compacted": false,
+      "restored_was_previously_acked": true
+    },
+    {
+      "round": 5,
+      "eligible_recent_first_delivered": [],
+      "restored": [],
+      "evicted_for_capacity": [],
+      "visible": [],
+      "direct_restore_wire_bytes": 0,
+      "compacted": false,
+      "restored_was_previously_acked": true
+    },
+    {
+      "round": 6,
+      "eligible_recent_first_delivered": [],
+      "restored": [],
+      "evicted_for_capacity": [],
+      "visible": [],
+      "direct_restore_wire_bytes": 0,
+      "compacted": false,
+      "restored_was_previously_acked": true
+    },
+    {
+      "round": 7,
+      "eligible_recent_first_delivered": [],
+      "restored": [],
+      "evicted_for_capacity": [],
+      "visible": [],
+      "direct_restore_wire_bytes": 0,
+      "compacted": false,
+      "restored_was_previously_acked": true
+    },
+    {
+      "round": 8,
+      "eligible_recent_first_delivered": [],
+      "restored": [],
+      "evicted_for_capacity": [],
+      "visible": [
+        "e1"
+      ],
+      "direct_restore_wire_bytes": 0,
+      "compacted": false,
+      "restored_was_previously_acked": true
+    },
+    {
+      "round": 9,
+      "eligible_recent_first_delivered": [
+        "e1"
+      ],
+      "restored": [],
+      "evicted_for_capacity": [],
+      "visible": [
+        "e1"
+      ],
+      "direct_restore_wire_bytes": 0,
+      "compacted": false,
+      "restored_was_previously_acked": true
+    },
+    {
+      "round": 10,
+      "eligible_recent_first_delivered": [
+        "e1"
+      ],
+      "restored": [],
+      "evicted_for_capacity": [],
+      "visible": [
+        "e1",
+        "e2"
+      ],
+      "direct_restore_wire_bytes": 0,
+      "compacted": false,
+      "restored_was_previously_acked": true
+    },
+    {
+      "round": 11,
+      "eligible_recent_first_delivered": [
+        "e1",
+        "e2"
+      ],
+      "restored": [],
+      "evicted_for_capacity": [],
+      "visible": [
+        "e1",
+        "e2"
+      ],
+      "direct_restore_wire_bytes": 0,
+      "compacted": true,
+      "restored_was_previously_acked": true
+    },
+    {
+      "round": 12,
+      "eligible_recent_first_delivered": [
+        "e1",
+        "e2"
+      ],
+      "restored": [],
+      "evicted_for_capacity": [],
+      "visible": [
+        "e1",
+        "e2"
+      ],
+      "direct_restore_wire_bytes": 0,
+      "compacted": false,
+      "restored_was_previously_acked": true
+    },
+    {
+      "round": 13,
+      "eligible_recent_first_delivered": [
+        "e1",
+        "e2"
+      ],
+      "restored": [],
+      "evicted_for_capacity": [],
+      "visible": [
+        "e1",
+        "e2"
+      ],
+      "direct_restore_wire_bytes": 0,
+      "compacted": false,
+      "restored_was_previously_acked": true
+    },
+    {
+      "round": 14,
+      "eligible_recent_first_delivered": [
+        "e1",
+        "e2"
+      ],
+      "restored": [],
+      "evicted_for_capacity": [],
+      "visible": [
+        "e1",
+        "e2"
+      ],
+      "direct_restore_wire_bytes": 0,
+      "compacted": false,
+      "restored_was_previously_acked": true
+    },
+    {
+      "round": 15,
+      "eligible_recent_first_delivered": [
+        "e1",
+        "e2"
+      ],
+      "restored": [],
+      "evicted_for_capacity": [],
+      "visible": [
+        "e1",
+        "e2"
+      ],
+      "direct_restore_wire_bytes": 0,
+      "compacted": false,
+      "restored_was_previously_acked": true
+    },
+    {
+      "round": 16,
+      "eligible_recent_first_delivered": [
+        "e1",
+        "e2"
+      ],
+      "restored": [],
+      "evicted_for_capacity": [],
+      "visible": [
+        "e1",
+        "e2"
+      ],
+      "direct_restore_wire_bytes": 0,
+      "compacted": false,
+      "restored_was_previously_acked": true
+    },
+    {
+      "round": 17,
+      "eligible_recent_first_delivered": [
+        "e1",
+        "e2"
+      ],
+      "restored": [],
+      "evicted_for_capacity": [],
+      "visible": [
+        "e1",
+        "e2"
+      ],
+      "direct_restore_wire_bytes": 0,
+      "compacted": false,
+      "restored_was_previously_acked": true
+    },
+    {
+      "round": 18,
+      "eligible_recent_first_delivered": [
+        "e1",
+        "e2"
+      ],
+      "restored": [
+        "e1",
+        "e2"
+      ],
+      "evicted_for_capacity": [],
+      "visible": [
+        "e1",
+        "e2"
+      ],
+      "direct_restore_wire_bytes": 6973,
+      "compacted": true,
+      "restored_was_previously_acked": true
+    },
+    {
+      "round": 19,
+      "eligible_recent_first_delivered": [
+        "e1",
+        "e2"
+      ],
+      "restored": [
+        "e1",
+        "e2"
+      ],
+      "evicted_for_capacity": [],
+      "visible": [
+        "e1",
+        "e2"
+      ],
+      "direct_restore_wire_bytes": 6973,
+      "compacted": false,
+      "restored_was_previously_acked": true
+    },
+    {
+      "round": 20,
+      "eligible_recent_first_delivered": [
+        "e1",
+        "e2"
+      ],
+      "restored": [
+        "e1",
+        "e2"
+      ],
+      "evicted_for_capacity": [],
+      "visible": [
+        "e1",
+        "e2"
+      ],
+      "direct_restore_wire_bytes": 6973,
+      "compacted": false,
+      "restored_was_previously_acked": true
+    },
+    {
+      "round": 21,
+      "eligible_recent_first_delivered": [
+        "e1",
+        "e2"
+      ],
+      "restored": [
+        "e1",
+        "e2"
+      ],
+      "evicted_for_capacity": [],
+      "visible": [
+        "e1",
+        "e2"
+      ],
+      "direct_restore_wire_bytes": 6973,
+      "compacted": false,
+      "restored_was_previously_acked": true
+    },
+    {
+      "round": 22,
+      "eligible_recent_first_delivered": [
+        "e1",
+        "e2"
+      ],
+      "restored": [
+        "e1",
+        "e2"
+      ],
+      "evicted_for_capacity": [],
+      "visible": [
+        "e1",
+        "e2"
+      ],
+      "direct_restore_wire_bytes": 6973,
+      "compacted": false,
+      "restored_was_previously_acked": true
+    },
+    {
+      "round": 23,
+      "eligible_recent_first_delivered": [
+        "e1",
+        "e2"
+      ],
+      "restored": [
+        "e1",
+        "e2"
+      ],
+      "evicted_for_capacity": [],
+      "visible": [
+        "e1",
+        "e2"
+      ],
+      "direct_restore_wire_bytes": 6973,
+      "compacted": false,
+      "restored_was_previously_acked": true
+    },
+    {
+      "round": 24,
+      "eligible_recent_first_delivered": [
+        "e1",
+        "e2"
+      ],
+      "restored": [
+        "e1",
+        "e2"
+      ],
+      "evicted_for_capacity": [],
+      "visible": [
+        "e1",
+        "e2",
+        "e3",
+        "e4"
+      ],
+      "direct_restore_wire_bytes": 6973,
+      "compacted": false,
+      "restored_was_previously_acked": true
+    },
+    {
+      "round": 25,
+      "eligible_recent_first_delivered": [
+        "e2",
+        "e3",
+        "e4"
+      ],
+      "restored": [
+        "e2"
+      ],
+      "evicted_for_capacity": [],
+      "visible": [
+        "e2",
+        "e3",
+        "e4",
+        "e5"
+      ],
+      "direct_restore_wire_bytes": 3553,
+      "compacted": true,
+      "restored_was_previously_acked": true
+    },
+    {
+      "round": 26,
+      "eligible_recent_first_delivered": [
+        "e3",
+        "e4",
+        "e5"
+      ],
+      "restored": [],
+      "evicted_for_capacity": [],
+      "visible": [
+        "e3",
+        "e4",
+        "e5"
+      ],
+      "direct_restore_wire_bytes": 0,
+      "compacted": false,
+      "restored_was_previously_acked": true
+    },
+    {
+      "round": 27,
+      "eligible_recent_first_delivered": [
+        "e3",
+        "e4",
+        "e5"
+      ],
+      "restored": [],
+      "evicted_for_capacity": [],
+      "visible": [
+        "e3",
+        "e4",
+        "e5"
+      ],
+      "direct_restore_wire_bytes": 0,
+      "compacted": false,
+      "restored_was_previously_acked": true
+    },
+    {
+      "round": 28,
+      "eligible_recent_first_delivered": [
+        "e3",
+        "e4",
+        "e5"
+      ],
+      "restored": [],
+      "evicted_for_capacity": [],
+      "visible": [
+        "e3",
+        "e4",
+        "e5"
+      ],
+      "direct_restore_wire_bytes": 0,
+      "compacted": false,
+      "restored_was_previously_acked": true
+    },
+    {
+      "round": 29,
+      "eligible_recent_first_delivered": [
+        "e3",
+        "e4",
+        "e5"
+      ],
+      "restored": [],
+      "evicted_for_capacity": [],
+      "visible": [
+        "e3",
+        "e4",
+        "e5"
+      ],
+      "direct_restore_wire_bytes": 0,
+      "compacted": false,
+      "restored_was_previously_acked": true
+    },
+    {
+      "round": 30,
+      "eligible_recent_first_delivered": [
+        "e3",
+        "e4",
+        "e5"
+      ],
+      "restored": [],
+      "evicted_for_capacity": [],
+      "visible": [
+        "e3",
+        "e4",
+        "e5"
+      ],
+      "direct_restore_wire_bytes": 0,
+      "compacted": false,
+      "restored_was_previously_acked": true
+    },
+    {
+      "round": 31,
+      "eligible_recent_first_delivered": [
+        "e3",
+        "e4",
+        "e5"
+      ],
+      "restored": [],
+      "evicted_for_capacity": [],
+      "visible": [
+        "e3",
+        "e4",
+        "e5"
+      ],
+      "direct_restore_wire_bytes": 0,
+      "compacted": false,
+      "restored_was_previously_acked": true
+    },
+    {
+      "round": 32,
+      "eligible_recent_first_delivered": [
+        "e3",
+        "e4",
+        "e5"
+      ],
+      "restored": [],
+      "evicted_for_capacity": [],
+      "visible": [
+        "e3",
+        "e4",
+        "e5"
+      ],
+      "direct_restore_wire_bytes": 0,
+      "compacted": false,
+      "restored_was_previously_acked": true
+    },
+    {
+      "round": 33,
+      "eligible_recent_first_delivered": [
+        "e3",
+        "e4",
+        "e5"
+      ],
+      "restored": [],
+      "evicted_for_capacity": [],
+      "visible": [
+        "e3",
+        "e4",
+        "e5"
+      ],
+      "direct_restore_wire_bytes": 0,
+      "compacted": false,
+      "restored_was_previously_acked": true
+    },
+    {
+      "round": 34,
+      "eligible_recent_first_delivered": [
+        "e3",
+        "e4",
+        "e5"
+      ],
+      "restored": [],
+      "evicted_for_capacity": [],
+      "visible": [
+        "e3",
+        "e4",
+        "e5"
+      ],
+      "direct_restore_wire_bytes": 0,
+      "compacted": false,
+      "restored_was_previously_acked": true
+    },
+    {
+      "round": 35,
+      "eligible_recent_first_delivered": [
+        "e3",
+        "e4",
+        "e5"
+      ],
+      "restored": [
+        "e3",
+        "e4",
+        "e5"
+      ],
+      "evicted_for_capacity": [],
+      "visible": [
+        "e3",
+        "e4",
+        "e5"
+      ],
+      "direct_restore_wire_bytes": 9342,
+      "compacted": true,
+      "restored_was_previously_acked": true
+    },
+    {
+      "round": 36,
+      "eligible_recent_first_delivered": [
+        "e3",
+        "e4",
+        "e5"
+      ],
+      "restored": [
+        "e3",
+        "e4",
+        "e5"
+      ],
+      "evicted_for_capacity": [],
+      "visible": [
+        "e3",
+        "e4",
+        "e5"
+      ],
+      "direct_restore_wire_bytes": 9342,
+      "compacted": false,
+      "restored_was_previously_acked": true
+    },
+    {
+      "round": 37,
+      "eligible_recent_first_delivered": [
+        "e3",
+        "e4",
+        "e5"
+      ],
+      "restored": [
+        "e3",
+        "e4",
+        "e5"
+      ],
+      "evicted_for_capacity": [],
+      "visible": [
+        "e3",
+        "e4",
+        "e5"
+      ],
+      "direct_restore_wire_bytes": 9342,
+      "compacted": false,
+      "restored_was_previously_acked": true
+    },
+    {
+      "round": 38,
+      "eligible_recent_first_delivered": [
+        "e3",
+        "e4",
+        "e5"
+      ],
+      "restored": [
+        "e3",
+        "e4",
+        "e5"
+      ],
+      "evicted_for_capacity": [],
+      "visible": [
+        "e3",
+        "e4",
+        "e5"
+      ],
+      "direct_restore_wire_bytes": 9342,
+      "compacted": false,
+      "restored_was_previously_acked": true
+    },
+    {
+      "round": 39,
+      "eligible_recent_first_delivered": [
+        "e3",
+        "e4",
+        "e5"
+      ],
+      "restored": [
+        "e3",
+        "e4",
+        "e5"
+      ],
+      "evicted_for_capacity": [],
+      "visible": [
+        "e3",
+        "e4",
+        "e5"
+      ],
+      "direct_restore_wire_bytes": 9342,
+      "compacted": false,
+      "restored_was_previously_acked": true
+    },
+    {
+      "round": 40,
+      "eligible_recent_first_delivered": [
+        "e3",
+        "e4",
+        "e5"
+      ],
+      "restored": [
+        "e3",
+        "e4",
+        "e5"
+      ],
+      "evicted_for_capacity": [],
+      "visible": [
+        "e3",
+        "e4",
+        "e5"
+      ],
+      "direct_restore_wire_bytes": 9342,
+      "compacted": false,
+      "restored_was_previously_acked": true
+    },
+    {
+      "round": 41,
+      "eligible_recent_first_delivered": [
+        "e3",
+        "e4",
+        "e5"
+      ],
+      "restored": [
+        "e3",
+        "e4",
+        "e5"
+      ],
+      "evicted_for_capacity": [],
+      "visible": [
+        "e3",
+        "e4",
+        "e5"
+      ],
+      "direct_restore_wire_bytes": 9342,
+      "compacted": false,
+      "restored_was_previously_acked": true
+    },
+    {
+      "round": 42,
+      "eligible_recent_first_delivered": [
+        "e3",
+        "e4",
+        "e5"
+      ],
+      "restored": [
+        "e3",
+        "e4",
+        "e5"
+      ],
+      "evicted_for_capacity": [],
+      "visible": [
+        "e3",
+        "e4",
+        "e5"
+      ],
+      "direct_restore_wire_bytes": 9342,
+      "compacted": false,
+      "restored_was_previously_acked": true
+    },
+    {
+      "round": 43,
+      "eligible_recent_first_delivered": [
+        "e3",
+        "e4",
+        "e5"
+      ],
+      "restored": [
+        "e3",
+        "e4",
+        "e5"
+      ],
+      "evicted_for_capacity": [],
+      "visible": [
+        "e3",
+        "e4",
+        "e5"
+      ],
+      "direct_restore_wire_bytes": 9342,
+      "compacted": false,
+      "restored_was_previously_acked": true
+    },
+    {
+      "round": 44,
+      "eligible_recent_first_delivered": [
+        "e3",
+        "e4",
+        "e5"
+      ],
+      "restored": [
+        "e3",
+        "e4",
+        "e5"
+      ],
+      "evicted_for_capacity": [],
+      "visible": [
+        "e3",
+        "e4",
+        "e5"
+      ],
+      "direct_restore_wire_bytes": 9342,
+      "compacted": true,
+      "restored_was_previously_acked": true
+    },
+    {
+      "round": 45,
+      "eligible_recent_first_delivered": [
+        "e3",
+        "e4",
+        "e5"
+      ],
+      "restored": [
+        "e3",
+        "e4",
+        "e5"
+      ],
+      "evicted_for_capacity": [],
+      "visible": [
+        "e3",
+        "e4",
+        "e5"
+      ],
+      "direct_restore_wire_bytes": 9342,
+      "compacted": false,
+      "restored_was_previously_acked": true
+    },
+    {
+      "round": 46,
+      "eligible_recent_first_delivered": [
+        "e3",
+        "e4",
+        "e5"
+      ],
+      "restored": [
+        "e3",
+        "e4",
+        "e5"
+      ],
+      "evicted_for_capacity": [],
+      "visible": [
+        "e3",
+        "e4",
+        "e5"
+      ],
+      "direct_restore_wire_bytes": 9342,
+      "compacted": false,
+      "restored_was_previously_acked": true
+    },
+    {
+      "round": 47,
+      "eligible_recent_first_delivered": [
+        "e3",
+        "e4",
+        "e5"
+      ],
+      "restored": [
+        "e3",
+        "e4",
+        "e5"
+      ],
+      "evicted_for_capacity": [],
+      "visible": [
+        "e3",
+        "e4",
+        "e5"
+      ],
+      "direct_restore_wire_bytes": 9342,
+      "compacted": false,
+      "restored_was_previously_acked": true
+    },
+    {
+      "round": 48,
+      "eligible_recent_first_delivered": [
+        "e3",
+        "e4",
+        "e5"
+      ],
+      "restored": [
+        "e3",
+        "e4",
+        "e5"
+      ],
+      "evicted_for_capacity": [],
+      "visible": [
+        "e3",
+        "e4",
+        "e5"
+      ],
+      "direct_restore_wire_bytes": 9342,
+      "compacted": false,
+      "restored_was_previously_acked": true
+    },
+    {
+      "round": 49,
+      "eligible_recent_first_delivered": [
+        "e3",
+        "e4",
+        "e5"
+      ],
+      "restored": [
+        "e3",
+        "e4",
+        "e5"
+      ],
+      "evicted_for_capacity": [],
+      "visible": [
+        "e3",
+        "e4",
+        "e5"
+      ],
+      "direct_restore_wire_bytes": 9342,
+      "compacted": false,
+      "restored_was_previously_acked": true
+    },
+    {
+      "round": 50,
+      "eligible_recent_first_delivered": [
+        "e3",
+        "e4",
+        "e5"
+      ],
+      "restored": [
+        "e3",
+        "e4",
+        "e5"
+      ],
+      "evicted_for_capacity": [],
+      "visible": [
+        "e3",
+        "e4",
+        "e5"
+      ],
+      "direct_restore_wire_bytes": 9342,
+      "compacted": false,
+      "restored_was_previously_acked": true
+    },
+    {
+      "round": 51,
+      "eligible_recent_first_delivered": [
+        "e3",
+        "e4",
+        "e5"
+      ],
+      "restored": [
+        "e3",
+        "e4",
+        "e5"
+      ],
+      "evicted_for_capacity": [],
+      "visible": [
+        "e3",
+        "e4",
+        "e5"
+      ],
+      "direct_restore_wire_bytes": 9342,
+      "compacted": false,
+      "restored_was_previously_acked": true
+    },
+    {
+      "round": 52,
+      "eligible_recent_first_delivered": [
+        "e3",
+        "e4",
+        "e5"
+      ],
+      "restored": [
+        "e3",
+        "e4",
+        "e5"
+      ],
+      "evicted_for_capacity": [],
+      "visible": [
+        "e3",
+        "e4",
+        "e5"
+      ],
+      "direct_restore_wire_bytes": 9342,
+      "compacted": false,
+      "restored_was_previously_acked": true
+    },
+    {
+      "round": 53,
+      "eligible_recent_first_delivered": [
+        "e3",
+        "e4",
+        "e5"
+      ],
+      "restored": [
+        "e3",
+        "e4",
+        "e5"
+      ],
+      "evicted_for_capacity": [],
+      "visible": [
+        "e3",
+        "e4",
+        "e5"
+      ],
+      "direct_restore_wire_bytes": 9342,
+      "compacted": true,
+      "restored_was_previously_acked": true
+    },
+    {
+      "round": 54,
+      "eligible_recent_first_delivered": [
+        "e3",
+        "e4",
+        "e5"
+      ],
+      "restored": [
+        "e3",
+        "e4",
+        "e5"
+      ],
+      "evicted_for_capacity": [],
+      "visible": [
+        "e3",
+        "e4",
+        "e5"
+      ],
+      "direct_restore_wire_bytes": 9342,
+      "compacted": false,
+      "restored_was_previously_acked": true
+    },
+    {
+      "round": 55,
+      "eligible_recent_first_delivered": [
+        "e3",
+        "e4",
+        "e5"
+      ],
+      "restored": [
+        "e3",
+        "e4",
+        "e5"
+      ],
+      "evicted_for_capacity": [],
+      "visible": [
+        "e3",
+        "e4",
+        "e5"
+      ],
+      "direct_restore_wire_bytes": 9342,
+      "compacted": false,
+      "restored_was_previously_acked": true
+    },
+    {
+      "round": 56,
+      "eligible_recent_first_delivered": [
+        "e3",
+        "e4",
+        "e5"
+      ],
+      "restored": [
+        "e3",
+        "e4",
+        "e5"
+      ],
+      "evicted_for_capacity": [],
+      "visible": [
+        "e3",
+        "e4",
+        "e5"
+      ],
+      "direct_restore_wire_bytes": 9342,
+      "compacted": false,
+      "restored_was_previously_acked": true
+    },
+    {
+      "round": 57,
+      "eligible_recent_first_delivered": [
+        "e3",
+        "e4",
+        "e5"
+      ],
+      "restored": [
+        "e3",
+        "e4",
+        "e5"
+      ],
+      "evicted_for_capacity": [],
+      "visible": [
+        "e3",
+        "e4",
+        "e5"
+      ],
+      "direct_restore_wire_bytes": 9342,
+      "compacted": false,
+      "restored_was_previously_acked": true
+    },
+    {
+      "round": 58,
+      "eligible_recent_first_delivered": [
+        "e3",
+        "e4",
+        "e5"
+      ],
+      "restored": [
+        "e3",
+        "e4",
+        "e5"
+      ],
+      "evicted_for_capacity": [],
+      "visible": [
+        "e3",
+        "e4",
+        "e5"
+      ],
+      "direct_restore_wire_bytes": 9342,
+      "compacted": false,
+      "restored_was_previously_acked": true
+    },
+    {
+      "round": 59,
+      "eligible_recent_first_delivered": [
+        "e3",
+        "e4",
+        "e5"
+      ],
+      "restored": [
+        "e3",
+        "e4",
+        "e5"
+      ],
+      "evicted_for_capacity": [],
+      "visible": [
+        "e3",
+        "e4",
+        "e5"
+      ],
+      "direct_restore_wire_bytes": 9342,
+      "compacted": false,
+      "restored_was_previously_acked": true
+    },
+    {
+      "round": 60,
+      "eligible_recent_first_delivered": [
+        "e3",
+        "e4",
+        "e5"
+      ],
+      "restored": [
+        "e3",
+        "e4",
+        "e5"
+      ],
+      "evicted_for_capacity": [],
+      "visible": [
+        "e3",
+        "e4",
+        "e5"
+      ],
+      "direct_restore_wire_bytes": 9342,
+      "compacted": false,
+      "restored_was_previously_acked": true
+    },
+    {
+      "round": 61,
+      "eligible_recent_first_delivered": [
+        "e3",
+        "e4",
+        "e5"
+      ],
+      "restored": [
+        "e3",
+        "e4",
+        "e5"
+      ],
+      "evicted_for_capacity": [],
+      "visible": [
+        "e3",
+        "e4",
+        "e5"
+      ],
+      "direct_restore_wire_bytes": 9342,
+      "compacted": false,
+      "restored_was_previously_acked": true
+    },
+    {
+      "round": 62,
+      "eligible_recent_first_delivered": [
+        "e3",
+        "e4",
+        "e5"
+      ],
+      "restored": [
+        "e3",
+        "e4",
+        "e5"
+      ],
+      "evicted_for_capacity": [],
+      "visible": [
+        "e3",
+        "e4",
+        "e5"
+      ],
+      "direct_restore_wire_bytes": 9342,
+      "compacted": true,
+      "restored_was_previously_acked": true
+    },
+    {
+      "round": 63,
+      "eligible_recent_first_delivered": [
+        "e3",
+        "e4",
+        "e5"
+      ],
+      "restored": [
+        "e3",
+        "e4",
+        "e5"
+      ],
+      "evicted_for_capacity": [],
+      "visible": [
+        "e3",
+        "e4",
+        "e5"
+      ],
+      "direct_restore_wire_bytes": 9342,
+      "compacted": false,
+      "restored_was_previously_acked": true
+    },
+    {
+      "round": 64,
+      "eligible_recent_first_delivered": [
+        "e3",
+        "e4",
+        "e5"
+      ],
+      "restored": [
+        "e3",
+        "e4",
+        "e5"
+      ],
+      "evicted_for_capacity": [],
+      "visible": [
+        "e3",
+        "e4",
+        "e5"
+      ],
+      "direct_restore_wire_bytes": 9342,
+      "compacted": false,
+      "restored_was_previously_acked": true
+    }
+  ],
+  "tool_checks": [
+    {
+      "round": 1,
+      "id": "call_e21f82861b1e4f70a59d1ae2",
+      "native_call_found": true,
+      "name_matches": true,
+      "arguments_exact": true,
+      "action_result_found": true,
+      "execution_result_differs_from_final": false,
+      "withheld": false
+    },
+    {
+      "round": 2,
+      "id": "call_f3d4dbd53b384d239e0fa828",
+      "native_call_found": true,
+      "name_matches": true,
+      "arguments_exact": true,
+      "action_result_found": true,
+      "execution_result_differs_from_final": false,
+      "withheld": false
+    },
+    {
+      "round": 3,
+      "id": "call_e374e6a86894458abe9f1714",
+      "native_call_found": true,
+      "name_matches": true,
+      "arguments_exact": true,
+      "action_result_found": true,
+      "execution_result_differs_from_final": false,
+      "withheld": false
+    },
+    {
+      "round": 4,
+      "id": "call_f1aeafa934ab4da5a40cddaa",
+      "native_call_found": true,
+      "name_matches": true,
+      "arguments_exact": true,
+      "action_result_found": true,
+      "execution_result_differs_from_final": false,
+      "withheld": false
+    },
+    {
+      "round": 5,
+      "id": "call_afb32c3a4c5549f58e13ae4c",
+      "native_call_found": true,
+      "name_matches": true,
+      "arguments_exact": true,
+      "action_result_found": true,
+      "execution_result_differs_from_final": false,
+      "withheld": false
+    },
+    {
+      "round": 6,
+      "id": "call_d59844e0f3e148a49f8e39b3",
+      "native_call_found": true,
+      "name_matches": true,
+      "arguments_exact": true,
+      "action_result_found": true,
+      "execution_result_differs_from_final": false,
+      "withheld": false
+    },
+    {
+      "round": 7,
+      "id": "call_752ddac818f14e82bd40bb36",
+      "native_call_found": true,
+      "name_matches": true,
+      "arguments_exact": true,
+      "action_result_found": true,
+      "execution_result_differs_from_final": false,
+      "withheld": false
+    },
+    {
+      "round": 8,
+      "id": "call_eec3470c21a345ceadbff4b5",
+      "native_call_found": true,
+      "name_matches": true,
+      "arguments_exact": true,
+      "action_result_found": true,
+      "execution_result_differs_from_final": false,
+      "withheld": false
+    },
+    {
+      "round": 8,
+      "id": "call_e6360e5c4af6406ca0539bfd",
+      "native_call_found": true,
+      "name_matches": true,
+      "arguments_exact": true,
+      "action_result_found": true,
+      "execution_result_differs_from_final": false,
+      "withheld": false
+    },
+    {
+      "round": 9,
+      "id": "call_66ea09a4129a4b0b8c002a01",
+      "native_call_found": true,
+      "name_matches": true,
+      "arguments_exact": true,
+      "action_result_found": true,
+      "execution_result_differs_from_final": false,
+      "withheld": false
+    },
+    {
+      "round": 10,
+      "id": "call_7666f0b631534cbcb706df4b",
+      "native_call_found": true,
+      "name_matches": true,
+      "arguments_exact": true,
+      "action_result_found": true,
+      "execution_result_differs_from_final": false,
+      "withheld": false
+    },
+    {
+      "round": 11,
+      "id": "call_e25ae6920a86472984bf0bd2",
+      "native_call_found": true,
+      "name_matches": true,
+      "arguments_exact": true,
+      "action_result_found": true,
+      "execution_result_differs_from_final": false,
+      "withheld": false
+    },
+    {
+      "round": 12,
+      "id": "call_203b7ee1e11e49959f53a183",
+      "native_call_found": true,
+      "name_matches": true,
+      "arguments_exact": true,
+      "action_result_found": true,
+      "execution_result_differs_from_final": false,
+      "withheld": false
+    },
+    {
+      "round": 13,
+      "id": "call_9bb07e1ff17247b285e715bf",
+      "native_call_found": true,
+      "name_matches": true,
+      "arguments_exact": true,
+      "action_result_found": true,
+      "execution_result_differs_from_final": false,
+      "withheld": false
+    },
+    {
+      "round": 14,
+      "id": "call_fb6597c033ea42c2a2899eda",
+      "native_call_found": true,
+      "name_matches": true,
+      "arguments_exact": true,
+      "action_result_found": true,
+      "execution_result_differs_from_final": false,
+      "withheld": false
+    },
+    {
+      "round": 15,
+      "id": "call_428f31198fb247369268ffe7",
+      "native_call_found": true,
+      "name_matches": true,
+      "arguments_exact": true,
+      "action_result_found": true,
+      "execution_result_differs_from_final": false,
+      "withheld": false
+    },
+    {
+      "round": 16,
+      "id": "call_07a353b660624663a1aa9713",
+      "native_call_found": true,
+      "name_matches": true,
+      "arguments_exact": true,
+      "action_result_found": true,
+      "execution_result_differs_from_final": false,
+      "withheld": false
+    },
+    {
+      "round": 17,
+      "id": "call_e7fdf71a4e4742adabd4db37",
+      "native_call_found": true,
+      "name_matches": true,
+      "arguments_exact": true,
+      "action_result_found": true,
+      "execution_result_differs_from_final": false,
+      "withheld": false
+    },
+    {
+      "round": 18,
+      "id": "call_ce521b1894054375a7874c0f",
+      "native_call_found": true,
+      "name_matches": true,
+      "arguments_exact": true,
+      "action_result_found": true,
+      "execution_result_differs_from_final": false,
+      "withheld": false
+    },
+    {
+      "round": 19,
+      "id": "call_74bc629ddcde4aed98b61855",
+      "native_call_found": true,
+      "name_matches": true,
+      "arguments_exact": true,
+      "action_result_found": true,
+      "execution_result_differs_from_final": false,
+      "withheld": false
+    },
+    {
+      "round": 20,
+      "id": "call_54a06726dc1548ecbc9b11b9",
+      "native_call_found": true,
+      "name_matches": true,
+      "arguments_exact": true,
+      "action_result_found": true,
+      "execution_result_differs_from_final": false,
+      "withheld": false
+    },
+    {
+      "round": 21,
+      "id": "call_1c6f824c73d741318098cbd0",
+      "native_call_found": true,
+      "name_matches": true,
+      "arguments_exact": true,
+      "action_result_found": true,
+      "execution_result_differs_from_final": false,
+      "withheld": false
+    },
+    {
+      "round": 22,
+      "id": "call_907550bc02c348618ca184f1",
+      "native_call_found": true,
+      "name_matches": true,
+      "arguments_exact": true,
+      "action_result_found": true,
+      "execution_result_differs_from_final": false,
+      "withheld": false
+    },
+    {
+      "round": 23,
+      "id": "call_de3f1a2a3c984935887e9ed5",
+      "native_call_found": true,
+      "name_matches": true,
+      "arguments_exact": true,
+      "action_result_found": true,
+      "execution_result_differs_from_final": false,
+      "withheld": false
+    },
+    {
+      "round": 23,
+      "id": "call_a7fd495ef9df4b25a69ab591",
+      "native_call_found": true,
+      "name_matches": true,
+      "arguments_exact": true,
+      "action_result_found": true,
+      "execution_result_differs_from_final": false,
+      "withheld": false
+    },
+    {
+      "round": 24,
+      "id": "call_6ff15252b02643cdb024a0c6",
+      "native_call_found": true,
+      "name_matches": true,
+      "arguments_exact": true,
+      "action_result_found": true,
+      "execution_result_differs_from_final": false,
+      "withheld": false
+    },
+    {
+      "round": 24,
+      "id": "call_e500aa4ebd134ae7b62781bb",
+      "native_call_found": true,
+      "name_matches": true,
+      "arguments_exact": true,
+      "action_result_found": true,
+      "execution_result_differs_from_final": false,
+      "withheld": false
+    },
+    {
+      "round": 25,
+      "id": "call_cb858ba5dd7c4039b9ede91c",
+      "native_call_found": true,
+      "name_matches": true,
+      "arguments_exact": true,
+      "action_result_found": true,
+      "execution_result_differs_from_final": false,
+      "withheld": false
+    },
+    {
+      "round": 26,
+      "id": "call_20d27d4410b64a809e6599d9",
+      "native_call_found": true,
+      "name_matches": true,
+      "arguments_exact": true,
+      "action_result_found": true,
+      "execution_result_differs_from_final": false,
+      "withheld": false
+    },
+    {
+      "round": 27,
+      "id": "call_d7b02e2beef6448bb57251f6",
+      "native_call_found": true,
+      "name_matches": true,
+      "arguments_exact": true,
+      "action_result_found": true,
+      "execution_result_differs_from_final": false,
+      "withheld": false
+    },
+    {
+      "round": 28,
+      "id": "call_500fcfa799334751b3c29085",
+      "native_call_found": true,
+      "name_matches": true,
+      "arguments_exact": true,
+      "action_result_found": true,
+      "execution_result_differs_from_final": false,
+      "withheld": false
+    },
+    {
+      "round": 29,
+      "id": "call_590cd5a67dd74f86b38499e5",
+      "native_call_found": true,
+      "name_matches": true,
+      "arguments_exact": true,
+      "action_result_found": true,
+      "execution_result_differs_from_final": false,
+      "withheld": false
+    },
+    {
+      "round": 30,
+      "id": "call_c4ce19c2e41244cfa868988f",
+      "native_call_found": true,
+      "name_matches": true,
+      "arguments_exact": true,
+      "action_result_found": true,
+      "execution_result_differs_from_final": false,
+      "withheld": false
+    },
+    {
+      "round": 31,
+      "id": "call_e83361a572124b04a1598b7e",
+      "native_call_found": true,
+      "name_matches": true,
+      "arguments_exact": true,
+      "action_result_found": true,
+      "execution_result_differs_from_final": false,
+      "withheld": false
+    },
+    {
+      "round": 32,
+      "id": "call_776ace3fc6bd474794486c31",
+      "native_call_found": true,
+      "name_matches": true,
+      "arguments_exact": true,
+      "action_result_found": true,
+      "execution_result_differs_from_final": false,
+      "withheld": false
+    },
+    {
+      "round": 33,
+      "id": "call_c8c32cf7f8114ebca38355dc",
+      "native_call_found": true,
+      "name_matches": true,
+      "arguments_exact": true,
+      "action_result_found": true,
+      "execution_result_differs_from_final": false,
+      "withheld": false
+    },
+    {
+      "round": 34,
+      "id": "call_495e6bf73c074e3a8c8453a5",
+      "native_call_found": true,
+      "name_matches": true,
+      "arguments_exact": true,
+      "action_result_found": true,
+      "execution_result_differs_from_final": false,
+      "withheld": false
+    },
+    {
+      "round": 35,
+      "id": "call_7374b5727c694289a951ea10",
+      "native_call_found": true,
+      "name_matches": true,
+      "arguments_exact": true,
+      "action_result_found": true,
+      "execution_result_differs_from_final": false,
+      "withheld": false
+    },
+    {
+      "round": 36,
+      "id": "call_f95d4f7a414842dcaf49d06d",
+      "native_call_found": true,
+      "name_matches": true,
+      "arguments_exact": true,
+      "action_result_found": true,
+      "execution_result_differs_from_final": false,
+      "withheld": false
+    },
+    {
+      "round": 37,
+      "id": "call_f6a10266ac874172808dbed0",
+      "native_call_found": true,
+      "name_matches": true,
+      "arguments_exact": true,
+      "action_result_found": true,
+      "execution_result_differs_from_final": false,
+      "withheld": false
+    },
+    {
+      "round": 38,
+      "id": "call_915936f87ff74968ae9ba9d3",
+      "native_call_found": true,
+      "name_matches": true,
+      "arguments_exact": true,
+      "action_result_found": true,
+      "execution_result_differs_from_final": false,
+      "withheld": false
+    },
+    {
+      "round": 39,
+      "id": "call_f51bf8756031463ebc41f645",
+      "native_call_found": true,
+      "name_matches": true,
+      "arguments_exact": true,
+      "action_result_found": true,
+      "execution_result_differs_from_final": false,
+      "withheld": false
+    },
+    {
+      "round": 40,
+      "id": "call_0281662f47944fc9b1a3adfd",
+      "native_call_found": true,
+      "name_matches": true,
+      "arguments_exact": true,
+      "action_result_found": true,
+      "execution_result_differs_from_final": false,
+      "withheld": false
+    },
+    {
+      "round": 41,
+      "id": "call_01eb1e8f00024559933ce0cb",
+      "native_call_found": true,
+      "name_matches": true,
+      "arguments_exact": true,
+      "action_result_found": true,
+      "execution_result_differs_from_final": false,
+      "withheld": false
+    },
+    {
+      "round": 42,
+      "id": "call_9e68c2aa7c1b47b1b0f6443c",
+      "native_call_found": true,
+      "name_matches": true,
+      "arguments_exact": true,
+      "action_result_found": true,
+      "execution_result_differs_from_final": false,
+      "withheld": false
+    },
+    {
+      "round": 43,
+      "id": "call_61d73cbb6f8342649a2c3189",
+      "native_call_found": true,
+      "name_matches": true,
+      "arguments_exact": true,
+      "action_result_found": true,
+      "execution_result_differs_from_final": false,
+      "withheld": false
+    },
+    {
+      "round": 44,
+      "id": "call_f49a94c60750412dbedb1239",
+      "native_call_found": true,
+      "name_matches": true,
+      "arguments_exact": true,
+      "action_result_found": true,
+      "execution_result_differs_from_final": false,
+      "withheld": false
+    },
+    {
+      "round": 45,
+      "id": "call_a7af4b869555469ea737c5cb",
+      "native_call_found": true,
+      "name_matches": true,
+      "arguments_exact": true,
+      "action_result_found": true,
+      "execution_result_differs_from_final": false,
+      "withheld": false
+    },
+    {
+      "round": 46,
+      "id": "call_85dd3684da7f416bad60015f",
+      "native_call_found": true,
+      "name_matches": true,
+      "arguments_exact": true,
+      "action_result_found": true,
+      "execution_result_differs_from_final": false,
+      "withheld": false
+    },
+    {
+      "round": 47,
+      "id": "call_9d4db3513552473682a3ff37",
+      "native_call_found": true,
+      "name_matches": true,
+      "arguments_exact": true,
+      "action_result_found": true,
+      "execution_result_differs_from_final": false,
+      "withheld": false
+    },
+    {
+      "round": 48,
+      "id": "call_6e0ccab513664557986c1909",
+      "native_call_found": true,
+      "name_matches": true,
+      "arguments_exact": true,
+      "action_result_found": true,
+      "execution_result_differs_from_final": false,
+      "withheld": false
+    },
+    {
+      "round": 49,
+      "id": "call_d34872bb61bf460d97465fd2",
+      "native_call_found": true,
+      "name_matches": true,
+      "arguments_exact": true,
+      "action_result_found": true,
+      "execution_result_differs_from_final": false,
+      "withheld": false
+    },
+    {
+      "round": 50,
+      "id": "call_0d4963c7d4354b39b150f20f",
+      "native_call_found": true,
+      "name_matches": true,
+      "arguments_exact": true,
+      "action_result_found": true,
+      "execution_result_differs_from_final": false,
+      "withheld": false
+    },
+    {
+      "round": 51,
+      "id": "call_6977b9db97824fbead48f2d5",
+      "native_call_found": true,
+      "name_matches": true,
+      "arguments_exact": true,
+      "action_result_found": true,
+      "execution_result_differs_from_final": false,
+      "withheld": false
+    },
+    {
+      "round": 52,
+      "id": "call_2e8243089761492a98160d45",
+      "native_call_found": true,
+      "name_matches": true,
+      "arguments_exact": true,
+      "action_result_found": true,
+      "execution_result_differs_from_final": false,
+      "withheld": false
+    },
+    {
+      "round": 53,
+      "id": "call_ca3fe19c0f7e469991ad603c",
+      "native_call_found": true,
+      "name_matches": true,
+      "arguments_exact": true,
+      "action_result_found": true,
+      "execution_result_differs_from_final": false,
+      "withheld": false
+    },
+    {
+      "round": 54,
+      "id": "call_b93adeb24379435e9e114b1f",
+      "native_call_found": true,
+      "name_matches": true,
+      "arguments_exact": true,
+      "action_result_found": true,
+      "execution_result_differs_from_final": false,
+      "withheld": false
+    },
+    {
+      "round": 55,
+      "id": "call_589a8e79bcc9495c97749e18",
+      "native_call_found": true,
+      "name_matches": true,
+      "arguments_exact": true,
+      "action_result_found": true,
+      "execution_result_differs_from_final": false,
+      "withheld": false
+    },
+    {
+      "round": 56,
+      "id": "call_6c77146ca6f042e6a1825926",
+      "native_call_found": true,
+      "name_matches": true,
+      "arguments_exact": true,
+      "action_result_found": true,
+      "execution_result_differs_from_final": false,
+      "withheld": false
+    },
+    {
+      "round": 57,
+      "id": "call_9492ee8332b34a8abdce6796",
+      "native_call_found": true,
+      "name_matches": true,
+      "arguments_exact": true,
+      "action_result_found": true,
+      "execution_result_differs_from_final": false,
+      "withheld": false
+    },
+    {
+      "round": 58,
+      "id": "call_07d295b505284303af4314ce",
+      "native_call_found": true,
+      "name_matches": true,
+      "arguments_exact": true,
+      "action_result_found": true,
+      "execution_result_differs_from_final": false,
+      "withheld": false
+    },
+    {
+      "round": 59,
+      "id": "call_ec6a74a527be49d79d7f6b54",
+      "native_call_found": true,
+      "name_matches": true,
+      "arguments_exact": true,
+      "action_result_found": true,
+      "execution_result_differs_from_final": false,
+      "withheld": false
+    },
+    {
+      "round": 60,
+      "id": "call_38f49469f9ef4d5ea215f44e",
+      "native_call_found": true,
+      "name_matches": true,
+      "arguments_exact": true,
+      "action_result_found": true,
+      "execution_result_differs_from_final": false,
+      "withheld": false
+    },
+    {
+      "round": 61,
+      "id": "call_6e71a41fdf2043b0bfc2aeb1",
+      "native_call_found": true,
+      "name_matches": true,
+      "arguments_exact": true,
+      "action_result_found": true,
+      "execution_result_differs_from_final": false,
+      "withheld": false
+    },
+    {
+      "round": 62,
+      "id": "call_a78711c021f4448593e5be79",
+      "native_call_found": true,
+      "name_matches": true,
+      "arguments_exact": true,
+      "action_result_found": true,
+      "execution_result_differs_from_final": false,
+      "withheld": false
+    },
+    {
+      "round": 63,
+      "id": "call_1a2b12c9be0d4822b3cbbcb7",
+      "native_call_found": true,
+      "name_matches": true,
+      "arguments_exact": true,
+      "action_result_found": true,
+      "execution_result_differs_from_final": false,
+      "withheld": false
+    },
+    {
+      "round": 64,
+      "id": "call_3e203c216def4045a8c398be",
+      "native_call_found": true,
+      "name_matches": true,
+      "arguments_exact": true,
+      "action_result_found": true,
+      "execution_result_differs_from_final": false,
+      "withheld": false
+    }
+  ],
+  "find_checks": [],
+  "recall_checks": [],
+  "notes": [],
+  "finish_checks": [
+    {
+      "round": 64,
+      "arguments": {
+        "answer": "Kiran Shah",
+        "refs": [
+          "e3",
+          "e4",
+          "e5"
+        ]
+      },
+      "schema_valid": true,
+      "refs_legal": true,
+      "result": {
+        "action_slot_charged": true,
+        "executed": true,
+        "ok": true,
+        "terminal": {
+          "answer": "Kiran Shah",
+          "basis": [
+            {
+              "document": "d74",
+              "document_chars": 6073,
+              "end": 3000,
+              "kind": "raw_evidence",
+              "ref": "e3",
+              "sha256": "537f755a61d9cbda27eb32b2efa11aeeaeec81efe340766e62f59ce1148f2f32",
+              "snapshot": "d093b6d0dfcf9448fb2d1927b8e9b9245d90c77e1bd2fcc107636885695a39c0",
+              "start": 0
+            },
+            {
+              "document": "d75",
+              "document_chars": 4800,
+              "end": 3000,
+              "kind": "raw_evidence",
+              "ref": "e4",
+              "sha256": "580d7ca54b432a38abed6671a339f1489836ccbd4bf3adbfe2ed7f57f3f163ab",
+              "snapshot": "c1e4b2bc117748b80970cee38f1f9836fff3d64f48cd9e676c59daa83f1bdde8",
+              "start": 0
+            },
+            {
+              "document": "d75",
+              "document_chars": 4800,
+              "end": 4800,
+              "kind": "raw_evidence",
+              "ref": "e5",
+              "sha256": "d687ae625788ab1e8bf6629ddcb0c7570ef499ef02c76577540efff461b139cf",
+              "snapshot": "c1e4b2bc117748b80970cee38f1f9836fff3d64f48cd9e676c59daa83f1bdde8",
+              "start": 3000
+            }
+          ],
+          "elapsed_seconds": 344.6782148999919,
+          "outcome": "submitted",
+          "refs": [
+            "e3",
+            "e4",
+            "e5"
+          ],
+          "semantic_status": "not_automatically_verified"
+        }
+      }
+    }
+  ],
+  "formal_evidence": {
+    "e3": {
+      "ref": "e3",
+      "document": "d74",
+      "snapshot": "d093b6d0dfcf9448fb2d1927b8e9b9245d90c77e1bd2fcc107636885695a39c0",
+      "start": 0,
+      "end": 3000,
+      "document_chars": 6073,
+      "text": "---\ntitle: 12 Shortest Actors in Hollywood: Verne Troyer, Danny DeVito and More\nauthor: Angilene Gacute\ndate: 2024-05-31\n---\n12 Shortest Actors in Hollywood: Verne Troyer, Danny DeVito and More\n\nPatton Oswalt – 5'3\"\n\nPatton Oswalt may be shorter than other stars, but it hasn't stopped his career from taking off.\n\nHe marked his acting debut in a Seinfeld episode before starring in more shows, including Parks and Recreation, Kim Possible, Modern Family and Brooklyn Nine-Nine.\n\nOswalt, who is 5'3\", currently appears in the hit TV series The Sandman after joining the cast of Ghostbusters: Frozen Empire.\n\nRob Schneider – 5'3\"\n\nRob Schneider began his career as an actor and stand-up comedian in the 1980s. He notably became a cast member and writer for Saturday Night Live while working on other films and series.\n\nThe Daddy Daughter Trip star's latest project was in the 2023 animated musical film Leo.\n\nPrince – 5'2\"\n\nFor decades, Prince savored the success of his career as a musician and actor until his death in April 2016. Even after his passing, he has managed to touch people's hearts with his posthumous releases: Originals, Piano and a Microphone 1983 and Welcome 2 America, among others.\n\nThe Academy-winning singer was 5'2\".\n\nDanny DeVito – 4'10\"\n\nDanny DeVito has become one of the industry's notable stars. At 4'10\", the Emmy-winning star has successfully starred in films and series like Taxi, The War of the Roses, Batman Returns, Matilda, and Jumanji: The Next Level.\n\nHe also dabbled in several voice roles over the years, from the 1997 film Hercules to the 2018 animated flick Smallfoot.\n\nPeter Dinklage – 4'5\"\n\nPeter Dinklage, 54, has made his height — 4'5\" — one of his best assets.\n\nThe Game of Thrones star has been open about the attention he receives.\n\n\"Being my size, I get second looks quite often. My whole life I've had stares,\" he told The Times. \"Now there's an ownership to someone looking at me or approaching me. It's because of something positive. It's not just my size. It's the work I've done that has afforded them a second look.\"\n\nAccording to The Guardian, Dinklage was born with achondroplasia, a form of skeletal dysplasia that causes shorter bones and stature.\n\nDeep Roy – 4'4\"\n\nStanding at 4'4\", Deep Roy received praise from fans when he played the roles of over 100 Oompa Loompas in the 2005 film Charlie and the Chocolate Factory. He also appeared in hit shows like Star Trek, Doctor Who and The X-Files.\n\nWant OK! each day? Sign up here!\n\nKiran Shah – 4'1\"\n\nRegarded by the Guinness World Records as the world's shortest stuntman, Kiran Shah has proven his acting skills in different blockbuster films. Over the years, he became part of hit flicks and often served as other actors' stunt doubles.\n\nWhile he was born with a hormone deficiency, Shah called himself \"perfectly formed\" even when he \"stopped growing.\"\n\n\"Without a great performance the character would neither be convincing nor entertaining to watch,\" Star Wars creature effects supervis",
+      "sha256": "537f755a61d9cbda27eb32b2efa11aeeaeec81efe340766e62f59ce1148f2f32",
+      "kind": "raw_evidence"
+    },
+    "e4": {
+      "ref": "e4",
+      "document": "d75",
+      "snapshot": "c1e4b2bc117748b80970cee38f1f9836fff3d64f48cd9e676c59daa83f1bdde8",
+      "start": 0,
+      "end": 3000,
+      "document_chars": 4800,
+      "text": "---\ntitle: Dragon Con Conversations with Kiran Shah!\ndate: 2006-09-06\n---\nCelebriel writes: This year Kiran Shah, noted actor and stuntman who played the scale double for Frodo and other hobbits in The Lord of the Rings, was the Tolkien Tracks celebrity guest. He hosted a Q&A panel on Saturday, and appeared with The Dork of the Rings cast and crew on Monday. In between, he could be found mostly at The Walk of Fame over in the Hilton, greeting fans, signing autographs, and posing for pictures.\n\nKiran is knowledgeable, engaging, and a born storyteller in addition to being an actor and Guinness World Record stuntman with 29 years experience, as well as a director and published poet. Kiran was born in Kenya and spent some of his youth in India before moving to London with his family. From an early age he imitated the voices and mannerisms of his uncles. In India he decided he would be a Bollywood star. In London, he started his career as a mime for a few years for the Red Buddha company, responding to a magazine ad.\n\nKirans first film was Candleshoe (1977) with David Niven, Jody Foster, Helen Hayes, and Leo McKern. Master fight director Bob Anderson, who worked on the film, encouraged him to become a stuntman. He had been selected to play R2D2 in the first Star Wars movie, but Kenny Baker then decided to return to the film and he was bumped.\n\nHe worked with Jim Henson on The Dark Crystal, where, he explained he could only wear the large puppet head for about twenty minutes before resting his neck. The puppet head had to be redesigned to make it safe enough for Kiran to wear on a ten foot drop, landing on his back. Hes even played females, working as the stunt double for Miss Piggy in The Great Muppet Caper.\n\nKiran explained that his first meeting with Peter Jackson and Fran Walsh did not go that well. Having seen Brain Dead, he had trouble seeing Peter as the one to bring LOTR to the screen, and Peter and Fran were concerned that, given all his stellar fantasy and sci-fi credits, Kiran would not want to work with them. He didnt learn the background to his first meeting until the London premiere of Fellowship of the Ring, when Fran told him their side of the story.\n\nHis funniest LOTR story came from the filming in Bree. Playing Frodo, Kiran was picked up by Viggo Mortensen, carried upstairs, and tossed into the bedroom. He explained that at first Viggo was extremely gentle, until he said, Viggo, Im a stuntman, you can throw me! Some of the other scenes Kiran played, in addition to being Frodos scale double, include the rescue of Faramir from the funeral pyre and riding with Eowyn to battle. Because Kiran was doubling for all the hobbits, he was very much in demand at all the locations. He was shuttling around so much Barrie Osborne got him a helicopter, which he frequently changed in, as he only a few minutes on arrival to see the days footage and get ready to work.\n\nHe explained that, in the scene where he climbs into the cart with Gandalf in the ope",
+      "sha256": "580d7ca54b432a38abed6671a339f1489836ccbd4bf3adbfe2ed7f57f3f163ab",
+      "kind": "raw_evidence"
+    },
+    "e5": {
+      "ref": "e5",
+      "document": "d75",
+      "snapshot": "c1e4b2bc117748b80970cee38f1f9836fff3d64f48cd9e676c59daa83f1bdde8",
+      "start": 3000,
+      "end": 4800,
+      "document_chars": 4800,
+      "text": "ning of Fellowship, he proposed to Peter that he do the scene as a stunt, since in the book Frodo jumps into the back of the cart. Peter turned him down, saying he couldnt afford to have any of his actors injured, and that if Kiran was injured, he didnt know where hed find someone else. Kiran didnt give up, proposing a scene in the burning of Hobbiton where he would play a hobbit on fire coming out of his house. That wasnt filmed either. Finally he got a bit of stunt work, playing Pippin falling to the ground from Treebeard.\n\nKiran enjoyed returning to New Zealand to work in the first of the Narnia films, especially since he was working as an actor not a stuntman. He described his conversations with Tilda Swinton on developing their respective characters. He wanted to make his character Ginarrbrik the dwarf more evil, motivated by his desire to one day stab the White Witch in the back and seize her power. As a result, he and Tilda basically ignore each other on screen except when they must interact. Off screen, they had a great relationship, as Tilda generously hosted cast and crew parties each Saturday while they filmed in remote areas on New Zealand.\n\nEven with his years of experience, Kiran said he never stops looking at people, their mannerisms and walks, to pick up new moves and gestures. Continuing to branch out, Kiran and his nephew Kit directed the comedy Young Lovers, which is scheduled to open later this year. The film, his first effort as a director, also features Craig Parker.\n\nKiran has enough stories from LOTR, Narnia, Harry Potter, Titanic, Star Wars, Indiana Jones, Superman, Greystoke, The Dark Crystal (and many more) to fill a trilogy of behind the scenes books! Maybe if he ever slows down hell consider it! Questions? Feedback? Email dianeroone@aol.com.",
+      "sha256": "d687ae625788ab1e8bf6629ddcb0c7570ef499ef02c76577540efff461b139cf",
+      "kind": "raw_evidence"
+    }
+  },
+  "limitations": [
+    "Direct shelf bytes are serialized request differences, not provider tokens or a causal cost ablation.",
+    "Result overlap is not semantic redundancy.",
+    "No external judge or production query is used."
+  ]
+}

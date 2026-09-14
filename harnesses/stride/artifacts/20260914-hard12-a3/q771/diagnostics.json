@@ -1,0 +1,121 @@
+{
+  "protocol": "stride-search-3",
+  "head": "3e2a766696c08345b4526a6bffa83d4f552dca9e01969b1755c29f3ec27d5510",
+  "outcome": "submitted",
+  "formal_correct": null,
+  "model_attempts": 3,
+  "backend_attempts": 4,
+  "queries": [
+    {
+      "round": 1,
+      "top_k": 5,
+      "equivalence_key": "a71dccc3e6bd54d75bc65635bd5e127b21d4092995bc1b8843215eab2764f1c3",
+      "cached": false,
+      "query_sha256": "d6bb1dd913d18fc1f3b854374d22185779a4680bf8679192d0636d08229eb3be",
+      "query": "hat shop scarves renamed initials siblings surname branches 1970s",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"hat\" OR \"shop\" OR \"scarves\" OR \"renamed\" OR \"initials\" OR \"siblings\" OR \"surname\" OR \"branches\" OR \"1970s\"",
+        "terms": [
+          "hat",
+          "shop",
+          "scarves",
+          "renamed",
+          "initials",
+          "siblings",
+          "surname",
+          "branches",
+          "1970s"
+        ]
+      }
+    },
+    {
+      "round": 1,
+      "top_k": 5,
+      "equivalence_key": "15a83c94216abc834173d8dedbfbcafef0a8a033c85c3a31bdc3c8517c6d48e2",
+      "cached": false,
+      "query_sha256": "705ea71fffa378a8c52e10346ce8b59959f72e73df87a77e9c98b5c8dd31d74e",
+      "query": "hat shop owner father railways mother house wooden tower 1340s city",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"hat\" OR \"shop\" OR \"owner\" OR \"father\" OR \"railways\" OR \"mother\" OR \"house\" OR \"wooden\" OR \"tower\" OR \"1340s\" OR \"city\"",
+        "terms": [
+          "hat",
+          "shop",
+          "owner",
+          "father",
+          "railways",
+          "mother",
+          "house",
+          "wooden",
+          "tower",
+          "1340s",
+          "city"
+        ]
+      }
+    },
+    {
+      "round": 1,
+      "top_k": 5,
+      "equivalence_key": "ad57b8b27927d31f94950eaddd327ad5fed9edc4b29b050f9e701ae558ce8b56",
+      "cached": false,
+      "query_sha256": "019ba6ef7dd449e741d1738ed1d8cb2d6df4527eb9dc158779291f0aafc29ea1",
+      "query": "fashion brand created with child 1980s younger audience hat shop scarves",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"fashion\" OR \"brand\" OR \"created\" OR \"with\" OR \"child\" OR \"1980s\" OR \"younger\" OR \"audience\" OR \"hat\" OR \"shop\" OR \"scarves\"",
+        "terms": [
+          "fashion",
+          "brand",
+          "created",
+          "with",
+          "child",
+          "1980s",
+          "younger",
+          "audience",
+          "hat",
+          "shop",
+          "scarves"
+        ]
+      }
+    }
+  ],
+  "equivalent_query_repeats": 0,
+  "views": [
+    {
+      "round": 1,
+      "compacted": false,
+      "visible_evidence": [],
+      "shelf": [],
+      "shelf_evicted": []
+    },
+    {
+      "round": 2,
+      "compacted": false,
+      "visible_evidence": [],
+      "shelf": [],
+      "shelf_evicted": []
+    },
+    {
+      "round": 3,
+      "compacted": false,
+      "visible_evidence": [
+        "e1"
+      ],
+      "shelf": [],
+      "shelf_evicted": []
+    }
+  ],
+  "delivered_refs": [
+    "e1"
+  ],
+  "submitted_refs": [
+    "e1"
+  ],
+  "text_included": true,
+  "limitations": [
+    "Equivalence is compiler equality, not semantic identity or wasted-search proof",
+    "Raw-window visibility/selection is not entailment or complete evidence coverage",
+    "No live q26 replay or independent answer scoring is performed"
+  ]
+}

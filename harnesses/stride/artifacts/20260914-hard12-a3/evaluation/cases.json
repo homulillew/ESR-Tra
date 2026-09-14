@@ -1,0 +1,811 @@
+[
+  {
+    "qid": "770",
+    "slot": "0000",
+    "head": "27aadd87643432291ef9cbdcb1c1679662c2d4192c4e492527b106368f6c6c0f",
+    "outcome": "model_budget",
+    "submitted": false,
+    "answer": "",
+    "refs": [],
+    "gold_answer": "Laura Lojo-Rodriguez",
+    "judge_correct": null,
+    "score_correct": false,
+    "scoring_basis": "no_formal_answer",
+    "judge_attempts": 0,
+    "policy_attempts": 64,
+    "native_calls": 120,
+    "executed_actions": 118,
+    "action_counts": {
+      "search": 112,
+      "read": 6,
+      "find": 2
+    },
+    "action_error_counts": {
+      "final_only": 2
+    },
+    "query_executions": 330,
+    "query_cache_hits": 297,
+    "backend_calls": 36,
+    "backend_by_kind": {
+      "search": 33,
+      "get_document": 3
+    },
+    "evidence_windows": 6,
+    "compaction_requests": 50,
+    "shelf_restore_requests": 52,
+    "shelf_capacity_evictions": 0,
+    "shelf_wire_bytes": 368024,
+    "wire_body_bytes": 4865091,
+    "elapsed_seconds": 318.4045643999998,
+    "http_seconds": 281.1993273998378,
+    "backend_seconds": 29.221634899935452,
+    "usage": {
+      "input_tokens": {
+        "total": 1212229,
+        "known_sum": 1212229,
+        "missing_calls": 0
+      },
+      "output_tokens": {
+        "total": 11744,
+        "known_sum": 11744,
+        "missing_calls": 0
+      },
+      "cache_read_tokens": {
+        "total": 1004288,
+        "known_sum": 1004288,
+        "missing_calls": 0
+      },
+      "cache_write_tokens": {
+        "total": null,
+        "known_sum": 0,
+        "missing_calls": 64
+      }
+    },
+    "formal_final_rounds": [
+      64
+    ],
+    "evidence_review": "../q770/EVIDENCE_AUDIT.md",
+    "interaction_review": "../q770/INTERACTION_ANALYSIS.md"
+  },
+  {
+    "qid": "778",
+    "slot": "0001",
+    "head": "1bb75f4b1e55f681d290240a7646808f5362a40d9e89fae16cdfc9e7cd480aba",
+    "outcome": "model_budget",
+    "submitted": false,
+    "answer": "",
+    "refs": [],
+    "gold_answer": "21",
+    "judge_correct": null,
+    "score_correct": false,
+    "scoring_basis": "no_formal_answer",
+    "judge_attempts": 0,
+    "policy_attempts": 64,
+    "native_calls": 64,
+    "executed_actions": 3,
+    "action_counts": {
+      "search": 2,
+      "read": 1,
+      "finish": 61
+    },
+    "action_error_counts": {
+      "arguments_invalid": 61
+    },
+    "query_executions": 6,
+    "query_cache_hits": 0,
+    "backend_calls": 7,
+    "backend_by_kind": {
+      "search": 6,
+      "get_document": 1
+    },
+    "evidence_windows": 1,
+    "compaction_requests": 0,
+    "shelf_restore_requests": 0,
+    "shelf_capacity_evictions": 0,
+    "shelf_wire_bytes": 0,
+    "wire_body_bytes": 3245697,
+    "elapsed_seconds": 188.6569866000209,
+    "http_seconds": 177.20470119998208,
+    "backend_seconds": 6.805606399982935,
+    "usage": {
+      "input_tokens": {
+        "total": 714035,
+        "known_sum": 714035,
+        "missing_calls": 0
+      },
+      "output_tokens": {
+        "total": 5323,
+        "known_sum": 5323,
+        "missing_calls": 0
+      },
+      "cache_read_tokens": {
+        "total": 622208,
+        "known_sum": 622208,
+        "missing_calls": 0
+      },
+      "cache_write_tokens": {
+        "total": null,
+        "known_sum": 0,
+        "missing_calls": 64
+      }
+    },
+    "formal_final_rounds": [
+      64
+    ],
+    "evidence_review": "../q778/EVIDENCE_AUDIT.md",
+    "interaction_review": "../q778/INTERACTION_ANALYSIS.md"
+  },
+  {
+    "qid": "772",
+    "slot": "0002",
+    "head": "07504c00659ac2d909947aa9548b7f8fadcc7db670b5a267b259c882c02bf552",
+    "outcome": "submitted",
+    "submitted": true,
+    "answer": "The article says the longest-serving employee at the school is Vuyokazi, who serves as the school's secretary.",
+    "refs": [
+      "e1",
+      "e2"
+    ],
+    "gold_answer": "Secretary",
+    "judge_correct": true,
+    "score_correct": true,
+    "scoring_basis": "post_run_semantic_judge",
+    "judge_attempts": 1,
+    "policy_attempts": 5,
+    "native_calls": 5,
+    "executed_actions": 5,
+    "action_counts": {
+      "search": 2,
+      "read": 2,
+      "finish": 1
+    },
+    "action_error_counts": {},
+    "query_executions": 6,
+    "query_cache_hits": 0,
+    "backend_calls": 7,
+    "backend_by_kind": {
+      "search": 6,
+      "get_document": 1
+    },
+    "evidence_windows": 2,
+    "compaction_requests": 0,
+    "shelf_restore_requests": 0,
+    "shelf_capacity_evictions": 0,
+    "shelf_wire_bytes": 0,
+    "wire_body_bytes": 119300,
+    "elapsed_seconds": 19.778630099986913,
+    "http_seconds": 15.323143800051184,
+    "backend_seconds": 4.058433100028196,
+    "usage": {
+      "input_tokens": {
+        "total": 28059,
+        "known_sum": 28059,
+        "missing_calls": 0
+      },
+      "output_tokens": {
+        "total": 544,
+        "known_sum": 544,
+        "missing_calls": 0
+      },
+      "cache_read_tokens": {
+        "total": 17024,
+        "known_sum": 17024,
+        "missing_calls": 0
+      },
+      "cache_write_tokens": {
+        "total": null,
+        "known_sum": 0,
+        "missing_calls": 5
+      }
+    },
+    "formal_final_rounds": [],
+    "evidence_review": "../q772/EVIDENCE_AUDIT.md",
+    "interaction_review": "../q772/INTERACTION_ANALYSIS.md"
+  },
+  {
+    "qid": "774",
+    "slot": "0003",
+    "head": "3d488e03f78a096dfcdd2a2338e5afa1e5df334a14af2cb1e14227c1b4f7aa82",
+    "outcome": "abstained",
+    "submitted": false,
+    "answer": "",
+    "refs": [],
+    "gold_answer": "Georgia Hirst",
+    "judge_correct": null,
+    "score_correct": false,
+    "scoring_basis": "no_formal_answer",
+    "judge_attempts": 0,
+    "policy_attempts": 64,
+    "native_calls": 127,
+    "executed_actions": 127,
+    "action_counts": {
+      "search": 126,
+      "finish": 1
+    },
+    "action_error_counts": {},
+    "query_executions": 315,
+    "query_cache_hits": 300,
+    "backend_calls": 15,
+    "backend_by_kind": {
+      "search": 15
+    },
+    "evidence_windows": 0,
+    "compaction_requests": 19,
+    "shelf_restore_requests": 0,
+    "shelf_capacity_evictions": 0,
+    "shelf_wire_bytes": 0,
+    "wire_body_bytes": 4769225,
+    "elapsed_seconds": 273.10485099998186,
+    "http_seconds": 253.55199530004757,
+    "backend_seconds": 13.97954099997878,
+    "usage": {
+      "input_tokens": {
+        "total": 1090312,
+        "known_sum": 1090312,
+        "missing_calls": 0
+      },
+      "output_tokens": {
+        "total": 9542,
+        "known_sum": 9542,
+        "missing_calls": 0
+      },
+      "cache_read_tokens": {
+        "total": 966656,
+        "known_sum": 966656,
+        "missing_calls": 0
+      },
+      "cache_write_tokens": {
+        "total": null,
+        "known_sum": 0,
+        "missing_calls": 64
+      }
+    },
+    "formal_final_rounds": [
+      64
+    ],
+    "evidence_review": "../q774/EVIDENCE_AUDIT.md",
+    "interaction_review": "../q774/INTERACTION_ANALYSIS.md"
+  },
+  {
+    "qid": "769",
+    "slot": "0004",
+    "head": "2701c372ad8d5b29bf46895e78a04f83fd0a11d24f0c1580d9073f2a51cb9d37",
+    "outcome": "submitted",
+    "submitted": true,
+    "answer": "Queen Arwa University",
+    "refs": [
+      "e1",
+      "e2",
+      "e3",
+      "e4"
+    ],
+    "gold_answer": "Queen Arwa University",
+    "judge_correct": true,
+    "score_correct": true,
+    "scoring_basis": "post_run_semantic_judge",
+    "judge_attempts": 1,
+    "policy_attempts": 6,
+    "native_calls": 11,
+    "executed_actions": 11,
+    "action_counts": {
+      "search": 6,
+      "read": 4,
+      "finish": 1
+    },
+    "action_error_counts": {},
+    "query_executions": 18,
+    "query_cache_hits": 0,
+    "backend_calls": 22,
+    "backend_by_kind": {
+      "search": 18,
+      "get_document": 4
+    },
+    "evidence_windows": 4,
+    "compaction_requests": 0,
+    "shelf_restore_requests": 0,
+    "shelf_capacity_evictions": 0,
+    "shelf_wire_bytes": 0,
+    "wire_body_bytes": 263338,
+    "elapsed_seconds": 38.64664360001916,
+    "http_seconds": 27.159738899965305,
+    "backend_seconds": 10.861795999924652,
+    "usage": {
+      "input_tokens": {
+        "total": 60305,
+        "known_sum": 60305,
+        "missing_calls": 0
+      },
+      "output_tokens": {
+        "total": 1049,
+        "known_sum": 1049,
+        "missing_calls": 0
+      },
+      "cache_read_tokens": {
+        "total": 40064,
+        "known_sum": 40064,
+        "missing_calls": 0
+      },
+      "cache_write_tokens": {
+        "total": null,
+        "known_sum": 0,
+        "missing_calls": 6
+      }
+    },
+    "formal_final_rounds": [],
+    "evidence_review": "../q769/EVIDENCE_AUDIT.md",
+    "interaction_review": "../q769/INTERACTION_ANALYSIS.md"
+  },
+  {
+    "qid": "775",
+    "slot": "0005",
+    "head": "0edf918cf84f953a7b8851c87c75e01c3953da5bcca92f76a99e5254e73365e8",
+    "outcome": "model_budget",
+    "submitted": false,
+    "answer": "",
+    "refs": [],
+    "gold_answer": "Boston",
+    "judge_correct": null,
+    "score_correct": false,
+    "scoring_basis": "no_formal_answer",
+    "judge_attempts": 0,
+    "policy_attempts": 64,
+    "native_calls": 128,
+    "executed_actions": 126,
+    "action_counts": {
+      "search": 128
+    },
+    "action_error_counts": {
+      "final_only": 2
+    },
+    "query_executions": 377,
+    "query_cache_hits": 317,
+    "backend_calls": 60,
+    "backend_by_kind": {
+      "search": 60
+    },
+    "evidence_windows": 0,
+    "compaction_requests": 59,
+    "shelf_restore_requests": 0,
+    "shelf_capacity_evictions": 0,
+    "shelf_wire_bytes": 0,
+    "wire_body_bytes": 4841048,
+    "elapsed_seconds": 372.3881184000056,
+    "http_seconds": 320.63662769977236,
+    "backend_seconds": 45.52992889995221,
+    "usage": {
+      "input_tokens": {
+        "total": 1145170,
+        "known_sum": 1145170,
+        "missing_calls": 0
+      },
+      "output_tokens": {
+        "total": 14135,
+        "known_sum": 14135,
+        "missing_calls": 0
+      },
+      "cache_read_tokens": {
+        "total": 847360,
+        "known_sum": 847360,
+        "missing_calls": 0
+      },
+      "cache_write_tokens": {
+        "total": null,
+        "known_sum": 0,
+        "missing_calls": 64
+      }
+    },
+    "formal_final_rounds": [
+      64
+    ],
+    "evidence_review": "../q775/EVIDENCE_AUDIT.md",
+    "interaction_review": "../q775/INTERACTION_ANALYSIS.md"
+  },
+  {
+    "qid": "786",
+    "slot": "0006",
+    "head": "ad5c7e245b29bc309394a006c54f87e334c493a976fa22181bc9283b10159adf",
+    "outcome": "submitted",
+    "submitted": true,
+    "answer": "Kiran Shah",
+    "refs": [
+      "e3",
+      "e4",
+      "e5"
+    ],
+    "gold_answer": "Kiran Shah",
+    "judge_correct": true,
+    "score_correct": true,
+    "scoring_basis": "post_run_semantic_judge",
+    "judge_attempts": 1,
+    "policy_attempts": 64,
+    "native_calls": 67,
+    "executed_actions": 67,
+    "action_counts": {
+      "search": 61,
+      "read": 5,
+      "finish": 1
+    },
+    "action_error_counts": {},
+    "query_executions": 139,
+    "query_cache_hits": 95,
+    "backend_calls": 47,
+    "backend_by_kind": {
+      "search": 44,
+      "get_document": 3
+    },
+    "evidence_windows": 5,
+    "compaction_requests": 7,
+    "shelf_restore_requests": 38,
+    "shelf_capacity_evictions": 0,
+    "shelf_wire_bytes": 332624,
+    "wire_body_bytes": 3932692,
+    "elapsed_seconds": 344.6782148999919,
+    "http_seconds": 306.0706905001134,
+    "backend_seconds": 33.14681730009033,
+    "usage": {
+      "input_tokens": {
+        "total": 953357,
+        "known_sum": 953357,
+        "missing_calls": 0
+      },
+      "output_tokens": {
+        "total": 7568,
+        "known_sum": 7568,
+        "missing_calls": 0
+      },
+      "cache_read_tokens": {
+        "total": 771328,
+        "known_sum": 771328,
+        "missing_calls": 0
+      },
+      "cache_write_tokens": {
+        "total": null,
+        "known_sum": 0,
+        "missing_calls": 64
+      }
+    },
+    "formal_final_rounds": [
+      64
+    ],
+    "evidence_review": "../q786/EVIDENCE_AUDIT.md",
+    "interaction_review": "../q786/INTERACTION_ANALYSIS.md"
+  },
+  {
+    "qid": "776",
+    "slot": "0007",
+    "head": "34ed86de9a991ededa2b210b7f3222fc15035798ae0c6a9ed59a5ad2fb765346",
+    "outcome": "submitted",
+    "submitted": true,
+    "answer": "The Dorset Culture of the Eastern Arctic",
+    "refs": [
+      "e4",
+      "e1",
+      "e6"
+    ],
+    "gold_answer": "The Dorset Culture of the Eastern Arctic",
+    "judge_correct": true,
+    "score_correct": true,
+    "scoring_basis": "post_run_semantic_judge",
+    "judge_attempts": 1,
+    "policy_attempts": 9,
+    "native_calls": 16,
+    "executed_actions": 16,
+    "action_counts": {
+      "search": 9,
+      "read": 6,
+      "finish": 1
+    },
+    "action_error_counts": {},
+    "query_executions": 26,
+    "query_cache_hits": 0,
+    "backend_calls": 30,
+    "backend_by_kind": {
+      "search": 26,
+      "get_document": 4
+    },
+    "evidence_windows": 6,
+    "compaction_requests": 1,
+    "shelf_restore_requests": 0,
+    "shelf_capacity_evictions": 0,
+    "shelf_wire_bytes": 0,
+    "wire_body_bytes": 528431,
+    "elapsed_seconds": 62.992539300001226,
+    "http_seconds": 40.680391700036125,
+    "backend_seconds": 21.349658600025577,
+    "usage": {
+      "input_tokens": {
+        "total": 125014,
+        "known_sum": 125014,
+        "missing_calls": 0
+      },
+      "output_tokens": {
+        "total": 1666,
+        "known_sum": 1666,
+        "missing_calls": 0
+      },
+      "cache_read_tokens": {
+        "total": 80128,
+        "known_sum": 80128,
+        "missing_calls": 0
+      },
+      "cache_write_tokens": {
+        "total": null,
+        "known_sum": 0,
+        "missing_calls": 9
+      }
+    },
+    "formal_final_rounds": [],
+    "evidence_review": "../q776/EVIDENCE_AUDIT.md",
+    "interaction_review": "../q776/INTERACTION_ANALYSIS.md"
+  },
+  {
+    "qid": "771",
+    "slot": "0008",
+    "head": "3e2a766696c08345b4526a6bffa83d4f552dca9e01969b1755c29f3ec27d5510",
+    "outcome": "submitted",
+    "submitted": true,
+    "answer": "Vakkorama",
+    "refs": [
+      "e1"
+    ],
+    "gold_answer": "Vakkorama",
+    "judge_correct": true,
+    "score_correct": true,
+    "scoring_basis": "post_run_semantic_judge",
+    "judge_attempts": 1,
+    "policy_attempts": 3,
+    "native_calls": 3,
+    "executed_actions": 3,
+    "action_counts": {
+      "search": 1,
+      "read": 1,
+      "finish": 1
+    },
+    "action_error_counts": {},
+    "query_executions": 3,
+    "query_cache_hits": 0,
+    "backend_calls": 4,
+    "backend_by_kind": {
+      "search": 3,
+      "get_document": 1
+    },
+    "evidence_windows": 1,
+    "compaction_requests": 0,
+    "shelf_restore_requests": 0,
+    "shelf_capacity_evictions": 0,
+    "shelf_wire_bytes": 0,
+    "wire_body_bytes": 47126,
+    "elapsed_seconds": 8.795471699995687,
+    "http_seconds": 6.4674444000120275,
+    "backend_seconds": 2.0029431999719236,
+    "usage": {
+      "input_tokens": {
+        "total": 11297,
+        "known_sum": 11297,
+        "missing_calls": 0
+      },
+      "output_tokens": {
+        "total": 170,
+        "known_sum": 170,
+        "missing_calls": 0
+      },
+      "cache_read_tokens": {
+        "total": 4736,
+        "known_sum": 4736,
+        "missing_calls": 0
+      },
+      "cache_write_tokens": {
+        "total": null,
+        "known_sum": 0,
+        "missing_calls": 3
+      }
+    },
+    "formal_final_rounds": [],
+    "evidence_review": "../q771/EVIDENCE_AUDIT.md",
+    "interaction_review": "../q771/INTERACTION_ANALYSIS.md"
+  },
+  {
+    "qid": "788",
+    "slot": "0009",
+    "head": "47d2d4b50bf224e47c82975176ee9fd4079fc5331c880cb8435e7c3cb5c8a520",
+    "outcome": "submitted",
+    "submitted": true,
+    "answer": "Taj-ul-Masajid (also spelled Taj-ul-Masjid), located in Bhopal, Madhya Pradesh, India.\n\nIt meets all the stated criteria:\n- Completed before 1990: Construction was completed in 1958 (Wikipedia lists year_completed: 1958; \"The construction was complete by 1958\").\n- Capacity over 150,000 people: It has a capacity of 175,000 worshippers.\n- Interior area over 400,000 square feet: Sources describe its interior area as about 430,000 square feet (Wikipedia lists the interior area as 23,000 m²).\n- Walking distance from another mosque built after 1720: Moti Masjid (the Pearl Mosque) in Bhopal, built by Sikander Begum in 1860, is located about 1.2 km away — within walking distance.\n- Walking distance from a hospital established after 1930: Hamidia Hospital (formerly Prince of Wales King Edwards Memorial Hospital for Men) is about 0.5 km away. Its present building inside Fort Fatehgarh was occupied in 1953, with further extensions in 1956, placing its establishment/development well after 1930.",
+    "refs": [
+      "e1",
+      "e2",
+      "e3",
+      "e4",
+      "e5",
+      "e6"
+    ],
+    "gold_answer": "Taj-ul-Masajid",
+    "judge_correct": true,
+    "score_correct": true,
+    "scoring_basis": "post_run_semantic_judge",
+    "judge_attempts": 1,
+    "policy_attempts": 12,
+    "native_calls": 12,
+    "executed_actions": 11,
+    "action_counts": {
+      "search": 5,
+      "read": 6,
+      "finish": 1
+    },
+    "action_error_counts": {
+      "arguments_invalid": 1
+    },
+    "query_executions": 12,
+    "query_cache_hits": 0,
+    "backend_calls": 18,
+    "backend_by_kind": {
+      "search": 12,
+      "get_document": 6
+    },
+    "evidence_windows": 6,
+    "compaction_requests": 0,
+    "shelf_restore_requests": 0,
+    "shelf_capacity_evictions": 0,
+    "shelf_wire_bytes": 0,
+    "wire_body_bytes": 475168,
+    "elapsed_seconds": 49.97271400000318,
+    "http_seconds": 43.9724216000177,
+    "backend_seconds": 5.00568880001083,
+    "usage": {
+      "input_tokens": {
+        "total": 123272,
+        "known_sum": 123272,
+        "missing_calls": 0
+      },
+      "output_tokens": {
+        "total": 1464,
+        "known_sum": 1464,
+        "missing_calls": 0
+      },
+      "cache_read_tokens": {
+        "total": 98048,
+        "known_sum": 98048,
+        "missing_calls": 0
+      },
+      "cache_write_tokens": {
+        "total": null,
+        "known_sum": 0,
+        "missing_calls": 12
+      }
+    },
+    "formal_final_rounds": [],
+    "evidence_review": "../q788/EVIDENCE_AUDIT.md",
+    "interaction_review": "../q788/INTERACTION_ANALYSIS.md"
+  },
+  {
+    "qid": "793",
+    "slot": "0010",
+    "head": "98e2a3c5a9e6d5a706c69549cee85abf6aa86d300c1d94e194ab60ac19b9ea06",
+    "outcome": "model_budget",
+    "submitted": false,
+    "answer": "",
+    "refs": [],
+    "gold_answer": "29/02",
+    "judge_correct": null,
+    "score_correct": false,
+    "scoring_basis": "no_formal_answer",
+    "judge_attempts": 0,
+    "policy_attempts": 64,
+    "native_calls": 128,
+    "executed_actions": 126,
+    "action_counts": {
+      "search": 126,
+      "read": 2
+    },
+    "action_error_counts": {
+      "final_only": 2
+    },
+    "query_executions": 370,
+    "query_cache_hits": 308,
+    "backend_calls": 64,
+    "backend_by_kind": {
+      "search": 62,
+      "get_document": 2
+    },
+    "evidence_windows": 2,
+    "compaction_requests": 53,
+    "shelf_restore_requests": 27,
+    "shelf_capacity_evictions": 0,
+    "shelf_wire_bytes": 248697,
+    "wire_body_bytes": 5033427,
+    "elapsed_seconds": 399.43423420001636,
+    "http_seconds": 354.55559699996957,
+    "backend_seconds": 38.54874010014464,
+    "usage": {
+      "input_tokens": {
+        "total": 1188642,
+        "known_sum": 1188642,
+        "missing_calls": 0
+      },
+      "output_tokens": {
+        "total": 14518,
+        "known_sum": 14518,
+        "missing_calls": 0
+      },
+      "cache_read_tokens": {
+        "total": 878080,
+        "known_sum": 878080,
+        "missing_calls": 0
+      },
+      "cache_write_tokens": {
+        "total": null,
+        "known_sum": 0,
+        "missing_calls": 64
+      }
+    },
+    "formal_final_rounds": [
+      64
+    ],
+    "evidence_review": "../q793/EVIDENCE_AUDIT.md",
+    "interaction_review": "../q793/INTERACTION_ANALYSIS.md"
+  },
+  {
+    "qid": "794",
+    "slot": "0011",
+    "head": "1aa9c64c2f69007f8cbc785550e1ea888455ec18964321e0c9eb9c28c26f56c2",
+    "outcome": "abstained",
+    "submitted": false,
+    "answer": "",
+    "refs": [],
+    "gold_answer": "1419",
+    "judge_correct": null,
+    "score_correct": false,
+    "scoring_basis": "no_formal_answer",
+    "judge_attempts": 0,
+    "policy_attempts": 64,
+    "native_calls": 127,
+    "executed_actions": 127,
+    "action_counts": {
+      "search": 126,
+      "finish": 1
+    },
+    "action_error_counts": {},
+    "query_executions": 378,
+    "query_cache_hits": 357,
+    "backend_calls": 21,
+    "backend_by_kind": {
+      "search": 21
+    },
+    "evidence_windows": 0,
+    "compaction_requests": 29,
+    "shelf_restore_requests": 0,
+    "shelf_capacity_evictions": 0,
+    "shelf_wire_bytes": 0,
+    "wire_body_bytes": 5071205,
+    "elapsed_seconds": 283.9373164999997,
+    "http_seconds": 265.8778043999919,
+    "backend_seconds": 12.434982699953252,
+    "usage": {
+      "input_tokens": {
+        "total": 1375620,
+        "known_sum": 1375620,
+        "missing_calls": 0
+      },
+      "output_tokens": {
+        "total": 10540,
+        "known_sum": 10540,
+        "missing_calls": 0
+      },
+      "cache_read_tokens": {
+        "total": 1219968,
+        "known_sum": 1219968,
+        "missing_calls": 0
+      },
+      "cache_write_tokens": {
+        "total": null,
+        "known_sum": 0,
+        "missing_calls": 64
+      }
+    },
+    "formal_final_rounds": [
+      64
+    ],
+    "evidence_review": "../q794/EVIDENCE_AUDIT.md",
+    "interaction_review": "../q794/INTERACTION_ANALYSIS.md"
+  }
+]

@@ -1,0 +1,55 @@
+{
+  "protocol": "stride-search-3",
+  "head": "bdf2774a8ca78abf117100b1dfd77d316771287bf3ffc678fea273c6de3bfe89",
+  "outcome": "submitted",
+  "formal_correct": null,
+  "model_attempts": 3,
+  "backend_attempts": 2,
+  "queries": [
+    {
+      "round": 1,
+      "top_k": 1,
+      "equivalence_key": "6784a0dd95e86872a633f6156a7192b24b192c66fec1c996fdf1b0db970e76ee",
+      "cached": false,
+      "query_sha256": "c93449eff60cda35b261b682a87b4c0aa97f84808e5af234d0979974c41b68d5"
+    }
+  ],
+  "equivalent_query_repeats": 0,
+  "views": [
+    {
+      "round": 1,
+      "compacted": false,
+      "visible_evidence": [],
+      "shelf": [],
+      "shelf_evicted": []
+    },
+    {
+      "round": 2,
+      "compacted": false,
+      "visible_evidence": [],
+      "shelf": [],
+      "shelf_evicted": []
+    },
+    {
+      "round": 3,
+      "compacted": false,
+      "visible_evidence": [
+        "e1"
+      ],
+      "shelf": [],
+      "shelf_evicted": []
+    }
+  ],
+  "delivered_refs": [
+    "e1"
+  ],
+  "submitted_refs": [
+    "e1"
+  ],
+  "text_included": false,
+  "limitations": [
+    "Equivalence is compiler equality, not semantic identity or wasted-search proof",
+    "Raw-window visibility/selection is not entailment or complete evidence coverage",
+    "No live q26 replay or independent answer scoring is performed"
+  ]
+}

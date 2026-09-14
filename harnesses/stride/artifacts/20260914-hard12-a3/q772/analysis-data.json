@@ -1,0 +1,1355 @@
+{
+  "rounds": [
+    {
+      "round": 1,
+      "utc": "2026-09-14T10:13:30.602282+00:00",
+      "final": false,
+      "compacted": false,
+      "visible": [],
+      "shelf_restored": [],
+      "shelf_evicted": [],
+      "wire_bytes": 7552,
+      "usage": {
+        "cache_read_tokens": 0,
+        "input_tokens": 1895,
+        "output_tokens": 95
+      },
+      "http": {
+        "sequence": 1,
+        "utc_start": "2026-09-14T10:13:30.613056+00:00",
+        "http_status": 200,
+        "requested_model": "EB-GLM-5.2",
+        "returned_model": "glm-5.2",
+        "finish_reason": "tool_calls",
+        "usage": {
+          "prompt_tokens": 1895,
+          "completion_tokens": 95,
+          "reasoning_tokens": 0,
+          "total_tokens": 1990,
+          "cached_tokens": 0,
+          "prompt_tokens_details": {
+            "cached_tokens": 0
+          },
+          "prompt_cost": 0.0,
+          "completion_cost": 0.0,
+          "cache_cost": 0.0
+        },
+        "input_tokens": 1895,
+        "output_tokens": 95,
+        "cache_read_tokens": 0,
+        "cache_write_tokens": null,
+        "request_bytes": 7552,
+        "response_bytes": 978,
+        "request_body_sha256": "87835cf7dcc5bd64d0de0244a2cd214d94265f95499a58661901d26b6f8db350",
+        "sanitized_response": false,
+        "ledger_id": 191,
+        "utc_end": "2026-09-14T10:13:33.007329+00:00",
+        "latency_seconds": 2.3787417000276037,
+        "response_representation": "original response body bytes",
+        "saved_response_body_sha256": "3bf1be4b9144f7bfb1f48245e86a9ecded2ad72994b93008752b64867ba8409a"
+      }
+    },
+    {
+      "round": 2,
+      "utc": "2026-09-14T10:13:34.768627+00:00",
+      "final": false,
+      "compacted": false,
+      "visible": [],
+      "shelf_restored": [],
+      "shelf_evicted": [],
+      "wire_bytes": 15928,
+      "usage": {
+        "cache_read_tokens": 1408,
+        "input_tokens": 3740,
+        "output_tokens": 138
+      },
+      "http": {
+        "sequence": 2,
+        "utc_start": "2026-09-14T10:13:34.780180+00:00",
+        "http_status": 200,
+        "requested_model": "EB-GLM-5.2",
+        "returned_model": "glm-5.2",
+        "finish_reason": "tool_calls",
+        "usage": {
+          "prompt_tokens": 3740,
+          "completion_tokens": 138,
+          "reasoning_tokens": 0,
+          "total_tokens": 3878,
+          "cached_tokens": 1408,
+          "prompt_tokens_details": {
+            "cached_tokens": 1408
+          },
+          "prompt_cost": 0.0,
+          "completion_cost": 0.0,
+          "cache_cost": 0.0
+        },
+        "input_tokens": 3740,
+        "output_tokens": 138,
+        "cache_read_tokens": 1408,
+        "cache_write_tokens": null,
+        "request_bytes": 15928,
+        "response_bytes": 1073,
+        "request_body_sha256": "109f0a6efa43bee1fb27e308064408bb39e7e3fb05ef16fbd22d94dde6e0d2cc",
+        "sanitized_response": false,
+        "ledger_id": 192,
+        "utc_end": "2026-09-14T10:13:37.617252+00:00",
+        "latency_seconds": 2.820904899999732,
+        "response_representation": "original response body bytes",
+        "saved_response_body_sha256": "4eb8580db6eb300b307e134f2299f7cbc09358f6325150414bfd6fdf0151f67f"
+      }
+    },
+    {
+      "round": 3,
+      "utc": "2026-09-14T10:13:40.028822+00:00",
+      "final": false,
+      "compacted": false,
+      "visible": [],
+      "shelf_restored": [],
+      "shelf_evicted": [],
+      "wire_bytes": 25143,
+      "usage": {
+        "cache_read_tokens": 3328,
+        "input_tokens": 5929,
+        "output_tokens": 87
+      },
+      "http": {
+        "sequence": 3,
+        "utc_start": "2026-09-14T10:13:40.040254+00:00",
+        "http_status": 200,
+        "requested_model": "EB-GLM-5.2",
+        "returned_model": "glm-5.2",
+        "finish_reason": "tool_calls",
+        "usage": {
+          "prompt_tokens": 5929,
+          "completion_tokens": 87,
+          "reasoning_tokens": 0,
+          "total_tokens": 6016,
+          "cached_tokens": 3328,
+          "prompt_tokens_details": {
+            "cached_tokens": 3328
+          },
+          "prompt_cost": 0.0,
+          "completion_cost": 0.0,
+          "cache_cost": 0.0
+        },
+        "input_tokens": 5929,
+        "output_tokens": 87,
+        "cache_read_tokens": 3328,
+        "cache_write_tokens": null,
+        "request_bytes": 25143,
+        "response_bytes": 878,
+        "request_body_sha256": "619ff98e427174b64fc9c54509dba9237627c1aff9ff1666da7c91c4c4d1afbb",
+        "sanitized_response": false,
+        "ledger_id": 193,
+        "utc_end": "2026-09-14T10:13:42.741103+00:00",
+        "latency_seconds": 2.68514930002857,
+        "response_representation": "original response body bytes",
+        "saved_response_body_sha256": "91e67d256864e0e72b2642150cd0d20a49eaa235c0fe958c521c84dcdcc897b9"
+      }
+    },
+    {
+      "round": 4,
+      "utc": "2026-09-14T10:13:42.787125+00:00",
+      "final": false,
+      "compacted": false,
+      "visible": [
+        "e1"
+      ],
+      "shelf_restored": [],
+      "shelf_evicted": [],
+      "wire_bytes": 32790,
+      "usage": {
+        "cache_read_tokens": 5376,
+        "input_tokens": 7693,
+        "output_tokens": 104
+      },
+      "http": {
+        "sequence": 4,
+        "utc_start": "2026-09-14T10:13:42.800017+00:00",
+        "http_status": 200,
+        "requested_model": "EB-GLM-5.2",
+        "returned_model": "glm-5.2",
+        "finish_reason": "tool_calls",
+        "usage": {
+          "prompt_tokens": 7693,
+          "completion_tokens": 104,
+          "reasoning_tokens": 0,
+          "total_tokens": 7797,
+          "cached_tokens": 5376,
+          "prompt_tokens_details": {
+            "cached_tokens": 5376
+          },
+          "prompt_cost": 0.0,
+          "completion_cost": 0.0,
+          "cache_cost": 0.0
+        },
+        "input_tokens": 7693,
+        "output_tokens": 104,
+        "cache_read_tokens": 5376,
+        "cache_write_tokens": null,
+        "request_bytes": 32790,
+        "response_bytes": 929,
+        "request_body_sha256": "1dc919c2fb3d58822d93594824ebb7741cf8f7367bf8d930015772a51a694055",
+        "sanitized_response": false,
+        "ledger_id": 194,
+        "utc_end": "2026-09-14T10:13:46.154945+00:00",
+        "latency_seconds": 3.339644199993927,
+        "response_representation": "original response body bytes",
+        "saved_response_body_sha256": "9b0368ca9047d68f579b3cc6da7d9945c1fa94ee1fb85e64a51cf82ae575fca4"
+      }
+    },
+    {
+      "round": 5,
+      "utc": "2026-09-14T10:13:46.194596+00:00",
+      "final": false,
+      "compacted": false,
+      "visible": [
+        "e1",
+        "e2"
+      ],
+      "shelf_restored": [],
+      "shelf_evicted": [],
+      "wire_bytes": 37887,
+      "usage": {
+        "cache_read_tokens": 6912,
+        "input_tokens": 8802,
+        "output_tokens": 120
+      },
+      "http": {
+        "sequence": 5,
+        "utc_start": "2026-09-14T10:13:46.206064+00:00",
+        "http_status": 200,
+        "requested_model": "EB-GLM-5.2",
+        "returned_model": "glm-5.2",
+        "finish_reason": "tool_calls",
+        "usage": {
+          "prompt_tokens": 8802,
+          "completion_tokens": 120,
+          "reasoning_tokens": 0,
+          "total_tokens": 8922,
+          "cached_tokens": 6912,
+          "prompt_tokens_details": {
+            "cached_tokens": 6912
+          },
+          "prompt_cost": 0.0,
+          "completion_cost": 0.0,
+          "cache_cost": 0.0
+        },
+        "input_tokens": 8802,
+        "output_tokens": 120,
+        "cache_read_tokens": 6912,
+        "cache_write_tokens": null,
+        "request_bytes": 37887,
+        "response_bytes": 1002,
+        "request_body_sha256": "43196136aed3f0d35896d6619f28edd5c1938c9011c88e7df5bdb735195a0e33",
+        "sanitized_response": false,
+        "ledger_id": 195,
+        "utc_end": "2026-09-14T10:13:50.319794+00:00",
+        "latency_seconds": 4.0987037000013515,
+        "response_representation": "original response body bytes",
+        "saved_response_body_sha256": "821980f794316e7eae455ee7553cf19ef100e8b47d946e8ed6cf71ed9e1f985f"
+      }
+    }
+  ],
+  "actions": [
+    {
+      "arguments": "{\"queries\": [\"township established 1960s migrant workers streets renamed prefix\", \"township 1960s migrant workers street names prefix renamed late 2010s\", \"butchery restaurant township heart early 2000s popular\"]}",
+      "executed": true,
+      "result": {
+        "action_slot_charged": true,
+        "executed": true,
+        "ok": true,
+        "results": [
+          {
+            "cached": false,
+            "hits": [
+              {
+                "kind": "navigation_not_evidence",
+                "previously_received": false,
+                "ref": "d1",
+                "snippet": " ... Chicago's numbered street system was established in 1911 by legislation that made Madison Street the base for the numbering of east–west streets, and State Street for north–south streets.\n\nCleveland\n\nAs a general rule, the only numbered streets in Cleveland run generally north–south, while streets ... ",
+                "title": "https://en.wikipedia.org/wiki/Numbered_street"
+              },
+              {
+                "kind": "navigation_not_evidence",
+                "previously_received": false,
+                "ref": "d2",
+                "snippet": " ... A brief history\n\nGugulethu, or \"Gugs\" as it is popularly known, is a township/suburb about 15 kilometres outside the city centre of Cape Town. It was first established as a settlement for African migrant workers by the Cape Town City Council in 1958. The name \"Gugulethu\" is ... ",
+                "title": "https://www.capetownmuseum.org.za/places/gugulethu"
+              },
+              {
+                "kind": "navigation_not_evidence",
+                "previously_received": false,
+                "ref": "d3",
+                "snippet": " ... who managed the townships.\n\nFurther popular resistance: incorporation into the City\n\nIn Soweto, popular resistance to apartheid emerged in various forms during the 1980s. Educational and economic boycotts were initiated, and student bodies were organized. Street committees were formed, and civic organizations were established as alternatives to state ... ",
+                "title": "https://en.wikipedia.org/wiki/Soweto"
+              },
+              {
+                "kind": "navigation_not_evidence",
+                "previously_received": false,
+                "ref": "d4",
+                "snippet": " ... Buildings with many small rooms, each with narrow single beds or bunks, crowded with male migrant labourers – these were the workers' hostels in Lwandle township, Cape Town. The last preserved one – Hostel 33 in Khayalethu Street – is attached to the Lwandle Migrant Labour Museum. The buildings present a ... ",
+                "title": "https://groundup.org.za/article/cape-towns-only-township-based-museum/"
+              },
+              {
+                "kind": "navigation_not_evidence",
+                "previously_received": false,
+                "ref": "d5",
+                "snippet": " ... 1912 - Native National Congress founded, later renamed the African National Congress (ANC).\n\n1913 - Land Act introduced to prevent blacks, except those living in Cape Province, from buying land outside reserves.\n\n1914 - National Party founded.\n\n1918 - Secret Broederbond (brotherhood) established to advance the Afrikaner cause.\n\n1919 - South West Africa ... ",
+                "title": "https://www.bbc.com/news/world-africa-14094918"
+              }
+            ],
+            "query": "township established 1960s migrant workers streets renamed prefix"
+          },
+          {
+            "cached": false,
+            "hits": [
+              {
+                "kind": "navigation_not_evidence",
+                "previously_received": false,
+                "ref": "d1",
+                "snippet": " ... In the early 20th century, many of Chestnut Hill's previously numbered streets were renamed for Native American tribes.\n\nPhoenix\n\nIn Phoenix, Arizona, the north-south streets used a numbered system, with the center street being Central Avenue. Streets west of Central Avenue are named \"avenue\", thus, for ... ",
+                "title": "https://en.wikipedia.org/wiki/Numbered_street"
+              },
+              {
+                "kind": "navigation_not_evidence",
+                "previously_received": false,
+                "ref": "d2",
+                "snippet": " ... A brief history\n\nGugulethu, or \"Gugs\" as it is popularly known, is a township/suburb about 15 kilometres outside the city centre of Cape Town. It was first established as a settlement for African migrant workers by the Cape Town City Council in 1958. The name \"Gugulethu\" is ... ",
+                "title": "https://www.capetownmuseum.org.za/places/gugulethu"
+              },
+              {
+                "kind": "navigation_not_evidence",
+                "previously_received": false,
+                "ref": "d5",
+                "snippet": " ... 2009 July - Township residents complaining about poor living conditions mount violent protests.\n\n2010 June - South Africa hosts the World Cup football tournament.\n\n2010 August - Civil servants stage nation-wide strike.\n\n2011 May - Local elections, with opposition Democratic Alliance nearly doubling its share of the vote since the last ... ",
+                "title": "https://www.bbc.com/news/world-africa-14094918"
+              },
+              {
+                "kind": "navigation_not_evidence",
+                "previously_received": false,
+                "ref": "d4",
+                "snippet": " ... Buildings with many small rooms, each with narrow single beds or bunks, crowded with male migrant labourers – these were the workers' hostels in Lwandle township, Cape Town. The last preserved one – Hostel 33 in Khayalethu Street – is attached to the Lwandle Migrant Labour Museum. The buildings present a ... ",
+                "title": "https://groundup.org.za/article/cape-towns-only-township-based-museum/"
+              },
+              {
+                "kind": "navigation_not_evidence",
+                "previously_received": false,
+                "ref": "d3",
+                "snippet": " ... Postal code (street)\npostal_code: 1808\npostal2_code_type: PO box\narea_code_type: Area code\narea_code: 011\n\nSoweto () is a township of the City of Johannesburg Metropolitan Municipality in Gauteng, South Africa, bordering the city's mining belt in the south. Its name is an English ... ",
+                "title": "https://en.wikipedia.org/wiki/Soweto"
+              }
+            ],
+            "query": "township 1960s migrant workers street names prefix renamed late 2010s"
+          },
+          {
+            "cached": false,
+            "hits": [
+              {
+                "kind": "navigation_not_evidence",
+                "previously_received": false,
+                "ref": "d6",
+                "snippet": " ... the \"Pride\" of Gugulethu\n\nMzoli's Place, also known simply as Mzoli's, is a butchery-come-restaurant. Situated in the heart of Gugulethu, a Cape Town township whose name means \"Our Pride\", Mzoli's is one of the most popular hangouts in the Mother City.\n\nThe establishment ... ",
+                "title": "https://groundup.org.za/article/mzolis-pride-gugulethu_1056/"
+              },
+              {
+                "kind": "navigation_not_evidence",
+                "previously_received": false,
+                "ref": "d2",
+                "snippet": " ... He founded Mzoli's Place and Butchery which in 2003 started as a butcher shop operating from a garage. Mzoli's restaurant became a major attraction for both Capetonians and international visitors alike until May 2021 when it closed down.\n\nNotable events\n\nIn 1976, three of Gugulethu's ... ",
+                "title": "https://www.capetownmuseum.org.za/places/gugulethu"
+              },
+              {
+                "kind": "navigation_not_evidence",
+                "previously_received": false,
+                "ref": "d3",
+                "snippet": " ... Popular resistance to state structures dates back to the Advisory Boards (1950) that co-opted black residents to advise whites who managed the townships.\n\nFurther popular resistance: incorporation into the City\n\nIn Soweto, popular resistance to apartheid emerged in various forms during the 1980s. Educational and economic boycotts ... ",
+                "title": "https://en.wikipedia.org/wiki/Soweto"
+              },
+              {
+                "kind": "navigation_not_evidence",
+                "previously_received": false,
+                "ref": "d7",
+                "snippet": " ... He found his home here in New Jersey working with the highly regarded Harvest Restaurant Group and now Landmark Hospitality. Chef Brunina is driven by his excitement for showcasing whole animal butchery, learning new techniques, and finding the best ingredients New Jersey has to offer. He has been ... ",
+                "title": "https://njwinefoodfest.com/chefs/"
+              },
+              {
+                "kind": "navigation_not_evidence",
+                "previously_received": false,
+                "ref": "d8",
+                "snippet": " ... Boston Market was purchased by McDonald's Corporation in May 2000, primarily for its real estate holdings. McDonald's found the brand serviceable, and continued to operate and expand Boston Market.\n\nIn the early 2000s, Boston Market operated two locations in Toronto, Ontario. In early 2002, Boston Market ... ",
+                "title": "https://en.wikipedia.org/wiki/Boston_Market"
+              }
+            ],
+            "query": "butchery restaurant township heart early 2000s popular"
+          }
+        ]
+      },
+      "round": 1,
+      "tool": "search",
+      "tool_call_id": "call_5992882bfe51418db1df45ef",
+      "seq": 25,
+      "utc": "2026-09-14T10:13:34.760776+00:00",
+      "next_request": 2,
+      "next_input_receipt": true,
+      "action_commit": "NOT_A_SEPARATE_STRIDE_EVENT; action_result and round_end are recorded",
+      "receipt_not_required_after_terminal": false
+    },
+    {
+      "arguments": "{\"queries\": [\"Gugulethu school established 1980s started in church\", \"Gugulethu school 1980s church longest serving employee\", \"Gugulethu township school started church 1980s article\"]}",
+      "executed": true,
+      "result": {
+        "action_slot_charged": true,
+        "executed": true,
+        "ok": true,
+        "results": [
+          {
+            "cached": false,
+            "hits": [
+              {
+                "kind": "navigation_not_evidence",
+                "previously_received": true,
+                "ref": "d2",
+                "snippet": " ... and Butchery which in 2003 started as a butcher shop operating from a garage. Mzoli's restaurant became a major attraction for both Capetonians and international visitors alike until May 2021 when it closed down.\n\nNotable events\n\nIn 1976, three of Gugulethu's high schools - ID Mkize, Fezeka ... ",
+                "title": "https://www.capetownmuseum.org.za/places/gugulethu"
+              },
+              {
+                "kind": "navigation_not_evidence",
+                "previously_received": false,
+                "ref": "d9",
+                "snippet": " ... Importantly the Scholarchs (Committee to oversee education) is established. 3 church ministers and 1 civil servant make up the committee and control education in the Colony. The duties of teachers are spelled out and regulations regarding school organization are laid down. These measures represent the first steps towards ... ",
+                "title": "https://www.sahistory.org.za/article/history-education-1658-present"
+              },
+              {
+                "kind": "navigation_not_evidence",
+                "previously_received": false,
+                "ref": "d10",
+                "snippet": " ... 2013-11-08\n---\nGugulethu Township is located on the Cape Flats and situated 18km south-east of Cape Town in the Western Cape Province. The name is Xhosa for 'our pride'. The township was established in 1958 and was originally named Nyanga West. Roads, sewers, water and drainage ... ",
+                "title": "https://sahistory.org.za/place/gugulethu-township"
+              },
+              {
+                "kind": "navigation_not_evidence",
+                "previously_received": false,
+                "ref": "d11",
+                "snippet": " ... 20) A member of the local church arranged for her to live with two African nuns in a local village, Tickeyline. She later established a home for herself in Lenyenye Township in Tzaneen, although she remained under police surveillance.\n\nDuring her stay in Tzaneen, Ramphele established the Isutheng ... ",
+                "title": "https://www.sowetanlive.co.za/news/2014-05-06-things-you-may-not-know-about-mamphela-ramphele-/"
+              },
+              {
+                "kind": "navigation_not_evidence",
+                "previously_received": true,
+                "ref": "d6",
+                "snippet": " ... Gugulethu, a Cape Town township whose name means \"Our Pride\", Mzoli's is one of the most popular hangouts in the Mother City.\n\nThe establishment was founded in 2003 by Mzoli Ngcawuzele, who owns the place. The Development Bank of South Africa gave Ngcawuzele funding to start the ... ",
+                "title": "https://groundup.org.za/article/mzolis-pride-gugulethu_1056/"
+              }
+            ],
+            "query": "Gugulethu school established 1980s started in church"
+          },
+          {
+            "cached": false,
+            "hits": [
+              {
+                "kind": "navigation_not_evidence",
+                "previously_received": false,
+                "ref": "d12",
+                "snippet": " ... I must also mention Vuyokazi, the school's secretary. Thank goodness for Vuyo who worked alongside Arlene for many years. She is our longest serving employee and a valuable part of the team today.\n\nLAK: Zama Dance School was founded with the goal of empowering young children from ... ",
+                "title": "https://balletrising.com/2021/03/03/zama-dance-school/"
+              },
+              {
+                "kind": "navigation_not_evidence",
+                "previously_received": true,
+                "ref": "d2",
+                "snippet": " ... This serves as a vivid reminder of the remaining consequences of historical inequality and intergenerational poverty which are the lived realities of many South Africans.\n\nReclaiming Gugulethu\n\nIn recent years, Gugulethu has seen various developments including a boom in community tourism, entrepreneurship, a mall, and many successful community ... ",
+                "title": "https://www.capetownmuseum.org.za/places/gugulethu"
+              },
+              {
+                "kind": "navigation_not_evidence",
+                "previously_received": false,
+                "ref": "d9",
+                "snippet": " ... Free schools are originally intended to be multiracial, but soon they begin to provide for white children only. Church Schools become almost exclusivley coloured to complement the Free Schools.\n\n- 1823\n\n- The first school in the Orange Free State opens.\n\n- 1824\n\n- The famous mission station, Lovedale, is founded by ... ",
+                "title": "https://www.sahistory.org.za/article/history-education-1658-present"
+              },
+              {
+                "kind": "navigation_not_evidence",
+                "previously_received": false,
+                "ref": "d13",
+                "snippet": " ... The emblem was picked from a series of creations by learners from schools around Gugulethu.\n\n\"We visited schools and local structures to get buy-in,\" Dr Mzwandile Plaatjie, the brains behind the initiative, said. \"We spoke to the officials of the department of education (Western Cape Education Department ... ",
+                "title": "https://cityvision.co.za/history-in-the-making-as-gugulethu-poised-to-unveil-new-emblem-to-mark-heritage-day-20220915/"
+              },
+              {
+                "kind": "navigation_not_evidence",
+                "previously_received": false,
+                "ref": "d10",
+                "snippet": " ... History of Gugulethu\n\nGugulethu is also known for the incident involving the 'Gugulethu seven'. Seven young men who were members of uMkhonto weSizwe (MK), the armed wing of the African National Congress (ANC), were ambushed and killed by the South African security forces on the morning of March ... ",
+                "title": "https://sahistory.org.za/place/gugulethu-township"
+              }
+            ],
+            "query": "Gugulethu school 1980s church longest serving employee"
+          },
+          {
+            "cached": false,
+            "hits": [
+              {
+                "kind": "navigation_not_evidence",
+                "previously_received": true,
+                "ref": "d2",
+                "snippet": " ... The players, along with their coach and maths teacher, Xolile Madikane, are a source of pride in the Gugulethu community. Some of the movie's scenes were shot on the school grounds.\n\nSources\n\nNewspaper Articles\n\nDano, Zodidi (2018) \"Gugulethu Turns 60\". Cape Argus. 18 December.\n\nUnknown (2010) \"City ... ",
+                "title": "https://www.capetownmuseum.org.za/places/gugulethu"
+              },
+              {
+                "kind": "navigation_not_evidence",
+                "previously_received": true,
+                "ref": "d6",
+                "snippet": " ... Gugulethu Primary School invigorates classroom learning\n\nThis article is licensed under a Creative Commons Attribution-NoDerivatives 4.0 International License.",
+                "title": "https://groundup.org.za/article/mzolis-pride-gugulethu_1056/"
+              },
+              {
+                "kind": "navigation_not_evidence",
+                "previously_received": false,
+                "ref": "d9",
+                "snippet": " ... by fire and at least five other schools are set alight.\n\n- 11 August, Black pupils from Langa, Gugulethu and Nyanga in Cape Town hold marches in solidarity with the Soweto students. The Langa students march with placards through their township streets accompanied by their teachers who try to ... ",
+                "title": "https://www.sahistory.org.za/article/history-education-1658-present"
+              },
+              {
+                "kind": "navigation_not_evidence",
+                "previously_received": false,
+                "ref": "d10",
+                "snippet": " ... Gugulethu Township\ndate: 2013-11-08\n---\nGugulethu Township is located on the Cape Flats and situated 18km south-east of Cape Town in the Western Cape Province. The name is Xhosa for 'our pride'. The township was established in 1958 and was originally named Nyanga West. Roads, sewers ... ",
+                "title": "https://sahistory.org.za/place/gugulethu-township"
+              },
+              {
+                "kind": "navigation_not_evidence",
+                "previously_received": false,
+                "ref": "d13",
+                "snippet": " ... township in the Western Cape, will be widely used as a branding tool for the area and will most likely sit alongside City and Western Cape government logos for events in Gugulethu. The emblem will also be engraved at the \"strategic entry places of Gugulethu\", local schools, the ... ",
+                "title": "https://cityvision.co.za/history-in-the-making-as-gugulethu-poised-to-unveil-new-emblem-to-mark-heritage-day-20220915/"
+              }
+            ],
+            "query": "Gugulethu township school started church 1980s article"
+          }
+        ]
+      },
+      "round": 2,
+      "tool": "search",
+      "tool_call_id": "call_f59cff6250d34534a123da9e",
+      "seq": 47,
+      "utc": "2026-09-14T10:13:40.021478+00:00",
+      "next_request": 3,
+      "next_input_receipt": true,
+      "action_commit": "NOT_A_SEPARATE_STRIDE_EVENT; action_result and round_end are recorded",
+      "receipt_not_required_after_terminal": false
+    },
+    {
+      "arguments": "{\"ref\": \"d12\", \"start\": 0, \"length\": 6000}",
+      "executed": true,
+      "result": {
+        "action_slot_charged": true,
+        "evidence": {
+          "document": "d12",
+          "document_chars": 14677,
+          "end": 6000,
+          "kind": "raw_evidence",
+          "ref": "e1",
+          "sha256": "e15f900917c82c74eb0f451bed2dfcf3a995d06cd5fbfe5ab5afdc66615181aa",
+          "snapshot": "d7b0c320e182566ae974c560f3636452277559a7ff8713a9c418680f71b1c0c3",
+          "start": 0,
+          "text": "---\ntitle: Ballet Rising\nauthor: Hendrick January\ndate: 2021-03-03\n---\nZama Dance School was founded in 1984 in Gugulethu, a township in South Africa, with the goal of using ballet to build confidence among young children in South Africa living under apartheid. Ballet Rising's contributor Lindsay Alissa King recently interviewed Zama Dance School's director Andrew Warth about what the school and its students are up to today. Stay tuned because in a few days, we'll publish some testimonials from Zama Dance School's students.\n\nThis interview has been edited and condensed for clarity.\n\nLindsay Alissa King: Tell me about your own dance trajectory. How did you become interested in ballet as a child?\n\nAndrew Warth: My dance journey began at a very young age in the UK. My earliest childhood memories are of me dancing around my grandparents flat in Bayswater, London to my nan's ballet records. Although my father and I have found it difficult to verify exactly where and when, it seems my nan (his mum) was a professional ballet dancer at some point before the second world war, and ballet was definitely in my genes. At the age of ten I was awarded a full scholarship to study at the Legat School of Russian Ballet, in Tunbridge Wells, Kent. Although \"Legat\" was just an hours' drive from our home, I became a full boarder until I graduated at eighteen. My first professional engagement was in Germany with the Essener ballet, under the directorship of Heidrun Swaartz, and I trained with guest teachers such as David Howard and Sir Anton Dolin and choreographers Hans van Manen, Valery Panov and Patricia Neary from the Balanchine Trust. Heidrun was a former soloist with the Staatsballet Berlin and was one the very few female dancers, at the time, allowed to perform Maurice Bejart's Bolero. I would sit in the studio during lunch break watching her rehearse it over and over again. These were incredibly inspiring times.\n\nFour years later I joined the German Opera on the Rhein in Dusseldorf, under the directorship of Paolo Bortoluzzi (former Bejart principal). The company was a lot bigger than in Essen, and again we worked with incredible choreographers. After four years, I wanted a complete change of scenery.\n\nOne of my colleagues had just returned from a year's contract with the CAPAB Ballet Company (now Cape Town City Ballet), and I recalled a conversation I had some years earlier with South African dancer and Artistic Director of the London City Ballet, Harold King. The seed had been planted, and I wanted to explore. I auditioned via video and flew out in 1990.\n\nGreat changes were afoot when I arrived in South Africa, and if I am totally honest it was probably the thrill of the unknown that attracted me in the first place. The comfort of daily training whilst the whole country was in a state of unrest was weirdly intoxicating. I remember, on one occasion, an extremely enthusiastic crowd of political supporters stormed the building during one of our Carmen rehearsals. They carried banners, some even had weapons, and they chanted and danced for a good half hour. Their intentions were to make a point and not to harm anyone, but their anger was of course justified and real. We sat calmly on the floor, and when they moved on to the next building, we got up and carried on with rehearsal as if nothing had happened!\n\nLater that year I applied for permanent residency, and in 1994 I had the privilege of voting in the first free elections that saw the beginning of the new South Africa.\n\nI danced with the CAPAB Ballet Company under the direction of Veronica Paeper for a number of years, and in 1997 the company became a nonprofit organization with the name Cape Town City Ballet under the leadership of Elizabeth Triegaardt. Elizabeth was both executive director of the company and director of the University of Cape Town (UCT) Ballet School. It was through UCT that I trained as a teacher and acquired my Royal Academy of Dance (RAD) registered teacher status. By now I had retired as a dancer but was still employed with the Cape Town City Ballet within the management team. I taught the first-year UCT students their daily ballet classes, started my Ballet for Adults evening school and assisted Debbie Turner (now CEO of Cape Town City Ballet) with her then-new venture, the Cape Academy of Performing Arts (CAPA). It was during this time that I met Arlene Westergaard, the director of Zama Dance School, who would land up having a profound effect on my life.\n\nLAK: You are now the director of Zama Dance School, which was founded in 1984 by the visionary teacher and leader Arlene Westergaard. Arlene Westergaard appointed you the director of Zama Dance School before her death. How did that come about?\n\nAW: I began teaching at Zama Dance School in January 2008. I soon realised it was going to be an all-or-nothing situation and that juggling my various other teaching engagements would be a challenge. It was a tough first year. I had never taught children under the age of 13 until then and suddenly there I was, literally dropped in the deep end. As I focused more of my time on Zama, it became easier. Arlene encouraged me to get more involved in the day to day running of the school and I soon felt rooted in the Zama family. Towards the end of 2010, Arlene announced her retirement and asked me to take her place as head of the school. I knew these would-be big shoes to fill, and that I would need help. So, I approached former CAPAB Ballet Principal dancer Leanne Voysey and asked her to join me. Leanne and I had danced in the ballet company together in the 90's and we had both taught classes at UCT's evening ballet school. We had also worked on a number of 'high stress' projects together and I knew that I wanted her by my side and that she would be a huge asset to Zama. I must also mention Vuyokazi, the school's secretary. Thank goodness for Vuyo who worked alongside Arlene for many years. She is our longest serving employee and a valuable "
+        },
+        "executed": true,
+        "next_start": 6000,
+        "ok": true,
+        "previously_received": false
+      },
+      "round": 3,
+      "tool": "read",
+      "tool_call_id": "call_de2235e7710d4d6ea4f04cec",
+      "seq": 59,
+      "utc": "2026-09-14T10:13:42.779584+00:00",
+      "next_request": 4,
+      "next_input_receipt": true,
+      "action_commit": "NOT_A_SEPARATE_STRIDE_EVENT; action_result and round_end are recorded",
+      "receipt_not_required_after_terminal": false
+    },
+    {
+      "arguments": "{\"ref\": \"d12\", \"start\": 6000, \"length\": 4000}",
+      "executed": true,
+      "result": {
+        "action_slot_charged": true,
+        "evidence": {
+          "document": "d12",
+          "document_chars": 14677,
+          "end": 10000,
+          "kind": "raw_evidence",
+          "ref": "e2",
+          "sha256": "bb69d2de7606641b3d66566e3e558169c90ee3d9afa05e401e7170b34bd8ab70",
+          "snapshot": "d7b0c320e182566ae974c560f3636452277559a7ff8713a9c418680f71b1c0c3",
+          "start": 6000,
+          "text": "part of the team today.\n\nLAK: Zama Dance School was founded with the goal of empowering young children from South Africa townships to use ballet as a way to express themselves. Students and faculty have also explicitly addressed racism and anti-Blackness is ballet. Can you tell me about this legacy and how Zama Dance School views its current social and political role in South Africa?\n\nAW: Zama Dance School first opened its doors in 1984 when the school's founder, the late Arlene Westergaard, became aware of a lack of dance opportunities (specifically classical ballet) in the Black townships. The school started in a church hall with just six dancers, but after Arlene teamed up with Pick n Pay's Raymond Ackerman* five years later in 1989, a trust was established, and a purpose-designed studio was built in the heart of Gugulethu.\n\nToday Zama serves 100 students annually. Its vision to provide a safe learning space whilst introducing students to classical ballet and other dance forms remains the same. Students come to structured ballet classes three times a week and are equipped with dance togs and ballet shoes at the beginning of each year and receive a meal through our feeding scheme after each class.\n\nAlthough there are other dance schools in Cape Town that offer ballet to children in under-resourced communities such as ours, Zama Dance School is one of the few that operates within the neighborhood where its students actually live. This allows us to forge a close relationship with our immediate community. Our school exists to offer good ballet training and provide a safe venue where our children can spend their time after school, do homework and have a nutritious meal. Any social or political role is played incidentally.\n\n*Until 2010 Raymond Ackerman was the chairman of one of Africa's largest supermarket chains, Pick n Pay. Zama Dance School is funded largely by the Ackerman Family Foundation. Mr. Ackerman celebrates his 90th birthday this year and is the Chairman of the Zama Dance School Trust Board of Trustees.\n\nLAK: How do you convey some of these more abstract lessons—about body positivity, health, and self-expression—when you teach dance classes?\n\nAW: One of the best things about dance is that most boxes get ticked automatically. Multi-tasking, punctuality, cleanliness, teamwork, self-respect, body/brain fine tuning, appreciation of art, drama, and music. Just the opportunity to attend properly constructed ballet classes and to watch productions and take part in competitions teaches our students a plethora of valuable life skills\n\nLAK: How does Zama Dance School work to change perceptions of Black dancers and Black bodies in the ballet community as a whole? And how do you incorporate this important work into the everyday activities at the school?\n\nAW: Zama is a dance school, which, while concentrating on the Russian Ballet teaching method, also incorporates pointe work, tap, contemporary, body conditioning, and African fusion classes. Because we are involved in the Western Cape's dance community, both amateur and professional, our dancers are exposed to many artists from a range of backgrounds and cultures.\n\nThe school itself has never tried to make statements about Black bodies or dancers of color. The school's mission is to provide a safe space whilst instilling a sense of pride, confidence, and respect to our young South African citizens.\n\nLAK: How do the parents of your students engage with ballet? Do you often work directly with parents and other community members?\n\nAW: This is a good question. When Arlene started the school in the thick of apartheid, the entire mood of the country was dark and forcibly divided. Over the years most Zama parents have become steadily more involved and interested, which is fantastic for all of us. We have an annual watching day that is well attended and an end of year concert that is truly packed to the roof. Many of our parents have severe financial constraints and depend on Zama's lun"
+        },
+        "executed": true,
+        "next_start": 10000,
+        "ok": true,
+        "previously_received": false
+      },
+      "round": 4,
+      "tool": "read",
+      "tool_call_id": "call_e8ea7645f0864a9fa3f32f99",
+      "seq": 67,
+      "utc": "2026-09-14T10:13:46.185500+00:00",
+      "next_request": 5,
+      "next_input_receipt": true,
+      "action_commit": "NOT_A_SEPARATE_STRIDE_EVENT; action_result and round_end are recorded",
+      "receipt_not_required_after_terminal": false
+    },
+    {
+      "arguments": "{\"answer\": \"The article says the longest-serving employee at the school is Vuyokazi, who serves as the school's secretary.\", \"refs\": [\"e1\", \"e2\"]}",
+      "executed": true,
+      "result": {
+        "action_slot_charged": true,
+        "executed": true,
+        "ok": true,
+        "terminal": {
+          "answer": "The article says the longest-serving employee at the school is Vuyokazi, who serves as the school's secretary.",
+          "basis": [
+            {
+              "document": "d12",
+              "document_chars": 14677,
+              "end": 6000,
+              "kind": "raw_evidence",
+              "ref": "e1",
+              "sha256": "e15f900917c82c74eb0f451bed2dfcf3a995d06cd5fbfe5ab5afdc66615181aa",
+              "snapshot": "d7b0c320e182566ae974c560f3636452277559a7ff8713a9c418680f71b1c0c3",
+              "start": 0
+            },
+            {
+              "document": "d12",
+              "document_chars": 14677,
+              "end": 10000,
+              "kind": "raw_evidence",
+              "ref": "e2",
+              "sha256": "bb69d2de7606641b3d66566e3e558169c90ee3d9afa05e401e7170b34bd8ab70",
+              "snapshot": "d7b0c320e182566ae974c560f3636452277559a7ff8713a9c418680f71b1c0c3",
+              "start": 6000
+            }
+          ],
+          "elapsed_seconds": 19.778630099986913,
+          "outcome": "submitted",
+          "refs": [
+            "e1",
+            "e2"
+          ],
+          "semantic_status": "not_automatically_verified"
+        }
+      },
+      "round": 5,
+      "tool": "finish",
+      "tool_call_id": "call_6cd850aae194468fac93d2cf",
+      "seq": 74,
+      "utc": "2026-09-14T10:13:50.350607+00:00",
+      "next_request": null,
+      "next_input_receipt": false,
+      "action_commit": "NOT_A_SEPARATE_STRIDE_EVENT; action_result and round_end are recorded",
+      "receipt_not_required_after_terminal": true
+    }
+  ],
+  "queries": [
+    {
+      "cache_key": "17f3b0364cf11cdf3981508970667ba87d15044301205d87ccbc70cef34e26e4",
+      "cached": false,
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"township\" OR \"established\" OR \"1960s\" OR \"migrant\" OR \"workers\" OR \"streets\" OR \"renamed\" OR \"prefix\"",
+        "terms": [
+          "township",
+          "established",
+          "1960s",
+          "migrant",
+          "workers",
+          "streets",
+          "renamed",
+          "prefix"
+        ]
+      },
+      "equivalence_key": "9aa350f10b0a7e51db0a7f0745d9bad1a483b70792556e72a8151f1f77c0dd4a",
+      "query": "township established 1960s migrant workers streets renamed prefix",
+      "round": 1,
+      "top_k": 5,
+      "seq": 6,
+      "utc": "2026-09-14T10:13:33.035117+00:00",
+      "terms": [
+        "township",
+        "established",
+        "1960s",
+        "migrant",
+        "workers",
+        "streets",
+        "renamed",
+        "prefix"
+      ],
+      "expression": "\"township\" OR \"established\" OR \"1960s\" OR \"migrant\" OR \"workers\" OR \"streets\" OR \"renamed\" OR \"prefix\"",
+      "result_docs": [
+        {
+          "docid": "47881",
+          "score": 27.673837272196685,
+          "snippet": " ... Chicago's numbered street system was established in 1911 by legislation that made Madison Street the base for the numbering of east–west streets, and State Street for north–south streets.\n\nCleveland\n\nAs a general rule, the only numbered streets in Cleveland run generally north–south, while streets ... ",
+          "title": "https://en.wikipedia.org/wiki/Numbered_street"
+        },
+        {
+          "docid": "94939",
+          "score": 26.09987756097119,
+          "snippet": " ... A brief history\n\nGugulethu, or \"Gugs\" as it is popularly known, is a township/suburb about 15 kilometres outside the city centre of Cape Town. It was first established as a settlement for African migrant workers by the Cape Town City Council in 1958. The name \"Gugulethu\" is ... ",
+          "title": "https://www.capetownmuseum.org.za/places/gugulethu"
+        },
+        {
+          "docid": "68205",
+          "score": 25.54405899034142,
+          "snippet": " ... who managed the townships.\n\nFurther popular resistance: incorporation into the City\n\nIn Soweto, popular resistance to apartheid emerged in various forms during the 1980s. Educational and economic boycotts were initiated, and student bodies were organized. Street committees were formed, and civic organizations were established as alternatives to state ... ",
+          "title": "https://en.wikipedia.org/wiki/Soweto"
+        },
+        {
+          "docid": "94800",
+          "score": 25.498918954740322,
+          "snippet": " ... Buildings with many small rooms, each with narrow single beds or bunks, crowded with male migrant labourers – these were the workers' hostels in Lwandle township, Cape Town. The last preserved one – Hostel 33 in Khayalethu Street – is attached to the Lwandle Migrant Labour Museum. The buildings present a ... ",
+          "title": "https://groundup.org.za/article/cape-towns-only-township-based-museum/"
+        },
+        {
+          "docid": "31580",
+          "score": 23.446593002748042,
+          "snippet": " ... 1912 - Native National Congress founded, later renamed the African National Congress (ANC).\n\n1913 - Land Act introduced to prevent blacks, except those living in Cape Province, from buying land outside reserves.\n\n1914 - National Party founded.\n\n1918 - Secret Broederbond (brotherhood) established to advance the Afrikaner cause.\n\n1919 - South West Africa ... ",
+          "title": "https://www.bbc.com/news/world-africa-14094918"
+        }
+      ],
+      "returned_dN": [
+        "d1",
+        "d2",
+        "d3",
+        "d4",
+        "d5"
+      ],
+      "returned_docids": [
+        "47881",
+        "94939",
+        "68205",
+        "94800",
+        "31580"
+      ]
+    },
+    {
+      "cache_key": "bd5553d97cb13dd24e8465cb3307db86d977fd77f1167923fd2d99b172fdc1ee",
+      "cached": false,
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"township\" OR \"1960s\" OR \"migrant\" OR \"workers\" OR \"street\" OR \"names\" OR \"prefix\" OR \"renamed\" OR \"late\" OR \"2010s\"",
+        "terms": [
+          "township",
+          "1960s",
+          "migrant",
+          "workers",
+          "street",
+          "names",
+          "prefix",
+          "renamed",
+          "late",
+          "2010s"
+        ]
+      },
+      "equivalence_key": "8412ca3b888cf240a27b920291973efdf18f8aba1d87f8551381369b9c40d716",
+      "query": "township 1960s migrant workers street names prefix renamed late 2010s",
+      "round": 1,
+      "top_k": 5,
+      "seq": 14,
+      "utc": "2026-09-14T10:13:33.576615+00:00",
+      "terms": [
+        "township",
+        "1960s",
+        "migrant",
+        "workers",
+        "street",
+        "names",
+        "prefix",
+        "renamed",
+        "late",
+        "2010s"
+      ],
+      "expression": "\"township\" OR \"1960s\" OR \"migrant\" OR \"workers\" OR \"street\" OR \"names\" OR \"prefix\" OR \"renamed\" OR \"late\" OR \"2010s\"",
+      "result_docs": [
+        {
+          "docid": "47881",
+          "score": 27.48416991309928,
+          "snippet": " ... In the early 20th century, many of Chestnut Hill's previously numbered streets were renamed for Native American tribes.\n\nPhoenix\n\nIn Phoenix, Arizona, the north-south streets used a numbered system, with the center street being Central Avenue. Streets west of Central Avenue are named \"avenue\", thus, for ... ",
+          "title": "https://en.wikipedia.org/wiki/Numbered_street"
+        },
+        {
+          "docid": "94939",
+          "score": 26.75502155713442,
+          "snippet": " ... A brief history\n\nGugulethu, or \"Gugs\" as it is popularly known, is a township/suburb about 15 kilometres outside the city centre of Cape Town. It was first established as a settlement for African migrant workers by the Cape Town City Council in 1958. The name \"Gugulethu\" is ... ",
+          "title": "https://www.capetownmuseum.org.za/places/gugulethu"
+        },
+        {
+          "docid": "31580",
+          "score": 25.518914213657172,
+          "snippet": " ... 2009 July - Township residents complaining about poor living conditions mount violent protests.\n\n2010 June - South Africa hosts the World Cup football tournament.\n\n2010 August - Civil servants stage nation-wide strike.\n\n2011 May - Local elections, with opposition Democratic Alliance nearly doubling its share of the vote since the last ... ",
+          "title": "https://www.bbc.com/news/world-africa-14094918"
+        },
+        {
+          "docid": "94800",
+          "score": 25.498918954740322,
+          "snippet": " ... Buildings with many small rooms, each with narrow single beds or bunks, crowded with male migrant labourers – these were the workers' hostels in Lwandle township, Cape Town. The last preserved one – Hostel 33 in Khayalethu Street – is attached to the Lwandle Migrant Labour Museum. The buildings present a ... ",
+          "title": "https://groundup.org.za/article/cape-towns-only-township-based-museum/"
+        },
+        {
+          "docid": "68205",
+          "score": 25.15440073585692,
+          "snippet": " ... Postal code (street)\npostal_code: 1808\npostal2_code_type: PO box\narea_code_type: Area code\narea_code: 011\n\nSoweto () is a township of the City of Johannesburg Metropolitan Municipality in Gauteng, South Africa, bordering the city's mining belt in the south. Its name is an English ... ",
+          "title": "https://en.wikipedia.org/wiki/Soweto"
+        }
+      ],
+      "returned_dN": [
+        "d1",
+        "d2",
+        "d5",
+        "d4",
+        "d3"
+      ],
+      "returned_docids": [
+        "47881",
+        "94939",
+        "31580",
+        "94800",
+        "68205"
+      ]
+    },
+    {
+      "cache_key": "904a92fc6c8de9de5bac42330db56b04bc90a282117122af2fc110429d8f8597",
+      "cached": false,
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"butchery\" OR \"restaurant\" OR \"township\" OR \"heart\" OR \"early\" OR \"2000s\" OR \"popular\"",
+        "terms": [
+          "butchery",
+          "restaurant",
+          "township",
+          "heart",
+          "early",
+          "2000s",
+          "popular"
+        ]
+      },
+      "equivalence_key": "40348e01c78244b0a7069086b208ef3e2213d1909ebab8087af28917f5f02c4d",
+      "query": "butchery restaurant township heart early 2000s popular",
+      "round": 1,
+      "top_k": 5,
+      "seq": 17,
+      "utc": "2026-09-14T10:13:34.196193+00:00",
+      "terms": [
+        "butchery",
+        "restaurant",
+        "township",
+        "heart",
+        "early",
+        "2000s",
+        "popular"
+      ],
+      "expression": "\"butchery\" OR \"restaurant\" OR \"township\" OR \"heart\" OR \"early\" OR \"2000s\" OR \"popular\"",
+      "result_docs": [
+        {
+          "docid": "92455",
+          "score": 30.412752543992443,
+          "snippet": " ... the \"Pride\" of Gugulethu\n\nMzoli's Place, also known simply as Mzoli's, is a butchery-come-restaurant. Situated in the heart of Gugulethu, a Cape Town township whose name means \"Our Pride\", Mzoli's is one of the most popular hangouts in the Mother City.\n\nThe establishment ... ",
+          "title": "https://groundup.org.za/article/mzolis-pride-gugulethu_1056/"
+        },
+        {
+          "docid": "94939",
+          "score": 21.779642061523106,
+          "snippet": " ... He founded Mzoli's Place and Butchery which in 2003 started as a butcher shop operating from a garage. Mzoli's restaurant became a major attraction for both Capetonians and international visitors alike until May 2021 when it closed down.\n\nNotable events\n\nIn 1976, three of Gugulethu's ... ",
+          "title": "https://www.capetownmuseum.org.za/places/gugulethu"
+        },
+        {
+          "docid": "68205",
+          "score": 18.34303358383103,
+          "snippet": " ... Popular resistance to state structures dates back to the Advisory Boards (1950) that co-opted black residents to advise whites who managed the townships.\n\nFurther popular resistance: incorporation into the City\n\nIn Soweto, popular resistance to apartheid emerged in various forms during the 1980s. Educational and economic boycotts ... ",
+          "title": "https://en.wikipedia.org/wiki/Soweto"
+        },
+        {
+          "docid": "19529",
+          "score": 17.205940093164227,
+          "snippet": " ... He found his home here in New Jersey working with the highly regarded Harvest Restaurant Group and now Landmark Hospitality. Chef Brunina is driven by his excitement for showcasing whole animal butchery, learning new techniques, and finding the best ingredients New Jersey has to offer. He has been ... ",
+          "title": "https://njwinefoodfest.com/chefs/"
+        },
+        {
+          "docid": "66256",
+          "score": 16.882811333632425,
+          "snippet": " ... Boston Market was purchased by McDonald's Corporation in May 2000, primarily for its real estate holdings. McDonald's found the brand serviceable, and continued to operate and expand Boston Market.\n\nIn the early 2000s, Boston Market operated two locations in Toronto, Ontario. In early 2002, Boston Market ... ",
+          "title": "https://en.wikipedia.org/wiki/Boston_Market"
+        }
+      ],
+      "returned_dN": [
+        "d6",
+        "d2",
+        "d3",
+        "d7",
+        "d8"
+      ],
+      "returned_docids": [
+        "92455",
+        "94939",
+        "68205",
+        "19529",
+        "66256"
+      ]
+    },
+    {
+      "cache_key": "9f297dbf307ae059f77b954821d36cf2ec73bd9b685979aaa66abb47225caf1a",
+      "cached": false,
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"gugulethu\" OR \"school\" OR \"established\" OR \"1980s\" OR \"started\" OR \"in\" OR \"church\"",
+        "terms": [
+          "gugulethu",
+          "school",
+          "established",
+          "1980s",
+          "started",
+          "in",
+          "church"
+        ]
+      },
+      "equivalence_key": "b205f480de4e57e060fb1a8e4ee0c4a6eae22f9270bf336cc61409347b78d30e",
+      "query": "Gugulethu school established 1980s started in church",
+      "round": 2,
+      "top_k": 5,
+      "seq": 31,
+      "utc": "2026-09-14T10:13:37.646621+00:00",
+      "terms": [
+        "gugulethu",
+        "school",
+        "established",
+        "1980s",
+        "started",
+        "in",
+        "church"
+      ],
+      "expression": "\"gugulethu\" OR \"school\" OR \"established\" OR \"1980s\" OR \"started\" OR \"in\" OR \"church\"",
+      "result_docs": [
+        {
+          "docid": "94939",
+          "score": 20.283105862062794,
+          "snippet": " ... and Butchery which in 2003 started as a butcher shop operating from a garage. Mzoli's restaurant became a major attraction for both Capetonians and international visitors alike until May 2021 when it closed down.\n\nNotable events\n\nIn 1976, three of Gugulethu's high schools - ID Mkize, Fezeka ... ",
+          "title": "https://www.capetownmuseum.org.za/places/gugulethu"
+        },
+        {
+          "docid": "14901",
+          "score": 20.123072822057793,
+          "snippet": " ... Importantly the Scholarchs (Committee to oversee education) is established. 3 church ministers and 1 civil servant make up the committee and control education in the Colony. The duties of teachers are spelled out and regulations regarding school organization are laid down. These measures represent the first steps towards ... ",
+          "title": "https://www.sahistory.org.za/article/history-education-1658-present"
+        },
+        {
+          "docid": "62418",
+          "score": 19.351526861651436,
+          "snippet": " ... 2013-11-08\n---\nGugulethu Township is located on the Cape Flats and situated 18km south-east of Cape Town in the Western Cape Province. The name is Xhosa for 'our pride'. The township was established in 1958 and was originally named Nyanga West. Roads, sewers, water and drainage ... ",
+          "title": "https://sahistory.org.za/place/gugulethu-township"
+        },
+        {
+          "docid": "25898",
+          "score": 19.308173309042658,
+          "snippet": " ... 20) A member of the local church arranged for her to live with two African nuns in a local village, Tickeyline. She later established a home for herself in Lenyenye Township in Tzaneen, although she remained under police surveillance.\n\nDuring her stay in Tzaneen, Ramphele established the Isutheng ... ",
+          "title": "https://www.sowetanlive.co.za/news/2014-05-06-things-you-may-not-know-about-mamphela-ramphele-/"
+        },
+        {
+          "docid": "92455",
+          "score": 19.285228419457244,
+          "snippet": " ... Gugulethu, a Cape Town township whose name means \"Our Pride\", Mzoli's is one of the most popular hangouts in the Mother City.\n\nThe establishment was founded in 2003 by Mzoli Ngcawuzele, who owns the place. The Development Bank of South Africa gave Ngcawuzele funding to start the ... ",
+          "title": "https://groundup.org.za/article/mzolis-pride-gugulethu_1056/"
+        }
+      ],
+      "returned_dN": [
+        "d2",
+        "d9",
+        "d10",
+        "d11",
+        "d6"
+      ],
+      "returned_docids": [
+        "94939",
+        "14901",
+        "62418",
+        "25898",
+        "92455"
+      ]
+    },
+    {
+      "cache_key": "2ffca44e6b2da980b133bc175985d658cd4b89b62e4238793dc2bdcfdf602b8b",
+      "cached": false,
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"gugulethu\" OR \"school\" OR \"1980s\" OR \"church\" OR \"longest\" OR \"serving\" OR \"employee\"",
+        "terms": [
+          "gugulethu",
+          "school",
+          "1980s",
+          "church",
+          "longest",
+          "serving",
+          "employee"
+        ]
+      },
+      "equivalence_key": "06d9c17930d69ddc8f714303aa8c7fea21a60e23b0a690a6ed00fb8886dbcb6e",
+      "query": "Gugulethu school 1980s church longest serving employee",
+      "round": 2,
+      "top_k": 5,
+      "seq": 37,
+      "utc": "2026-09-14T10:13:39.070517+00:00",
+      "terms": [
+        "gugulethu",
+        "school",
+        "1980s",
+        "church",
+        "longest",
+        "serving",
+        "employee"
+      ],
+      "expression": "\"gugulethu\" OR \"school\" OR \"1980s\" OR \"church\" OR \"longest\" OR \"serving\" OR \"employee\"",
+      "result_docs": [
+        {
+          "docid": "93372",
+          "score": 24.00607138620083,
+          "snippet": " ... I must also mention Vuyokazi, the school's secretary. Thank goodness for Vuyo who worked alongside Arlene for many years. She is our longest serving employee and a valuable part of the team today.\n\nLAK: Zama Dance School was founded with the goal of empowering young children from ... ",
+          "title": "https://balletrising.com/2021/03/03/zama-dance-school/"
+        },
+        {
+          "docid": "94939",
+          "score": 19.87140860860554,
+          "snippet": " ... This serves as a vivid reminder of the remaining consequences of historical inequality and intergenerational poverty which are the lived realities of many South Africans.\n\nReclaiming Gugulethu\n\nIn recent years, Gugulethu has seen various developments including a boom in community tourism, entrepreneurship, a mall, and many successful community ... ",
+          "title": "https://www.capetownmuseum.org.za/places/gugulethu"
+        },
+        {
+          "docid": "14901",
+          "score": 19.552079241711702,
+          "snippet": " ... Free schools are originally intended to be multiracial, but soon they begin to provide for white children only. Church Schools become almost exclusivley coloured to complement the Free Schools.\n\n- 1823\n\n- The first school in the Orange Free State opens.\n\n- 1824\n\n- The famous mission station, Lovedale, is founded by ... ",
+          "title": "https://www.sahistory.org.za/article/history-education-1658-present"
+        },
+        {
+          "docid": "11848",
+          "score": 18.229513277018572,
+          "snippet": " ... The emblem was picked from a series of creations by learners from schools around Gugulethu.\n\n\"We visited schools and local structures to get buy-in,\" Dr Mzwandile Plaatjie, the brains behind the initiative, said. \"We spoke to the officials of the department of education (Western Cape Education Department ... ",
+          "title": "https://cityvision.co.za/history-in-the-making-as-gugulethu-poised-to-unveil-new-emblem-to-mark-heritage-day-20220915/"
+        },
+        {
+          "docid": "62418",
+          "score": 18.025929657143283,
+          "snippet": " ... History of Gugulethu\n\nGugulethu is also known for the incident involving the 'Gugulethu seven'. Seven young men who were members of uMkhonto weSizwe (MK), the armed wing of the African National Congress (ANC), were ambushed and killed by the South African security forces on the morning of March ... ",
+          "title": "https://sahistory.org.za/place/gugulethu-township"
+        }
+      ],
+      "returned_dN": [
+        "d12",
+        "d2",
+        "d9",
+        "d13",
+        "d10"
+      ],
+      "returned_docids": [
+        "93372",
+        "94939",
+        "14901",
+        "11848",
+        "62418"
+      ]
+    },
+    {
+      "cache_key": "a676d9579db5bca3d73e992c78d8d403e52c8f2afdb68ba48ebebce7c02c1a8e",
+      "cached": false,
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"gugulethu\" OR \"township\" OR \"school\" OR \"started\" OR \"church\" OR \"1980s\" OR \"article\"",
+        "terms": [
+          "gugulethu",
+          "township",
+          "school",
+          "started",
+          "church",
+          "1980s",
+          "article"
+        ]
+      },
+      "equivalence_key": "af3456c88467088450fe2e85f834989f339cfdf9ff6a56a961d928b8732539dd",
+      "query": "Gugulethu township school started church 1980s article",
+      "round": 2,
+      "top_k": 5,
+      "seq": 42,
+      "utc": "2026-09-14T10:13:39.539214+00:00",
+      "terms": [
+        "gugulethu",
+        "township",
+        "school",
+        "started",
+        "church",
+        "1980s",
+        "article"
+      ],
+      "expression": "\"gugulethu\" OR \"township\" OR \"school\" OR \"started\" OR \"church\" OR \"1980s\" OR \"article\"",
+      "result_docs": [
+        {
+          "docid": "94939",
+          "score": 28.422654465462283,
+          "snippet": " ... The players, along with their coach and maths teacher, Xolile Madikane, are a source of pride in the Gugulethu community. Some of the movie's scenes were shot on the school grounds.\n\nSources\n\nNewspaper Articles\n\nDano, Zodidi (2018) \"Gugulethu Turns 60\". Cape Argus. 18 December.\n\nUnknown (2010) \"City ... ",
+          "title": "https://www.capetownmuseum.org.za/places/gugulethu"
+        },
+        {
+          "docid": "92455",
+          "score": 28.048863986127625,
+          "snippet": " ... Gugulethu Primary School invigorates classroom learning\n\nThis article is licensed under a Creative Commons Attribution-NoDerivatives 4.0 International License.",
+          "title": "https://groundup.org.za/article/mzolis-pride-gugulethu_1056/"
+        },
+        {
+          "docid": "14901",
+          "score": 27.022407675003887,
+          "snippet": " ... by fire and at least five other schools are set alight.\n\n- 11 August, Black pupils from Langa, Gugulethu and Nyanga in Cape Town hold marches in solidarity with the Soweto students. The Langa students march with placards through their township streets accompanied by their teachers who try to ... ",
+          "title": "https://www.sahistory.org.za/article/history-education-1658-present"
+        },
+        {
+          "docid": "62418",
+          "score": 26.837990219566947,
+          "snippet": " ... Gugulethu Township\ndate: 2013-11-08\n---\nGugulethu Township is located on the Cape Flats and situated 18km south-east of Cape Town in the Western Cape Province. The name is Xhosa for 'our pride'. The township was established in 1958 and was originally named Nyanga West. Roads, sewers ... ",
+          "title": "https://sahistory.org.za/place/gugulethu-township"
+        },
+        {
+          "docid": "11848",
+          "score": 26.583785469463102,
+          "snippet": " ... township in the Western Cape, will be widely used as a branding tool for the area and will most likely sit alongside City and Western Cape government logos for events in Gugulethu. The emblem will also be engraved at the \"strategic entry places of Gugulethu\", local schools, the ... ",
+          "title": "https://cityvision.co.za/history-in-the-making-as-gugulethu-poised-to-unveil-new-emblem-to-mark-heritage-day-20220915/"
+        }
+      ],
+      "returned_dN": [
+        "d2",
+        "d6",
+        "d9",
+        "d10",
+        "d13"
+      ],
+      "returned_docids": [
+        "94939",
+        "92455",
+        "14901",
+        "62418",
+        "11848"
+      ]
+    }
+  ],
+  "evidence": [
+    {
+      "ref": "e1",
+      "document": "d12",
+      "snapshot": "d7b0c320e182566ae974c560f3636452277559a7ff8713a9c418680f71b1c0c3",
+      "start": 0,
+      "end": 6000,
+      "document_chars": 14677,
+      "text": "---\ntitle: Ballet Rising\nauthor: Hendrick January\ndate: 2021-03-03\n---\nZama Dance School was founded in 1984 in Gugulethu, a township in South Africa, with the goal of using ballet to build confidence among young children in South Africa living under apartheid. Ballet Rising's contributor Lindsay Alissa King recently interviewed Zama Dance School's director Andrew Warth about what the school and its students are up to today. Stay tuned because in a few days, we'll publish some testimonials from Zama Dance School's students.\n\nThis interview has been edited and condensed for clarity.\n\nLindsay Alissa King: Tell me about your own dance trajectory. How did you become interested in ballet as a child?\n\nAndrew Warth: My dance journey began at a very young age in the UK. My earliest childhood memories are of me dancing around my grandparents flat in Bayswater, London to my nan's ballet records. Although my father and I have found it difficult to verify exactly where and when, it seems my nan (his mum) was a professional ballet dancer at some point before the second world war, and ballet was definitely in my genes. At the age of ten I was awarded a full scholarship to study at the Legat School of Russian Ballet, in Tunbridge Wells, Kent. Although \"Legat\" was just an hours' drive from our home, I became a full boarder until I graduated at eighteen. My first professional engagement was in Germany with the Essener ballet, under the directorship of Heidrun Swaartz, and I trained with guest teachers such as David Howard and Sir Anton Dolin and choreographers Hans van Manen, Valery Panov and Patricia Neary from the Balanchine Trust. Heidrun was a former soloist with the Staatsballet Berlin and was one the very few female dancers, at the time, allowed to perform Maurice Bejart's Bolero. I would sit in the studio during lunch break watching her rehearse it over and over again. These were incredibly inspiring times.\n\nFour years later I joined the German Opera on the Rhein in Dusseldorf, under the directorship of Paolo Bortoluzzi (former Bejart principal). The company was a lot bigger than in Essen, and again we worked with incredible choreographers. After four years, I wanted a complete change of scenery.\n\nOne of my colleagues had just returned from a year's contract with the CAPAB Ballet Company (now Cape Town City Ballet), and I recalled a conversation I had some years earlier with South African dancer and Artistic Director of the London City Ballet, Harold King. The seed had been planted, and I wanted to explore. I auditioned via video and flew out in 1990.\n\nGreat changes were afoot when I arrived in South Africa, and if I am totally honest it was probably the thrill of the unknown that attracted me in the first place. The comfort of daily training whilst the whole country was in a state of unrest was weirdly intoxicating. I remember, on one occasion, an extremely enthusiastic crowd of political supporters stormed the building during one of our Carmen rehearsals. They carried banners, some even had weapons, and they chanted and danced for a good half hour. Their intentions were to make a point and not to harm anyone, but their anger was of course justified and real. We sat calmly on the floor, and when they moved on to the next building, we got up and carried on with rehearsal as if nothing had happened!\n\nLater that year I applied for permanent residency, and in 1994 I had the privilege of voting in the first free elections that saw the beginning of the new South Africa.\n\nI danced with the CAPAB Ballet Company under the direction of Veronica Paeper for a number of years, and in 1997 the company became a nonprofit organization with the name Cape Town City Ballet under the leadership of Elizabeth Triegaardt. Elizabeth was both executive director of the company and director of the University of Cape Town (UCT) Ballet School. It was through UCT that I trained as a teacher and acquired my Royal Academy of Dance (RAD) registered teacher status. By now I had retired as a dancer but was still employed with the Cape Town City Ballet within the management team. I taught the first-year UCT students their daily ballet classes, started my Ballet for Adults evening school and assisted Debbie Turner (now CEO of Cape Town City Ballet) with her then-new venture, the Cape Academy of Performing Arts (CAPA). It was during this time that I met Arlene Westergaard, the director of Zama Dance School, who would land up having a profound effect on my life.\n\nLAK: You are now the director of Zama Dance School, which was founded in 1984 by the visionary teacher and leader Arlene Westergaard. Arlene Westergaard appointed you the director of Zama Dance School before her death. How did that come about?\n\nAW: I began teaching at Zama Dance School in January 2008. I soon realised it was going to be an all-or-nothing situation and that juggling my various other teaching engagements would be a challenge. It was a tough first year. I had never taught children under the age of 13 until then and suddenly there I was, literally dropped in the deep end. As I focused more of my time on Zama, it became easier. Arlene encouraged me to get more involved in the day to day running of the school and I soon felt rooted in the Zama family. Towards the end of 2010, Arlene announced her retirement and asked me to take her place as head of the school. I knew these would-be big shoes to fill, and that I would need help. So, I approached former CAPAB Ballet Principal dancer Leanne Voysey and asked her to join me. Leanne and I had danced in the ballet company together in the 90's and we had both taught classes at UCT's evening ballet school. We had also worked on a number of 'high stress' projects together and I knew that I wanted her by my side and that she would be a huge asset to Zama. I must also mention Vuyokazi, the school's secretary. Thank goodness for Vuyo who worked alongside Arlene for many years. She is our longest serving employee and a valuable ",
+      "sha256": "e15f900917c82c74eb0f451bed2dfcf3a995d06cd5fbfe5ab5afdc66615181aa",
+      "kind": "raw_evidence",
+      "created_utc": "2026-09-14T10:13:42.774932+00:00",
+      "backend_snapshot_utc": "2026-09-14T10:13:42.773297+00:00",
+      "first_request": 4,
+      "first_ack_round": 4,
+      "first_ack_utc": "2026-09-14T10:13:46.178000+00:00",
+      "visible_rounds": [
+        4,
+        5
+      ],
+      "shelf_restored_rounds": [],
+      "final_cited": true
+    },
+    {
+      "ref": "e2",
+      "document": "d12",
+      "snapshot": "d7b0c320e182566ae974c560f3636452277559a7ff8713a9c418680f71b1c0c3",
+      "start": 6000,
+      "end": 10000,
+      "document_chars": 14677,
+      "text": "part of the team today.\n\nLAK: Zama Dance School was founded with the goal of empowering young children from South Africa townships to use ballet as a way to express themselves. Students and faculty have also explicitly addressed racism and anti-Blackness is ballet. Can you tell me about this legacy and how Zama Dance School views its current social and political role in South Africa?\n\nAW: Zama Dance School first opened its doors in 1984 when the school's founder, the late Arlene Westergaard, became aware of a lack of dance opportunities (specifically classical ballet) in the Black townships. The school started in a church hall with just six dancers, but after Arlene teamed up with Pick n Pay's Raymond Ackerman* five years later in 1989, a trust was established, and a purpose-designed studio was built in the heart of Gugulethu.\n\nToday Zama serves 100 students annually. Its vision to provide a safe learning space whilst introducing students to classical ballet and other dance forms remains the same. Students come to structured ballet classes three times a week and are equipped with dance togs and ballet shoes at the beginning of each year and receive a meal through our feeding scheme after each class.\n\nAlthough there are other dance schools in Cape Town that offer ballet to children in under-resourced communities such as ours, Zama Dance School is one of the few that operates within the neighborhood where its students actually live. This allows us to forge a close relationship with our immediate community. Our school exists to offer good ballet training and provide a safe venue where our children can spend their time after school, do homework and have a nutritious meal. Any social or political role is played incidentally.\n\n*Until 2010 Raymond Ackerman was the chairman of one of Africa's largest supermarket chains, Pick n Pay. Zama Dance School is funded largely by the Ackerman Family Foundation. Mr. Ackerman celebrates his 90th birthday this year and is the Chairman of the Zama Dance School Trust Board of Trustees.\n\nLAK: How do you convey some of these more abstract lessons—about body positivity, health, and self-expression—when you teach dance classes?\n\nAW: One of the best things about dance is that most boxes get ticked automatically. Multi-tasking, punctuality, cleanliness, teamwork, self-respect, body/brain fine tuning, appreciation of art, drama, and music. Just the opportunity to attend properly constructed ballet classes and to watch productions and take part in competitions teaches our students a plethora of valuable life skills\n\nLAK: How does Zama Dance School work to change perceptions of Black dancers and Black bodies in the ballet community as a whole? And how do you incorporate this important work into the everyday activities at the school?\n\nAW: Zama is a dance school, which, while concentrating on the Russian Ballet teaching method, also incorporates pointe work, tap, contemporary, body conditioning, and African fusion classes. Because we are involved in the Western Cape's dance community, both amateur and professional, our dancers are exposed to many artists from a range of backgrounds and cultures.\n\nThe school itself has never tried to make statements about Black bodies or dancers of color. The school's mission is to provide a safe space whilst instilling a sense of pride, confidence, and respect to our young South African citizens.\n\nLAK: How do the parents of your students engage with ballet? Do you often work directly with parents and other community members?\n\nAW: This is a good question. When Arlene started the school in the thick of apartheid, the entire mood of the country was dark and forcibly divided. Over the years most Zama parents have become steadily more involved and interested, which is fantastic for all of us. We have an annual watching day that is well attended and an end of year concert that is truly packed to the roof. Many of our parents have severe financial constraints and depend on Zama's lun",
+      "sha256": "bb69d2de7606641b3d66566e3e558169c90ee3d9afa05e401e7170b34bd8ab70",
+      "kind": "raw_evidence",
+      "created_utc": "2026-09-14T10:13:46.179835+00:00",
+      "backend_snapshot_utc": "2026-09-14T10:13:42.773297+00:00",
+      "first_request": 5,
+      "first_ack_round": 5,
+      "first_ack_utc": "2026-09-14T10:13:50.346667+00:00",
+      "visible_rounds": [
+        5
+      ],
+      "shelf_restored_rounds": [],
+      "final_cited": true
+    }
+  ],
+  "http": [
+    {
+      "sequence": 1,
+      "utc_start": "2026-09-14T10:13:30.613056+00:00",
+      "http_status": 200,
+      "requested_model": "EB-GLM-5.2",
+      "returned_model": "glm-5.2",
+      "finish_reason": "tool_calls",
+      "usage": {
+        "prompt_tokens": 1895,
+        "completion_tokens": 95,
+        "reasoning_tokens": 0,
+        "total_tokens": 1990,
+        "cached_tokens": 0,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "prompt_cost": 0.0,
+        "completion_cost": 0.0,
+        "cache_cost": 0.0
+      },
+      "input_tokens": 1895,
+      "output_tokens": 95,
+      "cache_read_tokens": 0,
+      "cache_write_tokens": null,
+      "request_bytes": 7552,
+      "response_bytes": 978,
+      "request_body_sha256": "87835cf7dcc5bd64d0de0244a2cd214d94265f95499a58661901d26b6f8db350",
+      "sanitized_response": false,
+      "ledger_id": 191,
+      "utc_end": "2026-09-14T10:13:33.007329+00:00",
+      "latency_seconds": 2.3787417000276037,
+      "response_representation": "original response body bytes",
+      "saved_response_body_sha256": "3bf1be4b9144f7bfb1f48245e86a9ecded2ad72994b93008752b64867ba8409a"
+    },
+    {
+      "sequence": 2,
+      "utc_start": "2026-09-14T10:13:34.780180+00:00",
+      "http_status": 200,
+      "requested_model": "EB-GLM-5.2",
+      "returned_model": "glm-5.2",
+      "finish_reason": "tool_calls",
+      "usage": {
+        "prompt_tokens": 3740,
+        "completion_tokens": 138,
+        "reasoning_tokens": 0,
+        "total_tokens": 3878,
+        "cached_tokens": 1408,
+        "prompt_tokens_details": {
+          "cached_tokens": 1408
+        },
+        "prompt_cost": 0.0,
+        "completion_cost": 0.0,
+        "cache_cost": 0.0
+      },
+      "input_tokens": 3740,
+      "output_tokens": 138,
+      "cache_read_tokens": 1408,
+      "cache_write_tokens": null,
+      "request_bytes": 15928,
+      "response_bytes": 1073,
+      "request_body_sha256": "109f0a6efa43bee1fb27e308064408bb39e7e3fb05ef16fbd22d94dde6e0d2cc",
+      "sanitized_response": false,
+      "ledger_id": 192,
+      "utc_end": "2026-09-14T10:13:37.617252+00:00",
+      "latency_seconds": 2.820904899999732,
+      "response_representation": "original response body bytes",
+      "saved_response_body_sha256": "4eb8580db6eb300b307e134f2299f7cbc09358f6325150414bfd6fdf0151f67f"
+    },
+    {
+      "sequence": 3,
+      "utc_start": "2026-09-14T10:13:40.040254+00:00",
+      "http_status": 200,
+      "requested_model": "EB-GLM-5.2",
+      "returned_model": "glm-5.2",
+      "finish_reason": "tool_calls",
+      "usage": {
+        "prompt_tokens": 5929,
+        "completion_tokens": 87,
+        "reasoning_tokens": 0,
+        "total_tokens": 6016,
+        "cached_tokens": 3328,
+        "prompt_tokens_details": {
+          "cached_tokens": 3328
+        },
+        "prompt_cost": 0.0,
+        "completion_cost": 0.0,
+        "cache_cost": 0.0
+      },
+      "input_tokens": 5929,
+      "output_tokens": 87,
+      "cache_read_tokens": 3328,
+      "cache_write_tokens": null,
+      "request_bytes": 25143,
+      "response_bytes": 878,
+      "request_body_sha256": "619ff98e427174b64fc9c54509dba9237627c1aff9ff1666da7c91c4c4d1afbb",
+      "sanitized_response": false,
+      "ledger_id": 193,
+      "utc_end": "2026-09-14T10:13:42.741103+00:00",
+      "latency_seconds": 2.68514930002857,
+      "response_representation": "original response body bytes",
+      "saved_response_body_sha256": "91e67d256864e0e72b2642150cd0d20a49eaa235c0fe958c521c84dcdcc897b9"
+    },
+    {
+      "sequence": 4,
+      "utc_start": "2026-09-14T10:13:42.800017+00:00",
+      "http_status": 200,
+      "requested_model": "EB-GLM-5.2",
+      "returned_model": "glm-5.2",
+      "finish_reason": "tool_calls",
+      "usage": {
+        "prompt_tokens": 7693,
+        "completion_tokens": 104,
+        "reasoning_tokens": 0,
+        "total_tokens": 7797,
+        "cached_tokens": 5376,
+        "prompt_tokens_details": {
+          "cached_tokens": 5376
+        },
+        "prompt_cost": 0.0,
+        "completion_cost": 0.0,
+        "cache_cost": 0.0
+      },
+      "input_tokens": 7693,
+      "output_tokens": 104,
+      "cache_read_tokens": 5376,
+      "cache_write_tokens": null,
+      "request_bytes": 32790,
+      "response_bytes": 929,
+      "request_body_sha256": "1dc919c2fb3d58822d93594824ebb7741cf8f7367bf8d930015772a51a694055",
+      "sanitized_response": false,
+      "ledger_id": 194,
+      "utc_end": "2026-09-14T10:13:46.154945+00:00",
+      "latency_seconds": 3.339644199993927,
+      "response_representation": "original response body bytes",
+      "saved_response_body_sha256": "9b0368ca9047d68f579b3cc6da7d9945c1fa94ee1fb85e64a51cf82ae575fca4"
+    },
+    {
+      "sequence": 5,
+      "utc_start": "2026-09-14T10:13:46.206064+00:00",
+      "http_status": 200,
+      "requested_model": "EB-GLM-5.2",
+      "returned_model": "glm-5.2",
+      "finish_reason": "tool_calls",
+      "usage": {
+        "prompt_tokens": 8802,
+        "completion_tokens": 120,
+        "reasoning_tokens": 0,
+        "total_tokens": 8922,
+        "cached_tokens": 6912,
+        "prompt_tokens_details": {
+          "cached_tokens": 6912
+        },
+        "prompt_cost": 0.0,
+        "completion_cost": 0.0,
+        "cache_cost": 0.0
+      },
+      "input_tokens": 8802,
+      "output_tokens": 120,
+      "cache_read_tokens": 6912,
+      "cache_write_tokens": null,
+      "request_bytes": 37887,
+      "response_bytes": 1002,
+      "request_body_sha256": "43196136aed3f0d35896d6619f28edd5c1938c9011c88e7df5bdb735195a0e33",
+      "sanitized_response": false,
+      "ledger_id": 195,
+      "utc_end": "2026-09-14T10:13:50.319794+00:00",
+      "latency_seconds": 4.0987037000013515,
+      "response_representation": "original response body bytes",
+      "saved_response_body_sha256": "821980f794316e7eae455ee7553cf19ef100e8b47d946e8ed6cf71ed9e1f985f"
+    }
+  ]
+}

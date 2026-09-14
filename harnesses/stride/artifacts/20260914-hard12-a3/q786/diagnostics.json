@@ -1,0 +1,3680 @@
+{
+  "protocol": "stride-search-3",
+  "head": "ad5c7e245b29bc309394a006c54f87e334c493a976fa22181bc9283b10159adf",
+  "outcome": "submitted",
+  "formal_correct": null,
+  "model_attempts": 64,
+  "backend_attempts": 47,
+  "queries": [
+    {
+      "round": 1,
+      "top_k": 5,
+      "equivalence_key": "a154a37e40babea83062044c1e0c9e4895c974b894f8b1582f003eed4ed49bb5",
+      "cached": false,
+      "query_sha256": "68429e745096b689273941acc9fc82f522c4a306da92d63561e0c254a8016a8b",
+      "query": "Perfectly formed Indian descent born 1950s film 1 hour 31 minutes",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"perfectly\" OR \"formed\" OR \"indian\" OR \"descent\" OR \"born\" OR \"1950s\" OR \"film\" OR \"1\" OR \"hour\" OR \"31\" OR \"minutes\"",
+        "terms": [
+          "perfectly",
+          "formed",
+          "indian",
+          "descent",
+          "born",
+          "1950s",
+          "film",
+          "1",
+          "hour",
+          "31",
+          "minutes"
+        ]
+      }
+    },
+    {
+      "round": 1,
+      "top_k": 5,
+      "equivalence_key": "f5ebfc4c43d11ea49c8481ee8611be8c604ce0be16ca1e941480cceb012f669c",
+      "cached": false,
+      "query_sha256": "41c14b0ab807b7040b46624379ede4dc01a812dc4cf5f37db58e61d895622436",
+      "query": "short film directed with nephew Indian heritage",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"short\" OR \"film\" OR \"directed\" OR \"with\" OR \"nephew\" OR \"indian\" OR \"heritage\"",
+        "terms": [
+          "short",
+          "film",
+          "directed",
+          "with",
+          "nephew",
+          "indian",
+          "heritage"
+        ]
+      }
+    },
+    {
+      "round": 1,
+      "top_k": 5,
+      "equivalence_key": "e1bdfee070f0911ef5b7421ebc2c8eb10d5297b6f33dd793bdd5d3a99404fd42",
+      "cached": false,
+      "query_sha256": "81c99c3c45e11968dcadf9c6a838118add636e35c7b7e5e58e9a2b16c610dda9",
+      "query": "dinosaur sci-fi adventure English film director series",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"dinosaur\" OR \"sci\" OR \"fi\" OR \"adventure\" OR \"english\" OR \"film\" OR \"director\" OR \"series\"",
+        "terms": [
+          "dinosaur",
+          "sci",
+          "fi",
+          "adventure",
+          "english",
+          "film",
+          "director",
+          "series"
+        ]
+      }
+    },
+    {
+      "round": 2,
+      "top_k": 5,
+      "equivalence_key": "1a62548881f103d2ab864a86bbfae4f2526e9b949426c58828e10806ddcb27e4",
+      "cached": false,
+      "query_sha256": "64e66094d399e4228c406ad674cf94d14f5f34adf69cc3ffd213bf3c8f62ffd3",
+      "query": "Don Chaffey film 1 hour 31 minutes cast Indian actress",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"don\" OR \"chaffey\" OR \"film\" OR \"1\" OR \"hour\" OR \"31\" OR \"minutes\" OR \"cast\" OR \"indian\" OR \"actress\"",
+        "terms": [
+          "don",
+          "chaffey",
+          "film",
+          "1",
+          "hour",
+          "31",
+          "minutes",
+          "cast",
+          "indian",
+          "actress"
+        ]
+      }
+    },
+    {
+      "round": 2,
+      "top_k": 5,
+      "equivalence_key": "5e5835b0add4cc579881e2bc9060e9af28b13bd07c23e89718dc618b5fc40673",
+      "cached": false,
+      "query_sha256": "1b16b4491a45d785f1055d347b90f4fbb43150996d3b18498b152e9aa2a8b56a",
+      "query": "Don Chaffey directed film 91 minutes runtime",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"don\" OR \"chaffey\" OR \"directed\" OR \"film\" OR \"91\" OR \"minutes\" OR \"runtime\"",
+        "terms": [
+          "don",
+          "chaffey",
+          "directed",
+          "film",
+          "91",
+          "minutes",
+          "runtime"
+        ]
+      }
+    },
+    {
+      "round": 2,
+      "top_k": 5,
+      "equivalence_key": "d639b203e03146f4c49033d3827bc80dc6ff639c5fc280f798025dc008004712",
+      "cached": false,
+      "query_sha256": "27fbe3589649d8c5926392d141d58ee965d02e75fdaca35b26475e3b0bd6ebb8",
+      "query": "short film directed with nephew Indian descent actress born 1950s",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"short\" OR \"film\" OR \"directed\" OR \"with\" OR \"nephew\" OR \"indian\" OR \"descent\" OR \"actress\" OR \"born\" OR \"1950s\"",
+        "terms": [
+          "short",
+          "film",
+          "directed",
+          "with",
+          "nephew",
+          "indian",
+          "descent",
+          "actress",
+          "born",
+          "1950s"
+        ]
+      }
+    },
+    {
+      "round": 3,
+      "top_k": 5,
+      "equivalence_key": "a9b2ffc79b28a042316e92e53442a521d399836c6420788f29f7d1383310f756",
+      "cached": false,
+      "query_sha256": "17c741c79d4500c46e8cd7ee90e96b9909cee45ef7847e3b1b591b79f4e72404",
+      "query": "Perfectly formed Indian immigrant parents born 1950s actor",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"perfectly\" OR \"formed\" OR \"indian\" OR \"immigrant\" OR \"parents\" OR \"born\" OR \"1950s\" OR \"actor\"",
+        "terms": [
+          "perfectly",
+          "formed",
+          "indian",
+          "immigrant",
+          "parents",
+          "born",
+          "1950s",
+          "actor"
+        ]
+      }
+    },
+    {
+      "round": 3,
+      "top_k": 5,
+      "equivalence_key": "cd88422a5d112e7a3d16a36998faffd0735fc8a3e76c64eceae5e8608f065e12",
+      "cached": false,
+      "query_sha256": "823820bfbe49434725747940e6c48c8572e7ee7c3289c7c094675ecf1828cf33",
+      "query": "first second generation Indian immigrants born 1950s actor perfectly formed",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"first\" OR \"second\" OR \"generation\" OR \"indian\" OR \"immigrants\" OR \"born\" OR \"1950s\" OR \"actor\" OR \"perfectly\" OR \"formed\"",
+        "terms": [
+          "first",
+          "second",
+          "generation",
+          "indian",
+          "immigrants",
+          "born",
+          "1950s",
+          "actor",
+          "perfectly",
+          "formed"
+        ]
+      }
+    },
+    {
+      "round": 3,
+      "top_k": 5,
+      "equivalence_key": "442d5cda8043e309b8dd114aa834d424469a2f4412e3e664fbf15ff33b2779be",
+      "cached": false,
+      "query_sha256": "813a015b4f436d20d37bdd2be8a97546ebb48ae9e08088134e403ca14f224c75",
+      "query": "actor born 1950s Indian parents directed short film nephew",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"actor\" OR \"born\" OR \"1950s\" OR \"indian\" OR \"parents\" OR \"directed\" OR \"short\" OR \"film\" OR \"nephew\"",
+        "terms": [
+          "actor",
+          "born",
+          "1950s",
+          "indian",
+          "parents",
+          "directed",
+          "short",
+          "film",
+          "nephew"
+        ]
+      }
+    },
+    {
+      "round": 4,
+      "top_k": 5,
+      "equivalence_key": "5751f4ff594c4cf64128b1cd010ffe411ff844505f1e89689e73f6de455ae688",
+      "cached": false,
+      "query_sha256": "2ce71023534a51095ef058fae40ed0c1ef27a504931c4f2f7bf11e42c285131f",
+      "query": "Perfectly formed quote Indian heritage actor",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"perfectly\" OR \"formed\" OR \"quote\" OR \"indian\" OR \"heritage\" OR \"actor\"",
+        "terms": [
+          "perfectly",
+          "formed",
+          "quote",
+          "indian",
+          "heritage",
+          "actor"
+        ]
+      }
+    },
+    {
+      "round": 4,
+      "top_k": 5,
+      "equivalence_key": "ad73320b1ff67011c36c94e7639d5f07428ab10ea7f4e4b1e10ded383e6a873a",
+      "cached": false,
+      "query_sha256": "84f1b429cb6e57c768f95fe72acc54ab285d0853838f52f6842ed357c862567a",
+      "query": "Perfectly formed self description Indian descent",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"perfectly\" OR \"formed\" OR \"self\" OR \"description\" OR \"indian\" OR \"descent\"",
+        "terms": [
+          "perfectly",
+          "formed",
+          "self",
+          "description",
+          "indian",
+          "descent"
+        ]
+      }
+    },
+    {
+      "round": 4,
+      "top_k": 5,
+      "equivalence_key": "53ed8be840ea81a481234c0a3b8d78d6424f00ee74094c2dee0071e61b42cad6",
+      "cached": false,
+      "query_sha256": "62f2b67d912a6dcbc4a7551909a9d9a539c2104a0df2f38f6ccf435842f8b757",
+      "query": "born 1950s Indian immigrant parents actor short film nephew",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"born\" OR \"1950s\" OR \"indian\" OR \"immigrant\" OR \"parents\" OR \"actor\" OR \"short\" OR \"film\" OR \"nephew\"",
+        "terms": [
+          "born",
+          "1950s",
+          "indian",
+          "immigrant",
+          "parents",
+          "actor",
+          "short",
+          "film",
+          "nephew"
+        ]
+      }
+    },
+    {
+      "round": 5,
+      "top_k": 5,
+      "equivalence_key": "52bc828ce7bb46ffec6b52b39d6ee01d2bdc982b7f09db07167cef65eca4a454",
+      "cached": false,
+      "query_sha256": "61226c03b4a2eac55fb135ec7c8cfab9f7d57c529fdd654bb82b3afc589e8f0e",
+      "query": "Don Chaffey filmography 91 minutes runtime",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"don\" OR \"chaffey\" OR \"filmography\" OR \"91\" OR \"minutes\" OR \"runtime\"",
+        "terms": [
+          "don",
+          "chaffey",
+          "filmography",
+          "91",
+          "minutes",
+          "runtime"
+        ]
+      }
+    },
+    {
+      "round": 5,
+      "top_k": 5,
+      "equivalence_key": "821b9490dd39c654d9acc419d4604e3aaa7078e9954492aed3e7350134ec46ef",
+      "cached": false,
+      "query_sha256": "5f432cb4f7d80f9a05b320bbf44ef5fd9f3e613b068c307d7f8d0c7b91334742",
+      "query": "Don Chaffey directed films list runtime",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"don\" OR \"chaffey\" OR \"directed\" OR \"films\" OR \"list\" OR \"runtime\"",
+        "terms": [
+          "don",
+          "chaffey",
+          "directed",
+          "films",
+          "list",
+          "runtime"
+        ]
+      }
+    },
+    {
+      "round": 5,
+      "top_k": 5,
+      "equivalence_key": "105eef2329233674b3634908b9ca42e79a519a7a0ef544dc9c14279a55690142",
+      "cached": false,
+      "query_sha256": "80bdbcbf63438d507d345d0d6ae59deb5aa51e4310cbfd44d5b92396c07891f9",
+      "query": "One Million Years B.C. cast Indian heritage actor",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"one\" OR \"million\" OR \"years\" OR \"b\" OR \"c\" OR \"cast\" OR \"indian\" OR \"heritage\" OR \"actor\"",
+        "terms": [
+          "one",
+          "million",
+          "years",
+          "b",
+          "c",
+          "cast",
+          "indian",
+          "heritage",
+          "actor"
+        ]
+      }
+    },
+    {
+      "round": 6,
+      "top_k": 5,
+      "equivalence_key": "96fc9919029dd4efeaefd0b42fa40b35abb8a9b2c12b154c85952574bcd6b444",
+      "cached": false,
+      "query_sha256": "17e251b2ff6ba2aa9bb843184a12ddea1b6978720dd0dddaa89f8472a6be9382",
+      "query": "Perfectly formed quote small actor Indian heritage",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"perfectly\" OR \"formed\" OR \"quote\" OR \"small\" OR \"actor\" OR \"indian\" OR \"heritage\"",
+        "terms": [
+          "perfectly",
+          "formed",
+          "quote",
+          "small",
+          "actor",
+          "indian",
+          "heritage"
+        ]
+      }
+    },
+    {
+      "round": 6,
+      "top_k": 5,
+      "equivalence_key": "eb2ffe7104523e5560b5a12c6a5e7af4edb6829420348cf8bc9ca873b6cfc248",
+      "cached": false,
+      "query_sha256": "fc8b4364fd02dcdbdf19fd40c5b7f5fae3081f4a1f4a399baf63f53cd39b2f42",
+      "query": "short actor born 1950s Indian parents perfectly formed",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"short\" OR \"actor\" OR \"born\" OR \"1950s\" OR \"indian\" OR \"parents\" OR \"perfectly\" OR \"formed\"",
+        "terms": [
+          "short",
+          "actor",
+          "born",
+          "1950s",
+          "indian",
+          "parents",
+          "perfectly",
+          "formed"
+        ]
+      }
+    },
+    {
+      "round": 6,
+      "top_k": 5,
+      "equivalence_key": "3280e24d674aea57a76166f46a5f18ce59aadd497353d47b0c4b2861fd181602",
+      "cached": false,
+      "query_sha256": "325c8567352ddd0db74a3f2d2a3284557d49722775180b8e7ad3b309bacecc82",
+      "query": "dwarf actor Indian descent born 1950s film",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"dwarf\" OR \"actor\" OR \"indian\" OR \"descent\" OR \"born\" OR \"1950s\" OR \"film\"",
+        "terms": [
+          "dwarf",
+          "actor",
+          "indian",
+          "descent",
+          "born",
+          "1950s",
+          "film"
+        ]
+      }
+    },
+    {
+      "round": 8,
+      "top_k": 5,
+      "equivalence_key": "2bf6e36b7ef16456593ebb39c789efe83a7042e54e71fb60dae0bd9df2e2f877",
+      "cached": false,
+      "query_sha256": "a62c34ed8333c0bcbd63e6e36f8acbcf188026ff8d0e59062c9c9bbbc3794477",
+      "query": "Deep Roy perfectly formed quote",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"deep\" OR \"roy\" OR \"perfectly\" OR \"formed\" OR \"quote\"",
+        "terms": [
+          "deep",
+          "roy",
+          "perfectly",
+          "formed",
+          "quote"
+        ]
+      }
+    },
+    {
+      "round": 8,
+      "top_k": 5,
+      "equivalence_key": "fcdd53e82e2a5f9545a5d2256b306265bc9874f992327dfdbf5b6879c0551189",
+      "cached": false,
+      "query_sha256": "e849cc8495db7b259abe76646b40c045fea4be6a6a841d3e04201ec48ef566b9",
+      "query": "Deep Roy born 1950s Indian parents short film nephew",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"deep\" OR \"roy\" OR \"born\" OR \"1950s\" OR \"indian\" OR \"parents\" OR \"short\" OR \"film\" OR \"nephew\"",
+        "terms": [
+          "deep",
+          "roy",
+          "born",
+          "1950s",
+          "indian",
+          "parents",
+          "short",
+          "film",
+          "nephew"
+        ]
+      }
+    },
+    {
+      "round": 8,
+      "top_k": 5,
+      "equivalence_key": "9392b707be21261409ca29e5b15ee74d570a8a09d45dc15edcbcac84883680e6",
+      "cached": false,
+      "query_sha256": "29e9512018bf061c90dea4eedb9d46a17b11e0250cc6d29484d21ca2abac7a10",
+      "query": "Deep Roy Don Chaffey film",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"deep\" OR \"roy\" OR \"don\" OR \"chaffey\" OR \"film\"",
+        "terms": [
+          "deep",
+          "roy",
+          "don",
+          "chaffey",
+          "film"
+        ]
+      }
+    },
+    {
+      "round": 8,
+      "top_k": 5,
+      "equivalence_key": "62b8a2ebdbabba2590dabf41d56d1bf42590adf8efbd5b46c38ff01c1a692935",
+      "cached": false,
+      "query_sha256": "00b99b9464963d65e25be4eb684514a06d72cdbdb3fe9d651a033c80121e7d34",
+      "query": "Kiran Shah perfectly formed quote",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"kiran\" OR \"shah\" OR \"perfectly\" OR \"formed\" OR \"quote\"",
+        "terms": [
+          "kiran",
+          "shah",
+          "perfectly",
+          "formed",
+          "quote"
+        ]
+      }
+    },
+    {
+      "round": 8,
+      "top_k": 5,
+      "equivalence_key": "24b6590fad5d7f7e358c1f06c6e451e81b57552095090b50cb193bc969ddf12a",
+      "cached": false,
+      "query_sha256": "09587b5725e073bb9fc742b37116a3e960c925df94f8f033925d32c932cd6e6d",
+      "query": "Kiran Shah short film nephew directed",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"kiran\" OR \"shah\" OR \"short\" OR \"film\" OR \"nephew\" OR \"directed\"",
+        "terms": [
+          "kiran",
+          "shah",
+          "short",
+          "film",
+          "nephew",
+          "directed"
+        ]
+      }
+    },
+    {
+      "round": 8,
+      "top_k": 5,
+      "equivalence_key": "57caa848fb247e241f02dad895e945704ae706bbb9a34b6bc37f1a111e96140c",
+      "cached": false,
+      "query_sha256": "cc49b756b91df8dbfcff4f877607acb989e83b4c11adc4e55aec8f277a73c1d8",
+      "query": "Kiran Shah Don Chaffey film",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"kiran\" OR \"shah\" OR \"don\" OR \"chaffey\" OR \"film\"",
+        "terms": [
+          "kiran",
+          "shah",
+          "don",
+          "chaffey",
+          "film"
+        ]
+      }
+    },
+    {
+      "round": 10,
+      "top_k": 5,
+      "equivalence_key": "f674f6fa4bce4514c32cdc672b2fb573b681ae1d5f97e95fa868fd789ce18eea",
+      "cached": false,
+      "query_sha256": "590bfe9b3ae487c9b85017a0b51af18554309311a7c49d4e20d82550f342945d",
+      "query": "The People That Time Forgot 1977 director runtime",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"the\" OR \"people\" OR \"that\" OR \"time\" OR \"forgot\" OR \"1977\" OR \"director\" OR \"runtime\"",
+        "terms": [
+          "the",
+          "people",
+          "that",
+          "time",
+          "forgot",
+          "1977",
+          "director",
+          "runtime"
+        ]
+      }
+    },
+    {
+      "round": 10,
+      "top_k": 5,
+      "equivalence_key": "dc2980fe513e42063f3a8e89de3db023d7a6cb0e4621870896297232b854b091",
+      "cached": false,
+      "query_sha256": "4726597396a6e89bfb94f2439f303c67a5a06c9d3275ccf679184beeab2c1371",
+      "query": "The People That Time Forgot Don Chaffey runtime minutes",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"the\" OR \"people\" OR \"that\" OR \"time\" OR \"forgot\" OR \"don\" OR \"chaffey\" OR \"runtime\" OR \"minutes\"",
+        "terms": [
+          "the",
+          "people",
+          "that",
+          "time",
+          "forgot",
+          "don",
+          "chaffey",
+          "runtime",
+          "minutes"
+        ]
+      }
+    },
+    {
+      "round": 10,
+      "top_k": 5,
+      "equivalence_key": "1fcd1367c9cbfe91f8404bfaa4fe913b28142b2f261651c1f064aef11e262899",
+      "cached": false,
+      "query_sha256": "3f91ce0bb3f8208b7bb72f0c169adf5da568a8a87867be9486c2f5dfb9fad4cf",
+      "query": "The People That Time Forgot 1977 cast Kiran Shah",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"the\" OR \"people\" OR \"that\" OR \"time\" OR \"forgot\" OR \"1977\" OR \"cast\" OR \"kiran\" OR \"shah\"",
+        "terms": [
+          "the",
+          "people",
+          "that",
+          "time",
+          "forgot",
+          "1977",
+          "cast",
+          "kiran",
+          "shah"
+        ]
+      }
+    },
+    {
+      "round": 11,
+      "top_k": 5,
+      "equivalence_key": "6ee7e1cb9610b34e15e08459d6f931c9d8d0d0895313de0f24f0257944e4b677",
+      "cached": false,
+      "query_sha256": "13dca32fce214467cc863e65e96881078e0de15e8b3bf514ab5e4bc4477bd8a8",
+      "query": "People That Time Forgot 1977 film Wikipedia",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"people\" OR \"that\" OR \"time\" OR \"forgot\" OR \"1977\" OR \"film\" OR \"wikipedia\"",
+        "terms": [
+          "people",
+          "that",
+          "time",
+          "forgot",
+          "1977",
+          "film",
+          "wikipedia"
+        ]
+      }
+    },
+    {
+      "round": 11,
+      "top_k": 5,
+      "equivalence_key": "39477f1a9f1c239406ff0527877e8e5e5bfde1ba0cfecc4e43a024418c1ae8cd",
+      "cached": false,
+      "query_sha256": "177559680a71f626931e0bcb396ff941f7c31e4abc85cf3579f38accac329b5c",
+      "query": "Don Chaffey filmography dinosaur films",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"don\" OR \"chaffey\" OR \"filmography\" OR \"dinosaur\" OR \"films\"",
+        "terms": [
+          "don",
+          "chaffey",
+          "filmography",
+          "dinosaur",
+          "films"
+        ]
+      }
+    },
+    {
+      "round": 11,
+      "top_k": 5,
+      "equivalence_key": "9c196eb2ebdfc14ea1cd6e57e2b91a6e4b7914152a63ccf6302256b63bf3ee5b",
+      "cached": false,
+      "query_sha256": "7f557d509333671ead608064c1769b3bda56bd499dc820a36a4cebedd4a9f4ad",
+      "query": "One Million Years B.C. Don Chaffey runtime",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"one\" OR \"million\" OR \"years\" OR \"b\" OR \"c\" OR \"don\" OR \"chaffey\" OR \"runtime\"",
+        "terms": [
+          "one",
+          "million",
+          "years",
+          "b",
+          "c",
+          "don",
+          "chaffey",
+          "runtime"
+        ]
+      }
+    },
+    {
+      "round": 12,
+      "top_k": 5,
+      "equivalence_key": "33b17ff98057df7818d2c1f2907e6e9c807b256fadbe9685d99d0771d8a35ecd",
+      "cached": false,
+      "query_sha256": "6ba02158313f42388f11bf771e7a2458530bcfb168b957652582a482b9aa5db9",
+      "query": "The People That Time Forgot 1977 film director runtime minutes",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"the\" OR \"people\" OR \"that\" OR \"time\" OR \"forgot\" OR \"1977\" OR \"film\" OR \"director\" OR \"runtime\" OR \"minutes\"",
+        "terms": [
+          "the",
+          "people",
+          "that",
+          "time",
+          "forgot",
+          "1977",
+          "film",
+          "director",
+          "runtime",
+          "minutes"
+        ]
+      }
+    },
+    {
+      "round": 12,
+      "top_k": 5,
+      "equivalence_key": "02f875b1c4e6dbd56b0913b8434fa98d481915dd8330e556bd79f0dc21ecd81c",
+      "cached": false,
+      "query_sha256": "5f1fd05829a8da8d72a50da407850f60646250b1a7827a661a2751a6fea3af22",
+      "query": "People That Time Forgot Don Chaffey 91 minutes",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"people\" OR \"that\" OR \"time\" OR \"forgot\" OR \"don\" OR \"chaffey\" OR \"91\" OR \"minutes\"",
+        "terms": [
+          "people",
+          "that",
+          "time",
+          "forgot",
+          "don",
+          "chaffey",
+          "91",
+          "minutes"
+        ]
+      }
+    },
+    {
+      "round": 12,
+      "top_k": 5,
+      "equivalence_key": "397b0806e2519a27a65f3705e53abd620487e7c5b1db72616fa924b0a3c59f7d",
+      "cached": false,
+      "query_sha256": "19b47da937c80f2baf60a38ea6d863d097885016151538333a5d82c513fad77e",
+      "query": "Don Chaffey filmography One Million Years BC Jason Argonauts",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"don\" OR \"chaffey\" OR \"filmography\" OR \"one\" OR \"million\" OR \"years\" OR \"bc\" OR \"jason\" OR \"argonauts\"",
+        "terms": [
+          "don",
+          "chaffey",
+          "filmography",
+          "one",
+          "million",
+          "years",
+          "bc",
+          "jason",
+          "argonauts"
+        ]
+      }
+    },
+    {
+      "round": 13,
+      "top_k": 5,
+      "equivalence_key": "99474fd22a561dab1ade25d6843b67856b42b0d510bafc9fc9605b12cbea83fe",
+      "cached": false,
+      "query_sha256": "d474f48c47e90f91919e7fabc824d82608054b03ce2b8d60c617a7e3dc790f0e",
+      "query": "People That Time Forgot 1977 film Wikipedia director",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"people\" OR \"that\" OR \"time\" OR \"forgot\" OR \"1977\" OR \"film\" OR \"wikipedia\" OR \"director\"",
+        "terms": [
+          "people",
+          "that",
+          "time",
+          "forgot",
+          "1977",
+          "film",
+          "wikipedia",
+          "director"
+        ]
+      }
+    },
+    {
+      "round": 13,
+      "top_k": 5,
+      "equivalence_key": "3e90ea8ad998ce613799787536602d2152c877939a5044d915f9ab7a8fadec57",
+      "cached": false,
+      "query_sha256": "19964f1f1ee63796a4926a1bdd5da7d137864ee36331e97796d813a17eeacd5f",
+      "query": "Don Chaffey filmography Wikipedia",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"don\" OR \"chaffey\" OR \"filmography\" OR \"wikipedia\"",
+        "terms": [
+          "don",
+          "chaffey",
+          "filmography",
+          "wikipedia"
+        ]
+      }
+    },
+    {
+      "round": 13,
+      "top_k": 5,
+      "equivalence_key": "177edfc9c05d21eca3e6c8987905d9f62208d21ebcc6484b9b802a109bc06d75",
+      "cached": false,
+      "query_sha256": "48d3e3642d1bb8c11235f6ffa919438a1f519bffc8e38d536c14313f54773009",
+      "query": "One Million Years BC 1966 runtime minutes",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"one\" OR \"million\" OR \"years\" OR \"bc\" OR \"1966\" OR \"runtime\" OR \"minutes\"",
+        "terms": [
+          "one",
+          "million",
+          "years",
+          "bc",
+          "1966",
+          "runtime",
+          "minutes"
+        ]
+      }
+    },
+    {
+      "round": 14,
+      "top_k": 5,
+      "equivalence_key": "6ee7e1cb9610b34e15e08459d6f931c9d8d0d0895313de0f24f0257944e4b677",
+      "cached": true,
+      "query_sha256": "13dca32fce214467cc863e65e96881078e0de15e8b3bf514ab5e4bc4477bd8a8",
+      "query": "People That Time Forgot 1977 film Wikipedia",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"people\" OR \"that\" OR \"time\" OR \"forgot\" OR \"1977\" OR \"film\" OR \"wikipedia\"",
+        "terms": [
+          "people",
+          "that",
+          "time",
+          "forgot",
+          "1977",
+          "film",
+          "wikipedia"
+        ]
+      }
+    },
+    {
+      "round": 14,
+      "top_k": 5,
+      "equivalence_key": "389bed912fa62c88a7aa088f080447e0cecca74062f892a6fe5184f5ccc4b7e9",
+      "cached": false,
+      "query_sha256": "3168b16f205d42fabf6713c7ea0830b262f12560a6eaaf2e39f968edf03674c2",
+      "query": "Don Chaffey Wikipedia filmography",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"don\" OR \"chaffey\" OR \"wikipedia\" OR \"filmography\"",
+        "terms": [
+          "don",
+          "chaffey",
+          "wikipedia",
+          "filmography"
+        ]
+      }
+    },
+    {
+      "round": 14,
+      "top_k": 5,
+      "equivalence_key": "29065863d84a87d70827650fe15c1c2be55cf79bbfb142b1bc47cb66cb8051cc",
+      "cached": false,
+      "query_sha256": "ed9730503567b0abd1d8e773fd98f4d892f25c23005a4b24dbc96f528c50100e",
+      "query": "One Million Years BC 1966 film runtime",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"one\" OR \"million\" OR \"years\" OR \"bc\" OR \"1966\" OR \"film\" OR \"runtime\"",
+        "terms": [
+          "one",
+          "million",
+          "years",
+          "bc",
+          "1966",
+          "film",
+          "runtime"
+        ]
+      }
+    },
+    {
+      "round": 15,
+      "top_k": 5,
+      "equivalence_key": "6ee7e1cb9610b34e15e08459d6f931c9d8d0d0895313de0f24f0257944e4b677",
+      "cached": true,
+      "query_sha256": "13dca32fce214467cc863e65e96881078e0de15e8b3bf514ab5e4bc4477bd8a8",
+      "query": "People That Time Forgot 1977 film Wikipedia",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"people\" OR \"that\" OR \"time\" OR \"forgot\" OR \"1977\" OR \"film\" OR \"wikipedia\"",
+        "terms": [
+          "people",
+          "that",
+          "time",
+          "forgot",
+          "1977",
+          "film",
+          "wikipedia"
+        ]
+      }
+    },
+    {
+      "round": 15,
+      "top_k": 5,
+      "equivalence_key": "389bed912fa62c88a7aa088f080447e0cecca74062f892a6fe5184f5ccc4b7e9",
+      "cached": true,
+      "query_sha256": "3168b16f205d42fabf6713c7ea0830b262f12560a6eaaf2e39f968edf03674c2",
+      "query": "Don Chaffey Wikipedia filmography",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"don\" OR \"chaffey\" OR \"wikipedia\" OR \"filmography\"",
+        "terms": [
+          "don",
+          "chaffey",
+          "wikipedia",
+          "filmography"
+        ]
+      }
+    },
+    {
+      "round": 15,
+      "top_k": 5,
+      "equivalence_key": "29065863d84a87d70827650fe15c1c2be55cf79bbfb142b1bc47cb66cb8051cc",
+      "cached": true,
+      "query_sha256": "ed9730503567b0abd1d8e773fd98f4d892f25c23005a4b24dbc96f528c50100e",
+      "query": "One Million Years BC 1966 film runtime",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"one\" OR \"million\" OR \"years\" OR \"bc\" OR \"1966\" OR \"film\" OR \"runtime\"",
+        "terms": [
+          "one",
+          "million",
+          "years",
+          "bc",
+          "1966",
+          "film",
+          "runtime"
+        ]
+      }
+    },
+    {
+      "round": 16,
+      "top_k": 5,
+      "equivalence_key": "6ee7e1cb9610b34e15e08459d6f931c9d8d0d0895313de0f24f0257944e4b677",
+      "cached": true,
+      "query_sha256": "13dca32fce214467cc863e65e96881078e0de15e8b3bf514ab5e4bc4477bd8a8",
+      "query": "People That Time Forgot 1977 film Wikipedia",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"people\" OR \"that\" OR \"time\" OR \"forgot\" OR \"1977\" OR \"film\" OR \"wikipedia\"",
+        "terms": [
+          "people",
+          "that",
+          "time",
+          "forgot",
+          "1977",
+          "film",
+          "wikipedia"
+        ]
+      }
+    },
+    {
+      "round": 16,
+      "top_k": 5,
+      "equivalence_key": "389bed912fa62c88a7aa088f080447e0cecca74062f892a6fe5184f5ccc4b7e9",
+      "cached": true,
+      "query_sha256": "3168b16f205d42fabf6713c7ea0830b262f12560a6eaaf2e39f968edf03674c2",
+      "query": "Don Chaffey Wikipedia filmography",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"don\" OR \"chaffey\" OR \"wikipedia\" OR \"filmography\"",
+        "terms": [
+          "don",
+          "chaffey",
+          "wikipedia",
+          "filmography"
+        ]
+      }
+    },
+    {
+      "round": 16,
+      "top_k": 5,
+      "equivalence_key": "29065863d84a87d70827650fe15c1c2be55cf79bbfb142b1bc47cb66cb8051cc",
+      "cached": true,
+      "query_sha256": "ed9730503567b0abd1d8e773fd98f4d892f25c23005a4b24dbc96f528c50100e",
+      "query": "One Million Years BC 1966 film runtime",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"one\" OR \"million\" OR \"years\" OR \"bc\" OR \"1966\" OR \"film\" OR \"runtime\"",
+        "terms": [
+          "one",
+          "million",
+          "years",
+          "bc",
+          "1966",
+          "film",
+          "runtime"
+        ]
+      }
+    },
+    {
+      "round": 17,
+      "top_k": 5,
+      "equivalence_key": "6ee7e1cb9610b34e15e08459d6f931c9d8d0d0895313de0f24f0257944e4b677",
+      "cached": true,
+      "query_sha256": "13dca32fce214467cc863e65e96881078e0de15e8b3bf514ab5e4bc4477bd8a8",
+      "query": "People That Time Forgot 1977 film Wikipedia",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"people\" OR \"that\" OR \"time\" OR \"forgot\" OR \"1977\" OR \"film\" OR \"wikipedia\"",
+        "terms": [
+          "people",
+          "that",
+          "time",
+          "forgot",
+          "1977",
+          "film",
+          "wikipedia"
+        ]
+      }
+    },
+    {
+      "round": 17,
+      "top_k": 5,
+      "equivalence_key": "389bed912fa62c88a7aa088f080447e0cecca74062f892a6fe5184f5ccc4b7e9",
+      "cached": true,
+      "query_sha256": "3168b16f205d42fabf6713c7ea0830b262f12560a6eaaf2e39f968edf03674c2",
+      "query": "Don Chaffey Wikipedia filmography",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"don\" OR \"chaffey\" OR \"wikipedia\" OR \"filmography\"",
+        "terms": [
+          "don",
+          "chaffey",
+          "wikipedia",
+          "filmography"
+        ]
+      }
+    },
+    {
+      "round": 17,
+      "top_k": 5,
+      "equivalence_key": "29065863d84a87d70827650fe15c1c2be55cf79bbfb142b1bc47cb66cb8051cc",
+      "cached": true,
+      "query_sha256": "ed9730503567b0abd1d8e773fd98f4d892f25c23005a4b24dbc96f528c50100e",
+      "query": "One Million Years BC 1966 film runtime",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"one\" OR \"million\" OR \"years\" OR \"bc\" OR \"1966\" OR \"film\" OR \"runtime\"",
+        "terms": [
+          "one",
+          "million",
+          "years",
+          "bc",
+          "1966",
+          "film",
+          "runtime"
+        ]
+      }
+    },
+    {
+      "round": 18,
+      "top_k": 5,
+      "equivalence_key": "62b8a2ebdbabba2590dabf41d56d1bf42590adf8efbd5b46c38ff01c1a692935",
+      "cached": true,
+      "query_sha256": "00b99b9464963d65e25be4eb684514a06d72cdbdb3fe9d651a033c80121e7d34",
+      "query": "Kiran Shah perfectly formed quote",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"kiran\" OR \"shah\" OR \"perfectly\" OR \"formed\" OR \"quote\"",
+        "terms": [
+          "kiran",
+          "shah",
+          "perfectly",
+          "formed",
+          "quote"
+        ]
+      }
+    },
+    {
+      "round": 18,
+      "top_k": 5,
+      "equivalence_key": "5d6620ab64fba8aea77c43de67faa9e7e14a2a4afece1bb134ac3762061b0880",
+      "cached": false,
+      "query_sha256": "21a27369f85fdb7810f76ca9e614169abcbf2ce0dffa434c192167342dcc19f7",
+      "query": "People That Time Forgot 1977 film director runtime",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"people\" OR \"that\" OR \"time\" OR \"forgot\" OR \"1977\" OR \"film\" OR \"director\" OR \"runtime\"",
+        "terms": [
+          "people",
+          "that",
+          "time",
+          "forgot",
+          "1977",
+          "film",
+          "director",
+          "runtime"
+        ]
+      }
+    },
+    {
+      "round": 18,
+      "top_k": 5,
+      "equivalence_key": "14b69d9c0aa9ef2f913fab959f2a77ecd0659288c3c1239dd5ce7d1a07660717",
+      "cached": false,
+      "query_sha256": "4ec773c6072e337648c6708e1c6bfdc08dca49ecf8653a0e028b8b766f873019",
+      "query": "Kiran Shah short film nephew director",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"kiran\" OR \"shah\" OR \"short\" OR \"film\" OR \"nephew\" OR \"director\"",
+        "terms": [
+          "kiran",
+          "shah",
+          "short",
+          "film",
+          "nephew",
+          "director"
+        ]
+      }
+    },
+    {
+      "round": 19,
+      "top_k": 5,
+      "equivalence_key": "7015ad1ba2ad0c99e77dbb9d73da86ccafba7777c480081420a6e7455f2b3966",
+      "cached": false,
+      "query_sha256": "34ba9c86f0aa315016bf6048a419f739be502c339f2b75ae7a2062e712e24c58",
+      "query": "People That Time Forgot 1977 film director Don Chaffey runtime",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"people\" OR \"that\" OR \"time\" OR \"forgot\" OR \"1977\" OR \"film\" OR \"director\" OR \"don\" OR \"chaffey\" OR \"runtime\"",
+        "terms": [
+          "people",
+          "that",
+          "time",
+          "forgot",
+          "1977",
+          "film",
+          "director",
+          "don",
+          "chaffey",
+          "runtime"
+        ]
+      }
+    },
+    {
+      "round": 19,
+      "top_k": 5,
+      "equivalence_key": "397b0806e2519a27a65f3705e53abd620487e7c5b1db72616fa924b0a3c59f7d",
+      "cached": true,
+      "query_sha256": "19b47da937c80f2baf60a38ea6d863d097885016151538333a5d82c513fad77e",
+      "query": "Don Chaffey filmography One Million Years BC Jason Argonauts",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"don\" OR \"chaffey\" OR \"filmography\" OR \"one\" OR \"million\" OR \"years\" OR \"bc\" OR \"jason\" OR \"argonauts\"",
+        "terms": [
+          "don",
+          "chaffey",
+          "filmography",
+          "one",
+          "million",
+          "years",
+          "bc",
+          "jason",
+          "argonauts"
+        ]
+      }
+    },
+    {
+      "round": 20,
+      "top_k": 5,
+      "equivalence_key": "99474fd22a561dab1ade25d6843b67856b42b0d510bafc9fc9605b12cbea83fe",
+      "cached": true,
+      "query_sha256": "d474f48c47e90f91919e7fabc824d82608054b03ce2b8d60c617a7e3dc790f0e",
+      "query": "People That Time Forgot 1977 film Wikipedia director",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"people\" OR \"that\" OR \"time\" OR \"forgot\" OR \"1977\" OR \"film\" OR \"wikipedia\" OR \"director\"",
+        "terms": [
+          "people",
+          "that",
+          "time",
+          "forgot",
+          "1977",
+          "film",
+          "wikipedia",
+          "director"
+        ]
+      }
+    },
+    {
+      "round": 20,
+      "top_k": 5,
+      "equivalence_key": "a1ca3b60d43709b89d56b38a7042b0ed77fc791c34ad8c68cdd739d6ff7aac66",
+      "cached": false,
+      "query_sha256": "c43fb7e68f4efbd5af0ef23aa10105f52e33aa7038d2c60da0b846bf1989f34a",
+      "query": "Don Chaffey Wikipedia director biography",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"don\" OR \"chaffey\" OR \"wikipedia\" OR \"director\" OR \"biography\"",
+        "terms": [
+          "don",
+          "chaffey",
+          "wikipedia",
+          "director",
+          "biography"
+        ]
+      }
+    },
+    {
+      "round": 21,
+      "top_k": 5,
+      "equivalence_key": "91c389b5e3f460047bffcf1f9ebae2c64c85190ded9994edbff3a1dfc45de874",
+      "cached": false,
+      "query_sha256": "9ddef88ea50b4df3bc3c5163895cffed04c86f7a5e1cf9179e925efd2849bd6a",
+      "query": "People That Time Forgot 1977 film Wikipedia director runtime",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"people\" OR \"that\" OR \"time\" OR \"forgot\" OR \"1977\" OR \"film\" OR \"wikipedia\" OR \"director\" OR \"runtime\"",
+        "terms": [
+          "people",
+          "that",
+          "time",
+          "forgot",
+          "1977",
+          "film",
+          "wikipedia",
+          "director",
+          "runtime"
+        ]
+      }
+    },
+    {
+      "round": 21,
+      "top_k": 5,
+      "equivalence_key": "9b7f611a4d6fc5390934dc77c096542c865a6bbbde971b18767ef0eba279dc79",
+      "cached": false,
+      "query_sha256": "3b8da4a8438c3b808096aedbf242c755aae9d87564040cb7677531e6bf375cd5",
+      "query": "Don Chaffey Wikipedia director filmography",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"don\" OR \"chaffey\" OR \"wikipedia\" OR \"director\" OR \"filmography\"",
+        "terms": [
+          "don",
+          "chaffey",
+          "wikipedia",
+          "director",
+          "filmography"
+        ]
+      }
+    },
+    {
+      "round": 22,
+      "top_k": 5,
+      "equivalence_key": "6ee7e1cb9610b34e15e08459d6f931c9d8d0d0895313de0f24f0257944e4b677",
+      "cached": true,
+      "query_sha256": "13dca32fce214467cc863e65e96881078e0de15e8b3bf514ab5e4bc4477bd8a8",
+      "query": "People That Time Forgot 1977 film Wikipedia",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"people\" OR \"that\" OR \"time\" OR \"forgot\" OR \"1977\" OR \"film\" OR \"wikipedia\"",
+        "terms": [
+          "people",
+          "that",
+          "time",
+          "forgot",
+          "1977",
+          "film",
+          "wikipedia"
+        ]
+      }
+    },
+    {
+      "round": 22,
+      "top_k": 5,
+      "equivalence_key": "9b7f611a4d6fc5390934dc77c096542c865a6bbbde971b18767ef0eba279dc79",
+      "cached": true,
+      "query_sha256": "3b8da4a8438c3b808096aedbf242c755aae9d87564040cb7677531e6bf375cd5",
+      "query": "Don Chaffey Wikipedia director filmography",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"don\" OR \"chaffey\" OR \"wikipedia\" OR \"director\" OR \"filmography\"",
+        "terms": [
+          "don",
+          "chaffey",
+          "wikipedia",
+          "director",
+          "filmography"
+        ]
+      }
+    },
+    {
+      "round": 24,
+      "top_k": 5,
+      "equivalence_key": "6ee7e1cb9610b34e15e08459d6f931c9d8d0d0895313de0f24f0257944e4b677",
+      "cached": true,
+      "query_sha256": "13dca32fce214467cc863e65e96881078e0de15e8b3bf514ab5e4bc4477bd8a8",
+      "query": "People That Time Forgot 1977 film Wikipedia",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"people\" OR \"that\" OR \"time\" OR \"forgot\" OR \"1977\" OR \"film\" OR \"wikipedia\"",
+        "terms": [
+          "people",
+          "that",
+          "time",
+          "forgot",
+          "1977",
+          "film",
+          "wikipedia"
+        ]
+      }
+    },
+    {
+      "round": 24,
+      "top_k": 5,
+      "equivalence_key": "9b7f611a4d6fc5390934dc77c096542c865a6bbbde971b18767ef0eba279dc79",
+      "cached": true,
+      "query_sha256": "3b8da4a8438c3b808096aedbf242c755aae9d87564040cb7677531e6bf375cd5",
+      "query": "Don Chaffey Wikipedia director filmography",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"don\" OR \"chaffey\" OR \"wikipedia\" OR \"director\" OR \"filmography\"",
+        "terms": [
+          "don",
+          "chaffey",
+          "wikipedia",
+          "director",
+          "filmography"
+        ]
+      }
+    },
+    {
+      "round": 25,
+      "top_k": 5,
+      "equivalence_key": "6ee7e1cb9610b34e15e08459d6f931c9d8d0d0895313de0f24f0257944e4b677",
+      "cached": true,
+      "query_sha256": "13dca32fce214467cc863e65e96881078e0de15e8b3bf514ab5e4bc4477bd8a8",
+      "query": "People That Time Forgot 1977 film Wikipedia",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"people\" OR \"that\" OR \"time\" OR \"forgot\" OR \"1977\" OR \"film\" OR \"wikipedia\"",
+        "terms": [
+          "people",
+          "that",
+          "time",
+          "forgot",
+          "1977",
+          "film",
+          "wikipedia"
+        ]
+      }
+    },
+    {
+      "round": 25,
+      "top_k": 5,
+      "equivalence_key": "9b7f611a4d6fc5390934dc77c096542c865a6bbbde971b18767ef0eba279dc79",
+      "cached": true,
+      "query_sha256": "3b8da4a8438c3b808096aedbf242c755aae9d87564040cb7677531e6bf375cd5",
+      "query": "Don Chaffey Wikipedia director filmography",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"don\" OR \"chaffey\" OR \"wikipedia\" OR \"director\" OR \"filmography\"",
+        "terms": [
+          "don",
+          "chaffey",
+          "wikipedia",
+          "director",
+          "filmography"
+        ]
+      }
+    },
+    {
+      "round": 26,
+      "top_k": 5,
+      "equivalence_key": "6ee7e1cb9610b34e15e08459d6f931c9d8d0d0895313de0f24f0257944e4b677",
+      "cached": true,
+      "query_sha256": "13dca32fce214467cc863e65e96881078e0de15e8b3bf514ab5e4bc4477bd8a8",
+      "query": "People That Time Forgot 1977 film Wikipedia",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"people\" OR \"that\" OR \"time\" OR \"forgot\" OR \"1977\" OR \"film\" OR \"wikipedia\"",
+        "terms": [
+          "people",
+          "that",
+          "time",
+          "forgot",
+          "1977",
+          "film",
+          "wikipedia"
+        ]
+      }
+    },
+    {
+      "round": 26,
+      "top_k": 5,
+      "equivalence_key": "9b7f611a4d6fc5390934dc77c096542c865a6bbbde971b18767ef0eba279dc79",
+      "cached": true,
+      "query_sha256": "3b8da4a8438c3b808096aedbf242c755aae9d87564040cb7677531e6bf375cd5",
+      "query": "Don Chaffey Wikipedia director filmography",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"don\" OR \"chaffey\" OR \"wikipedia\" OR \"director\" OR \"filmography\"",
+        "terms": [
+          "don",
+          "chaffey",
+          "wikipedia",
+          "director",
+          "filmography"
+        ]
+      }
+    },
+    {
+      "round": 27,
+      "top_k": 5,
+      "equivalence_key": "6ee7e1cb9610b34e15e08459d6f931c9d8d0d0895313de0f24f0257944e4b677",
+      "cached": true,
+      "query_sha256": "13dca32fce214467cc863e65e96881078e0de15e8b3bf514ab5e4bc4477bd8a8",
+      "query": "People That Time Forgot 1977 film Wikipedia",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"people\" OR \"that\" OR \"time\" OR \"forgot\" OR \"1977\" OR \"film\" OR \"wikipedia\"",
+        "terms": [
+          "people",
+          "that",
+          "time",
+          "forgot",
+          "1977",
+          "film",
+          "wikipedia"
+        ]
+      }
+    },
+    {
+      "round": 27,
+      "top_k": 5,
+      "equivalence_key": "9b7f611a4d6fc5390934dc77c096542c865a6bbbde971b18767ef0eba279dc79",
+      "cached": true,
+      "query_sha256": "3b8da4a8438c3b808096aedbf242c755aae9d87564040cb7677531e6bf375cd5",
+      "query": "Don Chaffey Wikipedia director filmography",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"don\" OR \"chaffey\" OR \"wikipedia\" OR \"director\" OR \"filmography\"",
+        "terms": [
+          "don",
+          "chaffey",
+          "wikipedia",
+          "director",
+          "filmography"
+        ]
+      }
+    },
+    {
+      "round": 28,
+      "top_k": 5,
+      "equivalence_key": "6ee7e1cb9610b34e15e08459d6f931c9d8d0d0895313de0f24f0257944e4b677",
+      "cached": true,
+      "query_sha256": "13dca32fce214467cc863e65e96881078e0de15e8b3bf514ab5e4bc4477bd8a8",
+      "query": "People That Time Forgot 1977 film Wikipedia",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"people\" OR \"that\" OR \"time\" OR \"forgot\" OR \"1977\" OR \"film\" OR \"wikipedia\"",
+        "terms": [
+          "people",
+          "that",
+          "time",
+          "forgot",
+          "1977",
+          "film",
+          "wikipedia"
+        ]
+      }
+    },
+    {
+      "round": 28,
+      "top_k": 5,
+      "equivalence_key": "9b7f611a4d6fc5390934dc77c096542c865a6bbbde971b18767ef0eba279dc79",
+      "cached": true,
+      "query_sha256": "3b8da4a8438c3b808096aedbf242c755aae9d87564040cb7677531e6bf375cd5",
+      "query": "Don Chaffey Wikipedia director filmography",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"don\" OR \"chaffey\" OR \"wikipedia\" OR \"director\" OR \"filmography\"",
+        "terms": [
+          "don",
+          "chaffey",
+          "wikipedia",
+          "director",
+          "filmography"
+        ]
+      }
+    },
+    {
+      "round": 29,
+      "top_k": 5,
+      "equivalence_key": "6ee7e1cb9610b34e15e08459d6f931c9d8d0d0895313de0f24f0257944e4b677",
+      "cached": true,
+      "query_sha256": "13dca32fce214467cc863e65e96881078e0de15e8b3bf514ab5e4bc4477bd8a8",
+      "query": "People That Time Forgot 1977 film Wikipedia",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"people\" OR \"that\" OR \"time\" OR \"forgot\" OR \"1977\" OR \"film\" OR \"wikipedia\"",
+        "terms": [
+          "people",
+          "that",
+          "time",
+          "forgot",
+          "1977",
+          "film",
+          "wikipedia"
+        ]
+      }
+    },
+    {
+      "round": 29,
+      "top_k": 5,
+      "equivalence_key": "9b7f611a4d6fc5390934dc77c096542c865a6bbbde971b18767ef0eba279dc79",
+      "cached": true,
+      "query_sha256": "3b8da4a8438c3b808096aedbf242c755aae9d87564040cb7677531e6bf375cd5",
+      "query": "Don Chaffey Wikipedia director filmography",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"don\" OR \"chaffey\" OR \"wikipedia\" OR \"director\" OR \"filmography\"",
+        "terms": [
+          "don",
+          "chaffey",
+          "wikipedia",
+          "director",
+          "filmography"
+        ]
+      }
+    },
+    {
+      "round": 30,
+      "top_k": 5,
+      "equivalence_key": "6ee7e1cb9610b34e15e08459d6f931c9d8d0d0895313de0f24f0257944e4b677",
+      "cached": true,
+      "query_sha256": "13dca32fce214467cc863e65e96881078e0de15e8b3bf514ab5e4bc4477bd8a8",
+      "query": "People That Time Forgot 1977 film Wikipedia",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"people\" OR \"that\" OR \"time\" OR \"forgot\" OR \"1977\" OR \"film\" OR \"wikipedia\"",
+        "terms": [
+          "people",
+          "that",
+          "time",
+          "forgot",
+          "1977",
+          "film",
+          "wikipedia"
+        ]
+      }
+    },
+    {
+      "round": 30,
+      "top_k": 5,
+      "equivalence_key": "9b7f611a4d6fc5390934dc77c096542c865a6bbbde971b18767ef0eba279dc79",
+      "cached": true,
+      "query_sha256": "3b8da4a8438c3b808096aedbf242c755aae9d87564040cb7677531e6bf375cd5",
+      "query": "Don Chaffey Wikipedia director filmography",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"don\" OR \"chaffey\" OR \"wikipedia\" OR \"director\" OR \"filmography\"",
+        "terms": [
+          "don",
+          "chaffey",
+          "wikipedia",
+          "director",
+          "filmography"
+        ]
+      }
+    },
+    {
+      "round": 31,
+      "top_k": 5,
+      "equivalence_key": "6ee7e1cb9610b34e15e08459d6f931c9d8d0d0895313de0f24f0257944e4b677",
+      "cached": true,
+      "query_sha256": "13dca32fce214467cc863e65e96881078e0de15e8b3bf514ab5e4bc4477bd8a8",
+      "query": "People That Time Forgot 1977 film Wikipedia",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"people\" OR \"that\" OR \"time\" OR \"forgot\" OR \"1977\" OR \"film\" OR \"wikipedia\"",
+        "terms": [
+          "people",
+          "that",
+          "time",
+          "forgot",
+          "1977",
+          "film",
+          "wikipedia"
+        ]
+      }
+    },
+    {
+      "round": 31,
+      "top_k": 5,
+      "equivalence_key": "9b7f611a4d6fc5390934dc77c096542c865a6bbbde971b18767ef0eba279dc79",
+      "cached": true,
+      "query_sha256": "3b8da4a8438c3b808096aedbf242c755aae9d87564040cb7677531e6bf375cd5",
+      "query": "Don Chaffey Wikipedia director filmography",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"don\" OR \"chaffey\" OR \"wikipedia\" OR \"director\" OR \"filmography\"",
+        "terms": [
+          "don",
+          "chaffey",
+          "wikipedia",
+          "director",
+          "filmography"
+        ]
+      }
+    },
+    {
+      "round": 32,
+      "top_k": 5,
+      "equivalence_key": "6ee7e1cb9610b34e15e08459d6f931c9d8d0d0895313de0f24f0257944e4b677",
+      "cached": true,
+      "query_sha256": "13dca32fce214467cc863e65e96881078e0de15e8b3bf514ab5e4bc4477bd8a8",
+      "query": "People That Time Forgot 1977 film Wikipedia",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"people\" OR \"that\" OR \"time\" OR \"forgot\" OR \"1977\" OR \"film\" OR \"wikipedia\"",
+        "terms": [
+          "people",
+          "that",
+          "time",
+          "forgot",
+          "1977",
+          "film",
+          "wikipedia"
+        ]
+      }
+    },
+    {
+      "round": 32,
+      "top_k": 5,
+      "equivalence_key": "9b7f611a4d6fc5390934dc77c096542c865a6bbbde971b18767ef0eba279dc79",
+      "cached": true,
+      "query_sha256": "3b8da4a8438c3b808096aedbf242c755aae9d87564040cb7677531e6bf375cd5",
+      "query": "Don Chaffey Wikipedia director filmography",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"don\" OR \"chaffey\" OR \"wikipedia\" OR \"director\" OR \"filmography\"",
+        "terms": [
+          "don",
+          "chaffey",
+          "wikipedia",
+          "director",
+          "filmography"
+        ]
+      }
+    },
+    {
+      "round": 33,
+      "top_k": 5,
+      "equivalence_key": "6ee7e1cb9610b34e15e08459d6f931c9d8d0d0895313de0f24f0257944e4b677",
+      "cached": true,
+      "query_sha256": "13dca32fce214467cc863e65e96881078e0de15e8b3bf514ab5e4bc4477bd8a8",
+      "query": "People That Time Forgot 1977 film Wikipedia",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"people\" OR \"that\" OR \"time\" OR \"forgot\" OR \"1977\" OR \"film\" OR \"wikipedia\"",
+        "terms": [
+          "people",
+          "that",
+          "time",
+          "forgot",
+          "1977",
+          "film",
+          "wikipedia"
+        ]
+      }
+    },
+    {
+      "round": 33,
+      "top_k": 5,
+      "equivalence_key": "9b7f611a4d6fc5390934dc77c096542c865a6bbbde971b18767ef0eba279dc79",
+      "cached": true,
+      "query_sha256": "3b8da4a8438c3b808096aedbf242c755aae9d87564040cb7677531e6bf375cd5",
+      "query": "Don Chaffey Wikipedia director filmography",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"don\" OR \"chaffey\" OR \"wikipedia\" OR \"director\" OR \"filmography\"",
+        "terms": [
+          "don",
+          "chaffey",
+          "wikipedia",
+          "director",
+          "filmography"
+        ]
+      }
+    },
+    {
+      "round": 34,
+      "top_k": 5,
+      "equivalence_key": "6ee7e1cb9610b34e15e08459d6f931c9d8d0d0895313de0f24f0257944e4b677",
+      "cached": true,
+      "query_sha256": "13dca32fce214467cc863e65e96881078e0de15e8b3bf514ab5e4bc4477bd8a8",
+      "query": "People That Time Forgot 1977 film Wikipedia",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"people\" OR \"that\" OR \"time\" OR \"forgot\" OR \"1977\" OR \"film\" OR \"wikipedia\"",
+        "terms": [
+          "people",
+          "that",
+          "time",
+          "forgot",
+          "1977",
+          "film",
+          "wikipedia"
+        ]
+      }
+    },
+    {
+      "round": 34,
+      "top_k": 5,
+      "equivalence_key": "9b7f611a4d6fc5390934dc77c096542c865a6bbbde971b18767ef0eba279dc79",
+      "cached": true,
+      "query_sha256": "3b8da4a8438c3b808096aedbf242c755aae9d87564040cb7677531e6bf375cd5",
+      "query": "Don Chaffey Wikipedia director filmography",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"don\" OR \"chaffey\" OR \"wikipedia\" OR \"director\" OR \"filmography\"",
+        "terms": [
+          "don",
+          "chaffey",
+          "wikipedia",
+          "director",
+          "filmography"
+        ]
+      }
+    },
+    {
+      "round": 35,
+      "top_k": 5,
+      "equivalence_key": "6ee7e1cb9610b34e15e08459d6f931c9d8d0d0895313de0f24f0257944e4b677",
+      "cached": true,
+      "query_sha256": "13dca32fce214467cc863e65e96881078e0de15e8b3bf514ab5e4bc4477bd8a8",
+      "query": "People That Time Forgot 1977 film Wikipedia",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"people\" OR \"that\" OR \"time\" OR \"forgot\" OR \"1977\" OR \"film\" OR \"wikipedia\"",
+        "terms": [
+          "people",
+          "that",
+          "time",
+          "forgot",
+          "1977",
+          "film",
+          "wikipedia"
+        ]
+      }
+    },
+    {
+      "round": 35,
+      "top_k": 5,
+      "equivalence_key": "9b7f611a4d6fc5390934dc77c096542c865a6bbbde971b18767ef0eba279dc79",
+      "cached": true,
+      "query_sha256": "3b8da4a8438c3b808096aedbf242c755aae9d87564040cb7677531e6bf375cd5",
+      "query": "Don Chaffey Wikipedia director filmography",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"don\" OR \"chaffey\" OR \"wikipedia\" OR \"director\" OR \"filmography\"",
+        "terms": [
+          "don",
+          "chaffey",
+          "wikipedia",
+          "director",
+          "filmography"
+        ]
+      }
+    },
+    {
+      "round": 36,
+      "top_k": 5,
+      "equivalence_key": "6ee7e1cb9610b34e15e08459d6f931c9d8d0d0895313de0f24f0257944e4b677",
+      "cached": true,
+      "query_sha256": "13dca32fce214467cc863e65e96881078e0de15e8b3bf514ab5e4bc4477bd8a8",
+      "query": "People That Time Forgot 1977 film Wikipedia",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"people\" OR \"that\" OR \"time\" OR \"forgot\" OR \"1977\" OR \"film\" OR \"wikipedia\"",
+        "terms": [
+          "people",
+          "that",
+          "time",
+          "forgot",
+          "1977",
+          "film",
+          "wikipedia"
+        ]
+      }
+    },
+    {
+      "round": 36,
+      "top_k": 5,
+      "equivalence_key": "9b7f611a4d6fc5390934dc77c096542c865a6bbbde971b18767ef0eba279dc79",
+      "cached": true,
+      "query_sha256": "3b8da4a8438c3b808096aedbf242c755aae9d87564040cb7677531e6bf375cd5",
+      "query": "Don Chaffey Wikipedia director filmography",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"don\" OR \"chaffey\" OR \"wikipedia\" OR \"director\" OR \"filmography\"",
+        "terms": [
+          "don",
+          "chaffey",
+          "wikipedia",
+          "director",
+          "filmography"
+        ]
+      }
+    },
+    {
+      "round": 37,
+      "top_k": 5,
+      "equivalence_key": "6ee7e1cb9610b34e15e08459d6f931c9d8d0d0895313de0f24f0257944e4b677",
+      "cached": true,
+      "query_sha256": "13dca32fce214467cc863e65e96881078e0de15e8b3bf514ab5e4bc4477bd8a8",
+      "query": "People That Time Forgot 1977 film Wikipedia",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"people\" OR \"that\" OR \"time\" OR \"forgot\" OR \"1977\" OR \"film\" OR \"wikipedia\"",
+        "terms": [
+          "people",
+          "that",
+          "time",
+          "forgot",
+          "1977",
+          "film",
+          "wikipedia"
+        ]
+      }
+    },
+    {
+      "round": 37,
+      "top_k": 5,
+      "equivalence_key": "9b7f611a4d6fc5390934dc77c096542c865a6bbbde971b18767ef0eba279dc79",
+      "cached": true,
+      "query_sha256": "3b8da4a8438c3b808096aedbf242c755aae9d87564040cb7677531e6bf375cd5",
+      "query": "Don Chaffey Wikipedia director filmography",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"don\" OR \"chaffey\" OR \"wikipedia\" OR \"director\" OR \"filmography\"",
+        "terms": [
+          "don",
+          "chaffey",
+          "wikipedia",
+          "director",
+          "filmography"
+        ]
+      }
+    },
+    {
+      "round": 38,
+      "top_k": 5,
+      "equivalence_key": "6ee7e1cb9610b34e15e08459d6f931c9d8d0d0895313de0f24f0257944e4b677",
+      "cached": true,
+      "query_sha256": "13dca32fce214467cc863e65e96881078e0de15e8b3bf514ab5e4bc4477bd8a8",
+      "query": "People That Time Forgot 1977 film Wikipedia",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"people\" OR \"that\" OR \"time\" OR \"forgot\" OR \"1977\" OR \"film\" OR \"wikipedia\"",
+        "terms": [
+          "people",
+          "that",
+          "time",
+          "forgot",
+          "1977",
+          "film",
+          "wikipedia"
+        ]
+      }
+    },
+    {
+      "round": 38,
+      "top_k": 5,
+      "equivalence_key": "9b7f611a4d6fc5390934dc77c096542c865a6bbbde971b18767ef0eba279dc79",
+      "cached": true,
+      "query_sha256": "3b8da4a8438c3b808096aedbf242c755aae9d87564040cb7677531e6bf375cd5",
+      "query": "Don Chaffey Wikipedia director filmography",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"don\" OR \"chaffey\" OR \"wikipedia\" OR \"director\" OR \"filmography\"",
+        "terms": [
+          "don",
+          "chaffey",
+          "wikipedia",
+          "director",
+          "filmography"
+        ]
+      }
+    },
+    {
+      "round": 39,
+      "top_k": 5,
+      "equivalence_key": "6ee7e1cb9610b34e15e08459d6f931c9d8d0d0895313de0f24f0257944e4b677",
+      "cached": true,
+      "query_sha256": "13dca32fce214467cc863e65e96881078e0de15e8b3bf514ab5e4bc4477bd8a8",
+      "query": "People That Time Forgot 1977 film Wikipedia",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"people\" OR \"that\" OR \"time\" OR \"forgot\" OR \"1977\" OR \"film\" OR \"wikipedia\"",
+        "terms": [
+          "people",
+          "that",
+          "time",
+          "forgot",
+          "1977",
+          "film",
+          "wikipedia"
+        ]
+      }
+    },
+    {
+      "round": 39,
+      "top_k": 5,
+      "equivalence_key": "9b7f611a4d6fc5390934dc77c096542c865a6bbbde971b18767ef0eba279dc79",
+      "cached": true,
+      "query_sha256": "3b8da4a8438c3b808096aedbf242c755aae9d87564040cb7677531e6bf375cd5",
+      "query": "Don Chaffey Wikipedia director filmography",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"don\" OR \"chaffey\" OR \"wikipedia\" OR \"director\" OR \"filmography\"",
+        "terms": [
+          "don",
+          "chaffey",
+          "wikipedia",
+          "director",
+          "filmography"
+        ]
+      }
+    },
+    {
+      "round": 40,
+      "top_k": 5,
+      "equivalence_key": "6ee7e1cb9610b34e15e08459d6f931c9d8d0d0895313de0f24f0257944e4b677",
+      "cached": true,
+      "query_sha256": "13dca32fce214467cc863e65e96881078e0de15e8b3bf514ab5e4bc4477bd8a8",
+      "query": "People That Time Forgot 1977 film Wikipedia",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"people\" OR \"that\" OR \"time\" OR \"forgot\" OR \"1977\" OR \"film\" OR \"wikipedia\"",
+        "terms": [
+          "people",
+          "that",
+          "time",
+          "forgot",
+          "1977",
+          "film",
+          "wikipedia"
+        ]
+      }
+    },
+    {
+      "round": 40,
+      "top_k": 5,
+      "equivalence_key": "9b7f611a4d6fc5390934dc77c096542c865a6bbbde971b18767ef0eba279dc79",
+      "cached": true,
+      "query_sha256": "3b8da4a8438c3b808096aedbf242c755aae9d87564040cb7677531e6bf375cd5",
+      "query": "Don Chaffey Wikipedia director filmography",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"don\" OR \"chaffey\" OR \"wikipedia\" OR \"director\" OR \"filmography\"",
+        "terms": [
+          "don",
+          "chaffey",
+          "wikipedia",
+          "director",
+          "filmography"
+        ]
+      }
+    },
+    {
+      "round": 41,
+      "top_k": 5,
+      "equivalence_key": "6ee7e1cb9610b34e15e08459d6f931c9d8d0d0895313de0f24f0257944e4b677",
+      "cached": true,
+      "query_sha256": "13dca32fce214467cc863e65e96881078e0de15e8b3bf514ab5e4bc4477bd8a8",
+      "query": "People That Time Forgot 1977 film Wikipedia",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"people\" OR \"that\" OR \"time\" OR \"forgot\" OR \"1977\" OR \"film\" OR \"wikipedia\"",
+        "terms": [
+          "people",
+          "that",
+          "time",
+          "forgot",
+          "1977",
+          "film",
+          "wikipedia"
+        ]
+      }
+    },
+    {
+      "round": 41,
+      "top_k": 5,
+      "equivalence_key": "9b7f611a4d6fc5390934dc77c096542c865a6bbbde971b18767ef0eba279dc79",
+      "cached": true,
+      "query_sha256": "3b8da4a8438c3b808096aedbf242c755aae9d87564040cb7677531e6bf375cd5",
+      "query": "Don Chaffey Wikipedia director filmography",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"don\" OR \"chaffey\" OR \"wikipedia\" OR \"director\" OR \"filmography\"",
+        "terms": [
+          "don",
+          "chaffey",
+          "wikipedia",
+          "director",
+          "filmography"
+        ]
+      }
+    },
+    {
+      "round": 42,
+      "top_k": 5,
+      "equivalence_key": "6ee7e1cb9610b34e15e08459d6f931c9d8d0d0895313de0f24f0257944e4b677",
+      "cached": true,
+      "query_sha256": "13dca32fce214467cc863e65e96881078e0de15e8b3bf514ab5e4bc4477bd8a8",
+      "query": "People That Time Forgot 1977 film Wikipedia",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"people\" OR \"that\" OR \"time\" OR \"forgot\" OR \"1977\" OR \"film\" OR \"wikipedia\"",
+        "terms": [
+          "people",
+          "that",
+          "time",
+          "forgot",
+          "1977",
+          "film",
+          "wikipedia"
+        ]
+      }
+    },
+    {
+      "round": 42,
+      "top_k": 5,
+      "equivalence_key": "9b7f611a4d6fc5390934dc77c096542c865a6bbbde971b18767ef0eba279dc79",
+      "cached": true,
+      "query_sha256": "3b8da4a8438c3b808096aedbf242c755aae9d87564040cb7677531e6bf375cd5",
+      "query": "Don Chaffey Wikipedia director filmography",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"don\" OR \"chaffey\" OR \"wikipedia\" OR \"director\" OR \"filmography\"",
+        "terms": [
+          "don",
+          "chaffey",
+          "wikipedia",
+          "director",
+          "filmography"
+        ]
+      }
+    },
+    {
+      "round": 43,
+      "top_k": 5,
+      "equivalence_key": "6ee7e1cb9610b34e15e08459d6f931c9d8d0d0895313de0f24f0257944e4b677",
+      "cached": true,
+      "query_sha256": "13dca32fce214467cc863e65e96881078e0de15e8b3bf514ab5e4bc4477bd8a8",
+      "query": "People That Time Forgot 1977 film Wikipedia",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"people\" OR \"that\" OR \"time\" OR \"forgot\" OR \"1977\" OR \"film\" OR \"wikipedia\"",
+        "terms": [
+          "people",
+          "that",
+          "time",
+          "forgot",
+          "1977",
+          "film",
+          "wikipedia"
+        ]
+      }
+    },
+    {
+      "round": 43,
+      "top_k": 5,
+      "equivalence_key": "9b7f611a4d6fc5390934dc77c096542c865a6bbbde971b18767ef0eba279dc79",
+      "cached": true,
+      "query_sha256": "3b8da4a8438c3b808096aedbf242c755aae9d87564040cb7677531e6bf375cd5",
+      "query": "Don Chaffey Wikipedia director filmography",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"don\" OR \"chaffey\" OR \"wikipedia\" OR \"director\" OR \"filmography\"",
+        "terms": [
+          "don",
+          "chaffey",
+          "wikipedia",
+          "director",
+          "filmography"
+        ]
+      }
+    },
+    {
+      "round": 44,
+      "top_k": 5,
+      "equivalence_key": "6ee7e1cb9610b34e15e08459d6f931c9d8d0d0895313de0f24f0257944e4b677",
+      "cached": true,
+      "query_sha256": "13dca32fce214467cc863e65e96881078e0de15e8b3bf514ab5e4bc4477bd8a8",
+      "query": "People That Time Forgot 1977 film Wikipedia",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"people\" OR \"that\" OR \"time\" OR \"forgot\" OR \"1977\" OR \"film\" OR \"wikipedia\"",
+        "terms": [
+          "people",
+          "that",
+          "time",
+          "forgot",
+          "1977",
+          "film",
+          "wikipedia"
+        ]
+      }
+    },
+    {
+      "round": 44,
+      "top_k": 5,
+      "equivalence_key": "9b7f611a4d6fc5390934dc77c096542c865a6bbbde971b18767ef0eba279dc79",
+      "cached": true,
+      "query_sha256": "3b8da4a8438c3b808096aedbf242c755aae9d87564040cb7677531e6bf375cd5",
+      "query": "Don Chaffey Wikipedia director filmography",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"don\" OR \"chaffey\" OR \"wikipedia\" OR \"director\" OR \"filmography\"",
+        "terms": [
+          "don",
+          "chaffey",
+          "wikipedia",
+          "director",
+          "filmography"
+        ]
+      }
+    },
+    {
+      "round": 45,
+      "top_k": 5,
+      "equivalence_key": "6ee7e1cb9610b34e15e08459d6f931c9d8d0d0895313de0f24f0257944e4b677",
+      "cached": true,
+      "query_sha256": "13dca32fce214467cc863e65e96881078e0de15e8b3bf514ab5e4bc4477bd8a8",
+      "query": "People That Time Forgot 1977 film Wikipedia",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"people\" OR \"that\" OR \"time\" OR \"forgot\" OR \"1977\" OR \"film\" OR \"wikipedia\"",
+        "terms": [
+          "people",
+          "that",
+          "time",
+          "forgot",
+          "1977",
+          "film",
+          "wikipedia"
+        ]
+      }
+    },
+    {
+      "round": 45,
+      "top_k": 5,
+      "equivalence_key": "9b7f611a4d6fc5390934dc77c096542c865a6bbbde971b18767ef0eba279dc79",
+      "cached": true,
+      "query_sha256": "3b8da4a8438c3b808096aedbf242c755aae9d87564040cb7677531e6bf375cd5",
+      "query": "Don Chaffey Wikipedia director filmography",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"don\" OR \"chaffey\" OR \"wikipedia\" OR \"director\" OR \"filmography\"",
+        "terms": [
+          "don",
+          "chaffey",
+          "wikipedia",
+          "director",
+          "filmography"
+        ]
+      }
+    },
+    {
+      "round": 46,
+      "top_k": 5,
+      "equivalence_key": "6ee7e1cb9610b34e15e08459d6f931c9d8d0d0895313de0f24f0257944e4b677",
+      "cached": true,
+      "query_sha256": "13dca32fce214467cc863e65e96881078e0de15e8b3bf514ab5e4bc4477bd8a8",
+      "query": "People That Time Forgot 1977 film Wikipedia",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"people\" OR \"that\" OR \"time\" OR \"forgot\" OR \"1977\" OR \"film\" OR \"wikipedia\"",
+        "terms": [
+          "people",
+          "that",
+          "time",
+          "forgot",
+          "1977",
+          "film",
+          "wikipedia"
+        ]
+      }
+    },
+    {
+      "round": 46,
+      "top_k": 5,
+      "equivalence_key": "9b7f611a4d6fc5390934dc77c096542c865a6bbbde971b18767ef0eba279dc79",
+      "cached": true,
+      "query_sha256": "3b8da4a8438c3b808096aedbf242c755aae9d87564040cb7677531e6bf375cd5",
+      "query": "Don Chaffey Wikipedia director filmography",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"don\" OR \"chaffey\" OR \"wikipedia\" OR \"director\" OR \"filmography\"",
+        "terms": [
+          "don",
+          "chaffey",
+          "wikipedia",
+          "director",
+          "filmography"
+        ]
+      }
+    },
+    {
+      "round": 47,
+      "top_k": 5,
+      "equivalence_key": "6ee7e1cb9610b34e15e08459d6f931c9d8d0d0895313de0f24f0257944e4b677",
+      "cached": true,
+      "query_sha256": "13dca32fce214467cc863e65e96881078e0de15e8b3bf514ab5e4bc4477bd8a8",
+      "query": "People That Time Forgot 1977 film Wikipedia",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"people\" OR \"that\" OR \"time\" OR \"forgot\" OR \"1977\" OR \"film\" OR \"wikipedia\"",
+        "terms": [
+          "people",
+          "that",
+          "time",
+          "forgot",
+          "1977",
+          "film",
+          "wikipedia"
+        ]
+      }
+    },
+    {
+      "round": 47,
+      "top_k": 5,
+      "equivalence_key": "9b7f611a4d6fc5390934dc77c096542c865a6bbbde971b18767ef0eba279dc79",
+      "cached": true,
+      "query_sha256": "3b8da4a8438c3b808096aedbf242c755aae9d87564040cb7677531e6bf375cd5",
+      "query": "Don Chaffey Wikipedia director filmography",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"don\" OR \"chaffey\" OR \"wikipedia\" OR \"director\" OR \"filmography\"",
+        "terms": [
+          "don",
+          "chaffey",
+          "wikipedia",
+          "director",
+          "filmography"
+        ]
+      }
+    },
+    {
+      "round": 48,
+      "top_k": 5,
+      "equivalence_key": "6ee7e1cb9610b34e15e08459d6f931c9d8d0d0895313de0f24f0257944e4b677",
+      "cached": true,
+      "query_sha256": "13dca32fce214467cc863e65e96881078e0de15e8b3bf514ab5e4bc4477bd8a8",
+      "query": "People That Time Forgot 1977 film Wikipedia",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"people\" OR \"that\" OR \"time\" OR \"forgot\" OR \"1977\" OR \"film\" OR \"wikipedia\"",
+        "terms": [
+          "people",
+          "that",
+          "time",
+          "forgot",
+          "1977",
+          "film",
+          "wikipedia"
+        ]
+      }
+    },
+    {
+      "round": 48,
+      "top_k": 5,
+      "equivalence_key": "9b7f611a4d6fc5390934dc77c096542c865a6bbbde971b18767ef0eba279dc79",
+      "cached": true,
+      "query_sha256": "3b8da4a8438c3b808096aedbf242c755aae9d87564040cb7677531e6bf375cd5",
+      "query": "Don Chaffey Wikipedia director filmography",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"don\" OR \"chaffey\" OR \"wikipedia\" OR \"director\" OR \"filmography\"",
+        "terms": [
+          "don",
+          "chaffey",
+          "wikipedia",
+          "director",
+          "filmography"
+        ]
+      }
+    },
+    {
+      "round": 49,
+      "top_k": 5,
+      "equivalence_key": "6ee7e1cb9610b34e15e08459d6f931c9d8d0d0895313de0f24f0257944e4b677",
+      "cached": true,
+      "query_sha256": "13dca32fce214467cc863e65e96881078e0de15e8b3bf514ab5e4bc4477bd8a8",
+      "query": "People That Time Forgot 1977 film Wikipedia",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"people\" OR \"that\" OR \"time\" OR \"forgot\" OR \"1977\" OR \"film\" OR \"wikipedia\"",
+        "terms": [
+          "people",
+          "that",
+          "time",
+          "forgot",
+          "1977",
+          "film",
+          "wikipedia"
+        ]
+      }
+    },
+    {
+      "round": 49,
+      "top_k": 5,
+      "equivalence_key": "9b7f611a4d6fc5390934dc77c096542c865a6bbbde971b18767ef0eba279dc79",
+      "cached": true,
+      "query_sha256": "3b8da4a8438c3b808096aedbf242c755aae9d87564040cb7677531e6bf375cd5",
+      "query": "Don Chaffey Wikipedia director filmography",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"don\" OR \"chaffey\" OR \"wikipedia\" OR \"director\" OR \"filmography\"",
+        "terms": [
+          "don",
+          "chaffey",
+          "wikipedia",
+          "director",
+          "filmography"
+        ]
+      }
+    },
+    {
+      "round": 50,
+      "top_k": 5,
+      "equivalence_key": "6ee7e1cb9610b34e15e08459d6f931c9d8d0d0895313de0f24f0257944e4b677",
+      "cached": true,
+      "query_sha256": "13dca32fce214467cc863e65e96881078e0de15e8b3bf514ab5e4bc4477bd8a8",
+      "query": "People That Time Forgot 1977 film Wikipedia",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"people\" OR \"that\" OR \"time\" OR \"forgot\" OR \"1977\" OR \"film\" OR \"wikipedia\"",
+        "terms": [
+          "people",
+          "that",
+          "time",
+          "forgot",
+          "1977",
+          "film",
+          "wikipedia"
+        ]
+      }
+    },
+    {
+      "round": 50,
+      "top_k": 5,
+      "equivalence_key": "9b7f611a4d6fc5390934dc77c096542c865a6bbbde971b18767ef0eba279dc79",
+      "cached": true,
+      "query_sha256": "3b8da4a8438c3b808096aedbf242c755aae9d87564040cb7677531e6bf375cd5",
+      "query": "Don Chaffey Wikipedia director filmography",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"don\" OR \"chaffey\" OR \"wikipedia\" OR \"director\" OR \"filmography\"",
+        "terms": [
+          "don",
+          "chaffey",
+          "wikipedia",
+          "director",
+          "filmography"
+        ]
+      }
+    },
+    {
+      "round": 51,
+      "top_k": 5,
+      "equivalence_key": "6ee7e1cb9610b34e15e08459d6f931c9d8d0d0895313de0f24f0257944e4b677",
+      "cached": true,
+      "query_sha256": "13dca32fce214467cc863e65e96881078e0de15e8b3bf514ab5e4bc4477bd8a8",
+      "query": "People That Time Forgot 1977 film Wikipedia",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"people\" OR \"that\" OR \"time\" OR \"forgot\" OR \"1977\" OR \"film\" OR \"wikipedia\"",
+        "terms": [
+          "people",
+          "that",
+          "time",
+          "forgot",
+          "1977",
+          "film",
+          "wikipedia"
+        ]
+      }
+    },
+    {
+      "round": 51,
+      "top_k": 5,
+      "equivalence_key": "9b7f611a4d6fc5390934dc77c096542c865a6bbbde971b18767ef0eba279dc79",
+      "cached": true,
+      "query_sha256": "3b8da4a8438c3b808096aedbf242c755aae9d87564040cb7677531e6bf375cd5",
+      "query": "Don Chaffey Wikipedia director filmography",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"don\" OR \"chaffey\" OR \"wikipedia\" OR \"director\" OR \"filmography\"",
+        "terms": [
+          "don",
+          "chaffey",
+          "wikipedia",
+          "director",
+          "filmography"
+        ]
+      }
+    },
+    {
+      "round": 52,
+      "top_k": 5,
+      "equivalence_key": "6ee7e1cb9610b34e15e08459d6f931c9d8d0d0895313de0f24f0257944e4b677",
+      "cached": true,
+      "query_sha256": "13dca32fce214467cc863e65e96881078e0de15e8b3bf514ab5e4bc4477bd8a8",
+      "query": "People That Time Forgot 1977 film Wikipedia",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"people\" OR \"that\" OR \"time\" OR \"forgot\" OR \"1977\" OR \"film\" OR \"wikipedia\"",
+        "terms": [
+          "people",
+          "that",
+          "time",
+          "forgot",
+          "1977",
+          "film",
+          "wikipedia"
+        ]
+      }
+    },
+    {
+      "round": 52,
+      "top_k": 5,
+      "equivalence_key": "9b7f611a4d6fc5390934dc77c096542c865a6bbbde971b18767ef0eba279dc79",
+      "cached": true,
+      "query_sha256": "3b8da4a8438c3b808096aedbf242c755aae9d87564040cb7677531e6bf375cd5",
+      "query": "Don Chaffey Wikipedia director filmography",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"don\" OR \"chaffey\" OR \"wikipedia\" OR \"director\" OR \"filmography\"",
+        "terms": [
+          "don",
+          "chaffey",
+          "wikipedia",
+          "director",
+          "filmography"
+        ]
+      }
+    },
+    {
+      "round": 53,
+      "top_k": 5,
+      "equivalence_key": "6ee7e1cb9610b34e15e08459d6f931c9d8d0d0895313de0f24f0257944e4b677",
+      "cached": true,
+      "query_sha256": "13dca32fce214467cc863e65e96881078e0de15e8b3bf514ab5e4bc4477bd8a8",
+      "query": "People That Time Forgot 1977 film Wikipedia",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"people\" OR \"that\" OR \"time\" OR \"forgot\" OR \"1977\" OR \"film\" OR \"wikipedia\"",
+        "terms": [
+          "people",
+          "that",
+          "time",
+          "forgot",
+          "1977",
+          "film",
+          "wikipedia"
+        ]
+      }
+    },
+    {
+      "round": 53,
+      "top_k": 5,
+      "equivalence_key": "9b7f611a4d6fc5390934dc77c096542c865a6bbbde971b18767ef0eba279dc79",
+      "cached": true,
+      "query_sha256": "3b8da4a8438c3b808096aedbf242c755aae9d87564040cb7677531e6bf375cd5",
+      "query": "Don Chaffey Wikipedia director filmography",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"don\" OR \"chaffey\" OR \"wikipedia\" OR \"director\" OR \"filmography\"",
+        "terms": [
+          "don",
+          "chaffey",
+          "wikipedia",
+          "director",
+          "filmography"
+        ]
+      }
+    },
+    {
+      "round": 54,
+      "top_k": 5,
+      "equivalence_key": "6ee7e1cb9610b34e15e08459d6f931c9d8d0d0895313de0f24f0257944e4b677",
+      "cached": true,
+      "query_sha256": "13dca32fce214467cc863e65e96881078e0de15e8b3bf514ab5e4bc4477bd8a8",
+      "query": "People That Time Forgot 1977 film Wikipedia",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"people\" OR \"that\" OR \"time\" OR \"forgot\" OR \"1977\" OR \"film\" OR \"wikipedia\"",
+        "terms": [
+          "people",
+          "that",
+          "time",
+          "forgot",
+          "1977",
+          "film",
+          "wikipedia"
+        ]
+      }
+    },
+    {
+      "round": 54,
+      "top_k": 5,
+      "equivalence_key": "9b7f611a4d6fc5390934dc77c096542c865a6bbbde971b18767ef0eba279dc79",
+      "cached": true,
+      "query_sha256": "3b8da4a8438c3b808096aedbf242c755aae9d87564040cb7677531e6bf375cd5",
+      "query": "Don Chaffey Wikipedia director filmography",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"don\" OR \"chaffey\" OR \"wikipedia\" OR \"director\" OR \"filmography\"",
+        "terms": [
+          "don",
+          "chaffey",
+          "wikipedia",
+          "director",
+          "filmography"
+        ]
+      }
+    },
+    {
+      "round": 55,
+      "top_k": 5,
+      "equivalence_key": "6ee7e1cb9610b34e15e08459d6f931c9d8d0d0895313de0f24f0257944e4b677",
+      "cached": true,
+      "query_sha256": "13dca32fce214467cc863e65e96881078e0de15e8b3bf514ab5e4bc4477bd8a8",
+      "query": "People That Time Forgot 1977 film Wikipedia",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"people\" OR \"that\" OR \"time\" OR \"forgot\" OR \"1977\" OR \"film\" OR \"wikipedia\"",
+        "terms": [
+          "people",
+          "that",
+          "time",
+          "forgot",
+          "1977",
+          "film",
+          "wikipedia"
+        ]
+      }
+    },
+    {
+      "round": 55,
+      "top_k": 5,
+      "equivalence_key": "9b7f611a4d6fc5390934dc77c096542c865a6bbbde971b18767ef0eba279dc79",
+      "cached": true,
+      "query_sha256": "3b8da4a8438c3b808096aedbf242c755aae9d87564040cb7677531e6bf375cd5",
+      "query": "Don Chaffey Wikipedia director filmography",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"don\" OR \"chaffey\" OR \"wikipedia\" OR \"director\" OR \"filmography\"",
+        "terms": [
+          "don",
+          "chaffey",
+          "wikipedia",
+          "director",
+          "filmography"
+        ]
+      }
+    },
+    {
+      "round": 56,
+      "top_k": 5,
+      "equivalence_key": "6ee7e1cb9610b34e15e08459d6f931c9d8d0d0895313de0f24f0257944e4b677",
+      "cached": true,
+      "query_sha256": "13dca32fce214467cc863e65e96881078e0de15e8b3bf514ab5e4bc4477bd8a8",
+      "query": "People That Time Forgot 1977 film Wikipedia",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"people\" OR \"that\" OR \"time\" OR \"forgot\" OR \"1977\" OR \"film\" OR \"wikipedia\"",
+        "terms": [
+          "people",
+          "that",
+          "time",
+          "forgot",
+          "1977",
+          "film",
+          "wikipedia"
+        ]
+      }
+    },
+    {
+      "round": 56,
+      "top_k": 5,
+      "equivalence_key": "9b7f611a4d6fc5390934dc77c096542c865a6bbbde971b18767ef0eba279dc79",
+      "cached": true,
+      "query_sha256": "3b8da4a8438c3b808096aedbf242c755aae9d87564040cb7677531e6bf375cd5",
+      "query": "Don Chaffey Wikipedia director filmography",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"don\" OR \"chaffey\" OR \"wikipedia\" OR \"director\" OR \"filmography\"",
+        "terms": [
+          "don",
+          "chaffey",
+          "wikipedia",
+          "director",
+          "filmography"
+        ]
+      }
+    },
+    {
+      "round": 57,
+      "top_k": 5,
+      "equivalence_key": "6ee7e1cb9610b34e15e08459d6f931c9d8d0d0895313de0f24f0257944e4b677",
+      "cached": true,
+      "query_sha256": "13dca32fce214467cc863e65e96881078e0de15e8b3bf514ab5e4bc4477bd8a8",
+      "query": "People That Time Forgot 1977 film Wikipedia",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"people\" OR \"that\" OR \"time\" OR \"forgot\" OR \"1977\" OR \"film\" OR \"wikipedia\"",
+        "terms": [
+          "people",
+          "that",
+          "time",
+          "forgot",
+          "1977",
+          "film",
+          "wikipedia"
+        ]
+      }
+    },
+    {
+      "round": 57,
+      "top_k": 5,
+      "equivalence_key": "9b7f611a4d6fc5390934dc77c096542c865a6bbbde971b18767ef0eba279dc79",
+      "cached": true,
+      "query_sha256": "3b8da4a8438c3b808096aedbf242c755aae9d87564040cb7677531e6bf375cd5",
+      "query": "Don Chaffey Wikipedia director filmography",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"don\" OR \"chaffey\" OR \"wikipedia\" OR \"director\" OR \"filmography\"",
+        "terms": [
+          "don",
+          "chaffey",
+          "wikipedia",
+          "director",
+          "filmography"
+        ]
+      }
+    },
+    {
+      "round": 58,
+      "top_k": 5,
+      "equivalence_key": "6ee7e1cb9610b34e15e08459d6f931c9d8d0d0895313de0f24f0257944e4b677",
+      "cached": true,
+      "query_sha256": "13dca32fce214467cc863e65e96881078e0de15e8b3bf514ab5e4bc4477bd8a8",
+      "query": "People That Time Forgot 1977 film Wikipedia",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"people\" OR \"that\" OR \"time\" OR \"forgot\" OR \"1977\" OR \"film\" OR \"wikipedia\"",
+        "terms": [
+          "people",
+          "that",
+          "time",
+          "forgot",
+          "1977",
+          "film",
+          "wikipedia"
+        ]
+      }
+    },
+    {
+      "round": 58,
+      "top_k": 5,
+      "equivalence_key": "9b7f611a4d6fc5390934dc77c096542c865a6bbbde971b18767ef0eba279dc79",
+      "cached": true,
+      "query_sha256": "3b8da4a8438c3b808096aedbf242c755aae9d87564040cb7677531e6bf375cd5",
+      "query": "Don Chaffey Wikipedia director filmography",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"don\" OR \"chaffey\" OR \"wikipedia\" OR \"director\" OR \"filmography\"",
+        "terms": [
+          "don",
+          "chaffey",
+          "wikipedia",
+          "director",
+          "filmography"
+        ]
+      }
+    },
+    {
+      "round": 59,
+      "top_k": 5,
+      "equivalence_key": "6ee7e1cb9610b34e15e08459d6f931c9d8d0d0895313de0f24f0257944e4b677",
+      "cached": true,
+      "query_sha256": "13dca32fce214467cc863e65e96881078e0de15e8b3bf514ab5e4bc4477bd8a8",
+      "query": "People That Time Forgot 1977 film Wikipedia",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"people\" OR \"that\" OR \"time\" OR \"forgot\" OR \"1977\" OR \"film\" OR \"wikipedia\"",
+        "terms": [
+          "people",
+          "that",
+          "time",
+          "forgot",
+          "1977",
+          "film",
+          "wikipedia"
+        ]
+      }
+    },
+    {
+      "round": 59,
+      "top_k": 5,
+      "equivalence_key": "9b7f611a4d6fc5390934dc77c096542c865a6bbbde971b18767ef0eba279dc79",
+      "cached": true,
+      "query_sha256": "3b8da4a8438c3b808096aedbf242c755aae9d87564040cb7677531e6bf375cd5",
+      "query": "Don Chaffey Wikipedia director filmography",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"don\" OR \"chaffey\" OR \"wikipedia\" OR \"director\" OR \"filmography\"",
+        "terms": [
+          "don",
+          "chaffey",
+          "wikipedia",
+          "director",
+          "filmography"
+        ]
+      }
+    },
+    {
+      "round": 60,
+      "top_k": 5,
+      "equivalence_key": "6ee7e1cb9610b34e15e08459d6f931c9d8d0d0895313de0f24f0257944e4b677",
+      "cached": true,
+      "query_sha256": "13dca32fce214467cc863e65e96881078e0de15e8b3bf514ab5e4bc4477bd8a8",
+      "query": "People That Time Forgot 1977 film Wikipedia",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"people\" OR \"that\" OR \"time\" OR \"forgot\" OR \"1977\" OR \"film\" OR \"wikipedia\"",
+        "terms": [
+          "people",
+          "that",
+          "time",
+          "forgot",
+          "1977",
+          "film",
+          "wikipedia"
+        ]
+      }
+    },
+    {
+      "round": 60,
+      "top_k": 5,
+      "equivalence_key": "9b7f611a4d6fc5390934dc77c096542c865a6bbbde971b18767ef0eba279dc79",
+      "cached": true,
+      "query_sha256": "3b8da4a8438c3b808096aedbf242c755aae9d87564040cb7677531e6bf375cd5",
+      "query": "Don Chaffey Wikipedia director filmography",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"don\" OR \"chaffey\" OR \"wikipedia\" OR \"director\" OR \"filmography\"",
+        "terms": [
+          "don",
+          "chaffey",
+          "wikipedia",
+          "director",
+          "filmography"
+        ]
+      }
+    },
+    {
+      "round": 61,
+      "top_k": 5,
+      "equivalence_key": "6ee7e1cb9610b34e15e08459d6f931c9d8d0d0895313de0f24f0257944e4b677",
+      "cached": true,
+      "query_sha256": "13dca32fce214467cc863e65e96881078e0de15e8b3bf514ab5e4bc4477bd8a8",
+      "query": "People That Time Forgot 1977 film Wikipedia",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"people\" OR \"that\" OR \"time\" OR \"forgot\" OR \"1977\" OR \"film\" OR \"wikipedia\"",
+        "terms": [
+          "people",
+          "that",
+          "time",
+          "forgot",
+          "1977",
+          "film",
+          "wikipedia"
+        ]
+      }
+    },
+    {
+      "round": 61,
+      "top_k": 5,
+      "equivalence_key": "9b7f611a4d6fc5390934dc77c096542c865a6bbbde971b18767ef0eba279dc79",
+      "cached": true,
+      "query_sha256": "3b8da4a8438c3b808096aedbf242c755aae9d87564040cb7677531e6bf375cd5",
+      "query": "Don Chaffey Wikipedia director filmography",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"don\" OR \"chaffey\" OR \"wikipedia\" OR \"director\" OR \"filmography\"",
+        "terms": [
+          "don",
+          "chaffey",
+          "wikipedia",
+          "director",
+          "filmography"
+        ]
+      }
+    },
+    {
+      "round": 62,
+      "top_k": 5,
+      "equivalence_key": "6ee7e1cb9610b34e15e08459d6f931c9d8d0d0895313de0f24f0257944e4b677",
+      "cached": true,
+      "query_sha256": "13dca32fce214467cc863e65e96881078e0de15e8b3bf514ab5e4bc4477bd8a8",
+      "query": "People That Time Forgot 1977 film Wikipedia",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"people\" OR \"that\" OR \"time\" OR \"forgot\" OR \"1977\" OR \"film\" OR \"wikipedia\"",
+        "terms": [
+          "people",
+          "that",
+          "time",
+          "forgot",
+          "1977",
+          "film",
+          "wikipedia"
+        ]
+      }
+    },
+    {
+      "round": 62,
+      "top_k": 5,
+      "equivalence_key": "9b7f611a4d6fc5390934dc77c096542c865a6bbbde971b18767ef0eba279dc79",
+      "cached": true,
+      "query_sha256": "3b8da4a8438c3b808096aedbf242c755aae9d87564040cb7677531e6bf375cd5",
+      "query": "Don Chaffey Wikipedia director filmography",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"don\" OR \"chaffey\" OR \"wikipedia\" OR \"director\" OR \"filmography\"",
+        "terms": [
+          "don",
+          "chaffey",
+          "wikipedia",
+          "director",
+          "filmography"
+        ]
+      }
+    },
+    {
+      "round": 63,
+      "top_k": 5,
+      "equivalence_key": "6ee7e1cb9610b34e15e08459d6f931c9d8d0d0895313de0f24f0257944e4b677",
+      "cached": true,
+      "query_sha256": "13dca32fce214467cc863e65e96881078e0de15e8b3bf514ab5e4bc4477bd8a8",
+      "query": "People That Time Forgot 1977 film Wikipedia",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"people\" OR \"that\" OR \"time\" OR \"forgot\" OR \"1977\" OR \"film\" OR \"wikipedia\"",
+        "terms": [
+          "people",
+          "that",
+          "time",
+          "forgot",
+          "1977",
+          "film",
+          "wikipedia"
+        ]
+      }
+    },
+    {
+      "round": 63,
+      "top_k": 5,
+      "equivalence_key": "9b7f611a4d6fc5390934dc77c096542c865a6bbbde971b18767ef0eba279dc79",
+      "cached": true,
+      "query_sha256": "3b8da4a8438c3b808096aedbf242c755aae9d87564040cb7677531e6bf375cd5",
+      "query": "Don Chaffey Wikipedia director filmography",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"don\" OR \"chaffey\" OR \"wikipedia\" OR \"director\" OR \"filmography\"",
+        "terms": [
+          "don",
+          "chaffey",
+          "wikipedia",
+          "director",
+          "filmography"
+        ]
+      }
+    }
+  ],
+  "equivalent_query_repeats": 95,
+  "views": [
+    {
+      "round": 1,
+      "compacted": false,
+      "visible_evidence": [],
+      "shelf": [],
+      "shelf_evicted": []
+    },
+    {
+      "round": 2,
+      "compacted": false,
+      "visible_evidence": [],
+      "shelf": [],
+      "shelf_evicted": []
+    },
+    {
+      "round": 3,
+      "compacted": false,
+      "visible_evidence": [],
+      "shelf": [],
+      "shelf_evicted": []
+    },
+    {
+      "round": 4,
+      "compacted": false,
+      "visible_evidence": [],
+      "shelf": [],
+      "shelf_evicted": []
+    },
+    {
+      "round": 5,
+      "compacted": false,
+      "visible_evidence": [],
+      "shelf": [],
+      "shelf_evicted": []
+    },
+    {
+      "round": 6,
+      "compacted": false,
+      "visible_evidence": [],
+      "shelf": [],
+      "shelf_evicted": []
+    },
+    {
+      "round": 7,
+      "compacted": false,
+      "visible_evidence": [],
+      "shelf": [],
+      "shelf_evicted": []
+    },
+    {
+      "round": 8,
+      "compacted": false,
+      "visible_evidence": [
+        "e1"
+      ],
+      "shelf": [],
+      "shelf_evicted": []
+    },
+    {
+      "round": 9,
+      "compacted": false,
+      "visible_evidence": [
+        "e1"
+      ],
+      "shelf": [],
+      "shelf_evicted": []
+    },
+    {
+      "round": 10,
+      "compacted": false,
+      "visible_evidence": [
+        "e1",
+        "e2"
+      ],
+      "shelf": [],
+      "shelf_evicted": []
+    },
+    {
+      "round": 11,
+      "compacted": true,
+      "visible_evidence": [
+        "e1",
+        "e2"
+      ],
+      "shelf": [],
+      "shelf_evicted": []
+    },
+    {
+      "round": 12,
+      "compacted": false,
+      "visible_evidence": [
+        "e1",
+        "e2"
+      ],
+      "shelf": [],
+      "shelf_evicted": []
+    },
+    {
+      "round": 13,
+      "compacted": false,
+      "visible_evidence": [
+        "e1",
+        "e2"
+      ],
+      "shelf": [],
+      "shelf_evicted": []
+    },
+    {
+      "round": 14,
+      "compacted": false,
+      "visible_evidence": [
+        "e1",
+        "e2"
+      ],
+      "shelf": [],
+      "shelf_evicted": []
+    },
+    {
+      "round": 15,
+      "compacted": false,
+      "visible_evidence": [
+        "e1",
+        "e2"
+      ],
+      "shelf": [],
+      "shelf_evicted": []
+    },
+    {
+      "round": 16,
+      "compacted": false,
+      "visible_evidence": [
+        "e1",
+        "e2"
+      ],
+      "shelf": [],
+      "shelf_evicted": []
+    },
+    {
+      "round": 17,
+      "compacted": false,
+      "visible_evidence": [
+        "e1",
+        "e2"
+      ],
+      "shelf": [],
+      "shelf_evicted": []
+    },
+    {
+      "round": 18,
+      "compacted": true,
+      "visible_evidence": [
+        "e1",
+        "e2"
+      ],
+      "shelf": [
+        "e1",
+        "e2"
+      ],
+      "shelf_evicted": []
+    },
+    {
+      "round": 19,
+      "compacted": false,
+      "visible_evidence": [
+        "e1",
+        "e2"
+      ],
+      "shelf": [
+        "e1",
+        "e2"
+      ],
+      "shelf_evicted": []
+    },
+    {
+      "round": 20,
+      "compacted": false,
+      "visible_evidence": [
+        "e1",
+        "e2"
+      ],
+      "shelf": [
+        "e1",
+        "e2"
+      ],
+      "shelf_evicted": []
+    },
+    {
+      "round": 21,
+      "compacted": false,
+      "visible_evidence": [
+        "e1",
+        "e2"
+      ],
+      "shelf": [
+        "e1",
+        "e2"
+      ],
+      "shelf_evicted": []
+    },
+    {
+      "round": 22,
+      "compacted": false,
+      "visible_evidence": [
+        "e1",
+        "e2"
+      ],
+      "shelf": [
+        "e1",
+        "e2"
+      ],
+      "shelf_evicted": []
+    },
+    {
+      "round": 23,
+      "compacted": false,
+      "visible_evidence": [
+        "e1",
+        "e2"
+      ],
+      "shelf": [
+        "e1",
+        "e2"
+      ],
+      "shelf_evicted": []
+    },
+    {
+      "round": 24,
+      "compacted": false,
+      "visible_evidence": [
+        "e1",
+        "e2",
+        "e3",
+        "e4"
+      ],
+      "shelf": [
+        "e1",
+        "e2"
+      ],
+      "shelf_evicted": []
+    },
+    {
+      "round": 25,
+      "compacted": true,
+      "visible_evidence": [
+        "e2",
+        "e3",
+        "e4",
+        "e5"
+      ],
+      "shelf": [
+        "e2"
+      ],
+      "shelf_evicted": []
+    },
+    {
+      "round": 26,
+      "compacted": false,
+      "visible_evidence": [
+        "e3",
+        "e4",
+        "e5"
+      ],
+      "shelf": [],
+      "shelf_evicted": []
+    },
+    {
+      "round": 27,
+      "compacted": false,
+      "visible_evidence": [
+        "e3",
+        "e4",
+        "e5"
+      ],
+      "shelf": [],
+      "shelf_evicted": []
+    },
+    {
+      "round": 28,
+      "compacted": false,
+      "visible_evidence": [
+        "e3",
+        "e4",
+        "e5"
+      ],
+      "shelf": [],
+      "shelf_evicted": []
+    },
+    {
+      "round": 29,
+      "compacted": false,
+      "visible_evidence": [
+        "e3",
+        "e4",
+        "e5"
+      ],
+      "shelf": [],
+      "shelf_evicted": []
+    },
+    {
+      "round": 30,
+      "compacted": false,
+      "visible_evidence": [
+        "e3",
+        "e4",
+        "e5"
+      ],
+      "shelf": [],
+      "shelf_evicted": []
+    },
+    {
+      "round": 31,
+      "compacted": false,
+      "visible_evidence": [
+        "e3",
+        "e4",
+        "e5"
+      ],
+      "shelf": [],
+      "shelf_evicted": []
+    },
+    {
+      "round": 32,
+      "compacted": false,
+      "visible_evidence": [
+        "e3",
+        "e4",
+        "e5"
+      ],
+      "shelf": [],
+      "shelf_evicted": []
+    },
+    {
+      "round": 33,
+      "compacted": false,
+      "visible_evidence": [
+        "e3",
+        "e4",
+        "e5"
+      ],
+      "shelf": [],
+      "shelf_evicted": []
+    },
+    {
+      "round": 34,
+      "compacted": false,
+      "visible_evidence": [
+        "e3",
+        "e4",
+        "e5"
+      ],
+      "shelf": [],
+      "shelf_evicted": []
+    },
+    {
+      "round": 35,
+      "compacted": true,
+      "visible_evidence": [
+        "e3",
+        "e4",
+        "e5"
+      ],
+      "shelf": [
+        "e3",
+        "e4",
+        "e5"
+      ],
+      "shelf_evicted": []
+    },
+    {
+      "round": 36,
+      "compacted": false,
+      "visible_evidence": [
+        "e3",
+        "e4",
+        "e5"
+      ],
+      "shelf": [
+        "e3",
+        "e4",
+        "e5"
+      ],
+      "shelf_evicted": []
+    },
+    {
+      "round": 37,
+      "compacted": false,
+      "visible_evidence": [
+        "e3",
+        "e4",
+        "e5"
+      ],
+      "shelf": [
+        "e3",
+        "e4",
+        "e5"
+      ],
+      "shelf_evicted": []
+    },
+    {
+      "round": 38,
+      "compacted": false,
+      "visible_evidence": [
+        "e3",
+        "e4",
+        "e5"
+      ],
+      "shelf": [
+        "e3",
+        "e4",
+        "e5"
+      ],
+      "shelf_evicted": []
+    },
+    {
+      "round": 39,
+      "compacted": false,
+      "visible_evidence": [
+        "e3",
+        "e4",
+        "e5"
+      ],
+      "shelf": [
+        "e3",
+        "e4",
+        "e5"
+      ],
+      "shelf_evicted": []
+    },
+    {
+      "round": 40,
+      "compacted": false,
+      "visible_evidence": [
+        "e3",
+        "e4",
+        "e5"
+      ],
+      "shelf": [
+        "e3",
+        "e4",
+        "e5"
+      ],
+      "shelf_evicted": []
+    },
+    {
+      "round": 41,
+      "compacted": false,
+      "visible_evidence": [
+        "e3",
+        "e4",
+        "e5"
+      ],
+      "shelf": [
+        "e3",
+        "e4",
+        "e5"
+      ],
+      "shelf_evicted": []
+    },
+    {
+      "round": 42,
+      "compacted": false,
+      "visible_evidence": [
+        "e3",
+        "e4",
+        "e5"
+      ],
+      "shelf": [
+        "e3",
+        "e4",
+        "e5"
+      ],
+      "shelf_evicted": []
+    },
+    {
+      "round": 43,
+      "compacted": false,
+      "visible_evidence": [
+        "e3",
+        "e4",
+        "e5"
+      ],
+      "shelf": [
+        "e3",
+        "e4",
+        "e5"
+      ],
+      "shelf_evicted": []
+    },
+    {
+      "round": 44,
+      "compacted": true,
+      "visible_evidence": [
+        "e3",
+        "e4",
+        "e5"
+      ],
+      "shelf": [
+        "e3",
+        "e4",
+        "e5"
+      ],
+      "shelf_evicted": []
+    },
+    {
+      "round": 45,
+      "compacted": false,
+      "visible_evidence": [
+        "e3",
+        "e4",
+        "e5"
+      ],
+      "shelf": [
+        "e3",
+        "e4",
+        "e5"
+      ],
+      "shelf_evicted": []
+    },
+    {
+      "round": 46,
+      "compacted": false,
+      "visible_evidence": [
+        "e3",
+        "e4",
+        "e5"
+      ],
+      "shelf": [
+        "e3",
+        "e4",
+        "e5"
+      ],
+      "shelf_evicted": []
+    },
+    {
+      "round": 47,
+      "compacted": false,
+      "visible_evidence": [
+        "e3",
+        "e4",
+        "e5"
+      ],
+      "shelf": [
+        "e3",
+        "e4",
+        "e5"
+      ],
+      "shelf_evicted": []
+    },
+    {
+      "round": 48,
+      "compacted": false,
+      "visible_evidence": [
+        "e3",
+        "e4",
+        "e5"
+      ],
+      "shelf": [
+        "e3",
+        "e4",
+        "e5"
+      ],
+      "shelf_evicted": []
+    },
+    {
+      "round": 49,
+      "compacted": false,
+      "visible_evidence": [
+        "e3",
+        "e4",
+        "e5"
+      ],
+      "shelf": [
+        "e3",
+        "e4",
+        "e5"
+      ],
+      "shelf_evicted": []
+    },
+    {
+      "round": 50,
+      "compacted": false,
+      "visible_evidence": [
+        "e3",
+        "e4",
+        "e5"
+      ],
+      "shelf": [
+        "e3",
+        "e4",
+        "e5"
+      ],
+      "shelf_evicted": []
+    },
+    {
+      "round": 51,
+      "compacted": false,
+      "visible_evidence": [
+        "e3",
+        "e4",
+        "e5"
+      ],
+      "shelf": [
+        "e3",
+        "e4",
+        "e5"
+      ],
+      "shelf_evicted": []
+    },
+    {
+      "round": 52,
+      "compacted": false,
+      "visible_evidence": [
+        "e3",
+        "e4",
+        "e5"
+      ],
+      "shelf": [
+        "e3",
+        "e4",
+        "e5"
+      ],
+      "shelf_evicted": []
+    },
+    {
+      "round": 53,
+      "compacted": true,
+      "visible_evidence": [
+        "e3",
+        "e4",
+        "e5"
+      ],
+      "shelf": [
+        "e3",
+        "e4",
+        "e5"
+      ],
+      "shelf_evicted": []
+    },
+    {
+      "round": 54,
+      "compacted": false,
+      "visible_evidence": [
+        "e3",
+        "e4",
+        "e5"
+      ],
+      "shelf": [
+        "e3",
+        "e4",
+        "e5"
+      ],
+      "shelf_evicted": []
+    },
+    {
+      "round": 55,
+      "compacted": false,
+      "visible_evidence": [
+        "e3",
+        "e4",
+        "e5"
+      ],
+      "shelf": [
+        "e3",
+        "e4",
+        "e5"
+      ],
+      "shelf_evicted": []
+    },
+    {
+      "round": 56,
+      "compacted": false,
+      "visible_evidence": [
+        "e3",
+        "e4",
+        "e5"
+      ],
+      "shelf": [
+        "e3",
+        "e4",
+        "e5"
+      ],
+      "shelf_evicted": []
+    },
+    {
+      "round": 57,
+      "compacted": false,
+      "visible_evidence": [
+        "e3",
+        "e4",
+        "e5"
+      ],
+      "shelf": [
+        "e3",
+        "e4",
+        "e5"
+      ],
+      "shelf_evicted": []
+    },
+    {
+      "round": 58,
+      "compacted": false,
+      "visible_evidence": [
+        "e3",
+        "e4",
+        "e5"
+      ],
+      "shelf": [
+        "e3",
+        "e4",
+        "e5"
+      ],
+      "shelf_evicted": []
+    },
+    {
+      "round": 59,
+      "compacted": false,
+      "visible_evidence": [
+        "e3",
+        "e4",
+        "e5"
+      ],
+      "shelf": [
+        "e3",
+        "e4",
+        "e5"
+      ],
+      "shelf_evicted": []
+    },
+    {
+      "round": 60,
+      "compacted": false,
+      "visible_evidence": [
+        "e3",
+        "e4",
+        "e5"
+      ],
+      "shelf": [
+        "e3",
+        "e4",
+        "e5"
+      ],
+      "shelf_evicted": []
+    },
+    {
+      "round": 61,
+      "compacted": false,
+      "visible_evidence": [
+        "e3",
+        "e4",
+        "e5"
+      ],
+      "shelf": [
+        "e3",
+        "e4",
+        "e5"
+      ],
+      "shelf_evicted": []
+    },
+    {
+      "round": 62,
+      "compacted": true,
+      "visible_evidence": [
+        "e3",
+        "e4",
+        "e5"
+      ],
+      "shelf": [
+        "e3",
+        "e4",
+        "e5"
+      ],
+      "shelf_evicted": []
+    },
+    {
+      "round": 63,
+      "compacted": false,
+      "visible_evidence": [
+        "e3",
+        "e4",
+        "e5"
+      ],
+      "shelf": [
+        "e3",
+        "e4",
+        "e5"
+      ],
+      "shelf_evicted": []
+    },
+    {
+      "round": 64,
+      "compacted": false,
+      "visible_evidence": [
+        "e3",
+        "e4",
+        "e5"
+      ],
+      "shelf": [
+        "e3",
+        "e4",
+        "e5"
+      ],
+      "shelf_evicted": []
+    }
+  ],
+  "delivered_refs": [
+    "e1",
+    "e2",
+    "e3",
+    "e4",
+    "e5"
+  ],
+  "submitted_refs": [
+    "e3",
+    "e4",
+    "e5"
+  ],
+  "text_included": true,
+  "limitations": [
+    "Equivalence is compiler equality, not semantic identity or wasted-search proof",
+    "Raw-window visibility/selection is not entailment or complete evidence coverage",
+    "No live q26 replay or independent answer scoring is performed"
+  ]
+}
