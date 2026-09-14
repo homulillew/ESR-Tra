@@ -200,12 +200,15 @@ class Harness:
                 result = {'ok': False, 'code': 'not_executed', 'message': reason, 'executed': False}
                 stop = reason
             else:
+                # executed means dispatch was entered, not a backend request or a commit.
+                dispatched = False
                 try:
                     args = parse_json(call['function']['arguments'])
                     validate_action(name, args)
                     if (name == 'verify_answer' and self.auditor is not None and self.config.audit_mode != 'off'
                             and self.config.max_actions - self._s['actions'] < len(calls) - index):
                         raise ContractError('audit_action_budget', 'Reserve an action for the post-audit decision, including every unexecuted suffix receipt')
+                    dispatched = True
                     result, state = self._dispatch(name, args, binding, own, aid)
                     result = {'ok': True, 'executed': True, **result}
                     state['last_action'] = {'name': name, 'result': deepcopy(result)}
@@ -223,7 +226,7 @@ class Harness:
                     issued_cursors.extend(result.get('issued_cursors', []))
                     issued_claims.update(result.get('issued_claims', {}))
                 except ContractError as exc:
-                    result = {'ok': False, 'code': exc.code, 'message': str(exc), 'executed': True, 'committed': False}
+                    result = {'ok': False, 'code': exc.code, 'message': str(exc), 'executed': dispatched, 'committed': False}
                     state = self.state
                     state['feedback'] = {'kind': exc.code, 'detail': str(exc), 'committed': False,
                                          'legal_sources': [{'ref': o, 'title': state['observations'][o]['title']}
