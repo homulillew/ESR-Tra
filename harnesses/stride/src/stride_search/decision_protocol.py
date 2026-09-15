@@ -33,7 +33,7 @@ tool actions. No extra note, gap update, review call, or output field is require
 SEARCH_PIVOT = """The last two search rounds delivered no new source passage. In your next search batch, use one query to investigate a different identifying clue from the question. Omit the current unverified candidate's name from that query. Use concrete names, terms, dates, or relations stated in the question; use a short lexical query rather than the full question. Keep within the existing query limit and proceed directly with tool actions."""
 
 PROTOCOLS = {'baseline': '', 'constraint-review-v1': CONSTRAINT_REVIEW,
-             'search-pivot-v1': '', 'middle-history-v1': '', 'once-prose-reset-v1': '', 'relation-review-once-v1': ''}
+             'search-pivot-v1': '', 'middle-history-v1': '', 'once-prose-reset-v1': '', 'relation-review-once-v1': '', 'relation-review-memory-v1': ''}
 PIVOT_RULE = {'version': 'completed-search-no-new-source-v1',
               'consecutive_rounds': 2, 'minimum_remaining_model_calls': 3,
               'max_triggers': 2, 'reset_after_trigger': True}
@@ -42,6 +42,9 @@ PIVOT_RULE = {'version': 'completed-search-no-new-source-v1',
 def identity(name):
     if name not in PROTOCOLS:
         raise ValueError('Unknown decision protocol')
+    if name == 'relation-review-memory-v1':
+        from .review_memory import identity as memory_identity
+        return memory_identity()
     if name == 'relation-review-once-v1':
         from .relation_review import identity as review_identity
         return review_identity()

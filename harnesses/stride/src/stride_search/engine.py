@@ -28,7 +28,8 @@ class Harness:
         self.decision_protocol = decision_protocol
         self.search_pivot = SearchPivotState() if decision_protocol == "search-pivot-v1" else None
         self.once_prose = OnceProseState() if decision_protocol == "once-prose-reset-v1" else None
-        self.relation_review = RelationReviewState() if decision_protocol == "relation-review-once-v1" else None
+        self.relation_review = RelationReviewState() if decision_protocol in {"relation-review-once-v1", "relation-review-memory-v1"} else None
+        self.review_memory = None
         self.workflow = WorkflowState(workflow or WorkflowConfig())
         if answer_contract not in ANSWER_CONTRACTS:
             raise ValueError("Unknown answer contract")
@@ -276,6 +277,9 @@ class Harness:
                 self.archive.append("relation_review", {"round": round_no,
                     **projection["trigger"], **plan["relation_review_audit"], "wire_sha256": digest(plan["wire"]),
                     "wire_tools_sha256": digest(plan["wire"].get("tools", []))})
+        if plan.get("review_memory_delivery") is not None:
+            self.archive.append("review_memory_delivery", {"round": round_no,
+                **plan["review_memory_delivery"], "wire_sha256": digest(plan["wire"])})
         try: raw = model.send(deepcopy(plan["wire"]))
         except Exception as exc:
             self.output_charged += output_limit; code = exc.code if isinstance(exc, ContractError) else "model_transport"
@@ -346,6 +350,16 @@ class Harness:
             self.once_prose.complete(group)
         if self.relation_review is not None:
             self.relation_review.complete(group)
+        if self.decision_protocol == "relation-review-memory-v1" and plan.get("relation_review_audit") is not None:
+            from .review_memory import capture, identity as memory_identity
+            if previous_error or fatal or not all(r["result"].get("ok") is True for r in records):
+                memory_audit = {"identity": memory_identity(), "source_round": round_no,
+                    "source_response_sha256": digest(raw), "source_assistant_sha256": digest(reply.message),
+                    "created": False, "skip_reason": "skipped_tool_error"}
+            else:
+                self.review_memory, memory_audit = capture(reply.message, round_no=round_no,
+                    response_hash=digest(raw), input_windows=[self.archive.evidence(ref) for ref in plan["visible"]])
+            self.archive.append("review_memory_capture", memory_audit)
         self.archive.append("round_end", {"round": round_no, "group": group_ref, "notes": self.archive.put_json(sorted(self.notes.values(), key=lambda n: n["order"])), "remaining": self.remaining()})
         self.workflow.complete_decision(workflow_stage)
         if fatal: self._end(fatal)

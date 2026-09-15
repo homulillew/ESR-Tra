@@ -102,6 +102,12 @@ def build(harness, model, counter, *, final: bool, output_limit: int, groups=Non
         if type(size) is not int or size < 0:
             raise ContractError("counter_error", "Counter returned an invalid size", fatal=True)
         if size + config.response_reserve <= config.context_limit:
+            memory_delivery = None
+            if harness.decision_protocol == "relation-review-memory-v1" and harness.review_memory is not None:
+                from .review_memory import append_if_fits
+                wire, size, memory_delivery = append_if_fits(harness.review_memory,
+                    messages=messages, scope=scope, tools=tools, wire=wire, size=size, visible=visible,
+                    model=model, counter=counter, output_limit=output_limit, config=config)
             return {"wire": wire, "visible": sorted(visible, key=lambda r: int(r[1:])), "documents": issued,
                     "compacted": compacted, "groups": history, "capacity": size, "final": effective_final,
                     "workflow_final": workflow_final, "workflow_view": workflow_view,
@@ -109,6 +115,7 @@ def build(harness, model, counter, *, final: bool, output_limit: int, groups=Non
                     **({"search_pivot_projection": pivot} if pivot is not None else {}),
                     **({"once_prose_state": once_state, "once_prose_audit": once_audit} if once_state is not None else {}),
                     **({"relation_review_state": review_state, "relation_review_audit": review_audit} if review_state is not None else {}),
+                    **({"review_memory_delivery": memory_delivery} if memory_delivery is not None else {}),
                     **({"history_projection": history_view} if middle_history else {})}
         if config.context_mode == "full":
             raise ContractError("context_capacity", "Full-history arm cannot fit its actual wire request", fatal=True)
