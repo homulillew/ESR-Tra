@@ -28,11 +28,6 @@ def query_spec(harness, query, top_k):
 
 
 def accept_navigation(harness, groups):
-    """Index only receipts actually present in an acknowledged model input.
-
-    Archive-only/withheld search hits never enter this directory. Replayed old
-    groups are idempotent; navigation remains distinct from raw evidence.
-    """
     for group in groups:
         round_no = group['round']
         if round_no in harness.navigation_acked_rounds:
@@ -46,21 +41,21 @@ def accept_navigation(harness, groups):
             if not result.get('ok'):
                 continue
             for batch in result.get('results', []):
+                if batch.get('view') == 'reuse':
+                    continue
                 for hit in batch['hits']:
                     if hit['ref'] not in harness.published_docs:
                         raise ContractError('archive_integrity', 'Navigation receipt outside acknowledged scope', fatal=True)
                     record = {'ref': hit['ref'], 'title': hit['title'], 'snippet': hit['snippet'],
                               'query': batch['query'], 'source_round': round_no,
                               'order': len(harness.navigation_history)}
-                    harness.navigation_history.append(record)
-                    added.append(record)
+                    harness.navigation_history.append(record); added.append(record)
         if added:
             harness.archive.append('navigation_ack', {'round': harness.model_calls,
                 'source_round': round_no, 'object': harness.archive.put_json(added)})
 
 
 def excerpt(text, terms, centered):
-    """Exact substring plus original offsets; never rewrite evidence or add context."""
     start = 0
     if centered:
         matches = [m for t in terms if (m := re.search(re.escape(t), text, re.IGNORECASE))]
@@ -74,11 +69,9 @@ def recall(harness, query):
     terms = list(dict.fromkeys(re.findall(r'\w+', query.casefold())))
     if not terms:
         raise ContractError('query_terms', 'Recall needs at least one lexical term')
-    scored = []
-    center = harness.config.centered_recall
+    scored = []; center = harness.config.centered_recall
     for order, ref in enumerate(harness.evidence_order):
-        view = harness.archive.evidence(ref)
-        title = harness.archive.doc(view['document'])['title']
+        view = harness.archive.evidence(ref); title = harness.archive.doc(view['document'])['title']
         score = sum(t in (title + ' ' + view['text']).casefold() for t in terms)
         if score:
             part = excerpt(view['text'], terms, center)
@@ -92,8 +85,7 @@ def recall(harness, query):
             row = (score, 1, hit['order'], {'ref': hit['ref'], 'title': hit['title'][:160],
                 **excerpt(hit['snippet'], terms, center), 'excerpt_offset_origin': 'saved_search_snippet',
                 'source_query': hit['query'], 'source_round': hit['source_round'], 'kind': 'search_hit_navigation'})
-            if score and (hit['ref'] not in best or row[:3] > best[hit['ref']][:3]):
-                best[hit['ref']] = row
+            if score and (hit['ref'] not in best or row[:3] > best[hit['ref']][:3]): best[hit['ref']] = row
         scored.extend(best.values())
     for order, note in enumerate(harness.note_history):
         score = sum(t in note['text'].casefold() for t in terms)
