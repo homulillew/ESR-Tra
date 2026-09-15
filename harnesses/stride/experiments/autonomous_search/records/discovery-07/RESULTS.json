@@ -1,0 +1,2011 @@
+{
+  "rows": [
+    {
+      "slot": "q775-relation-review-memory-v1-r1",
+      "qid": 775,
+      "protocol": "relation-review-memory-v1",
+      "status": "stalled_no_submission",
+      "terminal": {
+        "answer": "",
+        "detail": "No legal finish in bounded recovery final decision",
+        "elapsed_seconds": 84.20018050001818,
+        "outcome": "stalled_no_submission"
+      },
+      "attempts": 12,
+      "elapsed_seconds": 84.30297099999734,
+      "head": "2c939bac3c92dbbf7d15978c9dd6819eed4f8da82148fefee80a51895b460cd9",
+      "seal_sha256": "a13011f30e1d73ef2a2115b0785429fc0917d7cfe3938a30b6104026ff2008e5",
+      "budget_after": {
+        "cap": 1643,
+        "used": 961,
+        "remaining": 682,
+        "this_run": 12,
+        "epoch_allowance": 1000,
+        "epoch_used": 318,
+        "epoch_remaining": 682
+      },
+      "correct": false,
+      "judged": false,
+      "judge_parse_error": null,
+      "metrics": {
+        "model_attempts": 12,
+        "backend_attempts": 20,
+        "actions_recorded": 12,
+        "executed_actions": 11,
+        "action_counts": {
+          "search": 12
+        },
+        "action_error_counts": {
+          "duplicate_query_blocked": 2,
+          "final_only": 1
+        },
+        "cache_query_hits": 7,
+        "final_phase_requests": 1,
+        "compaction_requests": 4,
+        "rounds_receiving_new_raw": 0,
+        "unknown_usage_calls": 0
+      },
+      "pivot_events": [],
+      "once_prose_reset_events": [],
+      "relation_review_events": [
+        {
+          "excluded_fields": [
+            "assistant_content",
+            "provider_reasoning",
+            "notes",
+            "repair",
+            "feedback",
+            "gap_judgments",
+            "non_search_read_find_arguments_and_receipt_bodies"
+          ],
+          "identity": {
+            "instruction_sha256": "15590f5a6a7ce6bbb2de19bb693f778186da2258a09ed8b86daadc2b7233c133",
+            "kind": "one_request_relation_review_not_verified_evidence",
+            "rule": {
+              "allowed_tools": [
+                "find",
+                "read",
+                "search"
+              ],
+              "batch_limit": "unchanged",
+              "consecutive_successful_search_rounds": 3,
+              "excluded": [
+                "assistant_content",
+                "provider_reasoning",
+                "notes",
+                "repair",
+                "feedback",
+                "gap_judgments",
+                "non_search_read_find_arguments_and_receipt_bodies"
+              ],
+              "extra_model_requests": 0,
+              "final": "never_trigger",
+              "history": "retrieval-tool-history-only_untrusted_data_not_native_message_pairs",
+              "max_triggers": 1,
+              "minimum_remaining_model_calls": 4,
+              "require_existing_raw": false,
+              "restore": "next_request_original_history",
+              "search_success": "executed_and_ok",
+              "version": "relation-review-once-v1"
+            },
+            "rule_sha256": "b6df1df8be149253aeb45031d8ffa0eb801bdf3b2aaaf38cdc551b51924f4c80",
+            "version": "relation-review-once-v1"
+          },
+          "input_sources": [
+            {
+              "group_sha256": "36b69fd78e1c1ca0b03371dd6cafd01ba293921cf2009e44b71a4eee06dc89ef",
+              "message_sha256": [
+                "187bc6b11393ca8a62bcd589783b48f86c097392bff12eec4cbd8e5a140edbc2",
+                "437838ea2641df879e6e8aaf7a223be079aeec69c61301c18a25d30a518e8df4"
+              ],
+              "round": 1
+            },
+            {
+              "group_sha256": "08b09a64d79d7bf58e587c17fdf0b7d17fa7766418184e70a6e9da467db6caf2",
+              "message_sha256": [
+                "3fee73745df3c2dcb4d7a9c31b00f4926f0c0cd1401948575879b0aace647a6a",
+                "b62cbeebd2dc1c07aeee0dbadd2e9ba39395a2cbed1807e8fbf146eaa34373b1"
+              ],
+              "round": 2
+            },
+            {
+              "group_sha256": "adab81e7a040a4c1677543abea79ac364b88d92352fa33569705cb1dbee9f9a6",
+              "message_sha256": [
+                "fba1e565bea3e1b783d2a0910037d2e295336519cec2b20dba847466af3c0bb3",
+                "f15219a882f2c373ac6d84bc047f019ff92150a3b859fc4e39df847761395a0a"
+              ],
+              "round": 3
+            }
+          ],
+          "observation": "no new source passage",
+          "raw_windows": [],
+          "round": 4,
+          "source_rounds": [
+            1,
+            2,
+            3
+          ],
+          "system_sha256": "3a03c8ef8c9b7f9f516783b03d7781d3800097f25b0dde41e6df1a19c0b9f600",
+          "tools_sha256": "3ea4f314864c7db310ba13e8f5c7598a671d78f270aecb8dd5648a2148ca6bcf",
+          "trigger_number": 1,
+          "wire_sha256": "7bdab500ca19879a5509e76ab2d5dfb6844fc2332b5958123c32075ed6a00774",
+          "wire_tools_sha256": "3ea4f314864c7db310ba13e8f5c7598a671d78f270aecb8dd5648a2148ca6bcf"
+        }
+      ],
+      "review_memory_capture_events": [
+        {
+          "content_chars": 168,
+          "content_sha256": "2c29deaaa9afa8f619d4244a075b8b98c32f1994e1c8d366137baa5b1c786014",
+          "content_utf8_bytes": 168,
+          "created": true,
+          "identity": {
+            "kind": "joint_relation_review_and_unverified_memory",
+            "review": {
+              "instruction_sha256": "15590f5a6a7ce6bbb2de19bb693f778186da2258a09ed8b86daadc2b7233c133",
+              "kind": "one_request_relation_review_not_verified_evidence",
+              "rule": {
+                "allowed_tools": [
+                  "find",
+                  "read",
+                  "search"
+                ],
+                "batch_limit": "unchanged",
+                "consecutive_successful_search_rounds": 3,
+                "excluded": [
+                  "assistant_content",
+                  "provider_reasoning",
+                  "notes",
+                  "repair",
+                  "feedback",
+                  "gap_judgments",
+                  "non_search_read_find_arguments_and_receipt_bodies"
+                ],
+                "extra_model_requests": 0,
+                "final": "never_trigger",
+                "history": "retrieval-tool-history-only_untrusted_data_not_native_message_pairs",
+                "max_triggers": 1,
+                "minimum_remaining_model_calls": 4,
+                "require_existing_raw": false,
+                "restore": "next_request_original_history",
+                "search_success": "executed_and_ok",
+                "version": "relation-review-once-v1"
+              },
+              "rule_sha256": "b6df1df8be149253aeb45031d8ffa0eb801bdf3b2aaaf38cdc551b51924f4c80",
+              "version": "relation-review-once-v1"
+            },
+            "rule": {
+              "capacity": "fit_normal_plan_first_then_optional_memory_without_further_eviction",
+              "capture": "successful_review_complete_group_without_tool_errors",
+              "content": "complete_assistant_content_no_summary_no_truncation",
+              "content_limit_chars": 2000,
+              "evidence_authorization": "unchanged",
+              "extra_calls": 0,
+              "input_sources": "review_request_visible_only_not_same_response_tool_results",
+              "invalid_utf8": "skip_without_hash_or_replacement",
+              "label": "Previous model opinion: may be wrong or stale; does not replace raw source evidence or authorize references.",
+              "lifetime": "subsequent_requests_including_final",
+              "version": "relation-review-memory-v1"
+            },
+            "rule_sha256": "6811332bf43f0f53b2d56f8fa62d0cdfcafd0bca83e98531e35bbcb9878efc75",
+            "version": "relation-review-memory-v1"
+          },
+          "input_evidence": [],
+          "input_evidence_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+          "skip_reason": null,
+          "source_assistant_sha256": "054918fa3edcfd66b258ab6455ae4a5ab09ff80c38cd9ba6d8ad721f63969fe1",
+          "source_response_sha256": "5a110a58ccebd0ad32da9a0e820fbcb7d434fe994dea27d94b6559ff619932f8",
+          "source_round": 4
+        }
+      ],
+      "review_memory_delivery_events": [
+        {
+          "base_capacity": 88262,
+          "content_sha256": "2c29deaaa9afa8f619d4244a075b8b98c32f1994e1c8d366137baa5b1c786014",
+          "identity": {
+            "kind": "joint_relation_review_and_unverified_memory",
+            "review": {
+              "instruction_sha256": "15590f5a6a7ce6bbb2de19bb693f778186da2258a09ed8b86daadc2b7233c133",
+              "kind": "one_request_relation_review_not_verified_evidence",
+              "rule": {
+                "allowed_tools": [
+                  "find",
+                  "read",
+                  "search"
+                ],
+                "batch_limit": "unchanged",
+                "consecutive_successful_search_rounds": 3,
+                "excluded": [
+                  "assistant_content",
+                  "provider_reasoning",
+                  "notes",
+                  "repair",
+                  "feedback",
+                  "gap_judgments",
+                  "non_search_read_find_arguments_and_receipt_bodies"
+                ],
+                "extra_model_requests": 0,
+                "final": "never_trigger",
+                "history": "retrieval-tool-history-only_untrusted_data_not_native_message_pairs",
+                "max_triggers": 1,
+                "minimum_remaining_model_calls": 4,
+                "require_existing_raw": false,
+                "restore": "next_request_original_history",
+                "search_success": "executed_and_ok",
+                "version": "relation-review-once-v1"
+              },
+              "rule_sha256": "b6df1df8be149253aeb45031d8ffa0eb801bdf3b2aaaf38cdc551b51924f4c80",
+              "version": "relation-review-once-v1"
+            },
+            "rule": {
+              "capacity": "fit_normal_plan_first_then_optional_memory_without_further_eviction",
+              "capture": "successful_review_complete_group_without_tool_errors",
+              "content": "complete_assistant_content_no_summary_no_truncation",
+              "content_limit_chars": 2000,
+              "evidence_authorization": "unchanged",
+              "extra_calls": 0,
+              "input_sources": "review_request_visible_only_not_same_response_tool_results",
+              "invalid_utf8": "skip_without_hash_or_replacement",
+              "label": "Previous model opinion: may be wrong or stale; does not replace raw source evidence or authorize references.",
+              "lifetime": "subsequent_requests_including_final",
+              "version": "relation-review-memory-v1"
+            },
+            "rule_sha256": "6811332bf43f0f53b2d56f8fa62d0cdfcafd0bca83e98531e35bbcb9878efc75",
+            "version": "relation-review-memory-v1"
+          },
+          "input_refs_currently_visible": [],
+          "omitted_reason": null,
+          "proposed_capacity": 89153,
+          "rendered": true,
+          "round": 5,
+          "source_response_sha256": "5a110a58ccebd0ad32da9a0e820fbcb7d434fe994dea27d94b6559ff619932f8",
+          "source_round": 4,
+          "wire_sha256": "f359fa17c21fa1a8f301713f040c0e84a485a0a1c5f3eeb456a358bbeef05f4a"
+        },
+        {
+          "base_capacity": 88476,
+          "content_sha256": "2c29deaaa9afa8f619d4244a075b8b98c32f1994e1c8d366137baa5b1c786014",
+          "identity": {
+            "kind": "joint_relation_review_and_unverified_memory",
+            "review": {
+              "instruction_sha256": "15590f5a6a7ce6bbb2de19bb693f778186da2258a09ed8b86daadc2b7233c133",
+              "kind": "one_request_relation_review_not_verified_evidence",
+              "rule": {
+                "allowed_tools": [
+                  "find",
+                  "read",
+                  "search"
+                ],
+                "batch_limit": "unchanged",
+                "consecutive_successful_search_rounds": 3,
+                "excluded": [
+                  "assistant_content",
+                  "provider_reasoning",
+                  "notes",
+                  "repair",
+                  "feedback",
+                  "gap_judgments",
+                  "non_search_read_find_arguments_and_receipt_bodies"
+                ],
+                "extra_model_requests": 0,
+                "final": "never_trigger",
+                "history": "retrieval-tool-history-only_untrusted_data_not_native_message_pairs",
+                "max_triggers": 1,
+                "minimum_remaining_model_calls": 4,
+                "require_existing_raw": false,
+                "restore": "next_request_original_history",
+                "search_success": "executed_and_ok",
+                "version": "relation-review-once-v1"
+              },
+              "rule_sha256": "b6df1df8be149253aeb45031d8ffa0eb801bdf3b2aaaf38cdc551b51924f4c80",
+              "version": "relation-review-once-v1"
+            },
+            "rule": {
+              "capacity": "fit_normal_plan_first_then_optional_memory_without_further_eviction",
+              "capture": "successful_review_complete_group_without_tool_errors",
+              "content": "complete_assistant_content_no_summary_no_truncation",
+              "content_limit_chars": 2000,
+              "evidence_authorization": "unchanged",
+              "extra_calls": 0,
+              "input_sources": "review_request_visible_only_not_same_response_tool_results",
+              "invalid_utf8": "skip_without_hash_or_replacement",
+              "label": "Previous model opinion: may be wrong or stale; does not replace raw source evidence or authorize references.",
+              "lifetime": "subsequent_requests_including_final",
+              "version": "relation-review-memory-v1"
+            },
+            "rule_sha256": "6811332bf43f0f53b2d56f8fa62d0cdfcafd0bca83e98531e35bbcb9878efc75",
+            "version": "relation-review-memory-v1"
+          },
+          "input_refs_currently_visible": [],
+          "omitted_reason": null,
+          "proposed_capacity": 89367,
+          "rendered": true,
+          "round": 6,
+          "source_response_sha256": "5a110a58ccebd0ad32da9a0e820fbcb7d434fe994dea27d94b6559ff619932f8",
+          "source_round": 4,
+          "wire_sha256": "e15e2640315e010f45d58699f846c0f772a14a34b16c51722c7d76b1f45ca728"
+        },
+        {
+          "base_capacity": 75689,
+          "content_sha256": "2c29deaaa9afa8f619d4244a075b8b98c32f1994e1c8d366137baa5b1c786014",
+          "identity": {
+            "kind": "joint_relation_review_and_unverified_memory",
+            "review": {
+              "instruction_sha256": "15590f5a6a7ce6bbb2de19bb693f778186da2258a09ed8b86daadc2b7233c133",
+              "kind": "one_request_relation_review_not_verified_evidence",
+              "rule": {
+                "allowed_tools": [
+                  "find",
+                  "read",
+                  "search"
+                ],
+                "batch_limit": "unchanged",
+                "consecutive_successful_search_rounds": 3,
+                "excluded": [
+                  "assistant_content",
+                  "provider_reasoning",
+                  "notes",
+                  "repair",
+                  "feedback",
+                  "gap_judgments",
+                  "non_search_read_find_arguments_and_receipt_bodies"
+                ],
+                "extra_model_requests": 0,
+                "final": "never_trigger",
+                "history": "retrieval-tool-history-only_untrusted_data_not_native_message_pairs",
+                "max_triggers": 1,
+                "minimum_remaining_model_calls": 4,
+                "require_existing_raw": false,
+                "restore": "next_request_original_history",
+                "search_success": "executed_and_ok",
+                "version": "relation-review-once-v1"
+              },
+              "rule_sha256": "b6df1df8be149253aeb45031d8ffa0eb801bdf3b2aaaf38cdc551b51924f4c80",
+              "version": "relation-review-once-v1"
+            },
+            "rule": {
+              "capacity": "fit_normal_plan_first_then_optional_memory_without_further_eviction",
+              "capture": "successful_review_complete_group_without_tool_errors",
+              "content": "complete_assistant_content_no_summary_no_truncation",
+              "content_limit_chars": 2000,
+              "evidence_authorization": "unchanged",
+              "extra_calls": 0,
+              "input_sources": "review_request_visible_only_not_same_response_tool_results",
+              "invalid_utf8": "skip_without_hash_or_replacement",
+              "label": "Previous model opinion: may be wrong or stale; does not replace raw source evidence or authorize references.",
+              "lifetime": "subsequent_requests_including_final",
+              "version": "relation-review-memory-v1"
+            },
+            "rule_sha256": "6811332bf43f0f53b2d56f8fa62d0cdfcafd0bca83e98531e35bbcb9878efc75",
+            "version": "relation-review-memory-v1"
+          },
+          "input_refs_currently_visible": [],
+          "omitted_reason": null,
+          "proposed_capacity": 76580,
+          "rendered": true,
+          "round": 7,
+          "source_response_sha256": "5a110a58ccebd0ad32da9a0e820fbcb7d434fe994dea27d94b6559ff619932f8",
+          "source_round": 4,
+          "wire_sha256": "2f41a2e7c8dbd2cb617a892332182e0edcdbec1b2541cb39419bc107dd6e06b5"
+        },
+        {
+          "base_capacity": 72405,
+          "content_sha256": "2c29deaaa9afa8f619d4244a075b8b98c32f1994e1c8d366137baa5b1c786014",
+          "identity": {
+            "kind": "joint_relation_review_and_unverified_memory",
+            "review": {
+              "instruction_sha256": "15590f5a6a7ce6bbb2de19bb693f778186da2258a09ed8b86daadc2b7233c133",
+              "kind": "one_request_relation_review_not_verified_evidence",
+              "rule": {
+                "allowed_tools": [
+                  "find",
+                  "read",
+                  "search"
+                ],
+                "batch_limit": "unchanged",
+                "consecutive_successful_search_rounds": 3,
+                "excluded": [
+                  "assistant_content",
+                  "provider_reasoning",
+                  "notes",
+                  "repair",
+                  "feedback",
+                  "gap_judgments",
+                  "non_search_read_find_arguments_and_receipt_bodies"
+                ],
+                "extra_model_requests": 0,
+                "final": "never_trigger",
+                "history": "retrieval-tool-history-only_untrusted_data_not_native_message_pairs",
+                "max_triggers": 1,
+                "minimum_remaining_model_calls": 4,
+                "require_existing_raw": false,
+                "restore": "next_request_original_history",
+                "search_success": "executed_and_ok",
+                "version": "relation-review-once-v1"
+              },
+              "rule_sha256": "b6df1df8be149253aeb45031d8ffa0eb801bdf3b2aaaf38cdc551b51924f4c80",
+              "version": "relation-review-once-v1"
+            },
+            "rule": {
+              "capacity": "fit_normal_plan_first_then_optional_memory_without_further_eviction",
+              "capture": "successful_review_complete_group_without_tool_errors",
+              "content": "complete_assistant_content_no_summary_no_truncation",
+              "content_limit_chars": 2000,
+              "evidence_authorization": "unchanged",
+              "extra_calls": 0,
+              "input_sources": "review_request_visible_only_not_same_response_tool_results",
+              "invalid_utf8": "skip_without_hash_or_replacement",
+              "label": "Previous model opinion: may be wrong or stale; does not replace raw source evidence or authorize references.",
+              "lifetime": "subsequent_requests_including_final",
+              "version": "relation-review-memory-v1"
+            },
+            "rule_sha256": "6811332bf43f0f53b2d56f8fa62d0cdfcafd0bca83e98531e35bbcb9878efc75",
+            "version": "relation-review-memory-v1"
+          },
+          "input_refs_currently_visible": [],
+          "omitted_reason": null,
+          "proposed_capacity": 73296,
+          "rendered": true,
+          "round": 8,
+          "source_response_sha256": "5a110a58ccebd0ad32da9a0e820fbcb7d434fe994dea27d94b6559ff619932f8",
+          "source_round": 4,
+          "wire_sha256": "4d2d45d5ae108382a29ad0e0d2406397433c20fdebc28d8c7c29cbdc30d5d33d"
+        },
+        {
+          "base_capacity": 82686,
+          "content_sha256": "2c29deaaa9afa8f619d4244a075b8b98c32f1994e1c8d366137baa5b1c786014",
+          "identity": {
+            "kind": "joint_relation_review_and_unverified_memory",
+            "review": {
+              "instruction_sha256": "15590f5a6a7ce6bbb2de19bb693f778186da2258a09ed8b86daadc2b7233c133",
+              "kind": "one_request_relation_review_not_verified_evidence",
+              "rule": {
+                "allowed_tools": [
+                  "find",
+                  "read",
+                  "search"
+                ],
+                "batch_limit": "unchanged",
+                "consecutive_successful_search_rounds": 3,
+                "excluded": [
+                  "assistant_content",
+                  "provider_reasoning",
+                  "notes",
+                  "repair",
+                  "feedback",
+                  "gap_judgments",
+                  "non_search_read_find_arguments_and_receipt_bodies"
+                ],
+                "extra_model_requests": 0,
+                "final": "never_trigger",
+                "history": "retrieval-tool-history-only_untrusted_data_not_native_message_pairs",
+                "max_triggers": 1,
+                "minimum_remaining_model_calls": 4,
+                "require_existing_raw": false,
+                "restore": "next_request_original_history",
+                "search_success": "executed_and_ok",
+                "version": "relation-review-once-v1"
+              },
+              "rule_sha256": "b6df1df8be149253aeb45031d8ffa0eb801bdf3b2aaaf38cdc551b51924f4c80",
+              "version": "relation-review-once-v1"
+            },
+            "rule": {
+              "capacity": "fit_normal_plan_first_then_optional_memory_without_further_eviction",
+              "capture": "successful_review_complete_group_without_tool_errors",
+              "content": "complete_assistant_content_no_summary_no_truncation",
+              "content_limit_chars": 2000,
+              "evidence_authorization": "unchanged",
+              "extra_calls": 0,
+              "input_sources": "review_request_visible_only_not_same_response_tool_results",
+              "invalid_utf8": "skip_without_hash_or_replacement",
+              "label": "Previous model opinion: may be wrong or stale; does not replace raw source evidence or authorize references.",
+              "lifetime": "subsequent_requests_including_final",
+              "version": "relation-review-memory-v1"
+            },
+            "rule_sha256": "6811332bf43f0f53b2d56f8fa62d0cdfcafd0bca83e98531e35bbcb9878efc75",
+            "version": "relation-review-memory-v1"
+          },
+          "input_refs_currently_visible": [],
+          "omitted_reason": null,
+          "proposed_capacity": 83577,
+          "rendered": true,
+          "round": 9,
+          "source_response_sha256": "5a110a58ccebd0ad32da9a0e820fbcb7d434fe994dea27d94b6559ff619932f8",
+          "source_round": 4,
+          "wire_sha256": "9a271dc654b36d4aef97d8de45bd1eed04af8a872db8264b1532030167caa780"
+        },
+        {
+          "base_capacity": 76405,
+          "content_sha256": "2c29deaaa9afa8f619d4244a075b8b98c32f1994e1c8d366137baa5b1c786014",
+          "identity": {
+            "kind": "joint_relation_review_and_unverified_memory",
+            "review": {
+              "instruction_sha256": "15590f5a6a7ce6bbb2de19bb693f778186da2258a09ed8b86daadc2b7233c133",
+              "kind": "one_request_relation_review_not_verified_evidence",
+              "rule": {
+                "allowed_tools": [
+                  "find",
+                  "read",
+                  "search"
+                ],
+                "batch_limit": "unchanged",
+                "consecutive_successful_search_rounds": 3,
+                "excluded": [
+                  "assistant_content",
+                  "provider_reasoning",
+                  "notes",
+                  "repair",
+                  "feedback",
+                  "gap_judgments",
+                  "non_search_read_find_arguments_and_receipt_bodies"
+                ],
+                "extra_model_requests": 0,
+                "final": "never_trigger",
+                "history": "retrieval-tool-history-only_untrusted_data_not_native_message_pairs",
+                "max_triggers": 1,
+                "minimum_remaining_model_calls": 4,
+                "require_existing_raw": false,
+                "restore": "next_request_original_history",
+                "search_success": "executed_and_ok",
+                "version": "relation-review-once-v1"
+              },
+              "rule_sha256": "b6df1df8be149253aeb45031d8ffa0eb801bdf3b2aaaf38cdc551b51924f4c80",
+              "version": "relation-review-once-v1"
+            },
+            "rule": {
+              "capacity": "fit_normal_plan_first_then_optional_memory_without_further_eviction",
+              "capture": "successful_review_complete_group_without_tool_errors",
+              "content": "complete_assistant_content_no_summary_no_truncation",
+              "content_limit_chars": 2000,
+              "evidence_authorization": "unchanged",
+              "extra_calls": 0,
+              "input_sources": "review_request_visible_only_not_same_response_tool_results",
+              "invalid_utf8": "skip_without_hash_or_replacement",
+              "label": "Previous model opinion: may be wrong or stale; does not replace raw source evidence or authorize references.",
+              "lifetime": "subsequent_requests_including_final",
+              "version": "relation-review-memory-v1"
+            },
+            "rule_sha256": "6811332bf43f0f53b2d56f8fa62d0cdfcafd0bca83e98531e35bbcb9878efc75",
+            "version": "relation-review-memory-v1"
+          },
+          "input_refs_currently_visible": [],
+          "omitted_reason": null,
+          "proposed_capacity": 77296,
+          "rendered": true,
+          "round": 10,
+          "source_response_sha256": "5a110a58ccebd0ad32da9a0e820fbcb7d434fe994dea27d94b6559ff619932f8",
+          "source_round": 4,
+          "wire_sha256": "27d1f3e87f7666cb22396dc4eed5ed238fca94a9483bb4525d0dfe4422ed0661"
+        },
+        {
+          "base_capacity": 77629,
+          "content_sha256": "2c29deaaa9afa8f619d4244a075b8b98c32f1994e1c8d366137baa5b1c786014",
+          "identity": {
+            "kind": "joint_relation_review_and_unverified_memory",
+            "review": {
+              "instruction_sha256": "15590f5a6a7ce6bbb2de19bb693f778186da2258a09ed8b86daadc2b7233c133",
+              "kind": "one_request_relation_review_not_verified_evidence",
+              "rule": {
+                "allowed_tools": [
+                  "find",
+                  "read",
+                  "search"
+                ],
+                "batch_limit": "unchanged",
+                "consecutive_successful_search_rounds": 3,
+                "excluded": [
+                  "assistant_content",
+                  "provider_reasoning",
+                  "notes",
+                  "repair",
+                  "feedback",
+                  "gap_judgments",
+                  "non_search_read_find_arguments_and_receipt_bodies"
+                ],
+                "extra_model_requests": 0,
+                "final": "never_trigger",
+                "history": "retrieval-tool-history-only_untrusted_data_not_native_message_pairs",
+                "max_triggers": 1,
+                "minimum_remaining_model_calls": 4,
+                "require_existing_raw": false,
+                "restore": "next_request_original_history",
+                "search_success": "executed_and_ok",
+                "version": "relation-review-once-v1"
+              },
+              "rule_sha256": "b6df1df8be149253aeb45031d8ffa0eb801bdf3b2aaaf38cdc551b51924f4c80",
+              "version": "relation-review-once-v1"
+            },
+            "rule": {
+              "capacity": "fit_normal_plan_first_then_optional_memory_without_further_eviction",
+              "capture": "successful_review_complete_group_without_tool_errors",
+              "content": "complete_assistant_content_no_summary_no_truncation",
+              "content_limit_chars": 2000,
+              "evidence_authorization": "unchanged",
+              "extra_calls": 0,
+              "input_sources": "review_request_visible_only_not_same_response_tool_results",
+              "invalid_utf8": "skip_without_hash_or_replacement",
+              "label": "Previous model opinion: may be wrong or stale; does not replace raw source evidence or authorize references.",
+              "lifetime": "subsequent_requests_including_final",
+              "version": "relation-review-memory-v1"
+            },
+            "rule_sha256": "6811332bf43f0f53b2d56f8fa62d0cdfcafd0bca83e98531e35bbcb9878efc75",
+            "version": "relation-review-memory-v1"
+          },
+          "input_refs_currently_visible": [],
+          "omitted_reason": null,
+          "proposed_capacity": 78520,
+          "rendered": true,
+          "round": 11,
+          "source_response_sha256": "5a110a58ccebd0ad32da9a0e820fbcb7d434fe994dea27d94b6559ff619932f8",
+          "source_round": 4,
+          "wire_sha256": "2204e71cd5ce7dd16938200e4d333058d45cb5f80e5f6d4b87740c7d94a5296f"
+        },
+        {
+          "base_capacity": 69201,
+          "content_sha256": "2c29deaaa9afa8f619d4244a075b8b98c32f1994e1c8d366137baa5b1c786014",
+          "identity": {
+            "kind": "joint_relation_review_and_unverified_memory",
+            "review": {
+              "instruction_sha256": "15590f5a6a7ce6bbb2de19bb693f778186da2258a09ed8b86daadc2b7233c133",
+              "kind": "one_request_relation_review_not_verified_evidence",
+              "rule": {
+                "allowed_tools": [
+                  "find",
+                  "read",
+                  "search"
+                ],
+                "batch_limit": "unchanged",
+                "consecutive_successful_search_rounds": 3,
+                "excluded": [
+                  "assistant_content",
+                  "provider_reasoning",
+                  "notes",
+                  "repair",
+                  "feedback",
+                  "gap_judgments",
+                  "non_search_read_find_arguments_and_receipt_bodies"
+                ],
+                "extra_model_requests": 0,
+                "final": "never_trigger",
+                "history": "retrieval-tool-history-only_untrusted_data_not_native_message_pairs",
+                "max_triggers": 1,
+                "minimum_remaining_model_calls": 4,
+                "require_existing_raw": false,
+                "restore": "next_request_original_history",
+                "search_success": "executed_and_ok",
+                "version": "relation-review-once-v1"
+              },
+              "rule_sha256": "b6df1df8be149253aeb45031d8ffa0eb801bdf3b2aaaf38cdc551b51924f4c80",
+              "version": "relation-review-once-v1"
+            },
+            "rule": {
+              "capacity": "fit_normal_plan_first_then_optional_memory_without_further_eviction",
+              "capture": "successful_review_complete_group_without_tool_errors",
+              "content": "complete_assistant_content_no_summary_no_truncation",
+              "content_limit_chars": 2000,
+              "evidence_authorization": "unchanged",
+              "extra_calls": 0,
+              "input_sources": "review_request_visible_only_not_same_response_tool_results",
+              "invalid_utf8": "skip_without_hash_or_replacement",
+              "label": "Previous model opinion: may be wrong or stale; does not replace raw source evidence or authorize references.",
+              "lifetime": "subsequent_requests_including_final",
+              "version": "relation-review-memory-v1"
+            },
+            "rule_sha256": "6811332bf43f0f53b2d56f8fa62d0cdfcafd0bca83e98531e35bbcb9878efc75",
+            "version": "relation-review-memory-v1"
+          },
+          "input_refs_currently_visible": [],
+          "omitted_reason": null,
+          "proposed_capacity": 70092,
+          "rendered": true,
+          "round": 12,
+          "source_response_sha256": "5a110a58ccebd0ad32da9a0e820fbcb7d434fe994dea27d94b6559ff619932f8",
+          "source_round": 4,
+          "wire_sha256": "eaf856719fa3072cd3bb76db53995982190c165a173b1a821291ac0df883f1ba"
+        }
+      ],
+      "review_memory_rendered_requests": 8,
+      "history_projection_events": [],
+      "history_projection_requests_with_changes": 0,
+      "history_projection_removed_utf8_bytes_across_requests": 0,
+      "queries_executed": 27,
+      "evidence_windows_registered": 0,
+      "new_backend_searches": 20,
+      "backend_document_reads": 0,
+      "tokens": {
+        "input_tokens": {
+          "known_sum": 193876,
+          "unknown_calls": 0
+        },
+        "output_tokens": {
+          "known_sum": 1348,
+          "unknown_calls": 0
+        },
+        "cache_read_tokens": {
+          "known_sum": 69248,
+          "unknown_calls": 0
+        },
+        "cache_write_tokens": {
+          "known_sum": 0,
+          "unknown_calls": 12
+        }
+      }
+    },
+    {
+      "slot": "q775-baseline-r1",
+      "qid": 775,
+      "protocol": "baseline",
+      "status": "submitted",
+      "terminal": {
+        "answer": "Akure, Nigeria",
+        "answer_representation": {
+          "input_type": "string",
+          "operation": "identity",
+          "rule": "string-integer-v1"
+        },
+        "basis": [
+          {
+            "document": "d46",
+            "document_chars": 17355,
+            "end": 3000,
+            "kind": "raw_evidence",
+            "ref": "e1",
+            "sha256": "79767844ce2071fc5dcf3fb0e64d0cade0ba154ef0fc324d0054c1c767e63138",
+            "snapshot": "90019ca46504785f620ef12f36abae20080c8c3bc7809053339e4beaa4deb2fd",
+            "start": 0
+          },
+          {
+            "document": "d1",
+            "document_chars": 27249,
+            "end": 3000,
+            "kind": "raw_evidence",
+            "ref": "e2",
+            "sha256": "8ce61c1087f7e5edc11d95aa8c819ec764b2f8d2e4c5ab64aaa81fda45d083cf",
+            "snapshot": "25e42c9d9629a06063929aefe4e8f050cac2c095d797b7476410c1a6fe277c5a",
+            "start": 0
+          },
+          {
+            "document": "d95",
+            "document_chars": 27013,
+            "end": 3000,
+            "kind": "raw_evidence",
+            "ref": "e4",
+            "sha256": "fe7103588bdedb65d2bce58f2eb8dcf7f7fb7a5d81aff763760b9decd9a62ef5",
+            "snapshot": "650b898f3eaa1e0d792c8f3b8578b301f5b2335c6ab971f106e6f9e7bc6aa0e3",
+            "start": 0
+          },
+          {
+            "document": "d97",
+            "document_chars": 12333,
+            "end": 3000,
+            "kind": "raw_evidence",
+            "ref": "e5",
+            "sha256": "e51b53e03f8a075f0b795aec18d82cf57a6ec572d17b5d126dd237cd9686f7ad",
+            "snapshot": "575d901049ac56ed260378d4c1ef46463e16532cf1212e5bcab8227e0a858dbf",
+            "start": 0
+          }
+        ],
+        "elapsed_seconds": 119.93922460000613,
+        "outcome": "submitted",
+        "refs": [
+          "e1",
+          "e2",
+          "e4",
+          "e5"
+        ],
+        "semantic_status": "not_automatically_verified"
+      },
+      "attempts": 10,
+      "elapsed_seconds": 120.1361229000031,
+      "head": "522dfafd475dfc008d12f2ef512c5bc70b984dd5dd1e728659c2d8e31d46cd4e",
+      "seal_sha256": "8b6fa874c460130dfcd6288739bf7e8fc405c772286f9c9877871fe987efa310",
+      "budget_after": {
+        "cap": 1643,
+        "used": 971,
+        "remaining": 672,
+        "this_run": 22,
+        "epoch_allowance": 1000,
+        "epoch_used": 328,
+        "epoch_remaining": 672
+      },
+      "correct": false,
+      "judged": true,
+      "judge_parse_error": false,
+      "metrics": {
+        "model_attempts": 10,
+        "backend_attempts": 29,
+        "actions_recorded": 15,
+        "executed_actions": 15,
+        "action_counts": {
+          "search": 9,
+          "read": 5,
+          "finish": 1
+        },
+        "action_error_counts": {},
+        "cache_query_hits": 2,
+        "final_phase_requests": 0,
+        "compaction_requests": 5,
+        "rounds_receiving_new_raw": 5,
+        "unknown_usage_calls": 0
+      },
+      "pivot_events": [],
+      "once_prose_reset_events": [],
+      "relation_review_events": [],
+      "review_memory_capture_events": [],
+      "review_memory_delivery_events": [],
+      "review_memory_rendered_requests": 0,
+      "history_projection_events": [],
+      "history_projection_requests_with_changes": 0,
+      "history_projection_removed_utf8_bytes_across_requests": 0,
+      "queries_executed": 26,
+      "evidence_windows_registered": 5,
+      "new_backend_searches": 24,
+      "backend_document_reads": 5,
+      "tokens": {
+        "input_tokens": {
+          "known_sum": 165013,
+          "unknown_calls": 0
+        },
+        "output_tokens": {
+          "known_sum": 2977,
+          "unknown_calls": 0
+        },
+        "cache_read_tokens": {
+          "known_sum": 59520,
+          "unknown_calls": 0
+        },
+        "cache_write_tokens": {
+          "known_sum": 0,
+          "unknown_calls": 10
+        }
+      }
+    },
+    {
+      "slot": "q774-baseline-r1",
+      "qid": 774,
+      "protocol": "baseline",
+      "status": "abstained",
+      "terminal": {
+        "answer": "",
+        "elapsed_seconds": 158.41937839999446,
+        "outcome": "abstained",
+        "reason": "I confirmed one clue — Jessica and Richard Harmon are real-life siblings who play unrelated characters (Niylah and John Murphy) on The 100, a CW series that premiered in 2014 (after 2000, before 2020) and ran 7 seasons (more than 3 as of 2023). However, I could not verify the other required clues: that the entertainer's real-life height is between 1.65m and 1.70m, that their character was married more than 2 but less than 5 times in the series, and that only one of their character's children survives. The marriage/child clues do not clearly match John Murphy or Niylah from The 100 based on available evidence, so I cannot confidently identify which Harmon sibling (or whether this is the correct show) without verifying those specific character details. Insufficient verified evidence to submit a definitive first and last name."
+      },
+      "attempts": 16,
+      "elapsed_seconds": 158.6307145000028,
+      "head": "6866b7a516dbbc9bd55af2203f7cf58b617559f584b1169d0663eca45353fb30",
+      "seal_sha256": "8f9b62e39fcb9b05f9d04e5ad66a3d4dabde7c44ac760677063b1fadd28794af",
+      "budget_after": {
+        "cap": 1643,
+        "used": 987,
+        "remaining": 656,
+        "this_run": 38,
+        "epoch_allowance": 1000,
+        "epoch_used": 344,
+        "epoch_remaining": 656
+      },
+      "correct": false,
+      "judged": false,
+      "judge_parse_error": null,
+      "metrics": {
+        "model_attempts": 16,
+        "backend_attempts": 57,
+        "actions_recorded": 25,
+        "executed_actions": 25,
+        "action_counts": {
+          "search": 22,
+          "read": 2,
+          "finish": 1
+        },
+        "action_error_counts": {},
+        "cache_query_hits": 1,
+        "final_phase_requests": 1,
+        "compaction_requests": 6,
+        "rounds_receiving_new_raw": 2,
+        "unknown_usage_calls": 0
+      },
+      "pivot_events": [],
+      "once_prose_reset_events": [],
+      "relation_review_events": [],
+      "review_memory_capture_events": [],
+      "review_memory_delivery_events": [],
+      "review_memory_rendered_requests": 0,
+      "history_projection_events": [],
+      "history_projection_requests_with_changes": 0,
+      "history_projection_removed_utf8_bytes_across_requests": 0,
+      "queries_executed": 57,
+      "evidence_windows_registered": 2,
+      "new_backend_searches": 56,
+      "backend_document_reads": 1,
+      "tokens": {
+        "input_tokens": {
+          "known_sum": 264044,
+          "unknown_calls": 0
+        },
+        "output_tokens": {
+          "known_sum": 2421,
+          "unknown_calls": 0
+        },
+        "cache_read_tokens": {
+          "known_sum": 132608,
+          "unknown_calls": 0
+        },
+        "cache_write_tokens": {
+          "known_sum": 0,
+          "unknown_calls": 16
+        }
+      }
+    },
+    {
+      "slot": "q774-relation-review-memory-v1-r1",
+      "qid": 774,
+      "protocol": "relation-review-memory-v1",
+      "status": "abstained",
+      "terminal": {
+        "answer": "",
+        "elapsed_seconds": 176.44611469999654,
+        "outcome": "abstained",
+        "reason": "I found evidence (e2) that Richard Harmon plays John Murphy in The 100 alongside his real-life sister Jessica Harmon (Niylah), with their characters unrelated in the series — satisfying the \"plays alongside real-life relative though unrelated\" clue. The 100 also fits the season criteria (premiered 2014, 7 seasons as of 2023). However, I could not verify the remaining clues: Richard Harmon's real-life height being between 1.65m and 1.70m, John Murphy's character being married more than 2 but less than 5 times, and only one of his children surviving in the series. Without source-verified confirmation of these specific clues, I cannot confidently submit the answer."
+      },
+      "attempts": 13,
+      "elapsed_seconds": 176.6316034999909,
+      "head": "f07e0194ea3659c1490a5e0c6fe3931cf9757741aa1ba084c04d4aae80a424c0",
+      "seal_sha256": "085f90e98f63d646e6ad17bba320abb4c1e485a9e67b69be47cdc4765f89ca34",
+      "budget_after": {
+        "cap": 1643,
+        "used": 1000,
+        "remaining": 643,
+        "this_run": 51,
+        "epoch_allowance": 1000,
+        "epoch_used": 357,
+        "epoch_remaining": 643
+      },
+      "correct": false,
+      "judged": false,
+      "judge_parse_error": null,
+      "metrics": {
+        "model_attempts": 13,
+        "backend_attempts": 26,
+        "actions_recorded": 17,
+        "executed_actions": 17,
+        "action_counts": {
+          "search": 13,
+          "read": 2,
+          "find": 1,
+          "finish": 1
+        },
+        "action_error_counts": {
+          "duplicate_query_blocked": 2
+        },
+        "cache_query_hits": 6,
+        "final_phase_requests": 1,
+        "compaction_requests": 6,
+        "rounds_receiving_new_raw": 2,
+        "unknown_usage_calls": 0
+      },
+      "pivot_events": [],
+      "once_prose_reset_events": [],
+      "relation_review_events": [
+        {
+          "excluded_fields": [
+            "assistant_content",
+            "provider_reasoning",
+            "notes",
+            "repair",
+            "feedback",
+            "gap_judgments",
+            "non_search_read_find_arguments_and_receipt_bodies"
+          ],
+          "identity": {
+            "instruction_sha256": "15590f5a6a7ce6bbb2de19bb693f778186da2258a09ed8b86daadc2b7233c133",
+            "kind": "one_request_relation_review_not_verified_evidence",
+            "rule": {
+              "allowed_tools": [
+                "find",
+                "read",
+                "search"
+              ],
+              "batch_limit": "unchanged",
+              "consecutive_successful_search_rounds": 3,
+              "excluded": [
+                "assistant_content",
+                "provider_reasoning",
+                "notes",
+                "repair",
+                "feedback",
+                "gap_judgments",
+                "non_search_read_find_arguments_and_receipt_bodies"
+              ],
+              "extra_model_requests": 0,
+              "final": "never_trigger",
+              "history": "retrieval-tool-history-only_untrusted_data_not_native_message_pairs",
+              "max_triggers": 1,
+              "minimum_remaining_model_calls": 4,
+              "require_existing_raw": false,
+              "restore": "next_request_original_history",
+              "search_success": "executed_and_ok",
+              "version": "relation-review-once-v1"
+            },
+            "rule_sha256": "b6df1df8be149253aeb45031d8ffa0eb801bdf3b2aaaf38cdc551b51924f4c80",
+            "version": "relation-review-once-v1"
+          },
+          "input_sources": [
+            {
+              "group_sha256": "9a7f48756e3b6dbe5c920007e8bf8e797cf18581f6530163c9c7fbdba07c2035",
+              "message_sha256": [
+                "eb773c4b91080595aed27323709f10b07b2c92bddc0ca906a94ce3c393cbca24",
+                "f34f130f30f2fd763a3190bc72dc795b775b5707fdc9eb051b67cd7c895f2846",
+                "a4bac9bae8ef4cc1f9f6435148ec8d2f0fbb810308b4211ffab42a46c8602d8e"
+              ],
+              "round": 4
+            },
+            {
+              "group_sha256": "b92d7789ca26efbbd66d114988ec560c4100c6ecb273d4f5797d625657ca5adc",
+              "message_sha256": [
+                "a3e62764b162bb115f61396e449461a84cd641907008e16e947a87865e8ce213",
+                "fab222e371046d798b1ccf5945381784e67bc6a62ed6e38f6b0e971ec3e7430e"
+              ],
+              "round": 5
+            },
+            {
+              "group_sha256": "8f973df7a2241fa15e5312bf243bae13136b28fdafb778685ede46c38f34a0ae",
+              "message_sha256": [
+                "46ba8d00acf1c81a87d73a8d9016389148542f74a26d74d116f227ba618e6c01",
+                "af478ab9c614bb223a7afbe4a6e8aee90fe6f509b2b40f329fd06cdbf3982c4f"
+              ],
+              "round": 6
+            },
+            {
+              "group_sha256": "ae4c3fe0001d820b8aba4f7598ab2f4cc0a55bd5215edadfced6c51cec722b98",
+              "message_sha256": [
+                "509b6ea9e97b047bf2cab015136cb4ca1a3f8bdeafbe621ca4678290772f112a",
+                "a84a96d95cc6c51f4bfe06fb325a9962f53e4a45587424dd31ff7285b5bf8ea8"
+              ],
+              "round": 7
+            }
+          ],
+          "observation": "no new source passage",
+          "raw_windows": [
+            {
+              "end": 3000,
+              "object_sha256": "f59b2a95157daec0d8aac514c14f089e25169c209c9b209459eacdffb89a311f",
+              "ref": "e1",
+              "start": 0
+            },
+            {
+              "end": 5844,
+              "object_sha256": "b0063d1a5fea83678e50da2307e63cc126597bbd9eea8fb10407fade92748fce",
+              "ref": "e2",
+              "start": 4344
+            }
+          ],
+          "round": 8,
+          "source_rounds": [
+            5,
+            6,
+            7
+          ],
+          "system_sha256": "3a03c8ef8c9b7f9f516783b03d7781d3800097f25b0dde41e6df1a19c0b9f600",
+          "tools_sha256": "3ea4f314864c7db310ba13e8f5c7598a671d78f270aecb8dd5648a2148ca6bcf",
+          "trigger_number": 1,
+          "wire_sha256": "415632d232dee7b1612a9e7719b8ba478106abb6b1910c92e87b539e34e6cb9c",
+          "wire_tools_sha256": "3ea4f314864c7db310ba13e8f5c7598a671d78f270aecb8dd5648a2148ca6bcf"
+        }
+      ],
+      "review_memory_capture_events": [
+        {
+          "content_chars": 515,
+          "content_sha256": "40c2b63d393374f1ec53e0714876b0fb20bbcb288df463abe3bf5a4bba12248f",
+          "content_utf8_bytes": 515,
+          "created": true,
+          "identity": {
+            "kind": "joint_relation_review_and_unverified_memory",
+            "review": {
+              "instruction_sha256": "15590f5a6a7ce6bbb2de19bb693f778186da2258a09ed8b86daadc2b7233c133",
+              "kind": "one_request_relation_review_not_verified_evidence",
+              "rule": {
+                "allowed_tools": [
+                  "find",
+                  "read",
+                  "search"
+                ],
+                "batch_limit": "unchanged",
+                "consecutive_successful_search_rounds": 3,
+                "excluded": [
+                  "assistant_content",
+                  "provider_reasoning",
+                  "notes",
+                  "repair",
+                  "feedback",
+                  "gap_judgments",
+                  "non_search_read_find_arguments_and_receipt_bodies"
+                ],
+                "extra_model_requests": 0,
+                "final": "never_trigger",
+                "history": "retrieval-tool-history-only_untrusted_data_not_native_message_pairs",
+                "max_triggers": 1,
+                "minimum_remaining_model_calls": 4,
+                "require_existing_raw": false,
+                "restore": "next_request_original_history",
+                "search_success": "executed_and_ok",
+                "version": "relation-review-once-v1"
+              },
+              "rule_sha256": "b6df1df8be149253aeb45031d8ffa0eb801bdf3b2aaaf38cdc551b51924f4c80",
+              "version": "relation-review-once-v1"
+            },
+            "rule": {
+              "capacity": "fit_normal_plan_first_then_optional_memory_without_further_eviction",
+              "capture": "successful_review_complete_group_without_tool_errors",
+              "content": "complete_assistant_content_no_summary_no_truncation",
+              "content_limit_chars": 2000,
+              "evidence_authorization": "unchanged",
+              "extra_calls": 0,
+              "input_sources": "review_request_visible_only_not_same_response_tool_results",
+              "invalid_utf8": "skip_without_hash_or_replacement",
+              "label": "Previous model opinion: may be wrong or stale; does not replace raw source evidence or authorize references.",
+              "lifetime": "subsequent_requests_including_final",
+              "version": "relation-review-memory-v1"
+            },
+            "rule_sha256": "6811332bf43f0f53b2d56f8fa62d0cdfcafd0bca83e98531e35bbcb9878efc75",
+            "version": "relation-review-memory-v1"
+          },
+          "input_evidence": [
+            {
+              "document": "d1",
+              "document_chars": 9101,
+              "end": 3000,
+              "kind": "raw_evidence",
+              "ref": "e1",
+              "sha256": "30d6d8bd1feaa16d7480eae3bbb0d0772ddf0a956d9870efc705af2df5ace29e",
+              "snapshot": "a531c0a6be82cbe578781b28cb207ff02e87008856d5212ec2eab3fae2afe076",
+              "start": 0
+            },
+            {
+              "document": "d1",
+              "document_chars": 9101,
+              "end": 5844,
+              "kind": "raw_evidence",
+              "ref": "e2",
+              "sha256": "ecc6db411aec7113912b01ee11404052f68c5913770dd4a8ef771ea82049a974",
+              "snapshot": "a531c0a6be82cbe578781b28cb207ff02e87008856d5212ec2eab3fae2afe076",
+              "start": 4344
+            }
+          ],
+          "input_evidence_sha256": "98494b647cc62a0657dbde1da975403e3ff27e8a1bff9e666ff3961e37a40a0c",
+          "skip_reason": null,
+          "source_assistant_sha256": "4ed7a7dc3401534eb21f7c39a3e430191df1e30495a87e42c448ec484f044db1",
+          "source_response_sha256": "e8d28723a2bb2ac563c6bf73ab460bebfe3a4fcd4fc388df981fe8b450dcd25c",
+          "source_round": 8
+        }
+      ],
+      "review_memory_delivery_events": [
+        {
+          "base_capacity": 89671,
+          "content_sha256": "40c2b63d393374f1ec53e0714876b0fb20bbcb288df463abe3bf5a4bba12248f",
+          "identity": {
+            "kind": "joint_relation_review_and_unverified_memory",
+            "review": {
+              "instruction_sha256": "15590f5a6a7ce6bbb2de19bb693f778186da2258a09ed8b86daadc2b7233c133",
+              "kind": "one_request_relation_review_not_verified_evidence",
+              "rule": {
+                "allowed_tools": [
+                  "find",
+                  "read",
+                  "search"
+                ],
+                "batch_limit": "unchanged",
+                "consecutive_successful_search_rounds": 3,
+                "excluded": [
+                  "assistant_content",
+                  "provider_reasoning",
+                  "notes",
+                  "repair",
+                  "feedback",
+                  "gap_judgments",
+                  "non_search_read_find_arguments_and_receipt_bodies"
+                ],
+                "extra_model_requests": 0,
+                "final": "never_trigger",
+                "history": "retrieval-tool-history-only_untrusted_data_not_native_message_pairs",
+                "max_triggers": 1,
+                "minimum_remaining_model_calls": 4,
+                "require_existing_raw": false,
+                "restore": "next_request_original_history",
+                "search_success": "executed_and_ok",
+                "version": "relation-review-once-v1"
+              },
+              "rule_sha256": "b6df1df8be149253aeb45031d8ffa0eb801bdf3b2aaaf38cdc551b51924f4c80",
+              "version": "relation-review-once-v1"
+            },
+            "rule": {
+              "capacity": "fit_normal_plan_first_then_optional_memory_without_further_eviction",
+              "capture": "successful_review_complete_group_without_tool_errors",
+              "content": "complete_assistant_content_no_summary_no_truncation",
+              "content_limit_chars": 2000,
+              "evidence_authorization": "unchanged",
+              "extra_calls": 0,
+              "input_sources": "review_request_visible_only_not_same_response_tool_results",
+              "invalid_utf8": "skip_without_hash_or_replacement",
+              "label": "Previous model opinion: may be wrong or stale; does not replace raw source evidence or authorize references.",
+              "lifetime": "subsequent_requests_including_final",
+              "version": "relation-review-memory-v1"
+            },
+            "rule_sha256": "6811332bf43f0f53b2d56f8fa62d0cdfcafd0bca83e98531e35bbcb9878efc75",
+            "version": "relation-review-memory-v1"
+          },
+          "input_refs_currently_visible": [
+            "e1",
+            "e2"
+          ],
+          "omitted_reason": null,
+          "proposed_capacity": 91488,
+          "rendered": true,
+          "round": 9,
+          "source_response_sha256": "e8d28723a2bb2ac563c6bf73ab460bebfe3a4fcd4fc388df981fe8b450dcd25c",
+          "source_round": 8,
+          "wire_sha256": "b2237994c3ddda95cbf083aeefdc1df8bf282fd562f741ff337e9a5c3179df82"
+        },
+        {
+          "base_capacity": 82311,
+          "content_sha256": "40c2b63d393374f1ec53e0714876b0fb20bbcb288df463abe3bf5a4bba12248f",
+          "identity": {
+            "kind": "joint_relation_review_and_unverified_memory",
+            "review": {
+              "instruction_sha256": "15590f5a6a7ce6bbb2de19bb693f778186da2258a09ed8b86daadc2b7233c133",
+              "kind": "one_request_relation_review_not_verified_evidence",
+              "rule": {
+                "allowed_tools": [
+                  "find",
+                  "read",
+                  "search"
+                ],
+                "batch_limit": "unchanged",
+                "consecutive_successful_search_rounds": 3,
+                "excluded": [
+                  "assistant_content",
+                  "provider_reasoning",
+                  "notes",
+                  "repair",
+                  "feedback",
+                  "gap_judgments",
+                  "non_search_read_find_arguments_and_receipt_bodies"
+                ],
+                "extra_model_requests": 0,
+                "final": "never_trigger",
+                "history": "retrieval-tool-history-only_untrusted_data_not_native_message_pairs",
+                "max_triggers": 1,
+                "minimum_remaining_model_calls": 4,
+                "require_existing_raw": false,
+                "restore": "next_request_original_history",
+                "search_success": "executed_and_ok",
+                "version": "relation-review-once-v1"
+              },
+              "rule_sha256": "b6df1df8be149253aeb45031d8ffa0eb801bdf3b2aaaf38cdc551b51924f4c80",
+              "version": "relation-review-once-v1"
+            },
+            "rule": {
+              "capacity": "fit_normal_plan_first_then_optional_memory_without_further_eviction",
+              "capture": "successful_review_complete_group_without_tool_errors",
+              "content": "complete_assistant_content_no_summary_no_truncation",
+              "content_limit_chars": 2000,
+              "evidence_authorization": "unchanged",
+              "extra_calls": 0,
+              "input_sources": "review_request_visible_only_not_same_response_tool_results",
+              "invalid_utf8": "skip_without_hash_or_replacement",
+              "label": "Previous model opinion: may be wrong or stale; does not replace raw source evidence or authorize references.",
+              "lifetime": "subsequent_requests_including_final",
+              "version": "relation-review-memory-v1"
+            },
+            "rule_sha256": "6811332bf43f0f53b2d56f8fa62d0cdfcafd0bca83e98531e35bbcb9878efc75",
+            "version": "relation-review-memory-v1"
+          },
+          "input_refs_currently_visible": [
+            "e1",
+            "e2"
+          ],
+          "omitted_reason": null,
+          "proposed_capacity": 84128,
+          "rendered": true,
+          "round": 10,
+          "source_response_sha256": "e8d28723a2bb2ac563c6bf73ab460bebfe3a4fcd4fc388df981fe8b450dcd25c",
+          "source_round": 8,
+          "wire_sha256": "95b4c5d842294c7e59600b6edf0988ad2d60c61d52b7167074996b6ec0f20341"
+        },
+        {
+          "base_capacity": 91497,
+          "content_sha256": "40c2b63d393374f1ec53e0714876b0fb20bbcb288df463abe3bf5a4bba12248f",
+          "identity": {
+            "kind": "joint_relation_review_and_unverified_memory",
+            "review": {
+              "instruction_sha256": "15590f5a6a7ce6bbb2de19bb693f778186da2258a09ed8b86daadc2b7233c133",
+              "kind": "one_request_relation_review_not_verified_evidence",
+              "rule": {
+                "allowed_tools": [
+                  "find",
+                  "read",
+                  "search"
+                ],
+                "batch_limit": "unchanged",
+                "consecutive_successful_search_rounds": 3,
+                "excluded": [
+                  "assistant_content",
+                  "provider_reasoning",
+                  "notes",
+                  "repair",
+                  "feedback",
+                  "gap_judgments",
+                  "non_search_read_find_arguments_and_receipt_bodies"
+                ],
+                "extra_model_requests": 0,
+                "final": "never_trigger",
+                "history": "retrieval-tool-history-only_untrusted_data_not_native_message_pairs",
+                "max_triggers": 1,
+                "minimum_remaining_model_calls": 4,
+                "require_existing_raw": false,
+                "restore": "next_request_original_history",
+                "search_success": "executed_and_ok",
+                "version": "relation-review-once-v1"
+              },
+              "rule_sha256": "b6df1df8be149253aeb45031d8ffa0eb801bdf3b2aaaf38cdc551b51924f4c80",
+              "version": "relation-review-once-v1"
+            },
+            "rule": {
+              "capacity": "fit_normal_plan_first_then_optional_memory_without_further_eviction",
+              "capture": "successful_review_complete_group_without_tool_errors",
+              "content": "complete_assistant_content_no_summary_no_truncation",
+              "content_limit_chars": 2000,
+              "evidence_authorization": "unchanged",
+              "extra_calls": 0,
+              "input_sources": "review_request_visible_only_not_same_response_tool_results",
+              "invalid_utf8": "skip_without_hash_or_replacement",
+              "label": "Previous model opinion: may be wrong or stale; does not replace raw source evidence or authorize references.",
+              "lifetime": "subsequent_requests_including_final",
+              "version": "relation-review-memory-v1"
+            },
+            "rule_sha256": "6811332bf43f0f53b2d56f8fa62d0cdfcafd0bca83e98531e35bbcb9878efc75",
+            "version": "relation-review-memory-v1"
+          },
+          "input_refs_currently_visible": [
+            "e1",
+            "e2"
+          ],
+          "omitted_reason": "capacity",
+          "proposed_capacity": 93314,
+          "rendered": false,
+          "round": 11,
+          "source_response_sha256": "e8d28723a2bb2ac563c6bf73ab460bebfe3a4fcd4fc388df981fe8b450dcd25c",
+          "source_round": 8,
+          "wire_sha256": "3dba8bc57f910c09668be753996412a0f386909361fa2b0677380fe8252af91e"
+        },
+        {
+          "base_capacity": 60330,
+          "content_sha256": "40c2b63d393374f1ec53e0714876b0fb20bbcb288df463abe3bf5a4bba12248f",
+          "identity": {
+            "kind": "joint_relation_review_and_unverified_memory",
+            "review": {
+              "instruction_sha256": "15590f5a6a7ce6bbb2de19bb693f778186da2258a09ed8b86daadc2b7233c133",
+              "kind": "one_request_relation_review_not_verified_evidence",
+              "rule": {
+                "allowed_tools": [
+                  "find",
+                  "read",
+                  "search"
+                ],
+                "batch_limit": "unchanged",
+                "consecutive_successful_search_rounds": 3,
+                "excluded": [
+                  "assistant_content",
+                  "provider_reasoning",
+                  "notes",
+                  "repair",
+                  "feedback",
+                  "gap_judgments",
+                  "non_search_read_find_arguments_and_receipt_bodies"
+                ],
+                "extra_model_requests": 0,
+                "final": "never_trigger",
+                "history": "retrieval-tool-history-only_untrusted_data_not_native_message_pairs",
+                "max_triggers": 1,
+                "minimum_remaining_model_calls": 4,
+                "require_existing_raw": false,
+                "restore": "next_request_original_history",
+                "search_success": "executed_and_ok",
+                "version": "relation-review-once-v1"
+              },
+              "rule_sha256": "b6df1df8be149253aeb45031d8ffa0eb801bdf3b2aaaf38cdc551b51924f4c80",
+              "version": "relation-review-once-v1"
+            },
+            "rule": {
+              "capacity": "fit_normal_plan_first_then_optional_memory_without_further_eviction",
+              "capture": "successful_review_complete_group_without_tool_errors",
+              "content": "complete_assistant_content_no_summary_no_truncation",
+              "content_limit_chars": 2000,
+              "evidence_authorization": "unchanged",
+              "extra_calls": 0,
+              "input_sources": "review_request_visible_only_not_same_response_tool_results",
+              "invalid_utf8": "skip_without_hash_or_replacement",
+              "label": "Previous model opinion: may be wrong or stale; does not replace raw source evidence or authorize references.",
+              "lifetime": "subsequent_requests_including_final",
+              "version": "relation-review-memory-v1"
+            },
+            "rule_sha256": "6811332bf43f0f53b2d56f8fa62d0cdfcafd0bca83e98531e35bbcb9878efc75",
+            "version": "relation-review-memory-v1"
+          },
+          "input_refs_currently_visible": [
+            "e1",
+            "e2"
+          ],
+          "omitted_reason": null,
+          "proposed_capacity": 62147,
+          "rendered": true,
+          "round": 12,
+          "source_response_sha256": "e8d28723a2bb2ac563c6bf73ab460bebfe3a4fcd4fc388df981fe8b450dcd25c",
+          "source_round": 8,
+          "wire_sha256": "cc32c795523d8b6177517194703f989fab98ebfd864539bf9c0772bed1841015"
+        },
+        {
+          "base_capacity": 52162,
+          "content_sha256": "40c2b63d393374f1ec53e0714876b0fb20bbcb288df463abe3bf5a4bba12248f",
+          "identity": {
+            "kind": "joint_relation_review_and_unverified_memory",
+            "review": {
+              "instruction_sha256": "15590f5a6a7ce6bbb2de19bb693f778186da2258a09ed8b86daadc2b7233c133",
+              "kind": "one_request_relation_review_not_verified_evidence",
+              "rule": {
+                "allowed_tools": [
+                  "find",
+                  "read",
+                  "search"
+                ],
+                "batch_limit": "unchanged",
+                "consecutive_successful_search_rounds": 3,
+                "excluded": [
+                  "assistant_content",
+                  "provider_reasoning",
+                  "notes",
+                  "repair",
+                  "feedback",
+                  "gap_judgments",
+                  "non_search_read_find_arguments_and_receipt_bodies"
+                ],
+                "extra_model_requests": 0,
+                "final": "never_trigger",
+                "history": "retrieval-tool-history-only_untrusted_data_not_native_message_pairs",
+                "max_triggers": 1,
+                "minimum_remaining_model_calls": 4,
+                "require_existing_raw": false,
+                "restore": "next_request_original_history",
+                "search_success": "executed_and_ok",
+                "version": "relation-review-once-v1"
+              },
+              "rule_sha256": "b6df1df8be149253aeb45031d8ffa0eb801bdf3b2aaaf38cdc551b51924f4c80",
+              "version": "relation-review-once-v1"
+            },
+            "rule": {
+              "capacity": "fit_normal_plan_first_then_optional_memory_without_further_eviction",
+              "capture": "successful_review_complete_group_without_tool_errors",
+              "content": "complete_assistant_content_no_summary_no_truncation",
+              "content_limit_chars": 2000,
+              "evidence_authorization": "unchanged",
+              "extra_calls": 0,
+              "input_sources": "review_request_visible_only_not_same_response_tool_results",
+              "invalid_utf8": "skip_without_hash_or_replacement",
+              "label": "Previous model opinion: may be wrong or stale; does not replace raw source evidence or authorize references.",
+              "lifetime": "subsequent_requests_including_final",
+              "version": "relation-review-memory-v1"
+            },
+            "rule_sha256": "6811332bf43f0f53b2d56f8fa62d0cdfcafd0bca83e98531e35bbcb9878efc75",
+            "version": "relation-review-memory-v1"
+          },
+          "input_refs_currently_visible": [
+            "e1",
+            "e2"
+          ],
+          "omitted_reason": null,
+          "proposed_capacity": 53979,
+          "rendered": true,
+          "round": 13,
+          "source_response_sha256": "e8d28723a2bb2ac563c6bf73ab460bebfe3a4fcd4fc388df981fe8b450dcd25c",
+          "source_round": 8,
+          "wire_sha256": "d4865d28751f874325df398b95d1bdfad59c3c0d8b1aac5354fad3bc9354de21"
+        }
+      ],
+      "review_memory_rendered_requests": 4,
+      "history_projection_events": [],
+      "history_projection_requests_with_changes": 0,
+      "history_projection_removed_utf8_bytes_across_requests": 0,
+      "queries_executed": 31,
+      "evidence_windows_registered": 2,
+      "new_backend_searches": 25,
+      "backend_document_reads": 1,
+      "tokens": {
+        "input_tokens": {
+          "known_sum": 221449,
+          "unknown_calls": 0
+        },
+        "output_tokens": {
+          "known_sum": 1990,
+          "unknown_calls": 0
+        },
+        "cache_read_tokens": {
+          "known_sum": 83072,
+          "unknown_calls": 0
+        },
+        "cache_write_tokens": {
+          "known_sum": 0,
+          "unknown_calls": 13
+        }
+      }
+    },
+    {
+      "slot": "q771-relation-review-memory-v1-r1",
+      "qid": 771,
+      "protocol": "relation-review-memory-v1",
+      "status": "submitted",
+      "terminal": {
+        "answer": "Vakkorama",
+        "answer_representation": {
+          "input_type": "string",
+          "operation": "identity",
+          "rule": "string-integer-v1"
+        },
+        "basis": [
+          {
+            "document": "d12",
+            "document_chars": 13639,
+            "end": 6000,
+            "kind": "raw_evidence",
+            "ref": "e3",
+            "sha256": "97a6e11f3f34512afbebf984635c4f0118e43a0fd1a04e71a3f4cf755defe729",
+            "snapshot": "7d8960afbde4b93401ea738e66299a6ee3d0dee47906ba8e3a86ebdea642ffcd",
+            "start": 3000
+          },
+          {
+            "document": "d1",
+            "document_chars": 9095,
+            "end": 6000,
+            "kind": "raw_evidence",
+            "ref": "e4",
+            "sha256": "01ef6425050ddf612695a672f50d2d88e296ce9e1e5d49338047f20a92856164",
+            "snapshot": "446eabd6c86b9aad83f468e7eb034d96105d6e38bc9d97c923416d3ce089e105",
+            "start": 3000
+          }
+        ],
+        "elapsed_seconds": 17.531973099976312,
+        "outcome": "submitted",
+        "refs": [
+          "e3",
+          "e4"
+        ],
+        "semantic_status": "not_automatically_verified"
+      },
+      "attempts": 4,
+      "elapsed_seconds": 17.624464299995452,
+      "head": "ce7a68339bbd2ab787b902b3451223eb882d29cd1dba430e78fe4a11d104e253",
+      "seal_sha256": "2af45a571ce671888b3230ca3c00a1dcb9c7613b22c0d546e54e227b766b17b7",
+      "budget_after": {
+        "cap": 1643,
+        "used": 1004,
+        "remaining": 639,
+        "this_run": 55,
+        "epoch_allowance": 1000,
+        "epoch_used": 361,
+        "epoch_remaining": 639
+      },
+      "correct": true,
+      "judged": true,
+      "judge_parse_error": false,
+      "metrics": {
+        "model_attempts": 4,
+        "backend_attempts": 5,
+        "actions_recorded": 6,
+        "executed_actions": 6,
+        "action_counts": {
+          "search": 1,
+          "read": 4,
+          "finish": 1
+        },
+        "action_error_counts": {},
+        "cache_query_hits": 0,
+        "final_phase_requests": 1,
+        "compaction_requests": 0,
+        "rounds_receiving_new_raw": 2,
+        "unknown_usage_calls": 0
+      },
+      "pivot_events": [],
+      "once_prose_reset_events": [],
+      "relation_review_events": [],
+      "review_memory_capture_events": [],
+      "review_memory_delivery_events": [],
+      "review_memory_rendered_requests": 0,
+      "history_projection_events": [],
+      "history_projection_requests_with_changes": 0,
+      "history_projection_removed_utf8_bytes_across_requests": 0,
+      "queries_executed": 3,
+      "evidence_windows_registered": 4,
+      "new_backend_searches": 3,
+      "backend_document_reads": 2,
+      "tokens": {
+        "input_tokens": {
+          "known_sum": 29084,
+          "unknown_calls": 0
+        },
+        "output_tokens": {
+          "known_sum": 422,
+          "unknown_calls": 0
+        },
+        "cache_read_tokens": {
+          "known_sum": 13568,
+          "unknown_calls": 0
+        },
+        "cache_write_tokens": {
+          "known_sum": 0,
+          "unknown_calls": 4
+        }
+      }
+    },
+    {
+      "slot": "q771-baseline-r1",
+      "qid": 771,
+      "protocol": "baseline",
+      "status": "submitted",
+      "terminal": {
+        "answer": "Vakkorama",
+        "answer_representation": {
+          "input_type": "string",
+          "operation": "identity",
+          "rule": "string-integer-v1"
+        },
+        "basis": [
+          {
+            "document": "d1",
+            "document_chars": 9095,
+            "end": 6000,
+            "kind": "raw_evidence",
+            "ref": "e2",
+            "sha256": "01ef6425050ddf612695a672f50d2d88e296ce9e1e5d49338047f20a92856164",
+            "snapshot": "446eabd6c86b9aad83f468e7eb034d96105d6e38bc9d97c923416d3ce089e105",
+            "start": 3000
+          },
+          {
+            "document": "d8",
+            "document_chars": 13639,
+            "end": 3000,
+            "kind": "raw_evidence",
+            "ref": "e3",
+            "sha256": "ed282b99cfb0aae5a430ddfadeb3348fa20e85aac24fb4501bf9cd3b3dadb4b2",
+            "snapshot": "7d8960afbde4b93401ea738e66299a6ee3d0dee47906ba8e3a86ebdea642ffcd",
+            "start": 0
+          }
+        ],
+        "elapsed_seconds": 18.47658269997919,
+        "outcome": "submitted",
+        "refs": [
+          "e2",
+          "e3"
+        ],
+        "semantic_status": "not_automatically_verified"
+      },
+      "attempts": 4,
+      "elapsed_seconds": 18.56595990000642,
+      "head": "ac1f368db37ae60dee3b885743de3bbb5519c7fbe7620874494054dc539fe4d9",
+      "seal_sha256": "10b4bf157b7bee0d03a48716dcaef71d28c03b47edceefef8aa6457b894cc267",
+      "budget_after": {
+        "cap": 1643,
+        "used": 1008,
+        "remaining": 635,
+        "this_run": 59,
+        "epoch_allowance": 1000,
+        "epoch_used": 365,
+        "epoch_remaining": 635
+      },
+      "correct": true,
+      "judged": true,
+      "judge_parse_error": false,
+      "metrics": {
+        "model_attempts": 4,
+        "backend_attempts": 5,
+        "actions_recorded": 5,
+        "executed_actions": 5,
+        "action_counts": {
+          "search": 1,
+          "read": 3,
+          "finish": 1
+        },
+        "action_error_counts": {},
+        "cache_query_hits": 0,
+        "final_phase_requests": 1,
+        "compaction_requests": 0,
+        "rounds_receiving_new_raw": 2,
+        "unknown_usage_calls": 0
+      },
+      "pivot_events": [],
+      "once_prose_reset_events": [],
+      "relation_review_events": [],
+      "review_memory_capture_events": [],
+      "review_memory_delivery_events": [],
+      "review_memory_rendered_requests": 0,
+      "history_projection_events": [],
+      "history_projection_requests_with_changes": 0,
+      "history_projection_removed_utf8_bytes_across_requests": 0,
+      "queries_executed": 3,
+      "evidence_windows_registered": 3,
+      "new_backend_searches": 3,
+      "backend_document_reads": 2,
+      "tokens": {
+        "input_tokens": {
+          "known_sum": 30363,
+          "unknown_calls": 0
+        },
+        "output_tokens": {
+          "known_sum": 538,
+          "unknown_calls": 0
+        },
+        "cache_read_tokens": {
+          "known_sum": 15616,
+          "unknown_calls": 0
+        },
+        "cache_write_tokens": {
+          "known_sum": 0,
+          "unknown_calls": 4
+        }
+      }
+    },
+    {
+      "slot": "q778-baseline-r1",
+      "qid": 778,
+      "protocol": "baseline",
+      "status": "submitted",
+      "terminal": {
+        "answer": "21",
+        "answer_representation": {
+          "input_type": "integer",
+          "input_value": 21,
+          "operation": "decimal",
+          "rule": "string-integer-v1"
+        },
+        "basis": [
+          {
+            "document": "d25",
+            "document_chars": 4374,
+            "end": 3000,
+            "kind": "raw_evidence",
+            "ref": "e1",
+            "sha256": "bc0d510dbd6cde0530cf08684de455d82ec1943c0ba50cab130ae01990cc24b8",
+            "snapshot": "d7b7a23b3eb780d78018e5fe30d91613c9769a1cff7564bb0a79c08614acb838",
+            "start": 0
+          }
+        ],
+        "elapsed_seconds": 23.340393499995116,
+        "outcome": "submitted",
+        "refs": [
+          "e1"
+        ],
+        "semantic_status": "not_automatically_verified"
+      },
+      "attempts": 4,
+      "elapsed_seconds": 23.434482000011485,
+      "head": "47c888ccfbe2a2207c31f4cb17ae8fc74ed984cdb81bcccc8b10685391f6db0f",
+      "seal_sha256": "b0c9e6b15c2c1c930e427c72f03e1da71cf00df38519c7b66c6373beea13b42c",
+      "budget_after": {
+        "cap": 1643,
+        "used": 1012,
+        "remaining": 631,
+        "this_run": 63,
+        "epoch_allowance": 1000,
+        "epoch_used": 369,
+        "epoch_remaining": 631
+      },
+      "correct": true,
+      "judged": true,
+      "judge_parse_error": false,
+      "metrics": {
+        "model_attempts": 4,
+        "backend_attempts": 7,
+        "actions_recorded": 4,
+        "executed_actions": 4,
+        "action_counts": {
+          "search": 2,
+          "read": 1,
+          "finish": 1
+        },
+        "action_error_counts": {},
+        "cache_query_hits": 0,
+        "final_phase_requests": 1,
+        "compaction_requests": 0,
+        "rounds_receiving_new_raw": 1,
+        "unknown_usage_calls": 0
+      },
+      "pivot_events": [],
+      "once_prose_reset_events": [],
+      "relation_review_events": [],
+      "review_memory_capture_events": [],
+      "review_memory_delivery_events": [],
+      "review_memory_rendered_requests": 0,
+      "history_projection_events": [],
+      "history_projection_requests_with_changes": 0,
+      "history_projection_removed_utf8_bytes_across_requests": 0,
+      "queries_executed": 6,
+      "evidence_windows_registered": 1,
+      "new_backend_searches": 6,
+      "backend_document_reads": 1,
+      "tokens": {
+        "input_tokens": {
+          "known_sum": 36280,
+          "unknown_calls": 0
+        },
+        "output_tokens": {
+          "known_sum": 579,
+          "unknown_calls": 0
+        },
+        "cache_read_tokens": {
+          "known_sum": 14720,
+          "unknown_calls": 0
+        },
+        "cache_write_tokens": {
+          "known_sum": 0,
+          "unknown_calls": 4
+        }
+      }
+    },
+    {
+      "slot": "q778-relation-review-memory-v1-r1",
+      "qid": 778,
+      "protocol": "relation-review-memory-v1",
+      "status": "submitted",
+      "terminal": {
+        "answer": "21",
+        "answer_representation": {
+          "input_type": "integer",
+          "input_value": 21,
+          "operation": "decimal",
+          "rule": "string-integer-v1"
+        },
+        "basis": [
+          {
+            "document": "d18",
+            "document_chars": 4374,
+            "end": 3000,
+            "kind": "raw_evidence",
+            "ref": "e1",
+            "sha256": "bc0d510dbd6cde0530cf08684de455d82ec1943c0ba50cab130ae01990cc24b8",
+            "snapshot": "d7b7a23b3eb780d78018e5fe30d91613c9769a1cff7564bb0a79c08614acb838",
+            "start": 0
+          }
+        ],
+        "elapsed_seconds": 19.648557200009236,
+        "outcome": "submitted",
+        "refs": [
+          "e1"
+        ],
+        "semantic_status": "not_automatically_verified"
+      },
+      "attempts": 4,
+      "elapsed_seconds": 19.763719299982768,
+      "head": "3a531a7328da991b8f0cb2918993b810258405c680dcc0e7c7d411019749214e",
+      "seal_sha256": "9e92822b3685fd1c553f74bc72ce2c6ad1f3fa89c7029c07f1dfbb8a3e2379b8",
+      "budget_after": {
+        "cap": 1643,
+        "used": 1016,
+        "remaining": 627,
+        "this_run": 67,
+        "epoch_allowance": 1000,
+        "epoch_used": 373,
+        "epoch_remaining": 627
+      },
+      "correct": true,
+      "judged": true,
+      "judge_parse_error": false,
+      "metrics": {
+        "model_attempts": 4,
+        "backend_attempts": 7,
+        "actions_recorded": 4,
+        "executed_actions": 4,
+        "action_counts": {
+          "search": 2,
+          "read": 1,
+          "finish": 1
+        },
+        "action_error_counts": {},
+        "cache_query_hits": 0,
+        "final_phase_requests": 1,
+        "compaction_requests": 0,
+        "rounds_receiving_new_raw": 1,
+        "unknown_usage_calls": 0
+      },
+      "pivot_events": [],
+      "once_prose_reset_events": [],
+      "relation_review_events": [],
+      "review_memory_capture_events": [],
+      "review_memory_delivery_events": [],
+      "review_memory_rendered_requests": 0,
+      "history_projection_events": [],
+      "history_projection_requests_with_changes": 0,
+      "history_projection_removed_utf8_bytes_across_requests": 0,
+      "queries_executed": 6,
+      "evidence_windows_registered": 1,
+      "new_backend_searches": 6,
+      "backend_document_reads": 1,
+      "tokens": {
+        "input_tokens": {
+          "known_sum": 29813,
+          "unknown_calls": 0
+        },
+        "output_tokens": {
+          "known_sum": 355,
+          "unknown_calls": 0
+        },
+        "cache_read_tokens": {
+          "known_sum": 14464,
+          "unknown_calls": 0
+        },
+        "cache_write_tokens": {
+          "known_sum": 0,
+          "unknown_calls": 4
+        }
+      }
+    }
+  ],
+  "pairs": [
+    {
+      "qid": 775,
+      "baseline": false,
+      "treatment": false,
+      "delta": 0
+    },
+    {
+      "qid": 774,
+      "baseline": false,
+      "treatment": false,
+      "delta": 0
+    },
+    {
+      "qid": 771,
+      "baseline": true,
+      "treatment": true,
+      "delta": 0
+    },
+    {
+      "qid": 778,
+      "baseline": true,
+      "treatment": true,
+      "delta": 0
+    }
+  ],
+  "stage_complete": true,
+  "comparable_pairs": 4,
+  "baseline_correct": 2,
+  "treatment_correct": 2,
+  "paired_wins": 0,
+  "paired_losses": 0,
+  "exact_two_sided_p": 1.0,
+  "controls_no_regression": true,
+  "beyond_discovery_net": 0,
+  "budget": {
+    "cap": 1643,
+    "used": 1021,
+    "remaining": 622,
+    "this_run": 72,
+    "epoch_allowance": 1000,
+    "epoch_used": 378,
+    "epoch_remaining": 622
+  },
+  "tokens_all_requests": {
+    "input_tokens": {
+      "known_sum": 970881,
+      "unknown_calls": 0
+    },
+    "output_tokens": {
+      "known_sum": 10767,
+      "unknown_calls": 0
+    },
+    "cache_read_tokens": {
+      "known_sum": 402816,
+      "unknown_calls": 0
+    },
+    "cache_write_tokens": {
+      "known_sum": 0,
+      "unknown_calls": 72
+    }
+  },
+  "source_audit": "Separate delivered-evidence review required before advancement or success claim."
+}

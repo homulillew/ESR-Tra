@@ -1,0 +1,135 @@
+{
+  "protocol": "stride-search-3",
+  "head": "a943ada4feb70bb35d0ea0a7920fdd9b63aabf4db8f30f10510f7ca7739f07a6",
+  "outcome": "submitted",
+  "formal_correct": null,
+  "model_attempts": 4,
+  "backend_attempts": 5,
+  "queries": [
+    {
+      "round": 1,
+      "top_k": 5,
+      "equivalence_key": "2a2b952aa0a796deaaaf68b413aca1f55f79117c2b820420e744775a7ef6fa7d",
+      "cached": false,
+      "query_sha256": "123d18f7c1bdfc86b1eef0d45bac0d4432a27fd326a6da7c8bd6734ef7150b47",
+      "query": "hat shop 1930s scarves renamed initials siblings surname",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"hat\" OR \"shop\" OR \"1930s\" OR \"scarves\" OR \"renamed\" OR \"initials\" OR \"siblings\" OR \"surname\"",
+        "terms": [
+          "hat",
+          "shop",
+          "1930s",
+          "scarves",
+          "renamed",
+          "initials",
+          "siblings",
+          "surname"
+        ]
+      }
+    },
+    {
+      "round": 1,
+      "top_k": 5,
+      "equivalence_key": "75f4bfa8942a076f2764f151d017dec046bd4dd1167c338a43a83ba05f37fd14",
+      "cached": false,
+      "query_sha256": "1cd4bd6b00323e78a3d6c2f7d745141f429b06933561b17c90cb6fe712805194",
+      "query": "hat shop opened 1930s branches 1970s new brand 1980s child younger audience",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"hat\" OR \"shop\" OR \"opened\" OR \"1930s\" OR \"branches\" OR \"1970s\" OR \"new\" OR \"brand\" OR \"1980s\" OR \"child\" OR \"younger\" OR \"audience\"",
+        "terms": [
+          "hat",
+          "shop",
+          "opened",
+          "1930s",
+          "branches",
+          "1970s",
+          "new",
+          "brand",
+          "1980s",
+          "child",
+          "younger",
+          "audience"
+        ]
+      }
+    },
+    {
+      "round": 1,
+      "top_k": 5,
+      "equivalence_key": "0b87c06b666f7dae8ba0bdfb70c83a086d657bdcfb3f276376b803d0b7c8e603",
+      "cached": false,
+      "query_sha256": "0a41e5f4066dea0496bd27032745ae340f08a55c001611193cca3005d490a07c",
+      "query": "milliner hat shop scarves shop name initials siblings surname",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"milliner\" OR \"hat\" OR \"shop\" OR \"scarves\" OR \"name\" OR \"initials\" OR \"siblings\" OR \"surname\"",
+        "terms": [
+          "milliner",
+          "hat",
+          "shop",
+          "scarves",
+          "name",
+          "initials",
+          "siblings",
+          "surname"
+        ]
+      }
+    }
+  ],
+  "equivalent_query_repeats": 0,
+  "views": [
+    {
+      "round": 1,
+      "compacted": false,
+      "visible_evidence": [],
+      "shelf": [],
+      "shelf_evicted": []
+    },
+    {
+      "round": 2,
+      "compacted": false,
+      "visible_evidence": [],
+      "shelf": [],
+      "shelf_evicted": []
+    },
+    {
+      "round": 3,
+      "compacted": false,
+      "visible_evidence": [
+        "e1",
+        "e2"
+      ],
+      "shelf": [],
+      "shelf_evicted": []
+    },
+    {
+      "round": 4,
+      "compacted": false,
+      "visible_evidence": [
+        "e1",
+        "e2",
+        "e3",
+        "e4"
+      ],
+      "shelf": [],
+      "shelf_evicted": []
+    }
+  ],
+  "delivered_refs": [
+    "e1",
+    "e2",
+    "e3",
+    "e4"
+  ],
+  "submitted_refs": [
+    "e3",
+    "e4"
+  ],
+  "text_included": true,
+  "limitations": [
+    "Equivalence is compiler equality, not semantic identity or wasted-search proof",
+    "Raw-window visibility/selection is not entailment or complete evidence coverage",
+    "No live q26 replay or independent answer scoring is performed"
+  ]
+}

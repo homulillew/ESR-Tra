@@ -1,0 +1,867 @@
+{
+  "protocol": "stride-search-3",
+  "head": "0b82d530ef2dcf12aef68e8eb76dc3d850c5e45917e83740285763295e24a0aa",
+  "outcome": "abstained",
+  "formal_correct": null,
+  "model_attempts": 13,
+  "backend_attempts": 26,
+  "queries": [
+    {
+      "round": 1,
+      "top_k": 8,
+      "equivalence_key": "ebf16f86958b4a5d499a1a3bf82164573bea2e74ed4008153d5cc144f605cef5",
+      "cached": false,
+      "query_sha256": "1c57267c9d1a0f726b8164393b9ce7ad3a18734b1bc841fae5925048dda98da6",
+      "query": "actor plays alongside real life relative unrelated series character married multiple times",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"actor\" OR \"plays\" OR \"alongside\" OR \"real\" OR \"life\" OR \"relative\" OR \"unrelated\" OR \"series\" OR \"character\" OR \"married\" OR \"multiple\" OR \"times\"",
+        "terms": [
+          "actor",
+          "plays",
+          "alongside",
+          "real",
+          "life",
+          "relative",
+          "unrelated",
+          "series",
+          "character",
+          "married",
+          "multiple",
+          "times"
+        ]
+      }
+    },
+    {
+      "round": 1,
+      "top_k": 8,
+      "equivalence_key": "a88eb402d065872e4286bda183bedf8292436ea12c01191abdd8fab5785461e4",
+      "cached": false,
+      "query_sha256": "f256ab25251b80b5ae20ce97f8211c0e9f554002cab53a2f0849d7b41971dbf9",
+      "query": "TV series character married more than twice only one child survives",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"tv\" OR \"series\" OR \"character\" OR \"married\" OR \"more\" OR \"than\" OR \"twice\" OR \"only\" OR \"one\" OR \"child\" OR \"survives\"",
+        "terms": [
+          "tv",
+          "series",
+          "character",
+          "married",
+          "more",
+          "than",
+          "twice",
+          "only",
+          "one",
+          "child",
+          "survives"
+        ]
+      }
+    },
+    {
+      "round": 1,
+      "top_k": 8,
+      "equivalence_key": "9dd1e064693ba0e352b096a9c6407d841c982359230e1151ad79f840853755b4",
+      "cached": false,
+      "query_sha256": "2a2d6e45fdb67dacc96efb694033666cf5babfbe7bf77e51bf545b5a033f87d6",
+      "query": "entertainer height 1.66 1.67 1.68 1.69 actor real life relative co-star",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"entertainer\" OR \"height\" OR \"1\" OR \"66\" OR \"67\" OR \"68\" OR \"69\" OR \"actor\" OR \"real\" OR \"life\" OR \"relative\" OR \"co\" OR \"star\"",
+        "terms": [
+          "entertainer",
+          "height",
+          "1",
+          "66",
+          "67",
+          "68",
+          "69",
+          "actor",
+          "real",
+          "life",
+          "relative",
+          "co",
+          "star"
+        ]
+      }
+    },
+    {
+      "round": 1,
+      "top_k": 8,
+      "equivalence_key": "8188e0ff697fdf2343871dedca0a389e29715140176e15da84e75d044f1db668",
+      "cached": false,
+      "query_sha256": "1bdd1afcb01a34312a25f141f1a242563060a73bea03f23ff3f171cfed594b05",
+      "query": "soap opera character married three times four times one child survives",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"soap\" OR \"opera\" OR \"character\" OR \"married\" OR \"three\" OR \"times\" OR \"four\" OR \"one\" OR \"child\" OR \"survives\"",
+        "terms": [
+          "soap",
+          "opera",
+          "character",
+          "married",
+          "three",
+          "times",
+          "four",
+          "one",
+          "child",
+          "survives"
+        ]
+      }
+    },
+    {
+      "round": 1,
+      "top_k": 8,
+      "equivalence_key": "463e82a247902fffeaadf644c65089627dcc0752619c8cdbf50cca396d00ea12",
+      "cached": false,
+      "query_sha256": "28d3db53017b2a513da7a89c46329280637a634b80ee0c5162d0560da64aaf72",
+      "query": "actor real life family member co-star different characters series",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"actor\" OR \"real\" OR \"life\" OR \"family\" OR \"member\" OR \"co\" OR \"star\" OR \"different\" OR \"characters\" OR \"series\"",
+        "terms": [
+          "actor",
+          "real",
+          "life",
+          "family",
+          "member",
+          "co",
+          "star",
+          "different",
+          "characters",
+          "series"
+        ]
+      }
+    },
+    {
+      "round": 2,
+      "top_k": 8,
+      "equivalence_key": "448ae45b23eee70c6dcb35839876d5701b6b14ad93bab0b73d129cbae23c5a81",
+      "cached": false,
+      "query_sha256": "f63ed1879ee320ce020d04b6ac76c9287ea4373b70652dc2391c3193defa02b1",
+      "query": "Richard Harmon height The 100 John Murphy marriages",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"richard\" OR \"harmon\" OR \"height\" OR \"the\" OR \"100\" OR \"john\" OR \"murphy\" OR \"marriages\"",
+        "terms": [
+          "richard",
+          "harmon",
+          "height",
+          "the",
+          "100",
+          "john",
+          "murphy",
+          "marriages"
+        ]
+      }
+    },
+    {
+      "round": 2,
+      "top_k": 8,
+      "equivalence_key": "e701a168859eb72d63d454a0212d75b98af0521aa772ca2d64f82a88e2eae02b",
+      "cached": false,
+      "query_sha256": "46c1629b193da771b605540d757ace2831c0672ab082184adf53d5943415b6cf",
+      "query": "The 100 John Murphy character married children",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"the\" OR \"100\" OR \"john\" OR \"murphy\" OR \"character\" OR \"married\" OR \"children\"",
+        "terms": [
+          "the",
+          "100",
+          "john",
+          "murphy",
+          "character",
+          "married",
+          "children"
+        ]
+      }
+    },
+    {
+      "round": 2,
+      "top_k": 8,
+      "equivalence_key": "5fecf240a232eb9b233036a1481168b90dbf51fc71717efd54306a560439fa0c",
+      "cached": false,
+      "query_sha256": "b0b41bb1eda1cec37dd683103d8f6c743d2231da29ae850343e61753f3dfcd51",
+      "query": "Richard Harmon real life sibling sister Jessica Harmon The 100",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"richard\" OR \"harmon\" OR \"real\" OR \"life\" OR \"sibling\" OR \"sister\" OR \"jessica\" OR \"the\" OR \"100\"",
+        "terms": [
+          "richard",
+          "harmon",
+          "real",
+          "life",
+          "sibling",
+          "sister",
+          "jessica",
+          "the",
+          "100"
+        ]
+      }
+    },
+    {
+      "round": 3,
+      "top_k": 8,
+      "equivalence_key": "56604df0635de3e0558475d461eb401269df92921cc6183c0d12ef9dd18f6ab8",
+      "cached": false,
+      "query_sha256": "a805e0dc58eb64666975593ac8272b1de578391656efdcb740feb4f794b767dc",
+      "query": "Richard Harmon height cm actor The 100",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"richard\" OR \"harmon\" OR \"height\" OR \"cm\" OR \"actor\" OR \"the\" OR \"100\"",
+        "terms": [
+          "richard",
+          "harmon",
+          "height",
+          "cm",
+          "actor",
+          "the",
+          "100"
+        ]
+      }
+    },
+    {
+      "round": 3,
+      "top_k": 8,
+      "equivalence_key": "8aed5c8914d852219b2402b4fb57a2c7f17f8c11dd8d1d7367156b3c1ff8d0ef",
+      "cached": false,
+      "query_sha256": "597afde7ec92c7cabfc9ccce9e22d36d11467cf15bd36bbcedd4d745489f9626",
+      "query": "John Murphy The 100 character marriages wives Emori",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"john\" OR \"murphy\" OR \"the\" OR \"100\" OR \"character\" OR \"marriages\" OR \"wives\" OR \"emori\"",
+        "terms": [
+          "john",
+          "murphy",
+          "the",
+          "100",
+          "character",
+          "marriages",
+          "wives",
+          "emori"
+        ]
+      }
+    },
+    {
+      "round": 3,
+      "top_k": 8,
+      "equivalence_key": "c1e79dacab3d52ed1ec21c3dbab95e3c870cd7fbe9668f83afcb1a34f42b1535",
+      "cached": false,
+      "query_sha256": "21f28beac82f7433a18a8eede0ec50fa305552d1382ab6d4bc38c487da4ea7a0",
+      "query": "The 100 John Murphy children son",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"the\" OR \"100\" OR \"john\" OR \"murphy\" OR \"children\" OR \"son\"",
+        "terms": [
+          "the",
+          "100",
+          "john",
+          "murphy",
+          "children",
+          "son"
+        ]
+      }
+    },
+    {
+      "round": 4,
+      "top_k": 6,
+      "equivalence_key": "ed2199a0284cba58379c261d251042428f34b0752382e6fdbf25a25080c80c64",
+      "cached": false,
+      "query_sha256": "5b166eec3365a958659db0d217036cb4268d22a77fa00872c6a5b216678e0da1",
+      "query": "Richard Harmon actor Wikipedia height",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"richard\" OR \"harmon\" OR \"actor\" OR \"wikipedia\" OR \"height\"",
+        "terms": [
+          "richard",
+          "harmon",
+          "actor",
+          "wikipedia",
+          "height"
+        ]
+      }
+    },
+    {
+      "round": 4,
+      "top_k": 6,
+      "equivalence_key": "453674c30ae487174ba53fb57c76ece1b511856f45b69ab2d61480da29d84ae4",
+      "cached": false,
+      "query_sha256": "e717abd1747ec240e704ffd0cbd2d569accc0b1943306315a50e9effcbf1422e",
+      "query": "Richard Harmon The 100 John Murphy biography height",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"richard\" OR \"harmon\" OR \"the\" OR \"100\" OR \"john\" OR \"murphy\" OR \"biography\" OR \"height\"",
+        "terms": [
+          "richard",
+          "harmon",
+          "the",
+          "100",
+          "john",
+          "murphy",
+          "biography",
+          "height"
+        ]
+      }
+    },
+    {
+      "round": 5,
+      "top_k": 8,
+      "equivalence_key": "20ccfca4faf25b73315f9f556369f246c2e2c819a9fc4d245041fce2fcbfa4e0",
+      "cached": false,
+      "query_sha256": "3216f343200bbf79b6dfdcb749f8bbf651fe79aa00b0636eaef5da4997544467",
+      "query": "Richard Harmon actor Wikipedia biography",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"richard\" OR \"harmon\" OR \"actor\" OR \"wikipedia\" OR \"biography\"",
+        "terms": [
+          "richard",
+          "harmon",
+          "actor",
+          "wikipedia",
+          "biography"
+        ]
+      }
+    },
+    {
+      "round": 5,
+      "top_k": 8,
+      "equivalence_key": "a3fcedd9dea623a490549637288c784320a0b816ea3987940446093d51b22875",
+      "cached": false,
+      "query_sha256": "7b456c6cf9f467e5dd027e96339d46da78071059f2e677b3003e6cad32382a56",
+      "query": "John Murphy The 100 character Emori wife married",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"john\" OR \"murphy\" OR \"the\" OR \"100\" OR \"character\" OR \"emori\" OR \"wife\" OR \"married\"",
+        "terms": [
+          "john",
+          "murphy",
+          "the",
+          "100",
+          "character",
+          "emori",
+          "wife",
+          "married"
+        ]
+      }
+    },
+    {
+      "round": 5,
+      "top_k": 8,
+      "equivalence_key": "1fbc6b98996aaebdd17c680785c0d98516d3886f6a78aca600d25efbf6af0a58",
+      "cached": false,
+      "query_sha256": "86bf1ccf4b17458c3d9d8b5a693587b6dc8baeac0e166cf155c213a78b63e6f1",
+      "query": "Richard Harmon height 1.68 5 6 actor",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"richard\" OR \"harmon\" OR \"height\" OR \"1\" OR \"68\" OR \"5\" OR \"6\" OR \"actor\"",
+        "terms": [
+          "richard",
+          "harmon",
+          "height",
+          "1",
+          "68",
+          "5",
+          "6",
+          "actor"
+        ]
+      }
+    },
+    {
+      "round": 6,
+      "top_k": 8,
+      "equivalence_key": "846842ff1e832e06e35de59e97f434612f93a901dd93757e1568b6b8b5323288",
+      "cached": false,
+      "query_sha256": "10f237565db29f030042f8449b7cc94698eac67c39ca0951b9f585226bea1076",
+      "query": "Richard Harmon Canadian actor The 100 biography",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"richard\" OR \"harmon\" OR \"canadian\" OR \"actor\" OR \"the\" OR \"100\" OR \"biography\"",
+        "terms": [
+          "richard",
+          "harmon",
+          "canadian",
+          "actor",
+          "the",
+          "100",
+          "biography"
+        ]
+      }
+    },
+    {
+      "round": 6,
+      "top_k": 8,
+      "equivalence_key": "fdb335eefe71860218ec59d462dabc86b1dbb60614e1028764ae8bec161ff498",
+      "cached": false,
+      "query_sha256": "c31b3b3af15e6626381d6be703fb74ff2c66cff01769074bf78ee697e573d6f5",
+      "query": "John Murphy The 100 fandom wiki character Emori wife child",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"john\" OR \"murphy\" OR \"the\" OR \"100\" OR \"fandom\" OR \"wiki\" OR \"character\" OR \"emori\" OR \"wife\" OR \"child\"",
+        "terms": [
+          "john",
+          "murphy",
+          "the",
+          "100",
+          "fandom",
+          "wiki",
+          "character",
+          "emori",
+          "wife",
+          "child"
+        ]
+      }
+    },
+    {
+      "round": 6,
+      "top_k": 8,
+      "equivalence_key": "49db496fbe792863ca9a17284264f6caf8e651b6f00d8348a3e707d355eaa649",
+      "cached": false,
+      "query_sha256": "e13d8bee193dda8af4a4ed05dc0630d90247feafe840df4d78bb6ee02c1d434e",
+      "query": "Richard Harmon height feet centimeters actor biography",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"richard\" OR \"harmon\" OR \"height\" OR \"feet\" OR \"centimeters\" OR \"actor\" OR \"biography\"",
+        "terms": [
+          "richard",
+          "harmon",
+          "height",
+          "feet",
+          "centimeters",
+          "actor",
+          "biography"
+        ]
+      }
+    },
+    {
+      "round": 7,
+      "top_k": 8,
+      "equivalence_key": "f20293b5bb0c62bdd801456a0e6882aed45f7a559d47a23c12ecedaff9c4d590",
+      "cached": false,
+      "query_sha256": "887359f75ee4363f8397ea0e52d7998eae017e897dcfe740904ba57f1888b6f7",
+      "query": "Richard Harmon actor Wikipedia biography height",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"richard\" OR \"harmon\" OR \"actor\" OR \"wikipedia\" OR \"biography\" OR \"height\"",
+        "terms": [
+          "richard",
+          "harmon",
+          "actor",
+          "wikipedia",
+          "biography",
+          "height"
+        ]
+      }
+    },
+    {
+      "round": 7,
+      "top_k": 8,
+      "equivalence_key": "f6a8f54bad1361a18bb346e7eccbfeec6555e216d50550d16aad0dc446494a86",
+      "cached": false,
+      "query_sha256": "8b2369830c822e350f318f6f902c986f7a28a2115f04794e17d21ab2b7a90be7",
+      "query": "John Murphy The 100 character Emori wife married child",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"john\" OR \"murphy\" OR \"the\" OR \"100\" OR \"character\" OR \"emori\" OR \"wife\" OR \"married\" OR \"child\"",
+        "terms": [
+          "john",
+          "murphy",
+          "the",
+          "100",
+          "character",
+          "emori",
+          "wife",
+          "married",
+          "child"
+        ]
+      }
+    },
+    {
+      "round": 7,
+      "top_k": 8,
+      "equivalence_key": "0a3fe474ea8e6f4ec73e86a856d7684564dba8f4f29cf68b02cdd9cafe58ec53",
+      "cached": false,
+      "query_sha256": "c1c026ad91b2293aa4457fe2d6eec9104559d3cd241833579ab6571ffe685936",
+      "query": "Richard Harmon height 5 6 168 cm actor",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"richard\" OR \"harmon\" OR \"height\" OR \"5\" OR \"6\" OR \"168\" OR \"cm\" OR \"actor\"",
+        "terms": [
+          "richard",
+          "harmon",
+          "height",
+          "5",
+          "6",
+          "168",
+          "cm",
+          "actor"
+        ]
+      }
+    },
+    {
+      "round": 8,
+      "top_k": 8,
+      "equivalence_key": "1361155069bed3a1609fe9110199dbc5aee8d6347172c0ad8e0d7d015b383fcc",
+      "cached": false,
+      "query_sha256": "307f8bd54644e10c9b3cab59100ef52011d4da378acbfc3fbcfe2f7c51f1edd7",
+      "query": "character married three times children one survives TV series actor real life relative",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"character\" OR \"married\" OR \"three\" OR \"times\" OR \"children\" OR \"one\" OR \"survives\" OR \"tv\" OR \"series\" OR \"actor\" OR \"real\" OR \"life\" OR \"relative\"",
+        "terms": [
+          "character",
+          "married",
+          "three",
+          "times",
+          "children",
+          "one",
+          "survives",
+          "tv",
+          "series",
+          "actor",
+          "real",
+          "life",
+          "relative"
+        ]
+      }
+    },
+    {
+      "round": 8,
+      "top_k": 8,
+      "equivalence_key": "5441b253e74721212bf24ee0105229680c0c61111f2a719338405a0d5d42c6a5",
+      "cached": false,
+      "query_sha256": "f7e079ae4f041d7e36080d3a187e54f90ad447835898def78c998f9c0a5b80e9",
+      "query": "soap opera character married 3 times only one child survives actor sibling",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"soap\" OR \"opera\" OR \"character\" OR \"married\" OR \"3\" OR \"times\" OR \"only\" OR \"one\" OR \"child\" OR \"survives\" OR \"actor\" OR \"sibling\"",
+        "terms": [
+          "soap",
+          "opera",
+          "character",
+          "married",
+          "3",
+          "times",
+          "only",
+          "one",
+          "child",
+          "survives",
+          "actor",
+          "sibling"
+        ]
+      }
+    },
+    {
+      "round": 8,
+      "top_k": 8,
+      "equivalence_key": "fad937d66e1ff67eb03151423dbecdc9fde4945d4da7922b1c5af23ac7173324",
+      "cached": false,
+      "query_sha256": "ca204eabc1be6349e93916069fa3bec523b4b00212b2d2831c4eed9989cb7b50",
+      "query": "TV series character married four times one child survives actor plays with real life relative",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"tv\" OR \"series\" OR \"character\" OR \"married\" OR \"four\" OR \"times\" OR \"one\" OR \"child\" OR \"survives\" OR \"actor\" OR \"plays\" OR \"with\" OR \"real\" OR \"life\" OR \"relative\"",
+        "terms": [
+          "tv",
+          "series",
+          "character",
+          "married",
+          "four",
+          "times",
+          "one",
+          "child",
+          "survives",
+          "actor",
+          "plays",
+          "with",
+          "real",
+          "life",
+          "relative"
+        ]
+      }
+    },
+    {
+      "round": 9,
+      "top_k": 8,
+      "equivalence_key": "f20293b5bb0c62bdd801456a0e6882aed45f7a559d47a23c12ecedaff9c4d590",
+      "cached": true,
+      "query_sha256": "887359f75ee4363f8397ea0e52d7998eae017e897dcfe740904ba57f1888b6f7",
+      "query": "Richard Harmon actor Wikipedia biography height",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"richard\" OR \"harmon\" OR \"actor\" OR \"wikipedia\" OR \"biography\" OR \"height\"",
+        "terms": [
+          "richard",
+          "harmon",
+          "actor",
+          "wikipedia",
+          "biography",
+          "height"
+        ]
+      }
+    },
+    {
+      "round": 9,
+      "top_k": 8,
+      "equivalence_key": "f6a8f54bad1361a18bb346e7eccbfeec6555e216d50550d16aad0dc446494a86",
+      "cached": true,
+      "query_sha256": "8b2369830c822e350f318f6f902c986f7a28a2115f04794e17d21ab2b7a90be7",
+      "query": "John Murphy The 100 character Emori wife married child",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"john\" OR \"murphy\" OR \"the\" OR \"100\" OR \"character\" OR \"emori\" OR \"wife\" OR \"married\" OR \"child\"",
+        "terms": [
+          "john",
+          "murphy",
+          "the",
+          "100",
+          "character",
+          "emori",
+          "wife",
+          "married",
+          "child"
+        ]
+      }
+    },
+    {
+      "round": 9,
+      "top_k": 8,
+      "equivalence_key": "0a3fe474ea8e6f4ec73e86a856d7684564dba8f4f29cf68b02cdd9cafe58ec53",
+      "cached": true,
+      "query_sha256": "c1c026ad91b2293aa4457fe2d6eec9104559d3cd241833579ab6571ffe685936",
+      "query": "Richard Harmon height 5 6 168 cm actor",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"richard\" OR \"harmon\" OR \"height\" OR \"5\" OR \"6\" OR \"168\" OR \"cm\" OR \"actor\"",
+        "terms": [
+          "richard",
+          "harmon",
+          "height",
+          "5",
+          "6",
+          "168",
+          "cm",
+          "actor"
+        ]
+      }
+    },
+    {
+      "round": 10,
+      "top_k": 8,
+      "equivalence_key": "f20293b5bb0c62bdd801456a0e6882aed45f7a559d47a23c12ecedaff9c4d590",
+      "cached": true,
+      "query_sha256": "887359f75ee4363f8397ea0e52d7998eae017e897dcfe740904ba57f1888b6f7",
+      "query": "Richard Harmon actor Wikipedia biography height",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"richard\" OR \"harmon\" OR \"actor\" OR \"wikipedia\" OR \"biography\" OR \"height\"",
+        "terms": [
+          "richard",
+          "harmon",
+          "actor",
+          "wikipedia",
+          "biography",
+          "height"
+        ]
+      }
+    },
+    {
+      "round": 10,
+      "top_k": 8,
+      "equivalence_key": "f6a8f54bad1361a18bb346e7eccbfeec6555e216d50550d16aad0dc446494a86",
+      "cached": true,
+      "query_sha256": "8b2369830c822e350f318f6f902c986f7a28a2115f04794e17d21ab2b7a90be7",
+      "query": "John Murphy The 100 character Emori wife married child",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"john\" OR \"murphy\" OR \"the\" OR \"100\" OR \"character\" OR \"emori\" OR \"wife\" OR \"married\" OR \"child\"",
+        "terms": [
+          "john",
+          "murphy",
+          "the",
+          "100",
+          "character",
+          "emori",
+          "wife",
+          "married",
+          "child"
+        ]
+      }
+    },
+    {
+      "round": 10,
+      "top_k": 8,
+      "equivalence_key": "0a3fe474ea8e6f4ec73e86a856d7684564dba8f4f29cf68b02cdd9cafe58ec53",
+      "cached": true,
+      "query_sha256": "c1c026ad91b2293aa4457fe2d6eec9104559d3cd241833579ab6571ffe685936",
+      "query": "Richard Harmon height 5 6 168 cm actor",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"richard\" OR \"harmon\" OR \"height\" OR \"5\" OR \"6\" OR \"168\" OR \"cm\" OR \"actor\"",
+        "terms": [
+          "richard",
+          "harmon",
+          "height",
+          "5",
+          "6",
+          "168",
+          "cm",
+          "actor"
+        ]
+      }
+    }
+  ],
+  "equivalent_query_repeats": 6,
+  "views": [
+    {
+      "round": 1,
+      "compacted": false,
+      "visible_evidence": [],
+      "shelf": [],
+      "shelf_evicted": []
+    },
+    {
+      "round": 2,
+      "compacted": false,
+      "visible_evidence": [],
+      "shelf": [],
+      "shelf_evicted": []
+    },
+    {
+      "round": 3,
+      "compacted": false,
+      "visible_evidence": [
+        "e1"
+      ],
+      "shelf": [],
+      "shelf_evicted": []
+    },
+    {
+      "round": 4,
+      "compacted": false,
+      "visible_evidence": [
+        "e1"
+      ],
+      "shelf": [],
+      "shelf_evicted": []
+    },
+    {
+      "round": 5,
+      "compacted": true,
+      "visible_evidence": [
+        "e1",
+        "e2"
+      ],
+      "shelf": [],
+      "shelf_evicted": []
+    },
+    {
+      "round": 6,
+      "compacted": false,
+      "visible_evidence": [
+        "e1",
+        "e2"
+      ],
+      "shelf": [],
+      "shelf_evicted": []
+    },
+    {
+      "round": 7,
+      "compacted": true,
+      "visible_evidence": [
+        "e1",
+        "e2"
+      ],
+      "shelf": [
+        "e1"
+      ],
+      "shelf_evicted": []
+    },
+    {
+      "round": 8,
+      "compacted": true,
+      "visible_evidence": [
+        "e1",
+        "e2"
+      ],
+      "shelf": [
+        "e1"
+      ],
+      "shelf_evicted": []
+    },
+    {
+      "round": 9,
+      "compacted": true,
+      "visible_evidence": [
+        "e1",
+        "e2"
+      ],
+      "shelf": [
+        "e1",
+        "e2"
+      ],
+      "shelf_evicted": []
+    },
+    {
+      "round": 10,
+      "compacted": true,
+      "visible_evidence": [
+        "e1",
+        "e2"
+      ],
+      "shelf": [
+        "e1",
+        "e2"
+      ],
+      "shelf_evicted": []
+    },
+    {
+      "round": 11,
+      "compacted": false,
+      "visible_evidence": [
+        "e1",
+        "e2"
+      ],
+      "shelf": [
+        "e1",
+        "e2"
+      ],
+      "shelf_evicted": []
+    },
+    {
+      "round": 12,
+      "compacted": true,
+      "visible_evidence": [
+        "e1",
+        "e2"
+      ],
+      "shelf": [
+        "e1",
+        "e2"
+      ],
+      "shelf_evicted": []
+    },
+    {
+      "round": 13,
+      "compacted": false,
+      "visible_evidence": [
+        "e1",
+        "e2"
+      ],
+      "shelf": [
+        "e1",
+        "e2"
+      ],
+      "shelf_evicted": []
+    }
+  ],
+  "delivered_refs": [
+    "e1",
+    "e2"
+  ],
+  "submitted_refs": [],
+  "text_included": true,
+  "limitations": [
+    "Equivalence is compiler equality, not semantic identity or wasted-search proof",
+    "Raw-window visibility/selection is not entailment or complete evidence coverage",
+    "No live q26 replay or independent answer scoring is performed"
+  ]
+}

@@ -1,0 +1,195 @@
+{
+  "protocol": "stride-search-3",
+  "head": "b1b885db9642066542d71f1d44b528b32440b753d83bc0ab2624d6adb577cd12",
+  "outcome": "submitted",
+  "formal_correct": null,
+  "model_attempts": 4,
+  "backend_attempts": 7,
+  "queries": [
+    {
+      "round": 1,
+      "top_k": 5,
+      "equivalence_key": "b6bd8dc61721491df16aa7435b6530f4f802d59a16c08a3b818651ea63c047c3",
+      "cached": false,
+      "query_sha256": "41b42c64a7da191aab5454ac9a88bff6ffb51a094ae4454ffa177910df7428ce",
+      "query": "CEO founded company mid-1990s raised Southern Africa father engineer",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"ceo\" OR \"founded\" OR \"company\" OR \"mid\" OR \"1990s\" OR \"raised\" OR \"southern\" OR \"africa\" OR \"father\" OR \"engineer\"",
+        "terms": [
+          "ceo",
+          "founded",
+          "company",
+          "mid",
+          "1990s",
+          "raised",
+          "southern",
+          "africa",
+          "father",
+          "engineer"
+        ]
+      }
+    },
+    {
+      "round": 1,
+      "top_k": 5,
+      "equivalence_key": "9d7b2375360f95097e1d02793e4044eff99696522f0c00d385965952d20070f8",
+      "cached": false,
+      "query_sha256": "de429c09a3d134598ed2f095dfd8ddadea0ec188c3ac330f10bc1cdc466a5f6e",
+      "query": "CEO first child SIDS younger sister co-founded film streaming service",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"ceo\" OR \"first\" OR \"child\" OR \"sids\" OR \"younger\" OR \"sister\" OR \"co\" OR \"founded\" OR \"film\" OR \"streaming\" OR \"service\"",
+        "terms": [
+          "ceo",
+          "first",
+          "child",
+          "sids",
+          "younger",
+          "sister",
+          "co",
+          "founded",
+          "film",
+          "streaming",
+          "service"
+        ]
+      }
+    },
+    {
+      "round": 1,
+      "top_k": 5,
+      "equivalence_key": "0dcbc5c680aeffb6a764cc2132014ca8756f1d2ed87d06f81af74bd87b9e2d19",
+      "cached": false,
+      "query_sha256": "1c043d2eb590eadbd76b470327d6e9f4ce001eae93790e72893453c3202d07a3",
+      "query": "CEO early 2020s child name internet buzzing Southern Africa",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"ceo\" OR \"early\" OR \"2020s\" OR \"child\" OR \"name\" OR \"internet\" OR \"buzzing\" OR \"southern\" OR \"africa\"",
+        "terms": [
+          "ceo",
+          "early",
+          "2020s",
+          "child",
+          "name",
+          "internet",
+          "buzzing",
+          "southern",
+          "africa"
+        ]
+      }
+    },
+    {
+      "round": 2,
+      "top_k": 5,
+      "equivalence_key": "f068afd041a08cd8898ba6254fc6664723202aae216611bf8d458f6231bc13c4",
+      "cached": false,
+      "query_sha256": "b97316bbe719cf587b52a9150b348384d2da4fa1b03b8a6f513cd963dae2b83d",
+      "query": "woman claimed to be Elon Musk daughter relative",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"woman\" OR \"claimed\" OR \"to\" OR \"be\" OR \"elon\" OR \"musk\" OR \"daughter\" OR \"relative\"",
+        "terms": [
+          "woman",
+          "claimed",
+          "to",
+          "be",
+          "elon",
+          "musk",
+          "daughter",
+          "relative"
+        ]
+      }
+    },
+    {
+      "round": 2,
+      "top_k": 5,
+      "equivalence_key": "a8de3ca270ff036ac8130fe2c2c4016b242a36049511b29116702dbf94757fe5",
+      "cached": false,
+      "query_sha256": "7b9a870588daf6e8f89efc470f78b356416438d3e23026907714a51ab77f618c",
+      "query": "Elon Musk secret sister claimed relation mother age birth",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"elon\" OR \"musk\" OR \"secret\" OR \"sister\" OR \"claimed\" OR \"relation\" OR \"mother\" OR \"age\" OR \"birth\"",
+        "terms": [
+          "elon",
+          "musk",
+          "secret",
+          "sister",
+          "claimed",
+          "relation",
+          "mother",
+          "age",
+          "birth"
+        ]
+      }
+    },
+    {
+      "round": 2,
+      "top_k": 5,
+      "equivalence_key": "e9e71d415c51293bc8c4706bf9e2a817df0698e224eb1d876b5108d7e097fcf2",
+      "cached": false,
+      "query_sha256": "38b4d101bb1f334539e32fad2ede91946e0dc5e631321dbdb42f3d1fc4580cdc",
+      "query": "woman claims to be Elon Musk half-sister article",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"woman\" OR \"claims\" OR \"to\" OR \"be\" OR \"elon\" OR \"musk\" OR \"half\" OR \"sister\" OR \"article\"",
+        "terms": [
+          "woman",
+          "claims",
+          "to",
+          "be",
+          "elon",
+          "musk",
+          "half",
+          "sister",
+          "article"
+        ]
+      }
+    }
+  ],
+  "equivalent_query_repeats": 0,
+  "views": [
+    {
+      "round": 1,
+      "compacted": false,
+      "visible_evidence": [],
+      "shelf": [],
+      "shelf_evicted": []
+    },
+    {
+      "round": 2,
+      "compacted": false,
+      "visible_evidence": [],
+      "shelf": [],
+      "shelf_evicted": []
+    },
+    {
+      "round": 3,
+      "compacted": false,
+      "visible_evidence": [],
+      "shelf": [],
+      "shelf_evicted": []
+    },
+    {
+      "round": 4,
+      "compacted": false,
+      "visible_evidence": [
+        "e1"
+      ],
+      "shelf": [],
+      "shelf_evicted": []
+    }
+  ],
+  "delivered_refs": [
+    "e1"
+  ],
+  "submitted_refs": [
+    "e1"
+  ],
+  "text_included": true,
+  "limitations": [
+    "Equivalence is compiler equality, not semantic identity or wasted-search proof",
+    "Raw-window visibility/selection is not entailment or complete evidence coverage",
+    "No live q26 replay or independent answer scoring is performed"
+  ]
+}

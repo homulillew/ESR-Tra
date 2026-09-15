@@ -1,0 +1,129 @@
+{
+  "protocol": "stride-search-3",
+  "head": "2881188a5671caa33832206ed6cced9aaf53708b585d4a2ed1d1f4ec52736f64",
+  "outcome": "submitted",
+  "formal_correct": null,
+  "model_attempts": 4,
+  "backend_attempts": 5,
+  "queries": [
+    {
+      "round": 1,
+      "top_k": 8,
+      "equivalence_key": "fbb336ff8f7b328c468bb9a83245f488e36a32f0b6f0fc07ba79b014b5cbe614",
+      "cached": false,
+      "query_sha256": "6c686ad8daf5920b48171cd1cf2c7ba83f212cabaf48b83f7f11bcd4cf4123b1",
+      "query": "hat shop scarves renamed initials siblings surname",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"hat\" OR \"shop\" OR \"scarves\" OR \"renamed\" OR \"initials\" OR \"siblings\" OR \"surname\"",
+        "terms": [
+          "hat",
+          "shop",
+          "scarves",
+          "renamed",
+          "initials",
+          "siblings",
+          "surname"
+        ]
+      }
+    },
+    {
+      "round": 1,
+      "top_k": 8,
+      "equivalence_key": "24d0c4e3b9cd388b6e774765ef75ca69102da535b72b2f24c6c0d5cb902df4d1",
+      "cached": false,
+      "query_sha256": "4db0781514a5003a66ed689b2b5f8dd71885dd46966096b0bf2dc6c6cc0be336",
+      "query": "hat shop 1930s scarves brand child younger audience 1980s",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"hat\" OR \"shop\" OR \"1930s\" OR \"scarves\" OR \"brand\" OR \"child\" OR \"younger\" OR \"audience\" OR \"1980s\"",
+        "terms": [
+          "hat",
+          "shop",
+          "1930s",
+          "scarves",
+          "brand",
+          "child",
+          "younger",
+          "audience",
+          "1980s"
+        ]
+      }
+    },
+    {
+      "round": 1,
+      "top_k": 8,
+      "equivalence_key": "a37e70400250f8b27b2e62b870a975e03ee1e6034b872d5af75a5f83422d4917",
+      "cached": false,
+      "query_sha256": "f1daa3dd411872eeab7037a23b83240285bcb01e9bd6e1db5e881c48c185e99e",
+      "query": "hat shop railway father wooden house tower 1340s city",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"hat\" OR \"shop\" OR \"railway\" OR \"father\" OR \"wooden\" OR \"house\" OR \"tower\" OR \"1340s\" OR \"city\"",
+        "terms": [
+          "hat",
+          "shop",
+          "railway",
+          "father",
+          "wooden",
+          "house",
+          "tower",
+          "1340s",
+          "city"
+        ]
+      }
+    }
+  ],
+  "equivalent_query_repeats": 0,
+  "views": [
+    {
+      "round": 1,
+      "compacted": false,
+      "visible_evidence": [],
+      "shelf": [],
+      "shelf_evicted": []
+    },
+    {
+      "round": 2,
+      "compacted": false,
+      "visible_evidence": [],
+      "shelf": [],
+      "shelf_evicted": []
+    },
+    {
+      "round": 3,
+      "compacted": false,
+      "visible_evidence": [
+        "e1"
+      ],
+      "shelf": [],
+      "shelf_evicted": []
+    },
+    {
+      "round": 4,
+      "compacted": false,
+      "visible_evidence": [
+        "e1",
+        "e2",
+        "e3"
+      ],
+      "shelf": [],
+      "shelf_evicted": []
+    }
+  ],
+  "delivered_refs": [
+    "e1",
+    "e2",
+    "e3"
+  ],
+  "submitted_refs": [
+    "e2",
+    "e3"
+  ],
+  "text_included": true,
+  "limitations": [
+    "Equivalence is compiler equality, not semantic identity or wasted-search proof",
+    "Raw-window visibility/selection is not entailment or complete evidence coverage",
+    "No live q26 replay or independent answer scoring is performed"
+  ]
+}
