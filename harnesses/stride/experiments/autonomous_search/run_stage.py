@@ -46,6 +46,7 @@ def sources():
     paths += list((ROOT / 'harnesses/stride/tests').glob('test_decision*.py'))
     paths += [ROOT / 'harnesses/stride/tests/test_search_pivot.py',
               ROOT / 'harnesses/stride/tests/test_middle_history.py',
+              ROOT / 'harnesses/stride/tests/test_once_prose_reset.py',
               ROOT / 'harnesses/stride/tests/test_stage_publication.py']
     return {p.relative_to(ROOT).as_posix(): sha(p) for p in sorted(paths)}
 

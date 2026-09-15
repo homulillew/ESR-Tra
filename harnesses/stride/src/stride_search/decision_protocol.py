@@ -33,7 +33,7 @@ tool actions. No extra note, gap update, review call, or output field is require
 SEARCH_PIVOT = """The last two search rounds delivered no new source passage. In your next search batch, use one query to investigate a different identifying clue from the question. Omit the current unverified candidate's name from that query. Use concrete names, terms, dates, or relations stated in the question; use a short lexical query rather than the full question. Keep within the existing query limit and proceed directly with tool actions."""
 
 PROTOCOLS = {'baseline': '', 'constraint-review-v1': CONSTRAINT_REVIEW,
-             'search-pivot-v1': '', 'middle-history-v1': ''}
+             'search-pivot-v1': '', 'middle-history-v1': '', 'once-prose-reset-v1': ''}
 PIVOT_RULE = {'version': 'completed-search-no-new-source-v1',
               'consecutive_rounds': 2, 'minimum_remaining_model_calls': 3,
               'max_triggers': 2, 'reset_after_trigger': True}
@@ -42,6 +42,9 @@ PIVOT_RULE = {'version': 'completed-search-no-new-source-v1',
 def identity(name):
     if name not in PROTOCOLS:
         raise ValueError('Unknown decision protocol')
+    if name == 'once-prose-reset-v1':
+        from .history_projection import once_identity
+        return once_identity()
     if name == 'middle-history-v1':
         from .history_projection import identity as projection_identity
         return projection_identity()
@@ -104,3 +107,37 @@ class SearchPivotState:
         if projection['trigger'] is not None:
             self.used += 1
             self.search_rounds = []
+
+
+class OnceProseState(SearchPivotState):
+    """One attempted request; observations persist independently of rolling history."""
+
+    @staticmethod
+    def observation(group):
+        from .contract import loads
+        names = {c['id']: c['function']['name']
+                 for c in group['messages'][0].get('tool_calls', [])}
+        searched = any(names.get(m.get('tool_call_id')) == 'search'
+                       and loads(m['content']).get('executed', False)
+                       and loads(m['content']).get('ok', False)
+                       for m in group['messages'] if m['role'] == 'tool')
+        return searched, set(group['evidence'])
+
+    def project(self, groups, visible, through, *, remaining, final):
+        observations = dict(self.completed)
+        observations.update({g['round']: self.observation(g) for g in groups})
+        seen, rounds = set(self.seen), list(self.search_rounds)
+        visible = set(visible)
+        for number in range(self.through + 1, through + 1):
+            searched, evidence = observations.get(number, (False, set()))
+            new = (evidence & visible) - seen
+            seen.update(evidence & visible)
+            rounds = [] if new or not searched else [*rounds, number][-3:]
+        if visible - seen:
+            rounds = []
+        seen.update(visible)
+        trigger = None
+        if len(rounds) == 3 and not self.used and remaining >= 3 and not final:
+            trigger = {'source_rounds': rounds, 'trigger_number': 1,
+                       'observation': 'no new source passage'}
+        return {'through': through, 'seen': seen, 'search_rounds': rounds, 'trigger': trigger}

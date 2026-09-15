@@ -53,3 +53,36 @@ def project(history, *, first_round, latest_round):
         "latest_complete_round": latest_round,
         "first_complete_group_present": any(g["round"] == first_round for g in history),
         "retained_group_rounds": [g["round"] for g in history], "changes": changes}
+
+
+ONCE_RULE = {
+    "version": "once-prose-reset-v1",
+    "consecutive_search_rounds": 3,
+    "minimum_remaining_model_calls": 3,
+    "max_triggers": 1,
+    "observation": "successful_search_receipt_executed_and_ok_without_new_delivered_source_passage",
+    "eligibility": "retained_complete_group_with_nonempty_tool_calls",
+    "preserve_first_latest": False,
+    "replacement": "assistant.content=null",
+    "anthropic": "remove_text_blocks_only_from_projection_copy",
+    "preserve": ["tools", "arguments", "receipts", "evidence", "notes", "repair", "provider_reasoning"],
+    "final": "never_trigger",
+    "commit": "after_request_archive_before_send_attempt",
+    "duration": "one_actual_request_then_original_history",
+    "extra_prompt": False,
+    "extra_model_calls": 0,
+}
+
+
+def once_identity():
+    return {"version": ONCE_RULE["version"], "rule": deepcopy(ONCE_RULE),
+            "rule_sha256": digest(ONCE_RULE),
+            "kind": "one_request_visible_assistant_prose_omission_not_independent_planner"}
+
+
+def project_once(history):
+    messages, audit = project(history, first_round=None, latest_round=None)
+    for key in ("episode_first_complete_round", "latest_complete_round", "first_complete_group_present"):
+        audit.pop(key)
+    audit["identity"] = once_identity()
+    return messages, audit

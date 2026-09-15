@@ -6,7 +6,7 @@ from copy import deepcopy
 from .contract import system_message, ContractError, canonical
 from .workflow_contract import POLICY, toolset
 from .decision_protocol import PROTOCOLS
-from .history_projection import project as project_history
+from .history_projection import project as project_history, project_once
 
 
 def build(harness, model, counter, *, final: bool, output_limit: int, groups=None):
@@ -54,6 +54,14 @@ def build(harness, model, counter, *, final: bool, output_limit: int, groups=Non
         projected = harness.workflow.project(history, list(visible)) if harness.workflow.options.enabled else None
         workflow_final = projected is not None and projected.stage() == "final"
         effective_final = final or workflow_final
+        once_state, once_audit = None, None
+        if harness.once_prose is not None:
+            once_state = harness.once_prose.project(history, visible, harness.model_calls,
+                remaining=harness.remaining()["model_calls"], final=effective_final)
+            if once_state["trigger"] is not None:
+                projected_messages, once_audit = project_once(history)
+                history_length = sum(len(g["messages"]) for g in history)
+                messages[2:2 + history_length] = projected_messages
         scope = {"phase": "FINAL" if effective_final else "RESEARCH", "remaining": harness.remaining(),
                  "runtime_contract": {"max_calls_per_response": config.max_batch, "max_queries_per_search": config.max_queries_per_search,
                      "require_sources": config.require_sources, "evidence_shelf_size": config.evidence_shelf_size},
@@ -89,6 +97,7 @@ def build(harness, model, counter, *, final: bool, output_limit: int, groups=Non
                     "workflow_final": workflow_final, "workflow_view": workflow_view,
                     "rendered_note_keys": [n["key"] for n in active_notes], "shelf": restored, "shelf_evicted": evicted,
                     **({"search_pivot_projection": pivot} if pivot is not None else {}),
+                    **({"once_prose_state": once_state, "once_prose_audit": once_audit} if once_state is not None else {}),
                     **({"history_projection": history_view} if middle_history else {})}
         if config.context_mode == "full":
             raise ContractError("context_capacity", "Full-history arm cannot fit its actual wire request", fatal=True)

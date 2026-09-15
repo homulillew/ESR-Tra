@@ -16,7 +16,7 @@ from .providers import ByteCounter, usage_of
 from .recovery import fit_result_group, make_group, note_blocks_finish, remember_response
 from .workflow import WorkflowState, navigation_result, check_search_recovery
 from .workflow_contract import WorkflowConfig, validate_call
-from .decision_protocol import identity as decision_identity, SearchPivotState
+from .decision_protocol import identity as decision_identity, SearchPivotState, OnceProseState
 
 
 class Harness:
@@ -27,6 +27,7 @@ class Harness:
         decision_identity(decision_protocol)
         self.decision_protocol = decision_protocol
         self.search_pivot = SearchPivotState() if decision_protocol == "search-pivot-v1" else None
+        self.once_prose = OnceProseState() if decision_protocol == "once-prose-reset-v1" else None
         self.workflow = WorkflowState(workflow or WorkflowConfig())
         if answer_contract not in ANSWER_CONTRACTS:
             raise ValueError("Unknown answer contract")
@@ -260,6 +261,13 @@ class Harness:
             self.search_pivot.commit(projection)
             if projection["trigger"] is not None:
                 self.archive.append("search_pivot", {"round": round_no, **projection["trigger"]})
+        if self.once_prose is not None:
+            projection = plan["once_prose_state"]
+            self.once_prose.commit(projection)
+            if projection["trigger"] is not None:
+                self.archive.append("once_prose_reset", {"round": round_no,
+                    **projection["trigger"], **plan["once_prose_audit"],
+                    "wire_sha256": digest(plan["wire"])})
         try: raw = model.send(deepcopy(plan["wire"]))
         except Exception as exc:
             self.output_charged += output_limit; code = exc.code if isinstance(exc, ContractError) else "model_transport"
@@ -324,6 +332,8 @@ class Harness:
             self.first_complete_round = group["round"]
         if self.search_pivot is not None:
             self.search_pivot.complete(group)
+        if self.once_prose is not None:
+            self.once_prose.complete(group)
         self.archive.append("round_end", {"round": round_no, "group": group_ref, "notes": self.archive.put_json(sorted(self.notes.values(), key=lambda n: n["order"])), "remaining": self.remaining()})
         self.workflow.complete_decision(workflow_stage)
         if fatal: self._end(fatal)
