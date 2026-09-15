@@ -1,0 +1,326 @@
+diff --git a/harnesses/stride/src/stride_search/archive.py b/harnesses/stride/src/stride_search/archive.py
+index bd81409..b7f2cc0 100644
+--- a/harnesses/stride/src/stride_search/archive.py
++++ b/harnesses/stride/src/stride_search/archive.py
+@@ -220,6 +220,7 @@ class Archive:
+         integrity = self.verify()
+         terminal, requests, completed, usage, backends, actions = None, [], set(), [], 0, []
+         header, model_identity = None, None
++        answer_contract = "legacy"
+         seen, received_raw_rounds = set(), 0
+         recovery_counts = Counter()
+         for e in self.events():
+@@ -228,6 +229,9 @@ class Archive:
+                 recovery_counts[e["kind"]] += 1
+             if e["kind"] == "episode":
+                 header = p
++                answer_contract = p.get("answer_contract", "legacy")
++            elif e["kind"] == "answer_contract":
++                answer_contract = p["current"]
+             elif e["kind"] == "model_identity":
+                 model_identity = p
+             elif e["kind"] == "model_request":
+@@ -253,6 +257,7 @@ class Archive:
+                   ("input_tokens", "output_tokens", "cache_read_tokens", "cache_write_tokens")}
+         unknown = len(requests) - sum(type(u.get("input_tokens")) is int and type(u.get("output_tokens")) is int for u in usage)
+         return {**integrity, "protocol": header["protocol"], "header": header,
++                "answer_contract": answer_contract,
+                 "model_identity": model_identity,
+                 "terminal": terminal or {"outcome": "interrupted", "answer": ""},
+                 "model_attempts": len(requests), "backend_attempts": backends,
+diff --git a/harnesses/stride/src/stride_search/cli.py b/harnesses/stride/src/stride_search/cli.py
+index 4c99a4e..750c8bb 100644
+--- a/harnesses/stride/src/stride_search/cli.py
++++ b/harnesses/stride/src/stride_search/cli.py
+@@ -9,7 +9,7 @@ import sqlite3
+ import sys
+ 
+ from .archive import Archive
+-from .contract import Config, ContractError, canonical, loads, tools
++from .contract import INTEGER_ANSWER, ANSWER_CONTRACTS, Config, ContractError, canonical, loads, tools
+ from .cpu_index import SQLiteFTS5
+ from .diagnostics import diagnose
+ from .engine import Harness
+@@ -34,7 +34,7 @@ def _model(args, http):
+     cls = AnthropicModel if args.model_api == "anthropic" else OpenAIModel
+     return cls(args.base_url, args.model, revision=args.model_revision, http=http,
+                api_key=os.environ.get(args.api_key_env), expected_response_model=args.expected_response_model,
+-               output_parameter=args.output_parameter)
++               output_parameter=args.output_parameter, temperature=args.temperature)
+ 
+ 
+ def _retriever(args, http):
+@@ -60,12 +60,15 @@ def _live_arguments(p):
+     p.add_argument("--counter", required=True, choices=["utf8_bytes", "hf_tokens"])
+     p.add_argument("--tokenizer", help="Local tokenizer only; no downloads or remote code")
+     p.add_argument("--timeout", type=int, default=45)
++    p.add_argument("--temperature", type=float, default=0.2)
+ 
+ 
+ def parser():
+     p = argparse.ArgumentParser(prog="stride-search", description=__doc__)
+     commands = p.add_subparsers(dest="command", required=True)
+-    commands.add_parser("schema").add_argument("--final", action="store_true")
++    sp = commands.add_parser("schema")
++    sp.add_argument("--final", action="store_true")
++    sp.add_argument("--answer-contract", choices=ANSWER_CONTRACTS, default=INTEGER_ANSWER)
+     commands.add_parser("smoke").add_argument("--output", required=True)
+     commands.add_parser("replay").add_argument("--db", required=True)
+     dp = commands.add_parser("diagnose")
+@@ -82,6 +85,7 @@ def parser():
+     r.add_argument("--max-actions", type=int, default=80)
+     r.add_argument("--max-output-tokens", type=int, default=2048)
+     r.add_argument("--max-total-output-tokens", type=int, default=24000)
++    r.add_argument("--max-seconds", type=int, default=900)
+     r.add_argument("--no-notes", action="store_true")
+     r.add_argument("--no-final-reserve", action="store_true")
+     r.add_argument("--strict-note-failure", action="store_true")
+@@ -97,6 +101,8 @@ def parser():
+     r.add_argument("--context-mode", choices=["full", "rolling"], default="rolling")
+     r.add_argument("--answer-prefix", default="")
+     r.add_argument("--answer-suffix", default="")
++    r.add_argument("--answer-contract", choices=ANSWER_CONTRACTS, default=INTEGER_ANSWER,
++                   help="Versioned finish answer contract; legacy is for historical regression")
+     fp = commands.add_parser("plan")
+     for flag in ("questions", "config", "arms", "identities", "output"):
+         fp.add_argument("--" + flag, required=True)
+@@ -116,7 +122,7 @@ def parser():
+ 
+ def execute(args):
+     if args.command == "schema":
+-        return tools(notes_enabled=True, final=args.final)
++        return tools(notes_enabled=True, final=args.final, answer_contract=args.answer_contract)
+     if args.command == "diagnose":
+         return diagnose(args.db, include_text=args.include_text)
+     if args.command == "replay":
+@@ -170,7 +176,7 @@ def execute(args):
+     config = Config(max_model_calls=args.max_model_calls, context_limit=args.context_limit,
+         response_reserve=args.response_reserve, max_backend_calls=args.max_backend_calls,
+         max_actions=args.max_actions, max_output_tokens=args.max_output_tokens,
+-        max_total_output_tokens=args.max_total_output_tokens, notes_enabled=not args.no_notes,
++        max_total_output_tokens=args.max_total_output_tokens, max_seconds=args.max_seconds, notes_enabled=not args.no_notes,
+         reserve_finish=not args.no_final_reserve, nonblocking_notes=not args.strict_note_failure,
+         repair_context=not args.no_repair_context, delivery_preflight=not args.no_delivery_preflight,
+         disclose_retriever=not args.hide_retriever_capabilities, compiled_query_cache=args.compiled_query_cache,
+@@ -185,7 +191,8 @@ def execute(args):
+     retriever = _retriever(args, http)
+     h = None
+     try:
+-        h = Harness(question, retriever, path=args.db, config=config, counter=counter)
++        h = Harness(question, retriever, path=args.db, config=config, counter=counter,
++                    answer_contract=args.answer_contract)
+         h.run(model)
+         return h.archive.report()
+     finally:
+diff --git a/harnesses/stride/src/stride_search/context.py b/harnesses/stride/src/stride_search/context.py
+index ab57951..0c0b1e5 100644
+--- a/harnesses/stride/src/stride_search/context.py
++++ b/harnesses/stride/src/stride_search/context.py
+@@ -3,7 +3,7 @@ from __future__ import annotations
+ 
+ from copy import deepcopy
+ 
+-from .contract import SYSTEM, ContractError, canonical, tools
++from .contract import system_message, ContractError, canonical, tools
+ 
+ 
+ def build(harness, model, counter, *, final: bool, output_limit: int, groups=None):
+@@ -27,7 +27,7 @@ def build(harness, model, counter, *, final: bool, output_limit: int, groups=Non
+                       if harness.archive.evidence(e)["document"] == ref][-4:]
+             documents.append({"ref": ref, "title": doc["title"][:160], "read_ranges": [
+                 {"ref": v["ref"], "start": v["start"], "end": v["end"]} for v in ranges]})
+-        messages = [{"role": "system", "content": SYSTEM},
++        messages = [{"role": "system", "content": system_message(harness.answer_contract)},
+                     {"role": "user", "content": harness.question}]
+         visible, issued = set(), list(nav)
+         for group in history:
+@@ -53,7 +53,8 @@ def build(harness, model, counter, *, final: bool, output_limit: int, groups=Non
+         if config.disclose_retriever:
+             scope["retriever_capabilities"] = deepcopy(harness.search_capabilities)
+         messages.append({"role": "user", "content": "Current control state (data, not source evidence):\n" + canonical(scope)})
+-        wire = model.prepare(messages, tools(notes_enabled=config.notes_enabled, final=final, query_limit=config.max_queries_per_search), output_limit)
++        wire = model.prepare(messages, tools(notes_enabled=config.notes_enabled, final=final,
++            query_limit=config.max_queries_per_search, answer_contract=harness.answer_contract), output_limit)
+         size = counter(wire)
+         if type(size) is not int or size < 0:
+             raise ContractError("counter_error", "Counter returned an invalid size", fatal=True)
+diff --git a/harnesses/stride/src/stride_search/contract.py b/harnesses/stride/src/stride_search/contract.py
+index 79f3949..8ad2a22 100644
+--- a/harnesses/stride/src/stride_search/contract.py
++++ b/harnesses/stride/src/stride_search/contract.py
+@@ -10,6 +10,8 @@ from typing import Any
+ from jsonschema import Draft202012Validator
+ 
+ PROTOCOL = "stride-search-3"
++INTEGER_ANSWER = "string-integer-v1"
++ANSWER_CONTRACTS = ("legacy", INTEGER_ANSWER)
+ 
+ 
+ class ContractError(ValueError):
+@@ -106,27 +108,83 @@ of the original budget, not a bonus call. Never claim to have read unreturned to
+ """
+ 
+ 
+-def tools(*, notes_enabled: bool, final: bool, query_limit: int = 3) -> list[dict]:
++def answer_schema(answer_contract="legacy"):
++    if answer_contract not in ANSWER_CONTRACTS:
++        raise ValueError("Unknown answer contract")
++    schema = deepcopy(SCHEMAS["finish"])
++    if answer_contract == INTEGER_ANSWER:
++        schema["oneOf"][0]["properties"]["answer"]["type"] = ["string", "integer"]
++    return schema
++
++
++def answer_text(value, *, answer_contract="legacy"):
++    """Versioned representation, never extraction or factual correction."""
++    if answer_contract not in ANSWER_CONTRACTS:
++        raise ValueError("Unknown answer contract")
++    if type(value) is str:
++        text = value
++    elif answer_contract == INTEGER_ANSWER and type(value) is int:
++        # Bound conversion before str(); Python may impose a lower decimal limit.
++        if value.bit_length() > 26576:
++            raise ContractError("arguments_invalid", "answer decimal text exceeds length limit")
++        try:
++            text = str(value)
++        except ValueError as exc:
++            raise ContractError("arguments_invalid", "answer decimal text exceeds runtime conversion limit") from exc
++    else:
++        raise ContractError("arguments_invalid", "answer must be a string or a permitted JSON integer; bools and floats are not accepted")
++    if not 1 <= len(text) <= 8000 or not any(not c.isspace() for c in text):
++        raise ContractError("arguments_invalid", "answer text must be nonblank and at most 8000 characters")
++    return text
++
++
++def system_message(answer_contract="legacy"):
++    if answer_contract not in ANSWER_CONTRACTS:
++        raise ValueError("Unknown answer contract")
++    if answer_contract == INTEGER_ANSWER:
++        return SYSTEM.replace("exact intended string; nothing adds punctuation for you.",
++            "exact intended string or JSON integer; integers become decimal text, with no added punctuation.")
++    return SYSTEM
++
++
++def tools(*, notes_enabled: bool, final: bool, query_limit: int = 3, answer_contract="legacy") -> list[dict]:
++    finish_schema = answer_schema(answer_contract)
+     names = ["finish"] if final else [n for n in SCHEMAS if notes_enabled or n != "notes"]
+     result = [{"type": "function", "function": {"name": n, "description": DESCRIPTIONS[n],
+             "parameters": deepcopy(SCHEMAS[n])}} for n in names]
+     for tool in result:
++        if tool["function"]["name"] == "finish":
++            tool["function"]["parameters"] = finish_schema
++            if answer_contract == INTEGER_ANSWER:
++                tool["function"]["description"] = DESCRIPTIONS["finish"].replace("exact answer string",
++                    "exact answer string or JSON integer (plain integer syntax, not a bool, decimal or exponent; "
++                    "integers use standard decimal text, strings remain unchanged, at most 8000 text characters)")
+         if tool["function"]["name"] == "search":
+             tool["function"]["parameters"]["properties"]["queries"]["maxItems"] = query_limit
+     return result
+ 
+ 
+-def validate(name: str, args: Any, *, feedback: str = "legacy") -> None:
++def validate(name: str, args: Any, *, feedback: str = "legacy", answer_contract="legacy") -> None:
++    if answer_contract not in ANSWER_CONTRACTS:
++        raise ValueError("Unknown answer contract")
+     if feedback not in ("legacy", "field"):
+         raise ValueError("Unknown validation feedback experiment")
+     if name not in SCHEMAS:
+         raise ContractError("unknown_tool", f"Unknown tool: {name}")
+     # jsonschema regards 1.0 as an integer; the wire contract deliberately does not.
+     if isinstance(args, dict):
++        if name == "finish" and answer_contract == INTEGER_ANSWER and "answer" in args:
++            # JSON Schema also accepts mathematical integers such as 21.0.
++            # This feature intentionally requires the parser's exact str/int types.
++            if type(args["answer"]) not in (str, int):
++                raise ContractError("arguments_invalid", "answer requires string or JSON integer syntax; other types are rejected")
++            if type(args["answer"]) is int:
++                answer_text(args["answer"], answer_contract=answer_contract)
+         for key in ("top_k", "start", "length"):
+             if key in args and type(args[key]) is not int:
+                 raise ContractError("arguments_invalid", f"{key} must be an integer, not a bool or float")
+-    errors = list(Draft202012Validator(SCHEMAS[name]).iter_errors(args))
++    schema = answer_schema(answer_contract) if name == "finish" else SCHEMAS[name]
++    errors = list(Draft202012Validator(schema).iter_errors(args))
+     if errors:
+         e = min(errors, key=lambda x: str(list(x.path)))
+         if feedback == "field":
+diff --git a/harnesses/stride/src/stride_search/engine.py b/harnesses/stride/src/stride_search/engine.py
+index e17cad4..2804677 100644
+--- a/harnesses/stride/src/stride_search/engine.py
++++ b/harnesses/stride/src/stride_search/engine.py
+@@ -9,7 +9,8 @@ from typing import Callable
+ from . import search_support
+ from .archive import Archive
+ from .context import build
+-from .contract import PROTOCOL, Config, ContractError, canonical, digest, loads, text_hash, validate
++from .contract import (PROTOCOL, INTEGER_ANSWER, ANSWER_CONTRACTS, Config, ContractError,
++                       answer_text, canonical, digest, loads, text_hash, validate)
+ from .providers import ByteCounter, usage_of
+ from .recovery import fit_result_group, make_group, note_blocks_finish, remember_response
+ 
+@@ -17,7 +18,10 @@ from .recovery import fit_result_group, make_group, note_blocks_finish, remember
+ class Harness:
+     def __init__(self, question: str, retriever, *, path=":memory:", config: Config | None = None,
+                  counter=None, clock: Callable[[], float] = time.monotonic,
+-                 validation_feedback: str = "legacy"):
++                 validation_feedback: str = "legacy", answer_contract: str = "legacy"):
++        if answer_contract not in ANSWER_CONTRACTS:
++            raise ValueError("Unknown answer contract")
++        self.answer_contract = answer_contract
+         if validation_feedback not in ("legacy", "field"):
+             raise ValueError("Unknown validation feedback experiment")
+         self.validation_feedback = validation_feedback
+@@ -41,7 +45,17 @@ class Harness:
+         self.archive.append("episode", {"protocol": PROTOCOL, "question": question,
+             "config": self.config.to_dict(), "retriever": deepcopy(retriever.identity),
+             "counter": deepcopy(self.counter.identity), "search_capabilities": deepcopy(self.search_capabilities),
+-            "execution": "fresh_episode_only"})
++            "execution": "fresh_episode_only",
++            **({"answer_contract": answer_contract} if answer_contract != "legacy" else {})})
++
++    def set_answer_contract(self, value):
++        """Explicit, journaled boundary switch for historical-prefix validation."""
++        if value not in ANSWER_CONTRACTS or self.terminal is not None:
++            raise ValueError("Invalid answer contract transition")
++        if value != self.answer_contract:
++            self.archive.append("answer_contract", {"previous": self.answer_contract, "current": value,
++                                "after_round": self.model_calls})
++            self.answer_contract = value
+ 
+     def remaining(self):
+         return {"model_calls": self.config.max_model_calls - self.model_calls,
+@@ -195,7 +209,8 @@ class Harness:
+             return {"key": key, "changed": changed, "kind": "scratchpad_not_verified"}, [], []
+         if args.get("abstain"):
+             return {"terminal": self._end("abstained", reason=args["reason"])}, [], []
+-        refs, answer = args["refs"], args["answer"]
++        refs = args["refs"]
++        answer = answer_text(args["answer"], answer_contract=self.answer_contract)
+         if self.config.require_sources and not refs:
+             raise ContractError("sources_required", "This experiment requires explicit delivered raw evidence")
+         for ref in refs:
+@@ -204,8 +219,14 @@ class Harness:
+                 or (self.config.answer_suffix and not answer.endswith(self.config.answer_suffix))):
+             raise ContractError("literal_contract", "Exact answer violates the explicitly configured prefix/suffix; no automatic rewriting")
+         basis = [{k: v for k, v in self.archive.evidence(ref).items() if k != "text"} for ref in refs]
++        representation = {}
++        if self.answer_contract == INTEGER_ANSWER:
++            representation["answer_representation"] = {"rule": INTEGER_ANSWER,
++                "input_type": "integer" if type(args["answer"]) is int else "string",
++                "operation": "decimal" if type(args["answer"]) is int else "identity",
++                **({"input_value": args["answer"]} if type(args["answer"]) is int else {})}
+         return {"terminal": self._end("submitted", answer=answer, refs=refs, basis=basis,
+-                                      semantic_status="not_automatically_verified")}, [], []
++                                      semantic_status="not_automatically_verified", **representation)}, [], []
+ 
+     def run(self, model):
+         if self.model_identity is not None:
+@@ -319,7 +340,7 @@ class Harness:
+                 self.action_slots += 1
+                 charged_slot = True
+                 args = loads(arguments)
+-                validate(name, args, feedback=self.validation_feedback)
++                validate(name, args, feedback=self.validation_feedback, answer_contract=self.answer_contract)
+                 executed = True
+                 result, docs, evidence = self._dispatch(name, args, binding)
+                 result = {"ok": True, **result}

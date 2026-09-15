@@ -1,0 +1,123 @@
+{
+  "feature": "string-integer-v1",
+  "frozen_run_commit": "f04b01f7f598d8630afbc8ccc8d0891d1a3219fa",
+  "plan_sha256": "53b1a56e44cb506aa4c82529b5784c89717c3268460ce157b7f6b70bd1ce085f",
+  "utc_started": "2026-09-15T05:00:31.785019+00:00",
+  "utc_finished": "2026-09-15T05:01:25.947128+00:00",
+  "phases": [
+    {
+      "phase": "prefix",
+      "status": "submitted",
+      "new_requests": 1,
+      "model_returned_integer": true,
+      "raw_finish_arguments": "{\"answer\": 21, \"refs\": [\"e1\"]}",
+      "finish_tool_call_id": "call_4fb42e7b15644eee80afffe6",
+      "raw_input_type": "integer",
+      "raw_input_value": 21,
+      "answer_text": "21",
+      "terminal_answer": "21",
+      "refs": [
+        "e1"
+      ],
+      "representation": {
+        "rule": "string-integer-v1",
+        "input_type": "integer",
+        "operation": "decimal",
+        "input_value": 21
+      },
+      "new_actions": 1,
+      "new_action_slots": 1,
+      "new_backend_calls": 0,
+      "input_tokens": 7657,
+      "output_tokens": 284,
+      "cache_read_tokens": 0,
+      "cache_write_tokens": null,
+      "elapsed_seconds": 5.379842599999392,
+      "remaining": {
+        "model_calls": 60,
+        "action_slots": 196,
+        "backend_calls": 113,
+        "output_reservation": 47477
+      },
+      "budget_after": {
+        "cap": 1000,
+        "used": 568,
+        "remaining": 432,
+        "this_run": 1
+      },
+      "source_content_review": "Age matches the question; delivered article states mother was 21 when giving birth to the claimant.",
+      "evidence_sha256": "d7b7a23b3eb780d78018e5fe30d91613c9769a1cff7564bb0a79c08614acb838",
+      "evidence_document_handle": "d16",
+      "source_url": "https://radaronline.com/p/elon-musk-first-photos-sighting-half-sister-dad-dna-test/",
+      "archive_head": "8ae5c3730cb9ebcec4ced9ebe7450d9355b6780de72de617618d9c21c758d08c"
+    },
+    {
+      "phase": "natural",
+      "status": "submitted",
+      "new_requests": 4,
+      "model_returned_integer": true,
+      "raw_finish_arguments": "{\"answer\": 21, \"refs\": [\"e1\"]}",
+      "finish_tool_call_id": "call_36cd45827f8348028af72583",
+      "raw_input_type": "integer",
+      "raw_input_value": 21,
+      "answer_text": "21",
+      "terminal_answer": "21",
+      "refs": [
+        "e1"
+      ],
+      "representation": {
+        "rule": "string-integer-v1",
+        "input_type": "integer",
+        "operation": "decimal",
+        "input_value": 21
+      },
+      "new_actions": 5,
+      "new_action_slots": 5,
+      "new_backend_calls": 10,
+      "input_tokens": 23656,
+      "output_tokens": 650,
+      "cache_read_tokens": 13952,
+      "cache_write_tokens": null,
+      "elapsed_seconds": 47.31713139999192,
+      "remaining": {
+        "model_calls": 60,
+        "action_slots": 195,
+        "backend_calls": 110,
+        "output_reservation": 47350
+      },
+      "budget_after": {
+        "cap": 1000,
+        "used": 572,
+        "remaining": 428,
+        "this_run": 5
+      },
+      "source_content_review": "Age matches the question; delivered article states mother was 21 when giving birth to the claimant.",
+      "evidence_sha256": "d7b7a23b3eb780d78018e5fe30d91613c9769a1cff7564bb0a79c08614acb838",
+      "evidence_document_handle": "d13",
+      "source_url": "https://radaronline.com/p/elon-musk-first-photos-sighting-half-sister-dad-dna-test/",
+      "archive_head": "17083ecd98c8bfa87dc1e8b25bc9c0cf490465bc53dc55aa41be6b4c7f92c688"
+    }
+  ],
+  "total_new_requests": 5,
+  "total_new_backend_calls": 10,
+  "total_new_tool_actions": 6,
+  "input_tokens": 31313,
+  "output_tokens": 934,
+  "cache_read_tokens": 13952,
+  "cache_write_tokens": null,
+  "budget_before": {
+    "cap": 1000,
+    "used": 567,
+    "remaining": 433,
+    "this_run": 0
+  },
+  "budget_after": {
+    "cap": 1000,
+    "used": 572,
+    "remaining": 428,
+    "this_run": 5
+  },
+  "paid_judge_requests": 0,
+  "official_batch_labels_unchanged": true,
+  "conclusion": "Fixed integer answers being blocked by a string-only interface; real prefix and fresh CLI acceptance both passed."
+}

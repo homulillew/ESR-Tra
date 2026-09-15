@@ -1,0 +1,96 @@
+[
+  {
+    "phase": "prefix",
+    "round": 4,
+    "tool": "finish",
+    "tool_call_id": "call_4fb42e7b15644eee80afffe6",
+    "arguments_sha256": "2101cf2dcaf2a01d610ae18e801c71b201c1491cc3f512f84b7fd4553148ac0a",
+    "ok": true,
+    "executed": true,
+    "action_slot_charged": true,
+    "raw_arguments": "{\"answer\": 21, \"refs\": [\"e1\"]}",
+    "terminal": {
+      "answer": "21",
+      "refs": [
+        "e1"
+      ],
+      "answer_representation": {
+        "rule": "string-integer-v1",
+        "input_type": "integer",
+        "operation": "decimal",
+        "input_value": 21
+      }
+    }
+  },
+  {
+    "phase": "natural",
+    "round": 1,
+    "tool": "search",
+    "tool_call_id": "call_50e3a09931664770b08feada",
+    "arguments_sha256": "f9ee9077f5164aed24f59069577988ad50cb6dad910f6ee9c46e2abb07be057a",
+    "ok": true,
+    "executed": true,
+    "action_slot_charged": true,
+    "query_count": 3
+  },
+  {
+    "phase": "natural",
+    "round": 2,
+    "tool": "search",
+    "tool_call_id": "call_7dd5aaa3073a43a1868a8eb7",
+    "arguments_sha256": "bbfd26e7b44c9b71078f936031a39b5161ff18d5abcf0af9619f96ee9e231e20",
+    "ok": true,
+    "executed": true,
+    "action_slot_charged": true,
+    "query_count": 3
+  },
+  {
+    "phase": "natural",
+    "round": 2,
+    "tool": "search",
+    "tool_call_id": "call_dffe844a4a074752a420efa6",
+    "arguments_sha256": "1e4c1b9943a8bae524087f999ea4bf96efc308e2c687b7c00470d7b02fb10c4a",
+    "ok": true,
+    "executed": true,
+    "action_slot_charged": true,
+    "query_count": 3
+  },
+  {
+    "phase": "natural",
+    "round": 3,
+    "tool": "read",
+    "tool_call_id": "call_5bac36ff15104cdda5553295",
+    "arguments_sha256": "603468e4e503373306206da02546abd0f9123b80ff23469359d9ffc486482eef",
+    "ok": true,
+    "executed": true,
+    "action_slot_charged": true,
+    "arguments": {
+      "ref": "d13",
+      "start": 0,
+      "length": 6000
+    }
+  },
+  {
+    "phase": "natural",
+    "round": 4,
+    "tool": "finish",
+    "tool_call_id": "call_36cd45827f8348028af72583",
+    "arguments_sha256": "2101cf2dcaf2a01d610ae18e801c71b201c1491cc3f512f84b7fd4553148ac0a",
+    "ok": true,
+    "executed": true,
+    "action_slot_charged": true,
+    "raw_arguments": "{\"answer\": 21, \"refs\": [\"e1\"]}",
+    "terminal": {
+      "answer": "21",
+      "refs": [
+        "e1"
+      ],
+      "answer_representation": {
+        "rule": "string-integer-v1",
+        "input_type": "integer",
+        "operation": "decimal",
+        "input_value": 21
+      }
+    }
+  }
+]
