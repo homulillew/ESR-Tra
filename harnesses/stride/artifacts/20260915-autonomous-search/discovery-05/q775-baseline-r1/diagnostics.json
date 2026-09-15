@@ -1,0 +1,1342 @@
+{
+  "protocol": "stride-search-3",
+  "head": "d0fbbf8c5d1b02dd433c091c6c14602084102257aaeefa949145aa1020435603",
+  "outcome": "submitted",
+  "formal_correct": null,
+  "model_attempts": 15,
+  "backend_attempts": 43,
+  "queries": [
+    {
+      "round": 1,
+      "top_k": 5,
+      "equivalence_key": "c8e34b464761abbadfed91a1bf4a59d81daf577c0a1b8fa47890bdd109c00a7f",
+      "cached": false,
+      "query_sha256": "515b898bdf41f68fac41eb4e05052d029f3bb14f00299e161cce6e5a2a3292c9",
+      "query": "literary award created 2000s translated over twenty five languages",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"literary\" OR \"award\" OR \"created\" OR \"2000s\" OR \"translated\" OR \"over\" OR \"twenty\" OR \"five\" OR \"languages\"",
+        "terms": [
+          "literary",
+          "award",
+          "created",
+          "2000s",
+          "translated",
+          "over",
+          "twenty",
+          "five",
+          "languages"
+        ]
+      }
+    },
+    {
+      "round": 1,
+      "top_k": 5,
+      "equivalence_key": "f0cfe1837b1b3f4acf48e20574e2ee6e02bc116b604904063297dab790fa44df",
+      "cached": false,
+      "query_sha256": "6d31e8d33a2159c13b8b77bab38d70943f0efd8584c91f8c2c4fc27fb93ee929",
+      "query": "book award founded 2000s international translated many languages",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"book\" OR \"award\" OR \"founded\" OR \"2000s\" OR \"international\" OR \"translated\" OR \"many\" OR \"languages\"",
+        "terms": [
+          "book",
+          "award",
+          "founded",
+          "2000s",
+          "international",
+          "translated",
+          "many",
+          "languages"
+        ]
+      }
+    },
+    {
+      "round": 1,
+      "top_k": 5,
+      "equivalence_key": "e09a93c1e7216ea9c011bcaf62f44b0afb38ad15cded826ff90913d773584865",
+      "cached": false,
+      "query_sha256": "434c8af96cc89286ab414fd32cce26cd47aabb890e4dbc7aa92312122a9f0787",
+      "query": "novel translated 25 languages award contender 2010s",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"novel\" OR \"translated\" OR \"25\" OR \"languages\" OR \"award\" OR \"contender\" OR \"2010s\"",
+        "terms": [
+          "novel",
+          "translated",
+          "25",
+          "languages",
+          "award",
+          "contender",
+          "2010s"
+        ]
+      }
+    },
+    {
+      "round": 2,
+      "top_k": 5,
+      "equivalence_key": "6d08ca06ecb6789b0ec7c56612108217f7a9780e9211d0904bc408ce4b58139f",
+      "cached": false,
+      "query_sha256": "acc412302a964802bbe0a50739760494f5c3951a63f86be67c3cb289dd0ca6e7",
+      "query": "International Booker Prize created 2005 winner 2010s",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"international\" OR \"booker\" OR \"prize\" OR \"created\" OR \"2005\" OR \"winner\" OR \"2010s\"",
+        "terms": [
+          "international",
+          "booker",
+          "prize",
+          "created",
+          "2005",
+          "winner",
+          "2010s"
+        ]
+      }
+    },
+    {
+      "round": 2,
+      "top_k": 5,
+      "equivalence_key": "30b2a8f0695e2e172d5c79419ff50a1334fc90e26550cb9e76064b986300bd4b",
+      "cached": false,
+      "query_sha256": "c627e7e3c9951f6f34d021caaa1af47f6a41f9cf888ba9ec9579d40ab6bb872f",
+      "query": "book translated over 25 languages shortlisted International Booker Prize",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"book\" OR \"translated\" OR \"over\" OR \"25\" OR \"languages\" OR \"shortlisted\" OR \"international\" OR \"booker\" OR \"prize\"",
+        "terms": [
+          "book",
+          "translated",
+          "over",
+          "25",
+          "languages",
+          "shortlisted",
+          "international",
+          "booker",
+          "prize"
+        ]
+      }
+    },
+    {
+      "round": 2,
+      "top_k": 5,
+      "equivalence_key": "cb9f89ce101fd5787647c7a76deffd7791bef7e2c5a4139852262483bd546336",
+      "cached": false,
+      "query_sha256": "c2a1da17e0272cee42d54cef8325d8fd07f94f898f0c12cf739cebeb2eb26b08",
+      "query": "novel translated 30 languages contender literary award 2010s",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"novel\" OR \"translated\" OR \"30\" OR \"languages\" OR \"contender\" OR \"literary\" OR \"award\" OR \"2010s\"",
+        "terms": [
+          "novel",
+          "translated",
+          "30",
+          "languages",
+          "contender",
+          "literary",
+          "award",
+          "2010s"
+        ]
+      }
+    },
+    {
+      "round": 2,
+      "top_k": 5,
+      "equivalence_key": "5de59d665c81387727fa7723ab143e50c56a1b6f6e4b3fb7ebf83b6e270fd245",
+      "cached": false,
+      "query_sha256": "5502ed380f1ac22369502453a03723e4a771cd0cc9e6f10b472bacc47c958da9",
+      "query": "The Girl on the Train translated languages award",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"the\" OR \"girl\" OR \"on\" OR \"train\" OR \"translated\" OR \"languages\" OR \"award\"",
+        "terms": [
+          "the",
+          "girl",
+          "on",
+          "train",
+          "translated",
+          "languages",
+          "award"
+        ]
+      }
+    },
+    {
+      "round": 2,
+      "top_k": 5,
+      "equivalence_key": "179a8434c5a63c2c2db7b432c8bfde6e2b30b109eaa6168570bab1e2c6da5da5",
+      "cached": false,
+      "query_sha256": "aa7cf98569ada419aee90dc22a7071f8d760e145727e1bcc618266b22f12dfbe",
+      "query": "Gone Girl translated languages award shortlisted",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"gone\" OR \"girl\" OR \"translated\" OR \"languages\" OR \"award\" OR \"shortlisted\"",
+        "terms": [
+          "gone",
+          "girl",
+          "translated",
+          "languages",
+          "award",
+          "shortlisted"
+        ]
+      }
+    },
+    {
+      "round": 2,
+      "top_k": 5,
+      "equivalence_key": "f3edc534c7db5287475fcb2f5dbd1904fda1f820381d1971fdc4c575efecc48b",
+      "cached": false,
+      "query_sha256": "b086bfa954808794c4deecf56647bbd8103ed0369be5793f77df4da60f8ef0eb",
+      "query": "bestselling novel translated 25 languages award contender 2010s",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"bestselling\" OR \"novel\" OR \"translated\" OR \"25\" OR \"languages\" OR \"award\" OR \"contender\" OR \"2010s\"",
+        "terms": [
+          "bestselling",
+          "novel",
+          "translated",
+          "25",
+          "languages",
+          "award",
+          "contender",
+          "2010s"
+        ]
+      }
+    },
+    {
+      "round": 3,
+      "top_k": 5,
+      "equivalence_key": "2a7719ee57fcf7912147db01650e1b3e4628ca0500f1779b69b2ff4d6a3613fd",
+      "cached": false,
+      "query_sha256": "f82f69ef0fb91753371bfebeab75eabc2c04bebcc09aab783d014347d160a7e2",
+      "query": "Chigozie Obioma born city grew up",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"chigozie\" OR \"obioma\" OR \"born\" OR \"city\" OR \"grew\" OR \"up\"",
+        "terms": [
+          "chigozie",
+          "obioma",
+          "born",
+          "city",
+          "grew",
+          "up"
+        ]
+      }
+    },
+    {
+      "round": 3,
+      "top_k": 5,
+      "equivalence_key": "cc90c8c6a3c2f3ee939989cb54cefa552ac2fede7d1d99a1355a282461e7cbed",
+      "cached": false,
+      "query_sha256": "5c7679136a0f9c36447a722c0ec9c932860c2aaee9efcd51d94914517f01c506",
+      "query": "The Fishermen 2015 Booker Prize shortlisted translated languages",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"the\" OR \"fishermen\" OR \"2015\" OR \"booker\" OR \"prize\" OR \"shortlisted\" OR \"translated\" OR \"languages\"",
+        "terms": [
+          "the",
+          "fishermen",
+          "2015",
+          "booker",
+          "prize",
+          "shortlisted",
+          "translated",
+          "languages"
+        ]
+      }
+    },
+    {
+      "round": 3,
+      "top_k": 5,
+      "equivalence_key": "bad9ced5f29613cfe67d816b910c9291d200997cefc4abca6c54abbe1d186cbe",
+      "cached": false,
+      "query_sha256": "39a2c0cfee096bf42a7dade91f07c94f546857c42140a8fb2c34819ce9dca678",
+      "query": "An Orchestra of Minorities 2019 Booker Prize shortlisted",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"an\" OR \"orchestra\" OR \"of\" OR \"minorities\" OR \"2019\" OR \"booker\" OR \"prize\" OR \"shortlisted\"",
+        "terms": [
+          "an",
+          "orchestra",
+          "of",
+          "minorities",
+          "2019",
+          "booker",
+          "prize",
+          "shortlisted"
+        ]
+      }
+    },
+    {
+      "round": 4,
+      "top_k": 5,
+      "equivalence_key": "512632e2ca581e6a2a591a9dd510e6c4ef6df4f3e3704cc5cd94c8d868864d62",
+      "cached": false,
+      "query_sha256": "32a40f70b26cee84b6ec9afd752bfb878139375bf6f2a1282a6bda4429a477e2",
+      "query": "Chigozie Obioma grew up city hometown Nigeria",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"chigozie\" OR \"obioma\" OR \"grew\" OR \"up\" OR \"city\" OR \"hometown\" OR \"nigeria\"",
+        "terms": [
+          "chigozie",
+          "obioma",
+          "grew",
+          "up",
+          "city",
+          "hometown",
+          "nigeria"
+        ]
+      }
+    },
+    {
+      "round": 4,
+      "top_k": 5,
+      "equivalence_key": "b25a76d928291dd8d84e7d9cd57f8093dcc404e564b80b57442cd6c06a7e7b61",
+      "cached": false,
+      "query_sha256": "cc461993054972ff46be5c7110443cd1ac71ae56d6d09d33cc50e0c67a535d25",
+      "query": "Booker Prize 2019 winner The Testaments Margaret Atwood",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"booker\" OR \"prize\" OR \"2019\" OR \"winner\" OR \"the\" OR \"testaments\" OR \"margaret\" OR \"atwood\"",
+        "terms": [
+          "booker",
+          "prize",
+          "2019",
+          "winner",
+          "the",
+          "testaments",
+          "margaret",
+          "atwood"
+        ]
+      }
+    },
+    {
+      "round": 4,
+      "top_k": 5,
+      "equivalence_key": "44e7d4ef608a600077325f8f63b87e94fae849f6aa05be27141f670590edb50f",
+      "cached": false,
+      "query_sha256": "1cf6ec5fa226f82d444f381dd22267afdd754627927d9de9a8a90e966824b023",
+      "query": "Man Booker International Prize 2019 winner",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"man\" OR \"booker\" OR \"international\" OR \"prize\" OR \"2019\" OR \"winner\"",
+        "terms": [
+          "man",
+          "booker",
+          "international",
+          "prize",
+          "2019",
+          "winner"
+        ]
+      }
+    },
+    {
+      "round": 5,
+      "top_k": 5,
+      "equivalence_key": "f4ec0f1d500b060dd8cc1b38dcc6f896b7f39566fbb3e9b411245304b2717f6b",
+      "cached": false,
+      "query_sha256": "8de81dd5c8045b609eb277daa8fe0143693480b25870b6a0c10a802faed10ad7",
+      "query": "Man Booker International Prize 2019 winner shortlist",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"man\" OR \"booker\" OR \"international\" OR \"prize\" OR \"2019\" OR \"winner\" OR \"shortlist\"",
+        "terms": [
+          "man",
+          "booker",
+          "international",
+          "prize",
+          "2019",
+          "winner",
+          "shortlist"
+        ]
+      }
+    },
+    {
+      "round": 5,
+      "top_k": 5,
+      "equivalence_key": "5019021b3ad999f1d7f1b52233945f34d1609ef049164b9dfd54f51483b211ee",
+      "cached": false,
+      "query_sha256": "fa79df3511f810828c01decc02435d31a25eb90487aae2e69e30c9c5ae6d250f",
+      "query": "International Booker Prize 2010s winners list",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"international\" OR \"booker\" OR \"prize\" OR \"2010s\" OR \"winners\" OR \"list\"",
+        "terms": [
+          "international",
+          "booker",
+          "prize",
+          "2010s",
+          "winners",
+          "list"
+        ]
+      }
+    },
+    {
+      "round": 5,
+      "top_k": 5,
+      "equivalence_key": "3e5d229d1af4432a65e4bf244ee96f9c10e37d4c19ca89597101015ddd1648d5",
+      "cached": false,
+      "query_sha256": "0e2455845c66540acc7bce0a92e4f6a1edb56776d63b8bc6b10888aeccffcec5",
+      "query": "book translated 25 languages shortlisted Man Booker International Prize 2010s",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"book\" OR \"translated\" OR \"25\" OR \"languages\" OR \"shortlisted\" OR \"man\" OR \"booker\" OR \"international\" OR \"prize\" OR \"2010s\"",
+        "terms": [
+          "book",
+          "translated",
+          "25",
+          "languages",
+          "shortlisted",
+          "man",
+          "booker",
+          "international",
+          "prize",
+          "2010s"
+        ]
+      }
+    },
+    {
+      "round": 6,
+      "top_k": 5,
+      "equivalence_key": "1eb630ceb9318c54e2a864e4a57bf0fe3777163d232c1799977214a6fb30a588",
+      "cached": false,
+      "query_sha256": "8d9fff7443cfd38b6fd0583908336e6a10fe73985c3dfa0e4c090a606e70980d",
+      "query": "Man Booker International Prize 2019 winner Celestial Bodies Jokha Alharthi",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"man\" OR \"booker\" OR \"international\" OR \"prize\" OR \"2019\" OR \"winner\" OR \"celestial\" OR \"bodies\" OR \"jokha\" OR \"alharthi\"",
+        "terms": [
+          "man",
+          "booker",
+          "international",
+          "prize",
+          "2019",
+          "winner",
+          "celestial",
+          "bodies",
+          "jokha",
+          "alharthi"
+        ]
+      }
+    },
+    {
+      "round": 6,
+      "top_k": 5,
+      "equivalence_key": "e11d68280f2d7e0928bf17236a42a08e3f4c0a7c9d647a9b1d66fde48327bb95",
+      "cached": false,
+      "query_sha256": "11c6cac1c4f84b15dfbcbe7a3c36308127e2c601404b67b8d0176337c9f71b60",
+      "query": "International Booker Prize 2018 Flights Olga Tokarczuk winner",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"international\" OR \"booker\" OR \"prize\" OR \"2018\" OR \"flights\" OR \"olga\" OR \"tokarczuk\" OR \"winner\"",
+        "terms": [
+          "international",
+          "booker",
+          "prize",
+          "2018",
+          "flights",
+          "olga",
+          "tokarczuk",
+          "winner"
+        ]
+      }
+    },
+    {
+      "round": 6,
+      "top_k": 5,
+      "equivalence_key": "edaf7f5068c899b42476415d9449b8a0bd8f2226d8a38ce1b7eac6b6d9ca8e18",
+      "cached": false,
+      "query_sha256": "f56e1a838195bdbff88594b1ac110ec6287fc69f417599d05012f365eb4ac725",
+      "query": "Man Booker International Prize 2017 winner Love in the Time of Cholera",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"man\" OR \"booker\" OR \"international\" OR \"prize\" OR \"2017\" OR \"winner\" OR \"love\" OR \"in\" OR \"the\" OR \"time\" OR \"of\" OR \"cholera\"",
+        "terms": [
+          "man",
+          "booker",
+          "international",
+          "prize",
+          "2017",
+          "winner",
+          "love",
+          "in",
+          "the",
+          "time",
+          "of",
+          "cholera"
+        ]
+      }
+    },
+    {
+      "round": 6,
+      "top_k": 5,
+      "equivalence_key": "ac44378ff0a0b72ce671fb0fdc3fb21194d84eccbe5c041b4ffd8372d881ad5d",
+      "cached": false,
+      "query_sha256": "f4d9e5d40e24e0a2acdd584339a57907a92746552bdc7e3129b387f4d2fccd3c",
+      "query": "book translated 25 languages shortlisted International Booker Prize 2010s",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"book\" OR \"translated\" OR \"25\" OR \"languages\" OR \"shortlisted\" OR \"international\" OR \"booker\" OR \"prize\" OR \"2010s\"",
+        "terms": [
+          "book",
+          "translated",
+          "25",
+          "languages",
+          "shortlisted",
+          "international",
+          "booker",
+          "prize",
+          "2010s"
+        ]
+      }
+    },
+    {
+      "round": 6,
+      "top_k": 5,
+      "equivalence_key": "40be8c3727e591db5ce6ace6587cc0b73084a7d533d6f46014f8539dc8c4be7c",
+      "cached": false,
+      "query_sha256": "04f9e84c3d705f8e4428a639bd4efb288dace8cb23e26e223bb4af79c13e8f76",
+      "query": "novel translated over 25 languages contender Man Booker International Prize",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"novel\" OR \"translated\" OR \"over\" OR \"25\" OR \"languages\" OR \"contender\" OR \"man\" OR \"booker\" OR \"international\" OR \"prize\"",
+        "terms": [
+          "novel",
+          "translated",
+          "over",
+          "25",
+          "languages",
+          "contender",
+          "man",
+          "booker",
+          "international",
+          "prize"
+        ]
+      }
+    },
+    {
+      "round": 7,
+      "top_k": 5,
+      "equivalence_key": "fc5fdd12bd5ebe1c326e6d2591e2d279306bb6b5c46d6edd41ab04fca43dc5c4",
+      "cached": false,
+      "query_sha256": "cc7b92c393709ea085dd328bfb5c1bad856e43db1b321e6b9f2d0632c99a6ecf",
+      "query": "International Booker Prize shortlist 2019 2018 2017 2016 books",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"international\" OR \"booker\" OR \"prize\" OR \"shortlist\" OR \"2019\" OR \"2018\" OR \"2017\" OR \"2016\" OR \"books\"",
+        "terms": [
+          "international",
+          "booker",
+          "prize",
+          "shortlist",
+          "2019",
+          "2018",
+          "2017",
+          "2016",
+          "books"
+        ]
+      }
+    },
+    {
+      "round": 7,
+      "top_k": 5,
+      "equivalence_key": "ae37161bc4dce2870a127820fab109baca81905b5338723518d9651df4e62435",
+      "cached": false,
+      "query_sha256": "83918ae5d2977997557feaa1728b807d0c49c603b4c28b31593c8d9ba8f81702",
+      "query": "Man Booker International Prize 2016 The Vegetarian Han Kang winner shortlist",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"man\" OR \"booker\" OR \"international\" OR \"prize\" OR \"2016\" OR \"the\" OR \"vegetarian\" OR \"han\" OR \"kang\" OR \"winner\" OR \"shortlist\"",
+        "terms": [
+          "man",
+          "booker",
+          "international",
+          "prize",
+          "2016",
+          "the",
+          "vegetarian",
+          "han",
+          "kang",
+          "winner",
+          "shortlist"
+        ]
+      }
+    },
+    {
+      "round": 7,
+      "top_k": 5,
+      "equivalence_key": "f2b2ec393656554091130e9e3728077b8b3f3b8f6de5ffe22cae94f1ee1f331f",
+      "cached": false,
+      "query_sha256": "a04690a4f2f7dbe377e39e1e027460841275649a375b96e647425c702639656f",
+      "query": "book translated 30 languages shortlisted International Booker Prize",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"book\" OR \"translated\" OR \"30\" OR \"languages\" OR \"shortlisted\" OR \"international\" OR \"booker\" OR \"prize\"",
+        "terms": [
+          "book",
+          "translated",
+          "30",
+          "languages",
+          "shortlisted",
+          "international",
+          "booker",
+          "prize"
+        ]
+      }
+    },
+    {
+      "round": 7,
+      "top_k": 5,
+      "equivalence_key": "a57400721aa457cb6cc7e165c94054af9abfa71791def4c477147cf3fcd69fe8",
+      "cached": false,
+      "query_sha256": "1ea4585974d2fe6bbcf4e030836a8319532efd6e8e8d6593083326ea49543d1d",
+      "query": "The Remainder Alia Trabucco Zeran translated languages",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"the\" OR \"remainder\" OR \"alia\" OR \"trabucco\" OR \"zeran\" OR \"translated\" OR \"languages\"",
+        "terms": [
+          "the",
+          "remainder",
+          "alia",
+          "trabucco",
+          "zeran",
+          "translated",
+          "languages"
+        ]
+      }
+    },
+    {
+      "round": 7,
+      "top_k": 5,
+      "equivalence_key": "d6266ad1f28f2ea457ac8b16ad7109874c1f97b9500c4afba1822728ea1e1afc",
+      "cached": false,
+      "query_sha256": "d4ef1ae8ca00942fcbf616e31a6e538c6ddd3bb8ed12d98c6b8f7a44cd62e08d",
+      "query": "The Shape of the Ruins Juan Gabriel Vasquez translated languages",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"the\" OR \"shape\" OR \"of\" OR \"ruins\" OR \"juan\" OR \"gabriel\" OR \"vasquez\" OR \"translated\" OR \"languages\"",
+        "terms": [
+          "the",
+          "shape",
+          "of",
+          "ruins",
+          "juan",
+          "gabriel",
+          "vasquez",
+          "translated",
+          "languages"
+        ]
+      }
+    },
+    {
+      "round": 7,
+      "top_k": 5,
+      "equivalence_key": "1af8e277dede1ccb0305261a765fef6b71bc975b532f3cbb763f374a2fe68a6e",
+      "cached": false,
+      "query_sha256": "cfb93fa432d254f825b7467a9644ff78ac901f2edc9dbc842fd84a9064e73219",
+      "query": "The Labyrinth of Spirits Juan Gabriel Vasquez International Booker",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"the\" OR \"labyrinth\" OR \"of\" OR \"spirits\" OR \"juan\" OR \"gabriel\" OR \"vasquez\" OR \"international\" OR \"booker\"",
+        "terms": [
+          "the",
+          "labyrinth",
+          "of",
+          "spirits",
+          "juan",
+          "gabriel",
+          "vasquez",
+          "international",
+          "booker"
+        ]
+      }
+    },
+    {
+      "round": 8,
+      "top_k": 5,
+      "equivalence_key": "e646a0433987bee9b71ebb1554fe33ed85914b4d0df17e30b7412ba4d3f876a7",
+      "cached": false,
+      "query_sha256": "2d179e195668b63a9c2b2294c30ff52f2d0a3dfa835bf8472279357a2c6456a1",
+      "query": "International Booker Prize 2019 shortlist Celestial Bodies Jokha Alharthi",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"international\" OR \"booker\" OR \"prize\" OR \"2019\" OR \"shortlist\" OR \"celestial\" OR \"bodies\" OR \"jokha\" OR \"alharthi\"",
+        "terms": [
+          "international",
+          "booker",
+          "prize",
+          "2019",
+          "shortlist",
+          "celestial",
+          "bodies",
+          "jokha",
+          "alharthi"
+        ]
+      }
+    },
+    {
+      "round": 8,
+      "top_k": 5,
+      "equivalence_key": "1797bf1d92661a324ff05ba54f6f9f8c22dace143f36457fadc319810275ee7c",
+      "cached": false,
+      "query_sha256": "d4d2081b707d08f03bd12ec85b70bda344de7dbef651ccfd125e3a9458f8f1e8",
+      "query": "International Booker Prize 2018 shortlist Flights Olga Tokarczuk",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"international\" OR \"booker\" OR \"prize\" OR \"2018\" OR \"shortlist\" OR \"flights\" OR \"olga\" OR \"tokarczuk\"",
+        "terms": [
+          "international",
+          "booker",
+          "prize",
+          "2018",
+          "shortlist",
+          "flights",
+          "olga",
+          "tokarczuk"
+        ]
+      }
+    },
+    {
+      "round": 8,
+      "top_k": 5,
+      "equivalence_key": "99921cda0955a6ec12ce6d1859f60c09bbed59abc6e7d6ab261fe3b99d0881bb",
+      "cached": false,
+      "query_sha256": "01919814ce1962249c058a8d3d99675f7467fb2df7d6c762876f264c354beadd",
+      "query": "International Booker Prize 2017 shortlist winner",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"international\" OR \"booker\" OR \"prize\" OR \"2017\" OR \"shortlist\" OR \"winner\"",
+        "terms": [
+          "international",
+          "booker",
+          "prize",
+          "2017",
+          "shortlist",
+          "winner"
+        ]
+      }
+    },
+    {
+      "round": 8,
+      "top_k": 5,
+      "equivalence_key": "df6589c236a15252f3731ca177192bbe76c8b83bcf7602be1642a83d8d5f15cd",
+      "cached": false,
+      "query_sha256": "d8e34de531d332e3c689638308b1f45738734f853265039fed59b9460c214c02",
+      "query": "The Years Annie Ernaux translated languages International Booker",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"the\" OR \"years\" OR \"annie\" OR \"ernaux\" OR \"translated\" OR \"languages\" OR \"international\" OR \"booker\"",
+        "terms": [
+          "the",
+          "years",
+          "annie",
+          "ernaux",
+          "translated",
+          "languages",
+          "international",
+          "booker"
+        ]
+      }
+    },
+    {
+      "round": 8,
+      "top_k": 5,
+      "equivalence_key": "f0ebe9a7eba6c5873f666ebe1df22414b0364f26eb21e8332bc69d0e94eab107",
+      "cached": false,
+      "query_sha256": "4be4abec027d4631fe8afb0b023e5169c5f1084517b39244a2e8a6024082f453",
+      "query": "The Discomfort of Evening Marieke Rijneveld translated languages",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"the\" OR \"discomfort\" OR \"of\" OR \"evening\" OR \"marieke\" OR \"rijneveld\" OR \"translated\" OR \"languages\"",
+        "terms": [
+          "the",
+          "discomfort",
+          "of",
+          "evening",
+          "marieke",
+          "rijneveld",
+          "translated",
+          "languages"
+        ]
+      }
+    },
+    {
+      "round": 8,
+      "top_k": 5,
+      "equivalence_key": "cbd02586ae2531c36ba6a43e01955b7f06500cf7fdfd60e65b5e5e4eb2588662",
+      "cached": false,
+      "query_sha256": "f75990c633d0d36c836ff8fa8c6fb081931f171ab9e0f76238f8b00eaf6c397c",
+      "query": "At Night All Blood is Black David Diop translated languages International Booker",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"at\" OR \"night\" OR \"all\" OR \"blood\" OR \"is\" OR \"black\" OR \"david\" OR \"diop\" OR \"translated\" OR \"languages\" OR \"international\" OR \"booker\"",
+        "terms": [
+          "at",
+          "night",
+          "all",
+          "blood",
+          "is",
+          "black",
+          "david",
+          "diop",
+          "translated",
+          "languages",
+          "international",
+          "booker"
+        ]
+      }
+    },
+    {
+      "round": 9,
+      "top_k": 5,
+      "equivalence_key": "e646a0433987bee9b71ebb1554fe33ed85914b4d0df17e30b7412ba4d3f876a7",
+      "cached": true,
+      "query_sha256": "2d179e195668b63a9c2b2294c30ff52f2d0a3dfa835bf8472279357a2c6456a1",
+      "query": "International Booker Prize 2019 shortlist Celestial Bodies Jokha Alharthi",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"international\" OR \"booker\" OR \"prize\" OR \"2019\" OR \"shortlist\" OR \"celestial\" OR \"bodies\" OR \"jokha\" OR \"alharthi\"",
+        "terms": [
+          "international",
+          "booker",
+          "prize",
+          "2019",
+          "shortlist",
+          "celestial",
+          "bodies",
+          "jokha",
+          "alharthi"
+        ]
+      }
+    },
+    {
+      "round": 9,
+      "top_k": 5,
+      "equivalence_key": "1797bf1d92661a324ff05ba54f6f9f8c22dace143f36457fadc319810275ee7c",
+      "cached": true,
+      "query_sha256": "d4d2081b707d08f03bd12ec85b70bda344de7dbef651ccfd125e3a9458f8f1e8",
+      "query": "International Booker Prize 2018 shortlist Flights Olga Tokarczuk",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"international\" OR \"booker\" OR \"prize\" OR \"2018\" OR \"shortlist\" OR \"flights\" OR \"olga\" OR \"tokarczuk\"",
+        "terms": [
+          "international",
+          "booker",
+          "prize",
+          "2018",
+          "shortlist",
+          "flights",
+          "olga",
+          "tokarczuk"
+        ]
+      }
+    },
+    {
+      "round": 9,
+      "top_k": 5,
+      "equivalence_key": "99921cda0955a6ec12ce6d1859f60c09bbed59abc6e7d6ab261fe3b99d0881bb",
+      "cached": true,
+      "query_sha256": "01919814ce1962249c058a8d3d99675f7467fb2df7d6c762876f264c354beadd",
+      "query": "International Booker Prize 2017 shortlist winner",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"international\" OR \"booker\" OR \"prize\" OR \"2017\" OR \"shortlist\" OR \"winner\"",
+        "terms": [
+          "international",
+          "booker",
+          "prize",
+          "2017",
+          "shortlist",
+          "winner"
+        ]
+      }
+    },
+    {
+      "round": 9,
+      "top_k": 5,
+      "equivalence_key": "df6589c236a15252f3731ca177192bbe76c8b83bcf7602be1642a83d8d5f15cd",
+      "cached": true,
+      "query_sha256": "d8e34de531d332e3c689638308b1f45738734f853265039fed59b9460c214c02",
+      "query": "The Years Annie Ernaux translated languages International Booker",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"the\" OR \"years\" OR \"annie\" OR \"ernaux\" OR \"translated\" OR \"languages\" OR \"international\" OR \"booker\"",
+        "terms": [
+          "the",
+          "years",
+          "annie",
+          "ernaux",
+          "translated",
+          "languages",
+          "international",
+          "booker"
+        ]
+      }
+    },
+    {
+      "round": 9,
+      "top_k": 5,
+      "equivalence_key": "f0ebe9a7eba6c5873f666ebe1df22414b0364f26eb21e8332bc69d0e94eab107",
+      "cached": true,
+      "query_sha256": "4be4abec027d4631fe8afb0b023e5169c5f1084517b39244a2e8a6024082f453",
+      "query": "The Discomfort of Evening Marieke Rijneveld translated languages",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"the\" OR \"discomfort\" OR \"of\" OR \"evening\" OR \"marieke\" OR \"rijneveld\" OR \"translated\" OR \"languages\"",
+        "terms": [
+          "the",
+          "discomfort",
+          "of",
+          "evening",
+          "marieke",
+          "rijneveld",
+          "translated",
+          "languages"
+        ]
+      }
+    },
+    {
+      "round": 9,
+      "top_k": 5,
+      "equivalence_key": "cbd02586ae2531c36ba6a43e01955b7f06500cf7fdfd60e65b5e5e4eb2588662",
+      "cached": true,
+      "query_sha256": "f75990c633d0d36c836ff8fa8c6fb081931f171ab9e0f76238f8b00eaf6c397c",
+      "query": "At Night All Blood is Black David Diop translated languages International Booker",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"at\" OR \"night\" OR \"all\" OR \"blood\" OR \"is\" OR \"black\" OR \"david\" OR \"diop\" OR \"translated\" OR \"languages\" OR \"international\" OR \"booker\"",
+        "terms": [
+          "at",
+          "night",
+          "all",
+          "blood",
+          "is",
+          "black",
+          "david",
+          "diop",
+          "translated",
+          "languages",
+          "international",
+          "booker"
+        ]
+      }
+    },
+    {
+      "round": 10,
+      "top_k": 5,
+      "equivalence_key": "5325532025bfd47ecf511ee3540047672332cccc11b47b6e1f3eda44adbe7888",
+      "cached": false,
+      "query_sha256": "f1e6e549bb97088bc4fb363e1ff074bf41e575ce92f1b0fe120f62390e6a2fb9",
+      "query": "A Brief History of Seven Killings Marlon James publication date 2014 Booker Prize 2015",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"a\" OR \"brief\" OR \"history\" OR \"of\" OR \"seven\" OR \"killings\" OR \"marlon\" OR \"james\" OR \"publication\" OR \"date\" OR \"2014\" OR \"booker\" OR \"prize\" OR \"2015\"",
+        "terms": [
+          "a",
+          "brief",
+          "history",
+          "of",
+          "seven",
+          "killings",
+          "marlon",
+          "james",
+          "publication",
+          "date",
+          "2014",
+          "booker",
+          "prize",
+          "2015"
+        ]
+      }
+    },
+    {
+      "round": 10,
+      "top_k": 5,
+      "equivalence_key": "560fd760929d50b2c03540c0a358f98fed8efe6b438160a492560ec3fbeedee8",
+      "cached": false,
+      "query_sha256": "63c6654b51c7032b16d5247a3d5fab598ffa212d2dc914f94edfe9fb988ff276",
+      "query": "Marlon James birthplace born city",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"marlon\" OR \"james\" OR \"birthplace\" OR \"born\" OR \"city\"",
+        "terms": [
+          "marlon",
+          "james",
+          "birthplace",
+          "born",
+          "city"
+        ]
+      }
+    },
+    {
+      "round": 10,
+      "top_k": 5,
+      "equivalence_key": "723de7c7b435f5fc63ca125e3a099c0d1a7207e059e2f68f751b8d7b57e8f614",
+      "cached": false,
+      "query_sha256": "fd1bbf2662fce6f321fe7671ef7124b26d48234580655d6320b19326fd2cbeba",
+      "query": "The Fishermen Chigozie Obioma 2015 Booker Prize shortlist",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"the\" OR \"fishermen\" OR \"chigozie\" OR \"obioma\" OR \"2015\" OR \"booker\" OR \"prize\" OR \"shortlist\"",
+        "terms": [
+          "the",
+          "fishermen",
+          "chigozie",
+          "obioma",
+          "2015",
+          "booker",
+          "prize",
+          "shortlist"
+        ]
+      }
+    },
+    {
+      "round": 11,
+      "top_k": 5,
+      "equivalence_key": "5325532025bfd47ecf511ee3540047672332cccc11b47b6e1f3eda44adbe7888",
+      "cached": true,
+      "query_sha256": "f1e6e549bb97088bc4fb363e1ff074bf41e575ce92f1b0fe120f62390e6a2fb9",
+      "query": "A Brief History of Seven Killings Marlon James publication date 2014 Booker Prize 2015",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"a\" OR \"brief\" OR \"history\" OR \"of\" OR \"seven\" OR \"killings\" OR \"marlon\" OR \"james\" OR \"publication\" OR \"date\" OR \"2014\" OR \"booker\" OR \"prize\" OR \"2015\"",
+        "terms": [
+          "a",
+          "brief",
+          "history",
+          "of",
+          "seven",
+          "killings",
+          "marlon",
+          "james",
+          "publication",
+          "date",
+          "2014",
+          "booker",
+          "prize",
+          "2015"
+        ]
+      }
+    },
+    {
+      "round": 11,
+      "top_k": 5,
+      "equivalence_key": "560fd760929d50b2c03540c0a358f98fed8efe6b438160a492560ec3fbeedee8",
+      "cached": true,
+      "query_sha256": "63c6654b51c7032b16d5247a3d5fab598ffa212d2dc914f94edfe9fb988ff276",
+      "query": "Marlon James birthplace born city",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"marlon\" OR \"james\" OR \"birthplace\" OR \"born\" OR \"city\"",
+        "terms": [
+          "marlon",
+          "james",
+          "birthplace",
+          "born",
+          "city"
+        ]
+      }
+    },
+    {
+      "round": 11,
+      "top_k": 5,
+      "equivalence_key": "723de7c7b435f5fc63ca125e3a099c0d1a7207e059e2f68f751b8d7b57e8f614",
+      "cached": true,
+      "query_sha256": "fd1bbf2662fce6f321fe7671ef7124b26d48234580655d6320b19326fd2cbeba",
+      "query": "The Fishermen Chigozie Obioma 2015 Booker Prize shortlist",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"the\" OR \"fishermen\" OR \"chigozie\" OR \"obioma\" OR \"2015\" OR \"booker\" OR \"prize\" OR \"shortlist\"",
+        "terms": [
+          "the",
+          "fishermen",
+          "chigozie",
+          "obioma",
+          "2015",
+          "booker",
+          "prize",
+          "shortlist"
+        ]
+      }
+    },
+    {
+      "round": 12,
+      "top_k": 5,
+      "equivalence_key": "5325532025bfd47ecf511ee3540047672332cccc11b47b6e1f3eda44adbe7888",
+      "cached": true,
+      "query_sha256": "f1e6e549bb97088bc4fb363e1ff074bf41e575ce92f1b0fe120f62390e6a2fb9",
+      "query": "A Brief History of Seven Killings Marlon James publication date 2014 Booker Prize 2015",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"a\" OR \"brief\" OR \"history\" OR \"of\" OR \"seven\" OR \"killings\" OR \"marlon\" OR \"james\" OR \"publication\" OR \"date\" OR \"2014\" OR \"booker\" OR \"prize\" OR \"2015\"",
+        "terms": [
+          "a",
+          "brief",
+          "history",
+          "of",
+          "seven",
+          "killings",
+          "marlon",
+          "james",
+          "publication",
+          "date",
+          "2014",
+          "booker",
+          "prize",
+          "2015"
+        ]
+      }
+    },
+    {
+      "round": 12,
+      "top_k": 5,
+      "equivalence_key": "560fd760929d50b2c03540c0a358f98fed8efe6b438160a492560ec3fbeedee8",
+      "cached": true,
+      "query_sha256": "63c6654b51c7032b16d5247a3d5fab598ffa212d2dc914f94edfe9fb988ff276",
+      "query": "Marlon James birthplace born city",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"marlon\" OR \"james\" OR \"birthplace\" OR \"born\" OR \"city\"",
+        "terms": [
+          "marlon",
+          "james",
+          "birthplace",
+          "born",
+          "city"
+        ]
+      }
+    },
+    {
+      "round": 12,
+      "top_k": 5,
+      "equivalence_key": "723de7c7b435f5fc63ca125e3a099c0d1a7207e059e2f68f751b8d7b57e8f614",
+      "cached": true,
+      "query_sha256": "fd1bbf2662fce6f321fe7671ef7124b26d48234580655d6320b19326fd2cbeba",
+      "query": "The Fishermen Chigozie Obioma 2015 Booker Prize shortlist",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"the\" OR \"fishermen\" OR \"chigozie\" OR \"obioma\" OR \"2015\" OR \"booker\" OR \"prize\" OR \"shortlist\"",
+        "terms": [
+          "the",
+          "fishermen",
+          "chigozie",
+          "obioma",
+          "2015",
+          "booker",
+          "prize",
+          "shortlist"
+        ]
+      }
+    },
+    {
+      "round": 13,
+      "top_k": 5,
+      "equivalence_key": "cbd7f3ecfe25d64b0cc5d88a32f5a2dc4b88647fa84c0461aa259ba13f0deea6",
+      "cached": false,
+      "query_sha256": "63f7344c57c206a74a8e12cbe8e06c7c5cff25d28df205a1b42b0998bfe94aa1",
+      "query": "Marlon James born Kingston Jamaica author biography",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"marlon\" OR \"james\" OR \"born\" OR \"kingston\" OR \"jamaica\" OR \"author\" OR \"biography\"",
+        "terms": [
+          "marlon",
+          "james",
+          "born",
+          "kingston",
+          "jamaica",
+          "author",
+          "biography"
+        ]
+      }
+    },
+    {
+      "round": 13,
+      "top_k": 5,
+      "equivalence_key": "005f038436abd0a93b50a0cd50febbfb2bf538bf81a69214adcdf835a0f8f6b8",
+      "cached": false,
+      "query_sha256": "c607a12dee1f45e08248d08c9278113bf93c293b9a30d02be27b3ee90ed4d4c2",
+      "query": "A Brief History of Seven Killings published 2014 Marlon James",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"a\" OR \"brief\" OR \"history\" OR \"of\" OR \"seven\" OR \"killings\" OR \"published\" OR \"2014\" OR \"marlon\" OR \"james\"",
+        "terms": [
+          "a",
+          "brief",
+          "history",
+          "of",
+          "seven",
+          "killings",
+          "published",
+          "2014",
+          "marlon",
+          "james"
+        ]
+      }
+    }
+  ],
+  "equivalent_query_repeats": 12,
+  "views": [
+    {
+      "round": 1,
+      "compacted": false,
+      "visible_evidence": [],
+      "shelf": [],
+      "shelf_evicted": []
+    },
+    {
+      "round": 2,
+      "compacted": false,
+      "visible_evidence": [],
+      "shelf": [],
+      "shelf_evicted": []
+    },
+    {
+      "round": 3,
+      "compacted": false,
+      "visible_evidence": [],
+      "shelf": [],
+      "shelf_evicted": []
+    },
+    {
+      "round": 4,
+      "compacted": false,
+      "visible_evidence": [
+        "e1"
+      ],
+      "shelf": [],
+      "shelf_evicted": []
+    },
+    {
+      "round": 5,
+      "compacted": false,
+      "visible_evidence": [
+        "e1"
+      ],
+      "shelf": [],
+      "shelf_evicted": []
+    },
+    {
+      "round": 6,
+      "compacted": true,
+      "visible_evidence": [
+        "e1"
+      ],
+      "shelf": [],
+      "shelf_evicted": []
+    },
+    {
+      "round": 7,
+      "compacted": true,
+      "visible_evidence": [
+        "e1"
+      ],
+      "shelf": [],
+      "shelf_evicted": []
+    },
+    {
+      "round": 8,
+      "compacted": true,
+      "visible_evidence": [
+        "e1"
+      ],
+      "shelf": [
+        "e1"
+      ],
+      "shelf_evicted": []
+    },
+    {
+      "round": 9,
+      "compacted": true,
+      "visible_evidence": [
+        "e1"
+      ],
+      "shelf": [
+        "e1"
+      ],
+      "shelf_evicted": []
+    },
+    {
+      "round": 10,
+      "compacted": true,
+      "visible_evidence": [
+        "e1"
+      ],
+      "shelf": [
+        "e1"
+      ],
+      "shelf_evicted": []
+    },
+    {
+      "round": 11,
+      "compacted": true,
+      "visible_evidence": [
+        "e1"
+      ],
+      "shelf": [
+        "e1"
+      ],
+      "shelf_evicted": []
+    },
+    {
+      "round": 12,
+      "compacted": false,
+      "visible_evidence": [
+        "e1"
+      ],
+      "shelf": [
+        "e1"
+      ],
+      "shelf_evicted": []
+    },
+    {
+      "round": 13,
+      "compacted": false,
+      "visible_evidence": [
+        "e1"
+      ],
+      "shelf": [
+        "e1"
+      ],
+      "shelf_evicted": []
+    },
+    {
+      "round": 14,
+      "compacted": true,
+      "visible_evidence": [
+        "e1",
+        "e2"
+      ],
+      "shelf": [
+        "e1"
+      ],
+      "shelf_evicted": []
+    },
+    {
+      "round": 15,
+      "compacted": false,
+      "visible_evidence": [
+        "e1",
+        "e2",
+        "e3"
+      ],
+      "shelf": [
+        "e1"
+      ],
+      "shelf_evicted": []
+    }
+  ],
+  "delivered_refs": [
+    "e1",
+    "e2",
+    "e3"
+  ],
+  "submitted_refs": [
+    "e1",
+    "e2",
+    "e3"
+  ],
+  "text_included": true,
+  "limitations": [
+    "Equivalence is compiler equality, not semantic identity or wasted-search proof",
+    "Raw-window visibility/selection is not entailment or complete evidence coverage",
+    "No live q26 replay or independent answer scoring is performed"
+  ]
+}

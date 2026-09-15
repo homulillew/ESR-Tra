@@ -1,0 +1,972 @@
+{
+  "protocol": "stride-search-3",
+  "head": "8466d50acbafb926816002d0d55443e88fe7b1cab77774b83f4be4daf6487766",
+  "outcome": "submitted",
+  "formal_correct": null,
+  "model_attempts": 16,
+  "backend_attempts": 32,
+  "queries": [
+    {
+      "round": 1,
+      "top_k": 10,
+      "equivalence_key": "9f38b5dda22923cd933efb2c959069a443c62632857f1a4874f2a86e67459c68",
+      "cached": false,
+      "query_sha256": "96e54c068c088dc1275943d4c4952d1b05475d0051dd8653d22c9c121b8cf95d",
+      "query": "literary award created founded 2000s international book prize",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"literary\" OR \"award\" OR \"created\" OR \"founded\" OR \"2000s\" OR \"international\" OR \"book\" OR \"prize\"",
+        "terms": [
+          "literary",
+          "award",
+          "created",
+          "founded",
+          "2000s",
+          "international",
+          "book",
+          "prize"
+        ]
+      }
+    },
+    {
+      "round": 1,
+      "top_k": 10,
+      "equivalence_key": "4acdac22bf3a89843dea0f48d1e798fa2bfc21d1b9e7d2375bac10ed3bb29945",
+      "cached": false,
+      "query_sha256": "2bd09914b21004956215c5749fd1f9165d3f4cf99c8621746af83462ffeaea75",
+      "query": "book award established 2000s translated twenty five languages",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"book\" OR \"award\" OR \"established\" OR \"2000s\" OR \"translated\" OR \"twenty\" OR \"five\" OR \"languages\"",
+        "terms": [
+          "book",
+          "award",
+          "established",
+          "2000s",
+          "translated",
+          "twenty",
+          "five",
+          "languages"
+        ]
+      }
+    },
+    {
+      "round": 1,
+      "top_k": 10,
+      "equivalence_key": "e7d15d716b511f33ed3d6189fcbaef1da9042f2592634874aff8694b80b185ac",
+      "cached": false,
+      "query_sha256": "2c35f9cb3e4234036797b0c9cdad73d0e9e4de966f91742b95bffeae21e9896e",
+      "query": "international literary prize founded 2000s debut book award",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"international\" OR \"literary\" OR \"prize\" OR \"founded\" OR \"2000s\" OR \"debut\" OR \"book\" OR \"award\"",
+        "terms": [
+          "international",
+          "literary",
+          "prize",
+          "founded",
+          "2000s",
+          "debut",
+          "book",
+          "award"
+        ]
+      }
+    },
+    {
+      "round": 2,
+      "top_k": 8,
+      "equivalence_key": "60e04aa5d295bd79038baf0d01aa34f5da88e0d3a0bbe46ee6174ef7e719e70d",
+      "cached": false,
+      "query_sha256": "93a9e899214f25944c894b0648995a86e2a407030e44a65ffb90c79948e41353",
+      "query": "Jan Michalski Prize winners 2010s literature",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"jan\" OR \"michalski\" OR \"prize\" OR \"winners\" OR \"2010s\" OR \"literature\"",
+        "terms": [
+          "jan",
+          "michalski",
+          "prize",
+          "winners",
+          "2010s",
+          "literature"
+        ]
+      }
+    },
+    {
+      "round": 2,
+      "top_k": 8,
+      "equivalence_key": "005aa5c2577ee152e692873efd205f835a8690b40e7088db7e60a85da6fc1a8a",
+      "cached": false,
+      "query_sha256": "6e45683f9031aaacb8c44505f258dbccca0c2f666d97321cf71dce2575d2eabc",
+      "query": "Folio Prize winners 2010s",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"folio\" OR \"prize\" OR \"winners\" OR \"2010s\"",
+        "terms": [
+          "folio",
+          "prize",
+          "winners",
+          "2010s"
+        ]
+      }
+    },
+    {
+      "round": 2,
+      "top_k": 8,
+      "equivalence_key": "56456f2b903941b5cba82a439ac1c5d912a8a6727075d1d6ca306af482daa9e9",
+      "cached": false,
+      "query_sha256": "5149946ebf7980902862435d74251a620ce13e37a45fc9f409243e7b3a4b6bc3",
+      "query": "Man Booker International Prize winners 2010s shortlist",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"man\" OR \"booker\" OR \"international\" OR \"prize\" OR \"winners\" OR \"2010s\" OR \"shortlist\"",
+        "terms": [
+          "man",
+          "booker",
+          "international",
+          "prize",
+          "winners",
+          "2010s",
+          "shortlist"
+        ]
+      }
+    },
+    {
+      "round": 2,
+      "top_k": 8,
+      "equivalence_key": "307d8cde72a94a8570050243539ad1eb9fe8c9c61512baeee3a7fedb17488816",
+      "cached": false,
+      "query_sha256": "5140e3e5c2b4935cc67eb05a86705b0530fd3e7b8efbc42962ec09d68b044bff",
+      "query": "book translated into over 25 languages shortlisted international prize 2010s",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"book\" OR \"translated\" OR \"into\" OR \"over\" OR \"25\" OR \"languages\" OR \"shortlisted\" OR \"international\" OR \"prize\" OR \"2010s\"",
+        "terms": [
+          "book",
+          "translated",
+          "into",
+          "over",
+          "25",
+          "languages",
+          "shortlisted",
+          "international",
+          "prize",
+          "2010s"
+        ]
+      }
+    },
+    {
+      "round": 2,
+      "top_k": 8,
+      "equivalence_key": "158a17bf111bef53ac3113da384f04b93025df9c6c7bfc11157915367dcf15e6",
+      "cached": false,
+      "query_sha256": "885171cb82265257fdb4d95262887f9e42f4c01484314e664480b8950a3c75ca",
+      "query": "novel translated 30 languages contender international literary award 2010s",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"novel\" OR \"translated\" OR \"30\" OR \"languages\" OR \"contender\" OR \"international\" OR \"literary\" OR \"award\" OR \"2010s\"",
+        "terms": [
+          "novel",
+          "translated",
+          "30",
+          "languages",
+          "contender",
+          "international",
+          "literary",
+          "award",
+          "2010s"
+        ]
+      }
+    },
+    {
+      "round": 3,
+      "top_k": 8,
+      "equivalence_key": "0eee442663604faa9e7a9c4c138c62d7889968a6a523e614f708c7c54507cea1",
+      "cached": false,
+      "query_sha256": "3c9dea32110dfbafa12d1fab0ab0c553b07b71d3d1befb4102dc5b751e519e40",
+      "query": "Man Booker International Prize created 2005 founded history",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"man\" OR \"booker\" OR \"international\" OR \"prize\" OR \"created\" OR \"2005\" OR \"founded\" OR \"history\"",
+        "terms": [
+          "man",
+          "booker",
+          "international",
+          "prize",
+          "created",
+          "2005",
+          "founded",
+          "history"
+        ]
+      }
+    },
+    {
+      "round": 3,
+      "top_k": 8,
+      "equivalence_key": "918b92a917a7cf9eb8d08fc12980e812d4114437ae2fc472e4ac26f6187c7479",
+      "cached": false,
+      "query_sha256": "6d201255b5ddcbcaa9b0d804276386ffc86fa8a64df99481fc22135bc127694b",
+      "query": "Chigozie Obioma born city grew up biography",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"chigozie\" OR \"obioma\" OR \"born\" OR \"city\" OR \"grew\" OR \"up\" OR \"biography\"",
+        "terms": [
+          "chigozie",
+          "obioma",
+          "born",
+          "city",
+          "grew",
+          "up",
+          "biography"
+        ]
+      }
+    },
+    {
+      "round": 3,
+      "top_k": 8,
+      "equivalence_key": "7529c17f2358504ee6e28007c1b5b1878995b94a525d41654b3b2b7850ae2de7",
+      "cached": false,
+      "query_sha256": "77e87a7c6d8f87174b53581c4d9828ea896fe7fc496a6c8b3cb7bd5bab79e80e",
+      "query": "An Orchestra of Minorities published 2019 translated languages",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"an\" OR \"orchestra\" OR \"of\" OR \"minorities\" OR \"published\" OR \"2019\" OR \"translated\" OR \"languages\"",
+        "terms": [
+          "an",
+          "orchestra",
+          "of",
+          "minorities",
+          "published",
+          "2019",
+          "translated",
+          "languages"
+        ]
+      }
+    },
+    {
+      "round": 4,
+      "top_k": 8,
+      "equivalence_key": "e78ac796ee8d3de107f24fb69ae3692bfc854231886faf2a7f1e4d9d57048f90",
+      "cached": false,
+      "query_sha256": "8d9fff7443cfd38b6fd0583908336e6a10fe73985c3dfa0e4c090a606e70980d",
+      "query": "Man Booker International Prize 2019 winner Celestial Bodies Jokha Alharthi",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"man\" OR \"booker\" OR \"international\" OR \"prize\" OR \"2019\" OR \"winner\" OR \"celestial\" OR \"bodies\" OR \"jokha\" OR \"alharthi\"",
+        "terms": [
+          "man",
+          "booker",
+          "international",
+          "prize",
+          "2019",
+          "winner",
+          "celestial",
+          "bodies",
+          "jokha",
+          "alharthi"
+        ]
+      }
+    },
+    {
+      "round": 4,
+      "top_k": 8,
+      "equivalence_key": "fab9e037912c988bed35aa582c4ca5044d263026c8ff8ac246d93935608c396e",
+      "cached": false,
+      "query_sha256": "983acbfe5d08b75390e7278a70653c9fa2ddd161be06448551c4202f133bd3dd",
+      "query": "Jokha Alharthi born city Oman biography",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"jokha\" OR \"alharthi\" OR \"born\" OR \"city\" OR \"oman\" OR \"biography\"",
+        "terms": [
+          "jokha",
+          "alharthi",
+          "born",
+          "city",
+          "oman",
+          "biography"
+        ]
+      }
+    },
+    {
+      "round": 4,
+      "top_k": 8,
+      "equivalence_key": "d80b2b4155ede2383645cb523b633d01a14836e247bde5d4152f3a45e5db5e7e",
+      "cached": false,
+      "query_sha256": "65099766230e31ec375a604df83364b981a6cd4ee05b63c96864145e525829ad",
+      "query": "Celestial Bodies published 2018 2019 Jokha Alharthi",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"celestial\" OR \"bodies\" OR \"published\" OR \"2018\" OR \"2019\" OR \"jokha\" OR \"alharthi\"",
+        "terms": [
+          "celestial",
+          "bodies",
+          "published",
+          "2018",
+          "2019",
+          "jokha",
+          "alharthi"
+        ]
+      }
+    },
+    {
+      "round": 4,
+      "top_k": 8,
+      "equivalence_key": "f183de48b56c53e605e6f182fa802ded58b2285f317b470cb9fdd0596c42ecab",
+      "cached": false,
+      "query_sha256": "102844d26e52149bcffb13ddeccb74ddb1616f3e6c67f56dcf64f243ada9a105",
+      "query": "Chigozie Obioma grew up city Akure biography childhood",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"chigozie\" OR \"obioma\" OR \"grew\" OR \"up\" OR \"city\" OR \"akure\" OR \"biography\" OR \"childhood\"",
+        "terms": [
+          "chigozie",
+          "obioma",
+          "grew",
+          "up",
+          "city",
+          "akure",
+          "biography",
+          "childhood"
+        ]
+      }
+    },
+    {
+      "round": 4,
+      "top_k": 8,
+      "equivalence_key": "25c0c660b27401f50da813709c3294e54cdc8e56e1a7234c49b7e670fefb6705",
+      "cached": false,
+      "query_sha256": "0b083f2248d48c6c3fcd1290c7438a93d9d816eb4264f2ec9a4bcb40584f2829",
+      "query": "Chigozie Obioma early life Nigeria hometown",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"chigozie\" OR \"obioma\" OR \"early\" OR \"life\" OR \"nigeria\" OR \"hometown\"",
+        "terms": [
+          "chigozie",
+          "obioma",
+          "early",
+          "life",
+          "nigeria",
+          "hometown"
+        ]
+      }
+    },
+    {
+      "round": 5,
+      "top_k": 8,
+      "equivalence_key": "358d76ece4ef0cad2027a363dae44c6b21020afdc57299f490a7241bf1a29a01",
+      "cached": false,
+      "query_sha256": "72483fb9f0d035997483f3eccd633682bbf94a64324f92a68b77f0c8b8824812",
+      "query": "Jokha Alharthi born birthplace city Oman",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"jokha\" OR \"alharthi\" OR \"born\" OR \"birthplace\" OR \"city\" OR \"oman\"",
+        "terms": [
+          "jokha",
+          "alharthi",
+          "born",
+          "birthplace",
+          "city",
+          "oman"
+        ]
+      }
+    },
+    {
+      "round": 5,
+      "top_k": 8,
+      "equivalence_key": "baf132755da62b6345b94b393193fd3cadd5201ae8bfd876d28c665557695809",
+      "cached": false,
+      "query_sha256": "836c5b48b97db30c4f6d0937601770d1d2156b5ef80a26caa2e9e1e34eb27cbe",
+      "query": "Jokha Alharthi Wikipedia biography born",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"jokha\" OR \"alharthi\" OR \"wikipedia\" OR \"biography\" OR \"born\"",
+        "terms": [
+          "jokha",
+          "alharthi",
+          "wikipedia",
+          "biography",
+          "born"
+        ]
+      }
+    },
+    {
+      "round": 6,
+      "top_k": 8,
+      "equivalence_key": "572a997a2ea070413f0ac647fa55e4008a5b9c68dc4544354ce085fc3a08774b",
+      "cached": false,
+      "query_sha256": "6df004062d185868b9f1eb2745f0dc5ac055e694d79f9a3ffc276d87aba2a085",
+      "query": "Jokha Alharthi Omani writer born Muscat",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"jokha\" OR \"alharthi\" OR \"omani\" OR \"writer\" OR \"born\" OR \"muscat\"",
+        "terms": [
+          "jokha",
+          "alharthi",
+          "omani",
+          "writer",
+          "born",
+          "muscat"
+        ]
+      }
+    },
+    {
+      "round": 6,
+      "top_k": 8,
+      "equivalence_key": "42617513343162fabfa10445304c4d665da00f705da3f08da0db2f4506a8fcd4",
+      "cached": false,
+      "query_sha256": "6311fa102129933025a8fd4046dca098a39af18c1a4b829474f50600faa23ce3",
+      "query": "Celestial Bodies novel first published 2018 Arabic",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"celestial\" OR \"bodies\" OR \"novel\" OR \"first\" OR \"published\" OR \"2018\" OR \"arabic\"",
+        "terms": [
+          "celestial",
+          "bodies",
+          "novel",
+          "first",
+          "published",
+          "2018",
+          "arabic"
+        ]
+      }
+    },
+    {
+      "round": 7,
+      "top_k": 8,
+      "equivalence_key": "572a997a2ea070413f0ac647fa55e4008a5b9c68dc4544354ce085fc3a08774b",
+      "cached": true,
+      "query_sha256": "6df004062d185868b9f1eb2745f0dc5ac055e694d79f9a3ffc276d87aba2a085",
+      "query": "Jokha Alharthi Omani writer born Muscat",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"jokha\" OR \"alharthi\" OR \"omani\" OR \"writer\" OR \"born\" OR \"muscat\"",
+        "terms": [
+          "jokha",
+          "alharthi",
+          "omani",
+          "writer",
+          "born",
+          "muscat"
+        ]
+      }
+    },
+    {
+      "round": 7,
+      "top_k": 8,
+      "equivalence_key": "42617513343162fabfa10445304c4d665da00f705da3f08da0db2f4506a8fcd4",
+      "cached": true,
+      "query_sha256": "6311fa102129933025a8fd4046dca098a39af18c1a4b829474f50600faa23ce3",
+      "query": "Celestial Bodies novel first published 2018 Arabic",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"celestial\" OR \"bodies\" OR \"novel\" OR \"first\" OR \"published\" OR \"2018\" OR \"arabic\"",
+        "terms": [
+          "celestial",
+          "bodies",
+          "novel",
+          "first",
+          "published",
+          "2018",
+          "arabic"
+        ]
+      }
+    },
+    {
+      "round": 8,
+      "top_k": 8,
+      "equivalence_key": "572a997a2ea070413f0ac647fa55e4008a5b9c68dc4544354ce085fc3a08774b",
+      "cached": true,
+      "query_sha256": "6df004062d185868b9f1eb2745f0dc5ac055e694d79f9a3ffc276d87aba2a085",
+      "query": "Jokha Alharthi Omani writer born Muscat",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"jokha\" OR \"alharthi\" OR \"omani\" OR \"writer\" OR \"born\" OR \"muscat\"",
+        "terms": [
+          "jokha",
+          "alharthi",
+          "omani",
+          "writer",
+          "born",
+          "muscat"
+        ]
+      }
+    },
+    {
+      "round": 8,
+      "top_k": 8,
+      "equivalence_key": "42617513343162fabfa10445304c4d665da00f705da3f08da0db2f4506a8fcd4",
+      "cached": true,
+      "query_sha256": "6311fa102129933025a8fd4046dca098a39af18c1a4b829474f50600faa23ce3",
+      "query": "Celestial Bodies novel first published 2018 Arabic",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"celestial\" OR \"bodies\" OR \"novel\" OR \"first\" OR \"published\" OR \"2018\" OR \"arabic\"",
+        "terms": [
+          "celestial",
+          "bodies",
+          "novel",
+          "first",
+          "published",
+          "2018",
+          "arabic"
+        ]
+      }
+    },
+    {
+      "round": 9,
+      "top_k": 8,
+      "equivalence_key": "468d9123c005a73d545b7a01575d81b3df26c712a25499e6c620e541c44da69a",
+      "cached": false,
+      "query_sha256": "67c7fa6b2d19073070a6bac34731084d4fe708eca3afc4736acb1a5ddddf8e10",
+      "query": "Jokha Alharthi born Akure Nigeria",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"jokha\" OR \"alharthi\" OR \"born\" OR \"akure\" OR \"nigeria\"",
+        "terms": [
+          "jokha",
+          "alharthi",
+          "born",
+          "akure",
+          "nigeria"
+        ]
+      }
+    },
+    {
+      "round": 9,
+      "top_k": 8,
+      "equivalence_key": "2a02e7676542de08e446dfef4877477fb3ce7672be7cef75fd527ba8c6e19f59",
+      "cached": false,
+      "query_sha256": "760a1f8cacb0af30d6a299f46eda7615ad5cbcedf340e339d76aea8afd9b9d71",
+      "query": "Jokha Alharthi birthplace biography",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"jokha\" OR \"alharthi\" OR \"birthplace\" OR \"biography\"",
+        "terms": [
+          "jokha",
+          "alharthi",
+          "birthplace",
+          "biography"
+        ]
+      }
+    },
+    {
+      "round": 10,
+      "top_k": 8,
+      "equivalence_key": "468d9123c005a73d545b7a01575d81b3df26c712a25499e6c620e541c44da69a",
+      "cached": true,
+      "query_sha256": "67c7fa6b2d19073070a6bac34731084d4fe708eca3afc4736acb1a5ddddf8e10",
+      "query": "Jokha Alharthi born Akure Nigeria",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"jokha\" OR \"alharthi\" OR \"born\" OR \"akure\" OR \"nigeria\"",
+        "terms": [
+          "jokha",
+          "alharthi",
+          "born",
+          "akure",
+          "nigeria"
+        ]
+      }
+    },
+    {
+      "round": 10,
+      "top_k": 8,
+      "equivalence_key": "2a02e7676542de08e446dfef4877477fb3ce7672be7cef75fd527ba8c6e19f59",
+      "cached": true,
+      "query_sha256": "760a1f8cacb0af30d6a299f46eda7615ad5cbcedf340e339d76aea8afd9b9d71",
+      "query": "Jokha Alharthi birthplace biography",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"jokha\" OR \"alharthi\" OR \"birthplace\" OR \"biography\"",
+        "terms": [
+          "jokha",
+          "alharthi",
+          "birthplace",
+          "biography"
+        ]
+      }
+    },
+    {
+      "round": 11,
+      "top_k": 8,
+      "equivalence_key": "468d9123c005a73d545b7a01575d81b3df26c712a25499e6c620e541c44da69a",
+      "cached": true,
+      "query_sha256": "67c7fa6b2d19073070a6bac34731084d4fe708eca3afc4736acb1a5ddddf8e10",
+      "query": "Jokha Alharthi born Akure Nigeria",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"jokha\" OR \"alharthi\" OR \"born\" OR \"akure\" OR \"nigeria\"",
+        "terms": [
+          "jokha",
+          "alharthi",
+          "born",
+          "akure",
+          "nigeria"
+        ]
+      }
+    },
+    {
+      "round": 11,
+      "top_k": 8,
+      "equivalence_key": "2a02e7676542de08e446dfef4877477fb3ce7672be7cef75fd527ba8c6e19f59",
+      "cached": true,
+      "query_sha256": "760a1f8cacb0af30d6a299f46eda7615ad5cbcedf340e339d76aea8afd9b9d71",
+      "query": "Jokha Alharthi birthplace biography",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"jokha\" OR \"alharthi\" OR \"birthplace\" OR \"biography\"",
+        "terms": [
+          "jokha",
+          "alharthi",
+          "birthplace",
+          "biography"
+        ]
+      }
+    },
+    {
+      "round": 12,
+      "top_k": 8,
+      "equivalence_key": "6b51876d7676bb52a978cbcd9d8aebcf35808dd0008a3a88fd97e922973ae6b0",
+      "cached": false,
+      "query_sha256": "37740597c2326d3d8b9997bfe7172a185e308eeb0d46d7394f39f02018b6f4f1",
+      "query": "Jokha Alharthi Wikipedia Omani author",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"jokha\" OR \"alharthi\" OR \"wikipedia\" OR \"omani\" OR \"author\"",
+        "terms": [
+          "jokha",
+          "alharthi",
+          "wikipedia",
+          "omani",
+          "author"
+        ]
+      }
+    },
+    {
+      "round": 12,
+      "top_k": 8,
+      "equivalence_key": "126b6ded1498d5ecd7aa03b3d2350e66c1f6f6f79da97edc4d7314ad129086b3",
+      "cached": false,
+      "query_sha256": "41907e5c41c715900ad3cf5ef529e64a6560e76e3220e11b639b1bc5ce4e03c4",
+      "query": "Jokha Alharthi born 1978 Oman",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"jokha\" OR \"alharthi\" OR \"born\" OR \"1978\" OR \"oman\"",
+        "terms": [
+          "jokha",
+          "alharthi",
+          "born",
+          "1978",
+          "oman"
+        ]
+      }
+    },
+    {
+      "round": 13,
+      "top_k": 8,
+      "equivalence_key": "88118b10017e0be7ac15a944180d520e502e4db728740521d2dcee8ecd73202b",
+      "cached": false,
+      "query_sha256": "c4c6d716049545d825317397f968e8abac4292964c719bde8c475e6f1d4ef7d5",
+      "query": "Jokha Alharthi Omani author biography",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"jokha\" OR \"alharthi\" OR \"omani\" OR \"author\" OR \"biography\"",
+        "terms": [
+          "jokha",
+          "alharthi",
+          "omani",
+          "author",
+          "biography"
+        ]
+      }
+    },
+    {
+      "round": 13,
+      "top_k": 8,
+      "equivalence_key": "87e162b8c1697dc90424cd5a8c756b017af285ebe989923045f3c921de3b60d0",
+      "cached": false,
+      "query_sha256": "1681877b1a0af7c9f11af412c26c061c02831ee6d5f0ebb1dfc7c0128cef0d71",
+      "query": "Jokha Alharthi born Akure",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"jokha\" OR \"alharthi\" OR \"born\" OR \"akure\"",
+        "terms": [
+          "jokha",
+          "alharthi",
+          "born",
+          "akure"
+        ]
+      }
+    },
+    {
+      "round": 14,
+      "top_k": 8,
+      "equivalence_key": "4a82200fb242b6cfeeac74d5553b4dacc1a8230fde87c45e9479b88f62b31c1b",
+      "cached": false,
+      "query_sha256": "d5a1c6a193e3449d1968eea4d7aed10516e81c0347943a946ae3f9414ef3153e",
+      "query": "Jokha Alharthi Wikipedia",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"jokha\" OR \"alharthi\" OR \"wikipedia\"",
+        "terms": [
+          "jokha",
+          "alharthi",
+          "wikipedia"
+        ]
+      }
+    },
+    {
+      "round": 14,
+      "top_k": 8,
+      "equivalence_key": "cf742e0615790293244fd689a8dfee616c364796f9d799b8d26efcec01f2c307",
+      "cached": false,
+      "query_sha256": "aa5b923cfdbf55f0f6098ebfa29f5e982dac2f7b175b208e853f7b8b05177f6f",
+      "query": "Jokha Alharthi Omani writer born",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"jokha\" OR \"alharthi\" OR \"omani\" OR \"writer\" OR \"born\"",
+        "terms": [
+          "jokha",
+          "alharthi",
+          "omani",
+          "writer",
+          "born"
+        ]
+      }
+    },
+    {
+      "round": 15,
+      "top_k": 8,
+      "equivalence_key": "2cc2495dfb5451a92a25c7de54922c2ff4603cf903ccf6fc555eb25ce9e589c1",
+      "cached": false,
+      "query_sha256": "986e758367292abc232b52739075989993ea91cf083ff69c1a63e996b44620ea",
+      "query": "Jokha Alharthi Omani novelist Celestial Bodies biography",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"jokha\" OR \"alharthi\" OR \"omani\" OR \"novelist\" OR \"celestial\" OR \"bodies\" OR \"biography\"",
+        "terms": [
+          "jokha",
+          "alharthi",
+          "omani",
+          "novelist",
+          "celestial",
+          "bodies",
+          "biography"
+        ]
+      }
+    },
+    {
+      "round": 15,
+      "top_k": 8,
+      "equivalence_key": "fefecef369f1219fc82bebc8a32e68847b4fabda018cf700654a98b766ab5501",
+      "cached": false,
+      "query_sha256": "2425eb20311e24022a7539d83161a62de7b8e88bb04108d4c496d83a140177a5",
+      "query": "Jokha Alharthi born 1978 Oman author",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"jokha\" OR \"alharthi\" OR \"born\" OR \"1978\" OR \"oman\" OR \"author\"",
+        "terms": [
+          "jokha",
+          "alharthi",
+          "born",
+          "1978",
+          "oman",
+          "author"
+        ]
+      }
+    }
+  ],
+  "equivalent_query_repeats": 8,
+  "views": [
+    {
+      "round": 1,
+      "compacted": false,
+      "visible_evidence": [],
+      "shelf": [],
+      "shelf_evicted": []
+    },
+    {
+      "round": 2,
+      "compacted": false,
+      "visible_evidence": [],
+      "shelf": [],
+      "shelf_evicted": []
+    },
+    {
+      "round": 3,
+      "compacted": false,
+      "visible_evidence": [],
+      "shelf": [],
+      "shelf_evicted": []
+    },
+    {
+      "round": 4,
+      "compacted": false,
+      "visible_evidence": [
+        "e1"
+      ],
+      "shelf": [],
+      "shelf_evicted": []
+    },
+    {
+      "round": 5,
+      "compacted": true,
+      "visible_evidence": [
+        "e1"
+      ],
+      "shelf": [],
+      "shelf_evicted": []
+    },
+    {
+      "round": 6,
+      "compacted": false,
+      "visible_evidence": [
+        "e1",
+        "e2"
+      ],
+      "shelf": [],
+      "shelf_evicted": []
+    },
+    {
+      "round": 7,
+      "compacted": true,
+      "visible_evidence": [
+        "e1",
+        "e2"
+      ],
+      "shelf": [
+        "e1"
+      ],
+      "shelf_evicted": []
+    },
+    {
+      "round": 8,
+      "compacted": false,
+      "visible_evidence": [
+        "e1",
+        "e2"
+      ],
+      "shelf": [
+        "e1"
+      ],
+      "shelf_evicted": []
+    },
+    {
+      "round": 9,
+      "compacted": false,
+      "visible_evidence": [
+        "e1",
+        "e2"
+      ],
+      "shelf": [
+        "e1"
+      ],
+      "shelf_evicted": []
+    },
+    {
+      "round": 10,
+      "compacted": true,
+      "visible_evidence": [
+        "e1",
+        "e2"
+      ],
+      "shelf": [
+        "e1",
+        "e2"
+      ],
+      "shelf_evicted": []
+    },
+    {
+      "round": 11,
+      "compacted": false,
+      "visible_evidence": [
+        "e1",
+        "e2"
+      ],
+      "shelf": [
+        "e1",
+        "e2"
+      ],
+      "shelf_evicted": []
+    },
+    {
+      "round": 12,
+      "compacted": false,
+      "visible_evidence": [
+        "e1",
+        "e2"
+      ],
+      "shelf": [
+        "e1",
+        "e2"
+      ],
+      "shelf_evicted": []
+    },
+    {
+      "round": 13,
+      "compacted": false,
+      "visible_evidence": [
+        "e1",
+        "e2"
+      ],
+      "shelf": [
+        "e1",
+        "e2"
+      ],
+      "shelf_evicted": []
+    },
+    {
+      "round": 14,
+      "compacted": true,
+      "visible_evidence": [
+        "e1",
+        "e2"
+      ],
+      "shelf": [
+        "e1",
+        "e2"
+      ],
+      "shelf_evicted": []
+    },
+    {
+      "round": 15,
+      "compacted": false,
+      "visible_evidence": [
+        "e1",
+        "e2"
+      ],
+      "shelf": [
+        "e1",
+        "e2"
+      ],
+      "shelf_evicted": []
+    },
+    {
+      "round": 16,
+      "compacted": false,
+      "visible_evidence": [
+        "e1",
+        "e2"
+      ],
+      "shelf": [
+        "e1",
+        "e2"
+      ],
+      "shelf_evicted": []
+    }
+  ],
+  "delivered_refs": [
+    "e1",
+    "e2"
+  ],
+  "submitted_refs": [
+    "e1",
+    "e2"
+  ],
+  "text_included": true,
+  "limitations": [
+    "Equivalence is compiler equality, not semantic identity or wasted-search proof",
+    "Raw-window visibility/selection is not entailment or complete evidence coverage",
+    "No live q26 replay or independent answer scoring is performed"
+  ]
+}

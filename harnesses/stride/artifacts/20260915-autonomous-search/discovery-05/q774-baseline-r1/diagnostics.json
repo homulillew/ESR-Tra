@@ -1,0 +1,2368 @@
+{
+  "protocol": "stride-search-3",
+  "head": "b9f7a6d8c2f131bd3ec6d05fdd1e01f20b746e7aca78b75fda8734ca81519c62",
+  "outcome": "abstained",
+  "formal_correct": null,
+  "model_attempts": 16,
+  "backend_attempts": 87,
+  "queries": [
+    {
+      "round": 1,
+      "top_k": 10,
+      "equivalence_key": "8f974cda14a8627a1ebe7ff46e72512ca34e55374b56393c83a97b1de809d396",
+      "cached": false,
+      "query_sha256": "93804bc7087aac70f6f0f1d29050a2c21de4abbd77aa59451aaaa90cf7da60da",
+      "query": "actor acts alongside real life relative unrelated in series character married multiple times one surviving child",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"actor\" OR \"acts\" OR \"alongside\" OR \"real\" OR \"life\" OR \"relative\" OR \"unrelated\" OR \"in\" OR \"series\" OR \"character\" OR \"married\" OR \"multiple\" OR \"times\" OR \"one\" OR \"surviving\" OR \"child\"",
+        "terms": [
+          "actor",
+          "acts",
+          "alongside",
+          "real",
+          "life",
+          "relative",
+          "unrelated",
+          "in",
+          "series",
+          "character",
+          "married",
+          "multiple",
+          "times",
+          "one",
+          "surviving",
+          "child"
+        ]
+      }
+    },
+    {
+      "round": 1,
+      "top_k": 10,
+      "equivalence_key": "4fd2274524ea17ec0a3c6ed8e270e2d46c37b17b928fe16b9ca1d7f32772d24c",
+      "cached": false,
+      "query_sha256": "73c86f63d9c7f9ac9b340229525ce18dadf93ed8119eab36d3a57f7aa33a4da0",
+      "query": "TV series character married more than twice less than five times only one child survives",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"tv\" OR \"series\" OR \"character\" OR \"married\" OR \"more\" OR \"than\" OR \"twice\" OR \"less\" OR \"five\" OR \"times\" OR \"only\" OR \"one\" OR \"child\" OR \"survives\"",
+        "terms": [
+          "tv",
+          "series",
+          "character",
+          "married",
+          "more",
+          "than",
+          "twice",
+          "less",
+          "five",
+          "times",
+          "only",
+          "one",
+          "child",
+          "survives"
+        ]
+      }
+    },
+    {
+      "round": 1,
+      "top_k": 10,
+      "equivalence_key": "53e1d404b614921772db32c534f1d1bd9983bc3d2493030c1d2b9eb24e4dc9b2",
+      "cached": false,
+      "query_sha256": "9c0de673fc99af9d4e0f005e1f34506efd52fe61471b236834267b056da6bd3e",
+      "query": "entertainer height 1.65 1.70 acts with real life relative on screen",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"entertainer\" OR \"height\" OR \"1\" OR \"65\" OR \"70\" OR \"acts\" OR \"with\" OR \"real\" OR \"life\" OR \"relative\" OR \"on\" OR \"screen\"",
+        "terms": [
+          "entertainer",
+          "height",
+          "1",
+          "65",
+          "70",
+          "acts",
+          "with",
+          "real",
+          "life",
+          "relative",
+          "on",
+          "screen"
+        ]
+      }
+    },
+    {
+      "round": 2,
+      "top_k": 10,
+      "equivalence_key": "a1766d04945a45bb50302607d84e58fa329a8c5a87d0ca8d718e546baeba98d2",
+      "cached": false,
+      "query_sha256": "08e6aa079b8efa6b195281a96aceb7faea1658c4e418899bac1d7767f43407fd",
+      "query": "soap opera character married three times one child survives acts with real life relative",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"soap\" OR \"opera\" OR \"character\" OR \"married\" OR \"three\" OR \"times\" OR \"one\" OR \"child\" OR \"survives\" OR \"acts\" OR \"with\" OR \"real\" OR \"life\" OR \"relative\"",
+        "terms": [
+          "soap",
+          "opera",
+          "character",
+          "married",
+          "three",
+          "times",
+          "one",
+          "child",
+          "survives",
+          "acts",
+          "with",
+          "real",
+          "life",
+          "relative"
+        ]
+      }
+    },
+    {
+      "round": 2,
+      "top_k": 10,
+      "equivalence_key": "b39b2e357c69ed20b383f3a6dd476b36cf629fd0771c2c2bf38ebc0cfadf3675",
+      "cached": false,
+      "query_sha256": "3f19edfb0a80a355b401af4c3c899e558f6d62f1c8e838b1f88edae87b7ed3f8",
+      "query": "long running TV series character married four times only one surviving child real life family member cast",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"long\" OR \"running\" OR \"tv\" OR \"series\" OR \"character\" OR \"married\" OR \"four\" OR \"times\" OR \"only\" OR \"one\" OR \"surviving\" OR \"child\" OR \"real\" OR \"life\" OR \"family\" OR \"member\" OR \"cast\"",
+        "terms": [
+          "long",
+          "running",
+          "tv",
+          "series",
+          "character",
+          "married",
+          "four",
+          "times",
+          "only",
+          "one",
+          "surviving",
+          "child",
+          "real",
+          "life",
+          "family",
+          "member",
+          "cast"
+        ]
+      }
+    },
+    {
+      "round": 2,
+      "top_k": 10,
+      "equivalence_key": "3755e44ea31f12f37e25ceb8e1f4e4408f510036e0b4334c893ecef9396c0248",
+      "cached": false,
+      "query_sha256": "c6b997d0654aec3b57867409d7da1272f022c81f0fcaa0c762a562fd257fd05f",
+      "query": "Grey's Anatomy character married multiple times one child survives real life relative",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"grey\" OR \"s\" OR \"anatomy\" OR \"character\" OR \"married\" OR \"multiple\" OR \"times\" OR \"one\" OR \"child\" OR \"survives\" OR \"real\" OR \"life\" OR \"relative\"",
+        "terms": [
+          "grey",
+          "s",
+          "anatomy",
+          "character",
+          "married",
+          "multiple",
+          "times",
+          "one",
+          "child",
+          "survives",
+          "real",
+          "life",
+          "relative"
+        ]
+      }
+    },
+    {
+      "round": 2,
+      "top_k": 10,
+      "equivalence_key": "169b74bb2a3ab51748b30758185eb4e3fe24f4089974e1e3709db905422a2a74",
+      "cached": false,
+      "query_sha256": "b8d2dbdfb76eea33c5c06dd527a732e537710c684334de12753b81343d5d0ca1",
+      "query": "Days of Our Lives character married multiple times one surviving child real life relative actor",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"days\" OR \"of\" OR \"our\" OR \"lives\" OR \"character\" OR \"married\" OR \"multiple\" OR \"times\" OR \"one\" OR \"surviving\" OR \"child\" OR \"real\" OR \"life\" OR \"relative\" OR \"actor\"",
+        "terms": [
+          "days",
+          "of",
+          "our",
+          "lives",
+          "character",
+          "married",
+          "multiple",
+          "times",
+          "one",
+          "surviving",
+          "child",
+          "real",
+          "life",
+          "relative",
+          "actor"
+        ]
+      }
+    },
+    {
+      "round": 2,
+      "top_k": 10,
+      "equivalence_key": "9a251808b89cd0432a7012308ab0898e77d0621808371bc8c2b25fb5fdb09bc4",
+      "cached": false,
+      "query_sha256": "2aa8865abfdf665d22d7ee461f239714b6f856508a202bec71b08055b47d41e3",
+      "query": "Young and Restless character married three four times one child survives acts with real life spouse",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"young\" OR \"and\" OR \"restless\" OR \"character\" OR \"married\" OR \"three\" OR \"four\" OR \"times\" OR \"one\" OR \"child\" OR \"survives\" OR \"acts\" OR \"with\" OR \"real\" OR \"life\" OR \"spouse\"",
+        "terms": [
+          "young",
+          "and",
+          "restless",
+          "character",
+          "married",
+          "three",
+          "four",
+          "times",
+          "one",
+          "child",
+          "survives",
+          "acts",
+          "with",
+          "real",
+          "life",
+          "spouse"
+        ]
+      }
+    },
+    {
+      "round": 2,
+      "top_k": 10,
+      "equivalence_key": "9106ef1399a6154011157e3bc05102e10af82f07766ffde8f85f5ff3a783094e",
+      "cached": false,
+      "query_sha256": "92e7d7f1ff8ef60c0fd272baa7c97e2c43a41d1ecfcb167a38a5e84611a65512",
+      "query": "Bold and the Beautiful character married multiple times one child survives real life relative",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"bold\" OR \"and\" OR \"the\" OR \"beautiful\" OR \"character\" OR \"married\" OR \"multiple\" OR \"times\" OR \"one\" OR \"child\" OR \"survives\" OR \"real\" OR \"life\" OR \"relative\"",
+        "terms": [
+          "bold",
+          "and",
+          "the",
+          "beautiful",
+          "character",
+          "married",
+          "multiple",
+          "times",
+          "one",
+          "child",
+          "survives",
+          "real",
+          "life",
+          "relative"
+        ]
+      }
+    },
+    {
+      "round": 3,
+      "top_k": 10,
+      "equivalence_key": "257ca8a3a83d57d5074b236e5a77f7cfaaa6aa733cf405a33c285144d8dd8fa0",
+      "cached": false,
+      "query_sha256": "e218e9accc7d9f2eb92a6f6515eb92a1a018e6b1b06581bffa4a62ef8d91142a",
+      "query": "Jane the Virgin actor real life relative cast member character married multiple times",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"jane\" OR \"the\" OR \"virgin\" OR \"actor\" OR \"real\" OR \"life\" OR \"relative\" OR \"cast\" OR \"member\" OR \"character\" OR \"married\" OR \"multiple\" OR \"times\"",
+        "terms": [
+          "jane",
+          "the",
+          "virgin",
+          "actor",
+          "real",
+          "life",
+          "relative",
+          "cast",
+          "member",
+          "character",
+          "married",
+          "multiple",
+          "times"
+        ]
+      }
+    },
+    {
+      "round": 3,
+      "top_k": 10,
+      "equivalence_key": "a173909525b59cf62ac31547954d7e44d4f8e0d009ee6399f773548eb65f2eaa",
+      "cached": false,
+      "query_sha256": "e19996c7c867a3873c166dc95892f6fba0fdfd80d286c6b562aac7551aaaa0c3",
+      "query": "telenovela character married three four times only one child survives actor real life family",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"telenovela\" OR \"character\" OR \"married\" OR \"three\" OR \"four\" OR \"times\" OR \"only\" OR \"one\" OR \"child\" OR \"survives\" OR \"actor\" OR \"real\" OR \"life\" OR \"family\"",
+        "terms": [
+          "telenovela",
+          "character",
+          "married",
+          "three",
+          "four",
+          "times",
+          "only",
+          "one",
+          "child",
+          "survives",
+          "actor",
+          "real",
+          "life",
+          "family"
+        ]
+      }
+    },
+    {
+      "round": 3,
+      "top_k": 10,
+      "equivalence_key": "8c5bcf7e09c6996c6a47b39063c4edd2a49468f326669f79b239c4bba03e6725",
+      "cached": false,
+      "query_sha256": "9d9ffacf4e85f25a854efd98bf3d23f2dbed783764efd473d85845a5f706c410",
+      "query": "TV series started 2000s more than 3 seasons character married multiple times one surviving child real life relative actor",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"tv\" OR \"series\" OR \"started\" OR \"2000s\" OR \"more\" OR \"than\" OR \"3\" OR \"seasons\" OR \"character\" OR \"married\" OR \"multiple\" OR \"times\" OR \"one\" OR \"surviving\" OR \"child\" OR \"real\" OR \"life\" OR \"relative\" OR \"actor\"",
+        "terms": [
+          "tv",
+          "series",
+          "started",
+          "2000s",
+          "more",
+          "than",
+          "3",
+          "seasons",
+          "character",
+          "married",
+          "multiple",
+          "times",
+          "one",
+          "surviving",
+          "child",
+          "real",
+          "life",
+          "relative",
+          "actor"
+        ]
+      }
+    },
+    {
+      "round": 3,
+      "top_k": 10,
+      "equivalence_key": "631f5f78990912e386433f9e09b54c7fde42d8d9b887e20029a6bc07bb43aa45",
+      "cached": false,
+      "query_sha256": "15b11962cf83780da44d8f31e0378e5db2e43cdf5fd514fd58d8b593aae3f67b",
+      "query": "This Is Us character married multiple times one child survives real life relative actor",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"this\" OR \"is\" OR \"us\" OR \"character\" OR \"married\" OR \"multiple\" OR \"times\" OR \"one\" OR \"child\" OR \"survives\" OR \"real\" OR \"life\" OR \"relative\" OR \"actor\"",
+        "terms": [
+          "this",
+          "is",
+          "us",
+          "character",
+          "married",
+          "multiple",
+          "times",
+          "one",
+          "child",
+          "survives",
+          "real",
+          "life",
+          "relative",
+          "actor"
+        ]
+      }
+    },
+    {
+      "round": 3,
+      "top_k": 10,
+      "equivalence_key": "eb11b78f1d068095bf5b12d84e6c39227bad97e10570bf7bdb729ab25ee72275",
+      "cached": false,
+      "query_sha256": "7910608c6f3570cff05838d26db792bb6b2d0be5f34dbd60e255c2690e982fe3",
+      "query": "Shameless character married multiple times one child survives real life relative",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"shameless\" OR \"character\" OR \"married\" OR \"multiple\" OR \"times\" OR \"one\" OR \"child\" OR \"survives\" OR \"real\" OR \"life\" OR \"relative\"",
+        "terms": [
+          "shameless",
+          "character",
+          "married",
+          "multiple",
+          "times",
+          "one",
+          "child",
+          "survives",
+          "real",
+          "life",
+          "relative"
+        ]
+      }
+    },
+    {
+      "round": 3,
+      "top_k": 10,
+      "equivalence_key": "3da2cde76fd66d8f909f6c45b3edc6da4f3967c0355a63ceb2d2f84fe721e843",
+      "cached": false,
+      "query_sha256": "c6cc50cdf60b729376c1a9b60909868fae01eafefa7a28243e1c3a6524840a8e",
+      "query": "long running drama series character married 3 4 times only one surviving child acts with real life family member",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"long\" OR \"running\" OR \"drama\" OR \"series\" OR \"character\" OR \"married\" OR \"3\" OR \"4\" OR \"times\" OR \"only\" OR \"one\" OR \"surviving\" OR \"child\" OR \"acts\" OR \"with\" OR \"real\" OR \"life\" OR \"family\" OR \"member\"",
+        "terms": [
+          "long",
+          "running",
+          "drama",
+          "series",
+          "character",
+          "married",
+          "3",
+          "4",
+          "times",
+          "only",
+          "one",
+          "surviving",
+          "child",
+          "acts",
+          "with",
+          "real",
+          "life",
+          "family",
+          "member"
+        ]
+      }
+    },
+    {
+      "round": 4,
+      "top_k": 10,
+      "equivalence_key": "3f9da257e31ba1e113c9fe6faf3bc1d8dbecd1dafa1864d5f14aa848f9705dd7",
+      "cached": false,
+      "query_sha256": "093cccf042ba9097480a419e7dd4aba71df38cab15d058f4ac1282bbe0e0f460",
+      "query": "Grey's Anatomy actor real life relative cast member height",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"grey\" OR \"s\" OR \"anatomy\" OR \"actor\" OR \"real\" OR \"life\" OR \"relative\" OR \"cast\" OR \"member\" OR \"height\"",
+        "terms": [
+          "grey",
+          "s",
+          "anatomy",
+          "actor",
+          "real",
+          "life",
+          "relative",
+          "cast",
+          "member",
+          "height"
+        ]
+      }
+    },
+    {
+      "round": 4,
+      "top_k": 10,
+      "equivalence_key": "7a7f247f0f6b1b72def4d1363f83372b90d109a72d887eb45a3128f81e29f1dd",
+      "cached": false,
+      "query_sha256": "9cd57b10cbb95793b269c249179af3dff68961e3187ef573dde4fa61f51fde96",
+      "query": "Days of Our Lives character married multiple times one child survives actor real life family",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"days\" OR \"of\" OR \"our\" OR \"lives\" OR \"character\" OR \"married\" OR \"multiple\" OR \"times\" OR \"one\" OR \"child\" OR \"survives\" OR \"actor\" OR \"real\" OR \"life\" OR \"family\"",
+        "terms": [
+          "days",
+          "of",
+          "our",
+          "lives",
+          "character",
+          "married",
+          "multiple",
+          "times",
+          "one",
+          "child",
+          "survives",
+          "actor",
+          "real",
+          "life",
+          "family"
+        ]
+      }
+    },
+    {
+      "round": 4,
+      "top_k": 10,
+      "equivalence_key": "cd4eba87de3a851a489d4d0f81d58a4b0e345ca505d9137c7fc116a2c00b8618",
+      "cached": false,
+      "query_sha256": "e87cd2c549ca3d9834926ab909a4d9a81e9dde91837f17d376dc36bf3a559cf1",
+      "query": "Bold and the Beautiful actor real life relative cast height 1.68",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"bold\" OR \"and\" OR \"the\" OR \"beautiful\" OR \"actor\" OR \"real\" OR \"life\" OR \"relative\" OR \"cast\" OR \"height\" OR \"1\" OR \"68\"",
+        "terms": [
+          "bold",
+          "and",
+          "the",
+          "beautiful",
+          "actor",
+          "real",
+          "life",
+          "relative",
+          "cast",
+          "height",
+          "1",
+          "68"
+        ]
+      }
+    },
+    {
+      "round": 4,
+      "top_k": 10,
+      "equivalence_key": "2c229359a06c8a0d2f9e87ba06b2a87c02eef86977c2f496361b3512adbe7787",
+      "cached": false,
+      "query_sha256": "2d8b85a72a60d379811e4f61f5d82976d797207dc1a9af73f5a2cb051cfd5107",
+      "query": "actor plays character married three times one surviving child real life relative also cast",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"actor\" OR \"plays\" OR \"character\" OR \"married\" OR \"three\" OR \"times\" OR \"one\" OR \"surviving\" OR \"child\" OR \"real\" OR \"life\" OR \"relative\" OR \"also\" OR \"cast\"",
+        "terms": [
+          "actor",
+          "plays",
+          "character",
+          "married",
+          "three",
+          "times",
+          "one",
+          "surviving",
+          "child",
+          "real",
+          "life",
+          "relative",
+          "also",
+          "cast"
+        ]
+      }
+    },
+    {
+      "round": 4,
+      "top_k": 10,
+      "equivalence_key": "68067721eb7c3b34cef9797328d9a2621849774ff4a5d1917b2c59187df4fd5b",
+      "cached": false,
+      "query_sha256": "b4d2f455f80ce26877ea45e5a0ff17cda86267ae7a7fb6cae9b7d1f5e6286acf",
+      "query": "soap opera actor real life sibling spouse parent also cast character married multiple times",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"soap\" OR \"opera\" OR \"actor\" OR \"real\" OR \"life\" OR \"sibling\" OR \"spouse\" OR \"parent\" OR \"also\" OR \"cast\" OR \"character\" OR \"married\" OR \"multiple\" OR \"times\"",
+        "terms": [
+          "soap",
+          "opera",
+          "actor",
+          "real",
+          "life",
+          "sibling",
+          "spouse",
+          "parent",
+          "also",
+          "cast",
+          "character",
+          "married",
+          "multiple",
+          "times"
+        ]
+      }
+    },
+    {
+      "round": 4,
+      "top_k": 10,
+      "equivalence_key": "dfba26eb73a4473acbc577518fbdc7275741f64108d86b2ff20ccad2710dcf42",
+      "cached": false,
+      "query_sha256": "cd1265fb2fca4650193a8d9be0b601954ec8fd0bc3d932f46953bc1703b98dbb",
+      "query": "TV series actor height 1.68 1.69 real life family member cast same show",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"tv\" OR \"series\" OR \"actor\" OR \"height\" OR \"1\" OR \"68\" OR \"69\" OR \"real\" OR \"life\" OR \"family\" OR \"member\" OR \"cast\" OR \"same\" OR \"show\"",
+        "terms": [
+          "tv",
+          "series",
+          "actor",
+          "height",
+          "1",
+          "68",
+          "69",
+          "real",
+          "life",
+          "family",
+          "member",
+          "cast",
+          "same",
+          "show"
+        ]
+      }
+    },
+    {
+      "round": 5,
+      "top_k": 10,
+      "equivalence_key": "f2a5ea6c10ff92c6fa1f7263c7d1150c09abcd4f0932d407ebbd3134bfe86481",
+      "cached": false,
+      "query_sha256": "f43350c8ec7f8357ec29173eca45f7a9fc672edeb39b4d7d3218fa979bb73bd1",
+      "query": "Jane the Virgin actor real life relative cast member height",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"jane\" OR \"the\" OR \"virgin\" OR \"actor\" OR \"real\" OR \"life\" OR \"relative\" OR \"cast\" OR \"member\" OR \"height\"",
+        "terms": [
+          "jane",
+          "the",
+          "virgin",
+          "actor",
+          "real",
+          "life",
+          "relative",
+          "cast",
+          "member",
+          "height"
+        ]
+      }
+    },
+    {
+      "round": 5,
+      "top_k": 10,
+      "equivalence_key": "e2c9e6e90694153f7ad96a4c20f427e0aabf8e0e05e9e0d7bfac4d7236c6f84e",
+      "cached": false,
+      "query_sha256": "999e8a7974b76dd60c7adcac105b6a41ebaa3aaa45adac2e74f3f754b20d2e67",
+      "query": "telenovela actor real life family member plays unrelated character married multiple times",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"telenovela\" OR \"actor\" OR \"real\" OR \"life\" OR \"family\" OR \"member\" OR \"plays\" OR \"unrelated\" OR \"character\" OR \"married\" OR \"multiple\" OR \"times\"",
+        "terms": [
+          "telenovela",
+          "actor",
+          "real",
+          "life",
+          "family",
+          "member",
+          "plays",
+          "unrelated",
+          "character",
+          "married",
+          "multiple",
+          "times"
+        ]
+      }
+    },
+    {
+      "round": 5,
+      "top_k": 10,
+      "equivalence_key": "9dbff1343ccdbf9c8a2c220a1732d68ef1e66cb7452ba9ebd06dea30121d2226",
+      "cached": false,
+      "query_sha256": "836887873d45ba53c2879e31a11651c9f651ae7eca10565c3a253ae4aebd8dc9",
+      "query": "TV show actor real life daughter son plays different character height 1.68",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"tv\" OR \"show\" OR \"actor\" OR \"real\" OR \"life\" OR \"daughter\" OR \"son\" OR \"plays\" OR \"different\" OR \"character\" OR \"height\" OR \"1\" OR \"68\"",
+        "terms": [
+          "tv",
+          "show",
+          "actor",
+          "real",
+          "life",
+          "daughter",
+          "son",
+          "plays",
+          "different",
+          "character",
+          "height",
+          "1",
+          "68"
+        ]
+      }
+    },
+    {
+      "round": 5,
+      "top_k": 10,
+      "equivalence_key": "37f92b098f484b7831125bb782dd51b95d6f78e6fbbc4bbac18e157d93893601",
+      "cached": false,
+      "query_sha256": "5f2bc888eb2916d51b5fb1ab8267addc5a6dbfb740ed4a21af948432e74b0afc",
+      "query": "character married three times only one child survives series actor real life sibling",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"character\" OR \"married\" OR \"three\" OR \"times\" OR \"only\" OR \"one\" OR \"child\" OR \"survives\" OR \"series\" OR \"actor\" OR \"real\" OR \"life\" OR \"sibling\"",
+        "terms": [
+          "character",
+          "married",
+          "three",
+          "times",
+          "only",
+          "one",
+          "child",
+          "survives",
+          "series",
+          "actor",
+          "real",
+          "life",
+          "sibling"
+        ]
+      }
+    },
+    {
+      "round": 5,
+      "top_k": 10,
+      "equivalence_key": "e66a2aaa152bc245cdf0ee0cdc56f9e1814e987dc7cfaf3ed4eb3db92413f8bc",
+      "cached": false,
+      "query_sha256": "896732a8549b4c96443cf9f077a8a7b6107cbfb1482ce85679645310b3e61e61",
+      "query": "actor height 1.66 1.67 1.68 1.69 meters real life relative cast",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"actor\" OR \"height\" OR \"1\" OR \"66\" OR \"67\" OR \"68\" OR \"69\" OR \"meters\" OR \"real\" OR \"life\" OR \"relative\" OR \"cast\"",
+        "terms": [
+          "actor",
+          "height",
+          "1",
+          "66",
+          "67",
+          "68",
+          "69",
+          "meters",
+          "real",
+          "life",
+          "relative",
+          "cast"
+        ]
+      }
+    },
+    {
+      "round": 5,
+      "top_k": 10,
+      "equivalence_key": "e47a5a9b80c1453f42b3927f46903802faf4a4f0471348981b38be2263711732",
+      "cached": false,
+      "query_sha256": "706ee95e2f9e34b3d2d679be3bf0908968e58d27d290247411b6367d198c9ddc",
+      "query": "long running TV series started 2000s more than 3 seasons actor real life family member cast",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"long\" OR \"running\" OR \"tv\" OR \"series\" OR \"started\" OR \"2000s\" OR \"more\" OR \"than\" OR \"3\" OR \"seasons\" OR \"actor\" OR \"real\" OR \"life\" OR \"family\" OR \"member\" OR \"cast\"",
+        "terms": [
+          "long",
+          "running",
+          "tv",
+          "series",
+          "started",
+          "2000s",
+          "more",
+          "than",
+          "3",
+          "seasons",
+          "actor",
+          "real",
+          "life",
+          "family",
+          "member",
+          "cast"
+        ]
+      }
+    },
+    {
+      "round": 6,
+      "top_k": 10,
+      "equivalence_key": "daa553d36f9ab6ee00ac3af86ec33fddf9ba8e3d0f047577881915ebfca49c4f",
+      "cached": false,
+      "query_sha256": "ea4d96f8714bd5629dcd46530aac2d6953673857aa25a991f7f7a851b2b6d4b6",
+      "query": "actor real life daughter plays different character same telenovela married three times",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"actor\" OR \"real\" OR \"life\" OR \"daughter\" OR \"plays\" OR \"different\" OR \"character\" OR \"same\" OR \"telenovela\" OR \"married\" OR \"three\" OR \"times\"",
+        "terms": [
+          "actor",
+          "real",
+          "life",
+          "daughter",
+          "plays",
+          "different",
+          "character",
+          "same",
+          "telenovela",
+          "married",
+          "three",
+          "times"
+        ]
+      }
+    },
+    {
+      "round": 6,
+      "top_k": 10,
+      "equivalence_key": "f61a261fbd2c8c20abd648766501627181fc2f59297d75ebc3fdb726c6fbe9f6",
+      "cached": false,
+      "query_sha256": "4d4004e83f5493fdb179700440672589a893b82bd6f1901c5f312f815e269276",
+      "query": "telenovela character married four times one child survives actor real life family",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"telenovela\" OR \"character\" OR \"married\" OR \"four\" OR \"times\" OR \"one\" OR \"child\" OR \"survives\" OR \"actor\" OR \"real\" OR \"life\" OR \"family\"",
+        "terms": [
+          "telenovela",
+          "character",
+          "married",
+          "four",
+          "times",
+          "one",
+          "child",
+          "survives",
+          "actor",
+          "real",
+          "life",
+          "family"
+        ]
+      }
+    },
+    {
+      "round": 6,
+      "top_k": 10,
+      "equivalence_key": "1a3d38790bd83b3fedc8fbcf295ce5bff20f6aa2733e42f87b9d8e489a332205",
+      "cached": false,
+      "query_sha256": "759ddb24b70453f6f4cdbacf9e23b3ebfb13e73ae0b1a2e23472feea873b812d",
+      "query": "long running telenovela 2000s actor real life sister brother plays unrelated role",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"long\" OR \"running\" OR \"telenovela\" OR \"2000s\" OR \"actor\" OR \"real\" OR \"life\" OR \"sister\" OR \"brother\" OR \"plays\" OR \"unrelated\" OR \"role\"",
+        "terms": [
+          "long",
+          "running",
+          "telenovela",
+          "2000s",
+          "actor",
+          "real",
+          "life",
+          "sister",
+          "brother",
+          "plays",
+          "unrelated",
+          "role"
+        ]
+      }
+    },
+    {
+      "round": 6,
+      "top_k": 10,
+      "equivalence_key": "4e90d857c92b40f8a5d9936706c7b09ac58b43436a44769206625ac645c58d8c",
+      "cached": false,
+      "query_sha256": "a1282f0ed98f3ae85dec0906bd9999e75e50b60ab86656ccafc96ad296eebe0b",
+      "query": "Grey's Anatomy character married multiple times one child survives actor real life relative cast",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"grey\" OR \"s\" OR \"anatomy\" OR \"character\" OR \"married\" OR \"multiple\" OR \"times\" OR \"one\" OR \"child\" OR \"survives\" OR \"actor\" OR \"real\" OR \"life\" OR \"relative\" OR \"cast\"",
+        "terms": [
+          "grey",
+          "s",
+          "anatomy",
+          "character",
+          "married",
+          "multiple",
+          "times",
+          "one",
+          "child",
+          "survives",
+          "actor",
+          "real",
+          "life",
+          "relative",
+          "cast"
+        ]
+      }
+    },
+    {
+      "round": 6,
+      "top_k": 10,
+      "equivalence_key": "223b299d955c7526f2488c4b4c70c22ab7151ffc8ea8837914d926379fdfc281",
+      "cached": false,
+      "query_sha256": "6dbb49ab101053289549cf0a0a944b3fef0ebd38668108a84b9b6edffec27d4a",
+      "query": "Private Practice actor real life family member cast height 1.68",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"private\" OR \"practice\" OR \"actor\" OR \"real\" OR \"life\" OR \"family\" OR \"member\" OR \"cast\" OR \"height\" OR \"1\" OR \"68\"",
+        "terms": [
+          "private",
+          "practice",
+          "actor",
+          "real",
+          "life",
+          "family",
+          "member",
+          "cast",
+          "height",
+          "1",
+          "68"
+        ]
+      }
+    },
+    {
+      "round": 6,
+      "top_k": 10,
+      "equivalence_key": "af458880a2b766085ea6e8a712b209cd06943358fe355e72331654cc553eda6b",
+      "cached": false,
+      "query_sha256": "0ae335a593756fd37bce959900e598b80c05295538c01a30bb55a1ffe71b026d",
+      "query": "Shonda Rhimes show actor real life relative plays unrelated character married three times",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"shonda\" OR \"rhimes\" OR \"show\" OR \"actor\" OR \"real\" OR \"life\" OR \"relative\" OR \"plays\" OR \"unrelated\" OR \"character\" OR \"married\" OR \"three\" OR \"times\"",
+        "terms": [
+          "shonda",
+          "rhimes",
+          "show",
+          "actor",
+          "real",
+          "life",
+          "relative",
+          "plays",
+          "unrelated",
+          "character",
+          "married",
+          "three",
+          "times"
+        ]
+      }
+    },
+    {
+      "round": 7,
+      "top_k": 10,
+      "equivalence_key": "f418e477b3ff72e9b527ee6043ce1eef5531950cb6a6202b9370cf3d9d4b694f",
+      "cached": false,
+      "query_sha256": "479972c0ff8fd87a2c98cdaa9302f451d23ad85c8c6c1511b718e2437cc8c951",
+      "query": "El Senor de los Cielos character married multiple times one child survives actor real life relative cast",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"el\" OR \"senor\" OR \"de\" OR \"los\" OR \"cielos\" OR \"character\" OR \"married\" OR \"multiple\" OR \"times\" OR \"one\" OR \"child\" OR \"survives\" OR \"actor\" OR \"real\" OR \"life\" OR \"relative\" OR \"cast\"",
+        "terms": [
+          "el",
+          "senor",
+          "de",
+          "los",
+          "cielos",
+          "character",
+          "married",
+          "multiple",
+          "times",
+          "one",
+          "child",
+          "survives",
+          "actor",
+          "real",
+          "life",
+          "relative",
+          "cast"
+        ]
+      }
+    },
+    {
+      "round": 7,
+      "top_k": 10,
+      "equivalence_key": "032cf34a4dd561dc9d8c0fc8e0bf061cc8f431f676aa721e2aa289a8fdb86d7d",
+      "cached": false,
+      "query_sha256": "35dfd3fa1a932f05f1500d95fd00442c5bda4cc4888d3d19e573f3ce8eff5586",
+      "query": "telenovela actor real life daughter mother plays unrelated character height 1.68",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"telenovela\" OR \"actor\" OR \"real\" OR \"life\" OR \"daughter\" OR \"mother\" OR \"plays\" OR \"unrelated\" OR \"character\" OR \"height\" OR \"1\" OR \"68\"",
+        "terms": [
+          "telenovela",
+          "actor",
+          "real",
+          "life",
+          "daughter",
+          "mother",
+          "plays",
+          "unrelated",
+          "character",
+          "height",
+          "1",
+          "68"
+        ]
+      }
+    },
+    {
+      "round": 7,
+      "top_k": 10,
+      "equivalence_key": "5ffca5f635377f30595ea30d0aaab5f01d57688b94426d562a3b4f4bdc76a081",
+      "cached": false,
+      "query_sha256": "83fd6939aa4aff82878469781a3b1a3d0761e1b8e6f607deb939f72c295f83a0",
+      "query": "Rebelde actor real life sibling cast member married three times character",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"rebelde\" OR \"actor\" OR \"real\" OR \"life\" OR \"sibling\" OR \"cast\" OR \"member\" OR \"married\" OR \"three\" OR \"times\" OR \"character\"",
+        "terms": [
+          "rebelde",
+          "actor",
+          "real",
+          "life",
+          "sibling",
+          "cast",
+          "member",
+          "married",
+          "three",
+          "times",
+          "character"
+        ]
+      }
+    },
+    {
+      "round": 7,
+      "top_k": 10,
+      "equivalence_key": "eacc403526a4e09dbb1f0510b7910fdf376ff6a115faa619ff5d6ed935d3705b",
+      "cached": false,
+      "query_sha256": "87b3b4b55d75472ca5931ff00ba19caf857c6cdd422c321b09654bc42bfd50d7",
+      "query": "actor height 1.68 m telenovela real life family member cast",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"actor\" OR \"height\" OR \"1\" OR \"68\" OR \"m\" OR \"telenovela\" OR \"real\" OR \"life\" OR \"family\" OR \"member\" OR \"cast\"",
+        "terms": [
+          "actor",
+          "height",
+          "1",
+          "68",
+          "m",
+          "telenovela",
+          "real",
+          "life",
+          "family",
+          "member",
+          "cast"
+        ]
+      }
+    },
+    {
+      "round": 7,
+      "top_k": 10,
+      "equivalence_key": "b7ca44586c9f5995b83a8fc0cbc8b88538d58701e8cef2a27db88a97316a7e84",
+      "cached": false,
+      "query_sha256": "84e402c1bbc63048147b333f62fd359746874f1bb772cefacb5c7b5f14f048d3",
+      "query": "actriz altura 1.68 telenovela hija madre vida real elenco",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"actriz\" OR \"altura\" OR \"1\" OR \"68\" OR \"telenovela\" OR \"hija\" OR \"madre\" OR \"vida\" OR \"real\" OR \"elenco\"",
+        "terms": [
+          "actriz",
+          "altura",
+          "1",
+          "68",
+          "telenovela",
+          "hija",
+          "madre",
+          "vida",
+          "real",
+          "elenco"
+        ]
+      }
+    },
+    {
+      "round": 7,
+      "top_k": 10,
+      "equivalence_key": "522a86353bc142ef6422dcec8e81ff39787e53c70236368f6eed926e4298585c",
+      "cached": false,
+      "query_sha256": "c298244a086918ddfafea6df8e58f449ab7e70783684e96ce61fe9616c9850fc",
+      "query": "telenovela personaje casado tres veces un hijo sobrevive actriz",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"telenovela\" OR \"personaje\" OR \"casado\" OR \"tres\" OR \"veces\" OR \"un\" OR \"hijo\" OR \"sobrevive\" OR \"actriz\"",
+        "terms": [
+          "telenovela",
+          "personaje",
+          "casado",
+          "tres",
+          "veces",
+          "un",
+          "hijo",
+          "sobrevive",
+          "actriz"
+        ]
+      }
+    },
+    {
+      "round": 8,
+      "top_k": 10,
+      "equivalence_key": "6f131f398337ffe9ef82fa75b7d8089fe4025eda0bd6c2212ba84df62b95490e",
+      "cached": false,
+      "query_sha256": "99d5e3320463d6f7d20b72d04e5fbf13e46928079c42ce0b1a1a036b217d1551",
+      "query": "actriz hija madre vida real elenco serie personaje no emparentado",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"actriz\" OR \"hija\" OR \"madre\" OR \"vida\" OR \"real\" OR \"elenco\" OR \"serie\" OR \"personaje\" OR \"no\" OR \"emparentado\"",
+        "terms": [
+          "actriz",
+          "hija",
+          "madre",
+          "vida",
+          "real",
+          "elenco",
+          "serie",
+          "personaje",
+          "no",
+          "emparentado"
+        ]
+      }
+    },
+    {
+      "round": 8,
+      "top_k": 10,
+      "equivalence_key": "2717c88f54c079193bb05b9fcc7f2858d2a98ada306c57e9fbadb99fb44bc056",
+      "cached": false,
+      "query_sha256": "78e85966a1d2a21d222c371158e7b051843e7363bfd7eeef7ebad9d7bc4d8191",
+      "query": "actress real life mother daughter cast same series unrelated characters height 1.68",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"actress\" OR \"real\" OR \"life\" OR \"mother\" OR \"daughter\" OR \"cast\" OR \"same\" OR \"series\" OR \"unrelated\" OR \"characters\" OR \"height\" OR \"1\" OR \"68\"",
+        "terms": [
+          "actress",
+          "real",
+          "life",
+          "mother",
+          "daughter",
+          "cast",
+          "same",
+          "series",
+          "unrelated",
+          "characters",
+          "height",
+          "1",
+          "68"
+        ]
+      }
+    },
+    {
+      "round": 8,
+      "top_k": 10,
+      "equivalence_key": "d34bcd6584971a8475622c723d69842bc289605bb72f978813ea13f0e568cc2d",
+      "cached": false,
+      "query_sha256": "bbfc1cc91b07092d72f27b5213762c409ebea6a77c9e427ce430d71d25746370",
+      "query": "serie telemundo mas de 3 temporadas personaje casado cuatro veces un hijo",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"serie\" OR \"telemundo\" OR \"mas\" OR \"de\" OR \"3\" OR \"temporadas\" OR \"personaje\" OR \"casado\" OR \"cuatro\" OR \"veces\" OR \"un\" OR \"hijo\"",
+        "terms": [
+          "serie",
+          "telemundo",
+          "mas",
+          "de",
+          "3",
+          "temporadas",
+          "personaje",
+          "casado",
+          "cuatro",
+          "veces",
+          "un",
+          "hijo"
+        ]
+      }
+    },
+    {
+      "round": 8,
+      "top_k": 10,
+      "equivalence_key": "09fabd102c87faccde0fb96e207fa417ea89533ac465a994884e6950d6d56a76",
+      "cached": false,
+      "query_sha256": "65eec273e06a27eaf2adc70d1398195506fb206eb421766ed858205f0b9034af",
+      "query": "El Senor de los Cielos Aurelio Casillas marriages wives children",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"el\" OR \"senor\" OR \"de\" OR \"los\" OR \"cielos\" OR \"aurelio\" OR \"casillas\" OR \"marriages\" OR \"wives\" OR \"children\"",
+        "terms": [
+          "el",
+          "senor",
+          "de",
+          "los",
+          "cielos",
+          "aurelio",
+          "casillas",
+          "marriages",
+          "wives",
+          "children"
+        ]
+      }
+    },
+    {
+      "round": 8,
+      "top_k": 10,
+      "equivalence_key": "59ee8b700327c27d79f0b2197b21198e44d73fde3b2a07b43ac21f224b2e527b",
+      "cached": false,
+      "query_sha256": "ec0be9d8724ec0d1fd6e610ea135b1386fdfa222508320b4747ba425edfcec9f",
+      "query": "La Reina del Sur Teresa Mendoza marriages children cast real life relatives",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"la\" OR \"reina\" OR \"del\" OR \"sur\" OR \"teresa\" OR \"mendoza\" OR \"marriages\" OR \"children\" OR \"cast\" OR \"real\" OR \"life\" OR \"relatives\"",
+        "terms": [
+          "la",
+          "reina",
+          "del",
+          "sur",
+          "teresa",
+          "mendoza",
+          "marriages",
+          "children",
+          "cast",
+          "real",
+          "life",
+          "relatives"
+        ]
+      }
+    },
+    {
+      "round": 8,
+      "top_k": 10,
+      "equivalence_key": "e43948e17a1cde2e9a82662bc5dc55019d43cda013dde8aca70a33eb99a8cfed",
+      "cached": false,
+      "query_sha256": "17d82d87d4175b9ec19188d28791d25273ffefbe8a4a910b1cd2f691689d867c",
+      "query": "actriz altura 1.66 1.67 1.68 1.69 serie telemundo hija madre elenco",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"actriz\" OR \"altura\" OR \"1\" OR \"66\" OR \"67\" OR \"68\" OR \"69\" OR \"serie\" OR \"telemundo\" OR \"hija\" OR \"madre\" OR \"elenco\"",
+        "terms": [
+          "actriz",
+          "altura",
+          "1",
+          "66",
+          "67",
+          "68",
+          "69",
+          "serie",
+          "telemundo",
+          "hija",
+          "madre",
+          "elenco"
+        ]
+      }
+    },
+    {
+      "round": 9,
+      "top_k": 10,
+      "equivalence_key": "477a76c5242b51ef06308f95c08831c052ca6005efc083fbb07a15ce6db5e0e2",
+      "cached": false,
+      "query_sha256": "97ca3dbfb9541552a24c4bdffb1ce0a01146ccbfbce4673eb3268c8dc1d93fd4",
+      "query": "actriz hija de actriz elenco serie telemundo personaje casado varias veces",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"actriz\" OR \"hija\" OR \"de\" OR \"elenco\" OR \"serie\" OR \"telemundo\" OR \"personaje\" OR \"casado\" OR \"varias\" OR \"veces\"",
+        "terms": [
+          "actriz",
+          "hija",
+          "de",
+          "elenco",
+          "serie",
+          "telemundo",
+          "personaje",
+          "casado",
+          "varias",
+          "veces"
+        ]
+      }
+    },
+    {
+      "round": 9,
+      "top_k": 10,
+      "equivalence_key": "9f17b670281885b951ec2b3bf6b639479c1c483d1310ed7c0314af8200335653",
+      "cached": false,
+      "query_sha256": "6d132df7d4f14bdae093ba37655d5d98af30132cf6e3e46b7fe8fd55b3df8f3e",
+      "query": "Carmen Aub El Senor de los Cielos personaje esposo hijos",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"carmen\" OR \"aub\" OR \"el\" OR \"senor\" OR \"de\" OR \"los\" OR \"cielos\" OR \"personaje\" OR \"esposo\" OR \"hijos\"",
+        "terms": [
+          "carmen",
+          "aub",
+          "el",
+          "senor",
+          "de",
+          "los",
+          "cielos",
+          "personaje",
+          "esposo",
+          "hijos"
+        ]
+      }
+    },
+    {
+      "round": 9,
+      "top_k": 10,
+      "equivalence_key": "1b19b49e29fc6c8f52cd368b532bafb40a534116940bf2c4d9fd7b9331e83dbf",
+      "cached": false,
+      "query_sha256": "aa85a408a18601382394f8fef4e2a34d5c1f8d02b8108b7f84ffe15d996931d6",
+      "query": "Ximena Herrera Fernando Colunga altura estatura",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"ximena\" OR \"herrera\" OR \"fernando\" OR \"colunga\" OR \"altura\" OR \"estatura\"",
+        "terms": [
+          "ximena",
+          "herrera",
+          "fernando",
+          "colunga",
+          "altura",
+          "estatura"
+        ]
+      }
+    },
+    {
+      "round": 9,
+      "top_k": 10,
+      "equivalence_key": "d8162b8a202a98c8281435bc80568c24c3f7c62ebae63142c1dc1355d450763c",
+      "cached": false,
+      "query_sha256": "4ffe1a052b04d41c4cec8997ad9cee0ed88b24e18940358b09bf1979b3c63ddb",
+      "query": "actress height 1.66 1.67 1.68 meters telenovela married three times character one child",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"actress\" OR \"height\" OR \"1\" OR \"66\" OR \"67\" OR \"68\" OR \"meters\" OR \"telenovela\" OR \"married\" OR \"three\" OR \"times\" OR \"character\" OR \"one\" OR \"child\"",
+        "terms": [
+          "actress",
+          "height",
+          "1",
+          "66",
+          "67",
+          "68",
+          "meters",
+          "telenovela",
+          "married",
+          "three",
+          "times",
+          "character",
+          "one",
+          "child"
+        ]
+      }
+    },
+    {
+      "round": 9,
+      "top_k": 10,
+      "equivalence_key": "d246d0ea6f3f0a2074f8a5ad59d8cb7843e0d1dfa984e84bb909dfa4c546678c",
+      "cached": false,
+      "query_sha256": "0c483f2602bfbe1410ca5505ea526cf51324c8a645daeb8c8ec7f0e97890f279",
+      "query": "real life sister brother cast telenovela unrelated characters on screen",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"real\" OR \"life\" OR \"sister\" OR \"brother\" OR \"cast\" OR \"telenovela\" OR \"unrelated\" OR \"characters\" OR \"on\" OR \"screen\"",
+        "terms": [
+          "real",
+          "life",
+          "sister",
+          "brother",
+          "cast",
+          "telenovela",
+          "unrelated",
+          "characters",
+          "on",
+          "screen"
+        ]
+      }
+    },
+    {
+      "round": 9,
+      "top_k": 10,
+      "equivalence_key": "2fbf138daeee856ede3ff755d08f80bf8e4652b651a3a2026d0289e14fb18ed7",
+      "cached": false,
+      "query_sha256": "6f24e97f7419aceb243e209a1a0215e908f4f261c2e174f1ef2b8ab0957f9807",
+      "query": "hija madre vida real actriz serie mas 4 temporadas personaje cuatro matrimonios",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"hija\" OR \"madre\" OR \"vida\" OR \"real\" OR \"actriz\" OR \"serie\" OR \"mas\" OR \"4\" OR \"temporadas\" OR \"personaje\" OR \"cuatro\" OR \"matrimonios\"",
+        "terms": [
+          "hija",
+          "madre",
+          "vida",
+          "real",
+          "actriz",
+          "serie",
+          "mas",
+          "4",
+          "temporadas",
+          "personaje",
+          "cuatro",
+          "matrimonios"
+        ]
+      }
+    },
+    {
+      "round": 10,
+      "top_k": 10,
+      "equivalence_key": "be3047e207528b8967365228712802e40e83cd586102552a94849e5b234929b1",
+      "cached": false,
+      "query_sha256": "9607bb1bdd5ee80ad42ec9d2b31c041be2d74e34be29d1261c1ec219499932ce",
+      "query": "El Senor de los Cielos actriz hija madre vida real elenco",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"el\" OR \"senor\" OR \"de\" OR \"los\" OR \"cielos\" OR \"actriz\" OR \"hija\" OR \"madre\" OR \"vida\" OR \"real\" OR \"elenco\"",
+        "terms": [
+          "el",
+          "senor",
+          "de",
+          "los",
+          "cielos",
+          "actriz",
+          "hija",
+          "madre",
+          "vida",
+          "real",
+          "elenco"
+        ]
+      }
+    },
+    {
+      "round": 10,
+      "top_k": 10,
+      "equivalence_key": "ed2ca8c87823b22ecdd7e929ea5388388c9c533b64d39d66372985533174e679",
+      "cached": false,
+      "query_sha256": "21364eb508e708c4f21ab0d89a69fe18fa58aa411770b08775028ae25d793a1f",
+      "query": "Carmen Aub estatura altura metros",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"carmen\" OR \"aub\" OR \"estatura\" OR \"altura\" OR \"metros\"",
+        "terms": [
+          "carmen",
+          "aub",
+          "estatura",
+          "altura",
+          "metros"
+        ]
+      }
+    },
+    {
+      "round": 10,
+      "top_k": 10,
+      "equivalence_key": "f4cb142be02fdf4c49e9d9d8e1bf46a26a2fecf76dccefb0288159a264751fe7",
+      "cached": false,
+      "query_sha256": "1f28cf411c9207a4924a0f2062a1fce14485b6d826dca818862ba2f3fc3331c2",
+      "query": "Aurelio Casillas esposas hijos sobrevive",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"aurelio\" OR \"casillas\" OR \"esposas\" OR \"hijos\" OR \"sobrevive\"",
+        "terms": [
+          "aurelio",
+          "casillas",
+          "esposas",
+          "hijos",
+          "sobrevive"
+        ]
+      }
+    },
+    {
+      "round": 10,
+      "top_k": 10,
+      "equivalence_key": "3643460d1134e2c0ce9649dd6ad8e29babcdd2f5263af8f0387e5183adf903e2",
+      "cached": false,
+      "query_sha256": "33936f10c5063e7771c9a4fbd40c8f51ad3fa22d90f3fa7cd9020485572a14c6",
+      "query": "actriz hermana hermano vida real serie telemundo personajes no emparentados",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"actriz\" OR \"hermana\" OR \"hermano\" OR \"vida\" OR \"real\" OR \"serie\" OR \"telemundo\" OR \"personajes\" OR \"no\" OR \"emparentados\"",
+        "terms": [
+          "actriz",
+          "hermana",
+          "hermano",
+          "vida",
+          "real",
+          "serie",
+          "telemundo",
+          "personajes",
+          "no",
+          "emparentados"
+        ]
+      }
+    },
+    {
+      "round": 10,
+      "top_k": 10,
+      "equivalence_key": "7335b1b83e023cd2b06ad5595669687c7ce61388d3b2faa3be82c69e8c4a4fcf",
+      "cached": false,
+      "query_sha256": "0f148cbe0db7170861f78255a3614010eb1594494280df9c082756922c9889a3",
+      "query": "La Reina del Sur Kate del Castillo estatura altura",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"la\" OR \"reina\" OR \"del\" OR \"sur\" OR \"kate\" OR \"castillo\" OR \"estatura\" OR \"altura\"",
+        "terms": [
+          "la",
+          "reina",
+          "del",
+          "sur",
+          "kate",
+          "castillo",
+          "estatura",
+          "altura"
+        ]
+      }
+    },
+    {
+      "round": 10,
+      "top_k": 10,
+      "equivalence_key": "3208dfec61d66864c148e115c8ede65a8623356eba4888f1821eb8dfdadd4eb5",
+      "cached": false,
+      "query_sha256": "310971427549953541a464c9ff7b0ae18e8a7c59bb798acfd6172b7871398917",
+      "query": "personaje femenino casada cuatro veces un hijo sobrevive telenovela",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"personaje\" OR \"femenino\" OR \"casada\" OR \"cuatro\" OR \"veces\" OR \"un\" OR \"hijo\" OR \"sobrevive\" OR \"telenovela\"",
+        "terms": [
+          "personaje",
+          "femenino",
+          "casada",
+          "cuatro",
+          "veces",
+          "un",
+          "hijo",
+          "sobrevive",
+          "telenovela"
+        ]
+      }
+    },
+    {
+      "round": 11,
+      "top_k": 10,
+      "equivalence_key": "af49ccdd16f602c71d043a615ede5b095a6eb71def56b50b2147e7b35731be41",
+      "cached": false,
+      "query_sha256": "e1f3ccd868fb51b8d23604074bd0c088dc53e9c1a5299492fe2f09ef5262b48d",
+      "query": "actriz hija madre hermana vida real misma serie telemundo no relacionadas personajes",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"actriz\" OR \"hija\" OR \"madre\" OR \"hermana\" OR \"vida\" OR \"real\" OR \"misma\" OR \"serie\" OR \"telemundo\" OR \"no\" OR \"relacionadas\" OR \"personajes\"",
+        "terms": [
+          "actriz",
+          "hija",
+          "madre",
+          "hermana",
+          "vida",
+          "real",
+          "misma",
+          "serie",
+          "telemundo",
+          "no",
+          "relacionadas",
+          "personajes"
+        ]
+      }
+    },
+    {
+      "round": 11,
+      "top_k": 10,
+      "equivalence_key": "204a5d0da05460721d50c9c044feb375022937372ca75a06995964439e7f0dd7",
+      "cached": false,
+      "query_sha256": "d53c07b081e815753c344044462a049e14400f9bedf51ae3a679c5203f9cdbcc",
+      "query": "El Senor de los Cielos Carmen Aub Vanessa Villegas estatura",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"el\" OR \"senor\" OR \"de\" OR \"los\" OR \"cielos\" OR \"carmen\" OR \"aub\" OR \"vanessa\" OR \"villegas\" OR \"estatura\"",
+        "terms": [
+          "el",
+          "senor",
+          "de",
+          "los",
+          "cielos",
+          "carmen",
+          "aub",
+          "vanessa",
+          "villegas",
+          "estatura"
+        ]
+      }
+    },
+    {
+      "round": 11,
+      "top_k": 10,
+      "equivalence_key": "ac06fc7b39bae16d43a43505cc28e8054cb505829e59ef2fca6f32460a7737cd",
+      "cached": false,
+      "query_sha256": "2d7c9dfff222b7dd10814e44563defc94fa00d898a251d71a579f53e04af0085",
+      "query": "Aurelio Casillas esposas matrimonios hijos muertos",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"aurelio\" OR \"casillas\" OR \"esposas\" OR \"matrimonios\" OR \"hijos\" OR \"muertos\"",
+        "terms": [
+          "aurelio",
+          "casillas",
+          "esposas",
+          "matrimonios",
+          "hijos",
+          "muertos"
+        ]
+      }
+    },
+    {
+      "round": 11,
+      "top_k": 10,
+      "equivalence_key": "9f291b60d7b92da7e54e1133135e7226281e8bbd110dc6c223c0ed76b0d1daee",
+      "cached": false,
+      "query_sha256": "edab32d4956b75cc77b616e6bfa7196cbe2bec4518b694be378c546002337cee",
+      "query": "La Reina del Sur Kate del Castillo estatura altura hija Sofia",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"la\" OR \"reina\" OR \"del\" OR \"sur\" OR \"kate\" OR \"castillo\" OR \"estatura\" OR \"altura\" OR \"hija\" OR \"sofia\"",
+        "terms": [
+          "la",
+          "reina",
+          "del",
+          "sur",
+          "kate",
+          "castillo",
+          "estatura",
+          "altura",
+          "hija",
+          "sofia"
+        ]
+      }
+    },
+    {
+      "round": 11,
+      "top_k": 10,
+      "equivalence_key": "3b3c0ad99039a0d191ea77944bcb564ebbb03a994fe7dac89ab6efae8012e22d",
+      "cached": false,
+      "query_sha256": "739a2b7cec3d74df041073acf5fb8a23817d1bd00b6ded25a8a6fc6dae3ef554",
+      "query": "Mirtha Ilich actriz hija vida real serie",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"mirtha\" OR \"ilich\" OR \"actriz\" OR \"hija\" OR \"vida\" OR \"real\" OR \"serie\"",
+        "terms": [
+          "mirtha",
+          "ilich",
+          "actriz",
+          "hija",
+          "vida",
+          "real",
+          "serie"
+        ]
+      }
+    },
+    {
+      "round": 11,
+      "top_k": 10,
+      "equivalence_key": "6a5dd9f74e8bdfbc09eeacd4de98c346b674b43daf634d037d9fd2e97ecbf3f0",
+      "cached": false,
+      "query_sha256": "642d17fd6bd7f76577e7d0b271eebdcafa138b5142a2dd6e0ac7fc5857c1b622",
+      "query": "Teresa Mendoza esposos matrimonios hija",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"teresa\" OR \"mendoza\" OR \"esposos\" OR \"matrimonios\" OR \"hija\"",
+        "terms": [
+          "teresa",
+          "mendoza",
+          "esposos",
+          "matrimonios",
+          "hija"
+        ]
+      }
+    },
+    {
+      "round": 12,
+      "top_k": 10,
+      "equivalence_key": "9dab90441245210c67a4b180c3dec1324861a1ae1591ee3e64bfec7b0a9ec897",
+      "cached": false,
+      "query_sha256": "be40a267728aba3fa169ed6c7db3667e7109020a8e3adbd489860de6b0bc7f68",
+      "query": "El Senor de los Cielos Carmen Aub estatura altura metros",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"el\" OR \"senor\" OR \"de\" OR \"los\" OR \"cielos\" OR \"carmen\" OR \"aub\" OR \"estatura\" OR \"altura\" OR \"metros\"",
+        "terms": [
+          "el",
+          "senor",
+          "de",
+          "los",
+          "cielos",
+          "carmen",
+          "aub",
+          "estatura",
+          "altura",
+          "metros"
+        ]
+      }
+    },
+    {
+      "round": 12,
+      "top_k": 10,
+      "equivalence_key": "562fc2262498087b655cea7a561b5e8b3558c18ac4de483d6e6290056d518ef9",
+      "cached": false,
+      "query_sha256": "b6e1b69c082e4f639d0de8541b6c1f198de7b20d4f2b0820bb2838f20a1261b3",
+      "query": "Carmen Aub Fernando Colunga pareja vida real serie",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"carmen\" OR \"aub\" OR \"fernando\" OR \"colunga\" OR \"pareja\" OR \"vida\" OR \"real\" OR \"serie\"",
+        "terms": [
+          "carmen",
+          "aub",
+          "fernando",
+          "colunga",
+          "pareja",
+          "vida",
+          "real",
+          "serie"
+        ]
+      }
+    },
+    {
+      "round": 12,
+      "top_k": 10,
+      "equivalence_key": "c87418bee82a84fb80f298c912e05237c90701e0bf3f5ff8dde57355c6a72f53",
+      "cached": false,
+      "query_sha256": "3ea90f69bd808375116ab46481ae27d432274b23506469f2a8bda24e842fc026",
+      "query": "El Senor de los Cielos actriz hija madre hermana misma serie",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"el\" OR \"senor\" OR \"de\" OR \"los\" OR \"cielos\" OR \"actriz\" OR \"hija\" OR \"madre\" OR \"hermana\" OR \"misma\" OR \"serie\"",
+        "terms": [
+          "el",
+          "senor",
+          "de",
+          "los",
+          "cielos",
+          "actriz",
+          "hija",
+          "madre",
+          "hermana",
+          "misma",
+          "serie"
+        ]
+      }
+    },
+    {
+      "round": 12,
+      "top_k": 10,
+      "equivalence_key": "9730ff377a12710046962209f2ade48b37a690c371ba1bc4aad291d610d77875",
+      "cached": false,
+      "query_sha256": "99ad90135e04d682fe39b4531b2ef229ec427297f06c73f636587ef73c0b6f73",
+      "query": "La Reina del Sur Kate del Castillo estatura altura 1.65",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"la\" OR \"reina\" OR \"del\" OR \"sur\" OR \"kate\" OR \"castillo\" OR \"estatura\" OR \"altura\" OR \"1\" OR \"65\"",
+        "terms": [
+          "la",
+          "reina",
+          "del",
+          "sur",
+          "kate",
+          "castillo",
+          "estatura",
+          "altura",
+          "1",
+          "65"
+        ]
+      }
+    },
+    {
+      "round": 12,
+      "top_k": 10,
+      "equivalence_key": "5075359c2897a354c374e3af10085fe40565769464862834bf3bea3259fe1f46",
+      "cached": false,
+      "query_sha256": "a8d74f572c441811bee2d5779858582a4cad85ae08cbe8d303c4eeb3c5fdadb0",
+      "query": "Kate del Castillo hija Sofia padre esposo serie",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"kate\" OR \"del\" OR \"castillo\" OR \"hija\" OR \"sofia\" OR \"padre\" OR \"esposo\" OR \"serie\"",
+        "terms": [
+          "kate",
+          "del",
+          "castillo",
+          "hija",
+          "sofia",
+          "padre",
+          "esposo",
+          "serie"
+        ]
+      }
+    },
+    {
+      "round": 12,
+      "top_k": 10,
+      "equivalence_key": "66a032c8e61c541818d8f1abbff516ea5970eb6b25a481abf248a0563ba046f6",
+      "cached": false,
+      "query_sha256": "2b85299b0eaa8d8527ebea2ea729f152afe9d7d7dfaba8ddf940a421c6b23831",
+      "query": "La Reina del Sur actriz madre hermana vida real misma serie",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"la\" OR \"reina\" OR \"del\" OR \"sur\" OR \"actriz\" OR \"madre\" OR \"hermana\" OR \"vida\" OR \"real\" OR \"misma\" OR \"serie\"",
+        "terms": [
+          "la",
+          "reina",
+          "del",
+          "sur",
+          "actriz",
+          "madre",
+          "hermana",
+          "vida",
+          "real",
+          "misma",
+          "serie"
+        ]
+      }
+    },
+    {
+      "round": 13,
+      "top_k": 10,
+      "equivalence_key": "dbf585a30e69bfd1680f57fc7aea4c37d57f825eb1eba56e718979ab1c0229da",
+      "cached": false,
+      "query_sha256": "9494a7687d4e1245c671b688e361c68d791332797cd54c4d0ce6aaa02a1a8404",
+      "query": "El Senor de los Cielos seasons number 8 Aurelio Casillas wives children",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"el\" OR \"senor\" OR \"de\" OR \"los\" OR \"cielos\" OR \"seasons\" OR \"number\" OR \"8\" OR \"aurelio\" OR \"casillas\" OR \"wives\" OR \"children\"",
+        "terms": [
+          "el",
+          "senor",
+          "de",
+          "los",
+          "cielos",
+          "seasons",
+          "number",
+          "8",
+          "aurelio",
+          "casillas",
+          "wives",
+          "children"
+        ]
+      }
+    },
+    {
+      "round": 13,
+      "top_k": 10,
+      "equivalence_key": "ab3fcab5e18f31777443115267eda781f00ba1e3916613ab6fde9cb8502221d2",
+      "cached": false,
+      "query_sha256": "679e7f62bd24fa613f29731d3259927c24e5af5cfeb07334848f5185b7e825a5",
+      "query": "El Senor de los Cielos cast real life relatives mother daughter same show",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"el\" OR \"senor\" OR \"de\" OR \"los\" OR \"cielos\" OR \"cast\" OR \"real\" OR \"life\" OR \"relatives\" OR \"mother\" OR \"daughter\" OR \"same\" OR \"show\"",
+        "terms": [
+          "el",
+          "senor",
+          "de",
+          "los",
+          "cielos",
+          "cast",
+          "real",
+          "life",
+          "relatives",
+          "mother",
+          "daughter",
+          "same",
+          "show"
+        ]
+      }
+    },
+    {
+      "round": 13,
+      "top_k": 10,
+      "equivalence_key": "bb84073830c0195359035bfb51a1658b4bf06211ccef171b68c77fc0d8043031",
+      "cached": false,
+      "query_sha256": "3968d28e6fae472dde95c1692f771fc4648d4b1a25b988a6d7364e0dc896c5e0",
+      "query": "El Senor de los Cielos Rutila Casillas actress height married",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"el\" OR \"senor\" OR \"de\" OR \"los\" OR \"cielos\" OR \"rutila\" OR \"casillas\" OR \"actress\" OR \"height\" OR \"married\"",
+        "terms": [
+          "el",
+          "senor",
+          "de",
+          "los",
+          "cielos",
+          "rutila",
+          "casillas",
+          "actress",
+          "height",
+          "married"
+        ]
+      }
+    },
+    {
+      "round": 13,
+      "top_k": 10,
+      "equivalence_key": "1c2c815c3e5e380d37d821570981ceef758821f3c1dc3aa7fe22ec270c1fe44c",
+      "cached": false,
+      "query_sha256": "5bbc21b2f189eb696b2504be2adec7fa1801c4d92a1524f43d8114aef6c614c5",
+      "query": "telenovela actress plays with real life mother daughter sister same series unrelated characters",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"telenovela\" OR \"actress\" OR \"plays\" OR \"with\" OR \"real\" OR \"life\" OR \"mother\" OR \"daughter\" OR \"sister\" OR \"same\" OR \"series\" OR \"unrelated\" OR \"characters\"",
+        "terms": [
+          "telenovela",
+          "actress",
+          "plays",
+          "with",
+          "real",
+          "life",
+          "mother",
+          "daughter",
+          "sister",
+          "same",
+          "series",
+          "unrelated",
+          "characters"
+        ]
+      }
+    },
+    {
+      "round": 13,
+      "top_k": 10,
+      "equivalence_key": "76291c6a588112cad975852705cb284226327d7b1a2f61771faeacc5969a3fc4",
+      "cached": false,
+      "query_sha256": "fd083f2a3bd6657362fd32b973fe57a5a9e53ee137f04e1aebdbdf8b60516ef7",
+      "query": "actress real life relative same telenovela different character married three times",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"actress\" OR \"real\" OR \"life\" OR \"relative\" OR \"same\" OR \"telenovela\" OR \"different\" OR \"character\" OR \"married\" OR \"three\" OR \"times\"",
+        "terms": [
+          "actress",
+          "real",
+          "life",
+          "relative",
+          "same",
+          "telenovela",
+          "different",
+          "character",
+          "married",
+          "three",
+          "times"
+        ]
+      }
+    },
+    {
+      "round": 13,
+      "top_k": 10,
+      "equivalence_key": "958df3cf1e24edb8a47513c611526cd89386f9c920e82716446eef5fd2e60316",
+      "cached": false,
+      "query_sha256": "ab494a5adfe09abaa7dae6e4c554a3ba1b965f58339d8267a5b878cae90dacb0",
+      "query": "Telemundo series actress height 1.66 1.67 1.68 character married multiple times one child survives",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"telemundo\" OR \"series\" OR \"actress\" OR \"height\" OR \"1\" OR \"66\" OR \"67\" OR \"68\" OR \"character\" OR \"married\" OR \"multiple\" OR \"times\" OR \"one\" OR \"child\" OR \"survives\"",
+        "terms": [
+          "telemundo",
+          "series",
+          "actress",
+          "height",
+          "1",
+          "66",
+          "67",
+          "68",
+          "character",
+          "married",
+          "multiple",
+          "times",
+          "one",
+          "child",
+          "survives"
+        ]
+      }
+    },
+    {
+      "round": 14,
+      "top_k": 10,
+      "equivalence_key": "18aba78796abc7c7fb1a3f3c1d93676382f90f9cdb33b7040cec41382991107c",
+      "cached": false,
+      "query_sha256": "b38793446019b90ebaf7f5f3f0ad39e2dabaf61403e5c8f10ba542acdb1acf86",
+      "query": "El Senor de los Cielos Wikipedia cast characters seasons",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"el\" OR \"senor\" OR \"de\" OR \"los\" OR \"cielos\" OR \"wikipedia\" OR \"cast\" OR \"characters\" OR \"seasons\"",
+        "terms": [
+          "el",
+          "senor",
+          "de",
+          "los",
+          "cielos",
+          "wikipedia",
+          "cast",
+          "characters",
+          "seasons"
+        ]
+      }
+    },
+    {
+      "round": 14,
+      "top_k": 10,
+      "equivalence_key": "3137c239b62e9a7433104f83a62da365f78d851ba3bf1138fa11fc395e6aa9d3",
+      "cached": false,
+      "query_sha256": "a50329e01c9af9798ccb769b7a4bc8e76a80556710e3f908c37f497283036d88",
+      "query": "El Senor de los Cielos Aurelio Casillas wives married children died",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"el\" OR \"senor\" OR \"de\" OR \"los\" OR \"cielos\" OR \"aurelio\" OR \"casillas\" OR \"wives\" OR \"married\" OR \"children\" OR \"died\"",
+        "terms": [
+          "el",
+          "senor",
+          "de",
+          "los",
+          "cielos",
+          "aurelio",
+          "casillas",
+          "wives",
+          "married",
+          "children",
+          "died"
+        ]
+      }
+    },
+    {
+      "round": 14,
+      "top_k": 10,
+      "equivalence_key": "91d4dbd2a6292bcf49c306e9cfa77beebeee9fc35588c564d28474e08fc4badf",
+      "cached": false,
+      "query_sha256": "1e55e2b5298f4dc35e3a3df7253f2410792329b9f889868c3cca488a828fa384",
+      "query": "El Senor de los Cielos actress real life daughter mother sister cast",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"el\" OR \"senor\" OR \"de\" OR \"los\" OR \"cielos\" OR \"actress\" OR \"real\" OR \"life\" OR \"daughter\" OR \"mother\" OR \"sister\" OR \"cast\"",
+        "terms": [
+          "el",
+          "senor",
+          "de",
+          "los",
+          "cielos",
+          "actress",
+          "real",
+          "life",
+          "daughter",
+          "mother",
+          "sister",
+          "cast"
+        ]
+      }
+    },
+    {
+      "round": 14,
+      "top_k": 10,
+      "equivalence_key": "437605594858eb457510b6f5d2099acf3de5a9404ebfc4c90f4beb02a5f184e0",
+      "cached": false,
+      "query_sha256": "22fc7ebe00f84e0725d009f9a8ca6eea71beb89eeb054c7746c70002af6a3ed3",
+      "query": "Cara e Cruz telenovela actress real life relative same show",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"cara\" OR \"e\" OR \"cruz\" OR \"telenovela\" OR \"actress\" OR \"real\" OR \"life\" OR \"relative\" OR \"same\" OR \"show\"",
+        "terms": [
+          "cara",
+          "e",
+          "cruz",
+          "telenovela",
+          "actress",
+          "real",
+          "life",
+          "relative",
+          "same",
+          "show"
+        ]
+      }
+    },
+    {
+      "round": 14,
+      "top_k": 10,
+      "equivalence_key": "f90fd0210788bf8c3d4a23445c2b74e0f13d8050d363c5da0189aa6e94ad70a2",
+      "cached": false,
+      "query_sha256": "87c3d7d9e5486468924d7f9e8c3668059cdc654a32f6f720ded6c929c6eab6b0",
+      "query": "actress height 1.66 1.67 1.68 character married three four times one child survives telenovela",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"actress\" OR \"height\" OR \"1\" OR \"66\" OR \"67\" OR \"68\" OR \"character\" OR \"married\" OR \"three\" OR \"four\" OR \"times\" OR \"one\" OR \"child\" OR \"survives\" OR \"telenovela\"",
+        "terms": [
+          "actress",
+          "height",
+          "1",
+          "66",
+          "67",
+          "68",
+          "character",
+          "married",
+          "three",
+          "four",
+          "times",
+          "one",
+          "child",
+          "survives",
+          "telenovela"
+        ]
+      }
+    },
+    {
+      "round": 14,
+      "top_k": 10,
+      "equivalence_key": "03240960badb33cfcfad0c5ca235ad373d029144e63e5c88262f3ed29f0a6e92",
+      "cached": false,
+      "query_sha256": "8571ac5c111a1c0eab05455870ac2cca06a828e0fdef7a0a47562efa4e197740",
+      "query": "Telemundo telenovela actress plays alongside real life mother daughter unrelated characters",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"telemundo\" OR \"telenovela\" OR \"actress\" OR \"plays\" OR \"alongside\" OR \"real\" OR \"life\" OR \"mother\" OR \"daughter\" OR \"unrelated\" OR \"characters\"",
+        "terms": [
+          "telemundo",
+          "telenovela",
+          "actress",
+          "plays",
+          "alongside",
+          "real",
+          "life",
+          "mother",
+          "daughter",
+          "unrelated",
+          "characters"
+        ]
+      }
+    },
+    {
+      "round": 15,
+      "top_k": 10,
+      "equivalence_key": "561609b9f6d1266e321c05997ad4538ed11d37884ce60b659c156a406e077326",
+      "cached": false,
+      "query_sha256": "4d889b717a391953db4efd4f592914c1cf4cc7f0f962ed7be3dc7fba8401b62f",
+      "query": "La Reina del Sur cast Teresa Mendoza daughter Sofia Dumas actress",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"la\" OR \"reina\" OR \"del\" OR \"sur\" OR \"cast\" OR \"teresa\" OR \"mendoza\" OR \"daughter\" OR \"sofia\" OR \"dumas\" OR \"actress\"",
+        "terms": [
+          "la",
+          "reina",
+          "del",
+          "sur",
+          "cast",
+          "teresa",
+          "mendoza",
+          "daughter",
+          "sofia",
+          "dumas",
+          "actress"
+        ]
+      }
+    },
+    {
+      "round": 15,
+      "top_k": 10,
+      "equivalence_key": "54461f9802f3f58ae66494b8072669c028a09f7010a0a3a696d909a784ba6456",
+      "cached": false,
+      "query_sha256": "f427e6dc93643da6953a32a833f3311e7a79eabc7a07253b8f84148774aa4be2",
+      "query": "La Reina del Sur Season 3 cast real life relatives family members",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"la\" OR \"reina\" OR \"del\" OR \"sur\" OR \"season\" OR \"3\" OR \"cast\" OR \"real\" OR \"life\" OR \"relatives\" OR \"family\" OR \"members\"",
+        "terms": [
+          "la",
+          "reina",
+          "del",
+          "sur",
+          "season",
+          "3",
+          "cast",
+          "real",
+          "life",
+          "relatives",
+          "family",
+          "members"
+        ]
+      }
+    },
+    {
+      "round": 15,
+      "top_k": 10,
+      "equivalence_key": "25a37c5fd84d77e0df6279d39fccd85ff3b5994733312e692de473de217b062c",
+      "cached": false,
+      "query_sha256": "433d06a2776d90b334396022e0d09ce326394e923d3e222e71581507d364564e",
+      "query": "Kate del Castillo La Reina del Sur height daughter actress",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"kate\" OR \"del\" OR \"castillo\" OR \"la\" OR \"reina\" OR \"sur\" OR \"height\" OR \"daughter\" OR \"actress\"",
+        "terms": [
+          "kate",
+          "del",
+          "castillo",
+          "la",
+          "reina",
+          "sur",
+          "height",
+          "daughter",
+          "actress"
+        ]
+      }
+    },
+    {
+      "round": 15,
+      "top_k": 10,
+      "equivalence_key": "c5b40c3732568b02e4d93550de89b5c0161d7498af927d59ebf620ac46f2f523",
+      "cached": false,
+      "query_sha256": "0f91f68b395c288a4bbafc8f8620e7155022bfbf2ca34b2c07fa6124d86fb24e",
+      "query": "telenovela actress plays alongside real life daughter or son unrelated characters series",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"telenovela\" OR \"actress\" OR \"plays\" OR \"alongside\" OR \"real\" OR \"life\" OR \"daughter\" OR \"or\" OR \"son\" OR \"unrelated\" OR \"characters\" OR \"series\"",
+        "terms": [
+          "telenovela",
+          "actress",
+          "plays",
+          "alongside",
+          "real",
+          "life",
+          "daughter",
+          "or",
+          "son",
+          "unrelated",
+          "characters",
+          "series"
+        ]
+      }
+    },
+    {
+      "round": 15,
+      "top_k": 10,
+      "equivalence_key": "81b87f55699d283218f92f6b21a97fa92a6930d929d44161755e0c2f7d766f75",
+      "cached": false,
+      "query_sha256": "598dc48edd9fb8fc45cd674b70d9ba8507cbd39c183ee29fb8276c888a6989d2",
+      "query": "actress character married three or four times only one child survives telenovela",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"actress\" OR \"character\" OR \"married\" OR \"three\" OR \"or\" OR \"four\" OR \"times\" OR \"only\" OR \"one\" OR \"child\" OR \"survives\" OR \"telenovela\"",
+        "terms": [
+          "actress",
+          "character",
+          "married",
+          "three",
+          "or",
+          "four",
+          "times",
+          "only",
+          "one",
+          "child",
+          "survives",
+          "telenovela"
+        ]
+      }
+    },
+    {
+      "round": 15,
+      "top_k": 10,
+      "equivalence_key": "df68d0a952212e60f0b0b147b64783924f995e72b4eb3ff09a116e7865c50ce5",
+      "cached": false,
+      "query_sha256": "b3850559192bab660a50dd7ab2c0bb28c0556b7766209b336b1023c42e8d548c",
+      "query": "Telemundo series actress real life relative co-star not related character",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"telemundo\" OR \"series\" OR \"actress\" OR \"real\" OR \"life\" OR \"relative\" OR \"co\" OR \"star\" OR \"not\" OR \"related\" OR \"character\"",
+        "terms": [
+          "telemundo",
+          "series",
+          "actress",
+          "real",
+          "life",
+          "relative",
+          "co",
+          "star",
+          "not",
+          "related",
+          "character"
+        ]
+      }
+    }
+  ],
+  "equivalent_query_repeats": 0,
+  "views": [
+    {
+      "round": 1,
+      "compacted": false,
+      "visible_evidence": [],
+      "shelf": [],
+      "shelf_evicted": []
+    },
+    {
+      "round": 2,
+      "compacted": false,
+      "visible_evidence": [],
+      "shelf": [],
+      "shelf_evicted": []
+    },
+    {
+      "round": 3,
+      "compacted": false,
+      "visible_evidence": [],
+      "shelf": [],
+      "shelf_evicted": []
+    },
+    {
+      "round": 4,
+      "compacted": true,
+      "visible_evidence": [],
+      "shelf": [],
+      "shelf_evicted": []
+    },
+    {
+      "round": 5,
+      "compacted": true,
+      "visible_evidence": [],
+      "shelf": [],
+      "shelf_evicted": []
+    },
+    {
+      "round": 6,
+      "compacted": true,
+      "visible_evidence": [],
+      "shelf": [],
+      "shelf_evicted": []
+    },
+    {
+      "round": 7,
+      "compacted": true,
+      "visible_evidence": [],
+      "shelf": [],
+      "shelf_evicted": []
+    },
+    {
+      "round": 8,
+      "compacted": true,
+      "visible_evidence": [],
+      "shelf": [],
+      "shelf_evicted": []
+    },
+    {
+      "round": 9,
+      "compacted": true,
+      "visible_evidence": [],
+      "shelf": [],
+      "shelf_evicted": []
+    },
+    {
+      "round": 10,
+      "compacted": true,
+      "visible_evidence": [],
+      "shelf": [],
+      "shelf_evicted": []
+    },
+    {
+      "round": 11,
+      "compacted": true,
+      "visible_evidence": [],
+      "shelf": [],
+      "shelf_evicted": []
+    },
+    {
+      "round": 12,
+      "compacted": true,
+      "visible_evidence": [],
+      "shelf": [],
+      "shelf_evicted": []
+    },
+    {
+      "round": 13,
+      "compacted": true,
+      "visible_evidence": [],
+      "shelf": [],
+      "shelf_evicted": []
+    },
+    {
+      "round": 14,
+      "compacted": true,
+      "visible_evidence": [],
+      "shelf": [],
+      "shelf_evicted": []
+    },
+    {
+      "round": 15,
+      "compacted": true,
+      "visible_evidence": [],
+      "shelf": [],
+      "shelf_evicted": []
+    },
+    {
+      "round": 16,
+      "compacted": false,
+      "visible_evidence": [],
+      "shelf": [],
+      "shelf_evicted": []
+    }
+  ],
+  "delivered_refs": [],
+  "submitted_refs": [],
+  "text_included": true,
+  "limitations": [
+    "Equivalence is compiler equality, not semantic identity or wasted-search proof",
+    "Raw-window visibility/selection is not entailment or complete evidence coverage",
+    "No live q26 replay or independent answer scoring is performed"
+  ]
+}

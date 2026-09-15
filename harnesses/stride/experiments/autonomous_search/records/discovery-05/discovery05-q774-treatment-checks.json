@@ -1,0 +1,89 @@
+{
+  "all_checks_passed": true,
+  "chain": {
+    "event_count": 211,
+    "head": "9665d1bc511c491a2ca8f47a3d59b8b9705d418ae1f4a2808352b5a363894d69"
+  },
+  "http": [
+    {
+      "round": 1,
+      "status": 200
+    },
+    {
+      "round": 2,
+      "status": 200
+    },
+    {
+      "round": 3,
+      "status": 200
+    },
+    {
+      "round": 4,
+      "status": 200
+    }
+  ],
+  "r1_byte_identical": true,
+  "reset": {
+    "changes": [
+      {
+        "original_message_sha256": "326bbb4d6dd6989707cfb0dbad246858ea0a69dba8e735873f0e8c8939cd4954",
+        "projected_message_sha256": "14ada3ac4adf30cf06a2f030c2facd924e94a2251aefd93267c48a31074734bc",
+        "removed_content_chars": 468,
+        "removed_content_sha256": "a5d063f1a41a98e70eb1d8201b8b3a10ffbf567a732795591073e861c15bd165",
+        "removed_content_utf8_bytes": 468,
+        "removed_native_text": [],
+        "source_round": 3,
+        "tool_call_ids": [
+          "call_440e14a1622a46f8b1b38b4c",
+          "call_a6bd577401534da5bf37b6cf"
+        ]
+      }
+    ],
+    "identity": {
+      "kind": "one_request_visible_assistant_prose_omission_not_independent_planner",
+      "rule": {
+        "anthropic": "remove_text_blocks_only_from_projection_copy",
+        "commit": "after_request_archive_before_send_attempt",
+        "consecutive_search_rounds": 3,
+        "duration": "one_actual_request_then_original_history",
+        "eligibility": "retained_complete_group_with_nonempty_tool_calls",
+        "extra_model_calls": 0,
+        "extra_prompt": false,
+        "final": "never_trigger",
+        "max_triggers": 1,
+        "minimum_remaining_model_calls": 3,
+        "observation": "successful_search_receipt_executed_and_ok_without_new_delivered_source_passage",
+        "preserve": [
+          "tools",
+          "arguments",
+          "receipts",
+          "evidence",
+          "notes",
+          "repair",
+          "provider_reasoning"
+        ],
+        "preserve_first_latest": false,
+        "replacement": "assistant.content=null",
+        "version": "once-prose-reset-v1"
+      },
+      "rule_sha256": "b86cd368d5d3ef8942c0d7aa03cf2d92a9192023c0496aff6b1ed0f75043f621",
+      "version": "once-prose-reset-v1"
+    },
+    "observation": "no new source passage",
+    "retained_group_rounds": [
+      3
+    ],
+    "round": 4,
+    "source_rounds": [
+      1,
+      2,
+      3
+    ],
+    "trigger_number": 1,
+    "wire_sha256": "6731178ae387ba1efde981d5dc69a0794efea7a7d78d410623cad56b22d84157"
+  },
+  "r4_retained_history_projection_matches_wire": true,
+  "restoration_not_observable": "no R5 request",
+  "documents_registered": 120,
+  "raw_evidence": 0
+}
