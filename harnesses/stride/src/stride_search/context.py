@@ -102,6 +102,12 @@ def build(harness, model, counter, *, final: bool, output_limit: int, groups=Non
             from .read_only import project
             read_state, tools, read_audit = project(harness, history, visible, issued,
                 workflow_view if workflow_view is not None else documents, tools, effective_final)
+            if read_audit is not None and harness.decision_protocol == "read-only-explicit-v1":
+                from .read_only import EXPLICIT_INSTRUCTION, explicit_identity
+                from .contract import text_hash
+                messages[0] = {**messages[0], "content": messages[0]["content"] + EXPLICIT_INSTRUCTION}
+                read_audit = {**read_audit, "identity": explicit_identity(),
+                    "system_sha256": text_hash(messages[0]["content"])}
         wire = model.prepare(messages, tools, output_limit)
         size = counter(wire)
         if type(size) is not int or size < 0:

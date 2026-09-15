@@ -29,7 +29,7 @@ class Harness:
         self.search_pivot = SearchPivotState() if decision_protocol == "search-pivot-v1" else None
         self.once_prose = OnceProseState() if decision_protocol == "once-prose-reset-v1" else None
         self.relation_review = RelationReviewState() if decision_protocol in {"relation-review-once-v1", "relation-review-memory-v1"} else None
-        self.read_only = OnceProseState() if decision_protocol == "read-only-once-v1" else None
+        self.read_only = OnceProseState() if decision_protocol in {"read-only-once-v1", "read-only-explicit-v1"} else None
         self.review_memory = None
         self.workflow = WorkflowState(workflow or WorkflowConfig())
         if answer_contract not in ANSWER_CONTRACTS:

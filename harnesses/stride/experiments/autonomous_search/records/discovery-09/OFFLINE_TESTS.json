@@ -1,0 +1,20 @@
+{
+  "command": "python -m pytest harnesses/stride/tests harnesses/stride/examples -q (unique private basetemp; XML/log archived locally)",
+  "name": "pytest",
+  "errors": "0",
+  "failures": "0",
+  "skipped": "0",
+  "tests": "511",
+  "time": "190.921",
+  "timestamp": "2026-09-15T21:29:24.742616+08:00",
+  "hostname": "VPC0-HZ20428504",
+  "xml_sha256": "39b7a044e102584680d138795c2633cbeca2538587d69cccae01774ec9b2603b",
+  "log_sha256": "67216880062d4bcccf8b354f118f37a2e3c666223e96d18daa9de39086be0d55",
+  "new_glm_requests": 0,
+  "loopback_proxy_bypass": true,
+  "focused_regression": {
+    "tests_passed": 103,
+    "seconds": 78.38
+  },
+  "independent_review": "No blocker; old protocol unchanged; explicit SYSTEM and tools cancel together; actual TimeoutError checked beyond swallowed assertions; CLI/SQLite identities covered."
+}

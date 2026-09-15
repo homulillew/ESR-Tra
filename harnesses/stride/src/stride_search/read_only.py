@@ -1,6 +1,6 @@
-"""One temporary native read-only tool surface; no message or action rewriting."""
+"""Temporary native read availability with an optional explicit stage instruction."""
 from copy import deepcopy
-from .contract import digest
+from .contract import digest, text_hash
 
 RULE = {'version': 'read-only-once-v1', 'consecutive_rounds': 3,
         'observation': 'successful search receipt executed and ok; no new raw passage delivered',
@@ -33,3 +33,13 @@ def project(harness, history, visible, issued, navigation, tools, final):
         audit = {'identity': identity(), 'visible_read_documents': refs,
                  'visible_read_documents_sha256': digest(refs), 'native_tools_sha256': digest(tools)}
     return state, tools, audit
+
+
+EXPLICIT_INSTRUCTION = "\nFor this decision only, read is the only available tool. Choose an already provided, authorized document and a useful passage range, and issue native read call(s) within the existing batch limit. Search, find, finish, and other tools are unavailable for this decision. Normal tool availability resumes on the next decision.\n"
+
+
+def explicit_identity():
+    return {'version': 'read-only-explicit-v1', 'base_read_rule': identity(),
+            'instruction_sha256': text_hash(EXPLICIT_INSTRUCTION),
+            'instruction_location': 'append to system content only on triggered request',
+            'kind': 'temporary_tool_availability_with_explicit_stage_instruction'}
