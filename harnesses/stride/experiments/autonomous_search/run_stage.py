@@ -54,6 +54,8 @@ def sources():
               ROOT / 'harnesses/stride/tests/test_search_raw.py',
               ROOT / 'harnesses/stride/tests/test_search_raw_integration.py',
               ROOT / 'harnesses/stride/tests/test_continuous_prose.py',
+              ROOT / 'harnesses/stride/tests/test_coverage_rank.py',
+              ROOT / 'harnesses/stride/tests/test_coverage_boundaries.py',
               ROOT / 'harnesses/stride/tests/test_stage_publication.py']
     return {p.relative_to(ROOT).as_posix(): sha(p) for p in sorted(paths)}
 

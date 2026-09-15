@@ -45,6 +45,11 @@ class Harness:
         if not isinstance(question, str) or not question.strip():
             raise ValueError("A nonempty original question is required")
         self.question, self.retriever = question, retriever
+        self.coverage_rank = None
+        if decision_protocol == 'search-coverage-rank-v1':
+            from . import coverage_rank
+            coverage_rank.require_retriever(retriever)
+            self.coverage_rank = coverage_rank
         self.config, self.counter = config or Config(), counter or ByteCounter()
         self.clock, self.started = clock, clock()
         self.archive = Archive(path)
@@ -55,6 +60,8 @@ class Harness:
         self.notes, self.note_history = {}, []
         self.search_cache = {}
         self.search_capabilities = search_support.capabilities(retriever)
+        if self.coverage_rank:
+            self.search_capabilities = self.coverage_rank.capabilities(self.search_capabilities)
         self.navigation_history, self.navigation_acked_rounds = [], set()
         self.model_calls = self.action_slots = self.declared_calls = self.backend_calls = 0
         self.output_charged = 0
@@ -146,6 +153,8 @@ class Harness:
             if len(args["queries"]) > self.config.max_queries_per_search:
                 raise ContractError("query_batch_limit", "Too many queries for the current experimental arm")
             specs = [search_support.query_spec(self, q, args.get("top_k", 5)) for q in args["queries"]]
+            if self.coverage_rank:
+                specs = [self.coverage_rank.query_spec(spec) for spec in specs]
             keys = [s[0] for s in specs]
             needed = len(set(keys) - set(self.search_cache))
             if needed > self.config.max_backend_calls - self.backend_calls:
@@ -156,7 +165,13 @@ class Harness:
                 cached = key in self.search_cache
                 self.archive.append("query_execution", {"round": self.model_calls, "query": query, "top_k": top_k,
                     "compiled": compiled, "equivalence_key": equivalent, "cache_key": key, "cached": cached})
-                rows = deepcopy(self.search_cache[key]) if cached else self._backend("search", {"query": query, "top_k": top_k}, lambda: self.retriever.search(query, top_k))
+                backend_top_k = self.coverage_rank.POOL_SIZE if self.coverage_rank else top_k
+                rows = deepcopy(self.search_cache[key]) if cached else self._backend("search", {"query": query, "top_k": backend_top_k}, lambda: self.retriever.search(query, backend_top_k))
+                if self.coverage_rank and not cached:
+                    pool_object = self.archive.put_json(rows)
+                    rows, audit = self.coverage_rank.rank(rows, compiled, top_k)
+                    self.archive.append('search_coverage_rank', {'round': self.model_calls,
+                        'query': query, 'cache_key': key, 'candidate_pool_object': pool_object, **audit})
                 if not isinstance(rows, list):
                     raise ContractError("retrieval_protocol", "Search must return a list", fatal=True)
                 for row in rows[:top_k]:

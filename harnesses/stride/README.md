@@ -113,6 +113,7 @@ finally:
 - [VALIDATION_A3](docs/VALIDATION_A3.md)：a3 实际验证与未执行项。
 - [搜索附带有限原文实验](experiments/autonomous_search/SEARCH_RAW_PLAN.md)：可选 `--decision-protocol search-raw-window-v1`，从搜索首项自动取得受限原文窗口；额外获取按真实后端成本记录，仍须实际交付后才能引用。默认 `baseline` 行为不变，效果以真实对照结果为准。
 - [持续省略可见助手分析实验](experiments/autonomous_search/CONTINUOUS_PROSE_PLAN.md)：可选 `--decision-protocol continuous-prose-omission-v1`，在后续请求中省略保留工具组内的助手正文，原工具调用、回执、原文和归档不变；持续覆盖首末组及FINAL。默认不启用，准确率与成本分别验收。
+- [查询词覆盖重排实验](experiments/autonomous_search/COVERAGE_RANK_PLAN.md)：可选 `--decision-protocol search-coverage-rank-v1`，原CPU索引每查询取20候选，按词覆盖稳定重排并返回原top_k。原文仍须实际读取并交付，额外候选与排名变化完整留档；默认不启用。
 
 ## 明确限制
 
