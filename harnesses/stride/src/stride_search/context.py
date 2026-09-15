@@ -6,7 +6,7 @@ from copy import deepcopy
 from .contract import system_message, ContractError, canonical
 from .workflow_contract import POLICY, toolset
 from .decision_protocol import PROTOCOLS
-from .history_projection import project as project_history, project_once
+from .history_projection import project as project_history, project_once, project_continuous
 from .relation_review import render as render_review
 
 
@@ -14,6 +14,7 @@ def build(harness, model, counter, *, final: bool, output_limit: int, groups=Non
     config = harness.config
     history = list(harness.groups if groups is None else groups)
     middle_history = harness.decision_protocol == "middle-history-v1"
+    continuous_history = harness.decision_protocol == "continuous-prose-omission-v1"
     first_round = harness.first_complete_round
     if first_round is None and history:
         first_round = history[0]["round"]  # Prospective first group during preflight.
@@ -47,8 +48,11 @@ def build(harness, model, counter, *, final: bool, output_limit: int, groups=Non
             projected_messages, history_view = project_history(history,
                 first_round=first_round, latest_round=latest_round)
             messages.extend(projected_messages)
+        elif continuous_history:
+            projected_messages, history_view = project_continuous(history)
+            messages.extend(projected_messages)
         for group in history:
-            if not middle_history:
+            if not (middle_history or continuous_history):
                 messages.extend(group["messages"])
             visible.update(group["evidence"])
             issued.extend(r for r in group["documents"] if r not in issued)
@@ -135,7 +139,7 @@ def build(harness, model, counter, *, final: bool, output_limit: int, groups=Non
                     **({"relation_review_state": review_state, "relation_review_audit": review_audit} if review_state is not None else {}),
                     **({"read_only_state": read_state, "read_only_audit": read_audit} if read_state is not None else {}),
                     **({"review_memory_delivery": memory_delivery} if memory_delivery is not None else {}),
-                    **({"history_projection": history_view} if middle_history else {})}
+                    **({"history_projection": history_view} if middle_history or continuous_history else {})}
         if config.context_mode == "full":
             raise ContractError("context_capacity", "Full-history arm cannot fit its actual wire request", fatal=True)
         compacted = True

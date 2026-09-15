@@ -262,7 +262,8 @@ class Harness:
             "evidence_shelf": plan["shelf"], "shelf_evicted_for_capacity": plan["shelf_evicted"], **({"workflow_view": plan["workflow_view"]} if self.workflow.options.enabled else {})})
         start = self.clock()
         if "history_projection" in plan:
-            self.archive.append("history_projection", {"round": round_no, **plan["history_projection"]})
+            self.archive.append("history_projection", {"round": round_no, **plan["history_projection"],
+                **({"wire_sha256": digest(plan["wire"])} if self.decision_protocol == "continuous-prose-omission-v1" else {})})
         if self.search_pivot is not None:
             projection = plan["search_pivot_projection"]
             self.search_pivot.commit(projection)

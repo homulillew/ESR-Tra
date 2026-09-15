@@ -1,0 +1,33 @@
+{
+  "command": "python -m pytest harnesses/stride/tests harnesses/stride/examples -q (private basetemp and JUnit XML)",
+  "full_regression": {
+    "name": "pytest",
+    "errors": "0",
+    "failures": "0",
+    "skipped": "0",
+    "tests": "547",
+    "time": "214.137",
+    "timestamp": "2026-09-16T00:27:46.439752+08:00",
+    "xml_sha256": "b408dc41dd03f08ed0b0b547ae467e535c959e8ba654115d537eadd9e6028664",
+    "log_sha256": "2226e4b55ab97461350bad7090c420b5b85bf4fa68083a32ac982708933625e2"
+  },
+  "new_targeted_cases": 12,
+  "previous_plus_new_cases": 547,
+  "agent_targeted_run": {
+    "tests": 32,
+    "passed": 32,
+    "scope": "new continuous-prose cases plus existing middle-history cases",
+    "seconds_reported": 21.4
+  },
+  "development_issue": "The first new CLI fixture omitted two required local CLI acceptance flags. Fixture corrected; no product policy or network behavior changed.",
+  "new_glm_requests": 0,
+  "independent_source_review": "Root reviewed product diff and tests before full regression; raw groups, tool calls, receipts and provider reasoning are retained; no extra prompt or model calls.",
+  "budget_at_freeze": {
+    "epoch": "autonomous-search-20260916",
+    "cap": 2413,
+    "used": 1487,
+    "epoch_used": 74,
+    "epoch_remaining": 926
+  },
+  "online_status_at_freeze": "NOT_RUN; start automatically after code and plan commit"
+}

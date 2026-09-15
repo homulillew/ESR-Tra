@@ -112,6 +112,7 @@ finally:
 - [EXPERIMENTS](docs/EXPERIMENTS.md)：冻结对照与独立判分。
 - [VALIDATION_A3](docs/VALIDATION_A3.md)：a3 实际验证与未执行项。
 - [搜索附带有限原文实验](experiments/autonomous_search/SEARCH_RAW_PLAN.md)：可选 `--decision-protocol search-raw-window-v1`，从搜索首项自动取得受限原文窗口；额外获取按真实后端成本记录，仍须实际交付后才能引用。默认 `baseline` 行为不变，效果以真实对照结果为准。
+- [持续省略可见助手分析实验](experiments/autonomous_search/CONTINUOUS_PROSE_PLAN.md)：可选 `--decision-protocol continuous-prose-omission-v1`，在后续请求中省略保留工具组内的助手正文，原工具调用、回执、原文和归档不变；持续覆盖首末组及FINAL。默认不启用，准确率与成本分别验收。
 
 ## 明确限制
 

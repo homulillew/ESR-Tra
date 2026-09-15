@@ -86,3 +86,32 @@ def project_once(history):
         audit.pop(key)
     audit["identity"] = once_identity()
     return messages, audit
+
+
+CONTINUOUS_RULE = {
+    "version": "continuous-prose-omission-v1",
+    "eligibility": "retained_complete_group_with_nonempty_tool_calls",
+    "replacement": "assistant.content=null",
+    "anthropic": "remove_text_blocks_only_from_projection_copy",
+    "preserve_first_latest": False,
+    "preserve": ["tool_calls", "arguments", "receipts", "evidence", "notes", "gap", "repair", "provider_reasoning"],
+    "final": "same_projection_rule",
+    "duration": "every_request_build_including_preflight",
+    "mutation": "projection_copies_only; no trigger state",
+    "extra_prompt": False,
+    "extra_model_calls": 0,
+}
+
+
+def continuous_identity():
+    return {"version": CONTINUOUS_RULE["version"], "rule": deepcopy(CONTINUOUS_RULE),
+            "rule_sha256": digest(CONTINUOUS_RULE),
+            "kind": "continuous_visible_assistant_prose_projection"}
+
+
+def project_continuous(history):
+    messages, audit = project(history, first_round=None, latest_round=None)
+    for key in ("episode_first_complete_round", "latest_complete_round", "first_complete_group_present"):
+        audit.pop(key)
+    audit["identity"] = continuous_identity()
+    return messages, audit
