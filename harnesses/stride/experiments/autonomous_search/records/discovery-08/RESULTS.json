@@ -1,0 +1,716 @@
+{
+  "rows": [
+    {
+      "slot": "q775-baseline-r1",
+      "qid": 775,
+      "protocol": "baseline",
+      "status": "abstained",
+      "terminal": {
+        "answer": "",
+        "elapsed_seconds": 73.09085130001768,
+        "outcome": "abstained",
+        "reason": "I could not obtain the delivered source evidence needed to solve this puzzle. The searches returned only navigation snippets (not citable eN windows), and the only substantive fact supported is that the Man Asian Literary Prize was established in 2007 (from a Booker Prize page snippet). I never received actual page content confirming: (1) which specific book was a contender and translated into 25+ languages, (2) its publication year in the 2010s, (3) the prize-winning book released the preceding year, (4) the birth city of the prize-winning author, (5) the city where the first book's author grew up, or (6) the birth city of the first book's author. Without being able to read the Man Asian Literary Prize Wikipedia page and the relevant author pages, I cannot verify the chain of connections required to determine the birth city. Submitting a guessed city would be unsupported fabrication."
+      },
+      "attempts": 13,
+      "elapsed_seconds": 73.2592919000017,
+      "head": "979c793e12bc8b5bdb8274011aef85d38b48e7782937616f99ab1bbbfa02afe6",
+      "seal_sha256": "f4f12e08f28e41dd19db90397830a07e7e8823e755fe89a474fb3b04bfc28a75",
+      "budget_after": {
+        "cap": 1643,
+        "used": 1034,
+        "remaining": 609,
+        "this_run": 13,
+        "epoch_allowance": 1000,
+        "epoch_used": 391,
+        "epoch_remaining": 609
+      },
+      "correct": false,
+      "judged": false,
+      "judge_parse_error": null,
+      "metrics": {
+        "model_attempts": 13,
+        "backend_attempts": 16,
+        "actions_recorded": 13,
+        "executed_actions": 13,
+        "action_counts": {
+          "search": 12,
+          "finish": 1
+        },
+        "action_error_counts": {
+          "duplicate_query_blocked": 2
+        },
+        "cache_query_hits": 11,
+        "final_phase_requests": 1,
+        "compaction_requests": 2,
+        "rounds_receiving_new_raw": 0,
+        "unknown_usage_calls": 0
+      },
+      "pivot_events": [],
+      "once_prose_reset_events": [],
+      "relation_review_events": [],
+      "read_only_events": [],
+      "review_memory_capture_events": [],
+      "review_memory_delivery_events": [],
+      "review_memory_rendered_requests": 0,
+      "history_projection_events": [],
+      "history_projection_requests_with_changes": 0,
+      "history_projection_removed_utf8_bytes_across_requests": 0,
+      "queries_executed": 27,
+      "evidence_windows_registered": 0,
+      "new_backend_searches": 16,
+      "backend_document_reads": 0,
+      "tokens": {
+        "input_tokens": {
+          "known_sum": 204499,
+          "unknown_calls": 0
+        },
+        "output_tokens": {
+          "known_sum": 1351,
+          "unknown_calls": 0
+        },
+        "cache_read_tokens": {
+          "known_sum": 121472,
+          "unknown_calls": 0
+        },
+        "cache_write_tokens": {
+          "known_sum": 0,
+          "unknown_calls": 13
+        }
+      }
+    },
+    {
+      "slot": "q775-read-only-once-v1-r1",
+      "qid": 775,
+      "protocol": "read-only-once-v1",
+      "status": "model_budget",
+      "terminal": {
+        "answer": "",
+        "elapsed_seconds": 101.4492498000036,
+        "outcome": "model_budget"
+      },
+      "attempts": 16,
+      "elapsed_seconds": 101.56387109999196,
+      "head": "7714890bd3b054edd5cb2aace804d8f8baebb49ffe70139c3b4579da2cb7b262",
+      "seal_sha256": "817593a0161a9957ef357737656480a0693848c3746dbb755d8474e959bc9f2b",
+      "budget_after": {
+        "cap": 1643,
+        "used": 1050,
+        "remaining": 593,
+        "this_run": 29,
+        "epoch_allowance": 1000,
+        "epoch_used": 407,
+        "epoch_remaining": 593
+      },
+      "correct": false,
+      "judged": false,
+      "judge_parse_error": null,
+      "metrics": {
+        "model_attempts": 16,
+        "backend_attempts": 35,
+        "actions_recorded": 18,
+        "executed_actions": 16,
+        "action_counts": {
+          "search": 16,
+          "read": 2
+        },
+        "action_error_counts": {
+          "read_only_tool_only": 1,
+          "final_only": 1
+        },
+        "cache_query_hits": 8,
+        "final_phase_requests": 1,
+        "compaction_requests": 2,
+        "rounds_receiving_new_raw": 2,
+        "unknown_usage_calls": 0
+      },
+      "pivot_events": [],
+      "once_prose_reset_events": [],
+      "relation_review_events": [],
+      "read_only_events": [
+        {
+          "identity": {
+            "kind": "temporary_tool_availability_not_verified_evidence",
+            "rule": {
+              "capacity": "recompute tools and visible navigation on each candidate build",
+              "commit": "after actual request archive before send; failed send consumes",
+              "consecutive_rounds": 3,
+              "extra_model_calls": 0,
+              "final": false,
+              "max_triggers": 1,
+              "messages": "unchanged",
+              "minimum_remaining_model_calls": 3,
+              "navigation": "retained group documents or rendered control pages; intersect read authorization",
+              "observation": "successful search receipt executed and ok; no new raw passage delivered",
+              "tools": "original read schema only; original batch limit; no forced tool choice",
+              "version": "read-only-once-v1"
+            },
+            "rule_sha256": "c5215cce37479fb19aa0f3ff146b2b6e2748cf7f89007140fce59e92f92cd6bc",
+            "version": "read-only-once-v1"
+          },
+          "native_tools_sha256": "82cba8a4a01c2197f768888ac0896a50f5fc053d172739ddb0b0c30e100141ce",
+          "observation": "no new source passage",
+          "round": 7,
+          "source_rounds": [
+            4,
+            5,
+            6
+          ],
+          "trigger_number": 1,
+          "visible_read_documents": [
+            "d1",
+            "d2",
+            "d3",
+            "d4",
+            "d5",
+            "d6",
+            "d7",
+            "d8",
+            "d9",
+            "d10",
+            "d11",
+            "d12",
+            "d13",
+            "d14",
+            "d15",
+            "d16",
+            "d17",
+            "d18",
+            "d19",
+            "d20",
+            "d21",
+            "d22",
+            "d23",
+            "d24",
+            "d25",
+            "d26",
+            "d27",
+            "d28",
+            "d29",
+            "d30",
+            "d31",
+            "d32",
+            "d33",
+            "d34",
+            "d35",
+            "d36",
+            "d37",
+            "d38",
+            "d39",
+            "d40",
+            "d41",
+            "d42",
+            "d43",
+            "d44"
+          ],
+          "visible_read_documents_sha256": "4fade9649e87bee89fbe4ff7e4a2302c1be0af105361130d65ac78c615fdd65d",
+          "wire_sha256": "6123337756cbfa7469e251ee877884712b2946057a655915c1592e908183ad61",
+          "wire_tools_sha256": "82cba8a4a01c2197f768888ac0896a50f5fc053d172739ddb0b0c30e100141ce"
+        }
+      ],
+      "review_memory_capture_events": [],
+      "review_memory_delivery_events": [],
+      "review_memory_rendered_requests": 0,
+      "history_projection_events": [],
+      "history_projection_requests_with_changes": 0,
+      "history_projection_removed_utf8_bytes_across_requests": 0,
+      "queries_executed": 41,
+      "evidence_windows_registered": 2,
+      "new_backend_searches": 33,
+      "backend_document_reads": 2,
+      "tokens": {
+        "input_tokens": {
+          "known_sum": 260261,
+          "unknown_calls": 0
+        },
+        "output_tokens": {
+          "known_sum": 3249,
+          "unknown_calls": 0
+        },
+        "cache_read_tokens": {
+          "known_sum": 147712,
+          "unknown_calls": 0
+        },
+        "cache_write_tokens": {
+          "known_sum": 0,
+          "unknown_calls": 16
+        }
+      }
+    },
+    {
+      "slot": "q774-read-only-once-v1-r1",
+      "qid": 774,
+      "protocol": "read-only-once-v1",
+      "status": "model_budget",
+      "terminal": {
+        "answer": "",
+        "elapsed_seconds": 132.0439099999785,
+        "outcome": "model_budget"
+      },
+      "attempts": 16,
+      "elapsed_seconds": 132.1572482000047,
+      "head": "9cfc12f3b11dc1db5940d58472f29827fb56fa95df2a5849c14714856b68307b",
+      "seal_sha256": "340651d7336b2f9caec864e409d28f4d642168944b8ae31afb7b3ef538c2db5e",
+      "budget_after": {
+        "cap": 1643,
+        "used": 1066,
+        "remaining": 577,
+        "this_run": 45,
+        "epoch_allowance": 1000,
+        "epoch_used": 423,
+        "epoch_remaining": 577
+      },
+      "correct": false,
+      "judged": false,
+      "judge_parse_error": null,
+      "metrics": {
+        "model_attempts": 16,
+        "backend_attempts": 42,
+        "actions_recorded": 16,
+        "executed_actions": 14,
+        "action_counts": {
+          "search": 16
+        },
+        "action_error_counts": {
+          "read_only_tool_only": 1,
+          "final_only": 1
+        },
+        "cache_query_hits": 0,
+        "final_phase_requests": 1,
+        "compaction_requests": 3,
+        "rounds_receiving_new_raw": 0,
+        "unknown_usage_calls": 0
+      },
+      "pivot_events": [],
+      "once_prose_reset_events": [],
+      "relation_review_events": [],
+      "read_only_events": [
+        {
+          "identity": {
+            "kind": "temporary_tool_availability_not_verified_evidence",
+            "rule": {
+              "capacity": "recompute tools and visible navigation on each candidate build",
+              "commit": "after actual request archive before send; failed send consumes",
+              "consecutive_rounds": 3,
+              "extra_model_calls": 0,
+              "final": false,
+              "max_triggers": 1,
+              "messages": "unchanged",
+              "minimum_remaining_model_calls": 3,
+              "navigation": "retained group documents or rendered control pages; intersect read authorization",
+              "observation": "successful search receipt executed and ok; no new raw passage delivered",
+              "tools": "original read schema only; original batch limit; no forced tool choice",
+              "version": "read-only-once-v1"
+            },
+            "rule_sha256": "c5215cce37479fb19aa0f3ff146b2b6e2748cf7f89007140fce59e92f92cd6bc",
+            "version": "read-only-once-v1"
+          },
+          "native_tools_sha256": "82cba8a4a01c2197f768888ac0896a50f5fc053d172739ddb0b0c30e100141ce",
+          "observation": "no new source passage",
+          "round": 4,
+          "source_rounds": [
+            1,
+            2,
+            3
+          ],
+          "trigger_number": 1,
+          "visible_read_documents": [
+            "d1",
+            "d2",
+            "d3",
+            "d4",
+            "d5",
+            "d6",
+            "d7",
+            "d8",
+            "d9",
+            "d10",
+            "d11",
+            "d12",
+            "d13",
+            "d14",
+            "d15",
+            "d16",
+            "d17",
+            "d18",
+            "d19",
+            "d20",
+            "d21",
+            "d22",
+            "d23",
+            "d24"
+          ],
+          "visible_read_documents_sha256": "2768f9b76d97125bbcd3e8000e611d285d2fa4c59f31b0f522d50fabecea9dae",
+          "wire_sha256": "0430d8db485cec9a8cb836c309b5026ee3cd112126cbecb32d34a7f390399409",
+          "wire_tools_sha256": "82cba8a4a01c2197f768888ac0896a50f5fc053d172739ddb0b0c30e100141ce"
+        }
+      ],
+      "review_memory_capture_events": [],
+      "review_memory_delivery_events": [],
+      "review_memory_rendered_requests": 0,
+      "history_projection_events": [],
+      "history_projection_requests_with_changes": 0,
+      "history_projection_removed_utf8_bytes_across_requests": 0,
+      "queries_executed": 42,
+      "evidence_windows_registered": 0,
+      "new_backend_searches": 42,
+      "backend_document_reads": 0,
+      "tokens": {
+        "input_tokens": {
+          "known_sum": 235796,
+          "unknown_calls": 0
+        },
+        "output_tokens": {
+          "known_sum": 2254,
+          "unknown_calls": 0
+        },
+        "cache_read_tokens": {
+          "known_sum": 135936,
+          "unknown_calls": 0
+        },
+        "cache_write_tokens": {
+          "known_sum": 0,
+          "unknown_calls": 16
+        }
+      }
+    },
+    {
+      "slot": "q774-baseline-r1",
+      "qid": 774,
+      "protocol": "baseline",
+      "status": "http_error",
+      "terminal": {
+        "answer": "",
+        "elapsed_seconds": 50.67468630001531,
+        "outcome": "http_error"
+      },
+      "attempts": 4,
+      "elapsed_seconds": 50.746366100007435,
+      "head": "72a32610367c2df5ddb2e232a538ede4cee6f1ba62bafe40fc7228a2622bde15",
+      "seal_sha256": "6ce0f1312949fc67407f9ae2cd9470f3f9dc7394def996ea967e2a2ac3c8df73",
+      "budget_after": {
+        "cap": 1643,
+        "used": 1070,
+        "remaining": 573,
+        "this_run": 49,
+        "epoch_allowance": 1000,
+        "epoch_used": 427,
+        "epoch_remaining": 573
+      },
+      "correct": null,
+      "judged": false,
+      "judge_parse_error": null,
+      "metrics": {
+        "model_attempts": 4,
+        "backend_attempts": 17,
+        "actions_recorded": 6,
+        "executed_actions": 6,
+        "action_counts": {
+          "search": 6
+        },
+        "action_error_counts": {},
+        "cache_query_hits": 0,
+        "final_phase_requests": 0,
+        "compaction_requests": 1,
+        "rounds_receiving_new_raw": 0,
+        "unknown_usage_calls": 1
+      },
+      "pivot_events": [],
+      "once_prose_reset_events": [],
+      "relation_review_events": [],
+      "read_only_events": [],
+      "review_memory_capture_events": [],
+      "review_memory_delivery_events": [],
+      "review_memory_rendered_requests": 0,
+      "history_projection_events": [],
+      "history_projection_requests_with_changes": 0,
+      "history_projection_removed_utf8_bytes_across_requests": 0,
+      "queries_executed": 17,
+      "evidence_windows_registered": 0,
+      "new_backend_searches": 17,
+      "backend_document_reads": 0,
+      "tokens": {
+        "input_tokens": {
+          "known_sum": 33810,
+          "unknown_calls": 1
+        },
+        "output_tokens": {
+          "known_sum": 683,
+          "unknown_calls": 1
+        },
+        "cache_read_tokens": {
+          "known_sum": 17152,
+          "unknown_calls": 1
+        },
+        "cache_write_tokens": {
+          "known_sum": 0,
+          "unknown_calls": 4
+        }
+      }
+    },
+    {
+      "slot": "q771-baseline-r1",
+      "qid": 771,
+      "protocol": "baseline",
+      "status": "NOT_RUN",
+      "attempts": 0,
+      "correct": null,
+      "judged": false,
+      "judge_parse_error": null,
+      "metrics": {
+        "model_attempts": null,
+        "backend_attempts": null,
+        "actions_recorded": null,
+        "executed_actions": null,
+        "action_counts": null,
+        "action_error_counts": null,
+        "cache_query_hits": null,
+        "final_phase_requests": null,
+        "compaction_requests": null,
+        "rounds_receiving_new_raw": null,
+        "unknown_usage_calls": null
+      },
+      "pivot_events": [],
+      "once_prose_reset_events": [],
+      "relation_review_events": [],
+      "read_only_events": [],
+      "review_memory_capture_events": [],
+      "review_memory_delivery_events": [],
+      "review_memory_rendered_requests": 0,
+      "history_projection_events": [],
+      "history_projection_requests_with_changes": 0,
+      "history_projection_removed_utf8_bytes_across_requests": 0,
+      "queries_executed": 0,
+      "evidence_windows_registered": 0,
+      "new_backend_searches": 0,
+      "backend_document_reads": 0,
+      "tokens": {
+        "input_tokens": {
+          "known_sum": 0,
+          "unknown_calls": 0
+        },
+        "output_tokens": {
+          "known_sum": 0,
+          "unknown_calls": 0
+        },
+        "cache_read_tokens": {
+          "known_sum": 0,
+          "unknown_calls": 0
+        },
+        "cache_write_tokens": {
+          "known_sum": 0,
+          "unknown_calls": 0
+        }
+      }
+    },
+    {
+      "slot": "q771-read-only-once-v1-r1",
+      "qid": 771,
+      "protocol": "read-only-once-v1",
+      "status": "NOT_RUN",
+      "attempts": 0,
+      "correct": null,
+      "judged": false,
+      "judge_parse_error": null,
+      "metrics": {
+        "model_attempts": null,
+        "backend_attempts": null,
+        "actions_recorded": null,
+        "executed_actions": null,
+        "action_counts": null,
+        "action_error_counts": null,
+        "cache_query_hits": null,
+        "final_phase_requests": null,
+        "compaction_requests": null,
+        "rounds_receiving_new_raw": null,
+        "unknown_usage_calls": null
+      },
+      "pivot_events": [],
+      "once_prose_reset_events": [],
+      "relation_review_events": [],
+      "read_only_events": [],
+      "review_memory_capture_events": [],
+      "review_memory_delivery_events": [],
+      "review_memory_rendered_requests": 0,
+      "history_projection_events": [],
+      "history_projection_requests_with_changes": 0,
+      "history_projection_removed_utf8_bytes_across_requests": 0,
+      "queries_executed": 0,
+      "evidence_windows_registered": 0,
+      "new_backend_searches": 0,
+      "backend_document_reads": 0,
+      "tokens": {
+        "input_tokens": {
+          "known_sum": 0,
+          "unknown_calls": 0
+        },
+        "output_tokens": {
+          "known_sum": 0,
+          "unknown_calls": 0
+        },
+        "cache_read_tokens": {
+          "known_sum": 0,
+          "unknown_calls": 0
+        },
+        "cache_write_tokens": {
+          "known_sum": 0,
+          "unknown_calls": 0
+        }
+      }
+    },
+    {
+      "slot": "q778-read-only-once-v1-r1",
+      "qid": 778,
+      "protocol": "read-only-once-v1",
+      "status": "NOT_RUN",
+      "attempts": 0,
+      "correct": null,
+      "judged": false,
+      "judge_parse_error": null,
+      "metrics": {
+        "model_attempts": null,
+        "backend_attempts": null,
+        "actions_recorded": null,
+        "executed_actions": null,
+        "action_counts": null,
+        "action_error_counts": null,
+        "cache_query_hits": null,
+        "final_phase_requests": null,
+        "compaction_requests": null,
+        "rounds_receiving_new_raw": null,
+        "unknown_usage_calls": null
+      },
+      "pivot_events": [],
+      "once_prose_reset_events": [],
+      "relation_review_events": [],
+      "read_only_events": [],
+      "review_memory_capture_events": [],
+      "review_memory_delivery_events": [],
+      "review_memory_rendered_requests": 0,
+      "history_projection_events": [],
+      "history_projection_requests_with_changes": 0,
+      "history_projection_removed_utf8_bytes_across_requests": 0,
+      "queries_executed": 0,
+      "evidence_windows_registered": 0,
+      "new_backend_searches": 0,
+      "backend_document_reads": 0,
+      "tokens": {
+        "input_tokens": {
+          "known_sum": 0,
+          "unknown_calls": 0
+        },
+        "output_tokens": {
+          "known_sum": 0,
+          "unknown_calls": 0
+        },
+        "cache_read_tokens": {
+          "known_sum": 0,
+          "unknown_calls": 0
+        },
+        "cache_write_tokens": {
+          "known_sum": 0,
+          "unknown_calls": 0
+        }
+      }
+    },
+    {
+      "slot": "q778-baseline-r1",
+      "qid": 778,
+      "protocol": "baseline",
+      "status": "NOT_RUN",
+      "attempts": 0,
+      "correct": null,
+      "judged": false,
+      "judge_parse_error": null,
+      "metrics": {
+        "model_attempts": null,
+        "backend_attempts": null,
+        "actions_recorded": null,
+        "executed_actions": null,
+        "action_counts": null,
+        "action_error_counts": null,
+        "cache_query_hits": null,
+        "final_phase_requests": null,
+        "compaction_requests": null,
+        "rounds_receiving_new_raw": null,
+        "unknown_usage_calls": null
+      },
+      "pivot_events": [],
+      "once_prose_reset_events": [],
+      "relation_review_events": [],
+      "read_only_events": [],
+      "review_memory_capture_events": [],
+      "review_memory_delivery_events": [],
+      "review_memory_rendered_requests": 0,
+      "history_projection_events": [],
+      "history_projection_requests_with_changes": 0,
+      "history_projection_removed_utf8_bytes_across_requests": 0,
+      "queries_executed": 0,
+      "evidence_windows_registered": 0,
+      "new_backend_searches": 0,
+      "backend_document_reads": 0,
+      "tokens": {
+        "input_tokens": {
+          "known_sum": 0,
+          "unknown_calls": 0
+        },
+        "output_tokens": {
+          "known_sum": 0,
+          "unknown_calls": 0
+        },
+        "cache_read_tokens": {
+          "known_sum": 0,
+          "unknown_calls": 0
+        },
+        "cache_write_tokens": {
+          "known_sum": 0,
+          "unknown_calls": 0
+        }
+      }
+    }
+  ],
+  "pairs": [
+    {
+      "qid": 775,
+      "baseline": false,
+      "treatment": false,
+      "delta": 0
+    }
+  ],
+  "stage_complete": false,
+  "comparable_pairs": 1,
+  "baseline_correct": 0,
+  "treatment_correct": 0,
+  "paired_wins": 0,
+  "paired_losses": 0,
+  "exact_two_sided_p": 1.0,
+  "controls_no_regression": null,
+  "beyond_discovery_net": 0,
+  "budget": {
+    "cap": 1643,
+    "used": 1070,
+    "remaining": 573,
+    "this_run": 49,
+    "epoch_allowance": 1000,
+    "epoch_used": 427,
+    "epoch_remaining": 573
+  },
+  "tokens_all_requests": {
+    "input_tokens": {
+      "known_sum": 734366,
+      "unknown_calls": 1
+    },
+    "output_tokens": {
+      "known_sum": 7537,
+      "unknown_calls": 1
+    },
+    "cache_read_tokens": {
+      "known_sum": 422272,
+      "unknown_calls": 1
+    },
+    "cache_write_tokens": {
+      "known_sum": 0,
+      "unknown_calls": 49
+    }
+  },
+  "source_audit": "Separate delivered-evidence review required before advancement or success claim."
+}
