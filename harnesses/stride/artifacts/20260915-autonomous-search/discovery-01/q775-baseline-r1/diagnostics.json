@@ -1,0 +1,693 @@
+{
+  "protocol": "stride-search-3",
+  "head": "3fd9fa8d3db5b7e6ef56a0122d8d040c3d742bf377cecb59e32c7e4b5c5cdfc0",
+  "outcome": "abstained",
+  "formal_correct": null,
+  "model_attempts": 12,
+  "backend_attempts": 17,
+  "queries": [
+    {
+      "round": 1,
+      "top_k": 8,
+      "equivalence_key": "e76c58cddb211be9827cd4e3b338a840316a3f57687f168e1980148a76a75e16",
+      "cached": false,
+      "query_sha256": "d76d7e3ccccd4acdad4584e45a99dbf50e45978b3efa1b8b195cd3561cf5d269",
+      "query": "literary award created 2000s translated over 25 languages",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"literary\" OR \"award\" OR \"created\" OR \"2000s\" OR \"translated\" OR \"over\" OR \"25\" OR \"languages\"",
+        "terms": [
+          "literary",
+          "award",
+          "created",
+          "2000s",
+          "translated",
+          "over",
+          "25",
+          "languages"
+        ]
+      }
+    },
+    {
+      "round": 1,
+      "top_k": 8,
+      "equivalence_key": "aef03c5da58a68c0aeddc2890eb21fbfcf16c5924739aa22a19d5912fc11af7c",
+      "cached": false,
+      "query_sha256": "5d1f4419d5ee8863eb59190ff2c76765507cb79bef9cabf5a509fb11d77b7415",
+      "query": "book award established 2000s international translated twenty five languages",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"book\" OR \"award\" OR \"established\" OR \"2000s\" OR \"international\" OR \"translated\" OR \"twenty\" OR \"five\" OR \"languages\"",
+        "terms": [
+          "book",
+          "award",
+          "established",
+          "2000s",
+          "international",
+          "translated",
+          "twenty",
+          "five",
+          "languages"
+        ]
+      }
+    },
+    {
+      "round": 1,
+      "top_k": 8,
+      "equivalence_key": "d67e1a5ae2b7a3f4f9a86ceb8c215675ff12a84985c369a00fe37287af381b17",
+      "cached": false,
+      "query_sha256": "a34052a1d3147b5a1f6d6345b459ba77169cccee707c42e4241ac7d48c15011f",
+      "query": "novel contender award translated many languages 2010s",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"novel\" OR \"contender\" OR \"award\" OR \"translated\" OR \"many\" OR \"languages\" OR \"2010s\"",
+        "terms": [
+          "novel",
+          "contender",
+          "award",
+          "translated",
+          "many",
+          "languages",
+          "2010s"
+        ]
+      }
+    },
+    {
+      "round": 2,
+      "top_k": 8,
+      "equivalence_key": "b9c655c45b3a5c851ddb874e490405fe1204b98e126974658bd3a67c4d089db8",
+      "cached": false,
+      "query_sha256": "0ff715b40ff41b4eb2d961afe762c07736d939e196a8d5bfce21504170c1068a",
+      "query": "Man Asian Literary Prize winners list 2010s",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"man\" OR \"asian\" OR \"literary\" OR \"prize\" OR \"winners\" OR \"list\" OR \"2010s\"",
+        "terms": [
+          "man",
+          "asian",
+          "literary",
+          "prize",
+          "winners",
+          "list",
+          "2010s"
+        ]
+      }
+    },
+    {
+      "round": 2,
+      "top_k": 8,
+      "equivalence_key": "756095e403ec18791752a888964e8808f59be51c4d368cbf710066d545e9d205",
+      "cached": false,
+      "query_sha256": "dda82bec7b674f867eb116b6c793a88ca710d23ca570c116459f728564410b79",
+      "query": "Man Asian Literary Prize shortlist novel translated 25 languages",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"man\" OR \"asian\" OR \"literary\" OR \"prize\" OR \"shortlist\" OR \"novel\" OR \"translated\" OR \"25\" OR \"languages\"",
+        "terms": [
+          "man",
+          "asian",
+          "literary",
+          "prize",
+          "shortlist",
+          "novel",
+          "translated",
+          "25",
+          "languages"
+        ]
+      }
+    },
+    {
+      "round": 2,
+      "top_k": 8,
+      "equivalence_key": "cdfbed9ded91351902587a4567715c229226c270595684ad93dbe3cefa46fd1e",
+      "cached": false,
+      "query_sha256": "5949ad152b7f26c325555d39661bf2bd8efe22b80e131e4ebf8ebe03cd24c52c",
+      "query": "International Booker Prize established 2005 2016 winners",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"international\" OR \"booker\" OR \"prize\" OR \"established\" OR \"2005\" OR \"2016\" OR \"winners\"",
+        "terms": [
+          "international",
+          "booker",
+          "prize",
+          "established",
+          "2005",
+          "2016",
+          "winners"
+        ]
+      }
+    },
+    {
+      "round": 3,
+      "top_k": 8,
+      "equivalence_key": "db53c10362c18874595e5620c337ba417c9220efe73594af76d982edfb90dca5",
+      "cached": false,
+      "query_sha256": "e0df80ec39eb59b116b3c6ab5ec6487d24e6f3e66cfa0b12869b793bef368ad9",
+      "query": "Man Asian Literary Prize Wikipedia winners shortlist",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"man\" OR \"asian\" OR \"literary\" OR \"prize\" OR \"wikipedia\" OR \"winners\" OR \"shortlist\"",
+        "terms": [
+          "man",
+          "asian",
+          "literary",
+          "prize",
+          "wikipedia",
+          "winners",
+          "shortlist"
+        ]
+      }
+    },
+    {
+      "round": 3,
+      "top_k": 8,
+      "equivalence_key": "959a7034e8cb6fe4ad9ef2a4db11c550aebc41397268c5c79f0e4743ce49e3db",
+      "cached": false,
+      "query_sha256": "7e2b3e3f259460786c32c07fea745b0b14dc9ba55410324527b9129d945cc8ec",
+      "query": "Man Asian Literary Prize 2010 2011 2012 2013 winner shortlisted novels",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"man\" OR \"asian\" OR \"literary\" OR \"prize\" OR \"2010\" OR \"2011\" OR \"2012\" OR \"2013\" OR \"winner\" OR \"shortlisted\" OR \"novels\"",
+        "terms": [
+          "man",
+          "asian",
+          "literary",
+          "prize",
+          "2010",
+          "2011",
+          "2012",
+          "2013",
+          "winner",
+          "shortlisted",
+          "novels"
+        ]
+      }
+    },
+    {
+      "round": 4,
+      "top_k": 8,
+      "equivalence_key": "8a8636c1105d33471cd9a3e443710eb30d620359f1d2689b8f31d8569a30cee4",
+      "cached": false,
+      "query_sha256": "0a51e7701d10def73e760e0c0df270b4f05021cd0486cfcf8fc06227fb0ca59a",
+      "query": "Man Asian Literary Prize Wikipedia",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"man\" OR \"asian\" OR \"literary\" OR \"prize\" OR \"wikipedia\"",
+        "terms": [
+          "man",
+          "asian",
+          "literary",
+          "prize",
+          "wikipedia"
+        ]
+      }
+    },
+    {
+      "round": 4,
+      "top_k": 8,
+      "equivalence_key": "e5a32b12097b715e55107b4794bfd54c52a644cfe7f19dc5dd1af8285f3d5f82",
+      "cached": false,
+      "query_sha256": "7e7b9f27f338b78b7bf08c51bc95aa635e38a22c10fa98d776e55232fe6a9e14",
+      "query": "Man Asian Literary Prize winners shortlist 2010 2011 2012 2013",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"man\" OR \"asian\" OR \"literary\" OR \"prize\" OR \"winners\" OR \"shortlist\" OR \"2010\" OR \"2011\" OR \"2012\" OR \"2013\"",
+        "terms": [
+          "man",
+          "asian",
+          "literary",
+          "prize",
+          "winners",
+          "shortlist",
+          "2010",
+          "2011",
+          "2012",
+          "2013"
+        ]
+      }
+    },
+    {
+      "round": 5,
+      "top_k": 8,
+      "equivalence_key": "1a4bb143f2c3ee94d903f21a960d16f8ec40d937610635ecaf4414bb78d9c0b8",
+      "cached": false,
+      "query_sha256": "5c0fec9924561e0066887596acf9286c6e58f5d1ec8cebc70c0442a0111d28ab",
+      "query": "Man Asian Literary Prize site:wikipedia.org",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"man\" OR \"asian\" OR \"literary\" OR \"prize\" OR \"site\" OR \"wikipedia\" OR \"org\"",
+        "terms": [
+          "man",
+          "asian",
+          "literary",
+          "prize",
+          "site",
+          "wikipedia",
+          "org"
+        ]
+      }
+    },
+    {
+      "round": 5,
+      "top_k": 8,
+      "equivalence_key": "fceb0cf11e518cc6e51015b30b6c5ee6cc90b92cba8ca8483fdfcf3c7bcfed72",
+      "cached": false,
+      "query_sha256": "457fc027ba46521d3badd514847c86c08726b473ab61e90717cc7f6d130942e7",
+      "query": "Man Asian Literary Prize 2012 shortlist Between Clay and Dust",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"man\" OR \"asian\" OR \"literary\" OR \"prize\" OR \"2012\" OR \"shortlist\" OR \"between\" OR \"clay\" OR \"and\" OR \"dust\"",
+        "terms": [
+          "man",
+          "asian",
+          "literary",
+          "prize",
+          "2012",
+          "shortlist",
+          "between",
+          "clay",
+          "and",
+          "dust"
+        ]
+      }
+    },
+    {
+      "round": 5,
+      "top_k": 8,
+      "equivalence_key": "eb26502082f2213f4d275f664dfb9f2b5845bd3d39ee11dacae7f706fd4b752f",
+      "cached": false,
+      "query_sha256": "ddcc48428f1da834bda8c3b8abb096b35edf435d715f6fc9252ce8f912c40178",
+      "query": "Man Asian Literary Prize 2011 2012 2013 winner",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"man\" OR \"asian\" OR \"literary\" OR \"prize\" OR \"2011\" OR \"2012\" OR \"2013\" OR \"winner\"",
+        "terms": [
+          "man",
+          "asian",
+          "literary",
+          "prize",
+          "2011",
+          "2012",
+          "2013",
+          "winner"
+        ]
+      }
+    },
+    {
+      "round": 6,
+      "top_k": 8,
+      "equivalence_key": "bd130f7e497909b54ca5035f19c15953b102ef9dfaef68896bf7085dde89d1fc",
+      "cached": false,
+      "query_sha256": "55825c8b6fe727770b12d194d1f4f8e67e2f56bc22e5b82220ed80ef81ec2a0c",
+      "query": "Man Asian Literary Prize Wikipedia winners list",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"man\" OR \"asian\" OR \"literary\" OR \"prize\" OR \"wikipedia\" OR \"winners\" OR \"list\"",
+        "terms": [
+          "man",
+          "asian",
+          "literary",
+          "prize",
+          "wikipedia",
+          "winners",
+          "list"
+        ]
+      }
+    },
+    {
+      "round": 6,
+      "top_k": 8,
+      "equivalence_key": "d9bc0c5a52419facb2adf6134260636185b4425dd64b0a61e1b17373fde25279",
+      "cached": false,
+      "query_sha256": "215000049286cd402a4479b0d7f1c298d7a1793ef820c0eac4f4ef12d15afd13",
+      "query": "literary award founded 2004 2005 2006 2007 2008 2009 novel translated many languages",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"literary\" OR \"award\" OR \"founded\" OR \"2004\" OR \"2005\" OR \"2006\" OR \"2007\" OR \"2008\" OR \"2009\" OR \"novel\" OR \"translated\" OR \"many\" OR \"languages\"",
+        "terms": [
+          "literary",
+          "award",
+          "founded",
+          "2004",
+          "2005",
+          "2006",
+          "2007",
+          "2008",
+          "2009",
+          "novel",
+          "translated",
+          "many",
+          "languages"
+        ]
+      }
+    },
+    {
+      "round": 7,
+      "top_k": 8,
+      "equivalence_key": "8a8636c1105d33471cd9a3e443710eb30d620359f1d2689b8f31d8569a30cee4",
+      "cached": true,
+      "query_sha256": "0a51e7701d10def73e760e0c0df270b4f05021cd0486cfcf8fc06227fb0ca59a",
+      "query": "Man Asian Literary Prize Wikipedia",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"man\" OR \"asian\" OR \"literary\" OR \"prize\" OR \"wikipedia\"",
+        "terms": [
+          "man",
+          "asian",
+          "literary",
+          "prize",
+          "wikipedia"
+        ]
+      }
+    },
+    {
+      "round": 7,
+      "top_k": 8,
+      "equivalence_key": "f5a6ed6f15f316fe4f5ab89fcbfe19b2ff070dfedc2f9c88a25c05d43d0966f2",
+      "cached": false,
+      "query_sha256": "2bd85cfa60e64cb6345a8f75633363e2af9fac9a622066a2f07e8afa044a165f",
+      "query": "DSC Prize South Asian Literature Wikipedia winners",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"dsc\" OR \"prize\" OR \"south\" OR \"asian\" OR \"literature\" OR \"wikipedia\" OR \"winners\"",
+        "terms": [
+          "dsc",
+          "prize",
+          "south",
+          "asian",
+          "literature",
+          "wikipedia",
+          "winners"
+        ]
+      }
+    },
+    {
+      "round": 7,
+      "top_k": 8,
+      "equivalence_key": "0b8a28b00c4e42796b3124af3b7bfe817abeb3f394d3b290ceab71be31ec949b",
+      "cached": false,
+      "query_sha256": "4a8811e701ede641314030661030d24b858b101726c946a02931816b55d4e4df",
+      "query": "Jan Michalski Prize Wikipedia",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"jan\" OR \"michalski\" OR \"prize\" OR \"wikipedia\"",
+        "terms": [
+          "jan",
+          "michalski",
+          "prize",
+          "wikipedia"
+        ]
+      }
+    },
+    {
+      "round": 8,
+      "top_k": 8,
+      "equivalence_key": "8a8636c1105d33471cd9a3e443710eb30d620359f1d2689b8f31d8569a30cee4",
+      "cached": true,
+      "query_sha256": "0a51e7701d10def73e760e0c0df270b4f05021cd0486cfcf8fc06227fb0ca59a",
+      "query": "Man Asian Literary Prize Wikipedia",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"man\" OR \"asian\" OR \"literary\" OR \"prize\" OR \"wikipedia\"",
+        "terms": [
+          "man",
+          "asian",
+          "literary",
+          "prize",
+          "wikipedia"
+        ]
+      }
+    },
+    {
+      "round": 8,
+      "top_k": 8,
+      "equivalence_key": "fceb0cf11e518cc6e51015b30b6c5ee6cc90b92cba8ca8483fdfcf3c7bcfed72",
+      "cached": true,
+      "query_sha256": "457fc027ba46521d3badd514847c86c08726b473ab61e90717cc7f6d130942e7",
+      "query": "Man Asian Literary Prize 2012 shortlist Between Clay and Dust",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"man\" OR \"asian\" OR \"literary\" OR \"prize\" OR \"2012\" OR \"shortlist\" OR \"between\" OR \"clay\" OR \"and\" OR \"dust\"",
+        "terms": [
+          "man",
+          "asian",
+          "literary",
+          "prize",
+          "2012",
+          "shortlist",
+          "between",
+          "clay",
+          "and",
+          "dust"
+        ]
+      }
+    },
+    {
+      "round": 8,
+      "top_k": 8,
+      "equivalence_key": "eb26502082f2213f4d275f664dfb9f2b5845bd3d39ee11dacae7f706fd4b752f",
+      "cached": true,
+      "query_sha256": "ddcc48428f1da834bda8c3b8abb096b35edf435d715f6fc9252ce8f912c40178",
+      "query": "Man Asian Literary Prize 2011 2012 2013 winner",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"man\" OR \"asian\" OR \"literary\" OR \"prize\" OR \"2011\" OR \"2012\" OR \"2013\" OR \"winner\"",
+        "terms": [
+          "man",
+          "asian",
+          "literary",
+          "prize",
+          "2011",
+          "2012",
+          "2013",
+          "winner"
+        ]
+      }
+    },
+    {
+      "round": 9,
+      "top_k": 8,
+      "equivalence_key": "8a8636c1105d33471cd9a3e443710eb30d620359f1d2689b8f31d8569a30cee4",
+      "cached": true,
+      "query_sha256": "0a51e7701d10def73e760e0c0df270b4f05021cd0486cfcf8fc06227fb0ca59a",
+      "query": "Man Asian Literary Prize Wikipedia",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"man\" OR \"asian\" OR \"literary\" OR \"prize\" OR \"wikipedia\"",
+        "terms": [
+          "man",
+          "asian",
+          "literary",
+          "prize",
+          "wikipedia"
+        ]
+      }
+    },
+    {
+      "round": 9,
+      "top_k": 8,
+      "equivalence_key": "fceb0cf11e518cc6e51015b30b6c5ee6cc90b92cba8ca8483fdfcf3c7bcfed72",
+      "cached": true,
+      "query_sha256": "457fc027ba46521d3badd514847c86c08726b473ab61e90717cc7f6d130942e7",
+      "query": "Man Asian Literary Prize 2012 shortlist Between Clay and Dust",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"man\" OR \"asian\" OR \"literary\" OR \"prize\" OR \"2012\" OR \"shortlist\" OR \"between\" OR \"clay\" OR \"and\" OR \"dust\"",
+        "terms": [
+          "man",
+          "asian",
+          "literary",
+          "prize",
+          "2012",
+          "shortlist",
+          "between",
+          "clay",
+          "and",
+          "dust"
+        ]
+      }
+    },
+    {
+      "round": 9,
+      "top_k": 8,
+      "equivalence_key": "eb26502082f2213f4d275f664dfb9f2b5845bd3d39ee11dacae7f706fd4b752f",
+      "cached": true,
+      "query_sha256": "ddcc48428f1da834bda8c3b8abb096b35edf435d715f6fc9252ce8f912c40178",
+      "query": "Man Asian Literary Prize 2011 2012 2013 winner",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"man\" OR \"asian\" OR \"literary\" OR \"prize\" OR \"2011\" OR \"2012\" OR \"2013\" OR \"winner\"",
+        "terms": [
+          "man",
+          "asian",
+          "literary",
+          "prize",
+          "2011",
+          "2012",
+          "2013",
+          "winner"
+        ]
+      }
+    },
+    {
+      "round": 11,
+      "top_k": 8,
+      "equivalence_key": "8a8636c1105d33471cd9a3e443710eb30d620359f1d2689b8f31d8569a30cee4",
+      "cached": true,
+      "query_sha256": "0a51e7701d10def73e760e0c0df270b4f05021cd0486cfcf8fc06227fb0ca59a",
+      "query": "Man Asian Literary Prize Wikipedia",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"man\" OR \"asian\" OR \"literary\" OR \"prize\" OR \"wikipedia\"",
+        "terms": [
+          "man",
+          "asian",
+          "literary",
+          "prize",
+          "wikipedia"
+        ]
+      }
+    },
+    {
+      "round": 11,
+      "top_k": 8,
+      "equivalence_key": "fceb0cf11e518cc6e51015b30b6c5ee6cc90b92cba8ca8483fdfcf3c7bcfed72",
+      "cached": true,
+      "query_sha256": "457fc027ba46521d3badd514847c86c08726b473ab61e90717cc7f6d130942e7",
+      "query": "Man Asian Literary Prize 2012 shortlist Between Clay and Dust",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"man\" OR \"asian\" OR \"literary\" OR \"prize\" OR \"2012\" OR \"shortlist\" OR \"between\" OR \"clay\" OR \"and\" OR \"dust\"",
+        "terms": [
+          "man",
+          "asian",
+          "literary",
+          "prize",
+          "2012",
+          "shortlist",
+          "between",
+          "clay",
+          "and",
+          "dust"
+        ]
+      }
+    },
+    {
+      "round": 11,
+      "top_k": 8,
+      "equivalence_key": "eb26502082f2213f4d275f664dfb9f2b5845bd3d39ee11dacae7f706fd4b752f",
+      "cached": true,
+      "query_sha256": "ddcc48428f1da834bda8c3b8abb096b35edf435d715f6fc9252ce8f912c40178",
+      "query": "Man Asian Literary Prize 2011 2012 2013 winner",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"man\" OR \"asian\" OR \"literary\" OR \"prize\" OR \"2011\" OR \"2012\" OR \"2013\" OR \"winner\"",
+        "terms": [
+          "man",
+          "asian",
+          "literary",
+          "prize",
+          "2011",
+          "2012",
+          "2013",
+          "winner"
+        ]
+      }
+    }
+  ],
+  "equivalent_query_repeats": 10,
+  "views": [
+    {
+      "round": 1,
+      "compacted": false,
+      "visible_evidence": [],
+      "shelf": [],
+      "shelf_evicted": []
+    },
+    {
+      "round": 2,
+      "compacted": false,
+      "visible_evidence": [],
+      "shelf": [],
+      "shelf_evicted": []
+    },
+    {
+      "round": 3,
+      "compacted": false,
+      "visible_evidence": [],
+      "shelf": [],
+      "shelf_evicted": []
+    },
+    {
+      "round": 4,
+      "compacted": false,
+      "visible_evidence": [],
+      "shelf": [],
+      "shelf_evicted": []
+    },
+    {
+      "round": 5,
+      "compacted": false,
+      "visible_evidence": [],
+      "shelf": [],
+      "shelf_evicted": []
+    },
+    {
+      "round": 6,
+      "compacted": false,
+      "visible_evidence": [],
+      "shelf": [],
+      "shelf_evicted": []
+    },
+    {
+      "round": 7,
+      "compacted": true,
+      "visible_evidence": [],
+      "shelf": [],
+      "shelf_evicted": []
+    },
+    {
+      "round": 8,
+      "compacted": false,
+      "visible_evidence": [],
+      "shelf": [],
+      "shelf_evicted": []
+    },
+    {
+      "round": 9,
+      "compacted": false,
+      "visible_evidence": [],
+      "shelf": [],
+      "shelf_evicted": []
+    },
+    {
+      "round": 10,
+      "compacted": true,
+      "visible_evidence": [],
+      "shelf": [],
+      "shelf_evicted": []
+    },
+    {
+      "round": 11,
+      "compacted": false,
+      "visible_evidence": [],
+      "shelf": [],
+      "shelf_evicted": []
+    },
+    {
+      "round": 12,
+      "compacted": false,
+      "visible_evidence": [],
+      "shelf": [],
+      "shelf_evicted": []
+    }
+  ],
+  "delivered_refs": [],
+  "submitted_refs": [],
+  "text_included": true,
+  "limitations": [
+    "Equivalence is compiler equality, not semantic identity or wasted-search proof",
+    "Raw-window visibility/selection is not entailment or complete evidence coverage",
+    "No live q26 replay or independent answer scoring is performed"
+  ]
+}

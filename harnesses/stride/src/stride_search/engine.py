@@ -16,7 +16,7 @@ from .providers import ByteCounter, usage_of
 from .recovery import fit_result_group, make_group, note_blocks_finish, remember_response
 from .workflow import WorkflowState, navigation_result, check_search_recovery
 from .workflow_contract import WorkflowConfig, validate_call
-from .decision_protocol import identity as decision_identity
+from .decision_protocol import identity as decision_identity, SearchPivotState
 
 
 class Harness:
@@ -26,6 +26,7 @@ class Harness:
                  workflow: WorkflowConfig | None = None, decision_protocol: str = "baseline"):
         decision_identity(decision_protocol)
         self.decision_protocol = decision_protocol
+        self.search_pivot = SearchPivotState() if decision_protocol == "search-pivot-v1" else None
         self.workflow = WorkflowState(workflow or WorkflowConfig())
         if answer_contract not in ANSWER_CONTRACTS:
             raise ValueError("Unknown answer contract")
@@ -251,6 +252,11 @@ class Harness:
             "final": final, "compacted": plan["compacted"], "capacity": plan["capacity"], "counter": self.counter.identity, "output_reservation": output_limit,
             "evidence_shelf": plan["shelf"], "shelf_evicted_for_capacity": plan["shelf_evicted"], **({"workflow_view": plan["workflow_view"]} if self.workflow.options.enabled else {})})
         start = self.clock()
+        if self.search_pivot is not None:
+            projection = plan["search_pivot_projection"]
+            self.search_pivot.commit(projection)
+            if projection["trigger"] is not None:
+                self.archive.append("search_pivot", {"round": round_no, **projection["trigger"]})
         try: raw = model.send(deepcopy(plan["wire"]))
         except Exception as exc:
             self.output_charged += output_limit; code = exc.code if isinstance(exc, ContractError) else "model_transport"
@@ -311,6 +317,8 @@ class Harness:
         group = make_group(reply.message, records, round_no) if fatal else fit_result_group(self, model, reply.message, records)
         for record in records: self.archive.append("action_result", {k: v for k, v in record.items() if k not in ("documents", "evidence")})
         self.groups.append(group); group_ref = self.archive.put_json(group); self.group_refs.append(group_ref)
+        if self.search_pivot is not None:
+            self.search_pivot.complete(group)
         self.archive.append("round_end", {"round": round_no, "group": group_ref, "notes": self.archive.put_json(sorted(self.notes.values(), key=lambda n: n["order"])), "remaining": self.remaining()})
         self.workflow.complete_decision(workflow_stage)
         if fatal: self._end(fatal)

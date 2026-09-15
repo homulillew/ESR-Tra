@@ -14,6 +14,7 @@ from unittest.mock import patch
 from stride_search import Harness, cli
 from stride_search.archive import Archive
 from stride_search.contract import Config, INTEGER_ANSWER, canonical
+from stride_search.decision_protocol import identity as decision_identity
 from stride_search.cpu_index import SQLiteFTS5
 from stride_search.providers import HTTP
 from stride_search.workflow_contract import WorkflowConfig
@@ -43,6 +44,8 @@ def sources():
               ROOT / 'harnesses/stride/examples/judge_frozen_a3.py',
               Path(__file__).parent.parent / 'field_feedback/live_pilot.py']
     paths += list((ROOT / 'harnesses/stride/tests').glob('test_decision*.py'))
+    paths += [ROOT / 'harnesses/stride/tests/test_search_pivot.py',
+              ROOT / 'harnesses/stride/tests/test_stage_publication.py']
     return {p.relative_to(ROOT).as_posix(): sha(p) for p in sorted(paths)}
 
 
@@ -72,7 +75,8 @@ def prepare(manifest, target, qids, protocol, repeats=1, reverse=False):
         time='Fresh monotonic per slot; 600 seconds; HTTP min(180, remaining seconds).',
         budget='Existing ledger, authorized 1000-call epoch; failed/unknown charged before send; no retries.',
         judge='Project judge, full submitted terminal answers only, after all policy slots sealed.',
-        unique_variable='decision_protocol instruction; same full workflow and all other settings within each pair')
+        decision_protocols={name:decision_identity(name) for name in ['baseline',protocol]},
+        unique_variable='Named decision_protocol instruction/trigger; same full workflow and all other settings within each pair')
     save(target / 'PLAN.json', plan)
     (target / 'PLAN.sha256').write_bytes((sha(target / 'PLAN.json') + '\n').encode())
 

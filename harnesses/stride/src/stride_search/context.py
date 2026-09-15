@@ -59,6 +59,12 @@ def build(harness, model, counter, *, final: bool, output_limit: int, groups=Non
             scope.pop("recent_document_index_not_evidence")
         if config.disclose_retriever:
             scope["retriever_capabilities"] = deepcopy(harness.search_capabilities)
+        pivot = None
+        if harness.search_pivot is not None:
+            pivot = harness.search_pivot.project(history, visible, harness.model_calls,
+                remaining=harness.remaining()["model_calls"], final=effective_final)
+            if pivot["trigger"] is not None:
+                scope["search_pivot"] = pivot["trigger"]
         messages.append({"role": "user", "content": "Current control state (data, not source evidence):\n" + canonical(scope)})
         wire = model.prepare(messages, toolset(harness.workflow.options, notes_enabled=config.notes_enabled, final=effective_final,
             query_limit=config.max_queries_per_search, answer_contract=harness.answer_contract), output_limit)
@@ -69,7 +75,8 @@ def build(harness, model, counter, *, final: bool, output_limit: int, groups=Non
             return {"wire": wire, "visible": sorted(visible, key=lambda r: int(r[1:])), "documents": issued,
                     "compacted": compacted, "groups": history, "capacity": size, "final": effective_final,
                     "workflow_final": workflow_final, "workflow_view": workflow_view,
-                    "rendered_note_keys": [n["key"] for n in active_notes], "shelf": restored, "shelf_evicted": evicted}
+                    "rendered_note_keys": [n["key"] for n in active_notes], "shelf": restored, "shelf_evicted": evicted,
+                    **({"search_pivot_projection": pivot} if pivot is not None else {})}
         if config.context_mode == "full":
             raise ContractError("context_capacity", "Full-history arm cannot fit its actual wire request", fatal=True)
         compacted = True

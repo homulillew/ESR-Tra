@@ -30,11 +30,74 @@ option. Keep checks brief, within the current decision; continue issuing useful
 tool actions. No extra note, gap update, review call, or output field is required.
 """
 
-PROTOCOLS = {'baseline': '', 'constraint-review-v1': CONSTRAINT_REVIEW}
+SEARCH_PIVOT = """The last two search rounds delivered no new source passage. In your next search batch, use one query to investigate a different identifying clue from the question. Omit the current unverified candidate's name from that query. Use concrete names, terms, dates, or relations stated in the question; use a short lexical query rather than the full question. Keep within the existing query limit and proceed directly with tool actions."""
+
+PROTOCOLS = {'baseline': '', 'constraint-review-v1': CONSTRAINT_REVIEW,
+             'search-pivot-v1': ''}
+PIVOT_RULE = {'version': 'completed-search-no-new-source-v1',
+              'consecutive_rounds': 2, 'minimum_remaining_model_calls': 3,
+              'max_triggers': 2, 'reset_after_trigger': True}
 
 
 def identity(name):
     if name not in PROTOCOLS:
         raise ValueError('Unknown decision protocol')
-    return {'version': name, 'instruction_sha256': sha256(PROTOCOLS[name].encode()).hexdigest(),
-            'kind': 'policy_instruction_not_verified_evidence'}
+    instruction = SEARCH_PIVOT if name == 'search-pivot-v1' else PROTOCOLS[name]
+    return {'version': name, 'instruction_sha256': sha256(instruction.encode()).hexdigest(),
+            'kind': 'policy_instruction_not_verified_evidence',
+            **({'trigger_rule': dict(PIVOT_RULE)} if name == 'search-pivot-v1' else {})}
+
+
+class SearchPivotState:
+    """Execution observations survive context eviction; projection never consumes them."""
+
+    def __init__(self):
+        self.completed = {}
+        self.through = 0
+        self.seen = set()
+        self.search_rounds = []
+        self.used = 0
+
+    @staticmethod
+    def observation(group):
+        from .contract import loads
+        names = {call['id']: call['function']['name']
+                 for call in group['messages'][0].get('tool_calls', [])}
+        searched = any(names.get(m.get('tool_call_id')) == 'search'
+                       and loads(m['content']).get('executed', False)
+                       for m in group['messages'] if m['role'] == 'tool')
+        return searched, set(group['evidence'])
+
+    def complete(self, group):
+        self.completed[group['round']] = self.observation(group)
+
+    def project(self, groups, visible, through, *, remaining, final):
+        # Preflight may supply an unfinished group, only as a prospective view.
+        observations = dict(self.completed)
+        observations.update({g['round']: self.observation(g) for g in groups})
+        seen, rounds = set(self.seen), list(self.search_rounds)
+        visible = set(visible)
+        for number in range(self.through + 1, through + 1):
+            searched, evidence = observations.get(number, (False, set()))
+            new = (evidence & visible) - seen
+            seen.update(evidence & visible)
+            rounds = [] if new or not searched else [*rounds, number][-PIVOT_RULE['consecutive_rounds']:]
+        if visible - seen:
+            rounds = []
+        seen.update(visible)
+        trigger = None
+        if (len(rounds) == PIVOT_RULE['consecutive_rounds']
+                and self.used < PIVOT_RULE['max_triggers']
+                and remaining >= PIVOT_RULE['minimum_remaining_model_calls'] and not final):
+            trigger = {'protocol': identity('search-pivot-v1'),
+                       'source_rounds': rounds, 'trigger_number': self.used + 1,
+                       'observation': 'no new source passage', 'instruction': SEARCH_PIVOT}
+        return {'through': through, 'seen': seen, 'search_rounds': rounds, 'trigger': trigger}
+
+    def commit(self, projection):
+        self.through = projection['through']
+        self.seen = set(projection['seen'])
+        self.search_rounds = list(projection['search_rounds'])
+        if projection['trigger'] is not None:
+            self.used += 1
+            self.search_rounds = []
