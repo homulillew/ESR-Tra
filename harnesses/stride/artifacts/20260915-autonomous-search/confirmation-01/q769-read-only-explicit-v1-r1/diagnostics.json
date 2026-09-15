@@ -1,0 +1,692 @@
+{
+  "protocol": "stride-search-3",
+  "head": "f285d1bbee4ea40d9b53de9c00ad38a7589223f522d04754e592782af3553869",
+  "outcome": "submitted",
+  "formal_correct": null,
+  "model_attempts": 8,
+  "backend_attempts": 31,
+  "queries": [
+    {
+      "round": 1,
+      "top_k": 8,
+      "equivalence_key": "73df92254191f8bf6fbbca6cbef9c0212434d07619ae998b2333416330648399",
+      "cached": false,
+      "query_sha256": "6afb8805a81fa05448a3da95e87ccd4553cc9523a27baaf944b9cea140691bae",
+      "query": "graduation ceremony fourth Sunday 2003 educational institution",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"graduation\" OR \"ceremony\" OR \"fourth\" OR \"sunday\" OR \"2003\" OR \"educational\" OR \"institution\"",
+        "terms": [
+          "graduation",
+          "ceremony",
+          "fourth",
+          "sunday",
+          "2003",
+          "educational",
+          "institution"
+        ]
+      }
+    },
+    {
+      "round": 1,
+      "top_k": 8,
+      "equivalence_key": "24984dd24d1203ac01c7d515571bbade6a122fa1d16fd1239f7e5fb1b2232aef",
+      "cached": false,
+      "query_sha256": "3eda1a29e2d2caf80585b5b6d792ead20e46228cba75b0a185a7a9c129e7a225",
+      "query": "three-day event Thursday Saturday 2002 showing support group of people school",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"three\" OR \"day\" OR \"event\" OR \"thursday\" OR \"saturday\" OR \"2002\" OR \"showing\" OR \"support\" OR \"group\" OR \"of\" OR \"people\" OR \"school\"",
+        "terms": [
+          "three",
+          "day",
+          "event",
+          "thursday",
+          "saturday",
+          "2002",
+          "showing",
+          "support",
+          "group",
+          "of",
+          "people",
+          "school"
+        ]
+      }
+    },
+    {
+      "round": 1,
+      "top_k": 8,
+      "equivalence_key": "a6ac54c19f84b7ca2aea1c50b6e6ff797ea8cdf059e591b7d7c514f5ed7e4e65",
+      "cached": false,
+      "query_sha256": "c630cb9b92bb9102dca5b82cd833c00c693a7befb6e454470d1a2527d580bd31",
+      "query": "students trip gather plant samples academic department 2022 article",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"students\" OR \"trip\" OR \"gather\" OR \"plant\" OR \"samples\" OR \"academic\" OR \"department\" OR \"2022\" OR \"article\"",
+        "terms": [
+          "students",
+          "trip",
+          "gather",
+          "plant",
+          "samples",
+          "academic",
+          "department",
+          "2022",
+          "article"
+        ]
+      }
+    },
+    {
+      "round": 2,
+      "top_k": 8,
+      "equivalence_key": "15150536686dc7d109687c532b657da990544ad9eaecdeb2fffa63ee78cb2bc3",
+      "cached": false,
+      "query_sha256": "382177e5988ec6399b23a1d3eb9c77c256f802c2a62102187c21ea091bafe656",
+      "query": "Queen Arwa University 2002 three day event support",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"queen\" OR \"arwa\" OR \"university\" OR \"2002\" OR \"three\" OR \"day\" OR \"event\" OR \"support\"",
+        "terms": [
+          "queen",
+          "arwa",
+          "university",
+          "2002",
+          "three",
+          "day",
+          "event",
+          "support"
+        ]
+      }
+    },
+    {
+      "round": 2,
+      "top_k": 8,
+      "equivalence_key": "097bd1e3782b457c84d0849ea36468d8965a4de9d971bc27926fca487397966d",
+      "cached": false,
+      "query_sha256": "e74a240471daa064ca2729da237b2d5bc2ed2a323e5c5cdf5f0f461671a7026b",
+      "query": "Queen Arwa University students plant samples trip 2022",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"queen\" OR \"arwa\" OR \"university\" OR \"students\" OR \"plant\" OR \"samples\" OR \"trip\" OR \"2022\"",
+        "terms": [
+          "queen",
+          "arwa",
+          "university",
+          "students",
+          "plant",
+          "samples",
+          "trip",
+          "2022"
+        ]
+      }
+    },
+    {
+      "round": 2,
+      "top_k": 8,
+      "equivalence_key": "613d4994e6b58b6596bdca40a33a84406088bffcfc89ee4f93cd0eb21c0411cf",
+      "cached": false,
+      "query_sha256": "28f06856e2a387e480a29aa7cc5cec0d4b75c41e46de1edffa01096605e2cee4",
+      "query": "Queen Arwa University Sanaa Yemen",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"queen\" OR \"arwa\" OR \"university\" OR \"sanaa\" OR \"yemen\"",
+        "terms": [
+          "queen",
+          "arwa",
+          "university",
+          "sanaa",
+          "yemen"
+        ]
+      }
+    },
+    {
+      "round": 3,
+      "top_k": 8,
+      "equivalence_key": "dae1b243efb1f4b98cf5190da2c7ed9e7870eabfce7a2d564a98c4b43820cb8e",
+      "cached": false,
+      "query_sha256": "377923e8445c9adc55f0ada69f24e9c0ee3801131b4644f7c1bdb68e9ca0693e",
+      "query": "Queen Arwa University 2022 students trip plant samples department",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"queen\" OR \"arwa\" OR \"university\" OR \"2022\" OR \"students\" OR \"trip\" OR \"plant\" OR \"samples\" OR \"department\"",
+        "terms": [
+          "queen",
+          "arwa",
+          "university",
+          "2022",
+          "students",
+          "trip",
+          "plant",
+          "samples",
+          "department"
+        ]
+      }
+    },
+    {
+      "round": 3,
+      "top_k": 8,
+      "equivalence_key": "b395abe28056b1d2169cde3c77d03a9a2f0e1700bc182d2e9a8f0c7baea1f1af",
+      "cached": false,
+      "query_sha256": "6ac373b739e99067f54a235f6977d138240ba7452f7669ab474c083ed1460900",
+      "query": "Queen Arwa University botany plant collection field trip",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"queen\" OR \"arwa\" OR \"university\" OR \"botany\" OR \"plant\" OR \"collection\" OR \"field\" OR \"trip\"",
+        "terms": [
+          "queen",
+          "arwa",
+          "university",
+          "botany",
+          "plant",
+          "collection",
+          "field",
+          "trip"
+        ]
+      }
+    },
+    {
+      "round": 3,
+      "top_k": 8,
+      "equivalence_key": "efcd3cfd0653bf3f456de3e867a3359b2d793a2dd3f7ec4ee5b3f70ac881bf95",
+      "cached": false,
+      "query_sha256": "81f23edc4bcf3e1691bd609a4ae3f3fd7a7c406a353274cab4c2afb25039fe5c",
+      "query": "Queen Arwa University science department students gather plants 2022",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"queen\" OR \"arwa\" OR \"university\" OR \"science\" OR \"department\" OR \"students\" OR \"gather\" OR \"plants\" OR \"2022\"",
+        "terms": [
+          "queen",
+          "arwa",
+          "university",
+          "science",
+          "department",
+          "students",
+          "gather",
+          "plants",
+          "2022"
+        ]
+      }
+    },
+    {
+      "round": 4,
+      "top_k": 8,
+      "equivalence_key": "bf35ad67e793ef35b15993227db1bcbbaeb27141c00705375a9a62506e73841e",
+      "cached": false,
+      "query_sha256": "631d37d7039627da81bfafc14d654283cc811d4a36a20dd342ca0d5cc1b1bac5",
+      "query": "queenarwa.edu.ye 2022 plant samples trip students",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"queenarwa\" OR \"edu\" OR \"ye\" OR \"2022\" OR \"plant\" OR \"samples\" OR \"trip\" OR \"students\"",
+        "terms": [
+          "queenarwa",
+          "edu",
+          "ye",
+          "2022",
+          "plant",
+          "samples",
+          "trip",
+          "students"
+        ]
+      }
+    },
+    {
+      "round": 4,
+      "top_k": 8,
+      "equivalence_key": "8e76c11dfad46ebf48460384bd0937f6f9be809638de9057618a50af64f45eed",
+      "cached": false,
+      "query_sha256": "19d3917a6f02bea206b3ad4c9bb26e230bef639cf8e9b2febfb2dfe879d55386",
+      "query": "Queen Arwa University website 2022 students field trip plants",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"queen\" OR \"arwa\" OR \"university\" OR \"website\" OR \"2022\" OR \"students\" OR \"field\" OR \"trip\" OR \"plants\"",
+        "terms": [
+          "queen",
+          "arwa",
+          "university",
+          "website",
+          "2022",
+          "students",
+          "field",
+          "trip",
+          "plants"
+        ]
+      }
+    },
+    {
+      "round": 4,
+      "top_k": 8,
+      "equivalence_key": "81147280fa09b67ce250ee43b2d6aaa1188389d349d76190fe86ee39df91040a",
+      "cached": false,
+      "query_sha256": "f1377e3bf9382c3f14fb77a4004f4db9e8e032f393eac27ec7f44cb0ef49ccbd",
+      "query": "queenarwa.edu.ye botany students collect plants",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"queenarwa\" OR \"edu\" OR \"ye\" OR \"botany\" OR \"students\" OR \"collect\" OR \"plants\"",
+        "terms": [
+          "queenarwa",
+          "edu",
+          "ye",
+          "botany",
+          "students",
+          "collect",
+          "plants"
+        ]
+      }
+    },
+    {
+      "round": 4,
+      "top_k": 8,
+      "equivalence_key": "f6990ddb0811cdab7dcdc6891a6bbd8623b898703d67bbfc02fa57d3bd5f2589",
+      "cached": false,
+      "query_sha256": "a959da33d57fff799f668d32cf4d651d69a6c58c84ed0b0a63d714280b812885",
+      "query": "Queen Arwa University ceremony bank management tribute 2022",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"queen\" OR \"arwa\" OR \"university\" OR \"ceremony\" OR \"bank\" OR \"management\" OR \"tribute\" OR \"2022\"",
+        "terms": [
+          "queen",
+          "arwa",
+          "university",
+          "ceremony",
+          "bank",
+          "management",
+          "tribute",
+          "2022"
+        ]
+      }
+    },
+    {
+      "round": 4,
+      "top_k": 8,
+      "equivalence_key": "789ee5a75bcee5e53f2611c09bcaf2a0d001329509784fba85fb0aab1b167c80",
+      "cached": false,
+      "query_sha256": "15dc0f0291f37e4db441aa4a26c9ae0f5697dd5d09eaf6c6a6b7c0555056a96b",
+      "query": "Queen Arwa University honoring bank officials 2022",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"queen\" OR \"arwa\" OR \"university\" OR \"honoring\" OR \"bank\" OR \"officials\" OR \"2022\"",
+        "terms": [
+          "queen",
+          "arwa",
+          "university",
+          "honoring",
+          "bank",
+          "officials",
+          "2022"
+        ]
+      }
+    },
+    {
+      "round": 4,
+      "top_k": 8,
+      "equivalence_key": "69850792bc79c33d8e39547e02c222a46d4f0e7d1a12fa34c483953b57f52123",
+      "cached": false,
+      "query_sha256": "1b0000f412099d7002cd05ebfd170a0419adf0845f3e40c33a712bca016c757c",
+      "query": "Queen Arwa University faculty science ceremony bank",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"queen\" OR \"arwa\" OR \"university\" OR \"faculty\" OR \"science\" OR \"ceremony\" OR \"bank\"",
+        "terms": [
+          "queen",
+          "arwa",
+          "university",
+          "faculty",
+          "science",
+          "ceremony",
+          "bank"
+        ]
+      }
+    },
+    {
+      "round": 5,
+      "top_k": 10,
+      "equivalence_key": "4900c1bcdd36dafc36d8e5e2958dd92ab8dc262c2eec69cbdaee3ba82fac026a",
+      "cached": false,
+      "query_sha256": "e50177f11fce5603ad19ff253e3f21f48c9c490cdc414e3f1c0feb94c26a238d",
+      "query": "queenarwa.edu.ye 2022",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"queenarwa\" OR \"edu\" OR \"ye\" OR \"2022\"",
+        "terms": [
+          "queenarwa",
+          "edu",
+          "ye",
+          "2022"
+        ]
+      }
+    },
+    {
+      "round": 5,
+      "top_k": 10,
+      "equivalence_key": "80d4be8e48a5d55c6328f63631ce295ec931de575790eeccd1b84ca99d4d112c",
+      "cached": false,
+      "query_sha256": "c3a91512292f88a5ef184beaab382567e8d55d76f93879e5819cef2fe075d6fd",
+      "query": "site queenarwa.edu.ye news 2022",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"site\" OR \"queenarwa\" OR \"edu\" OR \"ye\" OR \"news\" OR \"2022\"",
+        "terms": [
+          "site",
+          "queenarwa",
+          "edu",
+          "ye",
+          "news",
+          "2022"
+        ]
+      }
+    },
+    {
+      "round": 5,
+      "top_k": 10,
+      "equivalence_key": "4afcce272d29b26db55ba637e6939b2a8559b25d378f1e26daf37f45d52cdd4a",
+      "cached": false,
+      "query_sha256": "8ee373e8aaf18d13a3e33cc85047d13ef88a941975854eb12b0cea356f56f20a",
+      "query": "Queen Arwa University Yemen website news 2022",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"queen\" OR \"arwa\" OR \"university\" OR \"yemen\" OR \"website\" OR \"news\" OR \"2022\"",
+        "terms": [
+          "queen",
+          "arwa",
+          "university",
+          "yemen",
+          "website",
+          "news",
+          "2022"
+        ]
+      }
+    },
+    {
+      "round": 5,
+      "top_k": 10,
+      "equivalence_key": "1be788aa33e4ec7d66f7c225f388704d07b094280f0f3beef6d57b6e1e519737",
+      "cached": false,
+      "query_sha256": "8e4a14ecce4b338041b9c3f8b48d96284646d95e4f1f5d876ada9bee4e42232e",
+      "query": "Queen Arwa University Sanaa 2022 ceremony honoring bank",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"queen\" OR \"arwa\" OR \"university\" OR \"sanaa\" OR \"2022\" OR \"ceremony\" OR \"honoring\" OR \"bank\"",
+        "terms": [
+          "queen",
+          "arwa",
+          "university",
+          "sanaa",
+          "2022",
+          "ceremony",
+          "honoring",
+          "bank"
+        ]
+      }
+    },
+    {
+      "round": 5,
+      "top_k": 10,
+      "equivalence_key": "a500ee80bf0479f36f01841c341c526cb451441000329dfd537eddbbb19bf75a",
+      "cached": false,
+      "query_sha256": "8539c201049294db5f16f4ea25fee89d5eac5c0e83e850087cddce6b6b1716c0",
+      "query": "Queen Arwa University 2022 tribute bank management president",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"queen\" OR \"arwa\" OR \"university\" OR \"2022\" OR \"tribute\" OR \"bank\" OR \"management\" OR \"president\"",
+        "terms": [
+          "queen",
+          "arwa",
+          "university",
+          "2022",
+          "tribute",
+          "bank",
+          "management",
+          "president"
+        ]
+      }
+    },
+    {
+      "round": 5,
+      "top_k": 10,
+      "equivalence_key": "636e7fdace9d3eaa99b403e0c2084653594ef4af1605607b5897bf994907c35e",
+      "cached": false,
+      "query_sha256": "154bbb64ddcc300105143b2e8826846206e32401cb9728df5ab815bba4233cfc",
+      "query": "Queen Arwa University Yemen 2022 honoring ceremony bank",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"queen\" OR \"arwa\" OR \"university\" OR \"yemen\" OR \"2022\" OR \"honoring\" OR \"ceremony\" OR \"bank\"",
+        "terms": [
+          "queen",
+          "arwa",
+          "university",
+          "yemen",
+          "2022",
+          "honoring",
+          "ceremony",
+          "bank"
+        ]
+      }
+    },
+    {
+      "round": 6,
+      "top_k": 10,
+      "equivalence_key": "192e3e75d39cf764631eb19e8dabf7ae37fbd351865caaa1756b05e3e3ad7bfe",
+      "cached": false,
+      "query_sha256": "0428ae0aa54952d7487fe471f5d70e1365d6640912362653117117e2498537a8",
+      "query": "queenarwa.edu.ye",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"queenarwa\" OR \"edu\" OR \"ye\"",
+        "terms": [
+          "queenarwa",
+          "edu",
+          "ye"
+        ]
+      }
+    },
+    {
+      "round": 6,
+      "top_k": 10,
+      "equivalence_key": "d87b8971efe90a837447828312ac67fc5554f9a020640ac31fe1f5715a06751f",
+      "cached": false,
+      "query_sha256": "e76a960a2fdcda9dfd4ca6ddb38d297ec95d47007218c274a0bfa1bc5e20e3c1",
+      "query": "Queen Arwa University website Sanaa",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"queen\" OR \"arwa\" OR \"university\" OR \"website\" OR \"sanaa\"",
+        "terms": [
+          "queen",
+          "arwa",
+          "university",
+          "website",
+          "sanaa"
+        ]
+      }
+    },
+    {
+      "round": 6,
+      "top_k": 10,
+      "equivalence_key": "7956db7d8cf198f5ba24d71919fc4f73b0271353519505f5848da2b571cb740b",
+      "cached": false,
+      "query_sha256": "ee24f2eab79c55746274c712b41927c85740c13d6028e30a384640ac26a019bd",
+      "query": "جامعة الملكة أروى موقع",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"جامعة\" OR \"الملكة\" OR \"أروى\" OR \"موقع\"",
+        "terms": [
+          "جامعة",
+          "الملكة",
+          "أروى",
+          "موقع"
+        ]
+      }
+    },
+    {
+      "round": 6,
+      "top_k": 10,
+      "equivalence_key": "39a95203ac19fb838321d43d52f99957ec868e1fbd0123a3c94f1095376bf9ea",
+      "cached": false,
+      "query_sha256": "c9d11f164b354a92b65f8493b29996867c696855638440b3a9efea09cb70dc3d",
+      "query": "Queen Arwa University botany plant samples trip students",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"queen\" OR \"arwa\" OR \"university\" OR \"botany\" OR \"plant\" OR \"samples\" OR \"trip\" OR \"students\"",
+        "terms": [
+          "queen",
+          "arwa",
+          "university",
+          "botany",
+          "plant",
+          "samples",
+          "trip",
+          "students"
+        ]
+      }
+    },
+    {
+      "round": 6,
+      "top_k": 10,
+      "equivalence_key": "fd7cfa6f9533210b914af67936b5b5785389729c0ae9f0cb8f337b28cff9fe4e",
+      "cached": false,
+      "query_sha256": "f5db5db4f2b740d4731d95c7c67e9c823e88a8bed0fefb4d404d439c4b4be378",
+      "query": "Queen Arwa University science college field trip plants 2022",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"queen\" OR \"arwa\" OR \"university\" OR \"science\" OR \"college\" OR \"field\" OR \"trip\" OR \"plants\" OR \"2022\"",
+        "terms": [
+          "queen",
+          "arwa",
+          "university",
+          "science",
+          "college",
+          "field",
+          "trip",
+          "plants",
+          "2022"
+        ]
+      }
+    },
+    {
+      "round": 6,
+      "top_k": 10,
+      "equivalence_key": "8ea48cac830fe5fbe7f1deaf551ac2e4e7cff535c7970045f4214359e61be048",
+      "cached": false,
+      "query_sha256": "20c1dd55385732467a74c024f5ad2fe6d52f017912b1905574c599c40441550e",
+      "query": "جامعة الملكة أروى نباتات عينات رحلة",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"جامعة\" OR \"الملكة\" OR \"أروى\" OR \"نباتات\" OR \"عينات\" OR \"رحلة\"",
+        "terms": [
+          "جامعة",
+          "الملكة",
+          "أروى",
+          "نباتات",
+          "عينات",
+          "رحلة"
+        ]
+      }
+    }
+  ],
+  "equivalent_query_repeats": 0,
+  "views": [
+    {
+      "round": 1,
+      "compacted": false,
+      "visible_evidence": [],
+      "shelf": [],
+      "shelf_evicted": []
+    },
+    {
+      "round": 2,
+      "compacted": false,
+      "visible_evidence": [],
+      "shelf": [],
+      "shelf_evicted": []
+    },
+    {
+      "round": 3,
+      "compacted": false,
+      "visible_evidence": [
+        "e1"
+      ],
+      "shelf": [],
+      "shelf_evicted": []
+    },
+    {
+      "round": 4,
+      "compacted": false,
+      "visible_evidence": [
+        "e1",
+        "e2"
+      ],
+      "shelf": [],
+      "shelf_evicted": []
+    },
+    {
+      "round": 5,
+      "compacted": true,
+      "visible_evidence": [
+        "e1",
+        "e2"
+      ],
+      "shelf": [
+        "e1"
+      ],
+      "shelf_evicted": []
+    },
+    {
+      "round": 6,
+      "compacted": true,
+      "visible_evidence": [
+        "e1",
+        "e2"
+      ],
+      "shelf": [
+        "e1",
+        "e2"
+      ],
+      "shelf_evicted": []
+    },
+    {
+      "round": 7,
+      "compacted": true,
+      "visible_evidence": [
+        "e1",
+        "e2"
+      ],
+      "shelf": [
+        "e1",
+        "e2"
+      ],
+      "shelf_evicted": []
+    },
+    {
+      "round": 8,
+      "compacted": false,
+      "visible_evidence": [
+        "e1",
+        "e2",
+        "e3",
+        "e4"
+      ],
+      "shelf": [
+        "e1",
+        "e2"
+      ],
+      "shelf_evicted": []
+    }
+  ],
+  "delivered_refs": [
+    "e1",
+    "e2",
+    "e3",
+    "e4"
+  ],
+  "submitted_refs": [
+    "e2",
+    "e1",
+    "e3",
+    "e4"
+  ],
+  "text_included": true,
+  "limitations": [
+    "Equivalence is compiler equality, not semantic identity or wasted-search proof",
+    "Raw-window visibility/selection is not entailment or complete evidence coverage",
+    "No live q26 replay or independent answer scoring is performed"
+  ]
+}

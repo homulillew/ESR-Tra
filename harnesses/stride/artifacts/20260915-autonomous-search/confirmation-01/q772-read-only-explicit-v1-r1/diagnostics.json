@@ -1,0 +1,374 @@
+{
+  "protocol": "stride-search-3",
+  "head": "3947d97736c74341a033054870e13756c9f5cf7450321dd80dac57fba2f70129",
+  "outcome": "submitted",
+  "formal_correct": null,
+  "model_attempts": 7,
+  "backend_attempts": 14,
+  "queries": [
+    {
+      "round": 1,
+      "top_k": 8,
+      "equivalence_key": "4168f234b9d2cedea9058960be4dae7f1f3b528fe982d8a6a9456480f8311a2b",
+      "cached": false,
+      "query_sha256": "67d62d1c6a46428878b9b7adbec7ef2ed2b0700c9bafc2ab82c90fa38b572829",
+      "query": "township established 1960s migrant workers streets renamed prefix",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"township\" OR \"established\" OR \"1960s\" OR \"migrant\" OR \"workers\" OR \"streets\" OR \"renamed\" OR \"prefix\"",
+        "terms": [
+          "township",
+          "established",
+          "1960s",
+          "migrant",
+          "workers",
+          "streets",
+          "renamed",
+          "prefix"
+        ]
+      }
+    },
+    {
+      "round": 1,
+      "top_k": 8,
+      "equivalence_key": "82e0ca058aa546a0b7e95ed92ce9b41d069c377140f9c7750178d7937cd12b75",
+      "cached": false,
+      "query_sha256": "28ae1464b686b55fd277d1ef6af66dbe2153fa91bb4792e211d64558b7d201bd",
+      "query": "township 1960s migrant workers street names prefix renamed late 2010s",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"township\" OR \"1960s\" OR \"migrant\" OR \"workers\" OR \"street\" OR \"names\" OR \"prefix\" OR \"renamed\" OR \"late\" OR \"2010s\"",
+        "terms": [
+          "township",
+          "1960s",
+          "migrant",
+          "workers",
+          "street",
+          "names",
+          "prefix",
+          "renamed",
+          "late",
+          "2010s"
+        ]
+      }
+    },
+    {
+      "round": 1,
+      "top_k": 8,
+      "equivalence_key": "e951661b77eaa400e50b01f6fdac435e94b93669bc9a28f8fd95dcbd428b70ec",
+      "cached": false,
+      "query_sha256": "c27839eab951ee7320dd70e027102bb067b0c3dd8a897aa9645329393793dbf1",
+      "query": "South Africa township established 1960s migrant workers streets numbered prefix",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"south\" OR \"africa\" OR \"township\" OR \"established\" OR \"1960s\" OR \"migrant\" OR \"workers\" OR \"streets\" OR \"numbered\" OR \"prefix\"",
+        "terms": [
+          "south",
+          "africa",
+          "township",
+          "established",
+          "1960s",
+          "migrant",
+          "workers",
+          "streets",
+          "numbered",
+          "prefix"
+        ]
+      }
+    },
+    {
+      "round": 2,
+      "top_k": 8,
+      "equivalence_key": "a2529b6a8625ded87b5cdea8945bf0a43669e44821ad1571b43f021f3c0bcf53",
+      "cached": false,
+      "query_sha256": "28ebf9621ed83760a64d3f16de19d96793390a06e026c4166d5cdc59463d52f6",
+      "query": "Gugulethu NY streets renamed prefix NY1 NY2",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"gugulethu\" OR \"ny\" OR \"streets\" OR \"renamed\" OR \"prefix\" OR \"ny1\" OR \"ny2\"",
+        "terms": [
+          "gugulethu",
+          "ny",
+          "streets",
+          "renamed",
+          "prefix",
+          "ny1",
+          "ny2"
+        ]
+      }
+    },
+    {
+      "round": 2,
+      "top_k": 8,
+      "equivalence_key": "904a6d630ccf0dcdfa05309f14938b0a5c1ba9f113a22c0ac400ed83acb9f543",
+      "cached": false,
+      "query_sha256": "b56041b73213a787c80e562f98023f89e3d9382af4921ffb4c9bb987110aca95",
+      "query": "Gugulethu street names NY prefix renamed 2018 2019",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"gugulethu\" OR \"street\" OR \"names\" OR \"ny\" OR \"prefix\" OR \"renamed\" OR \"2018\" OR \"2019\"",
+        "terms": [
+          "gugulethu",
+          "street",
+          "names",
+          "ny",
+          "prefix",
+          "renamed",
+          "2018",
+          "2019"
+        ]
+      }
+    },
+    {
+      "round": 2,
+      "top_k": 8,
+      "equivalence_key": "7cd87c371fdb20c1916afa19ddf3276e8e40ff5536f84640531fa65ca448d54f",
+      "cached": false,
+      "query_sha256": "0349a16978d256f5dd77ace2522a0fad7633352a0b7ea50b3c2066efde0b7476",
+      "query": "Gugulethu township streets NY numbering renamed article",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"gugulethu\" OR \"township\" OR \"streets\" OR \"ny\" OR \"numbering\" OR \"renamed\" OR \"article\"",
+        "terms": [
+          "gugulethu",
+          "township",
+          "streets",
+          "ny",
+          "numbering",
+          "renamed",
+          "article"
+        ]
+      }
+    },
+    {
+      "round": 2,
+      "top_k": 6,
+      "equivalence_key": "57cd2455bae062076cdf69f2170ea00b40047ac01e80d7d6e4a43ca1bacc0083",
+      "cached": false,
+      "query_sha256": "2e8a38158dd3eb0f05dcc592df424e8d45a6f247321490f86aa3cd7ec944743f",
+      "query": "township streets named NY prefix renamed Gugulethu",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"township\" OR \"streets\" OR \"named\" OR \"ny\" OR \"prefix\" OR \"renamed\" OR \"gugulethu\"",
+        "terms": [
+          "township",
+          "streets",
+          "named",
+          "ny",
+          "prefix",
+          "renamed",
+          "gugulethu"
+        ]
+      }
+    },
+    {
+      "round": 2,
+      "top_k": 6,
+      "equivalence_key": "d8a1c49c654d355eaeed2a25f6c4d6b104316df986f62d505fbb0cfbeafd44de",
+      "cached": false,
+      "query_sha256": "bb9388996796af6da8ee051404762932cef98da743f37ce407dda7a90a77ee4b",
+      "query": "Cape Town township NY1 NY2 NY3 streets renamed",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"cape\" OR \"town\" OR \"township\" OR \"ny1\" OR \"ny2\" OR \"ny3\" OR \"streets\" OR \"renamed\"",
+        "terms": [
+          "cape",
+          "town",
+          "township",
+          "ny1",
+          "ny2",
+          "ny3",
+          "streets",
+          "renamed"
+        ]
+      }
+    },
+    {
+      "round": 3,
+      "top_k": 8,
+      "equivalence_key": "8457ceb5cb6a34de08ce1c8078835e76f4b0bad2bc085d43bd32e8d8bc96e2bc",
+      "cached": false,
+      "query_sha256": "2e49618560ad895f179f1bcf177fb01feba2f05c0775b7d25bf533e0ff8f2324",
+      "query": "Gugulethu school established 1980s started in church longest serving employee",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"gugulethu\" OR \"school\" OR \"established\" OR \"1980s\" OR \"started\" OR \"in\" OR \"church\" OR \"longest\" OR \"serving\" OR \"employee\"",
+        "terms": [
+          "gugulethu",
+          "school",
+          "established",
+          "1980s",
+          "started",
+          "in",
+          "church",
+          "longest",
+          "serving",
+          "employee"
+        ]
+      }
+    },
+    {
+      "round": 3,
+      "top_k": 8,
+      "equivalence_key": "80696237e059687f3bfbe4a7c87b51a3121e0d0dc9bb26a79e66cba3267b2b2c",
+      "cached": false,
+      "query_sha256": "62f3373d617f1a499187d0bd40574bc4ae3c3a4b23fd070f7f6fa6cbff7936dd",
+      "query": "Gugulethu school 1980s church history article 2020 2021 2022",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"gugulethu\" OR \"school\" OR \"1980s\" OR \"church\" OR \"history\" OR \"article\" OR \"2020\" OR \"2021\" OR \"2022\"",
+        "terms": [
+          "gugulethu",
+          "school",
+          "1980s",
+          "church",
+          "history",
+          "article",
+          "2020",
+          "2021",
+          "2022"
+        ]
+      }
+    },
+    {
+      "round": 3,
+      "top_k": 8,
+      "equivalence_key": "b99aece768c580652c7707c02988d5a6e1ffb0d986f76d20c1b4ed89e042a145",
+      "cached": false,
+      "query_sha256": "74f905228775518f722b9b00d3a48bad901528a4e16379198e44cb03c648c063",
+      "query": "school started in church Gugulethu 1980s longest serving staff member",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"school\" OR \"started\" OR \"in\" OR \"church\" OR \"gugulethu\" OR \"1980s\" OR \"longest\" OR \"serving\" OR \"staff\" OR \"member\"",
+        "terms": [
+          "school",
+          "started",
+          "in",
+          "church",
+          "gugulethu",
+          "1980s",
+          "longest",
+          "serving",
+          "staff",
+          "member"
+        ]
+      }
+    },
+    {
+      "round": 3,
+      "top_k": 6,
+      "equivalence_key": "49d199009b40ab134cd02622d221a9d2c79c575756de89f6eeccd74c58d49d85",
+      "cached": false,
+      "query_sha256": "0bb1f11db6ee28bdc3afadcee850c46870c3a65b96c9a60377147587ef8f2b19",
+      "query": "Gugulethu school founded 1980s church longest serving employee role",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"gugulethu\" OR \"school\" OR \"founded\" OR \"1980s\" OR \"church\" OR \"longest\" OR \"serving\" OR \"employee\" OR \"role\"",
+        "terms": [
+          "gugulethu",
+          "school",
+          "founded",
+          "1980s",
+          "church",
+          "longest",
+          "serving",
+          "employee",
+          "role"
+        ]
+      }
+    },
+    {
+      "round": 3,
+      "top_k": 6,
+      "equivalence_key": "b458a3eed6db2f60bb7fed4ef18e3cdbd68cb9e50dc077d30dc1e408cbf233a2",
+      "cached": false,
+      "query_sha256": "65d282cd3a54fbc2a25833f147630556d20433e392f4d111d64e571e07b56e21",
+      "query": "Gugulethu school history started church 1980s article",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"gugulethu\" OR \"school\" OR \"history\" OR \"started\" OR \"church\" OR \"1980s\" OR \"article\"",
+        "terms": [
+          "gugulethu",
+          "school",
+          "history",
+          "started",
+          "church",
+          "1980s",
+          "article"
+        ]
+      }
+    }
+  ],
+  "equivalent_query_repeats": 0,
+  "views": [
+    {
+      "round": 1,
+      "compacted": false,
+      "visible_evidence": [],
+      "shelf": [],
+      "shelf_evicted": []
+    },
+    {
+      "round": 2,
+      "compacted": false,
+      "visible_evidence": [],
+      "shelf": [],
+      "shelf_evicted": []
+    },
+    {
+      "round": 3,
+      "compacted": false,
+      "visible_evidence": [],
+      "shelf": [],
+      "shelf_evicted": []
+    },
+    {
+      "round": 4,
+      "compacted": false,
+      "visible_evidence": [],
+      "shelf": [],
+      "shelf_evicted": []
+    },
+    {
+      "round": 5,
+      "compacted": false,
+      "visible_evidence": [
+        "e1"
+      ],
+      "shelf": [],
+      "shelf_evicted": []
+    },
+    {
+      "round": 6,
+      "compacted": false,
+      "visible_evidence": [
+        "e1"
+      ],
+      "shelf": [],
+      "shelf_evicted": []
+    },
+    {
+      "round": 7,
+      "compacted": true,
+      "visible_evidence": [
+        "e1",
+        "e2"
+      ],
+      "shelf": [],
+      "shelf_evicted": []
+    }
+  ],
+  "delivered_refs": [
+    "e1",
+    "e2"
+  ],
+  "submitted_refs": [
+    "e2"
+  ],
+  "text_included": true,
+  "limitations": [
+    "Equivalence is compiler equality, not semantic identity or wasted-search proof",
+    "Raw-window visibility/selection is not entailment or complete evidence coverage",
+    "No live q26 replay or independent answer scoring is performed"
+  ]
+}

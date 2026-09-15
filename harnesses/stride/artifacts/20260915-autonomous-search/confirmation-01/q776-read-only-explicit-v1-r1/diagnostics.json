@@ -1,0 +1,931 @@
+{
+  "protocol": "stride-search-3",
+  "head": "80b0cb9d168dbf4a553cfefba14a500f7186a3f45e136bf94019a357a4407b80",
+  "outcome": "submitted",
+  "formal_correct": null,
+  "model_attempts": 16,
+  "backend_attempts": 31,
+  "queries": [
+    {
+      "round": 1,
+      "top_k": 10,
+      "equivalence_key": "65d06e321f15d1ce27701854af1e1b3d597e7653f2b524e7214d99ee9ea08fd3",
+      "cached": false,
+      "query_sha256": "fea76cd49957f1c337e30ba47e04622c8633cf135dba67ee361854992ac14d3b",
+      "query": "born 1886 mistaken for shaman trip 1915 word misuse foreign language",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"born\" OR \"1886\" OR \"mistaken\" OR \"for\" OR \"shaman\" OR \"trip\" OR \"1915\" OR \"word\" OR \"misuse\" OR \"foreign\" OR \"language\"",
+        "terms": [
+          "born",
+          "1886",
+          "mistaken",
+          "for",
+          "shaman",
+          "trip",
+          "1915",
+          "word",
+          "misuse",
+          "foreign",
+          "language"
+        ]
+      }
+    },
+    {
+      "round": 1,
+      "top_k": 10,
+      "equivalence_key": "c83c2c96a910bcea7de49eab8e07fd3311f318b1c539a9515d068ab2793a07f9",
+      "cached": false,
+      "query_sha256": "c8138f10d774e75e75170e2540a250e5d08f33c56a3292f5f9ea8c203562f095",
+      "query": "shaman mistaken 1915 trip anthropologist born 1886",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"shaman\" OR \"mistaken\" OR \"1915\" OR \"trip\" OR \"anthropologist\" OR \"born\" OR \"1886\"",
+        "terms": [
+          "shaman",
+          "mistaken",
+          "1915",
+          "trip",
+          "anthropologist",
+          "born",
+          "1886"
+        ]
+      }
+    },
+    {
+      "round": 1,
+      "top_k": 10,
+      "equivalence_key": "91f4ecee3578d323eae12c5df83b766c05b0ae717c75af4eec4437cd19984a38",
+      "cached": false,
+      "query_sha256": "92651e7b2ab5f2a89662eadcbae0f7a25d37c024c330f6139c6974d20d3436f0",
+      "query": "encouraged report cultural discoveries 1940 quarterly journal 1888",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"encouraged\" OR \"report\" OR \"cultural\" OR \"discoveries\" OR \"1940\" OR \"quarterly\" OR \"journal\" OR \"1888\"",
+        "terms": [
+          "encouraged",
+          "report",
+          "cultural",
+          "discoveries",
+          "1940",
+          "quarterly",
+          "journal",
+          "1888"
+        ]
+      }
+    },
+    {
+      "round": 3,
+      "top_k": 10,
+      "equivalence_key": "6b1836740944abeb119505acb8076e16d6c8f6d2327d564fa74154b3876a5255",
+      "cached": false,
+      "query_sha256": "14d72c9fe3bca6167a22cf841980db3e5df166a41fc1924f6de0a64020bd81c6",
+      "query": "Diamond Jenness shaman mistaken word misuse Inuit language",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"diamond\" OR \"jenness\" OR \"shaman\" OR \"mistaken\" OR \"word\" OR \"misuse\" OR \"inuit\" OR \"language\"",
+        "terms": [
+          "diamond",
+          "jenness",
+          "shaman",
+          "mistaken",
+          "word",
+          "misuse",
+          "inuit",
+          "language"
+        ]
+      }
+    },
+    {
+      "round": 3,
+      "top_k": 10,
+      "equivalence_key": "f2b5aa9385fb58e76e7c570f591d1278fbd6ea1c1e3e40e2b6e6ecd0d4e0a8d4",
+      "cached": false,
+      "query_sha256": "024f34acea56619cbd538e8b780d9e7ca7060453b05cde10556f3ec30f80681b",
+      "query": "Diamond Jenness angakok shaman 1915 Copper Inuit",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"diamond\" OR \"jenness\" OR \"angakok\" OR \"shaman\" OR \"1915\" OR \"copper\" OR \"inuit\"",
+        "terms": [
+          "diamond",
+          "jenness",
+          "angakok",
+          "shaman",
+          "1915",
+          "copper",
+          "inuit"
+        ]
+      }
+    },
+    {
+      "round": 3,
+      "top_k": 10,
+      "equivalence_key": "31b14bbcf98397f79ca1813ec93e57699312725a782b528ddec016f1caf8b5b1",
+      "cached": false,
+      "query_sha256": "cee5bf4dce6f99cadfdf29377840f9f51acfd4b05556e5e104ef75fcf6a3979e",
+      "query": "Diamond Jenness encouraged report 1940 cultural discoveries",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"diamond\" OR \"jenness\" OR \"encouraged\" OR \"report\" OR \"1940\" OR \"cultural\" OR \"discoveries\"",
+        "terms": [
+          "diamond",
+          "jenness",
+          "encouraged",
+          "report",
+          "1940",
+          "cultural",
+          "discoveries"
+        ]
+      }
+    },
+    {
+      "round": 5,
+      "top_k": 10,
+      "equivalence_key": "90baf2c59a902646208e18429241b4df349a44f2c97ddcb949fffa80d8a131a1",
+      "cached": false,
+      "query_sha256": "71e67829b4c38e99a2e5883c1c5cd569bd3640aaf4519680a2ecb6b41480f72c",
+      "query": "Diamond Jenness mistaken for shaman word misuse Inuktitut",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"diamond\" OR \"jenness\" OR \"mistaken\" OR \"for\" OR \"shaman\" OR \"word\" OR \"misuse\" OR \"inuktitut\"",
+        "terms": [
+          "diamond",
+          "jenness",
+          "mistaken",
+          "for",
+          "shaman",
+          "word",
+          "misuse",
+          "inuktitut"
+        ]
+      }
+    },
+    {
+      "round": 5,
+      "top_k": 10,
+      "equivalence_key": "344bc56839f03fcbffc3f38d72073f88544c4799c48889c48d0a5f32196000c9",
+      "cached": false,
+      "query_sha256": "3b5b739c9c662aa7588658a05c7af408fe3404db76e5f3c032adb04e77418351",
+      "query": "Diamond Jenness angakkuq shaman misunderstanding language",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"diamond\" OR \"jenness\" OR \"angakkuq\" OR \"shaman\" OR \"misunderstanding\" OR \"language\"",
+        "terms": [
+          "diamond",
+          "jenness",
+          "angakkuq",
+          "shaman",
+          "misunderstanding",
+          "language"
+        ]
+      }
+    },
+    {
+      "round": 5,
+      "top_k": 10,
+      "equivalence_key": "50ecf66d528a7a05cd284df0c560c18d720cbbf7bf9d01381df6d8758cb6e517",
+      "cached": false,
+      "query_sha256": "805e3a85648c1096f6787356bc80334387a9b0edb58013085698a441ada19f3b",
+      "query": "Graham Rowley born England 1912 archaeologist",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"graham\" OR \"rowley\" OR \"born\" OR \"england\" OR \"1912\" OR \"archaeologist\"",
+        "terms": [
+          "graham",
+          "rowley",
+          "born",
+          "england",
+          "1912",
+          "archaeologist"
+        ]
+      }
+    },
+    {
+      "round": 5,
+      "top_k": 10,
+      "equivalence_key": "b7c5e89be49b8ee9c1f15d2d29fa83a0b402e3a362d1d28b12dc7fcd286c5ef3",
+      "cached": false,
+      "query_sha256": "77b6493db6472056cbb284d5ebed1cc57c93855a110c6d69cd81561a0963a376",
+      "query": "American Anthropologist journal founded 1888 quarterly",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"american\" OR \"anthropologist\" OR \"journal\" OR \"founded\" OR \"1888\" OR \"quarterly\"",
+        "terms": [
+          "american",
+          "anthropologist",
+          "journal",
+          "founded",
+          "1888",
+          "quarterly"
+        ]
+      }
+    },
+    {
+      "round": 5,
+      "top_k": 10,
+      "equivalence_key": "70dd757ece14ef3dff66af577b759a6086fbda1f23982fde397962414f003824",
+      "cached": false,
+      "query_sha256": "8eda3f4257a0e245722815529dc9f397c4d6dfebd64b1b976f5f6e182241df20",
+      "query": "American Anthropologist first published 1888 history",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"american\" OR \"anthropologist\" OR \"first\" OR \"published\" OR \"1888\" OR \"history\"",
+        "terms": [
+          "american",
+          "anthropologist",
+          "first",
+          "published",
+          "1888",
+          "history"
+        ]
+      }
+    },
+    {
+      "round": 7,
+      "top_k": 10,
+      "equivalence_key": "101ef10de0405cfdc511fe6e81501bbadcb82a9f7514cfaa2184a56313eaaffa",
+      "cached": false,
+      "query_sha256": "76cd212f54bf9fb84fc71ffb42f79dbbdae982424ffb15519b7618ba5c755e9a",
+      "query": "Diamond Jenness shaman mistaken word misuse Inuktitut diary",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"diamond\" OR \"jenness\" OR \"shaman\" OR \"mistaken\" OR \"word\" OR \"misuse\" OR \"inuktitut\" OR \"diary\"",
+        "terms": [
+          "diamond",
+          "jenness",
+          "shaman",
+          "mistaken",
+          "word",
+          "misuse",
+          "inuktitut",
+          "diary"
+        ]
+      }
+    },
+    {
+      "round": 7,
+      "top_k": 10,
+      "equivalence_key": "68cd37a29b5b32be298db4d8fd867f91d2438195a1b8bea0ad810049a3f697e7",
+      "cached": false,
+      "query_sha256": "9e7ac13fa3d711cd59c82f48de71fee954d3f2bc4e8cbad5eae7beb4a50ef13d",
+      "query": "Diamond Jenness angakkuq mistaken shaman language error",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"diamond\" OR \"jenness\" OR \"angakkuq\" OR \"mistaken\" OR \"shaman\" OR \"language\" OR \"error\"",
+        "terms": [
+          "diamond",
+          "jenness",
+          "angakkuq",
+          "mistaken",
+          "shaman",
+          "language",
+          "error"
+        ]
+      }
+    },
+    {
+      "round": 7,
+      "top_k": 10,
+      "equivalence_key": "c78a8c4a79e733ec76f6f068bfb956149173eecf242374478d381e5786466d40",
+      "cached": false,
+      "query_sha256": "6731bf6fd73f528e2194eac93fa4ceb530fcc88c79f84f5a207b61c95b031812",
+      "query": "Diamond Jenness Through Darkening Spectacles shaman misunderstanding",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"diamond\" OR \"jenness\" OR \"through\" OR \"darkening\" OR \"spectacles\" OR \"shaman\" OR \"misunderstanding\"",
+        "terms": [
+          "diamond",
+          "jenness",
+          "through",
+          "darkening",
+          "spectacles",
+          "shaman",
+          "misunderstanding"
+        ]
+      }
+    },
+    {
+      "round": 8,
+      "top_k": 10,
+      "equivalence_key": "62fa72787a62ed8e7d5a49a29fc2b685add6bce899a76814708683de49dfb4ae",
+      "cached": false,
+      "query_sha256": "5f5d4ef56955b2a73ccbb2b966f3fbb64a551afe9382debd40291651fcb6bfcf",
+      "query": "Jenness ilisitsok shaman mistaken word Copper Inuit",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"jenness\" OR \"ilisitsok\" OR \"shaman\" OR \"mistaken\" OR \"word\" OR \"copper\" OR \"inuit\"",
+        "terms": [
+          "jenness",
+          "ilisitsok",
+          "shaman",
+          "mistaken",
+          "word",
+          "copper",
+          "inuit"
+        ]
+      }
+    },
+    {
+      "round": 8,
+      "top_k": 10,
+      "equivalence_key": "0d44cecbc0620a608fb6a6203a485d82a0ccb9afd33aaa37057189b0a80ad0a9",
+      "cached": false,
+      "query_sha256": "c75069e24989f2e7adf6879e1b3325ff8182fb0aca8eb89fdb44864f9c16bf67",
+      "query": "Jenness thought shaman word error Inuktitut diary 1915",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"jenness\" OR \"thought\" OR \"shaman\" OR \"word\" OR \"error\" OR \"inuktitut\" OR \"diary\" OR \"1915\"",
+        "terms": [
+          "jenness",
+          "thought",
+          "shaman",
+          "word",
+          "error",
+          "inuktitut",
+          "diary",
+          "1915"
+        ]
+      }
+    },
+    {
+      "round": 8,
+      "top_k": 10,
+      "equivalence_key": "5b4d0b45362e4a2227574ebc41a7c624ce08e6060b3a7da4072b12897103e743",
+      "cached": false,
+      "query_sha256": "50db28b19611e8374a1471e5b822bdc6867082e2c3a4270b2f836d789236f01f",
+      "query": "Diamond Jenness mistaken for shaman language mistake Copper Eskimo",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"diamond\" OR \"jenness\" OR \"mistaken\" OR \"for\" OR \"shaman\" OR \"language\" OR \"mistake\" OR \"copper\" OR \"eskimo\"",
+        "terms": [
+          "diamond",
+          "jenness",
+          "mistaken",
+          "for",
+          "shaman",
+          "language",
+          "mistake",
+          "copper",
+          "eskimo"
+        ]
+      }
+    },
+    {
+      "round": 9,
+      "top_k": 10,
+      "equivalence_key": "bb2bd8f560a6370f7b1a06a25fc3a959589810768e8c46a8d0105b5daea097dc",
+      "cached": false,
+      "query_sha256": "84e11dcfbd2919ceb613e8bfd6322bb0ea88c242d48348c38e3a468992df3001",
+      "query": "Diamond Jenness mistaken for shaman word misuse Inuktitut diary",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"diamond\" OR \"jenness\" OR \"mistaken\" OR \"for\" OR \"shaman\" OR \"word\" OR \"misuse\" OR \"inuktitut\" OR \"diary\"",
+        "terms": [
+          "diamond",
+          "jenness",
+          "mistaken",
+          "for",
+          "shaman",
+          "word",
+          "misuse",
+          "inuktitut",
+          "diary"
+        ]
+      }
+    },
+    {
+      "round": 9,
+      "top_k": 10,
+      "equivalence_key": "78d9f374028ccdf7aafdcde9e9c78ba49bfd2fed639300729887c2875e0ddfdb",
+      "cached": false,
+      "query_sha256": "58b1a488fdc515c8d931406e95f20c4ef1fe1dc10070dda0c2d59f398fd5d700",
+      "query": "Jenness angakkuq mistaken shaman language error 1915",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"jenness\" OR \"angakkuq\" OR \"mistaken\" OR \"shaman\" OR \"language\" OR \"error\" OR \"1915\"",
+        "terms": [
+          "jenness",
+          "angakkuq",
+          "mistaken",
+          "shaman",
+          "language",
+          "error",
+          "1915"
+        ]
+      }
+    },
+    {
+      "round": 9,
+      "top_k": 10,
+      "equivalence_key": "463b477c8f2085ce3a9cf0017de8726ca9f3f063d1141787b29384d1e8111a97",
+      "cached": false,
+      "query_sha256": "0744bda1877f2813764a8155a1e3071727cc11a92ceaa19772afdeb40114ad6e",
+      "query": "Diamond Jenness Through Darkening Spectacles shaman misunderstanding word",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"diamond\" OR \"jenness\" OR \"through\" OR \"darkening\" OR \"spectacles\" OR \"shaman\" OR \"misunderstanding\" OR \"word\"",
+        "terms": [
+          "diamond",
+          "jenness",
+          "through",
+          "darkening",
+          "spectacles",
+          "shaman",
+          "misunderstanding",
+          "word"
+        ]
+      }
+    },
+    {
+      "round": 11,
+      "top_k": 10,
+      "equivalence_key": "2329871c80782cf2bdd8e05f2ff400c2514f7973b51d8eef6db28a402b8dc1b1",
+      "cached": false,
+      "query_sha256": "50ec30b544d8da37481e3a3257ac4ec603ac348b63969185bb9d49eb2e0cd7fd",
+      "query": "Diamond Jenness shaman mistaken word misuse Inuktitut diary 1915",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"diamond\" OR \"jenness\" OR \"shaman\" OR \"mistaken\" OR \"word\" OR \"misuse\" OR \"inuktitut\" OR \"diary\" OR \"1915\"",
+        "terms": [
+          "diamond",
+          "jenness",
+          "shaman",
+          "mistaken",
+          "word",
+          "misuse",
+          "inuktitut",
+          "diary",
+          "1915"
+        ]
+      }
+    },
+    {
+      "round": 11,
+      "top_k": 10,
+      "equivalence_key": "415c732c679b66698b57f4b2f485be775992660548b4e71dd79c8a2e2203b8b8",
+      "cached": false,
+      "query_sha256": "fa595c9928f11dfe4af553926b1f38e76af4381d6c1b52bb2498c56073d30ece",
+      "query": "Jenness angakkuq mistaken shaman language error Copper Inuit",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"jenness\" OR \"angakkuq\" OR \"mistaken\" OR \"shaman\" OR \"language\" OR \"error\" OR \"copper\" OR \"inuit\"",
+        "terms": [
+          "jenness",
+          "angakkuq",
+          "mistaken",
+          "shaman",
+          "language",
+          "error",
+          "copper",
+          "inuit"
+        ]
+      }
+    },
+    {
+      "round": 11,
+      "top_k": 10,
+      "equivalence_key": "463b477c8f2085ce3a9cf0017de8726ca9f3f063d1141787b29384d1e8111a97",
+      "cached": true,
+      "query_sha256": "0744bda1877f2813764a8155a1e3071727cc11a92ceaa19772afdeb40114ad6e",
+      "query": "Diamond Jenness Through Darkening Spectacles shaman misunderstanding word",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"diamond\" OR \"jenness\" OR \"through\" OR \"darkening\" OR \"spectacles\" OR \"shaman\" OR \"misunderstanding\" OR \"word\"",
+        "terms": [
+          "diamond",
+          "jenness",
+          "through",
+          "darkening",
+          "spectacles",
+          "shaman",
+          "misunderstanding",
+          "word"
+        ]
+      }
+    },
+    {
+      "round": 12,
+      "top_k": 10,
+      "equivalence_key": "62fa72787a62ed8e7d5a49a29fc2b685add6bce899a76814708683de49dfb4ae",
+      "cached": true,
+      "query_sha256": "5f5d4ef56955b2a73ccbb2b966f3fbb64a551afe9382debd40291651fcb6bfcf",
+      "query": "Jenness ilisitsok shaman mistaken word Copper Inuit",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"jenness\" OR \"ilisitsok\" OR \"shaman\" OR \"mistaken\" OR \"word\" OR \"copper\" OR \"inuit\"",
+        "terms": [
+          "jenness",
+          "ilisitsok",
+          "shaman",
+          "mistaken",
+          "word",
+          "copper",
+          "inuit"
+        ]
+      }
+    },
+    {
+      "round": 12,
+      "top_k": 10,
+      "equivalence_key": "0d44cecbc0620a608fb6a6203a485d82a0ccb9afd33aaa37057189b0a80ad0a9",
+      "cached": true,
+      "query_sha256": "c75069e24989f2e7adf6879e1b3325ff8182fb0aca8eb89fdb44864f9c16bf67",
+      "query": "Jenness thought shaman word error Inuktitut diary 1915",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"jenness\" OR \"thought\" OR \"shaman\" OR \"word\" OR \"error\" OR \"inuktitut\" OR \"diary\" OR \"1915\"",
+        "terms": [
+          "jenness",
+          "thought",
+          "shaman",
+          "word",
+          "error",
+          "inuktitut",
+          "diary",
+          "1915"
+        ]
+      }
+    },
+    {
+      "round": 12,
+      "top_k": 10,
+      "equivalence_key": "5b4d0b45362e4a2227574ebc41a7c624ce08e6060b3a7da4072b12897103e743",
+      "cached": true,
+      "query_sha256": "50db28b19611e8374a1471e5b822bdc6867082e2c3a4270b2f836d789236f01f",
+      "query": "Diamond Jenness mistaken for shaman language mistake Copper Eskimo",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"diamond\" OR \"jenness\" OR \"mistaken\" OR \"for\" OR \"shaman\" OR \"language\" OR \"mistake\" OR \"copper\" OR \"eskimo\"",
+        "terms": [
+          "diamond",
+          "jenness",
+          "mistaken",
+          "for",
+          "shaman",
+          "language",
+          "mistake",
+          "copper",
+          "eskimo"
+        ]
+      }
+    },
+    {
+      "round": 13,
+      "top_k": 10,
+      "equivalence_key": "62fa72787a62ed8e7d5a49a29fc2b685add6bce899a76814708683de49dfb4ae",
+      "cached": true,
+      "query_sha256": "5f5d4ef56955b2a73ccbb2b966f3fbb64a551afe9382debd40291651fcb6bfcf",
+      "query": "Jenness ilisitsok shaman mistaken word Copper Inuit",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"jenness\" OR \"ilisitsok\" OR \"shaman\" OR \"mistaken\" OR \"word\" OR \"copper\" OR \"inuit\"",
+        "terms": [
+          "jenness",
+          "ilisitsok",
+          "shaman",
+          "mistaken",
+          "word",
+          "copper",
+          "inuit"
+        ]
+      }
+    },
+    {
+      "round": 13,
+      "top_k": 10,
+      "equivalence_key": "0d44cecbc0620a608fb6a6203a485d82a0ccb9afd33aaa37057189b0a80ad0a9",
+      "cached": true,
+      "query_sha256": "c75069e24989f2e7adf6879e1b3325ff8182fb0aca8eb89fdb44864f9c16bf67",
+      "query": "Jenness thought shaman word error Inuktitut diary 1915",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"jenness\" OR \"thought\" OR \"shaman\" OR \"word\" OR \"error\" OR \"inuktitut\" OR \"diary\" OR \"1915\"",
+        "terms": [
+          "jenness",
+          "thought",
+          "shaman",
+          "word",
+          "error",
+          "inuktitut",
+          "diary",
+          "1915"
+        ]
+      }
+    },
+    {
+      "round": 13,
+      "top_k": 10,
+      "equivalence_key": "5b4d0b45362e4a2227574ebc41a7c624ce08e6060b3a7da4072b12897103e743",
+      "cached": true,
+      "query_sha256": "50db28b19611e8374a1471e5b822bdc6867082e2c3a4270b2f836d789236f01f",
+      "query": "Diamond Jenness mistaken for shaman language mistake Copper Eskimo",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"diamond\" OR \"jenness\" OR \"mistaken\" OR \"for\" OR \"shaman\" OR \"language\" OR \"mistake\" OR \"copper\" OR \"eskimo\"",
+        "terms": [
+          "diamond",
+          "jenness",
+          "mistaken",
+          "for",
+          "shaman",
+          "language",
+          "mistake",
+          "copper",
+          "eskimo"
+        ]
+      }
+    },
+    {
+      "round": 15,
+      "top_k": 10,
+      "equivalence_key": "286549900167067501c911876515f542ba6fa7178872059d647410561cad5ec3",
+      "cached": false,
+      "query_sha256": "6dedb31b080b59c5d8836c283e827917bf8cfd8f19e943e206fcf9131b32961d",
+      "query": "Rowley Dorset Culture Eastern Arctic American Anthropologist 1940",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"rowley\" OR \"dorset\" OR \"culture\" OR \"eastern\" OR \"arctic\" OR \"american\" OR \"anthropologist\" OR \"1940\"",
+        "terms": [
+          "rowley",
+          "dorset",
+          "culture",
+          "eastern",
+          "arctic",
+          "american",
+          "anthropologist",
+          "1940"
+        ]
+      }
+    },
+    {
+      "round": 15,
+      "top_k": 10,
+      "equivalence_key": "5b3fd9f0da5bd8d0afae1fcecd807ab4f40d3cea8b8d06fd35d412e26dc52eab",
+      "cached": false,
+      "query_sha256": "df24a85bc452c3e01aca2a567c66986e91c447da44d4e2050c48fa036522a9f0",
+      "query": "Dorset culture report 1940 American Anthropologist Rowley Jenness",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"dorset\" OR \"culture\" OR \"report\" OR \"1940\" OR \"american\" OR \"anthropologist\" OR \"rowley\" OR \"jenness\"",
+        "terms": [
+          "dorset",
+          "culture",
+          "report",
+          "1940",
+          "american",
+          "anthropologist",
+          "rowley",
+          "jenness"
+        ]
+      }
+    },
+    {
+      "round": 15,
+      "top_k": 10,
+      "equivalence_key": "61512c3cfc2d6627cd30404dc0e8cd6304933d063444f525d26bfa457c855c52",
+      "cached": false,
+      "query_sha256": "ebee45483ef00aed07ac0ec1f6eab674c8842fe652bf455c169bc20108659e58",
+      "query": "Graham Rowley Dorset culture publication 1940",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"graham\" OR \"rowley\" OR \"dorset\" OR \"culture\" OR \"publication\" OR \"1940\"",
+        "terms": [
+          "graham",
+          "rowley",
+          "dorset",
+          "culture",
+          "publication",
+          "1940"
+        ]
+      }
+    }
+  ],
+  "equivalent_query_repeats": 7,
+  "views": [
+    {
+      "round": 1,
+      "compacted": false,
+      "visible_evidence": [],
+      "shelf": [],
+      "shelf_evicted": []
+    },
+    {
+      "round": 2,
+      "compacted": false,
+      "visible_evidence": [],
+      "shelf": [],
+      "shelf_evicted": []
+    },
+    {
+      "round": 3,
+      "compacted": false,
+      "visible_evidence": [
+        "e1",
+        "e2"
+      ],
+      "shelf": [],
+      "shelf_evicted": []
+    },
+    {
+      "round": 4,
+      "compacted": false,
+      "visible_evidence": [
+        "e1",
+        "e2",
+        "e3"
+      ],
+      "shelf": [],
+      "shelf_evicted": []
+    },
+    {
+      "round": 5,
+      "compacted": false,
+      "visible_evidence": [
+        "e1",
+        "e2",
+        "e3",
+        "e4",
+        "e5"
+      ],
+      "shelf": [],
+      "shelf_evicted": []
+    },
+    {
+      "round": 6,
+      "compacted": true,
+      "visible_evidence": [
+        "e3",
+        "e4",
+        "e5"
+      ],
+      "shelf": [],
+      "shelf_evicted": []
+    },
+    {
+      "round": 7,
+      "compacted": true,
+      "visible_evidence": [
+        "e3",
+        "e4",
+        "e5",
+        "e6",
+        "e7"
+      ],
+      "shelf": [
+        "e3"
+      ],
+      "shelf_evicted": []
+    },
+    {
+      "round": 8,
+      "compacted": false,
+      "visible_evidence": [
+        "e4",
+        "e5",
+        "e6",
+        "e7"
+      ],
+      "shelf": [],
+      "shelf_evicted": []
+    },
+    {
+      "round": 9,
+      "compacted": true,
+      "visible_evidence": [
+        "e5",
+        "e6",
+        "e7"
+      ],
+      "shelf": [
+        "e5"
+      ],
+      "shelf_evicted": []
+    },
+    {
+      "round": 10,
+      "compacted": false,
+      "visible_evidence": [
+        "e5",
+        "e6",
+        "e7"
+      ],
+      "shelf": [
+        "e5"
+      ],
+      "shelf_evicted": []
+    },
+    {
+      "round": 11,
+      "compacted": true,
+      "visible_evidence": [
+        "e5",
+        "e6",
+        "e7"
+      ],
+      "shelf": [
+        "e5",
+        "e6",
+        "e7"
+      ],
+      "shelf_evicted": []
+    },
+    {
+      "round": 12,
+      "compacted": false,
+      "visible_evidence": [
+        "e5",
+        "e6",
+        "e7"
+      ],
+      "shelf": [
+        "e5",
+        "e6",
+        "e7"
+      ],
+      "shelf_evicted": []
+    },
+    {
+      "round": 13,
+      "compacted": true,
+      "visible_evidence": [
+        "e5",
+        "e6",
+        "e7"
+      ],
+      "shelf": [
+        "e5",
+        "e6",
+        "e7"
+      ],
+      "shelf_evicted": []
+    },
+    {
+      "round": 14,
+      "compacted": true,
+      "visible_evidence": [
+        "e5",
+        "e6",
+        "e7"
+      ],
+      "shelf": [
+        "e5",
+        "e6",
+        "e7"
+      ],
+      "shelf_evicted": []
+    },
+    {
+      "round": 15,
+      "compacted": false,
+      "visible_evidence": [
+        "e5",
+        "e6",
+        "e7"
+      ],
+      "shelf": [
+        "e5",
+        "e6",
+        "e7"
+      ],
+      "shelf_evicted": []
+    },
+    {
+      "round": 16,
+      "compacted": true,
+      "visible_evidence": [
+        "e5",
+        "e6",
+        "e7",
+        "e8"
+      ],
+      "shelf": [
+        "e5",
+        "e6",
+        "e7"
+      ],
+      "shelf_evicted": []
+    }
+  ],
+  "delivered_refs": [
+    "e1",
+    "e2",
+    "e3",
+    "e4",
+    "e5",
+    "e6",
+    "e7",
+    "e8"
+  ],
+  "submitted_refs": [
+    "e8",
+    "e6",
+    "e5",
+    "e7"
+  ],
+  "text_included": true,
+  "limitations": [
+    "Equivalence is compiler equality, not semantic identity or wasted-search proof",
+    "Raw-window visibility/selection is not entailment or complete evidence coverage",
+    "No live q26 replay or independent answer scoring is performed"
+  ]
+}

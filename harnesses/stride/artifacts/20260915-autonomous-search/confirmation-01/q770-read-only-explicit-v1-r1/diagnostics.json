@@ -1,0 +1,1814 @@
+{
+  "protocol": "stride-search-3",
+  "head": "2e138bbd14f9e85570819429a175e1a9bfde268a125d4b293980732f36584667",
+  "outcome": "abstained",
+  "formal_correct": null,
+  "model_attempts": 16,
+  "backend_attempts": 48,
+  "queries": [
+    {
+      "round": 1,
+      "top_k": 5,
+      "equivalence_key": "080c23d09fa5230fd2c35f121730303b872f13ce66bf3960fd9b68da6ee2d641",
+      "cached": false,
+      "query_sha256": "dff08ffeefe1e3a61f2f324a9cccc41f4fb5c3f7efacd8b627b774c91bbc226f",
+      "query": "research group founded 2009 coordinator December 2023",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"research\" OR \"group\" OR \"founded\" OR \"2009\" OR \"coordinator\" OR \"december\" OR \"2023\"",
+        "terms": [
+          "research",
+          "group",
+          "founded",
+          "2009",
+          "coordinator",
+          "december",
+          "2023"
+        ]
+      }
+    },
+    {
+      "round": 1,
+      "top_k": 5,
+      "equivalence_key": "e99fc8c6edf487230f141a65645e9d69882631e9a2deeed6aff7ec239689214e",
+      "cached": false,
+      "query_sha256": "fa9d42c8b28f36834281671e3359008ca33c5f84e6a101f2f2d5d9475c8cdc49",
+      "query": "Routledge book 2018 co-edited",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"routledge\" OR \"book\" OR \"2018\" OR \"co\" OR \"edited\"",
+        "terms": [
+          "routledge",
+          "book",
+          "2018",
+          "co",
+          "edited"
+        ]
+      }
+    },
+    {
+      "round": 1,
+      "top_k": 5,
+      "equivalence_key": "cc7fbcb4b4f489ba8ed09656a29a906f8cf9d58c459517079fd3d3263a27a213",
+      "cached": false,
+      "query_sha256": "dd3f6c9d7379a6d0957b4c609730ace95a13747e696d44928672419ab5d328a2",
+      "query": "PhD writings English writer coordinator research group",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"phd\" OR \"writings\" OR \"english\" OR \"writer\" OR \"coordinator\" OR \"research\" OR \"group\"",
+        "terms": [
+          "phd",
+          "writings",
+          "english",
+          "writer",
+          "coordinator",
+          "research",
+          "group"
+        ]
+      }
+    },
+    {
+      "round": 1,
+      "top_k": 5,
+      "equivalence_key": "7037fc1a513a209935994ddf1b320c3978f4fff5698ac221c80dca26ac9c5be1",
+      "cached": false,
+      "query_sha256": "5483c810c837fd85178759811503529a1f41aa5dbee7d8fc4d386f196be89753",
+      "query": "convenor panel before 2020 Routledge 2018 co-editor",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"convenor\" OR \"panel\" OR \"before\" OR \"2020\" OR \"routledge\" OR \"2018\" OR \"co\" OR \"editor\"",
+        "terms": [
+          "convenor",
+          "panel",
+          "before",
+          "2020",
+          "routledge",
+          "2018",
+          "co",
+          "editor"
+        ]
+      }
+    },
+    {
+      "round": 1,
+      "top_k": 5,
+      "equivalence_key": "f9dca5f404f8ed2cd41da32b593d552b237119dfc5a989bb547eddc7260c1ea2",
+      "cached": false,
+      "query_sha256": "ef45ea936343aa3c5506596761128fa03ad08fd7d89dea0e59a45173569bb905",
+      "query": "keynote speaker 2019 conference co-edited Routledge book",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"keynote\" OR \"speaker\" OR \"2019\" OR \"conference\" OR \"co\" OR \"edited\" OR \"routledge\" OR \"book\"",
+        "terms": [
+          "keynote",
+          "speaker",
+          "2019",
+          "conference",
+          "co",
+          "edited",
+          "routledge",
+          "book"
+        ]
+      }
+    },
+    {
+      "round": 2,
+      "top_k": 5,
+      "equivalence_key": "f5dfaafed90980f819988b8fb9309806d23c6e27aba78844bf2f9bfdfa0056cd",
+      "cached": false,
+      "query_sha256": "1448302f48997889462b6e4872e65940b9fbdf546789ac9126d4dea94a3101b6",
+      "query": "research group founded 2009 literary studies coordinator",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"research\" OR \"group\" OR \"founded\" OR \"2009\" OR \"literary\" OR \"studies\" OR \"coordinator\"",
+        "terms": [
+          "research",
+          "group",
+          "founded",
+          "2009",
+          "literary",
+          "studies",
+          "coordinator"
+        ]
+      }
+    },
+    {
+      "round": 2,
+      "top_k": 5,
+      "equivalence_key": "b85d2fd1e07d00d7278211c43064774ee8e03f952cb3413982102199a612fcdb",
+      "cached": false,
+      "query_sha256": "8ee19b4376be48a7c04ac99ca758ae78ab138055e77aff50395bfd4f76be50c0",
+      "query": "Routledge 2018 edited volume English literature PhD",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"routledge\" OR \"2018\" OR \"edited\" OR \"volume\" OR \"english\" OR \"literature\" OR \"phd\"",
+        "terms": [
+          "routledge",
+          "2018",
+          "edited",
+          "volume",
+          "english",
+          "literature",
+          "phd"
+        ]
+      }
+    },
+    {
+      "round": 2,
+      "top_k": 5,
+      "equivalence_key": "0bb269ded7c5eae5508530cc84d4360fb77a05695373bc343e94ebfdf70e6a8b",
+      "cached": false,
+      "query_sha256": "44487cf248062b41694046c24b8a32dcaa7c47366c1d40ed7e6d866821da853e",
+      "query": "convenor panel literary studies 2019 keynote",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"convenor\" OR \"panel\" OR \"literary\" OR \"studies\" OR \"2019\" OR \"keynote\"",
+        "terms": [
+          "convenor",
+          "panel",
+          "literary",
+          "studies",
+          "2019",
+          "keynote"
+        ]
+      }
+    },
+    {
+      "round": 2,
+      "top_k": 5,
+      "equivalence_key": "f10b9ff9d05d6853bc0edf524b1a433b7c59e49f3cbf51e0d600dc760aa5d875",
+      "cached": false,
+      "query_sha256": "1cde8539400e2062d135c4a0fde89786614ee5a08c228d806ca1d783cb21a4a7",
+      "query": "co-edited Routledge 2018 PhD on English writer writings",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"co\" OR \"edited\" OR \"routledge\" OR \"2018\" OR \"phd\" OR \"on\" OR \"english\" OR \"writer\" OR \"writings\"",
+        "terms": [
+          "co",
+          "edited",
+          "routledge",
+          "2018",
+          "phd",
+          "on",
+          "english",
+          "writer",
+          "writings"
+        ]
+      }
+    },
+    {
+      "round": 2,
+      "top_k": 5,
+      "equivalence_key": "061d8588408e2e956da2a22ba3e9648da6cfe25af55b14116fd3795be27d8b00",
+      "cached": false,
+      "query_sha256": "2798233e208885fc0d78515aef1c7505f874dd2d18a832976bfc72b60b6b8f62",
+      "query": "coordinator research group 2009 founded December 2023",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"coordinator\" OR \"research\" OR \"group\" OR \"2009\" OR \"founded\" OR \"december\" OR \"2023\"",
+        "terms": [
+          "coordinator",
+          "research",
+          "group",
+          "2009",
+          "founded",
+          "december",
+          "2023"
+        ]
+      }
+    },
+    {
+      "round": 3,
+      "top_k": 5,
+      "equivalence_key": "b1c77994626a5010fa632da5ef25defe0087a45bcaea0288311524692d9ab8a8",
+      "cached": false,
+      "query_sha256": "e0c1557082f9e2f38f5039ecabf169befcf652603a8ee9d6d635f5a6c35b63f9",
+      "query": "research group founded 2009 coordinator December 2023 Routledge",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"research\" OR \"group\" OR \"founded\" OR \"2009\" OR \"coordinator\" OR \"december\" OR \"2023\" OR \"routledge\"",
+        "terms": [
+          "research",
+          "group",
+          "founded",
+          "2009",
+          "coordinator",
+          "december",
+          "2023",
+          "routledge"
+        ]
+      }
+    },
+    {
+      "round": 3,
+      "top_k": 5,
+      "equivalence_key": "a9cb89590103fcaaace10fa7c2f0738bc7baa7f51801c76091c42ec7b65c6505",
+      "cached": false,
+      "query_sha256": "247e3eb15f592524dd24f3fae509c704ccd83e4f199490ecb1cb908d0720eb9f",
+      "query": "PhD on the writings of an English writer Routledge 2018 co-edited",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"phd\" OR \"on\" OR \"the\" OR \"writings\" OR \"of\" OR \"an\" OR \"english\" OR \"writer\" OR \"routledge\" OR \"2018\" OR \"co\" OR \"edited\"",
+        "terms": [
+          "phd",
+          "on",
+          "the",
+          "writings",
+          "of",
+          "an",
+          "english",
+          "writer",
+          "routledge",
+          "2018",
+          "co",
+          "edited"
+        ]
+      }
+    },
+    {
+      "round": 3,
+      "top_k": 5,
+      "equivalence_key": "ce2aaf5ec09d6c4e25187043a7da73eec1693ef7f275c4be33d81a3511aae68e",
+      "cached": false,
+      "query_sha256": "a6f7cb35338d01f4a260d81a228d3808a50159a5234de930aa659f63d0519dd6",
+      "query": "convenor panel 2019 keynote speaker Routledge 2018 co-editor",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"convenor\" OR \"panel\" OR \"2019\" OR \"keynote\" OR \"speaker\" OR \"routledge\" OR \"2018\" OR \"co\" OR \"editor\"",
+        "terms": [
+          "convenor",
+          "panel",
+          "2019",
+          "keynote",
+          "speaker",
+          "routledge",
+          "2018",
+          "co",
+          "editor"
+        ]
+      }
+    },
+    {
+      "round": 3,
+      "top_k": 5,
+      "equivalence_key": "3b06d630253c9d9bb65e23eb72f80e63349170b8a2c713d783b7c2f867770e7b",
+      "cached": false,
+      "query_sha256": "ee2ba43d123856f0da231b88bae84da2371104983bc14e9fe35f1d317cdc9bd8",
+      "query": "Virginia Woolf research group founded 2009 coordinator",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"virginia\" OR \"woolf\" OR \"research\" OR \"group\" OR \"founded\" OR \"2009\" OR \"coordinator\"",
+        "terms": [
+          "virginia",
+          "woolf",
+          "research",
+          "group",
+          "founded",
+          "2009",
+          "coordinator"
+        ]
+      }
+    },
+    {
+      "round": 3,
+      "top_k": 5,
+      "equivalence_key": "e5d8cecbef730334920f4268284000a54e2f8e4a481a85daf1580277ce7061aa",
+      "cached": false,
+      "query_sha256": "b69b8c375aaac1700f90e4ca0bd574fc476d58194d667ee19d1842551fceb2dc",
+      "query": "D.H. Lawrence research group 2009 coordinator Routledge 2018",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"d\" OR \"h\" OR \"lawrence\" OR \"research\" OR \"group\" OR \"2009\" OR \"coordinator\" OR \"routledge\" OR \"2018\"",
+        "terms": [
+          "d",
+          "h",
+          "lawrence",
+          "research",
+          "group",
+          "2009",
+          "coordinator",
+          "routledge",
+          "2018"
+        ]
+      }
+    },
+    {
+      "round": 3,
+      "top_k": 5,
+      "equivalence_key": "12fda05de9412a955e109f8ca324d66725336a95519229ee3aeb20ba7a0ba51a",
+      "cached": false,
+      "query_sha256": "abc705ba096527859a62d0df794b4f11b19c099e73f9eefcce654dda26b7f791",
+      "query": "George Orwell research group 2009 Routledge 2018 co-edited",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"george\" OR \"orwell\" OR \"research\" OR \"group\" OR \"2009\" OR \"routledge\" OR \"2018\" OR \"co\" OR \"edited\"",
+        "terms": [
+          "george",
+          "orwell",
+          "research",
+          "group",
+          "2009",
+          "routledge",
+          "2018",
+          "co",
+          "edited"
+        ]
+      }
+    },
+    {
+      "round": 5,
+      "top_k": 5,
+      "equivalence_key": "b1af516a902e543048d1e4224eda6a2bb7e5f0432435ad0b09b4f1791afb4dc9",
+      "cached": false,
+      "query_sha256": "e51ac6c1ea5c84295b31cd5f8cfc7c1592d9d97fc0120f6cb45b7cac0ef03bf4",
+      "query": "co-edited Routledge 2018 contemporary literature coordinator research group founded 2009",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"co\" OR \"edited\" OR \"routledge\" OR \"2018\" OR \"contemporary\" OR \"literature\" OR \"coordinator\" OR \"research\" OR \"group\" OR \"founded\" OR \"2009\"",
+        "terms": [
+          "co",
+          "edited",
+          "routledge",
+          "2018",
+          "contemporary",
+          "literature",
+          "coordinator",
+          "research",
+          "group",
+          "founded",
+          "2009"
+        ]
+      }
+    },
+    {
+      "round": 5,
+      "top_k": 5,
+      "equivalence_key": "1958069d638b0a951c523a792b99db86ef5997d40dd0b655149a88431f968efa",
+      "cached": false,
+      "query_sha256": "d006cda291100e0f3ab9fb9137e6e4f195525f5ca96fda6a286797ca4f35cedf",
+      "query": "PhD on the writings of an English writer convenor panel 2012 article",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"phd\" OR \"on\" OR \"the\" OR \"writings\" OR \"of\" OR \"an\" OR \"english\" OR \"writer\" OR \"convenor\" OR \"panel\" OR \"2012\" OR \"article\"",
+        "terms": [
+          "phd",
+          "on",
+          "the",
+          "writings",
+          "of",
+          "an",
+          "english",
+          "writer",
+          "convenor",
+          "panel",
+          "2012",
+          "article"
+        ]
+      }
+    },
+    {
+      "round": 5,
+      "top_k": 5,
+      "equivalence_key": "f0faec5e9e9d0e22c41dcaa62004c17c67ef6e517d33c99a7783c189504dc1fa",
+      "cached": false,
+      "query_sha256": "4a62da7cc679d2991b7f6b50b092c4978abb46fbf2902768f60d820d9ff2273e",
+      "query": "research group founded 2009 coordinator December 2023 literary studies Routledge",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"research\" OR \"group\" OR \"founded\" OR \"2009\" OR \"coordinator\" OR \"december\" OR \"2023\" OR \"literary\" OR \"studies\" OR \"routledge\"",
+        "terms": [
+          "research",
+          "group",
+          "founded",
+          "2009",
+          "coordinator",
+          "december",
+          "2023",
+          "literary",
+          "studies",
+          "routledge"
+        ]
+      }
+    },
+    {
+      "round": 5,
+      "top_k": 5,
+      "equivalence_key": "1e9c97cdad7394b1cb794a07db185659ef4029e44459ee576ae3ccef0cefa2f4",
+      "cached": false,
+      "query_sha256": "785d2dbb71e77b75a5d654ad17213d83271aad005a37b23173c48838d48d918d",
+      "query": "Katherine Mansfield research group 2009 coordinator",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"katherine\" OR \"mansfield\" OR \"research\" OR \"group\" OR \"2009\" OR \"coordinator\"",
+        "terms": [
+          "katherine",
+          "mansfield",
+          "research",
+          "group",
+          "2009",
+          "coordinator"
+        ]
+      }
+    },
+    {
+      "round": 5,
+      "top_k": 5,
+      "equivalence_key": "e5d8cecbef730334920f4268284000a54e2f8e4a481a85daf1580277ce7061aa",
+      "cached": true,
+      "query_sha256": "b69b8c375aaac1700f90e4ca0bd574fc476d58194d667ee19d1842551fceb2dc",
+      "query": "D.H. Lawrence research group 2009 coordinator Routledge 2018",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"d\" OR \"h\" OR \"lawrence\" OR \"research\" OR \"group\" OR \"2009\" OR \"coordinator\" OR \"routledge\" OR \"2018\"",
+        "terms": [
+          "d",
+          "h",
+          "lawrence",
+          "research",
+          "group",
+          "2009",
+          "coordinator",
+          "routledge",
+          "2018"
+        ]
+      }
+    },
+    {
+      "round": 5,
+      "top_k": 5,
+      "equivalence_key": "2d138dc23db165ed3e04847a5376ae04a653b75dcfd9ff32723a8073e70aaaaf",
+      "cached": false,
+      "query_sha256": "e5a297eaa9251c184650ed7734e86cb0aa0ee41dc2e650512628d90ad44eab45",
+      "query": "contemporary women's writing research group 2009 Routledge 2018 co-edited",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"contemporary\" OR \"women\" OR \"s\" OR \"writing\" OR \"research\" OR \"group\" OR \"2009\" OR \"routledge\" OR \"2018\" OR \"co\" OR \"edited\"",
+        "terms": [
+          "contemporary",
+          "women",
+          "s",
+          "writing",
+          "research",
+          "group",
+          "2009",
+          "routledge",
+          "2018",
+          "co",
+          "edited"
+        ]
+      }
+    },
+    {
+      "round": 6,
+      "top_k": 5,
+      "equivalence_key": "b1af516a902e543048d1e4224eda6a2bb7e5f0432435ad0b09b4f1791afb4dc9",
+      "cached": true,
+      "query_sha256": "e51ac6c1ea5c84295b31cd5f8cfc7c1592d9d97fc0120f6cb45b7cac0ef03bf4",
+      "query": "co-edited Routledge 2018 contemporary literature coordinator research group founded 2009",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"co\" OR \"edited\" OR \"routledge\" OR \"2018\" OR \"contemporary\" OR \"literature\" OR \"coordinator\" OR \"research\" OR \"group\" OR \"founded\" OR \"2009\"",
+        "terms": [
+          "co",
+          "edited",
+          "routledge",
+          "2018",
+          "contemporary",
+          "literature",
+          "coordinator",
+          "research",
+          "group",
+          "founded",
+          "2009"
+        ]
+      }
+    },
+    {
+      "round": 6,
+      "top_k": 5,
+      "equivalence_key": "1958069d638b0a951c523a792b99db86ef5997d40dd0b655149a88431f968efa",
+      "cached": true,
+      "query_sha256": "d006cda291100e0f3ab9fb9137e6e4f195525f5ca96fda6a286797ca4f35cedf",
+      "query": "PhD on the writings of an English writer convenor panel 2012 article",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"phd\" OR \"on\" OR \"the\" OR \"writings\" OR \"of\" OR \"an\" OR \"english\" OR \"writer\" OR \"convenor\" OR \"panel\" OR \"2012\" OR \"article\"",
+        "terms": [
+          "phd",
+          "on",
+          "the",
+          "writings",
+          "of",
+          "an",
+          "english",
+          "writer",
+          "convenor",
+          "panel",
+          "2012",
+          "article"
+        ]
+      }
+    },
+    {
+      "round": 6,
+      "top_k": 5,
+      "equivalence_key": "f0faec5e9e9d0e22c41dcaa62004c17c67ef6e517d33c99a7783c189504dc1fa",
+      "cached": true,
+      "query_sha256": "4a62da7cc679d2991b7f6b50b092c4978abb46fbf2902768f60d820d9ff2273e",
+      "query": "research group founded 2009 coordinator December 2023 literary studies Routledge",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"research\" OR \"group\" OR \"founded\" OR \"2009\" OR \"coordinator\" OR \"december\" OR \"2023\" OR \"literary\" OR \"studies\" OR \"routledge\"",
+        "terms": [
+          "research",
+          "group",
+          "founded",
+          "2009",
+          "coordinator",
+          "december",
+          "2023",
+          "literary",
+          "studies",
+          "routledge"
+        ]
+      }
+    },
+    {
+      "round": 6,
+      "top_k": 5,
+      "equivalence_key": "1e9c97cdad7394b1cb794a07db185659ef4029e44459ee576ae3ccef0cefa2f4",
+      "cached": true,
+      "query_sha256": "785d2dbb71e77b75a5d654ad17213d83271aad005a37b23173c48838d48d918d",
+      "query": "Katherine Mansfield research group 2009 coordinator",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"katherine\" OR \"mansfield\" OR \"research\" OR \"group\" OR \"2009\" OR \"coordinator\"",
+        "terms": [
+          "katherine",
+          "mansfield",
+          "research",
+          "group",
+          "2009",
+          "coordinator"
+        ]
+      }
+    },
+    {
+      "round": 6,
+      "top_k": 5,
+      "equivalence_key": "e5d8cecbef730334920f4268284000a54e2f8e4a481a85daf1580277ce7061aa",
+      "cached": true,
+      "query_sha256": "b69b8c375aaac1700f90e4ca0bd574fc476d58194d667ee19d1842551fceb2dc",
+      "query": "D.H. Lawrence research group 2009 coordinator Routledge 2018",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"d\" OR \"h\" OR \"lawrence\" OR \"research\" OR \"group\" OR \"2009\" OR \"coordinator\" OR \"routledge\" OR \"2018\"",
+        "terms": [
+          "d",
+          "h",
+          "lawrence",
+          "research",
+          "group",
+          "2009",
+          "coordinator",
+          "routledge",
+          "2018"
+        ]
+      }
+    },
+    {
+      "round": 6,
+      "top_k": 5,
+      "equivalence_key": "2d138dc23db165ed3e04847a5376ae04a653b75dcfd9ff32723a8073e70aaaaf",
+      "cached": true,
+      "query_sha256": "e5a297eaa9251c184650ed7734e86cb0aa0ee41dc2e650512628d90ad44eab45",
+      "query": "contemporary women's writing research group 2009 Routledge 2018 co-edited",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"contemporary\" OR \"women\" OR \"s\" OR \"writing\" OR \"research\" OR \"group\" OR \"2009\" OR \"routledge\" OR \"2018\" OR \"co\" OR \"edited\"",
+        "terms": [
+          "contemporary",
+          "women",
+          "s",
+          "writing",
+          "research",
+          "group",
+          "2009",
+          "routledge",
+          "2018",
+          "co",
+          "edited"
+        ]
+      }
+    },
+    {
+      "round": 7,
+      "top_k": 5,
+      "equivalence_key": "b1af516a902e543048d1e4224eda6a2bb7e5f0432435ad0b09b4f1791afb4dc9",
+      "cached": true,
+      "query_sha256": "e51ac6c1ea5c84295b31cd5f8cfc7c1592d9d97fc0120f6cb45b7cac0ef03bf4",
+      "query": "co-edited Routledge 2018 contemporary literature coordinator research group founded 2009",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"co\" OR \"edited\" OR \"routledge\" OR \"2018\" OR \"contemporary\" OR \"literature\" OR \"coordinator\" OR \"research\" OR \"group\" OR \"founded\" OR \"2009\"",
+        "terms": [
+          "co",
+          "edited",
+          "routledge",
+          "2018",
+          "contemporary",
+          "literature",
+          "coordinator",
+          "research",
+          "group",
+          "founded",
+          "2009"
+        ]
+      }
+    },
+    {
+      "round": 7,
+      "top_k": 5,
+      "equivalence_key": "1958069d638b0a951c523a792b99db86ef5997d40dd0b655149a88431f968efa",
+      "cached": true,
+      "query_sha256": "d006cda291100e0f3ab9fb9137e6e4f195525f5ca96fda6a286797ca4f35cedf",
+      "query": "PhD on the writings of an English writer convenor panel 2012 article",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"phd\" OR \"on\" OR \"the\" OR \"writings\" OR \"of\" OR \"an\" OR \"english\" OR \"writer\" OR \"convenor\" OR \"panel\" OR \"2012\" OR \"article\"",
+        "terms": [
+          "phd",
+          "on",
+          "the",
+          "writings",
+          "of",
+          "an",
+          "english",
+          "writer",
+          "convenor",
+          "panel",
+          "2012",
+          "article"
+        ]
+      }
+    },
+    {
+      "round": 7,
+      "top_k": 5,
+      "equivalence_key": "f0faec5e9e9d0e22c41dcaa62004c17c67ef6e517d33c99a7783c189504dc1fa",
+      "cached": true,
+      "query_sha256": "4a62da7cc679d2991b7f6b50b092c4978abb46fbf2902768f60d820d9ff2273e",
+      "query": "research group founded 2009 coordinator December 2023 literary studies Routledge",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"research\" OR \"group\" OR \"founded\" OR \"2009\" OR \"coordinator\" OR \"december\" OR \"2023\" OR \"literary\" OR \"studies\" OR \"routledge\"",
+        "terms": [
+          "research",
+          "group",
+          "founded",
+          "2009",
+          "coordinator",
+          "december",
+          "2023",
+          "literary",
+          "studies",
+          "routledge"
+        ]
+      }
+    },
+    {
+      "round": 7,
+      "top_k": 5,
+      "equivalence_key": "1e9c97cdad7394b1cb794a07db185659ef4029e44459ee576ae3ccef0cefa2f4",
+      "cached": true,
+      "query_sha256": "785d2dbb71e77b75a5d654ad17213d83271aad005a37b23173c48838d48d918d",
+      "query": "Katherine Mansfield research group 2009 coordinator",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"katherine\" OR \"mansfield\" OR \"research\" OR \"group\" OR \"2009\" OR \"coordinator\"",
+        "terms": [
+          "katherine",
+          "mansfield",
+          "research",
+          "group",
+          "2009",
+          "coordinator"
+        ]
+      }
+    },
+    {
+      "round": 7,
+      "top_k": 5,
+      "equivalence_key": "e5d8cecbef730334920f4268284000a54e2f8e4a481a85daf1580277ce7061aa",
+      "cached": true,
+      "query_sha256": "b69b8c375aaac1700f90e4ca0bd574fc476d58194d667ee19d1842551fceb2dc",
+      "query": "D.H. Lawrence research group 2009 coordinator Routledge 2018",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"d\" OR \"h\" OR \"lawrence\" OR \"research\" OR \"group\" OR \"2009\" OR \"coordinator\" OR \"routledge\" OR \"2018\"",
+        "terms": [
+          "d",
+          "h",
+          "lawrence",
+          "research",
+          "group",
+          "2009",
+          "coordinator",
+          "routledge",
+          "2018"
+        ]
+      }
+    },
+    {
+      "round": 7,
+      "top_k": 5,
+      "equivalence_key": "2d138dc23db165ed3e04847a5376ae04a653b75dcfd9ff32723a8073e70aaaaf",
+      "cached": true,
+      "query_sha256": "e5a297eaa9251c184650ed7734e86cb0aa0ee41dc2e650512628d90ad44eab45",
+      "query": "contemporary women's writing research group 2009 Routledge 2018 co-edited",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"contemporary\" OR \"women\" OR \"s\" OR \"writing\" OR \"research\" OR \"group\" OR \"2009\" OR \"routledge\" OR \"2018\" OR \"co\" OR \"edited\"",
+        "terms": [
+          "contemporary",
+          "women",
+          "s",
+          "writing",
+          "research",
+          "group",
+          "2009",
+          "routledge",
+          "2018",
+          "co",
+          "edited"
+        ]
+      }
+    },
+    {
+      "round": 8,
+      "top_k": 5,
+      "equivalence_key": "a17e9c204080ec4dea77a5c0ce1cef7082a6b48f5d129b0e8cb0ccffc94a2283",
+      "cached": false,
+      "query_sha256": "9de03e923dbb94cd7dfdc61ff32bd0feceaf0863b7454de661c7e983652c4546",
+      "query": "Routledge 2018 co-edited volume contemporary British fiction",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"routledge\" OR \"2018\" OR \"co\" OR \"edited\" OR \"volume\" OR \"contemporary\" OR \"british\" OR \"fiction\"",
+        "terms": [
+          "routledge",
+          "2018",
+          "co",
+          "edited",
+          "volume",
+          "contemporary",
+          "british",
+          "fiction"
+        ]
+      }
+    },
+    {
+      "round": 8,
+      "top_k": 5,
+      "equivalence_key": "0a00878ac4717761fdd029a9f7da5e0e8b160367a0eea0b847e877996a84df8b",
+      "cached": false,
+      "query_sha256": "ec0b9432dbe783525cb66f1f1705f675f8e46b1b58baf006ae4828ff30234d47",
+      "query": "research group founded 2009 coordinator December 2023 English literature",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"research\" OR \"group\" OR \"founded\" OR \"2009\" OR \"coordinator\" OR \"december\" OR \"2023\" OR \"english\" OR \"literature\"",
+        "terms": [
+          "research",
+          "group",
+          "founded",
+          "2009",
+          "coordinator",
+          "december",
+          "2023",
+          "english",
+          "literature"
+        ]
+      }
+    },
+    {
+      "round": 8,
+      "top_k": 5,
+      "equivalence_key": "6dc9a4e125d7fdbbf4c5a1a2a5c68ab83ed7af981e626afd8bc562a860cb2c52",
+      "cached": false,
+      "query_sha256": "66fe00ed0672af89498ea1a5758bf9b53281eddde94f7d53a2c6d749d7465d14",
+      "query": "PhD on the writings of an English writer 2012 article convenor",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"phd\" OR \"on\" OR \"the\" OR \"writings\" OR \"of\" OR \"an\" OR \"english\" OR \"writer\" OR \"2012\" OR \"article\" OR \"convenor\"",
+        "terms": [
+          "phd",
+          "on",
+          "the",
+          "writings",
+          "of",
+          "an",
+          "english",
+          "writer",
+          "2012",
+          "article",
+          "convenor"
+        ]
+      }
+    },
+    {
+      "round": 8,
+      "top_k": 5,
+      "equivalence_key": "3a9e57ac964136ffc51a9805ba77f0400610fd1e7e9d6e15f647b3a4e39d4bf0",
+      "cached": false,
+      "query_sha256": "478ee93ae940ad13eb55aea5e0e20b75839880de74f913557768afde824f813c",
+      "query": "D.H. Lawrence society research group 2009 coordinator",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"d\" OR \"h\" OR \"lawrence\" OR \"society\" OR \"research\" OR \"group\" OR \"2009\" OR \"coordinator\"",
+        "terms": [
+          "d",
+          "h",
+          "lawrence",
+          "society",
+          "research",
+          "group",
+          "2009",
+          "coordinator"
+        ]
+      }
+    },
+    {
+      "round": 8,
+      "top_k": 5,
+      "equivalence_key": "d1ab32b6ed1e1701ff366c95b3093601a81b3b182e1893588e775ebfb92f1927",
+      "cached": false,
+      "query_sha256": "a736f860f3eb2650226fc3c7c7fb179978cf6c9bfa08248a2ae376cd7ca059f5",
+      "query": "Virginia Woolf society research group 2009 coordinator Routledge 2018",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"virginia\" OR \"woolf\" OR \"society\" OR \"research\" OR \"group\" OR \"2009\" OR \"coordinator\" OR \"routledge\" OR \"2018\"",
+        "terms": [
+          "virginia",
+          "woolf",
+          "society",
+          "research",
+          "group",
+          "2009",
+          "coordinator",
+          "routledge",
+          "2018"
+        ]
+      }
+    },
+    {
+      "round": 8,
+      "top_k": 5,
+      "equivalence_key": "5cebb8451222fd4a267ab3f4896dbf8a200e0aca2ce8e26954e0c1729c44d2ae",
+      "cached": false,
+      "query_sha256": "e0a637d3345dd006d8518e6f0dea408033abdb69d612c393c698a82775356a6d",
+      "query": "Katherine Mansfield society research group 2009 coordinator Routledge 2018",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"katherine\" OR \"mansfield\" OR \"society\" OR \"research\" OR \"group\" OR \"2009\" OR \"coordinator\" OR \"routledge\" OR \"2018\"",
+        "terms": [
+          "katherine",
+          "mansfield",
+          "society",
+          "research",
+          "group",
+          "2009",
+          "coordinator",
+          "routledge",
+          "2018"
+        ]
+      }
+    },
+    {
+      "round": 9,
+      "top_k": 5,
+      "equivalence_key": "0acd0c370fa2acc58f3e1e58cb0b63799ccea358904e14f038b3291a4925aa23",
+      "cached": false,
+      "query_sha256": "939f48dc2118b4dee3c69a7fe92af9076f6cbdc84cb327f7f096db8585607529",
+      "query": "Isobel Maddison Elizabeth von Arnim PhD Routledge 2018 co-edited",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"isobel\" OR \"maddison\" OR \"elizabeth\" OR \"von\" OR \"arnim\" OR \"phd\" OR \"routledge\" OR \"2018\" OR \"co\" OR \"edited\"",
+        "terms": [
+          "isobel",
+          "maddison",
+          "elizabeth",
+          "von",
+          "arnim",
+          "phd",
+          "routledge",
+          "2018",
+          "co",
+          "edited"
+        ]
+      }
+    },
+    {
+      "round": 9,
+      "top_k": 5,
+      "equivalence_key": "199dc8f84bdbfa860585db2c91d692001d147ae6100db863a6ec44c1fc8f6ee8",
+      "cached": false,
+      "query_sha256": "7778e0da4f8afff254775e3dd14da7efb658f86fd9750e56ae948197258cb2a3",
+      "query": "Isobel Maddison research group 2009 coordinator convenor",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"isobel\" OR \"maddison\" OR \"research\" OR \"group\" OR \"2009\" OR \"coordinator\" OR \"convenor\"",
+        "terms": [
+          "isobel",
+          "maddison",
+          "research",
+          "group",
+          "2009",
+          "coordinator",
+          "convenor"
+        ]
+      }
+    },
+    {
+      "round": 9,
+      "top_k": 5,
+      "equivalence_key": "08713bc8a9c98b2dc3436889a227553f44a757d81a35dd36704f69b8759a9f00",
+      "cached": false,
+      "query_sha256": "f3f1daddf61f8efbd9377cfbd6e49ed211f243068f01c00a017e40cf900def2a",
+      "query": "Isobel Maddison 2012 article Elizabeth von Arnim writings",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"isobel\" OR \"maddison\" OR \"2012\" OR \"article\" OR \"elizabeth\" OR \"von\" OR \"arnim\" OR \"writings\"",
+        "terms": [
+          "isobel",
+          "maddison",
+          "2012",
+          "article",
+          "elizabeth",
+          "von",
+          "arnim",
+          "writings"
+        ]
+      }
+    },
+    {
+      "round": 10,
+      "top_k": 5,
+      "equivalence_key": "0c9c3e4494c2ee85dfd71927ec881bd51a581f056c716e2967165d8355217767",
+      "cached": false,
+      "query_sha256": "60f749938bd9da2a445024d4f104c265322697b96e2b3badf55c3687ec7936a9",
+      "query": "Isobel Maddison Cambridge Elizabeth von Arnim PhD research group",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"isobel\" OR \"maddison\" OR \"cambridge\" OR \"elizabeth\" OR \"von\" OR \"arnim\" OR \"phd\" OR \"research\" OR \"group\"",
+        "terms": [
+          "isobel",
+          "maddison",
+          "cambridge",
+          "elizabeth",
+          "von",
+          "arnim",
+          "phd",
+          "research",
+          "group"
+        ]
+      }
+    },
+    {
+      "round": 10,
+      "top_k": 5,
+      "equivalence_key": "6170454168937b709b1223de3c7495b9d59dcdefd374ebb319eed2bd00f533f5",
+      "cached": false,
+      "query_sha256": "691951b1b4e07fcd355e1149c05374bc5be10198a65664c9ac8231a8d5c080ab",
+      "query": "Isobel Maddison Routledge 2018 co-edited book",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"isobel\" OR \"maddison\" OR \"routledge\" OR \"2018\" OR \"co\" OR \"edited\" OR \"book\"",
+        "terms": [
+          "isobel",
+          "maddison",
+          "routledge",
+          "2018",
+          "co",
+          "edited",
+          "book"
+        ]
+      }
+    },
+    {
+      "round": 10,
+      "top_k": 5,
+      "equivalence_key": "a0b29ee3fdfb285461df19ede0884dc2e75f8002ed9f6f317ff3bf7bd1d8c6c1",
+      "cached": false,
+      "query_sha256": "fbddcd3c7caf4dec542ed55fa35fa4ef7288d105fcfbcd19b2a906487168e4df",
+      "query": "Isobel Maddison convenor panel coordinator research group 2009",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"isobel\" OR \"maddison\" OR \"convenor\" OR \"panel\" OR \"coordinator\" OR \"research\" OR \"group\" OR \"2009\"",
+        "terms": [
+          "isobel",
+          "maddison",
+          "convenor",
+          "panel",
+          "coordinator",
+          "research",
+          "group",
+          "2009"
+        ]
+      }
+    },
+    {
+      "round": 11,
+      "top_k": 5,
+      "equivalence_key": "9ac558d568c393fd05e9b3473d10ec23e872caaa676dcf56292b82d8483e79c0",
+      "cached": false,
+      "query_sha256": "23b6282b5ed36246bf3fd3f401015911d5d363ec4535f1c9c4f79c758a0a6a8b",
+      "query": "Isobel Maddison Lucy Morrison Routledge 2018 Elizabeth von Arnim",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"isobel\" OR \"maddison\" OR \"lucy\" OR \"morrison\" OR \"routledge\" OR \"2018\" OR \"elizabeth\" OR \"von\" OR \"arnim\"",
+        "terms": [
+          "isobel",
+          "maddison",
+          "lucy",
+          "morrison",
+          "routledge",
+          "2018",
+          "elizabeth",
+          "von",
+          "arnim"
+        ]
+      }
+    },
+    {
+      "round": 11,
+      "top_k": 5,
+      "equivalence_key": "d4a580c8193790251ef6fa6616ad3c447548cfc2e5c31b2b0918156c81ed06b8",
+      "cached": false,
+      "query_sha256": "5275706787e953b652027687f0629c741d2ea72659365461b086253507af5a65",
+      "query": "Isobel Maddison research group founded 2009 coordinator December 2023",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"isobel\" OR \"maddison\" OR \"research\" OR \"group\" OR \"founded\" OR \"2009\" OR \"coordinator\" OR \"december\" OR \"2023\"",
+        "terms": [
+          "isobel",
+          "maddison",
+          "research",
+          "group",
+          "founded",
+          "2009",
+          "coordinator",
+          "december",
+          "2023"
+        ]
+      }
+    },
+    {
+      "round": 11,
+      "top_k": 5,
+      "equivalence_key": "24a662316cc29e3cdb9efe53825a29847b510487ea5f1950666e69000af5ad02",
+      "cached": false,
+      "query_sha256": "105d09af70f474d8a9b5993be8c71b94c9cf170a34f94a603980fb2ee479db4a",
+      "query": "Isobel Maddison PhD Elizabeth von Arnim writings convenor panel",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"isobel\" OR \"maddison\" OR \"phd\" OR \"elizabeth\" OR \"von\" OR \"arnim\" OR \"writings\" OR \"convenor\" OR \"panel\"",
+        "terms": [
+          "isobel",
+          "maddison",
+          "phd",
+          "elizabeth",
+          "von",
+          "arnim",
+          "writings",
+          "convenor",
+          "panel"
+        ]
+      }
+    },
+    {
+      "round": 12,
+      "top_k": 5,
+      "equivalence_key": "65d00f35a3f6a0d2aec0298647ed9a719302c86e67c77f2f193d8ef7bcd5416f",
+      "cached": false,
+      "query_sha256": "9c69db4291c9986d584345695a02f431df5ab411e0ab4a2d1b042610a11085c0",
+      "query": "Isobel Maddison Lucy Morrison Routledge 2018 Elizabeth von Arnim book",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"isobel\" OR \"maddison\" OR \"lucy\" OR \"morrison\" OR \"routledge\" OR \"2018\" OR \"elizabeth\" OR \"von\" OR \"arnim\" OR \"book\"",
+        "terms": [
+          "isobel",
+          "maddison",
+          "lucy",
+          "morrison",
+          "routledge",
+          "2018",
+          "elizabeth",
+          "von",
+          "arnim",
+          "book"
+        ]
+      }
+    },
+    {
+      "round": 12,
+      "top_k": 5,
+      "equivalence_key": "f4d44bacec9d303d29765dbc151c6fabf5197e674c3c006d11a877234b604fd4",
+      "cached": false,
+      "query_sha256": "9c53f6d3f2dfbb2ff4c51cbd1e227fe48227f8b73df9f80d575b6aa264d54d05",
+      "query": "Isobel Maddison Anglia Ruskin Elizabeth von Arnim PhD research group",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"isobel\" OR \"maddison\" OR \"anglia\" OR \"ruskin\" OR \"elizabeth\" OR \"von\" OR \"arnim\" OR \"phd\" OR \"research\" OR \"group\"",
+        "terms": [
+          "isobel",
+          "maddison",
+          "anglia",
+          "ruskin",
+          "elizabeth",
+          "von",
+          "arnim",
+          "phd",
+          "research",
+          "group"
+        ]
+      }
+    },
+    {
+      "round": 12,
+      "top_k": 5,
+      "equivalence_key": "946deb9ae0920674e653acc322bed08feaf95ba7d7d88d5a58464a6d0fb26383",
+      "cached": false,
+      "query_sha256": "7b5877b748c8f8f4df2abb9872ee00dde3ac7f1545bc7eacc30298d0316cda7e",
+      "query": "Isobel Maddison academic profile Elizabeth von Arnim convenor panel",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"isobel\" OR \"maddison\" OR \"academic\" OR \"profile\" OR \"elizabeth\" OR \"von\" OR \"arnim\" OR \"convenor\" OR \"panel\"",
+        "terms": [
+          "isobel",
+          "maddison",
+          "academic",
+          "profile",
+          "elizabeth",
+          "von",
+          "arnim",
+          "convenor",
+          "panel"
+        ]
+      }
+    },
+    {
+      "round": 12,
+      "top_k": 5,
+      "equivalence_key": "1f45ac7094ac6feab89efa27f7e4aa0f29dca49004416c00f46a2628703ca9da",
+      "cached": false,
+      "query_sha256": "b074b704fc701a6a8e9c10f70ad9a8282bac72b409528430c0f2486a0d0ef01a",
+      "query": "\"Isobel Maddison\" Routledge 2018 co-edited",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"isobel\" OR \"maddison\" OR \"routledge\" OR \"2018\" OR \"co\" OR \"edited\"",
+        "terms": [
+          "isobel",
+          "maddison",
+          "routledge",
+          "2018",
+          "co",
+          "edited"
+        ]
+      }
+    },
+    {
+      "round": 12,
+      "top_k": 5,
+      "equivalence_key": "85e7d28b3e00287ae9117d0dd77f53c69c392c25aae1c36397c5be538f9eb0f8",
+      "cached": false,
+      "query_sha256": "5862cdd5983d27d741a1401f1eebde8ad0e83bc298475e93977b7da44f5da4e1",
+      "query": "\"Isobel Maddison\" coordinator research group 2009",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"isobel\" OR \"maddison\" OR \"coordinator\" OR \"research\" OR \"group\" OR \"2009\"",
+        "terms": [
+          "isobel",
+          "maddison",
+          "coordinator",
+          "research",
+          "group",
+          "2009"
+        ]
+      }
+    },
+    {
+      "round": 12,
+      "top_k": 5,
+      "equivalence_key": "929586d682cb7d4e66b6901d3409f3413e967591a06237f7c99fcd768be2db83",
+      "cached": false,
+      "query_sha256": "015cb04b1069a30a57617c608d1827ecdac59d105745685e94c2d9dd554cc0a4",
+      "query": "\"Isobel Maddison\" PhD Elizabeth von Arnim",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"isobel\" OR \"maddison\" OR \"phd\" OR \"elizabeth\" OR \"von\" OR \"arnim\"",
+        "terms": [
+          "isobel",
+          "maddison",
+          "phd",
+          "elizabeth",
+          "von",
+          "arnim"
+        ]
+      }
+    },
+    {
+      "round": 13,
+      "top_k": 5,
+      "equivalence_key": "9ac558d568c393fd05e9b3473d10ec23e872caaa676dcf56292b82d8483e79c0",
+      "cached": true,
+      "query_sha256": "23b6282b5ed36246bf3fd3f401015911d5d363ec4535f1c9c4f79c758a0a6a8b",
+      "query": "Isobel Maddison Lucy Morrison Routledge 2018 Elizabeth von Arnim",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"isobel\" OR \"maddison\" OR \"lucy\" OR \"morrison\" OR \"routledge\" OR \"2018\" OR \"elizabeth\" OR \"von\" OR \"arnim\"",
+        "terms": [
+          "isobel",
+          "maddison",
+          "lucy",
+          "morrison",
+          "routledge",
+          "2018",
+          "elizabeth",
+          "von",
+          "arnim"
+        ]
+      }
+    },
+    {
+      "round": 13,
+      "top_k": 5,
+      "equivalence_key": "3c1e258de3342eab67479328be48b3019723c2ec9636ed1a056f9bcec5e6a9d1",
+      "cached": false,
+      "query_sha256": "f4b1f8ef5a96856b9ddfbb3c353787de278e6c601603a54766983c50f1615a23",
+      "query": "Isobel Maddison Anglia Ruskin University Elizabeth von Arnim PhD",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"isobel\" OR \"maddison\" OR \"anglia\" OR \"ruskin\" OR \"university\" OR \"elizabeth\" OR \"von\" OR \"arnim\" OR \"phd\"",
+        "terms": [
+          "isobel",
+          "maddison",
+          "anglia",
+          "ruskin",
+          "university",
+          "elizabeth",
+          "von",
+          "arnim",
+          "phd"
+        ]
+      }
+    },
+    {
+      "round": 13,
+      "top_k": 5,
+      "equivalence_key": "a17b7353de4395dbd779c7fa1a654ed4a47359e1e99e3923e18424bef5fcaa5f",
+      "cached": false,
+      "query_sha256": "31f97066f90920d43f966b5a21cc3dcd742b945d6c3879dce898319f8a023257",
+      "query": "Isobel Maddison coordinator research group 2009 convenor panel",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"isobel\" OR \"maddison\" OR \"coordinator\" OR \"research\" OR \"group\" OR \"2009\" OR \"convenor\" OR \"panel\"",
+        "terms": [
+          "isobel",
+          "maddison",
+          "coordinator",
+          "research",
+          "group",
+          "2009",
+          "convenor",
+          "panel"
+        ]
+      }
+    },
+    {
+      "round": 13,
+      "top_k": 5,
+      "equivalence_key": "97083ff1dada79c14c74b7045e87e5673f5320171dca0b40a5e0ab1f333b1c9d",
+      "cached": false,
+      "query_sha256": "9a5593b047266a35af7ece7ab9a198aa55a612c967d5d01cfca4eecd421c33b9",
+      "query": "Elizabeth von Arnim Routledge 2018 edited collection essays",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"elizabeth\" OR \"von\" OR \"arnim\" OR \"routledge\" OR \"2018\" OR \"edited\" OR \"collection\" OR \"essays\"",
+        "terms": [
+          "elizabeth",
+          "von",
+          "arnim",
+          "routledge",
+          "2018",
+          "edited",
+          "collection",
+          "essays"
+        ]
+      }
+    },
+    {
+      "round": 13,
+      "top_k": 5,
+      "equivalence_key": "4b9d853717630562d01bab85a1f7347205e404013e44d306e401a61db89850e8",
+      "cached": false,
+      "query_sha256": "eb93cbde24a46cf3bc011275ee626e1ae49f1e70388724952338a89a1f26c180",
+      "query": "Elizabeth von Arnim Reassessment Routledge 2018 editor",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"elizabeth\" OR \"von\" OR \"arnim\" OR \"reassessment\" OR \"routledge\" OR \"2018\" OR \"editor\"",
+        "terms": [
+          "elizabeth",
+          "von",
+          "arnim",
+          "reassessment",
+          "routledge",
+          "2018",
+          "editor"
+        ]
+      }
+    },
+    {
+      "round": 13,
+      "top_k": 5,
+      "equivalence_key": "1a236a93d54565b023ac4e931e581d713b74d581cddd28f5a232f77d3325ec93",
+      "cached": false,
+      "query_sha256": "f84adf9d4c58b962310c2576ad0c98f6ca1850ece08520c9d172953726d50f6d",
+      "query": "Routledge 2018 Elizabeth von Arnim critical essays co-editor",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"routledge\" OR \"2018\" OR \"elizabeth\" OR \"von\" OR \"arnim\" OR \"critical\" OR \"essays\" OR \"co\" OR \"editor\"",
+        "terms": [
+          "routledge",
+          "2018",
+          "elizabeth",
+          "von",
+          "arnim",
+          "critical",
+          "essays",
+          "co",
+          "editor"
+        ]
+      }
+    },
+    {
+      "round": 14,
+      "top_k": 5,
+      "equivalence_key": "9ac558d568c393fd05e9b3473d10ec23e872caaa676dcf56292b82d8483e79c0",
+      "cached": true,
+      "query_sha256": "23b6282b5ed36246bf3fd3f401015911d5d363ec4535f1c9c4f79c758a0a6a8b",
+      "query": "Isobel Maddison Lucy Morrison Routledge 2018 Elizabeth von Arnim",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"isobel\" OR \"maddison\" OR \"lucy\" OR \"morrison\" OR \"routledge\" OR \"2018\" OR \"elizabeth\" OR \"von\" OR \"arnim\"",
+        "terms": [
+          "isobel",
+          "maddison",
+          "lucy",
+          "morrison",
+          "routledge",
+          "2018",
+          "elizabeth",
+          "von",
+          "arnim"
+        ]
+      }
+    },
+    {
+      "round": 14,
+      "top_k": 5,
+      "equivalence_key": "3c1e258de3342eab67479328be48b3019723c2ec9636ed1a056f9bcec5e6a9d1",
+      "cached": true,
+      "query_sha256": "f4b1f8ef5a96856b9ddfbb3c353787de278e6c601603a54766983c50f1615a23",
+      "query": "Isobel Maddison Anglia Ruskin University Elizabeth von Arnim PhD",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"isobel\" OR \"maddison\" OR \"anglia\" OR \"ruskin\" OR \"university\" OR \"elizabeth\" OR \"von\" OR \"arnim\" OR \"phd\"",
+        "terms": [
+          "isobel",
+          "maddison",
+          "anglia",
+          "ruskin",
+          "university",
+          "elizabeth",
+          "von",
+          "arnim",
+          "phd"
+        ]
+      }
+    },
+    {
+      "round": 14,
+      "top_k": 5,
+      "equivalence_key": "a17b7353de4395dbd779c7fa1a654ed4a47359e1e99e3923e18424bef5fcaa5f",
+      "cached": true,
+      "query_sha256": "31f97066f90920d43f966b5a21cc3dcd742b945d6c3879dce898319f8a023257",
+      "query": "Isobel Maddison coordinator research group 2009 convenor panel",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"isobel\" OR \"maddison\" OR \"coordinator\" OR \"research\" OR \"group\" OR \"2009\" OR \"convenor\" OR \"panel\"",
+        "terms": [
+          "isobel",
+          "maddison",
+          "coordinator",
+          "research",
+          "group",
+          "2009",
+          "convenor",
+          "panel"
+        ]
+      }
+    },
+    {
+      "round": 14,
+      "top_k": 5,
+      "equivalence_key": "97083ff1dada79c14c74b7045e87e5673f5320171dca0b40a5e0ab1f333b1c9d",
+      "cached": true,
+      "query_sha256": "9a5593b047266a35af7ece7ab9a198aa55a612c967d5d01cfca4eecd421c33b9",
+      "query": "Elizabeth von Arnim Routledge 2018 edited collection essays",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"elizabeth\" OR \"von\" OR \"arnim\" OR \"routledge\" OR \"2018\" OR \"edited\" OR \"collection\" OR \"essays\"",
+        "terms": [
+          "elizabeth",
+          "von",
+          "arnim",
+          "routledge",
+          "2018",
+          "edited",
+          "collection",
+          "essays"
+        ]
+      }
+    },
+    {
+      "round": 14,
+      "top_k": 5,
+      "equivalence_key": "4b9d853717630562d01bab85a1f7347205e404013e44d306e401a61db89850e8",
+      "cached": true,
+      "query_sha256": "eb93cbde24a46cf3bc011275ee626e1ae49f1e70388724952338a89a1f26c180",
+      "query": "Elizabeth von Arnim Reassessment Routledge 2018 editor",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"elizabeth\" OR \"von\" OR \"arnim\" OR \"reassessment\" OR \"routledge\" OR \"2018\" OR \"editor\"",
+        "terms": [
+          "elizabeth",
+          "von",
+          "arnim",
+          "reassessment",
+          "routledge",
+          "2018",
+          "editor"
+        ]
+      }
+    },
+    {
+      "round": 14,
+      "top_k": 5,
+      "equivalence_key": "1a236a93d54565b023ac4e931e581d713b74d581cddd28f5a232f77d3325ec93",
+      "cached": true,
+      "query_sha256": "f84adf9d4c58b962310c2576ad0c98f6ca1850ece08520c9d172953726d50f6d",
+      "query": "Routledge 2018 Elizabeth von Arnim critical essays co-editor",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"routledge\" OR \"2018\" OR \"elizabeth\" OR \"von\" OR \"arnim\" OR \"critical\" OR \"essays\" OR \"co\" OR \"editor\"",
+        "terms": [
+          "routledge",
+          "2018",
+          "elizabeth",
+          "von",
+          "arnim",
+          "critical",
+          "essays",
+          "co",
+          "editor"
+        ]
+      }
+    },
+    {
+      "round": 15,
+      "top_k": 5,
+      "equivalence_key": "9ac558d568c393fd05e9b3473d10ec23e872caaa676dcf56292b82d8483e79c0",
+      "cached": true,
+      "query_sha256": "23b6282b5ed36246bf3fd3f401015911d5d363ec4535f1c9c4f79c758a0a6a8b",
+      "query": "Isobel Maddison Lucy Morrison Routledge 2018 Elizabeth von Arnim",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"isobel\" OR \"maddison\" OR \"lucy\" OR \"morrison\" OR \"routledge\" OR \"2018\" OR \"elizabeth\" OR \"von\" OR \"arnim\"",
+        "terms": [
+          "isobel",
+          "maddison",
+          "lucy",
+          "morrison",
+          "routledge",
+          "2018",
+          "elizabeth",
+          "von",
+          "arnim"
+        ]
+      }
+    },
+    {
+      "round": 15,
+      "top_k": 5,
+      "equivalence_key": "3c1e258de3342eab67479328be48b3019723c2ec9636ed1a056f9bcec5e6a9d1",
+      "cached": true,
+      "query_sha256": "f4b1f8ef5a96856b9ddfbb3c353787de278e6c601603a54766983c50f1615a23",
+      "query": "Isobel Maddison Anglia Ruskin University Elizabeth von Arnim PhD",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"isobel\" OR \"maddison\" OR \"anglia\" OR \"ruskin\" OR \"university\" OR \"elizabeth\" OR \"von\" OR \"arnim\" OR \"phd\"",
+        "terms": [
+          "isobel",
+          "maddison",
+          "anglia",
+          "ruskin",
+          "university",
+          "elizabeth",
+          "von",
+          "arnim",
+          "phd"
+        ]
+      }
+    },
+    {
+      "round": 15,
+      "top_k": 5,
+      "equivalence_key": "a17b7353de4395dbd779c7fa1a654ed4a47359e1e99e3923e18424bef5fcaa5f",
+      "cached": true,
+      "query_sha256": "31f97066f90920d43f966b5a21cc3dcd742b945d6c3879dce898319f8a023257",
+      "query": "Isobel Maddison coordinator research group 2009 convenor panel",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"isobel\" OR \"maddison\" OR \"coordinator\" OR \"research\" OR \"group\" OR \"2009\" OR \"convenor\" OR \"panel\"",
+        "terms": [
+          "isobel",
+          "maddison",
+          "coordinator",
+          "research",
+          "group",
+          "2009",
+          "convenor",
+          "panel"
+        ]
+      }
+    },
+    {
+      "round": 15,
+      "top_k": 5,
+      "equivalence_key": "97083ff1dada79c14c74b7045e87e5673f5320171dca0b40a5e0ab1f333b1c9d",
+      "cached": true,
+      "query_sha256": "9a5593b047266a35af7ece7ab9a198aa55a612c967d5d01cfca4eecd421c33b9",
+      "query": "Elizabeth von Arnim Routledge 2018 edited collection essays",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"elizabeth\" OR \"von\" OR \"arnim\" OR \"routledge\" OR \"2018\" OR \"edited\" OR \"collection\" OR \"essays\"",
+        "terms": [
+          "elizabeth",
+          "von",
+          "arnim",
+          "routledge",
+          "2018",
+          "edited",
+          "collection",
+          "essays"
+        ]
+      }
+    },
+    {
+      "round": 15,
+      "top_k": 5,
+      "equivalence_key": "4b9d853717630562d01bab85a1f7347205e404013e44d306e401a61db89850e8",
+      "cached": true,
+      "query_sha256": "eb93cbde24a46cf3bc011275ee626e1ae49f1e70388724952338a89a1f26c180",
+      "query": "Elizabeth von Arnim Reassessment Routledge 2018 editor",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"elizabeth\" OR \"von\" OR \"arnim\" OR \"reassessment\" OR \"routledge\" OR \"2018\" OR \"editor\"",
+        "terms": [
+          "elizabeth",
+          "von",
+          "arnim",
+          "reassessment",
+          "routledge",
+          "2018",
+          "editor"
+        ]
+      }
+    },
+    {
+      "round": 15,
+      "top_k": 5,
+      "equivalence_key": "1a236a93d54565b023ac4e931e581d713b74d581cddd28f5a232f77d3325ec93",
+      "cached": true,
+      "query_sha256": "f84adf9d4c58b962310c2576ad0c98f6ca1850ece08520c9d172953726d50f6d",
+      "query": "Routledge 2018 Elizabeth von Arnim critical essays co-editor",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"routledge\" OR \"2018\" OR \"elizabeth\" OR \"von\" OR \"arnim\" OR \"critical\" OR \"essays\" OR \"co\" OR \"editor\"",
+        "terms": [
+          "routledge",
+          "2018",
+          "elizabeth",
+          "von",
+          "arnim",
+          "critical",
+          "essays",
+          "co",
+          "editor"
+        ]
+      }
+    }
+  ],
+  "equivalent_query_repeats": 26,
+  "views": [
+    {
+      "round": 1,
+      "compacted": false,
+      "visible_evidence": [],
+      "shelf": [],
+      "shelf_evicted": []
+    },
+    {
+      "round": 2,
+      "compacted": false,
+      "visible_evidence": [],
+      "shelf": [],
+      "shelf_evicted": []
+    },
+    {
+      "round": 3,
+      "compacted": false,
+      "visible_evidence": [],
+      "shelf": [],
+      "shelf_evicted": []
+    },
+    {
+      "round": 4,
+      "compacted": false,
+      "visible_evidence": [],
+      "shelf": [],
+      "shelf_evicted": []
+    },
+    {
+      "round": 5,
+      "compacted": false,
+      "visible_evidence": [],
+      "shelf": [],
+      "shelf_evicted": []
+    },
+    {
+      "round": 6,
+      "compacted": true,
+      "visible_evidence": [],
+      "shelf": [],
+      "shelf_evicted": []
+    },
+    {
+      "round": 7,
+      "compacted": true,
+      "visible_evidence": [],
+      "shelf": [],
+      "shelf_evicted": []
+    },
+    {
+      "round": 8,
+      "compacted": false,
+      "visible_evidence": [],
+      "shelf": [],
+      "shelf_evicted": []
+    },
+    {
+      "round": 9,
+      "compacted": true,
+      "visible_evidence": [],
+      "shelf": [],
+      "shelf_evicted": []
+    },
+    {
+      "round": 10,
+      "compacted": true,
+      "visible_evidence": [
+        "e1"
+      ],
+      "shelf": [],
+      "shelf_evicted": []
+    },
+    {
+      "round": 11,
+      "compacted": true,
+      "visible_evidence": [
+        "e1"
+      ],
+      "shelf": [],
+      "shelf_evicted": []
+    },
+    {
+      "round": 12,
+      "compacted": true,
+      "visible_evidence": [
+        "e1",
+        "e2"
+      ],
+      "shelf": [],
+      "shelf_evicted": []
+    },
+    {
+      "round": 13,
+      "compacted": true,
+      "visible_evidence": [
+        "e1",
+        "e2"
+      ],
+      "shelf": [],
+      "shelf_evicted": []
+    },
+    {
+      "round": 14,
+      "compacted": true,
+      "visible_evidence": [
+        "e1",
+        "e2"
+      ],
+      "shelf": [
+        "e1"
+      ],
+      "shelf_evicted": []
+    },
+    {
+      "round": 15,
+      "compacted": true,
+      "visible_evidence": [
+        "e1",
+        "e2"
+      ],
+      "shelf": [
+        "e1",
+        "e2"
+      ],
+      "shelf_evicted": []
+    },
+    {
+      "round": 16,
+      "compacted": false,
+      "visible_evidence": [
+        "e1",
+        "e2"
+      ],
+      "shelf": [
+        "e1",
+        "e2"
+      ],
+      "shelf_evicted": []
+    }
+  ],
+  "delivered_refs": [
+    "e1",
+    "e2"
+  ],
+  "submitted_refs": [],
+  "text_included": true,
+  "limitations": [
+    "Equivalence is compiler equality, not semantic identity or wasted-search proof",
+    "Raw-window visibility/selection is not entailment or complete evidence coverage",
+    "No live q26 replay or independent answer scoring is performed"
+  ]
+}

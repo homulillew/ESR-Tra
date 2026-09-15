@@ -1,0 +1,41 @@
+{
+  "terminal": {
+    "answer": "According to the early 2020s article (Ballet Rising, 3 March 2021) about Zama Dance School — which was founded in 1984 in Gugulethu and started in a church hall — the longest-serving employee at the school is Vuyokazi, and her role is the school's secretary.",
+    "answer_representation": {
+      "input_type": "string",
+      "operation": "identity",
+      "rule": "string-integer-v1"
+    },
+    "basis": [
+      {
+        "document": "d42",
+        "document_chars": 14677,
+        "end": 3000,
+        "kind": "raw_evidence",
+        "ref": "e1",
+        "sha256": "c8068747894db7507486348456fdf2dd43558ab673c41302414f0a0414f8a83e",
+        "snapshot": "d7b0c320e182566ae974c560f3636452277559a7ff8713a9c418680f71b1c0c3",
+        "start": 0
+      },
+      {
+        "document": "d42",
+        "document_chars": 14677,
+        "end": 6150,
+        "kind": "raw_evidence",
+        "ref": "e3",
+        "sha256": "6300e4e7627810ff5df794542b7304c637ff9e9428a4d35e74e7bd52bdb06dd5",
+        "snapshot": "d7b0c320e182566ae974c560f3636452277559a7ff8713a9c418680f71b1c0c3",
+        "start": 5850
+      }
+    ],
+    "elapsed_seconds": 44.00959450000664,
+    "outcome": "submitted",
+    "refs": [
+      "e1",
+      "e3"
+    ],
+    "semantic_status": "not_automatically_verified"
+  },
+  "formal_correct": null,
+  "http_attempts": 8
+}

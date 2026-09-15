@@ -1,0 +1,1283 @@
+{
+  "protocol": "stride-search-3",
+  "head": "a18011ba586962a0646e1bc1f43434128d18cc57e926e328ae6068d29a469e42",
+  "outcome": "submitted",
+  "formal_correct": null,
+  "model_attempts": 16,
+  "backend_attempts": 40,
+  "queries": [
+    {
+      "round": 1,
+      "top_k": 8,
+      "equivalence_key": "3e1c145a36ce2dfcb22bf7b550956823505aa11e8c73f90e133ae8fe0170c1ef",
+      "cached": false,
+      "query_sha256": "dff08ffeefe1e3a61f2f324a9cccc41f4fb5c3f7efacd8b627b774c91bbc226f",
+      "query": "research group founded 2009 coordinator December 2023",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"research\" OR \"group\" OR \"founded\" OR \"2009\" OR \"coordinator\" OR \"december\" OR \"2023\"",
+        "terms": [
+          "research",
+          "group",
+          "founded",
+          "2009",
+          "coordinator",
+          "december",
+          "2023"
+        ]
+      }
+    },
+    {
+      "round": 1,
+      "top_k": 8,
+      "equivalence_key": "e7b8cc41a247c974bffecf6e7399b7407c0a4bedeef3d499530997fca1ed50e8",
+      "cached": false,
+      "query_sha256": "82ade5f6d7bb3e2042c8c483abf9bae8dcd4b05afbc77c60f4685bc7cb7a547d",
+      "query": "Routledge book 2018 co-edited research group 2009",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"routledge\" OR \"book\" OR \"2018\" OR \"co\" OR \"edited\" OR \"research\" OR \"group\" OR \"2009\"",
+        "terms": [
+          "routledge",
+          "book",
+          "2018",
+          "co",
+          "edited",
+          "research",
+          "group",
+          "2009"
+        ]
+      }
+    },
+    {
+      "round": 1,
+      "top_k": 8,
+      "equivalence_key": "d28cd25cd08067eb6cf35e15beee8b774998a6485e26c6a49f10b1b35f2d535b",
+      "cached": false,
+      "query_sha256": "9bff4b49d0f24627d4204f6a30f6965826331b7a25d8ee32f1129f1114a9a146",
+      "query": "coordinator research group 2009 Routledge 2018",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"coordinator\" OR \"research\" OR \"group\" OR \"2009\" OR \"routledge\" OR \"2018\"",
+        "terms": [
+          "coordinator",
+          "research",
+          "group",
+          "2009",
+          "routledge",
+          "2018"
+        ]
+      }
+    },
+    {
+      "round": 2,
+      "top_k": 8,
+      "equivalence_key": "1752e2cf60dadd9883035c0654faa091edaf410f52e37d7e74aab2f055cc8507",
+      "cached": false,
+      "query_sha256": "e0945a0487d6f01ee14ea63872cd5238edf57ee9a0d9bf5d6bfe92fd046301a2",
+      "query": "Routledge 2018 co-edited book PhD English writer research group 2009",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"routledge\" OR \"2018\" OR \"co\" OR \"edited\" OR \"book\" OR \"phd\" OR \"english\" OR \"writer\" OR \"research\" OR \"group\" OR \"2009\"",
+        "terms": [
+          "routledge",
+          "2018",
+          "co",
+          "edited",
+          "book",
+          "phd",
+          "english",
+          "writer",
+          "research",
+          "group",
+          "2009"
+        ]
+      }
+    },
+    {
+      "round": 2,
+      "top_k": 8,
+      "equivalence_key": "1c8d142ade5c987bab4dcedd26e02c8049b31db8b614ffe20790be41b1c092ed",
+      "cached": false,
+      "query_sha256": "3032dc16469a540e894d6da23cb7e24cb6c88960913c15e3919fbf06cc9354e8",
+      "query": "co-edited Routledge 2018 PhD writings English writer convenor panel",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"co\" OR \"edited\" OR \"routledge\" OR \"2018\" OR \"phd\" OR \"writings\" OR \"english\" OR \"writer\" OR \"convenor\" OR \"panel\"",
+        "terms": [
+          "co",
+          "edited",
+          "routledge",
+          "2018",
+          "phd",
+          "writings",
+          "english",
+          "writer",
+          "convenor",
+          "panel"
+        ]
+      }
+    },
+    {
+      "round": 2,
+      "top_k": 8,
+      "equivalence_key": "1f7329c194dde02b4afb994b095e74e469d329b1876ffa822949321f58ed4e02",
+      "cached": false,
+      "query_sha256": "0fe73bc44ef5c3f903e49c0063c5204f377e4155417444773e71c7d60c56faa3",
+      "query": "research group founded 2009 Routledge 2018 edited volume English literature PhD",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"research\" OR \"group\" OR \"founded\" OR \"2009\" OR \"routledge\" OR \"2018\" OR \"edited\" OR \"volume\" OR \"english\" OR \"literature\" OR \"phd\"",
+        "terms": [
+          "research",
+          "group",
+          "founded",
+          "2009",
+          "routledge",
+          "2018",
+          "edited",
+          "volume",
+          "english",
+          "literature",
+          "phd"
+        ]
+      }
+    },
+    {
+      "round": 2,
+      "top_k": 8,
+      "equivalence_key": "8036b4bc558d58bf8bd5967e4ecf803330fb0fb07b7d6fa409a3976341484fd4",
+      "cached": false,
+      "query_sha256": "f9bbaaacc32e1efef67e6cc1a9ad2ea478cafe85ef490d2c65d647091d77417e",
+      "query": "co-edited Routledge 2018 keynote speaker 2019 conference",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"co\" OR \"edited\" OR \"routledge\" OR \"2018\" OR \"keynote\" OR \"speaker\" OR \"2019\" OR \"conference\"",
+        "terms": [
+          "co",
+          "edited",
+          "routledge",
+          "2018",
+          "keynote",
+          "speaker",
+          "2019",
+          "conference"
+        ]
+      }
+    },
+    {
+      "round": 2,
+      "top_k": 8,
+      "equivalence_key": "293950a15f38ed9fc07ccbd5b15f9eace145fc0c0e0b384c2767d075f163d9f5",
+      "cached": false,
+      "query_sha256": "a9481994ccfa00acba09107b1ed0281cdd913dcc06fbfc4a00dd8dde6c022b46",
+      "query": "Routledge 2018 edited book co-editor keynote 2019",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"routledge\" OR \"2018\" OR \"edited\" OR \"book\" OR \"co\" OR \"editor\" OR \"keynote\" OR \"2019\"",
+        "terms": [
+          "routledge",
+          "2018",
+          "edited",
+          "book",
+          "co",
+          "editor",
+          "keynote",
+          "2019"
+        ]
+      }
+    },
+    {
+      "round": 2,
+      "top_k": 8,
+      "equivalence_key": "5324e9c8834fcd9011c27f9e82bbd5d5b257ffd6292a7e80fffe86f5ee21e7a8",
+      "cached": false,
+      "query_sha256": "d1963628afdf1b08b0254c18f124633fddc8c53506c1bf3aad373fecf63900bf",
+      "query": "2018 Routledge co-edited volume editor keynote speaker conference 2019",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"2018\" OR \"routledge\" OR \"co\" OR \"edited\" OR \"volume\" OR \"editor\" OR \"keynote\" OR \"speaker\" OR \"conference\" OR \"2019\"",
+        "terms": [
+          "2018",
+          "routledge",
+          "co",
+          "edited",
+          "volume",
+          "editor",
+          "keynote",
+          "speaker",
+          "conference",
+          "2019"
+        ]
+      }
+    },
+    {
+      "round": 3,
+      "top_k": 8,
+      "equivalence_key": "a1b52233a6bbd6ec87c8571606f57acaff0cd37377f33941ef7ddc4f6685cf9c",
+      "cached": false,
+      "query_sha256": "92823e8c7857d5278a90c0ee7634d415de579233ac09c3dd0925da355b31c544",
+      "query": "research group founded 2009 coordinator Routledge 2018 co-edited",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"research\" OR \"group\" OR \"founded\" OR \"2009\" OR \"coordinator\" OR \"routledge\" OR \"2018\" OR \"co\" OR \"edited\"",
+        "terms": [
+          "research",
+          "group",
+          "founded",
+          "2009",
+          "coordinator",
+          "routledge",
+          "2018",
+          "co",
+          "edited"
+        ]
+      }
+    },
+    {
+      "round": 3,
+      "top_k": 8,
+      "equivalence_key": "a52589f1f2acfb8effc44c498cb78383545d34551c80cdfc275c848889635560",
+      "cached": false,
+      "query_sha256": "f4f72158d1b6ace814fb274b79bc7ae32a1a0a2f39971f6e2af4f329777136bb",
+      "query": "PhD thesis writings English writer Routledge 2018 edited book",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"phd\" OR \"thesis\" OR \"writings\" OR \"english\" OR \"writer\" OR \"routledge\" OR \"2018\" OR \"edited\" OR \"book\"",
+        "terms": [
+          "phd",
+          "thesis",
+          "writings",
+          "english",
+          "writer",
+          "routledge",
+          "2018",
+          "edited",
+          "book"
+        ]
+      }
+    },
+    {
+      "round": 3,
+      "top_k": 8,
+      "equivalence_key": "ee808119e346ada55e3890567c99b65ce19e732f682a04cf5499ce5e3539fa27",
+      "cached": false,
+      "query_sha256": "6f7a7fa148d806070dd7e5e1ffbad74c45caf8ba87853a64fac22bfb64f2f8b4",
+      "query": "convenor panel research group 2009 Routledge 2018",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"convenor\" OR \"panel\" OR \"research\" OR \"group\" OR \"2009\" OR \"routledge\" OR \"2018\"",
+        "terms": [
+          "convenor",
+          "panel",
+          "research",
+          "group",
+          "2009",
+          "routledge",
+          "2018"
+        ]
+      }
+    },
+    {
+      "round": 3,
+      "top_k": 8,
+      "equivalence_key": "412ad80f914282f24925f7e9740cdec45ee889e29fa813fd530cd3f87917c30a",
+      "cached": false,
+      "query_sha256": "138dab8d9db648c6bb4d17cc788681c581a28c35d21ddc8ad98b977806e23927",
+      "query": "Sarah Hatchuel Routledge 2018 co-edited",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"sarah\" OR \"hatchuel\" OR \"routledge\" OR \"2018\" OR \"co\" OR \"edited\"",
+        "terms": [
+          "sarah",
+          "hatchuel",
+          "routledge",
+          "2018",
+          "co",
+          "edited"
+        ]
+      }
+    },
+    {
+      "round": 3,
+      "top_k": 8,
+      "equivalence_key": "db7dbbb2e13db2a5efd0342b566a05a2717178d3d0984260837d08a69d08f80d",
+      "cached": false,
+      "query_sha256": "00401408dc08b081c6742f00d4bee43748905df9131e9fa53690fc6fd2346ed0",
+      "query": "Nathalie Vienne-Guerrin Routledge 2018 co-edited Shakespeare",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"nathalie\" OR \"vienne\" OR \"guerrin\" OR \"routledge\" OR \"2018\" OR \"co\" OR \"edited\" OR \"shakespeare\"",
+        "terms": [
+          "nathalie",
+          "vienne",
+          "guerrin",
+          "routledge",
+          "2018",
+          "co",
+          "edited",
+          "shakespeare"
+        ]
+      }
+    },
+    {
+      "round": 3,
+      "top_k": 8,
+      "equivalence_key": "7d4813f83b1c4e6b1c0093c9ead0a24a9371ee3d80b85c9b929a3c85a4b4ab2f",
+      "cached": false,
+      "query_sha256": "30e5119afadef14c2b24e787dc1304b819494a7749a9aae02470c46dee28cc96",
+      "query": "Shakespeare Routledge 2018 co-edited Hatchuel Vienne-Guerrin",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"shakespeare\" OR \"routledge\" OR \"2018\" OR \"co\" OR \"edited\" OR \"hatchuel\" OR \"vienne\" OR \"guerrin\"",
+        "terms": [
+          "shakespeare",
+          "routledge",
+          "2018",
+          "co",
+          "edited",
+          "hatchuel",
+          "vienne",
+          "guerrin"
+        ]
+      }
+    },
+    {
+      "round": 4,
+      "top_k": 8,
+      "equivalence_key": "65b5191a178901bd9150950ad12ed52701cb63c63b82278c753000deea03f58e",
+      "cached": false,
+      "query_sha256": "9ae8dbc14e6c5a180af178af1fbbedf62a0729ed13c6dc63e040619fd51845a1",
+      "query": "Sarah Hatchuel PhD Shakespeare Routledge 2018",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"sarah\" OR \"hatchuel\" OR \"phd\" OR \"shakespeare\" OR \"routledge\" OR \"2018\"",
+        "terms": [
+          "sarah",
+          "hatchuel",
+          "phd",
+          "shakespeare",
+          "routledge",
+          "2018"
+        ]
+      }
+    },
+    {
+      "round": 4,
+      "top_k": 8,
+      "equivalence_key": "e9d920522affe1ced581fe66de1eafb62998c1c4afa00a3c08331ff77aec9859",
+      "cached": false,
+      "query_sha256": "3aeb88760dafb9a0894c0dffb74361912f383cda76953eb6936bda9707149e51",
+      "query": "Sarah Hatchuel research group 2009 coordinator",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"sarah\" OR \"hatchuel\" OR \"research\" OR \"group\" OR \"2009\" OR \"coordinator\"",
+        "terms": [
+          "sarah",
+          "hatchuel",
+          "research",
+          "group",
+          "2009",
+          "coordinator"
+        ]
+      }
+    },
+    {
+      "round": 4,
+      "top_k": 8,
+      "equivalence_key": "692fe85d348e7c4886912d6f5f213ddf6d7de92ffd1ecf4918bd1c7f586e562b",
+      "cached": false,
+      "query_sha256": "948f3b32bcbd28982ae46737a7271d3843b50e0027a8b4f5f7a8c6c8f65bf40a",
+      "query": "Sarah Hatchuel convenor panel biography",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"sarah\" OR \"hatchuel\" OR \"convenor\" OR \"panel\" OR \"biography\"",
+        "terms": [
+          "sarah",
+          "hatchuel",
+          "convenor",
+          "panel",
+          "biography"
+        ]
+      }
+    },
+    {
+      "round": 4,
+      "top_k": 8,
+      "equivalence_key": "320029c6a064682a8a7b3422d3bba6aaa60054a0239a6a834fcf4fe34fa4ce26",
+      "cached": false,
+      "query_sha256": "a06a0c9b2551452490ccaa53506cb8de6e07fd9babd9a67570de080e5b90a5ee",
+      "query": "Nathalie Vienne-Guerrin PhD Shakespeare Routledge 2018",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"nathalie\" OR \"vienne\" OR \"guerrin\" OR \"phd\" OR \"shakespeare\" OR \"routledge\" OR \"2018\"",
+        "terms": [
+          "nathalie",
+          "vienne",
+          "guerrin",
+          "phd",
+          "shakespeare",
+          "routledge",
+          "2018"
+        ]
+      }
+    },
+    {
+      "round": 4,
+      "top_k": 8,
+      "equivalence_key": "0ab03e01f270077bf6b3c514c2cf09562080c84c8a12ab899486a5a744708edc",
+      "cached": false,
+      "query_sha256": "41bdc59177ddc9e83db147fac491d00fc7352601ffd182d4afc5f8483c23e355",
+      "query": "Nathalie Vienne-Guerrin research group 2009 coordinator",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"nathalie\" OR \"vienne\" OR \"guerrin\" OR \"research\" OR \"group\" OR \"2009\" OR \"coordinator\"",
+        "terms": [
+          "nathalie",
+          "vienne",
+          "guerrin",
+          "research",
+          "group",
+          "2009",
+          "coordinator"
+        ]
+      }
+    },
+    {
+      "round": 4,
+      "top_k": 8,
+      "equivalence_key": "985f80e78fc11bf58ebc1d1f33019ed9add3c46138ebbf62419b247e9dac98b2",
+      "cached": false,
+      "query_sha256": "5a317a26a620b476424fccfcb83e03b62a115ed93ed3df3a730c4991d1ad3521",
+      "query": "Nathalie Vienne-Guerrin biography convenor",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"nathalie\" OR \"vienne\" OR \"guerrin\" OR \"biography\" OR \"convenor\"",
+        "terms": [
+          "nathalie",
+          "vienne",
+          "guerrin",
+          "biography",
+          "convenor"
+        ]
+      }
+    },
+    {
+      "round": 5,
+      "top_k": 8,
+      "equivalence_key": "71ed5b6d6165254f47a57eb5a14f9508adf212195175ef6299f4b69407a8832c",
+      "cached": false,
+      "query_sha256": "83a516366b5cb9de5ec0141d742af91c445b49f6dd7333efea187444079a04b8",
+      "query": "Sarah Hatchuel Shakespeare on screen Routledge 2018",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"sarah\" OR \"hatchuel\" OR \"shakespeare\" OR \"on\" OR \"screen\" OR \"routledge\" OR \"2018\"",
+        "terms": [
+          "sarah",
+          "hatchuel",
+          "shakespeare",
+          "on",
+          "screen",
+          "routledge",
+          "2018"
+        ]
+      }
+    },
+    {
+      "round": 5,
+      "top_k": 8,
+      "equivalence_key": "8c5f752f23502477ab97673eba032b672794da1847de8ac55e492ddc912a4645",
+      "cached": false,
+      "query_sha256": "a195d470d960c7eb3f2b117f4113b36cb7fac0f43c7b170002f84149f9e86c53",
+      "query": "Sarah Hatchuel PhD dissertation Shakespeare writings",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"sarah\" OR \"hatchuel\" OR \"phd\" OR \"dissertation\" OR \"shakespeare\" OR \"writings\"",
+        "terms": [
+          "sarah",
+          "hatchuel",
+          "phd",
+          "dissertation",
+          "shakespeare",
+          "writings"
+        ]
+      }
+    },
+    {
+      "round": 5,
+      "top_k": 8,
+      "equivalence_key": "5bb08e0d947f41a4ec7f35ea7c9e4116729f389c8d8bf930b5bb6081041187ca",
+      "cached": false,
+      "query_sha256": "21965e498c508fe63e957207d87962fb4633ad4e177b2ad9949e0c83c5392a4c",
+      "query": "Sarah Hatchuel Le Havre research group coordinator",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"sarah\" OR \"hatchuel\" OR \"le\" OR \"havre\" OR \"research\" OR \"group\" OR \"coordinator\"",
+        "terms": [
+          "sarah",
+          "hatchuel",
+          "le",
+          "havre",
+          "research",
+          "group",
+          "coordinator"
+        ]
+      }
+    },
+    {
+      "round": 6,
+      "top_k": 8,
+      "equivalence_key": "0645abf3c4d535e3bfd29299555bf7aed6bcbb7f5b50fee8068c9bb87da52c36",
+      "cached": false,
+      "query_sha256": "e6e321275ffca52b63eab8e091e479e13d7bc8e8571dc8c51d926e5fd86bc11f",
+      "query": "Sarah Hatchuel biography professor Le Havre Shakespeare",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"sarah\" OR \"hatchuel\" OR \"biography\" OR \"professor\" OR \"le\" OR \"havre\" OR \"shakespeare\"",
+        "terms": [
+          "sarah",
+          "hatchuel",
+          "biography",
+          "professor",
+          "le",
+          "havre",
+          "shakespeare"
+        ]
+      }
+    },
+    {
+      "round": 6,
+      "top_k": 8,
+      "equivalence_key": "3aa1f86860e4271d7f03835d74aa48d03c39776fe4052692d3e434aa2763c864",
+      "cached": false,
+      "query_sha256": "06c57a0de8bd08e86ee23ed884b3bd0012815a46f3b1dc77096950d6c3c5c349",
+      "query": "Sarah Hatchuel Routledge book editor 2018",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"sarah\" OR \"hatchuel\" OR \"routledge\" OR \"book\" OR \"editor\" OR \"2018\"",
+        "terms": [
+          "sarah",
+          "hatchuel",
+          "routledge",
+          "book",
+          "editor",
+          "2018"
+        ]
+      }
+    },
+    {
+      "round": 6,
+      "top_k": 8,
+      "equivalence_key": "28dbff1993c2d055b15f5a9c84250c3331dd8be1389a90b51508c80f866978e3",
+      "cached": false,
+      "query_sha256": "87e7c9003a611afca5955907e53a44ef18d3e8b8a99b82f30c7ec85a60e95590",
+      "query": "Sarah Hatchuel PhD thesis Shakespeare writings",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"sarah\" OR \"hatchuel\" OR \"phd\" OR \"thesis\" OR \"shakespeare\" OR \"writings\"",
+        "terms": [
+          "sarah",
+          "hatchuel",
+          "phd",
+          "thesis",
+          "shakespeare",
+          "writings"
+        ]
+      }
+    },
+    {
+      "round": 7,
+      "top_k": 8,
+      "equivalence_key": "e7da42c0187fc102e79dc7cc4ec2acba3885bed4b02d88fa4f6bcf0f964e9bbb",
+      "cached": false,
+      "query_sha256": "542030edf08fbff21cbe2237ae0bf5af21010bc14545d9761c33363c00079a40",
+      "query": "Sarah Hatchuel Shakespeare on screen Routledge 2018 edited",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"sarah\" OR \"hatchuel\" OR \"shakespeare\" OR \"on\" OR \"screen\" OR \"routledge\" OR \"2018\" OR \"edited\"",
+        "terms": [
+          "sarah",
+          "hatchuel",
+          "shakespeare",
+          "on",
+          "screen",
+          "routledge",
+          "2018",
+          "edited"
+        ]
+      }
+    },
+    {
+      "round": 7,
+      "top_k": 8,
+      "equivalence_key": "371a1f5c3639cc184d34b9db9e377c5c1a928b571e5375f87ab8c258215b2668",
+      "cached": false,
+      "query_sha256": "5effd7c4c90e8c01f18d40959a5549d2dbb2e77e14f151b5cd9ee1e4c2bc507e",
+      "query": "Sarah Hatchuel Le Havre Normandie professor biography",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"sarah\" OR \"hatchuel\" OR \"le\" OR \"havre\" OR \"normandie\" OR \"professor\" OR \"biography\"",
+        "terms": [
+          "sarah",
+          "hatchuel",
+          "le",
+          "havre",
+          "normandie",
+          "professor",
+          "biography"
+        ]
+      }
+    },
+    {
+      "round": 7,
+      "top_k": 8,
+      "equivalence_key": "81d9838aaf3313d375aae956ecffac3cb3d3e44f5b8566fded421679b561b761",
+      "cached": false,
+      "query_sha256": "ec91b494a6b0340691aacac2a74963cfee67077763a89bdb2bb3257d3d0117ef",
+      "query": "Sarah Hatchuel PhD dissertation Shakespeare",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"sarah\" OR \"hatchuel\" OR \"phd\" OR \"dissertation\" OR \"shakespeare\"",
+        "terms": [
+          "sarah",
+          "hatchuel",
+          "phd",
+          "dissertation",
+          "shakespeare"
+        ]
+      }
+    },
+    {
+      "round": 8,
+      "top_k": 8,
+      "equivalence_key": "f03eb06a5802b8a199658d82dedceb571c7f3525cdfb6d6e2c1061be3dfed0c3",
+      "cached": false,
+      "query_sha256": "72e5b3100173c61d9db91dd4bff1a20267dc5923b8defdf467f4525411bc8498",
+      "query": "Sarah Hatchuel Routledge 2018 Shakespeare on screen book",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"sarah\" OR \"hatchuel\" OR \"routledge\" OR \"2018\" OR \"shakespeare\" OR \"on\" OR \"screen\" OR \"book\"",
+        "terms": [
+          "sarah",
+          "hatchuel",
+          "routledge",
+          "2018",
+          "shakespeare",
+          "on",
+          "screen",
+          "book"
+        ]
+      }
+    },
+    {
+      "round": 8,
+      "top_k": 8,
+      "equivalence_key": "28dbff1993c2d055b15f5a9c84250c3331dd8be1389a90b51508c80f866978e3",
+      "cached": true,
+      "query_sha256": "87e7c9003a611afca5955907e53a44ef18d3e8b8a99b82f30c7ec85a60e95590",
+      "query": "Sarah Hatchuel PhD thesis Shakespeare writings",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"sarah\" OR \"hatchuel\" OR \"phd\" OR \"thesis\" OR \"shakespeare\" OR \"writings\"",
+        "terms": [
+          "sarah",
+          "hatchuel",
+          "phd",
+          "thesis",
+          "shakespeare",
+          "writings"
+        ]
+      }
+    },
+    {
+      "round": 8,
+      "top_k": 8,
+      "equivalence_key": "d418e3266634c730616b3708fbebe51c9cff2bc27c6fa2bce9b9d72796972dbc",
+      "cached": false,
+      "query_sha256": "8cb1698ed48bf82fab0c590b99ede374e73e75cbca871401f27e551d811f11de",
+      "query": "Sarah Hatchuel GRIC research group coordinator Le Havre",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"sarah\" OR \"hatchuel\" OR \"gric\" OR \"research\" OR \"group\" OR \"coordinator\" OR \"le\" OR \"havre\"",
+        "terms": [
+          "sarah",
+          "hatchuel",
+          "gric",
+          "research",
+          "group",
+          "coordinator",
+          "le",
+          "havre"
+        ]
+      }
+    },
+    {
+      "round": 9,
+      "top_k": 8,
+      "equivalence_key": "71ed5b6d6165254f47a57eb5a14f9508adf212195175ef6299f4b69407a8832c",
+      "cached": false,
+      "query_sha256": "6fdef0f4884ef5040deede14d8163c233544701c87713cd0f6e5d945dd63a068",
+      "query": "Sarah Hatchuel Shakespeare on Screen Routledge 2018",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"sarah\" OR \"hatchuel\" OR \"shakespeare\" OR \"on\" OR \"screen\" OR \"routledge\" OR \"2018\"",
+        "terms": [
+          "sarah",
+          "hatchuel",
+          "shakespeare",
+          "on",
+          "screen",
+          "routledge",
+          "2018"
+        ]
+      }
+    },
+    {
+      "round": 9,
+      "top_k": 8,
+      "equivalence_key": "465aba45378ec7056424dfe814a0652b81fa2421c1cb18f2a67541d4db52dbe5",
+      "cached": false,
+      "query_sha256": "88fd658c1956b466a9f1b42eb40502961fcd86f246526e3523a70a4498277148",
+      "query": "Sarah Hatchuel PhD thesis Shakespeare",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"sarah\" OR \"hatchuel\" OR \"phd\" OR \"thesis\" OR \"shakespeare\"",
+        "terms": [
+          "sarah",
+          "hatchuel",
+          "phd",
+          "thesis",
+          "shakespeare"
+        ]
+      }
+    },
+    {
+      "round": 9,
+      "top_k": 8,
+      "equivalence_key": "baf700532dd6ddc3307653bdfcf58cb2d2480d31f53fce59f5e64b9220c320f5",
+      "cached": false,
+      "query_sha256": "ac6e4aa6775edc8536bf1e6386d66bf186570b0bcee895b58c7c43a6703c1000",
+      "query": "Sarah Hatchuel GRIC coordinator Le Havre research group",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"sarah\" OR \"hatchuel\" OR \"gric\" OR \"coordinator\" OR \"le\" OR \"havre\" OR \"research\" OR \"group\"",
+        "terms": [
+          "sarah",
+          "hatchuel",
+          "gric",
+          "coordinator",
+          "le",
+          "havre",
+          "research",
+          "group"
+        ]
+      }
+    },
+    {
+      "round": 10,
+      "top_k": 8,
+      "equivalence_key": "0cc140dd838741a630759dba88d57673bcfc405ee1d64cfbbf87f4e9b8bf7d05",
+      "cached": false,
+      "query_sha256": "7f85ec27ce3f9e781b61c631e97934ce25a630286f93b248b22291dfc6d7c6a3",
+      "query": "Sarah Hatchuel Shakespeare on Screen Routledge 2018 edited volume",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"sarah\" OR \"hatchuel\" OR \"shakespeare\" OR \"on\" OR \"screen\" OR \"routledge\" OR \"2018\" OR \"edited\" OR \"volume\"",
+        "terms": [
+          "sarah",
+          "hatchuel",
+          "shakespeare",
+          "on",
+          "screen",
+          "routledge",
+          "2018",
+          "edited",
+          "volume"
+        ]
+      }
+    },
+    {
+      "round": 10,
+      "top_k": 8,
+      "equivalence_key": "3e694cbbd506fdb1b6a8e085e480f9a33e3722ea491687c4f53d2cf53971e9d2",
+      "cached": false,
+      "query_sha256": "85d302c3711fc795d8fccd0a3caee0bac886c924825b2a56b7ac29ecf9e1d4be",
+      "query": "Sarah Hatchuel PhD thesis Shakespeare writings dissertation",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"sarah\" OR \"hatchuel\" OR \"phd\" OR \"thesis\" OR \"shakespeare\" OR \"writings\" OR \"dissertation\"",
+        "terms": [
+          "sarah",
+          "hatchuel",
+          "phd",
+          "thesis",
+          "shakespeare",
+          "writings",
+          "dissertation"
+        ]
+      }
+    },
+    {
+      "round": 10,
+      "top_k": 8,
+      "equivalence_key": "a2ac261a271c9e31863ed439238686ee44287c6cee677aaf47afa10cf18745aa",
+      "cached": false,
+      "query_sha256": "ea69669b2e3b48951812719e78da8a6ebc4c224ad0c478906756b222f64afb5c",
+      "query": "Sarah Hatchuel GRIC coordinator Le Havre research group 2009",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"sarah\" OR \"hatchuel\" OR \"gric\" OR \"coordinator\" OR \"le\" OR \"havre\" OR \"research\" OR \"group\" OR \"2009\"",
+        "terms": [
+          "sarah",
+          "hatchuel",
+          "gric",
+          "coordinator",
+          "le",
+          "havre",
+          "research",
+          "group",
+          "2009"
+        ]
+      }
+    },
+    {
+      "round": 11,
+      "top_k": 8,
+      "equivalence_key": "71ed5b6d6165254f47a57eb5a14f9508adf212195175ef6299f4b69407a8832c",
+      "cached": true,
+      "query_sha256": "6fdef0f4884ef5040deede14d8163c233544701c87713cd0f6e5d945dd63a068",
+      "query": "Sarah Hatchuel Shakespeare on Screen Routledge 2018",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"sarah\" OR \"hatchuel\" OR \"shakespeare\" OR \"on\" OR \"screen\" OR \"routledge\" OR \"2018\"",
+        "terms": [
+          "sarah",
+          "hatchuel",
+          "shakespeare",
+          "on",
+          "screen",
+          "routledge",
+          "2018"
+        ]
+      }
+    },
+    {
+      "round": 11,
+      "top_k": 8,
+      "equivalence_key": "28dbff1993c2d055b15f5a9c84250c3331dd8be1389a90b51508c80f866978e3",
+      "cached": true,
+      "query_sha256": "87e7c9003a611afca5955907e53a44ef18d3e8b8a99b82f30c7ec85a60e95590",
+      "query": "Sarah Hatchuel PhD thesis Shakespeare writings",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"sarah\" OR \"hatchuel\" OR \"phd\" OR \"thesis\" OR \"shakespeare\" OR \"writings\"",
+        "terms": [
+          "sarah",
+          "hatchuel",
+          "phd",
+          "thesis",
+          "shakespeare",
+          "writings"
+        ]
+      }
+    },
+    {
+      "round": 11,
+      "top_k": 8,
+      "equivalence_key": "a2ac261a271c9e31863ed439238686ee44287c6cee677aaf47afa10cf18745aa",
+      "cached": true,
+      "query_sha256": "ea69669b2e3b48951812719e78da8a6ebc4c224ad0c478906756b222f64afb5c",
+      "query": "Sarah Hatchuel GRIC coordinator Le Havre research group 2009",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"sarah\" OR \"hatchuel\" OR \"gric\" OR \"coordinator\" OR \"le\" OR \"havre\" OR \"research\" OR \"group\" OR \"2009\"",
+        "terms": [
+          "sarah",
+          "hatchuel",
+          "gric",
+          "coordinator",
+          "le",
+          "havre",
+          "research",
+          "group",
+          "2009"
+        ]
+      }
+    },
+    {
+      "round": 12,
+      "top_k": 8,
+      "equivalence_key": "e7da42c0187fc102e79dc7cc4ec2acba3885bed4b02d88fa4f6bcf0f964e9bbb",
+      "cached": false,
+      "query_sha256": "a46078641a16e4f311292e2312fcb08046931ad6765b3c9d2e1c1cfbbe8b665d",
+      "query": "Sarah Hatchuel Shakespeare on Screen Routledge 2018 edited",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"sarah\" OR \"hatchuel\" OR \"shakespeare\" OR \"on\" OR \"screen\" OR \"routledge\" OR \"2018\" OR \"edited\"",
+        "terms": [
+          "sarah",
+          "hatchuel",
+          "shakespeare",
+          "on",
+          "screen",
+          "routledge",
+          "2018",
+          "edited"
+        ]
+      }
+    },
+    {
+      "round": 12,
+      "top_k": 8,
+      "equivalence_key": "8c5f752f23502477ab97673eba032b672794da1847de8ac55e492ddc912a4645",
+      "cached": true,
+      "query_sha256": "a195d470d960c7eb3f2b117f4113b36cb7fac0f43c7b170002f84149f9e86c53",
+      "query": "Sarah Hatchuel PhD dissertation Shakespeare writings",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"sarah\" OR \"hatchuel\" OR \"phd\" OR \"dissertation\" OR \"shakespeare\" OR \"writings\"",
+        "terms": [
+          "sarah",
+          "hatchuel",
+          "phd",
+          "dissertation",
+          "shakespeare",
+          "writings"
+        ]
+      }
+    },
+    {
+      "round": 12,
+      "top_k": 8,
+      "equivalence_key": "a2ac261a271c9e31863ed439238686ee44287c6cee677aaf47afa10cf18745aa",
+      "cached": true,
+      "query_sha256": "ea69669b2e3b48951812719e78da8a6ebc4c224ad0c478906756b222f64afb5c",
+      "query": "Sarah Hatchuel GRIC coordinator Le Havre research group 2009",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"sarah\" OR \"hatchuel\" OR \"gric\" OR \"coordinator\" OR \"le\" OR \"havre\" OR \"research\" OR \"group\" OR \"2009\"",
+        "terms": [
+          "sarah",
+          "hatchuel",
+          "gric",
+          "coordinator",
+          "le",
+          "havre",
+          "research",
+          "group",
+          "2009"
+        ]
+      }
+    },
+    {
+      "round": 13,
+      "top_k": 8,
+      "equivalence_key": "71ed5b6d6165254f47a57eb5a14f9508adf212195175ef6299f4b69407a8832c",
+      "cached": true,
+      "query_sha256": "6fdef0f4884ef5040deede14d8163c233544701c87713cd0f6e5d945dd63a068",
+      "query": "Sarah Hatchuel Shakespeare on Screen Routledge 2018",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"sarah\" OR \"hatchuel\" OR \"shakespeare\" OR \"on\" OR \"screen\" OR \"routledge\" OR \"2018\"",
+        "terms": [
+          "sarah",
+          "hatchuel",
+          "shakespeare",
+          "on",
+          "screen",
+          "routledge",
+          "2018"
+        ]
+      }
+    },
+    {
+      "round": 13,
+      "top_k": 8,
+      "equivalence_key": "28dbff1993c2d055b15f5a9c84250c3331dd8be1389a90b51508c80f866978e3",
+      "cached": true,
+      "query_sha256": "87e7c9003a611afca5955907e53a44ef18d3e8b8a99b82f30c7ec85a60e95590",
+      "query": "Sarah Hatchuel PhD thesis Shakespeare writings",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"sarah\" OR \"hatchuel\" OR \"phd\" OR \"thesis\" OR \"shakespeare\" OR \"writings\"",
+        "terms": [
+          "sarah",
+          "hatchuel",
+          "phd",
+          "thesis",
+          "shakespeare",
+          "writings"
+        ]
+      }
+    },
+    {
+      "round": 13,
+      "top_k": 8,
+      "equivalence_key": "a2ac261a271c9e31863ed439238686ee44287c6cee677aaf47afa10cf18745aa",
+      "cached": true,
+      "query_sha256": "ea69669b2e3b48951812719e78da8a6ebc4c224ad0c478906756b222f64afb5c",
+      "query": "Sarah Hatchuel GRIC coordinator Le Havre research group 2009",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"sarah\" OR \"hatchuel\" OR \"gric\" OR \"coordinator\" OR \"le\" OR \"havre\" OR \"research\" OR \"group\" OR \"2009\"",
+        "terms": [
+          "sarah",
+          "hatchuel",
+          "gric",
+          "coordinator",
+          "le",
+          "havre",
+          "research",
+          "group",
+          "2009"
+        ]
+      }
+    },
+    {
+      "round": 14,
+      "top_k": 8,
+      "equivalence_key": "0cc140dd838741a630759dba88d57673bcfc405ee1d64cfbbf87f4e9b8bf7d05",
+      "cached": true,
+      "query_sha256": "7f85ec27ce3f9e781b61c631e97934ce25a630286f93b248b22291dfc6d7c6a3",
+      "query": "Sarah Hatchuel Shakespeare on Screen Routledge 2018 edited volume",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"sarah\" OR \"hatchuel\" OR \"shakespeare\" OR \"on\" OR \"screen\" OR \"routledge\" OR \"2018\" OR \"edited\" OR \"volume\"",
+        "terms": [
+          "sarah",
+          "hatchuel",
+          "shakespeare",
+          "on",
+          "screen",
+          "routledge",
+          "2018",
+          "edited",
+          "volume"
+        ]
+      }
+    },
+    {
+      "round": 14,
+      "top_k": 8,
+      "equivalence_key": "3e694cbbd506fdb1b6a8e085e480f9a33e3722ea491687c4f53d2cf53971e9d2",
+      "cached": true,
+      "query_sha256": "85d302c3711fc795d8fccd0a3caee0bac886c924825b2a56b7ac29ecf9e1d4be",
+      "query": "Sarah Hatchuel PhD thesis Shakespeare writings dissertation",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"sarah\" OR \"hatchuel\" OR \"phd\" OR \"thesis\" OR \"shakespeare\" OR \"writings\" OR \"dissertation\"",
+        "terms": [
+          "sarah",
+          "hatchuel",
+          "phd",
+          "thesis",
+          "shakespeare",
+          "writings",
+          "dissertation"
+        ]
+      }
+    },
+    {
+      "round": 14,
+      "top_k": 8,
+      "equivalence_key": "a2ac261a271c9e31863ed439238686ee44287c6cee677aaf47afa10cf18745aa",
+      "cached": true,
+      "query_sha256": "ea69669b2e3b48951812719e78da8a6ebc4c224ad0c478906756b222f64afb5c",
+      "query": "Sarah Hatchuel GRIC coordinator Le Havre research group 2009",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"sarah\" OR \"hatchuel\" OR \"gric\" OR \"coordinator\" OR \"le\" OR \"havre\" OR \"research\" OR \"group\" OR \"2009\"",
+        "terms": [
+          "sarah",
+          "hatchuel",
+          "gric",
+          "coordinator",
+          "le",
+          "havre",
+          "research",
+          "group",
+          "2009"
+        ]
+      }
+    }
+  ],
+  "equivalent_query_repeats": 14,
+  "views": [
+    {
+      "round": 1,
+      "compacted": false,
+      "visible_evidence": [],
+      "shelf": [],
+      "shelf_evicted": []
+    },
+    {
+      "round": 2,
+      "compacted": false,
+      "visible_evidence": [],
+      "shelf": [],
+      "shelf_evicted": []
+    },
+    {
+      "round": 3,
+      "compacted": false,
+      "visible_evidence": [],
+      "shelf": [],
+      "shelf_evicted": []
+    },
+    {
+      "round": 4,
+      "compacted": true,
+      "visible_evidence": [],
+      "shelf": [],
+      "shelf_evicted": []
+    },
+    {
+      "round": 5,
+      "compacted": true,
+      "visible_evidence": [],
+      "shelf": [],
+      "shelf_evicted": []
+    },
+    {
+      "round": 6,
+      "compacted": true,
+      "visible_evidence": [
+        "e1"
+      ],
+      "shelf": [],
+      "shelf_evicted": []
+    },
+    {
+      "round": 7,
+      "compacted": false,
+      "visible_evidence": [
+        "e1"
+      ],
+      "shelf": [],
+      "shelf_evicted": []
+    },
+    {
+      "round": 8,
+      "compacted": true,
+      "visible_evidence": [
+        "e1",
+        "e2"
+      ],
+      "shelf": [],
+      "shelf_evicted": []
+    },
+    {
+      "round": 9,
+      "compacted": false,
+      "visible_evidence": [
+        "e1",
+        "e2"
+      ],
+      "shelf": [],
+      "shelf_evicted": []
+    },
+    {
+      "round": 10,
+      "compacted": true,
+      "visible_evidence": [
+        "e1",
+        "e2"
+      ],
+      "shelf": [
+        "e1"
+      ],
+      "shelf_evicted": []
+    },
+    {
+      "round": 11,
+      "compacted": true,
+      "visible_evidence": [
+        "e1",
+        "e2"
+      ],
+      "shelf": [
+        "e1"
+      ],
+      "shelf_evicted": []
+    },
+    {
+      "round": 12,
+      "compacted": true,
+      "visible_evidence": [
+        "e1",
+        "e2"
+      ],
+      "shelf": [
+        "e1",
+        "e2"
+      ],
+      "shelf_evicted": []
+    },
+    {
+      "round": 13,
+      "compacted": true,
+      "visible_evidence": [
+        "e1",
+        "e2"
+      ],
+      "shelf": [
+        "e1",
+        "e2"
+      ],
+      "shelf_evicted": []
+    },
+    {
+      "round": 14,
+      "compacted": false,
+      "visible_evidence": [
+        "e1",
+        "e2"
+      ],
+      "shelf": [
+        "e1",
+        "e2"
+      ],
+      "shelf_evicted": []
+    },
+    {
+      "round": 15,
+      "compacted": true,
+      "visible_evidence": [
+        "e1",
+        "e2"
+      ],
+      "shelf": [
+        "e1",
+        "e2"
+      ],
+      "shelf_evicted": []
+    },
+    {
+      "round": 16,
+      "compacted": false,
+      "visible_evidence": [
+        "e1",
+        "e2"
+      ],
+      "shelf": [
+        "e1",
+        "e2"
+      ],
+      "shelf_evicted": []
+    }
+  ],
+  "delivered_refs": [
+    "e1",
+    "e2"
+  ],
+  "submitted_refs": [
+    "e1",
+    "e2"
+  ],
+  "text_included": true,
+  "limitations": [
+    "Equivalence is compiler equality, not semantic identity or wasted-search proof",
+    "Raw-window visibility/selection is not entailment or complete evidence coverage",
+    "No live q26 replay or independent answer scoring is performed"
+  ]
+}

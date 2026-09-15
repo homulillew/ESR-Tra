@@ -1,0 +1,3374 @@
+{
+  "rows": [
+    {
+      "slot": "q770-baseline-r1",
+      "qid": 770,
+      "protocol": "baseline",
+      "status": "submitted",
+      "terminal": {
+        "answer": "Sarah Hatchuel",
+        "answer_representation": {
+          "input_type": "string",
+          "operation": "identity",
+          "rule": "string-integer-v1"
+        },
+        "basis": [
+          {
+            "document": "d30",
+            "document_chars": 45990,
+            "end": 3000,
+            "kind": "raw_evidence",
+            "ref": "e1",
+            "sha256": "6c425210769d1528145667a872b4948f5eaaaea98e426b28765b0125ab595d88",
+            "snapshot": "be58fb82f749ee77102eed93f6ddcac6babc7fbe5610c5090b94be0ec3abfe50",
+            "start": 0
+          },
+          {
+            "document": "d30",
+            "document_chars": 45990,
+            "end": 33600,
+            "kind": "raw_evidence",
+            "ref": "e2",
+            "sha256": "f94f08beadba7d9b735ff75b702ccaf80cb342286429d01f21ab89e200dd8c84",
+            "snapshot": "be58fb82f749ee77102eed93f6ddcac6babc7fbe5610c5090b94be0ec3abfe50",
+            "start": 31600
+          }
+        ],
+        "elapsed_seconds": 152.27670640000724,
+        "outcome": "submitted",
+        "refs": [
+          "e1",
+          "e2"
+        ],
+        "semantic_status": "not_automatically_verified"
+      },
+      "attempts": 16,
+      "elapsed_seconds": 152.4999370999867,
+      "head": "7f7fe1cbd638f0237695ac4adfc3b086565c346f0193df5d63d22d91d7a7330b",
+      "seal_sha256": "5b0a1f8bc73436dff8b060ac7b83203a5e13db29054e1726bd288b644347d4a0",
+      "budget_after": {
+        "cap": 1643,
+        "used": 1163,
+        "remaining": 480,
+        "this_run": 16,
+        "epoch_allowance": 1000,
+        "epoch_used": 520,
+        "epoch_remaining": 480
+      },
+      "correct": false,
+      "judged": true,
+      "judge_parse_error": false,
+      "metrics": {
+        "model_attempts": 16,
+        "backend_attempts": 40,
+        "actions_recorded": 22,
+        "executed_actions": 22,
+        "action_counts": {
+          "search": 18,
+          "read": 2,
+          "find": 1,
+          "finish": 1
+        },
+        "action_error_counts": {
+          "duplicate_query_blocked": 1
+        },
+        "cache_query_hits": 12,
+        "final_phase_requests": 1,
+        "compaction_requests": 9,
+        "rounds_receiving_new_raw": 2,
+        "unknown_usage_calls": 0
+      },
+      "pivot_events": [],
+      "once_prose_reset_events": [],
+      "relation_review_events": [],
+      "read_only_events": [],
+      "review_memory_capture_events": [],
+      "review_memory_delivery_events": [],
+      "review_memory_rendered_requests": 0,
+      "history_projection_events": [],
+      "history_projection_requests_with_changes": 0,
+      "history_projection_removed_utf8_bytes_across_requests": 0,
+      "queries_executed": 51,
+      "evidence_windows_registered": 2,
+      "new_backend_searches": 39,
+      "backend_document_reads": 1,
+      "tokens": {
+        "input_tokens": {
+          "known_sum": 284882,
+          "unknown_calls": 0
+        },
+        "output_tokens": {
+          "known_sum": 1933,
+          "unknown_calls": 0
+        },
+        "cache_read_tokens": {
+          "known_sum": 91264,
+          "unknown_calls": 0
+        },
+        "cache_write_tokens": {
+          "known_sum": 0,
+          "unknown_calls": 16
+        }
+      }
+    },
+    {
+      "slot": "q770-read-only-explicit-v1-r1",
+      "qid": 770,
+      "protocol": "read-only-explicit-v1",
+      "status": "abstained",
+      "terminal": {
+        "answer": "",
+        "elapsed_seconds": 131.14767070001108,
+        "outcome": "abstained",
+        "reason": "The strongest candidate is Isobel Maddison, a scholar of Elizabeth von Arnim (an English writer), with a 2012 article in First World War Studies (per Wikipedia's Elizabeth von Arnim article, e1/e2). However, I could not verify the remaining required clues: (1) a Routledge 2018 co-edited book, (2) coordinator of a research group founded in 2009 as of December 2023, (3) panel convenor before 2020, and (4) completion of a PhD on von Arnim's writings. Searches became repetitive without locating her academic profile page or the specific Routledge 2018 volume. Without verification of these distinguishing clues, I cannot confidently confirm the answer."
+      },
+      "attempts": 16,
+      "elapsed_seconds": 131.36763259998406,
+      "head": "4f1c4702ff4b5583ca3f6190a7cdba0e15e7f39b37017b758b849750e3af3f30",
+      "seal_sha256": "c0ee1d9cd794cc652a763bad210ce154f3ca00acb77b61548d736c41fba00c4c",
+      "budget_after": {
+        "cap": 1643,
+        "used": 1179,
+        "remaining": 464,
+        "this_run": 32,
+        "epoch_allowance": 1000,
+        "epoch_used": 536,
+        "epoch_remaining": 464
+      },
+      "correct": false,
+      "judged": false,
+      "judge_parse_error": null,
+      "metrics": {
+        "model_attempts": 16,
+        "backend_attempts": 48,
+        "actions_recorded": 31,
+        "executed_actions": 29,
+        "action_counts": {
+          "search": 27,
+          "read": 2,
+          "find": 1,
+          "finish": 1
+        },
+        "action_error_counts": {
+          "read_only_tool_only": 2
+        },
+        "cache_query_hits": 26,
+        "final_phase_requests": 1,
+        "compaction_requests": 9,
+        "rounds_receiving_new_raw": 2,
+        "unknown_usage_calls": 0
+      },
+      "pivot_events": [],
+      "once_prose_reset_events": [],
+      "relation_review_events": [],
+      "read_only_events": [
+        {
+          "identity": {
+            "base_read_rule": {
+              "kind": "temporary_tool_availability_not_verified_evidence",
+              "rule": {
+                "capacity": "recompute tools and visible navigation on each candidate build",
+                "commit": "after actual request archive before send; failed send consumes",
+                "consecutive_rounds": 3,
+                "extra_model_calls": 0,
+                "final": false,
+                "max_triggers": 1,
+                "messages": "unchanged",
+                "minimum_remaining_model_calls": 3,
+                "navigation": "retained group documents or rendered control pages; intersect read authorization",
+                "observation": "successful search receipt executed and ok; no new raw passage delivered",
+                "tools": "original read schema only; original batch limit; no forced tool choice",
+                "version": "read-only-once-v1"
+              },
+              "rule_sha256": "c5215cce37479fb19aa0f3ff146b2b6e2748cf7f89007140fce59e92f92cd6bc",
+              "version": "read-only-once-v1"
+            },
+            "instruction_location": "append to system content only on triggered request",
+            "instruction_sha256": "acdfd7e4892f31ea311b77c6cd0a90c77c0841ce86c4be99f5f04f5c0957c0ce",
+            "kind": "temporary_tool_availability_with_explicit_stage_instruction",
+            "version": "read-only-explicit-v1"
+          },
+          "native_tools_sha256": "82cba8a4a01c2197f768888ac0896a50f5fc053d172739ddb0b0c30e100141ce",
+          "observation": "no new source passage",
+          "round": 4,
+          "source_rounds": [
+            1,
+            2,
+            3
+          ],
+          "system_sha256": "1f11ec06e870b52a9366aa0d51e4ddedcdd86fa6dafbfcf9b336ae1bbe9addc5",
+          "trigger_number": 1,
+          "visible_read_documents": [
+            "d1",
+            "d2",
+            "d3",
+            "d4",
+            "d5",
+            "d6",
+            "d7",
+            "d8",
+            "d9",
+            "d10",
+            "d11",
+            "d12",
+            "d13",
+            "d14",
+            "d15",
+            "d16",
+            "d17",
+            "d18",
+            "d19",
+            "d20",
+            "d21",
+            "d22",
+            "d23",
+            "d24",
+            "d25",
+            "d26",
+            "d27",
+            "d28",
+            "d29",
+            "d30",
+            "d31",
+            "d32",
+            "d33",
+            "d34",
+            "d35",
+            "d36",
+            "d37",
+            "d38",
+            "d39",
+            "d40",
+            "d41",
+            "d42",
+            "d43",
+            "d44",
+            "d45",
+            "d46",
+            "d47",
+            "d48",
+            "d49",
+            "d50",
+            "d51",
+            "d52",
+            "d53",
+            "d54",
+            "d55"
+          ],
+          "visible_read_documents_sha256": "95f868afb5074fd64ce7f607b3ceddf68e1ca6c60e0a866ec42c8ecba81d1bcd",
+          "wire_sha256": "41336069211d9d41dfce72804cf8c376f728b3b9ad2f502f6652862c27f63bbf",
+          "wire_tools_sha256": "82cba8a4a01c2197f768888ac0896a50f5fc053d172739ddb0b0c30e100141ce"
+        }
+      ],
+      "review_memory_capture_events": [],
+      "review_memory_delivery_events": [],
+      "review_memory_rendered_requests": 0,
+      "history_projection_events": [],
+      "history_projection_requests_with_changes": 0,
+      "history_projection_removed_utf8_bytes_across_requests": 0,
+      "queries_executed": 73,
+      "evidence_windows_registered": 2,
+      "new_backend_searches": 47,
+      "backend_document_reads": 1,
+      "tokens": {
+        "input_tokens": {
+          "known_sum": 289625,
+          "unknown_calls": 0
+        },
+        "output_tokens": {
+          "known_sum": 3079,
+          "unknown_calls": 0
+        },
+        "cache_read_tokens": {
+          "known_sum": 76160,
+          "unknown_calls": 0
+        },
+        "cache_write_tokens": {
+          "known_sum": 0,
+          "unknown_calls": 16
+        }
+      }
+    },
+    {
+      "slot": "q778-read-only-explicit-v1-r1",
+      "qid": 778,
+      "protocol": "read-only-explicit-v1",
+      "status": "submitted",
+      "terminal": {
+        "answer": "21",
+        "answer_representation": {
+          "input_type": "integer",
+          "input_value": 21,
+          "operation": "decimal",
+          "rule": "string-integer-v1"
+        },
+        "basis": [
+          {
+            "document": "d16",
+            "document_chars": 4374,
+            "end": 3000,
+            "kind": "raw_evidence",
+            "ref": "e1",
+            "sha256": "bc0d510dbd6cde0530cf08684de455d82ec1943c0ba50cab130ae01990cc24b8",
+            "snapshot": "d7b7a23b3eb780d78018e5fe30d91613c9769a1cff7564bb0a79c08614acb838",
+            "start": 0
+          }
+        ],
+        "elapsed_seconds": 18.3900275999913,
+        "outcome": "submitted",
+        "refs": [
+          "e1"
+        ],
+        "semantic_status": "not_automatically_verified"
+      },
+      "attempts": 4,
+      "elapsed_seconds": 18.48489939997671,
+      "head": "fcb0f9023d6e56e5aaf7bc57f7217c2dc37a570ea1ce25affe056a3af40d8f82",
+      "seal_sha256": "09939770cf3fee93fa9eb577877db4a36406b7535827aa7732b154095939aed6",
+      "budget_after": {
+        "cap": 1643,
+        "used": 1183,
+        "remaining": 460,
+        "this_run": 36,
+        "epoch_allowance": 1000,
+        "epoch_used": 540,
+        "epoch_remaining": 460
+      },
+      "correct": true,
+      "judged": true,
+      "judge_parse_error": false,
+      "metrics": {
+        "model_attempts": 4,
+        "backend_attempts": 7,
+        "actions_recorded": 4,
+        "executed_actions": 4,
+        "action_counts": {
+          "search": 2,
+          "read": 1,
+          "finish": 1
+        },
+        "action_error_counts": {},
+        "cache_query_hits": 0,
+        "final_phase_requests": 1,
+        "compaction_requests": 0,
+        "rounds_receiving_new_raw": 1,
+        "unknown_usage_calls": 0
+      },
+      "pivot_events": [],
+      "once_prose_reset_events": [],
+      "relation_review_events": [],
+      "read_only_events": [],
+      "review_memory_capture_events": [],
+      "review_memory_delivery_events": [],
+      "review_memory_rendered_requests": 0,
+      "history_projection_events": [],
+      "history_projection_requests_with_changes": 0,
+      "history_projection_removed_utf8_bytes_across_requests": 0,
+      "queries_executed": 6,
+      "evidence_windows_registered": 1,
+      "new_backend_searches": 6,
+      "backend_document_reads": 1,
+      "tokens": {
+        "input_tokens": {
+          "known_sum": 30114,
+          "unknown_calls": 0
+        },
+        "output_tokens": {
+          "known_sum": 422,
+          "unknown_calls": 0
+        },
+        "cache_read_tokens": {
+          "known_sum": 13440,
+          "unknown_calls": 0
+        },
+        "cache_write_tokens": {
+          "known_sum": 0,
+          "unknown_calls": 4
+        }
+      }
+    },
+    {
+      "slot": "q778-baseline-r1",
+      "qid": 778,
+      "protocol": "baseline",
+      "status": "submitted",
+      "terminal": {
+        "answer": "21",
+        "answer_representation": {
+          "input_type": "integer",
+          "input_value": 21,
+          "operation": "decimal",
+          "rule": "string-integer-v1"
+        },
+        "basis": [
+          {
+            "document": "d16",
+            "document_chars": 4374,
+            "end": 3000,
+            "kind": "raw_evidence",
+            "ref": "e1",
+            "sha256": "bc0d510dbd6cde0530cf08684de455d82ec1943c0ba50cab130ae01990cc24b8",
+            "snapshot": "d7b7a23b3eb780d78018e5fe30d91613c9769a1cff7564bb0a79c08614acb838",
+            "start": 0
+          }
+        ],
+        "elapsed_seconds": 18.689031799993245,
+        "outcome": "submitted",
+        "refs": [
+          "e1"
+        ],
+        "semantic_status": "not_automatically_verified"
+      },
+      "attempts": 4,
+      "elapsed_seconds": 18.778473099984694,
+      "head": "eae9b020f766844de41eeba9e526604aad86f237550888d90cebd22605054893",
+      "seal_sha256": "970318ef53e5769f248337728a6bc125c99f15b883d86e43e669ab0deea58752",
+      "budget_after": {
+        "cap": 1643,
+        "used": 1187,
+        "remaining": 456,
+        "this_run": 40,
+        "epoch_allowance": 1000,
+        "epoch_used": 544,
+        "epoch_remaining": 456
+      },
+      "correct": true,
+      "judged": true,
+      "judge_parse_error": false,
+      "metrics": {
+        "model_attempts": 4,
+        "backend_attempts": 7,
+        "actions_recorded": 4,
+        "executed_actions": 4,
+        "action_counts": {
+          "search": 2,
+          "read": 1,
+          "finish": 1
+        },
+        "action_error_counts": {},
+        "cache_query_hits": 0,
+        "final_phase_requests": 1,
+        "compaction_requests": 0,
+        "rounds_receiving_new_raw": 1,
+        "unknown_usage_calls": 0
+      },
+      "pivot_events": [],
+      "once_prose_reset_events": [],
+      "relation_review_events": [],
+      "read_only_events": [],
+      "review_memory_capture_events": [],
+      "review_memory_delivery_events": [],
+      "review_memory_rendered_requests": 0,
+      "history_projection_events": [],
+      "history_projection_requests_with_changes": 0,
+      "history_projection_removed_utf8_bytes_across_requests": 0,
+      "queries_executed": 6,
+      "evidence_windows_registered": 1,
+      "new_backend_searches": 6,
+      "backend_document_reads": 1,
+      "tokens": {
+        "input_tokens": {
+          "known_sum": 29987,
+          "unknown_calls": 0
+        },
+        "output_tokens": {
+          "known_sum": 427,
+          "unknown_calls": 0
+        },
+        "cache_read_tokens": {
+          "known_sum": 14208,
+          "unknown_calls": 0
+        },
+        "cache_write_tokens": {
+          "known_sum": 0,
+          "unknown_calls": 4
+        }
+      }
+    },
+    {
+      "slot": "q772-baseline-r1",
+      "qid": 772,
+      "protocol": "baseline",
+      "status": "submitted",
+      "terminal": {
+        "answer": "According to the early 2020s article (Ballet Rising, 3 March 2021) about Zama Dance School — which was founded in 1984 in Gugulethu and started in a church hall — the longest-serving employee at the school is Vuyokazi, and her role is the school's secretary.",
+        "answer_representation": {
+          "input_type": "string",
+          "operation": "identity",
+          "rule": "string-integer-v1"
+        },
+        "basis": [
+          {
+            "document": "d42",
+            "document_chars": 14677,
+            "end": 3000,
+            "kind": "raw_evidence",
+            "ref": "e1",
+            "sha256": "c8068747894db7507486348456fdf2dd43558ab673c41302414f0a0414f8a83e",
+            "snapshot": "d7b0c320e182566ae974c560f3636452277559a7ff8713a9c418680f71b1c0c3",
+            "start": 0
+          },
+          {
+            "document": "d42",
+            "document_chars": 14677,
+            "end": 6150,
+            "kind": "raw_evidence",
+            "ref": "e3",
+            "sha256": "6300e4e7627810ff5df794542b7304c637ff9e9428a4d35e74e7bd52bdb06dd5",
+            "snapshot": "d7b0c320e182566ae974c560f3636452277559a7ff8713a9c418680f71b1c0c3",
+            "start": 5850
+          }
+        ],
+        "elapsed_seconds": 44.00959450000664,
+        "outcome": "submitted",
+        "refs": [
+          "e1",
+          "e3"
+        ],
+        "semantic_status": "not_automatically_verified"
+      },
+      "attempts": 8,
+      "elapsed_seconds": 44.14264050000929,
+      "head": "134557c88dd31ad9a33da8ab701432245fcf105c8820b1a31010aa0d423a676e",
+      "seal_sha256": "57bb6fe9e905d2319a1c3766fad88d5b6a7b9927f2cb79c09a9defe1b6141a24",
+      "budget_after": {
+        "cap": 1643,
+        "used": 1195,
+        "remaining": 448,
+        "this_run": 48,
+        "epoch_allowance": 1000,
+        "epoch_used": 552,
+        "epoch_remaining": 448
+      },
+      "correct": true,
+      "judged": true,
+      "judge_parse_error": false,
+      "metrics": {
+        "model_attempts": 8,
+        "backend_attempts": 15,
+        "actions_recorded": 10,
+        "executed_actions": 10,
+        "action_counts": {
+          "search": 5,
+          "read": 3,
+          "find": 1,
+          "finish": 1
+        },
+        "action_error_counts": {},
+        "cache_query_hits": 0,
+        "final_phase_requests": 0,
+        "compaction_requests": 1,
+        "rounds_receiving_new_raw": 3,
+        "unknown_usage_calls": 0
+      },
+      "pivot_events": [],
+      "once_prose_reset_events": [],
+      "relation_review_events": [],
+      "read_only_events": [],
+      "review_memory_capture_events": [],
+      "review_memory_delivery_events": [],
+      "review_memory_rendered_requests": 0,
+      "history_projection_events": [],
+      "history_projection_requests_with_changes": 0,
+      "history_projection_removed_utf8_bytes_across_requests": 0,
+      "queries_executed": 14,
+      "evidence_windows_registered": 3,
+      "new_backend_searches": 14,
+      "backend_document_reads": 1,
+      "tokens": {
+        "input_tokens": {
+          "known_sum": 128110,
+          "unknown_calls": 0
+        },
+        "output_tokens": {
+          "known_sum": 1036,
+          "unknown_calls": 0
+        },
+        "cache_read_tokens": {
+          "known_sum": 91520,
+          "unknown_calls": 0
+        },
+        "cache_write_tokens": {
+          "known_sum": 0,
+          "unknown_calls": 8
+        }
+      }
+    },
+    {
+      "slot": "q772-read-only-explicit-v1-r1",
+      "qid": 772,
+      "protocol": "read-only-explicit-v1",
+      "status": "submitted",
+      "terminal": {
+        "answer": "According to the early 2020s article (Ballet Rising, 3 March 2021) about Zama Dance School — which was founded in 1984 in Gugulethu and started in a church hall — the longest-serving employee at the school is Vuyokazi (referred to as \"Vuyo\"), and her role is the school's secretary. The article states: \"I must also mention Vuyokazi, the school's secretary. Thank goodness for Vuyo who worked alongside Arlene for many years. She is our longest serving employee and a valuable part of the team today.\"",
+        "answer_representation": {
+          "input_type": "string",
+          "operation": "identity",
+          "rule": "string-integer-v1"
+        },
+        "basis": [
+          {
+            "document": "d32",
+            "document_chars": 14677,
+            "end": 7500,
+            "kind": "raw_evidence",
+            "ref": "e2",
+            "sha256": "f9e63385997757cd4b3933ad706dea3e15b5bdef659388276f3a096ec389d1ad",
+            "snapshot": "d7b0c320e182566ae974c560f3636452277559a7ff8713a9c418680f71b1c0c3",
+            "start": 4500
+          }
+        ],
+        "elapsed_seconds": 45.699073099996895,
+        "outcome": "submitted",
+        "refs": [
+          "e2"
+        ],
+        "semantic_status": "not_automatically_verified"
+      },
+      "attempts": 7,
+      "elapsed_seconds": 45.83663870001328,
+      "head": "021c17f35c62fe5bfeaa449999b507d679b0c45ee5828d7c1ceeb556f9dfbaab",
+      "seal_sha256": "fce995a597b05fa832fa439e8e9da1f690f841ab6ba7494682d99fc8bd9088e6",
+      "budget_after": {
+        "cap": 1643,
+        "used": 1202,
+        "remaining": 441,
+        "this_run": 55,
+        "epoch_allowance": 1000,
+        "epoch_used": 559,
+        "epoch_remaining": 441
+      },
+      "correct": true,
+      "judged": true,
+      "judge_parse_error": false,
+      "metrics": {
+        "model_attempts": 7,
+        "backend_attempts": 14,
+        "actions_recorded": 10,
+        "executed_actions": 10,
+        "action_counts": {
+          "search": 5,
+          "read": 2,
+          "find": 2,
+          "finish": 1
+        },
+        "action_error_counts": {},
+        "cache_query_hits": 0,
+        "final_phase_requests": 0,
+        "compaction_requests": 1,
+        "rounds_receiving_new_raw": 2,
+        "unknown_usage_calls": 0
+      },
+      "pivot_events": [],
+      "once_prose_reset_events": [],
+      "relation_review_events": [],
+      "read_only_events": [
+        {
+          "identity": {
+            "base_read_rule": {
+              "kind": "temporary_tool_availability_not_verified_evidence",
+              "rule": {
+                "capacity": "recompute tools and visible navigation on each candidate build",
+                "commit": "after actual request archive before send; failed send consumes",
+                "consecutive_rounds": 3,
+                "extra_model_calls": 0,
+                "final": false,
+                "max_triggers": 1,
+                "messages": "unchanged",
+                "minimum_remaining_model_calls": 3,
+                "navigation": "retained group documents or rendered control pages; intersect read authorization",
+                "observation": "successful search receipt executed and ok; no new raw passage delivered",
+                "tools": "original read schema only; original batch limit; no forced tool choice",
+                "version": "read-only-once-v1"
+              },
+              "rule_sha256": "c5215cce37479fb19aa0f3ff146b2b6e2748cf7f89007140fce59e92f92cd6bc",
+              "version": "read-only-once-v1"
+            },
+            "instruction_location": "append to system content only on triggered request",
+            "instruction_sha256": "acdfd7e4892f31ea311b77c6cd0a90c77c0841ce86c4be99f5f04f5c0957c0ce",
+            "kind": "temporary_tool_availability_with_explicit_stage_instruction",
+            "version": "read-only-explicit-v1"
+          },
+          "native_tools_sha256": "82cba8a4a01c2197f768888ac0896a50f5fc053d172739ddb0b0c30e100141ce",
+          "observation": "no new source passage",
+          "round": 4,
+          "source_rounds": [
+            1,
+            2,
+            3
+          ],
+          "system_sha256": "1f11ec06e870b52a9366aa0d51e4ddedcdd86fa6dafbfcf9b336ae1bbe9addc5",
+          "trigger_number": 1,
+          "visible_read_documents": [
+            "d1",
+            "d2",
+            "d3",
+            "d4",
+            "d5",
+            "d6",
+            "d7",
+            "d8",
+            "d9",
+            "d10",
+            "d11",
+            "d12",
+            "d13",
+            "d14",
+            "d15",
+            "d16",
+            "d17",
+            "d18",
+            "d19",
+            "d20",
+            "d21",
+            "d22",
+            "d23",
+            "d24",
+            "d25",
+            "d26",
+            "d27",
+            "d28",
+            "d29",
+            "d30",
+            "d31",
+            "d32",
+            "d33",
+            "d34",
+            "d35",
+            "d36"
+          ],
+          "visible_read_documents_sha256": "dccc00ee0abfbec7859bb574211550ef296818453545050c44874fbae0b36297",
+          "wire_sha256": "9f025b633f8ecc2481ea0663fd081f73fdff7f21ca61167653755d3eb252e59a",
+          "wire_tools_sha256": "82cba8a4a01c2197f768888ac0896a50f5fc053d172739ddb0b0c30e100141ce"
+        }
+      ],
+      "review_memory_capture_events": [],
+      "review_memory_delivery_events": [],
+      "review_memory_rendered_requests": 0,
+      "history_projection_events": [],
+      "history_projection_requests_with_changes": 0,
+      "history_projection_removed_utf8_bytes_across_requests": 0,
+      "queries_executed": 13,
+      "evidence_windows_registered": 2,
+      "new_backend_searches": 13,
+      "backend_document_reads": 1,
+      "tokens": {
+        "input_tokens": {
+          "known_sum": 102315,
+          "unknown_calls": 0
+        },
+        "output_tokens": {
+          "known_sum": 1130,
+          "unknown_calls": 0
+        },
+        "cache_read_tokens": {
+          "known_sum": 52608,
+          "unknown_calls": 0
+        },
+        "cache_write_tokens": {
+          "known_sum": 0,
+          "unknown_calls": 7
+        }
+      }
+    },
+    {
+      "slot": "q774-read-only-explicit-v1-r1",
+      "qid": 774,
+      "protocol": "read-only-explicit-v1",
+      "status": "abstained",
+      "terminal": {
+        "answer": "",
+        "elapsed_seconds": 192.80500620001112,
+        "outcome": "abstained",
+        "reason": "I could not identify the entertainer matching all criteria. The clues require a specific combination: a TV series that started between 2000-2020 with more than 3 seasons by 2023; an actor whose real-life height is between 1.66m and 1.69m; whose character was married 3 times in the series; only one of the character's children survives in the series; and who acts alongside a real-life relative playing an unrelated character. My searches across candidate shows (Grey's Anatomy, This Is Us, Yellowstone, Shameless, The 100, Supernatural, Arrow/The Flash) did not yield a confirmed match satisfying all six conditions simultaneously. The \"real-life relative plays unrelated character\" clue surfaced candidates (e.g., Jessica/Richard Harmon on The 100; Jared Padalecki/Genevieve Cortese on Supernatural; Stephen/Robbie Amell on Arrow/The Flash), but none aligned with the marriage/child-survival/height constraints. Without a verified source tying all clues to one named entertainer, I cannot responsibly submit an answer."
+      },
+      "attempts": 16,
+      "elapsed_seconds": 193.0734053000051,
+      "head": "d2490daf484037bedaef8007ff89b894587c424a00ebc9b3ab7ec253ed84c8ef",
+      "seal_sha256": "0832df32eab1579c336b21b76eb7e6ad8dde351b8b2cc850e39e49ded118f574",
+      "budget_after": {
+        "cap": 1643,
+        "used": 1218,
+        "remaining": 425,
+        "this_run": 71,
+        "epoch_allowance": 1000,
+        "epoch_used": 575,
+        "epoch_remaining": 425
+      },
+      "correct": false,
+      "judged": false,
+      "judge_parse_error": null,
+      "metrics": {
+        "model_attempts": 16,
+        "backend_attempts": 72,
+        "actions_recorded": 29,
+        "executed_actions": 28,
+        "action_counts": {
+          "search": 26,
+          "read": 2,
+          "finish": 1
+        },
+        "action_error_counts": {
+          "read_only_tool_only": 1
+        },
+        "cache_query_hits": 4,
+        "final_phase_requests": 1,
+        "compaction_requests": 10,
+        "rounds_receiving_new_raw": 2,
+        "unknown_usage_calls": 0
+      },
+      "pivot_events": [],
+      "once_prose_reset_events": [],
+      "relation_review_events": [],
+      "read_only_events": [
+        {
+          "identity": {
+            "base_read_rule": {
+              "kind": "temporary_tool_availability_not_verified_evidence",
+              "rule": {
+                "capacity": "recompute tools and visible navigation on each candidate build",
+                "commit": "after actual request archive before send; failed send consumes",
+                "consecutive_rounds": 3,
+                "extra_model_calls": 0,
+                "final": false,
+                "max_triggers": 1,
+                "messages": "unchanged",
+                "minimum_remaining_model_calls": 3,
+                "navigation": "retained group documents or rendered control pages; intersect read authorization",
+                "observation": "successful search receipt executed and ok; no new raw passage delivered",
+                "tools": "original read schema only; original batch limit; no forced tool choice",
+                "version": "read-only-once-v1"
+              },
+              "rule_sha256": "c5215cce37479fb19aa0f3ff146b2b6e2748cf7f89007140fce59e92f92cd6bc",
+              "version": "read-only-once-v1"
+            },
+            "instruction_location": "append to system content only on triggered request",
+            "instruction_sha256": "acdfd7e4892f31ea311b77c6cd0a90c77c0841ce86c4be99f5f04f5c0957c0ce",
+            "kind": "temporary_tool_availability_with_explicit_stage_instruction",
+            "version": "read-only-explicit-v1"
+          },
+          "native_tools_sha256": "82cba8a4a01c2197f768888ac0896a50f5fc053d172739ddb0b0c30e100141ce",
+          "observation": "no new source passage",
+          "round": 4,
+          "source_rounds": [
+            1,
+            2,
+            3
+          ],
+          "system_sha256": "1f11ec06e870b52a9366aa0d51e4ddedcdd86fa6dafbfcf9b336ae1bbe9addc5",
+          "trigger_number": 1,
+          "visible_read_documents": [
+            "d1",
+            "d2",
+            "d3",
+            "d4",
+            "d5",
+            "d6",
+            "d7",
+            "d8",
+            "d9",
+            "d10",
+            "d11",
+            "d12",
+            "d13",
+            "d14",
+            "d15",
+            "d16",
+            "d17",
+            "d18",
+            "d19",
+            "d20",
+            "d21",
+            "d22",
+            "d23",
+            "d24",
+            "d25",
+            "d26",
+            "d27",
+            "d28",
+            "d29",
+            "d30",
+            "d31",
+            "d32",
+            "d33",
+            "d34",
+            "d35",
+            "d36",
+            "d37",
+            "d38",
+            "d39",
+            "d40",
+            "d41",
+            "d42",
+            "d43",
+            "d44",
+            "d45",
+            "d46",
+            "d47",
+            "d48",
+            "d49",
+            "d50",
+            "d51",
+            "d52",
+            "d53",
+            "d54",
+            "d55",
+            "d56",
+            "d57",
+            "d58",
+            "d59",
+            "d60",
+            "d61"
+          ],
+          "visible_read_documents_sha256": "5bf44359a5cca1474766a2f7fde7bf4674bd951e4bdfa16f35d04215b5988d4f",
+          "wire_sha256": "2e273907350b9ac6566e19314b61a8321a81f9e88620ba8eb9719e42f784c025",
+          "wire_tools_sha256": "82cba8a4a01c2197f768888ac0896a50f5fc053d172739ddb0b0c30e100141ce"
+        }
+      ],
+      "review_memory_capture_events": [],
+      "review_memory_delivery_events": [],
+      "review_memory_rendered_requests": 0,
+      "history_projection_events": [],
+      "history_projection_requests_with_changes": 0,
+      "history_projection_removed_utf8_bytes_across_requests": 0,
+      "queries_executed": 75,
+      "evidence_windows_registered": 2,
+      "new_backend_searches": 71,
+      "backend_document_reads": 1,
+      "tokens": {
+        "input_tokens": {
+          "known_sum": 280724,
+          "unknown_calls": 0
+        },
+        "output_tokens": {
+          "known_sum": 3392,
+          "unknown_calls": 0
+        },
+        "cache_read_tokens": {
+          "known_sum": 70016,
+          "unknown_calls": 0
+        },
+        "cache_write_tokens": {
+          "known_sum": 0,
+          "unknown_calls": 16
+        }
+      }
+    },
+    {
+      "slot": "q774-baseline-r1",
+      "qid": 774,
+      "protocol": "baseline",
+      "status": "abstained",
+      "terminal": {
+        "answer": "",
+        "elapsed_seconds": 138.25633470001048,
+        "outcome": "abstained",
+        "reason": "I could not retrieve any citable evidence windows confirming the entertainer's identity or the matching facts (height 1.65–1.70 m, character married 3–4 times, only one surviving child, plays alongside a real-life relative though unrelated in-series, in a show that started 2001–2019 with >3 seasons by 2023). All searches returned only navigation snippets, not delivered eN evidence I can verify. Candidate shows considered (e.g., Muhteşem Yüzyıl/Magnificent Century) could not be confirmed against the clues without readable source text. Abstaining rather than guessing."
+      },
+      "attempts": 16,
+      "elapsed_seconds": 138.50365730002522,
+      "head": "4cd8fa90accf206f498c99087062840999792177234f7330e87d028687cd6ad9",
+      "seal_sha256": "9848e9c654b60a3273f35fb30ec735d8e4e6d8d06f42a08636d50380e6297128",
+      "budget_after": {
+        "cap": 1643,
+        "used": 1234,
+        "remaining": 409,
+        "this_run": 87,
+        "epoch_allowance": 1000,
+        "epoch_used": 591,
+        "epoch_remaining": 409
+      },
+      "correct": false,
+      "judged": false,
+      "judge_parse_error": null,
+      "metrics": {
+        "model_attempts": 16,
+        "backend_attempts": 33,
+        "actions_recorded": 16,
+        "executed_actions": 16,
+        "action_counts": {
+          "search": 15,
+          "finish": 1
+        },
+        "action_error_counts": {
+          "duplicate_query_blocked": 2
+        },
+        "cache_query_hits": 6,
+        "final_phase_requests": 1,
+        "compaction_requests": 8,
+        "rounds_receiving_new_raw": 0,
+        "unknown_usage_calls": 0
+      },
+      "pivot_events": [],
+      "once_prose_reset_events": [],
+      "relation_review_events": [],
+      "read_only_events": [],
+      "review_memory_capture_events": [],
+      "review_memory_delivery_events": [],
+      "review_memory_rendered_requests": 0,
+      "history_projection_events": [],
+      "history_projection_requests_with_changes": 0,
+      "history_projection_removed_utf8_bytes_across_requests": 0,
+      "queries_executed": 39,
+      "evidence_windows_registered": 0,
+      "new_backend_searches": 33,
+      "backend_document_reads": 0,
+      "tokens": {
+        "input_tokens": {
+          "known_sum": 292689,
+          "unknown_calls": 0
+        },
+        "output_tokens": {
+          "known_sum": 2393,
+          "unknown_calls": 0
+        },
+        "cache_read_tokens": {
+          "known_sum": 106880,
+          "unknown_calls": 0
+        },
+        "cache_write_tokens": {
+          "known_sum": 0,
+          "unknown_calls": 16
+        }
+      }
+    },
+    {
+      "slot": "q769-baseline-r1",
+      "qid": 769,
+      "protocol": "baseline",
+      "status": "submitted",
+      "terminal": {
+        "answer": "Queen Arwa University (جامعة الملكة أروى)",
+        "answer_representation": {
+          "input_type": "string",
+          "operation": "identity",
+          "rule": "string-integer-v1"
+        },
+        "basis": [
+          {
+            "document": "d24",
+            "document_chars": 2464,
+            "end": 2464,
+            "kind": "raw_evidence",
+            "ref": "e2",
+            "sha256": "22bc740c55a9a335edc92e76fb036399f1ad5b3486a41dc71d4322e1f2922523",
+            "snapshot": "22bc740c55a9a335edc92e76fb036399f1ad5b3486a41dc71d4322e1f2922523",
+            "start": 0
+          },
+          {
+            "document": "d16",
+            "document_chars": 2180,
+            "end": 2180,
+            "kind": "raw_evidence",
+            "ref": "e1",
+            "sha256": "9c886b5421a788e195ed7a893432c4ec637bb333792ff3770d83def36ed848fd",
+            "snapshot": "9c886b5421a788e195ed7a893432c4ec637bb333792ff3770d83def36ed848fd",
+            "start": 0
+          },
+          {
+            "document": "d48",
+            "document_chars": 658,
+            "end": 658,
+            "kind": "raw_evidence",
+            "ref": "e3",
+            "sha256": "4c4c8f037971b3fe48f29aaff95926107bc32494ad3b0f56f4fef05610488fd2",
+            "snapshot": "4c4c8f037971b3fe48f29aaff95926107bc32494ad3b0f56f4fef05610488fd2",
+            "start": 0
+          },
+          {
+            "document": "d53",
+            "document_chars": 903,
+            "end": 903,
+            "kind": "raw_evidence",
+            "ref": "e4",
+            "sha256": "fa5292802570f20e33c07229c088e20499713839e74b49f50a9b9c1975436dbc",
+            "snapshot": "fa5292802570f20e33c07229c088e20499713839e74b49f50a9b9c1975436dbc",
+            "start": 0
+          }
+        ],
+        "elapsed_seconds": 46.54090190000716,
+        "outcome": "submitted",
+        "refs": [
+          "e2",
+          "e1",
+          "e3",
+          "e4"
+        ],
+        "semantic_status": "not_automatically_verified"
+      },
+      "attempts": 7,
+      "elapsed_seconds": 46.68119250002201,
+      "head": "2721fef1b489fdae8590142e2a236a6e5f0e6e3026458bf6397ada72fc56e454",
+      "seal_sha256": "d0cff0e1484e94277f1529d42d4bba401f36b1b172bf2a0b1e266cffa91e390f",
+      "budget_after": {
+        "cap": 1643,
+        "used": 1241,
+        "remaining": 402,
+        "this_run": 94,
+        "epoch_allowance": 1000,
+        "epoch_used": 598,
+        "epoch_remaining": 402
+      },
+      "correct": true,
+      "judged": true,
+      "judge_parse_error": false,
+      "metrics": {
+        "model_attempts": 7,
+        "backend_attempts": 19,
+        "actions_recorded": 10,
+        "executed_actions": 10,
+        "action_counts": {
+          "search": 5,
+          "read": 4,
+          "finish": 1
+        },
+        "action_error_counts": {},
+        "cache_query_hits": 0,
+        "final_phase_requests": 0,
+        "compaction_requests": 2,
+        "rounds_receiving_new_raw": 4,
+        "unknown_usage_calls": 0
+      },
+      "pivot_events": [],
+      "once_prose_reset_events": [],
+      "relation_review_events": [],
+      "read_only_events": [],
+      "review_memory_capture_events": [],
+      "review_memory_delivery_events": [],
+      "review_memory_rendered_requests": 0,
+      "history_projection_events": [],
+      "history_projection_requests_with_changes": 0,
+      "history_projection_removed_utf8_bytes_across_requests": 0,
+      "queries_executed": 15,
+      "evidence_windows_registered": 4,
+      "new_backend_searches": 15,
+      "backend_document_reads": 4,
+      "tokens": {
+        "input_tokens": {
+          "known_sum": 95256,
+          "unknown_calls": 0
+        },
+        "output_tokens": {
+          "known_sum": 1031,
+          "unknown_calls": 0
+        },
+        "cache_read_tokens": {
+          "known_sum": 49280,
+          "unknown_calls": 0
+        },
+        "cache_write_tokens": {
+          "known_sum": 0,
+          "unknown_calls": 7
+        }
+      }
+    },
+    {
+      "slot": "q769-read-only-explicit-v1-r1",
+      "qid": 769,
+      "protocol": "read-only-explicit-v1",
+      "status": "submitted",
+      "terminal": {
+        "answer": "Queen Arwa University (جامعة الملكة أروى)",
+        "answer_representation": {
+          "input_type": "string",
+          "operation": "identity",
+          "rule": "string-integer-v1"
+        },
+        "basis": [
+          {
+            "document": "d25",
+            "document_chars": 2464,
+            "end": 2464,
+            "kind": "raw_evidence",
+            "ref": "e2",
+            "sha256": "22bc740c55a9a335edc92e76fb036399f1ad5b3486a41dc71d4322e1f2922523",
+            "snapshot": "22bc740c55a9a335edc92e76fb036399f1ad5b3486a41dc71d4322e1f2922523",
+            "start": 0
+          },
+          {
+            "document": "d1",
+            "document_chars": 2180,
+            "end": 2180,
+            "kind": "raw_evidence",
+            "ref": "e1",
+            "sha256": "9c886b5421a788e195ed7a893432c4ec637bb333792ff3770d83def36ed848fd",
+            "snapshot": "9c886b5421a788e195ed7a893432c4ec637bb333792ff3770d83def36ed848fd",
+            "start": 0
+          },
+          {
+            "document": "d104",
+            "document_chars": 658,
+            "end": 658,
+            "kind": "raw_evidence",
+            "ref": "e3",
+            "sha256": "4c4c8f037971b3fe48f29aaff95926107bc32494ad3b0f56f4fef05610488fd2",
+            "snapshot": "4c4c8f037971b3fe48f29aaff95926107bc32494ad3b0f56f4fef05610488fd2",
+            "start": 0
+          },
+          {
+            "document": "d102",
+            "document_chars": 903,
+            "end": 903,
+            "kind": "raw_evidence",
+            "ref": "e4",
+            "sha256": "fa5292802570f20e33c07229c088e20499713839e74b49f50a9b9c1975436dbc",
+            "snapshot": "fa5292802570f20e33c07229c088e20499713839e74b49f50a9b9c1975436dbc",
+            "start": 0
+          }
+        ],
+        "elapsed_seconds": 57.6170288999856,
+        "outcome": "submitted",
+        "refs": [
+          "e2",
+          "e1",
+          "e3",
+          "e4"
+        ],
+        "semantic_status": "not_automatically_verified"
+      },
+      "attempts": 8,
+      "elapsed_seconds": 57.79123420000542,
+      "head": "2dca4ca81c45e132f5d2d4a08a7e2e4056ca3fa51f4f02dfc9421c380939314a",
+      "seal_sha256": "aa538e35cdc427f9c2d4bca1e05838cb61b648cfeb0955a05aa39465f215f130",
+      "budget_after": {
+        "cap": 1643,
+        "used": 1249,
+        "remaining": 394,
+        "this_run": 102,
+        "epoch_allowance": 1000,
+        "epoch_used": 606,
+        "epoch_remaining": 394
+      },
+      "correct": true,
+      "judged": true,
+      "judge_parse_error": false,
+      "metrics": {
+        "model_attempts": 8,
+        "backend_attempts": 31,
+        "actions_recorded": 14,
+        "executed_actions": 14,
+        "action_counts": {
+          "search": 9,
+          "read": 4,
+          "finish": 1
+        },
+        "action_error_counts": {},
+        "cache_query_hits": 0,
+        "final_phase_requests": 0,
+        "compaction_requests": 3,
+        "rounds_receiving_new_raw": 3,
+        "unknown_usage_calls": 0
+      },
+      "pivot_events": [],
+      "once_prose_reset_events": [],
+      "relation_review_events": [],
+      "read_only_events": [
+        {
+          "identity": {
+            "base_read_rule": {
+              "kind": "temporary_tool_availability_not_verified_evidence",
+              "rule": {
+                "capacity": "recompute tools and visible navigation on each candidate build",
+                "commit": "after actual request archive before send; failed send consumes",
+                "consecutive_rounds": 3,
+                "extra_model_calls": 0,
+                "final": false,
+                "max_triggers": 1,
+                "messages": "unchanged",
+                "minimum_remaining_model_calls": 3,
+                "navigation": "retained group documents or rendered control pages; intersect read authorization",
+                "observation": "successful search receipt executed and ok; no new raw passage delivered",
+                "tools": "original read schema only; original batch limit; no forced tool choice",
+                "version": "read-only-once-v1"
+              },
+              "rule_sha256": "c5215cce37479fb19aa0f3ff146b2b6e2748cf7f89007140fce59e92f92cd6bc",
+              "version": "read-only-once-v1"
+            },
+            "instruction_location": "append to system content only on triggered request",
+            "instruction_sha256": "acdfd7e4892f31ea311b77c6cd0a90c77c0841ce86c4be99f5f04f5c0957c0ce",
+            "kind": "temporary_tool_availability_with_explicit_stage_instruction",
+            "version": "read-only-explicit-v1"
+          },
+          "native_tools_sha256": "82cba8a4a01c2197f768888ac0896a50f5fc053d172739ddb0b0c30e100141ce",
+          "observation": "no new source passage",
+          "round": 7,
+          "source_rounds": [
+            4,
+            5,
+            6
+          ],
+          "system_sha256": "1f11ec06e870b52a9366aa0d51e4ddedcdd86fa6dafbfcf9b336ae1bbe9addc5",
+          "trigger_number": 1,
+          "visible_read_documents": [
+            "d1",
+            "d18",
+            "d25",
+            "d26",
+            "d28",
+            "d30",
+            "d32",
+            "d33",
+            "d35",
+            "d37",
+            "d39",
+            "d40",
+            "d41",
+            "d42",
+            "d43",
+            "d48",
+            "d49",
+            "d52",
+            "d54",
+            "d71",
+            "d72",
+            "d73",
+            "d74",
+            "d85",
+            "d86",
+            "d88",
+            "d98",
+            "d99",
+            "d100",
+            "d101",
+            "d102",
+            "d103",
+            "d104",
+            "d105",
+            "d106",
+            "d107",
+            "d108",
+            "d109",
+            "d110",
+            "d111",
+            "d112",
+            "d113",
+            "d114",
+            "d115",
+            "d116",
+            "d117"
+          ],
+          "visible_read_documents_sha256": "3d313cdc910f1d2d28687b59e72243fb947227c9d3b19bcce174ebd0d350bc0a",
+          "wire_sha256": "aa54be739f401e528be710dc4fbae90400d412461412326522dc7867a0fb8ef3",
+          "wire_tools_sha256": "82cba8a4a01c2197f768888ac0896a50f5fc053d172739ddb0b0c30e100141ce"
+        }
+      ],
+      "review_memory_capture_events": [],
+      "review_memory_delivery_events": [],
+      "review_memory_rendered_requests": 0,
+      "history_projection_events": [],
+      "history_projection_requests_with_changes": 0,
+      "history_projection_removed_utf8_bytes_across_requests": 0,
+      "queries_executed": 27,
+      "evidence_windows_registered": 4,
+      "new_backend_searches": 27,
+      "backend_document_reads": 4,
+      "tokens": {
+        "input_tokens": {
+          "known_sum": 109228,
+          "unknown_calls": 0
+        },
+        "output_tokens": {
+          "known_sum": 1139,
+          "unknown_calls": 0
+        },
+        "cache_read_tokens": {
+          "known_sum": 37760,
+          "unknown_calls": 0
+        },
+        "cache_write_tokens": {
+          "known_sum": 0,
+          "unknown_calls": 8
+        }
+      }
+    },
+    {
+      "slot": "q775-read-only-explicit-v1-r1",
+      "qid": 775,
+      "protocol": "read-only-explicit-v1",
+      "status": "abstained",
+      "terminal": {
+        "answer": "",
+        "elapsed_seconds": 83.69983500000671,
+        "outcome": "abstained",
+        "reason": "The puzzle requires identifying: (1) an award created in the 2000s (candidates: Man Booker International Prize 2005, Man Asian Literary Prize 2007, both confirmed in e1); (2) a book translated into 25+ languages that was later shortlisted/contended for that award; (3) a prize-winning book in the 2010s released the preceding year; (4) the prize-winning author born in the city where the first book's author grew up. I could not verify the specific book, author, birth city, or the cross-connection through the available evidence. The search hits (e.g., Chigozie Obioma's novels translated into 30 languages, shortlisted for the Booker Prize) point to the Booker Prize, which was created in 1969, not the 2000s, creating an unresolved conflict. Without confirmed source evidence for the specific author-city link, I cannot reliably determine the birth city of the first book's author."
+      },
+      "attempts": 12,
+      "elapsed_seconds": 83.90046119998442,
+      "head": "fed1acf6e347d804332100d05d5d9a17ca713c2e0f08888302a2359e76980b6f",
+      "seal_sha256": "dcbd8e544d27360ae91d366586454940f45a83057c6e76b5f7d17073f51783ec",
+      "budget_after": {
+        "cap": 1643,
+        "used": 1261,
+        "remaining": 382,
+        "this_run": 114,
+        "epoch_allowance": 1000,
+        "epoch_used": 618,
+        "epoch_remaining": 382
+      },
+      "correct": false,
+      "judged": false,
+      "judge_parse_error": null,
+      "metrics": {
+        "model_attempts": 12,
+        "backend_attempts": 23,
+        "actions_recorded": 15,
+        "executed_actions": 14,
+        "action_counts": {
+          "search": 13,
+          "read": 1,
+          "finish": 1
+        },
+        "action_error_counts": {
+          "read_only_tool_only": 1,
+          "duplicate_query_blocked": 2
+        },
+        "cache_query_hits": 7,
+        "final_phase_requests": 1,
+        "compaction_requests": 4,
+        "rounds_receiving_new_raw": 1,
+        "unknown_usage_calls": 0
+      },
+      "pivot_events": [],
+      "once_prose_reset_events": [],
+      "relation_review_events": [],
+      "read_only_events": [
+        {
+          "identity": {
+            "base_read_rule": {
+              "kind": "temporary_tool_availability_not_verified_evidence",
+              "rule": {
+                "capacity": "recompute tools and visible navigation on each candidate build",
+                "commit": "after actual request archive before send; failed send consumes",
+                "consecutive_rounds": 3,
+                "extra_model_calls": 0,
+                "final": false,
+                "max_triggers": 1,
+                "messages": "unchanged",
+                "minimum_remaining_model_calls": 3,
+                "navigation": "retained group documents or rendered control pages; intersect read authorization",
+                "observation": "successful search receipt executed and ok; no new raw passage delivered",
+                "tools": "original read schema only; original batch limit; no forced tool choice",
+                "version": "read-only-once-v1"
+              },
+              "rule_sha256": "c5215cce37479fb19aa0f3ff146b2b6e2748cf7f89007140fce59e92f92cd6bc",
+              "version": "read-only-once-v1"
+            },
+            "instruction_location": "append to system content only on triggered request",
+            "instruction_sha256": "acdfd7e4892f31ea311b77c6cd0a90c77c0841ce86c4be99f5f04f5c0957c0ce",
+            "kind": "temporary_tool_availability_with_explicit_stage_instruction",
+            "version": "read-only-explicit-v1"
+          },
+          "native_tools_sha256": "82cba8a4a01c2197f768888ac0896a50f5fc053d172739ddb0b0c30e100141ce",
+          "observation": "no new source passage",
+          "round": 4,
+          "source_rounds": [
+            1,
+            2,
+            3
+          ],
+          "system_sha256": "1f11ec06e870b52a9366aa0d51e4ddedcdd86fa6dafbfcf9b336ae1bbe9addc5",
+          "trigger_number": 1,
+          "visible_read_documents": [
+            "d9",
+            "d10",
+            "d11",
+            "d12",
+            "d13",
+            "d16",
+            "d19",
+            "d20",
+            "d29",
+            "d30",
+            "d31",
+            "d32",
+            "d33",
+            "d34",
+            "d35",
+            "d36",
+            "d37",
+            "d38",
+            "d39",
+            "d40",
+            "d41",
+            "d42",
+            "d43",
+            "d44",
+            "d45",
+            "d46",
+            "d47",
+            "d48",
+            "d49",
+            "d50",
+            "d51",
+            "d52",
+            "d53",
+            "d54",
+            "d55",
+            "d56",
+            "d57",
+            "d58",
+            "d59",
+            "d60",
+            "d61",
+            "d62",
+            "d63",
+            "d64",
+            "d65",
+            "d66",
+            "d67",
+            "d68",
+            "d69",
+            "d70",
+            "d71",
+            "d72",
+            "d73",
+            "d74",
+            "d75",
+            "d76",
+            "d77",
+            "d78",
+            "d79",
+            "d80",
+            "d81",
+            "d82",
+            "d83",
+            "d84",
+            "d85",
+            "d86",
+            "d87",
+            "d88",
+            "d89"
+          ],
+          "visible_read_documents_sha256": "228fa1f461c7b7a0e986597c7a28b0084a058c82561a72ae0b9718d60d01d136",
+          "wire_sha256": "cf01cbee509bfb9605db3451f52eef4ae4540b584d2724494916c7471da0217a",
+          "wire_tools_sha256": "82cba8a4a01c2197f768888ac0896a50f5fc053d172739ddb0b0c30e100141ce"
+        }
+      ],
+      "review_memory_capture_events": [],
+      "review_memory_delivery_events": [],
+      "review_memory_rendered_requests": 0,
+      "history_projection_events": [],
+      "history_projection_requests_with_changes": 0,
+      "history_projection_removed_utf8_bytes_across_requests": 0,
+      "queries_executed": 29,
+      "evidence_windows_registered": 1,
+      "new_backend_searches": 22,
+      "backend_document_reads": 1,
+      "tokens": {
+        "input_tokens": {
+          "known_sum": 199430,
+          "unknown_calls": 0
+        },
+        "output_tokens": {
+          "known_sum": 2227,
+          "unknown_calls": 0
+        },
+        "cache_read_tokens": {
+          "known_sum": 90368,
+          "unknown_calls": 0
+        },
+        "cache_write_tokens": {
+          "known_sum": 0,
+          "unknown_calls": 12
+        }
+      }
+    },
+    {
+      "slot": "q775-baseline-r1",
+      "qid": 775,
+      "protocol": "baseline",
+      "status": "abstained",
+      "terminal": {
+        "answer": "",
+        "elapsed_seconds": 58.55371119998745,
+        "outcome": "abstained",
+        "reason": "I could not retrieve citable evidence confirming the specific chain of facts needed: which award created in the 2000s is involved, which book translated into 25+ languages was a contender for it, which prize-winning book (released the preceding year) won that award in the 2010s, and the birthplace/upbringing cities of the two authors. The searches returned only general navigation snippets, no verified source windows establishing the birthplace answer. Without confirmed evidence I cannot determine the city where the first book's author was born."
+      },
+      "attempts": 10,
+      "elapsed_seconds": 58.71661179998773,
+      "head": "be5a9582e43da9609adc06ee66a1ebc93ba594753e8233394fc36ce2e16d9dec",
+      "seal_sha256": "c7abb4d12c3c028c9537740e5506f9ac969850a6e638740a3300ce4e3dcc9468",
+      "budget_after": {
+        "cap": 1643,
+        "used": 1271,
+        "remaining": 372,
+        "this_run": 124,
+        "epoch_allowance": 1000,
+        "epoch_used": 628,
+        "epoch_remaining": 372
+      },
+      "correct": false,
+      "judged": false,
+      "judge_parse_error": null,
+      "metrics": {
+        "model_attempts": 10,
+        "backend_attempts": 18,
+        "actions_recorded": 12,
+        "executed_actions": 12,
+        "action_counts": {
+          "search": 11,
+          "finish": 1
+        },
+        "action_error_counts": {
+          "duplicate_query_blocked": 2
+        },
+        "cache_query_hits": 4,
+        "final_phase_requests": 1,
+        "compaction_requests": 2,
+        "rounds_receiving_new_raw": 0,
+        "unknown_usage_calls": 0
+      },
+      "pivot_events": [],
+      "once_prose_reset_events": [],
+      "relation_review_events": [],
+      "read_only_events": [],
+      "review_memory_capture_events": [],
+      "review_memory_delivery_events": [],
+      "review_memory_rendered_requests": 0,
+      "history_projection_events": [],
+      "history_projection_requests_with_changes": 0,
+      "history_projection_removed_utf8_bytes_across_requests": 0,
+      "queries_executed": 22,
+      "evidence_windows_registered": 0,
+      "new_backend_searches": 18,
+      "backend_document_reads": 0,
+      "tokens": {
+        "input_tokens": {
+          "known_sum": 167199,
+          "unknown_calls": 0
+        },
+        "output_tokens": {
+          "known_sum": 1603,
+          "unknown_calls": 0
+        },
+        "cache_read_tokens": {
+          "known_sum": 89728,
+          "unknown_calls": 0
+        },
+        "cache_write_tokens": {
+          "known_sum": 0,
+          "unknown_calls": 10
+        }
+      }
+    },
+    {
+      "slot": "q786-baseline-r1",
+      "qid": 786,
+      "protocol": "baseline",
+      "status": "submitted",
+      "terminal": {
+        "answer": "Kiran Shah",
+        "answer_representation": {
+          "input_type": "string",
+          "operation": "identity",
+          "rule": "string-integer-v1"
+        },
+        "basis": [
+          {
+            "document": "d95",
+            "document_chars": 6073,
+            "end": 3000,
+            "kind": "raw_evidence",
+            "ref": "e1",
+            "sha256": "537f755a61d9cbda27eb32b2efa11aeeaeec81efe340766e62f59ce1148f2f32",
+            "snapshot": "d093b6d0dfcf9448fb2d1927b8e9b9245d90c77e1bd2fcc107636885695a39c0",
+            "start": 0
+          },
+          {
+            "document": "d129",
+            "document_chars": 5908,
+            "end": 3000,
+            "kind": "raw_evidence",
+            "ref": "e2",
+            "sha256": "71a38be6f57766f0dd124d2aeb87cb42731217dac7358f4bc8a7801d0ed8f20c",
+            "snapshot": "62e063a66e380b3752a6f796a9e0b9249d039cb64f0a654981bc8c9226d2743c",
+            "start": 0
+          },
+          {
+            "document": "d167",
+            "document_chars": 4714,
+            "end": 3000,
+            "kind": "raw_evidence",
+            "ref": "e3",
+            "sha256": "1f0a1bf520860a6ae5837d7c66ea4fa675d2dfce3884af9fd0b6bb77f0b24172",
+            "snapshot": "5bb9bb92f4b4cce74267422df4e24b420e666228d386aec1c8ddfd5895a0e622",
+            "start": 0
+          }
+        ],
+        "elapsed_seconds": 114.87313520000316,
+        "outcome": "submitted",
+        "refs": [
+          "e1",
+          "e2",
+          "e3"
+        ],
+        "semantic_status": "not_automatically_verified"
+      },
+      "attempts": 16,
+      "elapsed_seconds": 115.08879989999696,
+      "head": "d94b5b683276f668cb23160834dc0eee0374a39b4012250f548a0b0467fd6986",
+      "seal_sha256": "1d6188028cbb8191fdf03f757fe53c3339289645931012ec9de1277a54f3d50c",
+      "budget_after": {
+        "cap": 1643,
+        "used": 1287,
+        "remaining": 356,
+        "this_run": 140,
+        "epoch_allowance": 1000,
+        "epoch_used": 644,
+        "epoch_remaining": 356
+      },
+      "correct": true,
+      "judged": true,
+      "judge_parse_error": false,
+      "metrics": {
+        "model_attempts": 16,
+        "backend_attempts": 39,
+        "actions_recorded": 20,
+        "executed_actions": 20,
+        "action_counts": {
+          "search": 16,
+          "read": 3,
+          "finish": 1
+        },
+        "action_error_counts": {},
+        "cache_query_hits": 3,
+        "final_phase_requests": 1,
+        "compaction_requests": 6,
+        "rounds_receiving_new_raw": 3,
+        "unknown_usage_calls": 0
+      },
+      "pivot_events": [],
+      "once_prose_reset_events": [],
+      "relation_review_events": [],
+      "read_only_events": [],
+      "review_memory_capture_events": [],
+      "review_memory_delivery_events": [],
+      "review_memory_rendered_requests": 0,
+      "history_projection_events": [],
+      "history_projection_requests_with_changes": 0,
+      "history_projection_removed_utf8_bytes_across_requests": 0,
+      "queries_executed": 39,
+      "evidence_windows_registered": 3,
+      "new_backend_searches": 36,
+      "backend_document_reads": 3,
+      "tokens": {
+        "input_tokens": {
+          "known_sum": 274383,
+          "unknown_calls": 0
+        },
+        "output_tokens": {
+          "known_sum": 2693,
+          "unknown_calls": 0
+        },
+        "cache_read_tokens": {
+          "known_sum": 129536,
+          "unknown_calls": 0
+        },
+        "cache_write_tokens": {
+          "known_sum": 0,
+          "unknown_calls": 16
+        }
+      }
+    },
+    {
+      "slot": "q786-read-only-explicit-v1-r1",
+      "qid": 786,
+      "protocol": "read-only-explicit-v1",
+      "status": "abstained",
+      "terminal": {
+        "answer": "",
+        "elapsed_seconds": 71.49250219998066,
+        "outcome": "abstained",
+        "reason": "Could not confirm the person's identity from delivered evidence. Searches surfaced Don Chaffey as a plausible director of dinosaur/sci-fi/adventure films (e.g., One Million Years B.C., Jason and the Argonauts), but no source page was actually read that verifies the 91-minute film, the \"Perfectly formed\" self-description, the 1950s birth to first/second-generation Indian immigrants, or the short film directed with a nephew. No candidate name is supported by citable evidence."
+      },
+      "attempts": 14,
+      "elapsed_seconds": 71.64655589999165,
+      "head": "f6f6860f7f952dbeec5eb287aaec6b235727716fea953f2c3eadb9a9db5df0ce",
+      "seal_sha256": "d7fc1b1e71244bc226f680f5216d037cd96566bf5e50c1c152655fa572f6d6cd",
+      "budget_after": {
+        "cap": 1643,
+        "used": 1301,
+        "remaining": 342,
+        "this_run": 154,
+        "epoch_allowance": 1000,
+        "epoch_used": 658,
+        "epoch_remaining": 342
+      },
+      "correct": false,
+      "judged": false,
+      "judge_parse_error": null,
+      "metrics": {
+        "model_attempts": 14,
+        "backend_attempts": 22,
+        "actions_recorded": 14,
+        "executed_actions": 13,
+        "action_counts": {
+          "search": 13,
+          "finish": 1
+        },
+        "action_error_counts": {
+          "read_only_tool_only": 1,
+          "duplicate_query_blocked": 2
+        },
+        "cache_query_hits": 8,
+        "final_phase_requests": 1,
+        "compaction_requests": 1,
+        "rounds_receiving_new_raw": 0,
+        "unknown_usage_calls": 0
+      },
+      "pivot_events": [],
+      "once_prose_reset_events": [],
+      "relation_review_events": [],
+      "read_only_events": [
+        {
+          "identity": {
+            "base_read_rule": {
+              "kind": "temporary_tool_availability_not_verified_evidence",
+              "rule": {
+                "capacity": "recompute tools and visible navigation on each candidate build",
+                "commit": "after actual request archive before send; failed send consumes",
+                "consecutive_rounds": 3,
+                "extra_model_calls": 0,
+                "final": false,
+                "max_triggers": 1,
+                "messages": "unchanged",
+                "minimum_remaining_model_calls": 3,
+                "navigation": "retained group documents or rendered control pages; intersect read authorization",
+                "observation": "successful search receipt executed and ok; no new raw passage delivered",
+                "tools": "original read schema only; original batch limit; no forced tool choice",
+                "version": "read-only-once-v1"
+              },
+              "rule_sha256": "c5215cce37479fb19aa0f3ff146b2b6e2748cf7f89007140fce59e92f92cd6bc",
+              "version": "read-only-once-v1"
+            },
+            "instruction_location": "append to system content only on triggered request",
+            "instruction_sha256": "acdfd7e4892f31ea311b77c6cd0a90c77c0841ce86c4be99f5f04f5c0957c0ce",
+            "kind": "temporary_tool_availability_with_explicit_stage_instruction",
+            "version": "read-only-explicit-v1"
+          },
+          "native_tools_sha256": "82cba8a4a01c2197f768888ac0896a50f5fc053d172739ddb0b0c30e100141ce",
+          "observation": "no new source passage",
+          "round": 4,
+          "source_rounds": [
+            1,
+            2,
+            3
+          ],
+          "system_sha256": "1f11ec06e870b52a9366aa0d51e4ddedcdd86fa6dafbfcf9b336ae1bbe9addc5",
+          "trigger_number": 1,
+          "visible_read_documents": [
+            "d1",
+            "d2",
+            "d3",
+            "d4",
+            "d5",
+            "d6",
+            "d7",
+            "d8",
+            "d9",
+            "d10",
+            "d11",
+            "d12",
+            "d13",
+            "d14",
+            "d15",
+            "d16",
+            "d17",
+            "d18",
+            "d19",
+            "d20",
+            "d21",
+            "d22",
+            "d23",
+            "d24",
+            "d25",
+            "d26",
+            "d27",
+            "d28",
+            "d29",
+            "d30",
+            "d31",
+            "d32",
+            "d33",
+            "d34",
+            "d35",
+            "d36",
+            "d37"
+          ],
+          "visible_read_documents_sha256": "368634206bc9256a4357165e0b8d60b0e5062a211e6c4cf4453ce07a7424abda",
+          "wire_sha256": "39af62a2ae40f0b705e024d8396db693c63f68eddf835902c56bf50a486222a0",
+          "wire_tools_sha256": "82cba8a4a01c2197f768888ac0896a50f5fc053d172739ddb0b0c30e100141ce"
+        }
+      ],
+      "review_memory_capture_events": [],
+      "review_memory_delivery_events": [],
+      "review_memory_rendered_requests": 0,
+      "history_projection_events": [],
+      "history_projection_requests_with_changes": 0,
+      "history_projection_removed_utf8_bytes_across_requests": 0,
+      "queries_executed": 30,
+      "evidence_windows_registered": 0,
+      "new_backend_searches": 22,
+      "backend_document_reads": 0,
+      "tokens": {
+        "input_tokens": {
+          "known_sum": 209120,
+          "unknown_calls": 0
+        },
+        "output_tokens": {
+          "known_sum": 1582,
+          "unknown_calls": 0
+        },
+        "cache_read_tokens": {
+          "known_sum": 136704,
+          "unknown_calls": 0
+        },
+        "cache_write_tokens": {
+          "known_sum": 0,
+          "unknown_calls": 14
+        }
+      }
+    },
+    {
+      "slot": "q776-read-only-explicit-v1-r1",
+      "qid": 776,
+      "protocol": "read-only-explicit-v1",
+      "status": "submitted",
+      "terminal": {
+        "answer": "The Dorset Culture of the Eastern Arctic",
+        "answer_representation": {
+          "input_type": "string",
+          "operation": "identity",
+          "rule": "string-integer-v1"
+        },
+        "basis": [
+          {
+            "document": "d29",
+            "document_chars": 5147,
+            "end": 5147,
+            "kind": "raw_evidence",
+            "ref": "e8",
+            "sha256": "eef09a784c75341350344114eba1f20877848442268d02f73a0e875e5e87c924",
+            "snapshot": "eef09a784c75341350344114eba1f20877848442268d02f73a0e875e5e87c924",
+            "start": 0
+          },
+          {
+            "document": "d57",
+            "document_chars": 3229,
+            "end": 3000,
+            "kind": "raw_evidence",
+            "ref": "e6",
+            "sha256": "d69c173c214aab84f8a6a068a77c2365ceed4d7fefbe89df0e0f7ec2a2db8d6b",
+            "snapshot": "91cabfeb55d4c249c456c4111e140c7101078f737f21d73637f040448d29a517",
+            "start": 0
+          },
+          {
+            "document": "d27",
+            "document_chars": 3147,
+            "end": 3000,
+            "kind": "raw_evidence",
+            "ref": "e5",
+            "sha256": "078181267219dc48f0234a22666dfc6124a1b87aef3352f34ab196a0967e29c7",
+            "snapshot": "aea1366c195910f9c2ff23cdfbfd63a260e23d7712f93ab21a1835c70a91d48a",
+            "start": 0
+          },
+          {
+            "document": "d68",
+            "document_chars": 1916,
+            "end": 1916,
+            "kind": "raw_evidence",
+            "ref": "e7",
+            "sha256": "dea61c5126a40e3a0a499921966d0fd804d4747ab57e4187f217221d26d0773f",
+            "snapshot": "dea61c5126a40e3a0a499921966d0fd804d4747ab57e4187f217221d26d0773f",
+            "start": 0
+          }
+        ],
+        "elapsed_seconds": 180.62036509998143,
+        "outcome": "submitted",
+        "refs": [
+          "e8",
+          "e6",
+          "e5",
+          "e7"
+        ],
+        "semantic_status": "not_automatically_verified"
+      },
+      "attempts": 16,
+      "elapsed_seconds": 180.83112320001237,
+      "head": "66bfb3d296e54978351d15aebde4c8295842bb60286a55e3ac29024f46bfe8ec",
+      "seal_sha256": "c9abf91c80160a3bd489e20d40437680648162581f303d1ff2e546af5a4991c3",
+      "budget_after": {
+        "cap": 1643,
+        "used": 1317,
+        "remaining": 326,
+        "this_run": 170,
+        "epoch_allowance": 1000,
+        "epoch_used": 674,
+        "epoch_remaining": 326
+      },
+      "correct": true,
+      "judged": true,
+      "judge_parse_error": false,
+      "metrics": {
+        "model_attempts": 16,
+        "backend_attempts": 31,
+        "actions_recorded": 22,
+        "executed_actions": 21,
+        "action_counts": {
+          "search": 12,
+          "read": 8,
+          "recall": 1,
+          "finish": 1
+        },
+        "action_error_counts": {
+          "read_only_tool_only": 1
+        },
+        "cache_query_hits": 7,
+        "final_phase_requests": 1,
+        "compaction_requests": 7,
+        "rounds_receiving_new_raw": 5,
+        "unknown_usage_calls": 0
+      },
+      "pivot_events": [],
+      "once_prose_reset_events": [],
+      "relation_review_events": [],
+      "read_only_events": [
+        {
+          "identity": {
+            "base_read_rule": {
+              "kind": "temporary_tool_availability_not_verified_evidence",
+              "rule": {
+                "capacity": "recompute tools and visible navigation on each candidate build",
+                "commit": "after actual request archive before send; failed send consumes",
+                "consecutive_rounds": 3,
+                "extra_model_calls": 0,
+                "final": false,
+                "max_triggers": 1,
+                "messages": "unchanged",
+                "minimum_remaining_model_calls": 3,
+                "navigation": "retained group documents or rendered control pages; intersect read authorization",
+                "observation": "successful search receipt executed and ok; no new raw passage delivered",
+                "tools": "original read schema only; original batch limit; no forced tool choice",
+                "version": "read-only-once-v1"
+              },
+              "rule_sha256": "c5215cce37479fb19aa0f3ff146b2b6e2748cf7f89007140fce59e92f92cd6bc",
+              "version": "read-only-once-v1"
+            },
+            "instruction_location": "append to system content only on triggered request",
+            "instruction_sha256": "acdfd7e4892f31ea311b77c6cd0a90c77c0841ce86c4be99f5f04f5c0957c0ce",
+            "kind": "temporary_tool_availability_with_explicit_stage_instruction",
+            "version": "read-only-explicit-v1"
+          },
+          "native_tools_sha256": "82cba8a4a01c2197f768888ac0896a50f5fc053d172739ddb0b0c30e100141ce",
+          "observation": "no new source passage",
+          "round": 10,
+          "source_rounds": [
+            7,
+            8,
+            9
+          ],
+          "system_sha256": "1f11ec06e870b52a9366aa0d51e4ddedcdd86fa6dafbfcf9b336ae1bbe9addc5",
+          "trigger_number": 1,
+          "visible_read_documents": [
+            "d1",
+            "d3",
+            "d4",
+            "d5",
+            "d13",
+            "d14",
+            "d27",
+            "d28",
+            "d29",
+            "d30",
+            "d31",
+            "d32",
+            "d36",
+            "d44",
+            "d45",
+            "d46",
+            "d51",
+            "d52",
+            "d54",
+            "d55",
+            "d76",
+            "d77",
+            "d78",
+            "d79",
+            "d80",
+            "d81",
+            "d82",
+            "d83",
+            "d84",
+            "d85",
+            "d86",
+            "d87",
+            "d88",
+            "d89",
+            "d90",
+            "d91",
+            "d92",
+            "d93",
+            "d94",
+            "d95",
+            "d96",
+            "d97",
+            "d98"
+          ],
+          "visible_read_documents_sha256": "499c0929e30f71ecb782ee7452233ea36efd29c9e5c0bfc65b026e1a15c9db2d",
+          "wire_sha256": "90b61b37e4d5f8aee82e9d0645f76ea917bf6e79f536e25c5be4b48799536321",
+          "wire_tools_sha256": "82cba8a4a01c2197f768888ac0896a50f5fc053d172739ddb0b0c30e100141ce"
+        }
+      ],
+      "review_memory_capture_events": [],
+      "review_memory_delivery_events": [],
+      "review_memory_rendered_requests": 0,
+      "history_projection_events": [],
+      "history_projection_requests_with_changes": 0,
+      "history_projection_removed_utf8_bytes_across_requests": 0,
+      "queries_executed": 32,
+      "evidence_windows_registered": 8,
+      "new_backend_searches": 25,
+      "backend_document_reads": 6,
+      "tokens": {
+        "input_tokens": {
+          "known_sum": 273860,
+          "unknown_calls": 0
+        },
+        "output_tokens": {
+          "known_sum": 3655,
+          "unknown_calls": 0
+        },
+        "cache_read_tokens": {
+          "known_sum": 107008,
+          "unknown_calls": 0
+        },
+        "cache_write_tokens": {
+          "known_sum": 0,
+          "unknown_calls": 16
+        }
+      }
+    },
+    {
+      "slot": "q776-baseline-r1",
+      "qid": 776,
+      "protocol": "baseline",
+      "status": "submitted",
+      "terminal": {
+        "answer": "The Dorset Culture of the Eastern Arctic",
+        "answer_representation": {
+          "input_type": "string",
+          "operation": "identity",
+          "rule": "string-integer-v1"
+        },
+        "basis": [
+          {
+            "document": "d13",
+            "document_chars": 5147,
+            "end": 3000,
+            "kind": "raw_evidence",
+            "ref": "e8",
+            "sha256": "ca371c4748e0515bba5e7dc007a1978cf62c1248a87ec3089860b5f5b9dbcafd",
+            "snapshot": "eef09a784c75341350344114eba1f20877848442268d02f73a0e875e5e87c924",
+            "start": 0
+          },
+          {
+            "document": "d41",
+            "document_chars": 1916,
+            "end": 1916,
+            "kind": "raw_evidence",
+            "ref": "e10",
+            "sha256": "dea61c5126a40e3a0a499921966d0fd804d4747ab57e4187f217221d26d0773f",
+            "snapshot": "dea61c5126a40e3a0a499921966d0fd804d4747ab57e4187f217221d26d0773f",
+            "start": 0
+          }
+        ],
+        "elapsed_seconds": 73.46166329999687,
+        "outcome": "submitted",
+        "refs": [
+          "e8",
+          "e10"
+        ],
+        "semantic_status": "not_automatically_verified"
+      },
+      "attempts": 14,
+      "elapsed_seconds": 73.68582230000175,
+      "head": "0aa5a24cdf017ee1922897e493f1dfd7c1aaed40d1d584ee8df257554cb48093",
+      "seal_sha256": "98bff50357aeafbf952df6bf712ce25b66b1bef2c0b4d03e01a5d89deba6a30e",
+      "budget_after": {
+        "cap": 1643,
+        "used": 1331,
+        "remaining": 312,
+        "this_run": 184,
+        "epoch_allowance": 1000,
+        "epoch_used": 688,
+        "epoch_remaining": 312
+      },
+      "correct": true,
+      "judged": true,
+      "judge_parse_error": false,
+      "metrics": {
+        "model_attempts": 14,
+        "backend_attempts": 24,
+        "actions_recorded": 22,
+        "executed_actions": 22,
+        "action_counts": {
+          "search": 11,
+          "read": 10,
+          "finish": 1
+        },
+        "action_error_counts": {},
+        "cache_query_hits": 11,
+        "final_phase_requests": 0,
+        "compaction_requests": 5,
+        "rounds_receiving_new_raw": 10,
+        "unknown_usage_calls": 0
+      },
+      "pivot_events": [],
+      "once_prose_reset_events": [],
+      "relation_review_events": [],
+      "read_only_events": [],
+      "review_memory_capture_events": [],
+      "review_memory_delivery_events": [],
+      "review_memory_rendered_requests": 0,
+      "history_projection_events": [],
+      "history_projection_requests_with_changes": 0,
+      "history_projection_removed_utf8_bytes_across_requests": 0,
+      "queries_executed": 32,
+      "evidence_windows_registered": 10,
+      "new_backend_searches": 21,
+      "backend_document_reads": 3,
+      "tokens": {
+        "input_tokens": {
+          "known_sum": 223211,
+          "unknown_calls": 0
+        },
+        "output_tokens": {
+          "known_sum": 1798,
+          "unknown_calls": 0
+        },
+        "cache_read_tokens": {
+          "known_sum": 113792,
+          "unknown_calls": 0
+        },
+        "cache_write_tokens": {
+          "known_sum": 0,
+          "unknown_calls": 14
+        }
+      }
+    },
+    {
+      "slot": "q771-baseline-r1",
+      "qid": 771,
+      "protocol": "baseline",
+      "status": "submitted",
+      "terminal": {
+        "answer": "Vakkorama",
+        "answer_representation": {
+          "input_type": "string",
+          "operation": "identity",
+          "rule": "string-integer-v1"
+        },
+        "basis": [
+          {
+            "document": "d5",
+            "document_chars": 13639,
+            "end": 6000,
+            "kind": "raw_evidence",
+            "ref": "e3",
+            "sha256": "97a6e11f3f34512afbebf984635c4f0118e43a0fd1a04e71a3f4cf755defe729",
+            "snapshot": "7d8960afbde4b93401ea738e66299a6ee3d0dee47906ba8e3a86ebdea642ffcd",
+            "start": 3000
+          },
+          {
+            "document": "d1",
+            "document_chars": 9095,
+            "end": 6000,
+            "kind": "raw_evidence",
+            "ref": "e4",
+            "sha256": "01ef6425050ddf612695a672f50d2d88e296ce9e1e5d49338047f20a92856164",
+            "snapshot": "446eabd6c86b9aad83f468e7eb034d96105d6e38bc9d97c923416d3ce089e105",
+            "start": 3000
+          }
+        ],
+        "elapsed_seconds": 22.368274499982363,
+        "outcome": "submitted",
+        "refs": [
+          "e3",
+          "e4"
+        ],
+        "semantic_status": "not_automatically_verified"
+      },
+      "attempts": 4,
+      "elapsed_seconds": 22.461461900005816,
+      "head": "d8fdf865af9eab420fbd75cc1d1fa701152dc35da14c82e2c23079b9187666fc",
+      "seal_sha256": "8b458a2bad60dbdfa97c75e9d3b5da56dedd4d67941f346c5fccb310314ae4cd",
+      "budget_after": {
+        "cap": 1643,
+        "used": 1335,
+        "remaining": 308,
+        "this_run": 188,
+        "epoch_allowance": 1000,
+        "epoch_used": 692,
+        "epoch_remaining": 308
+      },
+      "correct": true,
+      "judged": true,
+      "judge_parse_error": false,
+      "metrics": {
+        "model_attempts": 4,
+        "backend_attempts": 5,
+        "actions_recorded": 6,
+        "executed_actions": 6,
+        "action_counts": {
+          "search": 1,
+          "read": 4,
+          "finish": 1
+        },
+        "action_error_counts": {},
+        "cache_query_hits": 0,
+        "final_phase_requests": 1,
+        "compaction_requests": 0,
+        "rounds_receiving_new_raw": 2,
+        "unknown_usage_calls": 0
+      },
+      "pivot_events": [],
+      "once_prose_reset_events": [],
+      "relation_review_events": [],
+      "read_only_events": [],
+      "review_memory_capture_events": [],
+      "review_memory_delivery_events": [],
+      "review_memory_rendered_requests": 0,
+      "history_projection_events": [],
+      "history_projection_requests_with_changes": 0,
+      "history_projection_removed_utf8_bytes_across_requests": 0,
+      "queries_executed": 3,
+      "evidence_windows_registered": 4,
+      "new_backend_searches": 3,
+      "backend_document_reads": 2,
+      "tokens": {
+        "input_tokens": {
+          "known_sum": 29193,
+          "unknown_calls": 0
+        },
+        "output_tokens": {
+          "known_sum": 633,
+          "unknown_calls": 0
+        },
+        "cache_read_tokens": {
+          "known_sum": 13568,
+          "unknown_calls": 0
+        },
+        "cache_write_tokens": {
+          "known_sum": 0,
+          "unknown_calls": 4
+        }
+      }
+    },
+    {
+      "slot": "q771-read-only-explicit-v1-r1",
+      "qid": 771,
+      "protocol": "read-only-explicit-v1",
+      "status": "submitted",
+      "terminal": {
+        "answer": "Vakkorama",
+        "answer_representation": {
+          "input_type": "string",
+          "operation": "identity",
+          "rule": "string-integer-v1"
+        },
+        "basis": [
+          {
+            "document": "d5",
+            "document_chars": 13639,
+            "end": 3000,
+            "kind": "raw_evidence",
+            "ref": "e1",
+            "sha256": "ed282b99cfb0aae5a430ddfadeb3348fa20e85aac24fb4501bf9cd3b3dadb4b2",
+            "snapshot": "7d8960afbde4b93401ea738e66299a6ee3d0dee47906ba8e3a86ebdea642ffcd",
+            "start": 0
+          },
+          {
+            "document": "d5",
+            "document_chars": 13639,
+            "end": 6000,
+            "kind": "raw_evidence",
+            "ref": "e2",
+            "sha256": "97a6e11f3f34512afbebf984635c4f0118e43a0fd1a04e71a3f4cf755defe729",
+            "snapshot": "7d8960afbde4b93401ea738e66299a6ee3d0dee47906ba8e3a86ebdea642ffcd",
+            "start": 3000
+          }
+        ],
+        "elapsed_seconds": 20.432152399996994,
+        "outcome": "submitted",
+        "refs": [
+          "e1",
+          "e2"
+        ],
+        "semantic_status": "not_automatically_verified"
+      },
+      "attempts": 4,
+      "elapsed_seconds": 20.52399119999609,
+      "head": "35faca3e10b3ef549c324288ff991993a8b31bab5e9413816bd70f4079fbdf40",
+      "seal_sha256": "d97525f5be32baf0a514330429bf80068427cf914a37cb3702a9909755f85f13",
+      "budget_after": {
+        "cap": 1643,
+        "used": 1339,
+        "remaining": 304,
+        "this_run": 192,
+        "epoch_allowance": 1000,
+        "epoch_used": 696,
+        "epoch_remaining": 304
+      },
+      "correct": true,
+      "judged": true,
+      "judge_parse_error": false,
+      "metrics": {
+        "model_attempts": 4,
+        "backend_attempts": 4,
+        "actions_recorded": 4,
+        "executed_actions": 4,
+        "action_counts": {
+          "search": 1,
+          "read": 2,
+          "finish": 1
+        },
+        "action_error_counts": {},
+        "cache_query_hits": 0,
+        "final_phase_requests": 1,
+        "compaction_requests": 0,
+        "rounds_receiving_new_raw": 2,
+        "unknown_usage_calls": 0
+      },
+      "pivot_events": [],
+      "once_prose_reset_events": [],
+      "relation_review_events": [],
+      "read_only_events": [],
+      "review_memory_capture_events": [],
+      "review_memory_delivery_events": [],
+      "review_memory_rendered_requests": 0,
+      "history_projection_events": [],
+      "history_projection_requests_with_changes": 0,
+      "history_projection_removed_utf8_bytes_across_requests": 0,
+      "queries_executed": 3,
+      "evidence_windows_registered": 2,
+      "new_backend_searches": 3,
+      "backend_document_reads": 1,
+      "tokens": {
+        "input_tokens": {
+          "known_sum": 26589,
+          "unknown_calls": 0
+        },
+        "output_tokens": {
+          "known_sum": 680,
+          "unknown_calls": 0
+        },
+        "cache_read_tokens": {
+          "known_sum": 14464,
+          "unknown_calls": 0
+        },
+        "cache_write_tokens": {
+          "known_sum": 0,
+          "unknown_calls": 4
+        }
+      }
+    },
+    {
+      "slot": "q788-read-only-explicit-v1-r1",
+      "qid": 788,
+      "protocol": "read-only-explicit-v1",
+      "status": "submitted",
+      "terminal": {
+        "answer": "Taj-ul-Masajid (also spelled Taj-ul-Masjid), located in Bhopal, Madhya Pradesh, India.\n\nIt meets all the criteria:\n- Completed before 1990: Construction was completed in 1958.\n- Capacity over 150,000 people: It has a capacity of 175,000 worshippers.\n- Interior area over 400,000 square feet: It has an interior area of about 430,000 square feet.\n- Walking distance from a mosque built after 1720: Moti Masjid (the Pearl Mosque), built in 1860 by Sikander Begum, is about 1.2 km away (walking distance).\n- Walking distance from a hospital established after 1930: Hamidia Hospital (Govt Hamidia Hospital and Gandhi Medical College), which was shifted to its present venue and expanded during 1927–1949 (present building occupied in 1953), is about 0.5 km away (walking distance).",
+        "answer_representation": {
+          "input_type": "string",
+          "operation": "identity",
+          "rule": "string-integer-v1"
+        },
+        "basis": [
+          {
+            "document": "d16",
+            "document_chars": 4422,
+            "end": 3000,
+            "kind": "raw_evidence",
+            "ref": "e3",
+            "sha256": "cbd8bfa2e9ea977a4f4cad5a55d7bf1c5ec416b60a8e90a2d6ad70ab52acc9dc",
+            "snapshot": "9a1abaf845a1fc844860ab223e44e8a2f5277aaba691e9ef2712a18e2c74bfe2",
+            "start": 0
+          },
+          {
+            "document": "d2",
+            "document_chars": 562,
+            "end": 562,
+            "kind": "raw_evidence",
+            "ref": "e2",
+            "sha256": "c96c8add51c30245eb0a1e0ce87df8ee3d2118726ae550d4e3e704e1b15c6e88",
+            "snapshot": "c96c8add51c30245eb0a1e0ce87df8ee3d2118726ae550d4e3e704e1b15c6e88",
+            "start": 0
+          },
+          {
+            "document": "d19",
+            "document_chars": 1059,
+            "end": 1059,
+            "kind": "raw_evidence",
+            "ref": "e4",
+            "sha256": "f11bcf812eb353d0c53bd36baeb1834eb615a818af0a0263328f5a7185a638f3",
+            "snapshot": "f11bcf812eb353d0c53bd36baeb1834eb615a818af0a0263328f5a7185a638f3",
+            "start": 0
+          },
+          {
+            "document": "d23",
+            "document_chars": 827,
+            "end": 827,
+            "kind": "raw_evidence",
+            "ref": "e6",
+            "sha256": "c54d0be45bd3730e9135d05b27f3b19ee5aad8ed572337b381532680b332bcf4",
+            "snapshot": "c54d0be45bd3730e9135d05b27f3b19ee5aad8ed572337b381532680b332bcf4",
+            "start": 0
+          },
+          {
+            "document": "d21",
+            "document_chars": 1950,
+            "end": 1950,
+            "kind": "raw_evidence",
+            "ref": "e5",
+            "sha256": "47fcee1482500e09ba15da69ccbc957475bb6410313a89ae248ec17c4b9f629a",
+            "snapshot": "47fcee1482500e09ba15da69ccbc957475bb6410313a89ae248ec17c4b9f629a",
+            "start": 0
+          }
+        ],
+        "elapsed_seconds": 35.03778919999604,
+        "outcome": "submitted",
+        "refs": [
+          "e3",
+          "e2",
+          "e4",
+          "e6",
+          "e5"
+        ],
+        "semantic_status": "not_automatically_verified"
+      },
+      "attempts": 7,
+      "elapsed_seconds": 35.16747630000464,
+      "head": "aa301139251d27fbbd46e12515bee58ce76e2310f3e75505e84aded21f654353",
+      "seal_sha256": "e5541343a07038f295a471414db502fbe432e6e26d642a86957dd52226f6b1ed",
+      "budget_after": {
+        "cap": 1643,
+        "used": 1346,
+        "remaining": 297,
+        "this_run": 199,
+        "epoch_allowance": 1000,
+        "epoch_used": 703,
+        "epoch_remaining": 297
+      },
+      "correct": true,
+      "judged": true,
+      "judge_parse_error": false,
+      "metrics": {
+        "model_attempts": 7,
+        "backend_attempts": 15,
+        "actions_recorded": 10,
+        "executed_actions": 10,
+        "action_counts": {
+          "search": 3,
+          "read": 6,
+          "finish": 1
+        },
+        "action_error_counts": {},
+        "cache_query_hits": 0,
+        "final_phase_requests": 0,
+        "compaction_requests": 0,
+        "rounds_receiving_new_raw": 3,
+        "unknown_usage_calls": 0
+      },
+      "pivot_events": [],
+      "once_prose_reset_events": [],
+      "relation_review_events": [],
+      "read_only_events": [],
+      "review_memory_capture_events": [],
+      "review_memory_delivery_events": [],
+      "review_memory_rendered_requests": 0,
+      "history_projection_events": [],
+      "history_projection_requests_with_changes": 0,
+      "history_projection_removed_utf8_bytes_across_requests": 0,
+      "queries_executed": 9,
+      "evidence_windows_registered": 6,
+      "new_backend_searches": 9,
+      "backend_document_reads": 6,
+      "tokens": {
+        "input_tokens": {
+          "known_sum": 82049,
+          "unknown_calls": 0
+        },
+        "output_tokens": {
+          "known_sum": 1229,
+          "unknown_calls": 0
+        },
+        "cache_read_tokens": {
+          "known_sum": 60032,
+          "unknown_calls": 0
+        },
+        "cache_write_tokens": {
+          "known_sum": 0,
+          "unknown_calls": 7
+        }
+      }
+    },
+    {
+      "slot": "q788-baseline-r1",
+      "qid": 788,
+      "protocol": "baseline",
+      "status": "submitted",
+      "terminal": {
+        "answer": "The mosque that meets all the criteria is **Taj-ul-Masajid** (also spelled Taj-ul-Masjid), located in Bhopal, Madhya Pradesh, India.\n\nHow it satisfies each criterion:\n\n1. **Completed before 1990**: Construction was completed in 1958. (Wikipedia: \"year_completed: 1958\"; \"The construction was complete by 1958 at an expenditure of 20 million Indian rupees.\")\n\n2. **Capacity over 150,000 people**: It has a capacity of 175,000 worshippers. (Wikipedia: \"capacity: 175, 000 worshippers\"; LBB: \"has a capacity of 175,000 people.\")\n\n3. **Interior area over 400,000 square feet**: It has an interior area of about 430,000 square feet. (LBB: \"With an interior area of about 430,000 square feet, the mosque has a capacity of 175,000 people.\")\n\n4. **Walking distance from a mosque built after 1720**: The nearby Moti Masjid (Pearl Mosque) in Bhopal was built by Sikander Begum in 1860 (after 1720). Wikimapia lists Moti Masjid as approximately 1.2 km from Taj-ul-Masajid — within walking distance.\n\n5. **Walking distance from a hospital established after 1930**: Hamidia Hospital in Bhopal, located approximately 0.5–0.9 km away (walking distance per Wikimapia), was shifted to its present venue and established/expanded as Hamidia Hospital in the period leading up to 1949 (after 1930), with further extensions in 1953 and 1956. (Wikipedia: \"Before 1927, it was a small hospital with 25 beds... It was shifted to its present venue in the same period. In 1949, before the merger of the Bhopal State, the Hamidia Hospital had 175 beds. The year 1953 saw further extension in the Hamidia Hospital...\")",
+        "answer_representation": {
+          "input_type": "string",
+          "operation": "identity",
+          "rule": "string-integer-v1"
+        },
+        "basis": [
+          {
+            "document": "d4",
+            "document_chars": 4422,
+            "end": 3000,
+            "kind": "raw_evidence",
+            "ref": "e1",
+            "sha256": "cbd8bfa2e9ea977a4f4cad5a55d7bf1c5ec416b60a8e90a2d6ad70ab52acc9dc",
+            "snapshot": "9a1abaf845a1fc844860ab223e44e8a2f5277aaba691e9ef2712a18e2c74bfe2",
+            "start": 0
+          },
+          {
+            "document": "d25",
+            "document_chars": 988,
+            "end": 988,
+            "kind": "raw_evidence",
+            "ref": "e2",
+            "sha256": "3437f2a3cc533dba005fa23e0a0c3cf0f8ba4813938081ec3d3fce9cd538c08a",
+            "snapshot": "3437f2a3cc533dba005fa23e0a0c3cf0f8ba4813938081ec3d3fce9cd538c08a",
+            "start": 0
+          },
+          {
+            "document": "d34",
+            "document_chars": 1950,
+            "end": 1950,
+            "kind": "raw_evidence",
+            "ref": "e3",
+            "sha256": "47fcee1482500e09ba15da69ccbc957475bb6410313a89ae248ec17c4b9f629a",
+            "snapshot": "47fcee1482500e09ba15da69ccbc957475bb6410313a89ae248ec17c4b9f629a",
+            "start": 0
+          },
+          {
+            "document": "d29",
+            "document_chars": 827,
+            "end": 827,
+            "kind": "raw_evidence",
+            "ref": "e4",
+            "sha256": "c54d0be45bd3730e9135d05b27f3b19ee5aad8ed572337b381532680b332bcf4",
+            "snapshot": "c54d0be45bd3730e9135d05b27f3b19ee5aad8ed572337b381532680b332bcf4",
+            "start": 0
+          }
+        ],
+        "elapsed_seconds": 37.64449969999259,
+        "outcome": "submitted",
+        "refs": [
+          "e1",
+          "e2",
+          "e3",
+          "e4"
+        ],
+        "semantic_status": "not_automatically_verified"
+      },
+      "attempts": 6,
+      "elapsed_seconds": 37.756661500025075,
+      "head": "4f5e3b26581f60d66bd7ffaad92eca66a77c5b7f17a850d7980d5faad88d23ca",
+      "seal_sha256": "5cb5e5b95c6227fa4e141527c15ee25d153b50ef12ddfd0222dc2c6291607e52",
+      "budget_after": {
+        "cap": 1643,
+        "used": 1352,
+        "remaining": 291,
+        "this_run": 205,
+        "epoch_allowance": 1000,
+        "epoch_used": 709,
+        "epoch_remaining": 291
+      },
+      "correct": true,
+      "judged": true,
+      "judge_parse_error": false,
+      "metrics": {
+        "model_attempts": 6,
+        "backend_attempts": 12,
+        "actions_recorded": 8,
+        "executed_actions": 8,
+        "action_counts": {
+          "search": 3,
+          "read": 4,
+          "finish": 1
+        },
+        "action_error_counts": {},
+        "cache_query_hits": 0,
+        "final_phase_requests": 0,
+        "compaction_requests": 0,
+        "rounds_receiving_new_raw": 3,
+        "unknown_usage_calls": 0
+      },
+      "pivot_events": [],
+      "once_prose_reset_events": [],
+      "relation_review_events": [],
+      "read_only_events": [],
+      "review_memory_capture_events": [],
+      "review_memory_delivery_events": [],
+      "review_memory_rendered_requests": 0,
+      "history_projection_events": [],
+      "history_projection_requests_with_changes": 0,
+      "history_projection_removed_utf8_bytes_across_requests": 0,
+      "queries_executed": 8,
+      "evidence_windows_registered": 4,
+      "new_backend_searches": 8,
+      "backend_document_reads": 4,
+      "tokens": {
+        "input_tokens": {
+          "known_sum": 78836,
+          "unknown_calls": 0
+        },
+        "output_tokens": {
+          "known_sum": 1519,
+          "unknown_calls": 0
+        },
+        "cache_read_tokens": {
+          "known_sum": 56576,
+          "unknown_calls": 0
+        },
+        "cache_write_tokens": {
+          "known_sum": 0,
+          "unknown_calls": 6
+        }
+      }
+    },
+    {
+      "slot": "q793-baseline-r1",
+      "qid": 793,
+      "protocol": "baseline",
+      "status": "submitted",
+      "terminal": {
+        "answer": "29/02",
+        "answer_representation": {
+          "input_type": "string",
+          "operation": "identity",
+          "rule": "string-integer-v1"
+        },
+        "basis": [
+          {
+            "document": "d4",
+            "document_chars": 1731,
+            "end": 1731,
+            "kind": "raw_evidence",
+            "ref": "e2",
+            "sha256": "6416d01c32217f1389690c64b052da91ddfc312f497a848eb3a20524328f952b",
+            "snapshot": "6416d01c32217f1389690c64b052da91ddfc312f497a848eb3a20524328f952b",
+            "start": 0
+          },
+          {
+            "document": "d100",
+            "document_chars": 2558,
+            "end": 2558,
+            "kind": "raw_evidence",
+            "ref": "e3",
+            "sha256": "01d835c5520daf94252ba061d40cee4bcef9a316b7b9f8d8e2f2c07ae95f698e",
+            "snapshot": "01d835c5520daf94252ba061d40cee4bcef9a316b7b9f8d8e2f2c07ae95f698e",
+            "start": 0
+          }
+        ],
+        "elapsed_seconds": 62.82866169998306,
+        "outcome": "submitted",
+        "refs": [
+          "e2",
+          "e3"
+        ],
+        "semantic_status": "not_automatically_verified"
+      },
+      "attempts": 8,
+      "elapsed_seconds": 62.986432200006675,
+      "head": "60c5400bd07421ae8239fb29adafe25438c0c0b938cc78e20624f49c8f0f7796",
+      "seal_sha256": "f8c93504d2d65b561a06990915b65ae00a0dad55567fa528434b185528564c41",
+      "budget_after": {
+        "cap": 1643,
+        "used": 1360,
+        "remaining": 283,
+        "this_run": 213,
+        "epoch_allowance": 1000,
+        "epoch_used": 717,
+        "epoch_remaining": 283
+      },
+      "correct": true,
+      "judged": true,
+      "judge_parse_error": false,
+      "metrics": {
+        "model_attempts": 8,
+        "backend_attempts": 24,
+        "actions_recorded": 11,
+        "executed_actions": 11,
+        "action_counts": {
+          "search": 7,
+          "read": 3,
+          "finish": 1
+        },
+        "action_error_counts": {},
+        "cache_query_hits": 0,
+        "final_phase_requests": 0,
+        "compaction_requests": 1,
+        "rounds_receiving_new_raw": 3,
+        "unknown_usage_calls": 0
+      },
+      "pivot_events": [],
+      "once_prose_reset_events": [],
+      "relation_review_events": [],
+      "read_only_events": [],
+      "review_memory_capture_events": [],
+      "review_memory_delivery_events": [],
+      "review_memory_rendered_requests": 0,
+      "history_projection_events": [],
+      "history_projection_requests_with_changes": 0,
+      "history_projection_removed_utf8_bytes_across_requests": 0,
+      "queries_executed": 21,
+      "evidence_windows_registered": 3,
+      "new_backend_searches": 21,
+      "backend_document_reads": 3,
+      "tokens": {
+        "input_tokens": {
+          "known_sum": 118641,
+          "unknown_calls": 0
+        },
+        "output_tokens": {
+          "known_sum": 1432,
+          "unknown_calls": 0
+        },
+        "cache_read_tokens": {
+          "known_sum": 78464,
+          "unknown_calls": 0
+        },
+        "cache_write_tokens": {
+          "known_sum": 0,
+          "unknown_calls": 8
+        }
+      }
+    },
+    {
+      "slot": "q793-read-only-explicit-v1-r1",
+      "qid": 793,
+      "protocol": "read-only-explicit-v1",
+      "status": "abstained",
+      "terminal": {
+        "answer": "",
+        "elapsed_seconds": 76.49030299999868,
+        "outcome": "abstained",
+        "reason": "Unable to identify the couple/child/hospital. Searches for 2021 celebrity babies named after famous novel narrators (Ishmael, Holden, Nick Carraway, Lockwood, Nelly Dean, Offred, Stevens, Scout, Atticus, Humbert) returned no matching evidence of a second child born on the same day as the first, nor a hospital renamed 539 days later. The specific shared birthday (DD/MM) could not be verified from delivered evidence."
+      },
+      "attempts": 11,
+      "elapsed_seconds": 76.65876799999387,
+      "head": "12e10ce13939c3e01ee69faec1be03d3c731a087ea0f456c9ec4d2aad5a6a523",
+      "seal_sha256": "e8572aa948b0b362759e178eb09b589f57a76a722159e473d6c0689543fa0f65",
+      "budget_after": {
+        "cap": 1643,
+        "used": 1371,
+        "remaining": 272,
+        "this_run": 224,
+        "epoch_allowance": 1000,
+        "epoch_used": 728,
+        "epoch_remaining": 272
+      },
+      "correct": false,
+      "judged": false,
+      "judge_parse_error": null,
+      "metrics": {
+        "model_attempts": 11,
+        "backend_attempts": 25,
+        "actions_recorded": 20,
+        "executed_actions": 18,
+        "action_counts": {
+          "search": 19,
+          "finish": 1
+        },
+        "action_error_counts": {
+          "read_only_tool_only": 2,
+          "duplicate_query_blocked": 4
+        },
+        "cache_query_hits": 12,
+        "final_phase_requests": 1,
+        "compaction_requests": 2,
+        "rounds_receiving_new_raw": 0,
+        "unknown_usage_calls": 0
+      },
+      "pivot_events": [],
+      "once_prose_reset_events": [],
+      "relation_review_events": [],
+      "read_only_events": [
+        {
+          "identity": {
+            "base_read_rule": {
+              "kind": "temporary_tool_availability_not_verified_evidence",
+              "rule": {
+                "capacity": "recompute tools and visible navigation on each candidate build",
+                "commit": "after actual request archive before send; failed send consumes",
+                "consecutive_rounds": 3,
+                "extra_model_calls": 0,
+                "final": false,
+                "max_triggers": 1,
+                "messages": "unchanged",
+                "minimum_remaining_model_calls": 3,
+                "navigation": "retained group documents or rendered control pages; intersect read authorization",
+                "observation": "successful search receipt executed and ok; no new raw passage delivered",
+                "tools": "original read schema only; original batch limit; no forced tool choice",
+                "version": "read-only-once-v1"
+              },
+              "rule_sha256": "c5215cce37479fb19aa0f3ff146b2b6e2748cf7f89007140fce59e92f92cd6bc",
+              "version": "read-only-once-v1"
+            },
+            "instruction_location": "append to system content only on triggered request",
+            "instruction_sha256": "acdfd7e4892f31ea311b77c6cd0a90c77c0841ce86c4be99f5f04f5c0957c0ce",
+            "kind": "temporary_tool_availability_with_explicit_stage_instruction",
+            "version": "read-only-explicit-v1"
+          },
+          "native_tools_sha256": "82cba8a4a01c2197f768888ac0896a50f5fc053d172739ddb0b0c30e100141ce",
+          "observation": "no new source passage",
+          "round": 4,
+          "source_rounds": [
+            1,
+            2,
+            3
+          ],
+          "system_sha256": "1f11ec06e870b52a9366aa0d51e4ddedcdd86fa6dafbfcf9b336ae1bbe9addc5",
+          "trigger_number": 1,
+          "visible_read_documents": [
+            "d1",
+            "d2",
+            "d3",
+            "d4",
+            "d5",
+            "d6",
+            "d7",
+            "d8",
+            "d9",
+            "d10",
+            "d11",
+            "d12",
+            "d13",
+            "d14",
+            "d15",
+            "d16",
+            "d17",
+            "d18",
+            "d19",
+            "d20",
+            "d21",
+            "d22",
+            "d23",
+            "d24",
+            "d25",
+            "d26",
+            "d27",
+            "d28",
+            "d29",
+            "d30",
+            "d31",
+            "d32",
+            "d33",
+            "d34",
+            "d35",
+            "d36",
+            "d37",
+            "d38",
+            "d39",
+            "d40",
+            "d41",
+            "d42",
+            "d43",
+            "d44",
+            "d45",
+            "d46",
+            "d47",
+            "d48",
+            "d49",
+            "d50",
+            "d51",
+            "d52",
+            "d53",
+            "d54",
+            "d55",
+            "d56",
+            "d57",
+            "d58",
+            "d59",
+            "d60"
+          ],
+          "visible_read_documents_sha256": "a24801df5ddcd464c31e4538e752852d06d138d3d0a9ea7d91f11ebfa1915e13",
+          "wire_sha256": "1904e62762777e7ce4ff9744d123b220a4fd49aa547ddbaa6a97e3b350bcf1e9",
+          "wire_tools_sha256": "82cba8a4a01c2197f768888ac0896a50f5fc053d172739ddb0b0c30e100141ce"
+        }
+      ],
+      "review_memory_capture_events": [],
+      "review_memory_delivery_events": [],
+      "review_memory_rendered_requests": 0,
+      "history_projection_events": [],
+      "history_projection_requests_with_changes": 0,
+      "history_projection_removed_utf8_bytes_across_requests": 0,
+      "queries_executed": 37,
+      "evidence_windows_registered": 0,
+      "new_backend_searches": 25,
+      "backend_document_reads": 0,
+      "tokens": {
+        "input_tokens": {
+          "known_sum": 178125,
+          "unknown_calls": 0
+        },
+        "output_tokens": {
+          "known_sum": 2321,
+          "unknown_calls": 0
+        },
+        "cache_read_tokens": {
+          "known_sum": 85120,
+          "unknown_calls": 0
+        },
+        "cache_write_tokens": {
+          "known_sum": 0,
+          "unknown_calls": 11
+        }
+      }
+    },
+    {
+      "slot": "q794-read-only-explicit-v1-r1",
+      "qid": 794,
+      "protocol": "read-only-explicit-v1",
+      "status": "abstained",
+      "terminal": {
+        "answer": "",
+        "elapsed_seconds": 66.6204842000152,
+        "outcome": "abstained",
+        "reason": "I could not identify the specific snooker match described. The constraints (winner with one 50s, two 60s, two 70s, and >1 100s break; loser with 3-4 fifty-plus breaks including one 50s, >1 70s, one 90s; loser turned pro 2011-2016; referee became international referee in December before 2022) require locating a specific match's frame-by-frame scoreline and break data, plus referee biographical data. The only delivered evidence (e1: a pantheon list of UK referees; e2: a WST 404/Leo Scullion page fragment) contains none of the needed match details, break distributions, referee December-qualification date, or frame points. Searches in recovery were blocked as duplicates and produced no new candidate. Without a verified match and its frame scores, the combined points total cannot be determined, and I will not fabricate one."
+      },
+      "attempts": 11,
+      "elapsed_seconds": 66.8010924999835,
+      "head": "9d3280d20219b96fd308af8e670bf02b73530105a9dc91c08a4abf54567ec0aa",
+      "seal_sha256": "039dbbcaaa8a433f1ba3a17c3dcb48ba747336dafd08acb0ce49095dc03b7cfb",
+      "budget_after": {
+        "cap": 1643,
+        "used": 1382,
+        "remaining": 261,
+        "this_run": 235,
+        "epoch_allowance": 1000,
+        "epoch_used": 739,
+        "epoch_remaining": 261
+      },
+      "correct": false,
+      "judged": false,
+      "judge_parse_error": null,
+      "metrics": {
+        "model_attempts": 11,
+        "backend_attempts": 24,
+        "actions_recorded": 21,
+        "executed_actions": 19,
+        "action_counts": {
+          "search": 18,
+          "read": 2,
+          "finish": 1
+        },
+        "action_error_counts": {
+          "read_only_tool_only": 2,
+          "duplicate_query_blocked": 4
+        },
+        "cache_query_hits": 12,
+        "final_phase_requests": 1,
+        "compaction_requests": 4,
+        "rounds_receiving_new_raw": 1,
+        "unknown_usage_calls": 0
+      },
+      "pivot_events": [],
+      "once_prose_reset_events": [],
+      "relation_review_events": [],
+      "read_only_events": [
+        {
+          "identity": {
+            "base_read_rule": {
+              "kind": "temporary_tool_availability_not_verified_evidence",
+              "rule": {
+                "capacity": "recompute tools and visible navigation on each candidate build",
+                "commit": "after actual request archive before send; failed send consumes",
+                "consecutive_rounds": 3,
+                "extra_model_calls": 0,
+                "final": false,
+                "max_triggers": 1,
+                "messages": "unchanged",
+                "minimum_remaining_model_calls": 3,
+                "navigation": "retained group documents or rendered control pages; intersect read authorization",
+                "observation": "successful search receipt executed and ok; no new raw passage delivered",
+                "tools": "original read schema only; original batch limit; no forced tool choice",
+                "version": "read-only-once-v1"
+              },
+              "rule_sha256": "c5215cce37479fb19aa0f3ff146b2b6e2748cf7f89007140fce59e92f92cd6bc",
+              "version": "read-only-once-v1"
+            },
+            "instruction_location": "append to system content only on triggered request",
+            "instruction_sha256": "acdfd7e4892f31ea311b77c6cd0a90c77c0841ce86c4be99f5f04f5c0957c0ce",
+            "kind": "temporary_tool_availability_with_explicit_stage_instruction",
+            "version": "read-only-explicit-v1"
+          },
+          "native_tools_sha256": "82cba8a4a01c2197f768888ac0896a50f5fc053d172739ddb0b0c30e100141ce",
+          "observation": "no new source passage",
+          "round": 4,
+          "source_rounds": [
+            1,
+            2,
+            3
+          ],
+          "system_sha256": "1f11ec06e870b52a9366aa0d51e4ddedcdd86fa6dafbfcf9b336ae1bbe9addc5",
+          "trigger_number": 1,
+          "visible_read_documents": [
+            "d1",
+            "d2",
+            "d4",
+            "d5",
+            "d6",
+            "d7",
+            "d9",
+            "d11",
+            "d12",
+            "d14",
+            "d15",
+            "d16",
+            "d17",
+            "d18",
+            "d19",
+            "d20",
+            "d21",
+            "d22",
+            "d23",
+            "d24",
+            "d25",
+            "d26",
+            "d27",
+            "d28",
+            "d29",
+            "d30"
+          ],
+          "visible_read_documents_sha256": "f837c650f9e09561bcff98745e0fbe4cc54d237c08c9a50023866278354daa42",
+          "wire_sha256": "04d31b66232957f542b0d343e4a20d4687ba0b5ad4e9cfbc4bd8bdd3e883f972",
+          "wire_tools_sha256": "82cba8a4a01c2197f768888ac0896a50f5fc053d172739ddb0b0c30e100141ce"
+        }
+      ],
+      "review_memory_capture_events": [],
+      "review_memory_delivery_events": [],
+      "review_memory_rendered_requests": 0,
+      "history_projection_events": [],
+      "history_projection_requests_with_changes": 0,
+      "history_projection_removed_utf8_bytes_across_requests": 0,
+      "queries_executed": 34,
+      "evidence_windows_registered": 2,
+      "new_backend_searches": 22,
+      "backend_document_reads": 2,
+      "tokens": {
+        "input_tokens": {
+          "known_sum": 176011,
+          "unknown_calls": 0
+        },
+        "output_tokens": {
+          "known_sum": 1895,
+          "unknown_calls": 0
+        },
+        "cache_read_tokens": {
+          "known_sum": 72832,
+          "unknown_calls": 0
+        },
+        "cache_write_tokens": {
+          "known_sum": 0,
+          "unknown_calls": 11
+        }
+      }
+    },
+    {
+      "slot": "q794-baseline-r1",
+      "qid": 794,
+      "protocol": "baseline",
+      "status": "model_budget",
+      "terminal": {
+        "answer": "",
+        "elapsed_seconds": 154.94187890001922,
+        "outcome": "model_budget"
+      },
+      "attempts": 16,
+      "elapsed_seconds": 155.07567759999074,
+      "head": "5cbc4af663dd9cf092319d33c967ba519c88325910e54f6136e89f5bf8656b90",
+      "seal_sha256": "5e40c5fbc0c65e9d6dc78a96bfbf0061e90cc7d9982808ea00f17a93ab4c3a45",
+      "budget_after": {
+        "cap": 1643,
+        "used": 1398,
+        "remaining": 245,
+        "this_run": 251,
+        "epoch_allowance": 1000,
+        "epoch_used": 755,
+        "epoch_remaining": 245
+      },
+      "correct": false,
+      "judged": false,
+      "judge_parse_error": null,
+      "metrics": {
+        "model_attempts": 16,
+        "backend_attempts": 25,
+        "actions_recorded": 17,
+        "executed_actions": 16,
+        "action_counts": {
+          "search": 14,
+          "read": 3
+        },
+        "action_error_counts": {
+          "final_only": 1
+        },
+        "cache_query_hits": 14,
+        "final_phase_requests": 1,
+        "compaction_requests": 7,
+        "rounds_receiving_new_raw": 3,
+        "unknown_usage_calls": 0
+      },
+      "pivot_events": [],
+      "once_prose_reset_events": [],
+      "relation_review_events": [],
+      "read_only_events": [],
+      "review_memory_capture_events": [],
+      "review_memory_delivery_events": [],
+      "review_memory_rendered_requests": 0,
+      "history_projection_events": [],
+      "history_projection_requests_with_changes": 0,
+      "history_projection_removed_utf8_bytes_across_requests": 0,
+      "queries_executed": 38,
+      "evidence_windows_registered": 3,
+      "new_backend_searches": 24,
+      "backend_document_reads": 1,
+      "tokens": {
+        "input_tokens": {
+          "known_sum": 329296,
+          "unknown_calls": 0
+        },
+        "output_tokens": {
+          "known_sum": 5180,
+          "unknown_calls": 0
+        },
+        "cache_read_tokens": {
+          "known_sum": 119296,
+          "unknown_calls": 0
+        },
+        "cache_write_tokens": {
+          "known_sum": 0,
+          "unknown_calls": 16
+        }
+      }
+    }
+  ],
+  "pairs": [
+    {
+      "qid": 770,
+      "baseline": false,
+      "treatment": false,
+      "delta": 0
+    },
+    {
+      "qid": 778,
+      "baseline": true,
+      "treatment": true,
+      "delta": 0
+    },
+    {
+      "qid": 772,
+      "baseline": true,
+      "treatment": true,
+      "delta": 0
+    },
+    {
+      "qid": 774,
+      "baseline": false,
+      "treatment": false,
+      "delta": 0
+    },
+    {
+      "qid": 769,
+      "baseline": true,
+      "treatment": true,
+      "delta": 0
+    },
+    {
+      "qid": 775,
+      "baseline": false,
+      "treatment": false,
+      "delta": 0
+    },
+    {
+      "qid": 786,
+      "baseline": true,
+      "treatment": false,
+      "delta": -1
+    },
+    {
+      "qid": 776,
+      "baseline": true,
+      "treatment": true,
+      "delta": 0
+    },
+    {
+      "qid": 771,
+      "baseline": true,
+      "treatment": true,
+      "delta": 0
+    },
+    {
+      "qid": 788,
+      "baseline": true,
+      "treatment": true,
+      "delta": 0
+    },
+    {
+      "qid": 793,
+      "baseline": true,
+      "treatment": false,
+      "delta": -1
+    },
+    {
+      "qid": 794,
+      "baseline": false,
+      "treatment": false,
+      "delta": 0
+    }
+  ],
+  "stage_complete": true,
+  "comparable_pairs": 12,
+  "baseline_correct": 8,
+  "treatment_correct": 6,
+  "paired_wins": 0,
+  "paired_losses": 2,
+  "exact_two_sided_p": 0.5,
+  "controls_no_regression": true,
+  "beyond_discovery_net": -2,
+  "budget": {
+    "cap": 1643,
+    "used": 1413,
+    "remaining": 230,
+    "this_run": 266,
+    "epoch_allowance": 1000,
+    "epoch_used": 770,
+    "epoch_remaining": 230
+  },
+  "tokens_all_requests": {
+    "input_tokens": {
+      "known_sum": 4012602,
+      "unknown_calls": 0
+    },
+    "output_tokens": {
+      "known_sum": 45124,
+      "unknown_calls": 0
+    },
+    "cache_read_tokens": {
+      "known_sum": 1770880,
+      "unknown_calls": 0
+    },
+    "cache_write_tokens": {
+      "known_sum": 0,
+      "unknown_calls": 266
+    }
+  },
+  "source_audit": "Completed: ROOT_AUDIT.md, GROUP_A_AUDIT.md and GROUP_B_AUDIT.md; structural integrity passes; core support and incomplete clue chains reported separately. Judge labels unchanged."
+}

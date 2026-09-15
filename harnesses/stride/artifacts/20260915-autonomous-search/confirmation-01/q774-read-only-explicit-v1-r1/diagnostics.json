@@ -1,0 +1,1983 @@
+{
+  "protocol": "stride-search-3",
+  "head": "2400263fc112269eacda2839566f90b65f5f9ec565b080b16852956fc57aba41",
+  "outcome": "abstained",
+  "formal_correct": null,
+  "model_attempts": 16,
+  "backend_attempts": 72,
+  "queries": [
+    {
+      "round": 1,
+      "top_k": 5,
+      "equivalence_key": "5ace7a8ff1a9841c1e9ea1fc8a1bd7f97973b1963fe12277ceaafec234549ad0",
+      "cached": false,
+      "query_sha256": "2344702181c851ad609f92e9a73cbdc50f2b2df6821f1329cc5cbc7d0a1c460b",
+      "query": "soap opera character married three times only one child survives",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"soap\" OR \"opera\" OR \"character\" OR \"married\" OR \"three\" OR \"times\" OR \"only\" OR \"one\" OR \"child\" OR \"survives\"",
+        "terms": [
+          "soap",
+          "opera",
+          "character",
+          "married",
+          "three",
+          "times",
+          "only",
+          "one",
+          "child",
+          "survives"
+        ]
+      }
+    },
+    {
+      "round": 1,
+      "top_k": 5,
+      "equivalence_key": "7afdead8bda1a26a821962c8f25359fdc78b760b7c74f2daa48bb45d25154a48",
+      "cached": false,
+      "query_sha256": "b41aeb4534ae1e222901bcd26845a71e44b423ed1c7d150b34e20081fd9c4514",
+      "query": "actor real life relative plays together soap opera height 1.68",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"actor\" OR \"real\" OR \"life\" OR \"relative\" OR \"plays\" OR \"together\" OR \"soap\" OR \"opera\" OR \"height\" OR \"1\" OR \"68\"",
+        "terms": [
+          "actor",
+          "real",
+          "life",
+          "relative",
+          "plays",
+          "together",
+          "soap",
+          "opera",
+          "height",
+          "1",
+          "68"
+        ]
+      }
+    },
+    {
+      "round": 1,
+      "top_k": 5,
+      "equivalence_key": "22922e41b767ba92394cc1e991f9bbb6c282d01d8f1ffa5cc88f3e8e89210e57",
+      "cached": false,
+      "query_sha256": "962521ad257a556683fa366a70b5190a147b7f3f561ae4db5ce9ccb86c304f2d",
+      "query": "character married three times children died soap opera",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"character\" OR \"married\" OR \"three\" OR \"times\" OR \"children\" OR \"died\" OR \"soap\" OR \"opera\"",
+        "terms": [
+          "character",
+          "married",
+          "three",
+          "times",
+          "children",
+          "died",
+          "soap",
+          "opera"
+        ]
+      }
+    },
+    {
+      "round": 2,
+      "top_k": 5,
+      "equivalence_key": "6c8d87abb0d52bfb10d21034788b253c5e8406ccef18968f4965e76822f59f54",
+      "cached": false,
+      "query_sha256": "86e03fad682ced8712b293b4a050788b36d2262b2787da62b5204ed510846a84",
+      "query": "actor plays with real life sister brother on screen unrelated character TV series",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"actor\" OR \"plays\" OR \"with\" OR \"real\" OR \"life\" OR \"sister\" OR \"brother\" OR \"on\" OR \"screen\" OR \"unrelated\" OR \"character\" OR \"tv\" OR \"series\"",
+        "terms": [
+          "actor",
+          "plays",
+          "with",
+          "real",
+          "life",
+          "sister",
+          "brother",
+          "on",
+          "screen",
+          "unrelated",
+          "character",
+          "tv",
+          "series"
+        ]
+      }
+    },
+    {
+      "round": 2,
+      "top_k": 5,
+      "equivalence_key": "c373b56f6a8e8bd62cb149c969bc843efbc898d6a66ffd7011e6d8a5d0042819",
+      "cached": false,
+      "query_sha256": "a04b09434593aa59bb87dbcca2c4a0cc09761b2d45b272e7265c0eed935aa071",
+      "query": "TV series real life siblings play unrelated characters married three times",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"tv\" OR \"series\" OR \"real\" OR \"life\" OR \"siblings\" OR \"play\" OR \"unrelated\" OR \"characters\" OR \"married\" OR \"three\" OR \"times\"",
+        "terms": [
+          "tv",
+          "series",
+          "real",
+          "life",
+          "siblings",
+          "play",
+          "unrelated",
+          "characters",
+          "married",
+          "three",
+          "times"
+        ]
+      }
+    },
+    {
+      "round": 2,
+      "top_k": 5,
+      "equivalence_key": "dc5fecba75a60ab7ef73bde2696b97966a1713075df40c5e31484acd2fbd5f55",
+      "cached": false,
+      "query_sha256": "619116723c282e46c3510b84b68761fb9065a2649e1b11d8a7ae962a26d7bb39",
+      "query": "telenovela actor real life relative co-star height 1.68 married three times",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"telenovela\" OR \"actor\" OR \"real\" OR \"life\" OR \"relative\" OR \"co\" OR \"star\" OR \"height\" OR \"1\" OR \"68\" OR \"married\" OR \"three\" OR \"times\"",
+        "terms": [
+          "telenovela",
+          "actor",
+          "real",
+          "life",
+          "relative",
+          "co",
+          "star",
+          "height",
+          "1",
+          "68",
+          "married",
+          "three",
+          "times"
+        ]
+      }
+    },
+    {
+      "round": 2,
+      "top_k": 5,
+      "equivalence_key": "7603cf72a38cd7b3204eccda6b43f7ad9a816a870cd0bc660b1478852d644e3b",
+      "cached": false,
+      "query_sha256": "f21c923cc83e8d8481b507a3f32d42737fd29fe9ef32c593b678dd47843240a3",
+      "query": "Yellowstone cast real life relatives height character married",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"yellowstone\" OR \"cast\" OR \"real\" OR \"life\" OR \"relatives\" OR \"height\" OR \"character\" OR \"married\"",
+        "terms": [
+          "yellowstone",
+          "cast",
+          "real",
+          "life",
+          "relatives",
+          "height",
+          "character",
+          "married"
+        ]
+      }
+    },
+    {
+      "round": 2,
+      "top_k": 5,
+      "equivalence_key": "3dfecb1911f37eae7ab0351db9ed330cb90259e50c123d199b62ac3d4d2e0902",
+      "cached": false,
+      "query_sha256": "602d41cd8922c7822c3b4a658ce99e32a2689719c6635d652ce85ac333c85b6e",
+      "query": "Jane the Virgin cast real life relatives character married",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"jane\" OR \"the\" OR \"virgin\" OR \"cast\" OR \"real\" OR \"life\" OR \"relatives\" OR \"character\" OR \"married\"",
+        "terms": [
+          "jane",
+          "the",
+          "virgin",
+          "cast",
+          "real",
+          "life",
+          "relatives",
+          "character",
+          "married"
+        ]
+      }
+    },
+    {
+      "round": 2,
+      "top_k": 5,
+      "equivalence_key": "2cc3a121090350269b983c8ab1c4589e68ef89a80e9e85b4385371e474ac050a",
+      "cached": false,
+      "query_sha256": "fce2cc47a7ace0a710cfb45e66bf3a77b44a6543f2c95ab8bd51cf20d2495af2",
+      "query": "character married three times one child survives TV drama",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"character\" OR \"married\" OR \"three\" OR \"times\" OR \"one\" OR \"child\" OR \"survives\" OR \"tv\" OR \"drama\"",
+        "terms": [
+          "character",
+          "married",
+          "three",
+          "times",
+          "one",
+          "child",
+          "survives",
+          "tv",
+          "drama"
+        ]
+      }
+    },
+    {
+      "round": 3,
+      "top_k": 5,
+      "equivalence_key": "8d35258e5dd0f009d7d20e6b177b6c288a0b19d3ac804f6b1f26551ef0ae3233",
+      "cached": false,
+      "query_sha256": "7dae0e17868dd7a808ef39ecb349d45ea833e79ea971f0926d4ed98149bda293",
+      "query": "Bold and the Beautiful actor real life relative co-star character married three times",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"bold\" OR \"and\" OR \"the\" OR \"beautiful\" OR \"actor\" OR \"real\" OR \"life\" OR \"relative\" OR \"co\" OR \"star\" OR \"character\" OR \"married\" OR \"three\" OR \"times\"",
+        "terms": [
+          "bold",
+          "and",
+          "the",
+          "beautiful",
+          "actor",
+          "real",
+          "life",
+          "relative",
+          "co",
+          "star",
+          "character",
+          "married",
+          "three",
+          "times"
+        ]
+      }
+    },
+    {
+      "round": 3,
+      "top_k": 5,
+      "equivalence_key": "d8689b9017d219271b4f7d619561b5cd0c5c34492f06a5499899a5f246286980",
+      "cached": false,
+      "query_sha256": "3b466cc9e1d82310d35bec9e650dfd2484c51db1088139a07052c0a5f1a4f178",
+      "query": "General Hospital actor real life sibling spouse co-star height 1.68",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"general\" OR \"hospital\" OR \"actor\" OR \"real\" OR \"life\" OR \"sibling\" OR \"spouse\" OR \"co\" OR \"star\" OR \"height\" OR \"1\" OR \"68\"",
+        "terms": [
+          "general",
+          "hospital",
+          "actor",
+          "real",
+          "life",
+          "sibling",
+          "spouse",
+          "co",
+          "star",
+          "height",
+          "1",
+          "68"
+        ]
+      }
+    },
+    {
+      "round": 3,
+      "top_k": 5,
+      "equivalence_key": "ae7c7db242383350041eed19482fa656322e424b72f8d382a3300718aab6da20",
+      "cached": false,
+      "query_sha256": "1dcb64f8ced58d9a91af00beef30b309a5a882f6925112a5130f40f4cd733b73",
+      "query": "soap opera character married three times two children died one survives",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"soap\" OR \"opera\" OR \"character\" OR \"married\" OR \"three\" OR \"times\" OR \"two\" OR \"children\" OR \"died\" OR \"one\" OR \"survives\"",
+        "terms": [
+          "soap",
+          "opera",
+          "character",
+          "married",
+          "three",
+          "times",
+          "two",
+          "children",
+          "died",
+          "one",
+          "survives"
+        ]
+      }
+    },
+    {
+      "round": 3,
+      "top_k": 5,
+      "equivalence_key": "6779aaadefc0598ea7e10ac43042723d76c8432b780624a0d298868822dc220d",
+      "cached": false,
+      "query_sha256": "93c8d059b052e5b0a1ae077a2b816876120dd49267ffe51d3f817bb1c20ce7e3",
+      "query": "Outlander cast real life relatives character married three times height",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"outlander\" OR \"cast\" OR \"real\" OR \"life\" OR \"relatives\" OR \"character\" OR \"married\" OR \"three\" OR \"times\" OR \"height\"",
+        "terms": [
+          "outlander",
+          "cast",
+          "real",
+          "life",
+          "relatives",
+          "character",
+          "married",
+          "three",
+          "times",
+          "height"
+        ]
+      }
+    },
+    {
+      "round": 3,
+      "top_k": 5,
+      "equivalence_key": "d98f0cad2ddcef417625bef4f1900a999f0540f8f3c54397c5101054af729a5c",
+      "cached": false,
+      "query_sha256": "b3f66f381748c6c9a6c218c751df3c6da6c661961b0de7f42c319304700cb8ce",
+      "query": "This Is Us cast real life relatives character married children",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"this\" OR \"is\" OR \"us\" OR \"cast\" OR \"real\" OR \"life\" OR \"relatives\" OR \"character\" OR \"married\" OR \"children\"",
+        "terms": [
+          "this",
+          "is",
+          "us",
+          "cast",
+          "real",
+          "life",
+          "relatives",
+          "character",
+          "married",
+          "children"
+        ]
+      }
+    },
+    {
+      "round": 3,
+      "top_k": 5,
+      "equivalence_key": "51531df4ad1bbc2b2a3e2eb3a08a919dfbd81a01637504a5ccfcfeda9d5f410f",
+      "cached": false,
+      "query_sha256": "5009d454a123bcfa8e3bd65a1321986cfad13733f1f8dcc4a096d8b975a1e7eb",
+      "query": "actor height 1.68 m 5 foot 6 TV drama married three times character",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"actor\" OR \"height\" OR \"1\" OR \"68\" OR \"m\" OR \"5\" OR \"foot\" OR \"6\" OR \"tv\" OR \"drama\" OR \"married\" OR \"three\" OR \"times\" OR \"character\"",
+        "terms": [
+          "actor",
+          "height",
+          "1",
+          "68",
+          "m",
+          "5",
+          "foot",
+          "6",
+          "tv",
+          "drama",
+          "married",
+          "three",
+          "times",
+          "character"
+        ]
+      }
+    },
+    {
+      "round": 5,
+      "top_k": 5,
+      "equivalence_key": "da6a444022b5d1d1a5e001ae354bf16518bbebe5353d863abc51a0b99e2a5d22",
+      "cached": false,
+      "query_sha256": "cb36cb97bc9fcfe9a729a9453419641a5eb75efef15fa8f8314895dbdec99405",
+      "query": "Jane the Virgin Justin Baldoni real life relative co-star",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"jane\" OR \"the\" OR \"virgin\" OR \"justin\" OR \"baldoni\" OR \"real\" OR \"life\" OR \"relative\" OR \"co\" OR \"star\"",
+        "terms": [
+          "jane",
+          "the",
+          "virgin",
+          "justin",
+          "baldoni",
+          "real",
+          "life",
+          "relative",
+          "co",
+          "star"
+        ]
+      }
+    },
+    {
+      "round": 5,
+      "top_k": 5,
+      "equivalence_key": "fa9d695ff0b2f7098425c375c84bcbe95f345ee40499e7bd3e8ea3c64ffe7ba7",
+      "cached": false,
+      "query_sha256": "961fc58053a156a476d3bfd4e7105bcada597e3b1c4d5f20562f4b51a7715e35",
+      "query": "Rafael Solano married three times children Jane the Virgin",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"rafael\" OR \"solano\" OR \"married\" OR \"three\" OR \"times\" OR \"children\" OR \"jane\" OR \"the\" OR \"virgin\"",
+        "terms": [
+          "rafael",
+          "solano",
+          "married",
+          "three",
+          "times",
+          "children",
+          "jane",
+          "the",
+          "virgin"
+        ]
+      }
+    },
+    {
+      "round": 5,
+      "top_k": 5,
+      "equivalence_key": "90e73a23d96ae6664c1658bb075706d559a793bd82e8a9afc951a812f43d8e1c",
+      "cached": false,
+      "query_sha256": "8303d06a03472c11ae607902deb8bdd30a13cd4c15d4638f5c355b9bd6b5de83",
+      "query": "Justin Baldoni height",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"justin\" OR \"baldoni\" OR \"height\"",
+        "terms": [
+          "justin",
+          "baldoni",
+          "height"
+        ]
+      }
+    },
+    {
+      "round": 5,
+      "top_k": 5,
+      "equivalence_key": "cd3c9039ead08b89cd6493c0d434017321487550ae5a8fbe0ed7707e754f740c",
+      "cached": false,
+      "query_sha256": "0568576cb29ef98f2b2678747b254779ad8d7c0f2ad90e5d6766f38567dd393b",
+      "query": "telenovela actor real life sibling plays unrelated character married three times",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"telenovela\" OR \"actor\" OR \"real\" OR \"life\" OR \"sibling\" OR \"plays\" OR \"unrelated\" OR \"character\" OR \"married\" OR \"three\" OR \"times\"",
+        "terms": [
+          "telenovela",
+          "actor",
+          "real",
+          "life",
+          "sibling",
+          "plays",
+          "unrelated",
+          "character",
+          "married",
+          "three",
+          "times"
+        ]
+      }
+    },
+    {
+      "round": 5,
+      "top_k": 5,
+      "equivalence_key": "24dbff1288e4503831b847e9a6395591b8d92b97e430bfcd1c305b4787b099d9",
+      "cached": false,
+      "query_sha256": "57458278c8fde353309d67ce208de8bcdf5fe2ae1e317d7d5db7e5211674fd63",
+      "query": "TV show character married three times only one child survives real life relative cast",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"tv\" OR \"show\" OR \"character\" OR \"married\" OR \"three\" OR \"times\" OR \"only\" OR \"one\" OR \"child\" OR \"survives\" OR \"real\" OR \"life\" OR \"relative\" OR \"cast\"",
+        "terms": [
+          "tv",
+          "show",
+          "character",
+          "married",
+          "three",
+          "times",
+          "only",
+          "one",
+          "child",
+          "survives",
+          "real",
+          "life",
+          "relative",
+          "cast"
+        ]
+      }
+    },
+    {
+      "round": 5,
+      "top_k": 5,
+      "equivalence_key": "91ead2851d841703c64d10739c7e82fc6aea82533919acd94c18aa9a1f52d642",
+      "cached": false,
+      "query_sha256": "6fe7ae6d927775e68ceaedaae18409d9914b94eb1be4af2dbddec9b1d9c0ef43",
+      "query": "actor height 1.68 1.69 1.67 married three times character one child survives",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"actor\" OR \"height\" OR \"1\" OR \"68\" OR \"69\" OR \"67\" OR \"married\" OR \"three\" OR \"times\" OR \"character\" OR \"one\" OR \"child\" OR \"survives\"",
+        "terms": [
+          "actor",
+          "height",
+          "1",
+          "68",
+          "69",
+          "67",
+          "married",
+          "three",
+          "times",
+          "character",
+          "one",
+          "child",
+          "survives"
+        ]
+      }
+    },
+    {
+      "round": 6,
+      "top_k": 5,
+      "equivalence_key": "0921fce684614a5d271edfe80571ae942efe923b627bbb3d96274e9c8e376a2f",
+      "cached": false,
+      "query_sha256": "9daece9b0cb72c0054741db5ba27fee6ed64350e47c83cc2399a10eed6dedbd1",
+      "query": "actor plays with real life spouse sibling on show unrelated characters height 1.68",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"actor\" OR \"plays\" OR \"with\" OR \"real\" OR \"life\" OR \"spouse\" OR \"sibling\" OR \"on\" OR \"show\" OR \"unrelated\" OR \"characters\" OR \"height\" OR \"1\" OR \"68\"",
+        "terms": [
+          "actor",
+          "plays",
+          "with",
+          "real",
+          "life",
+          "spouse",
+          "sibling",
+          "on",
+          "show",
+          "unrelated",
+          "characters",
+          "height",
+          "1",
+          "68"
+        ]
+      }
+    },
+    {
+      "round": 6,
+      "top_k": 5,
+      "equivalence_key": "e2ec5cf6984147e4babba967e3ac257dd5c9f49684bad801aeaba78aceb2db01",
+      "cached": false,
+      "query_sha256": "1f7466fe904acc5023f76280615f901dd086ced2041b973976e15ce4cca71b1e",
+      "query": "TV series real life couple play unrelated characters married three times one child",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"tv\" OR \"series\" OR \"real\" OR \"life\" OR \"couple\" OR \"play\" OR \"unrelated\" OR \"characters\" OR \"married\" OR \"three\" OR \"times\" OR \"one\" OR \"child\"",
+        "terms": [
+          "tv",
+          "series",
+          "real",
+          "life",
+          "couple",
+          "play",
+          "unrelated",
+          "characters",
+          "married",
+          "three",
+          "times",
+          "one",
+          "child"
+        ]
+      }
+    },
+    {
+      "round": 6,
+      "top_k": 5,
+      "equivalence_key": "ead0d2dbd20aaff41936ae8a9d384455668a1338c04477951cabc02d6a292ec5",
+      "cached": false,
+      "query_sha256": "4dcee1deb3af7e149d31fcd4cb16f8b657baa00f057a7618467cb13a9b5729bd",
+      "query": "actor real life wife husband co-star unrelated character drama series height 5 foot 6",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"actor\" OR \"real\" OR \"life\" OR \"wife\" OR \"husband\" OR \"co\" OR \"star\" OR \"unrelated\" OR \"character\" OR \"drama\" OR \"series\" OR \"height\" OR \"5\" OR \"foot\" OR \"6\"",
+        "terms": [
+          "actor",
+          "real",
+          "life",
+          "wife",
+          "husband",
+          "co",
+          "star",
+          "unrelated",
+          "character",
+          "drama",
+          "series",
+          "height",
+          "5",
+          "foot",
+          "6"
+        ]
+      }
+    },
+    {
+      "round": 6,
+      "top_k": 5,
+      "equivalence_key": "e195b365432ff825a641ae872c11ea1406d74b566ee16a80ef96b52b428f8082",
+      "cached": false,
+      "query_sha256": "503e2576da7153b362771445405004db4917c13dc5acc3333e24f7fb64dca1c9",
+      "query": "Grey's Anatomy character married three times children died real life relative cast",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"grey\" OR \"s\" OR \"anatomy\" OR \"character\" OR \"married\" OR \"three\" OR \"times\" OR \"children\" OR \"died\" OR \"real\" OR \"life\" OR \"relative\" OR \"cast\"",
+        "terms": [
+          "grey",
+          "s",
+          "anatomy",
+          "character",
+          "married",
+          "three",
+          "times",
+          "children",
+          "died",
+          "real",
+          "life",
+          "relative",
+          "cast"
+        ]
+      }
+    },
+    {
+      "round": 6,
+      "top_k": 5,
+      "equivalence_key": "3761dcd63f66882a54d2270ad722b453abcc42b6b9625990c6cfb33b5abc7470",
+      "cached": false,
+      "query_sha256": "4f7778402ad121476936b9cadcb5cba91497cf775c8a4ae191a03cc34a11e36f",
+      "query": "Private Practice character married three times one child survives real life relative",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"private\" OR \"practice\" OR \"character\" OR \"married\" OR \"three\" OR \"times\" OR \"one\" OR \"child\" OR \"survives\" OR \"real\" OR \"life\" OR \"relative\"",
+        "terms": [
+          "private",
+          "practice",
+          "character",
+          "married",
+          "three",
+          "times",
+          "one",
+          "child",
+          "survives",
+          "real",
+          "life",
+          "relative"
+        ]
+      }
+    },
+    {
+      "round": 6,
+      "top_k": 5,
+      "equivalence_key": "78fb56a73c2e8416c50ea48097fc423c6f369f5bac3bd8774321ba24d1ba2835",
+      "cached": false,
+      "query_sha256": "b65b301b24aff731c32dd4512e8bdc39a82817c4c8d87eb3acc5f834683ccf1c",
+      "query": "Scandal character married three times children real life relative co-star",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"scandal\" OR \"character\" OR \"married\" OR \"three\" OR \"times\" OR \"children\" OR \"real\" OR \"life\" OR \"relative\" OR \"co\" OR \"star\"",
+        "terms": [
+          "scandal",
+          "character",
+          "married",
+          "three",
+          "times",
+          "children",
+          "real",
+          "life",
+          "relative",
+          "co",
+          "star"
+        ]
+      }
+    },
+    {
+      "round": 7,
+      "top_k": 5,
+      "equivalence_key": "293bc6fcd48f5f4e9e57955d6073e696224023c747d953f5b502e05120e8e789",
+      "cached": false,
+      "query_sha256": "0ba320bfd9509a33f947633750d9374fd486c6c926e7d1187f9e0c2930753c4f",
+      "query": "character married three times two children died one survives TV series",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"character\" OR \"married\" OR \"three\" OR \"times\" OR \"two\" OR \"children\" OR \"died\" OR \"one\" OR \"survives\" OR \"tv\" OR \"series\"",
+        "terms": [
+          "character",
+          "married",
+          "three",
+          "times",
+          "two",
+          "children",
+          "died",
+          "one",
+          "survives",
+          "tv",
+          "series"
+        ]
+      }
+    },
+    {
+      "round": 7,
+      "top_k": 5,
+      "equivalence_key": "0e4d5ec446cacd8d0c0e6335dac85b57fb0dcf9939ffd0d5dfaaf9f5073645c8",
+      "cached": false,
+      "query_sha256": "22c746d14b885b781ca65f03a840a90487dc759839391a605a0b5b237694b28a",
+      "query": "TV drama character lost two children one survives married three times",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"tv\" OR \"drama\" OR \"character\" OR \"lost\" OR \"two\" OR \"children\" OR \"one\" OR \"survives\" OR \"married\" OR \"three\" OR \"times\"",
+        "terms": [
+          "tv",
+          "drama",
+          "character",
+          "lost",
+          "two",
+          "children",
+          "one",
+          "survives",
+          "married",
+          "three",
+          "times"
+        ]
+      }
+    },
+    {
+      "round": 7,
+      "top_k": 5,
+      "equivalence_key": "b0edd94727573e27e5ea17e21952b9b7c91820fb4fcd9b2a46fb3d55c3edcb78",
+      "cached": false,
+      "query_sha256": "359a4eb4f5dc4ae318b80b648572cbf6decf18adce6af45cc893e97b3e6a8db9",
+      "query": "soap opera character three marriages children died one alive",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"soap\" OR \"opera\" OR \"character\" OR \"three\" OR \"marriages\" OR \"children\" OR \"died\" OR \"one\" OR \"alive\"",
+        "terms": [
+          "soap",
+          "opera",
+          "character",
+          "three",
+          "marriages",
+          "children",
+          "died",
+          "one",
+          "alive"
+        ]
+      }
+    },
+    {
+      "round": 7,
+      "top_k": 5,
+      "equivalence_key": "240ea0de2ffb3d810e08c61d39312b10ed8433c6ad16b550c0fafc4a44360fdc",
+      "cached": false,
+      "query_sha256": "e7a85bb6ad62685dcb6509edf5b32ce0e741694d8d0bd36981141edf19a7fcb2",
+      "query": "real life couple play unrelated characters same TV show",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"real\" OR \"life\" OR \"couple\" OR \"play\" OR \"unrelated\" OR \"characters\" OR \"same\" OR \"tv\" OR \"show\"",
+        "terms": [
+          "real",
+          "life",
+          "couple",
+          "play",
+          "unrelated",
+          "characters",
+          "same",
+          "tv",
+          "show"
+        ]
+      }
+    },
+    {
+      "round": 7,
+      "top_k": 5,
+      "equivalence_key": "0d8d77f19a6fa5d29f3b35ff30c3823d5fa8345cd94d1a4b1991927634a81876",
+      "cached": false,
+      "query_sha256": "2b659cab6575a3ab14176c46776e18c4803bfc094285f3e3de593d140645c3c7",
+      "query": "actors married real life play different characters same series not couple",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"actors\" OR \"married\" OR \"real\" OR \"life\" OR \"play\" OR \"different\" OR \"characters\" OR \"same\" OR \"series\" OR \"not\" OR \"couple\"",
+        "terms": [
+          "actors",
+          "married",
+          "real",
+          "life",
+          "play",
+          "different",
+          "characters",
+          "same",
+          "series",
+          "not",
+          "couple"
+        ]
+      }
+    },
+    {
+      "round": 7,
+      "top_k": 5,
+      "equivalence_key": "7e4e2b1b8890c1ec0d19d38741dce61b674067515169d194d125e338b422de89",
+      "cached": false,
+      "query_sha256": "b8df6e47e2cb631d2cca6562b3a6ebc43e1e054c0d52050f6e337d14a086e210",
+      "query": "husband wife actors different characters same show unrelated",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"husband\" OR \"wife\" OR \"actors\" OR \"different\" OR \"characters\" OR \"same\" OR \"show\" OR \"unrelated\"",
+        "terms": [
+          "husband",
+          "wife",
+          "actors",
+          "different",
+          "characters",
+          "same",
+          "show",
+          "unrelated"
+        ]
+      }
+    },
+    {
+      "round": 8,
+      "top_k": 5,
+      "equivalence_key": "37fbda5a40a15ee4f84c5937ee66f54f81267a8fde6d4ea9ad875c8511b9404c",
+      "cached": false,
+      "query_sha256": "ec9d000d9e127daa6c4a8624a4229dd832c5337ee9f19bccfe588db289df16e5",
+      "query": "Nashville TV series character married three times children died",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"nashville\" OR \"tv\" OR \"series\" OR \"character\" OR \"married\" OR \"three\" OR \"times\" OR \"children\" OR \"died\"",
+        "terms": [
+          "nashville",
+          "tv",
+          "series",
+          "character",
+          "married",
+          "three",
+          "times",
+          "children",
+          "died"
+        ]
+      }
+    },
+    {
+      "round": 8,
+      "top_k": 5,
+      "equivalence_key": "3b1c7fb3bd498ecf2ae26aa47abb4b4cfcc8916209d3ffc0c36b996be6dd5276",
+      "cached": false,
+      "query_sha256": "ae6c14e25d59062cd3a741b8d5afd62d78615a0c7925daacb337916de07f63d5",
+      "query": "Nashville ABC cast real life couple siblings co-stars",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"nashville\" OR \"abc\" OR \"cast\" OR \"real\" OR \"life\" OR \"couple\" OR \"siblings\" OR \"co\" OR \"stars\"",
+        "terms": [
+          "nashville",
+          "abc",
+          "cast",
+          "real",
+          "life",
+          "couple",
+          "siblings",
+          "co",
+          "stars"
+        ]
+      }
+    },
+    {
+      "round": 8,
+      "top_k": 5,
+      "equivalence_key": "a8b6f07cb39a0a23307c362f6291f0b5fa2f4de6d8119877ec97ff83b9730136",
+      "cached": false,
+      "query_sha256": "dbb7ac2ce2ceaa3ab7c86c2f1c4c8e202f9ce6f692c071bcdff16520dcf93110",
+      "query": "Nashville TV show Rayna Deacon married children",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"nashville\" OR \"tv\" OR \"show\" OR \"rayna\" OR \"deacon\" OR \"married\" OR \"children\"",
+        "terms": [
+          "nashville",
+          "tv",
+          "show",
+          "rayna",
+          "deacon",
+          "married",
+          "children"
+        ]
+      }
+    },
+    {
+      "round": 8,
+      "top_k": 5,
+      "equivalence_key": "5d22dbd218606ebace605edd74ebc77e1cf3438dd36888589b89a656bfaa9974",
+      "cached": false,
+      "query_sha256": "d6745491c7d588d253dee20804192fc0c2b939262d23f6d5a0b6a8014d3d4208",
+      "query": "Empire Fox TV series character married three times children died one survives",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"empire\" OR \"fox\" OR \"tv\" OR \"series\" OR \"character\" OR \"married\" OR \"three\" OR \"times\" OR \"children\" OR \"died\" OR \"one\" OR \"survives\"",
+        "terms": [
+          "empire",
+          "fox",
+          "tv",
+          "series",
+          "character",
+          "married",
+          "three",
+          "times",
+          "children",
+          "died",
+          "one",
+          "survives"
+        ]
+      }
+    },
+    {
+      "round": 8,
+      "top_k": 5,
+      "equivalence_key": "b9149d79affb3164518ff9f207f918477b53daa2739bdb9d7cf47e8b9b0f0780",
+      "cached": false,
+      "query_sha256": "fa555ab4466838c1df26ab4097c1a58dfdb4705087fc78afb52608c4574316c8",
+      "query": "Empire TV show Lucious Cookie Lyon real life relatives cast",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"empire\" OR \"tv\" OR \"show\" OR \"lucious\" OR \"cookie\" OR \"lyon\" OR \"real\" OR \"life\" OR \"relatives\" OR \"cast\"",
+        "terms": [
+          "empire",
+          "tv",
+          "show",
+          "lucious",
+          "cookie",
+          "lyon",
+          "real",
+          "life",
+          "relatives",
+          "cast"
+        ]
+      }
+    },
+    {
+      "round": 8,
+      "top_k": 5,
+      "equivalence_key": "bbc2f4d544c53eceb70990eaa8e4b4016c74f2948a84d6602d502eaa2f473881",
+      "cached": false,
+      "query_sha256": "27edb2bde1d855968a4a3d0d9bfe2eebef0392f270e4e6223de5efe2c954e626",
+      "query": "Empire Fox cast height actor married three times character",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"empire\" OR \"fox\" OR \"cast\" OR \"height\" OR \"actor\" OR \"married\" OR \"three\" OR \"times\" OR \"character\"",
+        "terms": [
+          "empire",
+          "fox",
+          "cast",
+          "height",
+          "actor",
+          "married",
+          "three",
+          "times",
+          "character"
+        ]
+      }
+    },
+    {
+      "round": 9,
+      "top_k": 5,
+      "equivalence_key": "851833d6076758ef35917290ae0d27f74ef062d52fa2eb6121e7111d2554a2b8",
+      "cached": false,
+      "query_sha256": "e4d62d7d9c12c1102afce4bab435469cb0395d54c2a4ea1985a679c784640409",
+      "query": "Yellowstone TV series character married three times children died",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"yellowstone\" OR \"tv\" OR \"series\" OR \"character\" OR \"married\" OR \"three\" OR \"times\" OR \"children\" OR \"died\"",
+        "terms": [
+          "yellowstone",
+          "tv",
+          "series",
+          "character",
+          "married",
+          "three",
+          "times",
+          "children",
+          "died"
+        ]
+      }
+    },
+    {
+      "round": 9,
+      "top_k": 5,
+      "equivalence_key": "74c099aad7a527fc19f0716ab608ab61763ff399b82e765e1c79d55b175342a3",
+      "cached": false,
+      "query_sha256": "ca3a0de772050fd25a147e9fcc7348ec82b30fd0765d179c4fe5766a8d7f6589",
+      "query": "Yellowstone cast real life couple siblings co-stars unrelated characters",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"yellowstone\" OR \"cast\" OR \"real\" OR \"life\" OR \"couple\" OR \"siblings\" OR \"co\" OR \"stars\" OR \"unrelated\" OR \"characters\"",
+        "terms": [
+          "yellowstone",
+          "cast",
+          "real",
+          "life",
+          "couple",
+          "siblings",
+          "co",
+          "stars",
+          "unrelated",
+          "characters"
+        ]
+      }
+    },
+    {
+      "round": 9,
+      "top_k": 5,
+      "equivalence_key": "1426b4815ba39e61d63983cfafb4cd7d3d6f0a056eacfb39ca02948a65b144d4",
+      "cached": false,
+      "query_sha256": "72fde59e55d04ba6704c7d13eaf2b860e1a7df9cf1e091f3d4ced1fa4ba55ac9",
+      "query": "Yellowstone John Dutton children died married",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"yellowstone\" OR \"john\" OR \"dutton\" OR \"children\" OR \"died\" OR \"married\"",
+        "terms": [
+          "yellowstone",
+          "john",
+          "dutton",
+          "children",
+          "died",
+          "married"
+        ]
+      }
+    },
+    {
+      "round": 9,
+      "top_k": 5,
+      "equivalence_key": "b42b3432ca5bc12d5db2ac976f86730bdd142333d8dfcac4747e8048c731f157",
+      "cached": false,
+      "query_sha256": "57f6b487fcc034df5668aba9d24de8b9c1647067e49f3241729cbd6c22f2a18c",
+      "query": "This Is Us character married three times children died one survives",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"this\" OR \"is\" OR \"us\" OR \"character\" OR \"married\" OR \"three\" OR \"times\" OR \"children\" OR \"died\" OR \"one\" OR \"survives\"",
+        "terms": [
+          "this",
+          "is",
+          "us",
+          "character",
+          "married",
+          "three",
+          "times",
+          "children",
+          "died",
+          "one",
+          "survives"
+        ]
+      }
+    },
+    {
+      "round": 9,
+      "top_k": 5,
+      "equivalence_key": "e40ec60d5635541c068cb33c063bcf2d9ce1a7c76456b960c6507ba1c6dfc9aa",
+      "cached": false,
+      "query_sha256": "733ca6c16cdc199e08956aeece0b8304d0f4004112489fcd3b8140ed86dfdc37",
+      "query": "This Is Us cast real life couple siblings co-stars",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"this\" OR \"is\" OR \"us\" OR \"cast\" OR \"real\" OR \"life\" OR \"couple\" OR \"siblings\" OR \"co\" OR \"stars\"",
+        "terms": [
+          "this",
+          "is",
+          "us",
+          "cast",
+          "real",
+          "life",
+          "couple",
+          "siblings",
+          "co",
+          "stars"
+        ]
+      }
+    },
+    {
+      "round": 9,
+      "top_k": 5,
+      "equivalence_key": "47cedeb36c8f34a948c13a360107c883762b1b2c1f4b44984bbd98cadcdef0ca",
+      "cached": false,
+      "query_sha256": "4c71476877d9eac89973dcc1675561da8d2720eda73b07d29c3b733f812e7c0c",
+      "query": "This Is Us Jack Rebecca Kate Kevin Randall married children",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"this\" OR \"is\" OR \"us\" OR \"jack\" OR \"rebecca\" OR \"kate\" OR \"kevin\" OR \"randall\" OR \"married\" OR \"children\"",
+        "terms": [
+          "this",
+          "is",
+          "us",
+          "jack",
+          "rebecca",
+          "kate",
+          "kevin",
+          "randall",
+          "married",
+          "children"
+        ]
+      }
+    },
+    {
+      "round": 10,
+      "top_k": 5,
+      "equivalence_key": "e21a452b9f3d0d059ebb896d6e14087d9ad2f7f1a4cc4d96328a23414444a661",
+      "cached": false,
+      "query_sha256": "4ddb617cb9072269cf1890c1a79cb61f2ff5896735ec7c82a2b2c9b50aee9bc1",
+      "query": "Grey's Anatomy character married three times children died one survives",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"grey\" OR \"s\" OR \"anatomy\" OR \"character\" OR \"married\" OR \"three\" OR \"times\" OR \"children\" OR \"died\" OR \"one\" OR \"survives\"",
+        "terms": [
+          "grey",
+          "s",
+          "anatomy",
+          "character",
+          "married",
+          "three",
+          "times",
+          "children",
+          "died",
+          "one",
+          "survives"
+        ]
+      }
+    },
+    {
+      "round": 10,
+      "top_k": 5,
+      "equivalence_key": "7c604291cd0c82c1ed6b9cac2989b2e843d719a451dc169d25ee918f4eb9c613",
+      "cached": false,
+      "query_sha256": "6f7d05bfe228ca763b0a7641760e9666c6e80ef124ae3d6f27a156c4b0a681f6",
+      "query": "Grey's Anatomy cast real life couple siblings co-stars unrelated characters",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"grey\" OR \"s\" OR \"anatomy\" OR \"cast\" OR \"real\" OR \"life\" OR \"couple\" OR \"siblings\" OR \"co\" OR \"stars\" OR \"unrelated\" OR \"characters\"",
+        "terms": [
+          "grey",
+          "s",
+          "anatomy",
+          "cast",
+          "real",
+          "life",
+          "couple",
+          "siblings",
+          "co",
+          "stars",
+          "unrelated",
+          "characters"
+        ]
+      }
+    },
+    {
+      "round": 10,
+      "top_k": 5,
+      "equivalence_key": "aaa87f0425d60becc963edf005c00843e24ef3274f055dadcbb1c0a6c790dab2",
+      "cached": false,
+      "query_sha256": "afae1d8e203f6c844fa4abc9a2209c2e45a9716d16de82eea68660dcdf21ecba",
+      "query": "Grey's Anatomy Meredith Derek married children died",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"grey\" OR \"s\" OR \"anatomy\" OR \"meredith\" OR \"derek\" OR \"married\" OR \"children\" OR \"died\"",
+        "terms": [
+          "grey",
+          "s",
+          "anatomy",
+          "meredith",
+          "derek",
+          "married",
+          "children",
+          "died"
+        ]
+      }
+    },
+    {
+      "round": 10,
+      "top_k": 5,
+      "equivalence_key": "f8289be5f4d507741404657ea26142978ec4572c995a1be0de87b8572c2b78ed",
+      "cached": false,
+      "query_sha256": "62a4c0e4904e7d5a5bd32b3d6f2e390477b7a644fb9f4d6bb1fc37611e9ab872",
+      "query": "Shameless TV series character married three times children died one survives",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"shameless\" OR \"tv\" OR \"series\" OR \"character\" OR \"married\" OR \"three\" OR \"times\" OR \"children\" OR \"died\" OR \"one\" OR \"survives\"",
+        "terms": [
+          "shameless",
+          "tv",
+          "series",
+          "character",
+          "married",
+          "three",
+          "times",
+          "children",
+          "died",
+          "one",
+          "survives"
+        ]
+      }
+    },
+    {
+      "round": 10,
+      "top_k": 5,
+      "equivalence_key": "36ef6b57049070e9cbfbb96c2a2f2108f9b3929ad639c4de5a19c33d552503eb",
+      "cached": false,
+      "query_sha256": "a9a3b9903f264a50d954cf125ed0401c70696c1629c6893784f516af8bcc9ab2",
+      "query": "Shameless cast real life couple siblings co-stars unrelated characters",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"shameless\" OR \"cast\" OR \"real\" OR \"life\" OR \"couple\" OR \"siblings\" OR \"co\" OR \"stars\" OR \"unrelated\" OR \"characters\"",
+        "terms": [
+          "shameless",
+          "cast",
+          "real",
+          "life",
+          "couple",
+          "siblings",
+          "co",
+          "stars",
+          "unrelated",
+          "characters"
+        ]
+      }
+    },
+    {
+      "round": 10,
+      "top_k": 5,
+      "equivalence_key": "44175291a138c0ebf960ec58f4c47daa704e949700b4bc4acfdf04abdfaf2e27",
+      "cached": false,
+      "query_sha256": "945d0a98861ef731b3b903c6f4d56af353bff86ce1ca6f66c7964b65220b1c69",
+      "query": "Shameless Frank Gallagher Fiona married children",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"shameless\" OR \"frank\" OR \"gallagher\" OR \"fiona\" OR \"married\" OR \"children\"",
+        "terms": [
+          "shameless",
+          "frank",
+          "gallagher",
+          "fiona",
+          "married",
+          "children"
+        ]
+      }
+    },
+    {
+      "round": 11,
+      "top_k": 5,
+      "equivalence_key": "b664340514826be66352ffa4b74e5a458c3ee7647312b53a64fb63009799493c",
+      "cached": false,
+      "query_sha256": "bc90e596fed65f20fc2ff66ecfe7fb9aa45858c6528810f888df5d38db4ea7d9",
+      "query": "Outlander TV series character married three times children died one survives",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"outlander\" OR \"tv\" OR \"series\" OR \"character\" OR \"married\" OR \"three\" OR \"times\" OR \"children\" OR \"died\" OR \"one\" OR \"survives\"",
+        "terms": [
+          "outlander",
+          "tv",
+          "series",
+          "character",
+          "married",
+          "three",
+          "times",
+          "children",
+          "died",
+          "one",
+          "survives"
+        ]
+      }
+    },
+    {
+      "round": 11,
+      "top_k": 5,
+      "equivalence_key": "7b762318625c29adbd10b504f78b9f91b4b0d0c36e877b7b62afa452335fe18a",
+      "cached": false,
+      "query_sha256": "2cfa012ca796107600676af2430ddefba48a23bd255f348aedbcec20256cac00",
+      "query": "Outlander cast real life couple siblings co-stars unrelated characters",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"outlander\" OR \"cast\" OR \"real\" OR \"life\" OR \"couple\" OR \"siblings\" OR \"co\" OR \"stars\" OR \"unrelated\" OR \"characters\"",
+        "terms": [
+          "outlander",
+          "cast",
+          "real",
+          "life",
+          "couple",
+          "siblings",
+          "co",
+          "stars",
+          "unrelated",
+          "characters"
+        ]
+      }
+    },
+    {
+      "round": 11,
+      "top_k": 5,
+      "equivalence_key": "3c16db28a2c5ba8f3b44efa104367a4a85335029bf1cecf3b5172098a7b86725",
+      "cached": false,
+      "query_sha256": "5718f1c7228bd84156955bbac57447974f039135299fac4dc4e05b6103871492",
+      "query": "Outlander Claire Jamie married children Faith",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"outlander\" OR \"claire\" OR \"jamie\" OR \"married\" OR \"children\" OR \"faith\"",
+        "terms": [
+          "outlander",
+          "claire",
+          "jamie",
+          "married",
+          "children",
+          "faith"
+        ]
+      }
+    },
+    {
+      "round": 11,
+      "top_k": 5,
+      "equivalence_key": "01f84bd46eeaf9e1515a1c7f1c61bd32454ec6b64c0dde4253e114491d21c301",
+      "cached": false,
+      "query_sha256": "e24c56612af4cb87d3b3379037ced43a45112873bb281a38bcceb78aec976ba2",
+      "query": "The Blacklist TV series character married three times children died one survives",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"the\" OR \"blacklist\" OR \"tv\" OR \"series\" OR \"character\" OR \"married\" OR \"three\" OR \"times\" OR \"children\" OR \"died\" OR \"one\" OR \"survives\"",
+        "terms": [
+          "the",
+          "blacklist",
+          "tv",
+          "series",
+          "character",
+          "married",
+          "three",
+          "times",
+          "children",
+          "died",
+          "one",
+          "survives"
+        ]
+      }
+    },
+    {
+      "round": 11,
+      "top_k": 5,
+      "equivalence_key": "eebf75a0d019d94e2d5b01e370faeab9edec56d6d2d8c3afabbc42296395b5a5",
+      "cached": false,
+      "query_sha256": "df2ac600758b4178181e78d6345e0dd59ebc1f5615e3f02a12a604ccfc180386",
+      "query": "The Blacklist cast real life couple siblings co-stars unrelated characters",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"the\" OR \"blacklist\" OR \"cast\" OR \"real\" OR \"life\" OR \"couple\" OR \"siblings\" OR \"co\" OR \"stars\" OR \"unrelated\" OR \"characters\"",
+        "terms": [
+          "the",
+          "blacklist",
+          "cast",
+          "real",
+          "life",
+          "couple",
+          "siblings",
+          "co",
+          "stars",
+          "unrelated",
+          "characters"
+        ]
+      }
+    },
+    {
+      "round": 11,
+      "top_k": 5,
+      "equivalence_key": "91ebdd1f57a1ef14c3f9ce7fa1ff437d5b809b45fa529f5da21b225b6b35cf5c",
+      "cached": false,
+      "query_sha256": "e1b2624a15d716b04e6413f60335e25d1d283784595d785c52461c5a1dab8475",
+      "query": "The Blacklist Raymond Reddington married children",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"the\" OR \"blacklist\" OR \"raymond\" OR \"reddington\" OR \"married\" OR \"children\"",
+        "terms": [
+          "the",
+          "blacklist",
+          "raymond",
+          "reddington",
+          "married",
+          "children"
+        ]
+      }
+    },
+    {
+      "round": 13,
+      "top_k": 5,
+      "equivalence_key": "c7e9bfeaef66b2a36e565570c363da82dcb1b7d0242d9c6cdd0fad26499bd732",
+      "cached": false,
+      "query_sha256": "9eb2d26c9e9adf79b2d9ba0da6c9233f8da497d21aabb4131ccdbfc1ed38628d",
+      "query": "TV character married three times only one child survives series",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"tv\" OR \"character\" OR \"married\" OR \"three\" OR \"times\" OR \"only\" OR \"one\" OR \"child\" OR \"survives\" OR \"series\"",
+        "terms": [
+          "tv",
+          "character",
+          "married",
+          "three",
+          "times",
+          "only",
+          "one",
+          "child",
+          "survives",
+          "series"
+        ]
+      }
+    },
+    {
+      "round": 13,
+      "top_k": 5,
+      "equivalence_key": "038c086a93730805a453078e32c47cf94c41ec14688334acf727050e3881f995",
+      "cached": false,
+      "query_sha256": "ecb503392ea9810ee6d14614da98790330a6767d9f70a73ff4b80b0446d858f1",
+      "query": "television character three marriages one surviving child",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"television\" OR \"character\" OR \"three\" OR \"marriages\" OR \"one\" OR \"surviving\" OR \"child\"",
+        "terms": [
+          "television",
+          "character",
+          "three",
+          "marriages",
+          "one",
+          "surviving",
+          "child"
+        ]
+      }
+    },
+    {
+      "round": 13,
+      "top_k": 5,
+      "equivalence_key": "9a86f2bacbe18a10fdcba13f788f032213ef4793029414a00dda4c0d71083deb",
+      "cached": false,
+      "query_sha256": "82247ae83a230a46eb338143a9cbf80f686ac0697b18f656ed0fd84692d3f2cd",
+      "query": "TV show character widowed remarried children died one survives",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"tv\" OR \"show\" OR \"character\" OR \"widowed\" OR \"remarried\" OR \"children\" OR \"died\" OR \"one\" OR \"survives\"",
+        "terms": [
+          "tv",
+          "show",
+          "character",
+          "widowed",
+          "remarried",
+          "children",
+          "died",
+          "one",
+          "survives"
+        ]
+      }
+    },
+    {
+      "round": 13,
+      "top_k": 5,
+      "equivalence_key": "240ea0de2ffb3d810e08c61d39312b10ed8433c6ad16b550c0fafc4a44360fdc",
+      "cached": true,
+      "query_sha256": "e7a85bb6ad62685dcb6509edf5b32ce0e741694d8d0bd36981141edf19a7fcb2",
+      "query": "real life couple play unrelated characters same TV show",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"real\" OR \"life\" OR \"couple\" OR \"play\" OR \"unrelated\" OR \"characters\" OR \"same\" OR \"tv\" OR \"show\"",
+        "terms": [
+          "real",
+          "life",
+          "couple",
+          "play",
+          "unrelated",
+          "characters",
+          "same",
+          "tv",
+          "show"
+        ]
+      }
+    },
+    {
+      "round": 13,
+      "top_k": 5,
+      "equivalence_key": "ab6d43fb0cfad5dfcbf72ca3feae5cc6445f008c890ccca7d9a4ec57dddc0412",
+      "cached": false,
+      "query_sha256": "b277ef2203ba9286ff56f2fc53ffa66edc93eab6dd22a8e9490fefbdae44f1dc",
+      "query": "real life siblings play unrelated characters same series",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"real\" OR \"life\" OR \"siblings\" OR \"play\" OR \"unrelated\" OR \"characters\" OR \"same\" OR \"series\"",
+        "terms": [
+          "real",
+          "life",
+          "siblings",
+          "play",
+          "unrelated",
+          "characters",
+          "same",
+          "series"
+        ]
+      }
+    },
+    {
+      "round": 13,
+      "top_k": 5,
+      "equivalence_key": "d26bc9e7adaeac25f298d9320efe92f9a09890e85d90f1b602f39ccdf7c327b9",
+      "cached": false,
+      "query_sha256": "cc689e98b89253e53979b2f00a5e46c415ecec6ad0acdd7590017230c962a2cf",
+      "query": "married couple actors play unrelated characters television",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"married\" OR \"couple\" OR \"actors\" OR \"play\" OR \"unrelated\" OR \"characters\" OR \"television\"",
+        "terms": [
+          "married",
+          "couple",
+          "actors",
+          "play",
+          "unrelated",
+          "characters",
+          "television"
+        ]
+      }
+    },
+    {
+      "round": 14,
+      "top_k": 5,
+      "equivalence_key": "3559dd1e56c98edc3d6def6940efe0a4b0e740b6038ca14ed78f244c17339719",
+      "cached": false,
+      "query_sha256": "ee8150686e3227e8810a9d224912fa933c518ddfb6465710225039a5ef530d61",
+      "query": "Grey's Anatomy character married three times children died",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"grey\" OR \"s\" OR \"anatomy\" OR \"character\" OR \"married\" OR \"three\" OR \"times\" OR \"children\" OR \"died\"",
+        "terms": [
+          "grey",
+          "s",
+          "anatomy",
+          "character",
+          "married",
+          "three",
+          "times",
+          "children",
+          "died"
+        ]
+      }
+    },
+    {
+      "round": 14,
+      "top_k": 5,
+      "equivalence_key": "8b581c93e6e7b4e40382c0b2038f81d2b821a1a211a426faddab87a2bbae5805",
+      "cached": false,
+      "query_sha256": "db0a4be5efc2d11f6d50f4298120d4b8fa0c4945112cb22f8aaf9ddf787fa22c",
+      "query": "Grey's Anatomy real life couple siblings co-stars unrelated characters",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"grey\" OR \"s\" OR \"anatomy\" OR \"real\" OR \"life\" OR \"couple\" OR \"siblings\" OR \"co\" OR \"stars\" OR \"unrelated\" OR \"characters\"",
+        "terms": [
+          "grey",
+          "s",
+          "anatomy",
+          "real",
+          "life",
+          "couple",
+          "siblings",
+          "co",
+          "stars",
+          "unrelated",
+          "characters"
+        ]
+      }
+    },
+    {
+      "round": 14,
+      "top_k": 5,
+      "equivalence_key": "595dd9a3090e5f9c0d94722af51ba1999154e621cef6d1fb387b6c17adcb23af",
+      "cached": false,
+      "query_sha256": "a758ecb6ff055ae6f3489a13e528d961e94a6be953e506ecfbe3d0ddc0adc8b8",
+      "query": "Grey's Anatomy cast real life relatives play unrelated characters",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"grey\" OR \"s\" OR \"anatomy\" OR \"cast\" OR \"real\" OR \"life\" OR \"relatives\" OR \"play\" OR \"unrelated\" OR \"characters\"",
+        "terms": [
+          "grey",
+          "s",
+          "anatomy",
+          "cast",
+          "real",
+          "life",
+          "relatives",
+          "play",
+          "unrelated",
+          "characters"
+        ]
+      }
+    },
+    {
+      "round": 14,
+      "top_k": 5,
+      "equivalence_key": "b42b3432ca5bc12d5db2ac976f86730bdd142333d8dfcac4747e8048c731f157",
+      "cached": true,
+      "query_sha256": "57f6b487fcc034df5668aba9d24de8b9c1647067e49f3241729cbd6c22f2a18c",
+      "query": "This Is Us character married three times children died one survives",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"this\" OR \"is\" OR \"us\" OR \"character\" OR \"married\" OR \"three\" OR \"times\" OR \"children\" OR \"died\" OR \"one\" OR \"survives\"",
+        "terms": [
+          "this",
+          "is",
+          "us",
+          "character",
+          "married",
+          "three",
+          "times",
+          "children",
+          "died",
+          "one",
+          "survives"
+        ]
+      }
+    },
+    {
+      "round": 14,
+      "top_k": 5,
+      "equivalence_key": "12bb9aadd827dfb10f9557a2b4ce52778ff8e1640b532e48f49dc8bfb39b5e5c",
+      "cached": false,
+      "query_sha256": "182fdcabffff11e93fae3dd4b1dd2626ed3a4ca1acb8453ccb5d4e12011f06ab",
+      "query": "This Is Us cast real life couple siblings co-stars unrelated characters",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"this\" OR \"is\" OR \"us\" OR \"cast\" OR \"real\" OR \"life\" OR \"couple\" OR \"siblings\" OR \"co\" OR \"stars\" OR \"unrelated\" OR \"characters\"",
+        "terms": [
+          "this",
+          "is",
+          "us",
+          "cast",
+          "real",
+          "life",
+          "couple",
+          "siblings",
+          "co",
+          "stars",
+          "unrelated",
+          "characters"
+        ]
+      }
+    },
+    {
+      "round": 14,
+      "top_k": 5,
+      "equivalence_key": "92936d5a2412bd8babc98369eaa4e24e40e02a7897fa0eb4df7306b3391285da",
+      "cached": false,
+      "query_sha256": "9ed5b6dfb56d0a85b5aebf46d14db8f830e860856f665119873b90248d708efa",
+      "query": "This Is Us Kevin Kate Randall married children",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"this\" OR \"is\" OR \"us\" OR \"kevin\" OR \"kate\" OR \"randall\" OR \"married\" OR \"children\"",
+        "terms": [
+          "this",
+          "is",
+          "us",
+          "kevin",
+          "kate",
+          "randall",
+          "married",
+          "children"
+        ]
+      }
+    },
+    {
+      "round": 15,
+      "top_k": 5,
+      "equivalence_key": "b9037deac27ddc179c571aba4da21acf84123681df523051798f401718adbce4",
+      "cached": false,
+      "query_sha256": "aaf48bfc4ac8d08dffb52589813a79f2868a7715657eba1f02146be503e4a0bc",
+      "query": "Yellowstone TV character married three times children died one survives",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"yellowstone\" OR \"tv\" OR \"character\" OR \"married\" OR \"three\" OR \"times\" OR \"children\" OR \"died\" OR \"one\" OR \"survives\"",
+        "terms": [
+          "yellowstone",
+          "tv",
+          "character",
+          "married",
+          "three",
+          "times",
+          "children",
+          "died",
+          "one",
+          "survives"
+        ]
+      }
+    },
+    {
+      "round": 15,
+      "top_k": 5,
+      "equivalence_key": "74c099aad7a527fc19f0716ab608ab61763ff399b82e765e1c79d55b175342a3",
+      "cached": true,
+      "query_sha256": "ca3a0de772050fd25a147e9fcc7348ec82b30fd0765d179c4fe5766a8d7f6589",
+      "query": "Yellowstone cast real life couple siblings co-stars unrelated characters",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"yellowstone\" OR \"cast\" OR \"real\" OR \"life\" OR \"couple\" OR \"siblings\" OR \"co\" OR \"stars\" OR \"unrelated\" OR \"characters\"",
+        "terms": [
+          "yellowstone",
+          "cast",
+          "real",
+          "life",
+          "couple",
+          "siblings",
+          "co",
+          "stars",
+          "unrelated",
+          "characters"
+        ]
+      }
+    },
+    {
+      "round": 15,
+      "top_k": 5,
+      "equivalence_key": "acee49b426b46c72906930e81a3c50a0c2b7bcf44640bd6545f7f8cce0420fa7",
+      "cached": false,
+      "query_sha256": "39db1df2ca785d17ce901eedc4cef719f2a82a43c1babb1f4ce22ac4d5adaf6c",
+      "query": "Yellowstone John Dutton Rip Beth Jamie married children",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"yellowstone\" OR \"john\" OR \"dutton\" OR \"rip\" OR \"beth\" OR \"jamie\" OR \"married\" OR \"children\"",
+        "terms": [
+          "yellowstone",
+          "john",
+          "dutton",
+          "rip",
+          "beth",
+          "jamie",
+          "married",
+          "children"
+        ]
+      }
+    },
+    {
+      "round": 15,
+      "top_k": 5,
+      "equivalence_key": "a3fb54393961ff510bf670c0f53c72d96bd4650c4fbd2a62915bfe07f41cf4fd",
+      "cached": false,
+      "query_sha256": "e7a81d7fcdb9f7b19ec7ffad8dd530689ca868248ed3c5a653a34bf960bc9ba5",
+      "query": "Shameless TV character married three times children died one survives",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"shameless\" OR \"tv\" OR \"character\" OR \"married\" OR \"three\" OR \"times\" OR \"children\" OR \"died\" OR \"one\" OR \"survives\"",
+        "terms": [
+          "shameless",
+          "tv",
+          "character",
+          "married",
+          "three",
+          "times",
+          "children",
+          "died",
+          "one",
+          "survives"
+        ]
+      }
+    },
+    {
+      "round": 15,
+      "top_k": 5,
+      "equivalence_key": "36ef6b57049070e9cbfbb96c2a2f2108f9b3929ad639c4de5a19c33d552503eb",
+      "cached": true,
+      "query_sha256": "a9a3b9903f264a50d954cf125ed0401c70696c1629c6893784f516af8bcc9ab2",
+      "query": "Shameless cast real life couple siblings co-stars unrelated characters",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"shameless\" OR \"cast\" OR \"real\" OR \"life\" OR \"couple\" OR \"siblings\" OR \"co\" OR \"stars\" OR \"unrelated\" OR \"characters\"",
+        "terms": [
+          "shameless",
+          "cast",
+          "real",
+          "life",
+          "couple",
+          "siblings",
+          "co",
+          "stars",
+          "unrelated",
+          "characters"
+        ]
+      }
+    },
+    {
+      "round": 15,
+      "top_k": 5,
+      "equivalence_key": "11d35a40e8593e68f79f8971937811fa70c224b1cd2501ac9a7aeb9828419e58",
+      "cached": false,
+      "query_sha256": "ae79413edcec8c368dd7a4492b8679204b68ebcca586de6bfa4bc9b35b1a2ffd",
+      "query": "Shameless Frank Gallagher Fiona Lip Ian married children",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"shameless\" OR \"frank\" OR \"gallagher\" OR \"fiona\" OR \"lip\" OR \"ian\" OR \"married\" OR \"children\"",
+        "terms": [
+          "shameless",
+          "frank",
+          "gallagher",
+          "fiona",
+          "lip",
+          "ian",
+          "married",
+          "children"
+        ]
+      }
+    }
+  ],
+  "equivalent_query_repeats": 4,
+  "views": [
+    {
+      "round": 1,
+      "compacted": false,
+      "visible_evidence": [],
+      "shelf": [],
+      "shelf_evicted": []
+    },
+    {
+      "round": 2,
+      "compacted": false,
+      "visible_evidence": [],
+      "shelf": [],
+      "shelf_evicted": []
+    },
+    {
+      "round": 3,
+      "compacted": false,
+      "visible_evidence": [],
+      "shelf": [],
+      "shelf_evicted": []
+    },
+    {
+      "round": 4,
+      "compacted": false,
+      "visible_evidence": [],
+      "shelf": [],
+      "shelf_evicted": []
+    },
+    {
+      "round": 5,
+      "compacted": false,
+      "visible_evidence": [
+        "e1"
+      ],
+      "shelf": [],
+      "shelf_evicted": []
+    },
+    {
+      "round": 6,
+      "compacted": true,
+      "visible_evidence": [
+        "e1"
+      ],
+      "shelf": [],
+      "shelf_evicted": []
+    },
+    {
+      "round": 7,
+      "compacted": true,
+      "visible_evidence": [
+        "e1"
+      ],
+      "shelf": [],
+      "shelf_evicted": []
+    },
+    {
+      "round": 8,
+      "compacted": true,
+      "visible_evidence": [
+        "e1"
+      ],
+      "shelf": [],
+      "shelf_evicted": []
+    },
+    {
+      "round": 9,
+      "compacted": true,
+      "visible_evidence": [
+        "e1"
+      ],
+      "shelf": [
+        "e1"
+      ],
+      "shelf_evicted": []
+    },
+    {
+      "round": 10,
+      "compacted": true,
+      "visible_evidence": [
+        "e1"
+      ],
+      "shelf": [
+        "e1"
+      ],
+      "shelf_evicted": []
+    },
+    {
+      "round": 11,
+      "compacted": true,
+      "visible_evidence": [
+        "e1"
+      ],
+      "shelf": [
+        "e1"
+      ],
+      "shelf_evicted": []
+    },
+    {
+      "round": 12,
+      "compacted": true,
+      "visible_evidence": [
+        "e1"
+      ],
+      "shelf": [
+        "e1"
+      ],
+      "shelf_evicted": []
+    },
+    {
+      "round": 13,
+      "compacted": true,
+      "visible_evidence": [
+        "e1",
+        "e2"
+      ],
+      "shelf": [
+        "e1"
+      ],
+      "shelf_evicted": []
+    },
+    {
+      "round": 14,
+      "compacted": true,
+      "visible_evidence": [
+        "e1",
+        "e2"
+      ],
+      "shelf": [
+        "e1"
+      ],
+      "shelf_evicted": []
+    },
+    {
+      "round": 15,
+      "compacted": false,
+      "visible_evidence": [
+        "e1",
+        "e2"
+      ],
+      "shelf": [
+        "e1"
+      ],
+      "shelf_evicted": []
+    },
+    {
+      "round": 16,
+      "compacted": true,
+      "visible_evidence": [
+        "e1",
+        "e2"
+      ],
+      "shelf": [
+        "e1"
+      ],
+      "shelf_evicted": []
+    }
+  ],
+  "delivered_refs": [
+    "e1",
+    "e2"
+  ],
+  "submitted_refs": [],
+  "text_included": true,
+  "limitations": [
+    "Equivalence is compiler equality, not semantic identity or wasted-search proof",
+    "Raw-window visibility/selection is not entailment or complete evidence coverage",
+    "No live q26 replay or independent answer scoring is performed"
+  ]
+}

@@ -1,0 +1,248 @@
+{
+  "protocol": "stride-search-3",
+  "head": "4d9144847a86e6c2f79561ea333a0246f3c1fd50af2780a4541e03a5f4f1964f",
+  "outcome": "submitted",
+  "formal_correct": null,
+  "model_attempts": 6,
+  "backend_attempts": 12,
+  "queries": [
+    {
+      "round": 1,
+      "top_k": 10,
+      "equivalence_key": "aa67c2323e9c005b9c9d2cd277c9b0dc12d4fa292146376e4a90cc236e03897e",
+      "cached": false,
+      "query_sha256": "906028a936b7881aa0cf84ae224b1ff345fdcb91a35f9198e79497e21fda566a",
+      "query": "mosque capacity 150000 worshippers",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"mosque\" OR \"capacity\" OR \"150000\" OR \"worshippers\"",
+        "terms": [
+          "mosque",
+          "capacity",
+          "150000",
+          "worshippers"
+        ]
+      }
+    },
+    {
+      "round": 1,
+      "top_k": 10,
+      "equivalence_key": "ccc51280e4b31cbf6e2789395da263ee065c1803c17a33aa6fbf32aa5c6f5415",
+      "cached": false,
+      "query_sha256": "f6c9b718fa766aab4cd61836be7743caa069fb5e0037d213312827a10e859b43",
+      "query": "largest mosque world capacity",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"largest\" OR \"mosque\" OR \"world\" OR \"capacity\"",
+        "terms": [
+          "largest",
+          "mosque",
+          "world",
+          "capacity"
+        ]
+      }
+    },
+    {
+      "round": 1,
+      "top_k": 10,
+      "equivalence_key": "d90101a8b7a8f3adafce13fcfd30f30d7e46b5c9f8399e8af038857533240ce1",
+      "cached": false,
+      "query_sha256": "5b4e71b2bc7f9f93b420ed01a9d5198224bfa9a7558c3891e5911f6e714a4e1b",
+      "query": "mosque interior area 400000 square feet",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"mosque\" OR \"interior\" OR \"area\" OR \"400000\" OR \"square\" OR \"feet\"",
+        "terms": [
+          "mosque",
+          "interior",
+          "area",
+          "400000",
+          "square",
+          "feet"
+        ]
+      }
+    },
+    {
+      "round": 3,
+      "top_k": 10,
+      "equivalence_key": "654103a3711ac0c3cf6aeaff1d53f3bfeb08d0a7c4e59c7f17ba0b25476f6a9a",
+      "cached": false,
+      "query_sha256": "b14d6764e362221228977ea4184c26e52df117eefad4f64ec501964bd0342f0c",
+      "query": "mosques near Taj-ul-Masajid Bhopal built 18th century",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"mosques\" OR \"near\" OR \"taj\" OR \"ul\" OR \"masajid\" OR \"bhopal\" OR \"built\" OR \"18th\" OR \"century\"",
+        "terms": [
+          "mosques",
+          "near",
+          "taj",
+          "ul",
+          "masajid",
+          "bhopal",
+          "built",
+          "18th",
+          "century"
+        ]
+      }
+    },
+    {
+      "round": 3,
+      "top_k": 10,
+      "equivalence_key": "c9a21b3df4e84b6e78cacb22701ea03506378d0462af15b94b31ebd3b717b4d9",
+      "cached": false,
+      "query_sha256": "2055648864920e33a9bde3316dafd1872abdbd1d67eeb8db1bea2b4e414b8459",
+      "query": "hospital near Taj-ul-Masajid Bhopal established",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"hospital\" OR \"near\" OR \"taj\" OR \"ul\" OR \"masajid\" OR \"bhopal\" OR \"established\"",
+        "terms": [
+          "hospital",
+          "near",
+          "taj",
+          "ul",
+          "masajid",
+          "bhopal",
+          "established"
+        ]
+      }
+    },
+    {
+      "round": 3,
+      "top_k": 10,
+      "equivalence_key": "498b40f7c800b4917d8ff4b0c88cba5c5f58e7e7231389f8a7c69f53c75fa128",
+      "cached": false,
+      "query_sha256": "94415335fc8af153298f1c78391a301abb0df768f8b962b5e63e826fe56c04fc",
+      "query": "Shahjahanabad Bhopal mosque hospital nearby",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"shahjahanabad\" OR \"bhopal\" OR \"mosque\" OR \"hospital\" OR \"nearby\"",
+        "terms": [
+          "shahjahanabad",
+          "bhopal",
+          "mosque",
+          "hospital",
+          "nearby"
+        ]
+      }
+    },
+    {
+      "round": 4,
+      "top_k": 10,
+      "equivalence_key": "306bb4a66cf53db60f8c7448f5e3d8251eee2256759c73f639843934a419faf0",
+      "cached": false,
+      "query_sha256": "83a1e663b5562d250231f9e27a3ac9acb20bff1a36925e45b8418bd26c5b8f72",
+      "query": "Moti Masjid Bhopal construction year Sikander Jahan Begum built",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"moti\" OR \"masjid\" OR \"bhopal\" OR \"construction\" OR \"year\" OR \"sikander\" OR \"jahan\" OR \"begum\" OR \"built\"",
+        "terms": [
+          "moti",
+          "masjid",
+          "bhopal",
+          "construction",
+          "year",
+          "sikander",
+          "jahan",
+          "begum",
+          "built"
+        ]
+      }
+    },
+    {
+      "round": 4,
+      "top_k": 10,
+      "equivalence_key": "afb716e211bce03409e39163becfc41e0616d07390b0e1612935cbcab16026d2",
+      "cached": false,
+      "query_sha256": "b25ede99f150b62f987a2641beeddfd1eaefadbe986c4c53e70c76f0b4d992ef",
+      "query": "Hamidia Hospital Bhopal established year founded history",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"hamidia\" OR \"hospital\" OR \"bhopal\" OR \"established\" OR \"year\" OR \"founded\" OR \"history\"",
+        "terms": [
+          "hamidia",
+          "hospital",
+          "bhopal",
+          "established",
+          "year",
+          "founded",
+          "history"
+        ]
+      }
+    }
+  ],
+  "equivalent_query_repeats": 0,
+  "views": [
+    {
+      "round": 1,
+      "compacted": false,
+      "visible_evidence": [],
+      "shelf": [],
+      "shelf_evicted": []
+    },
+    {
+      "round": 2,
+      "compacted": false,
+      "visible_evidence": [],
+      "shelf": [],
+      "shelf_evicted": []
+    },
+    {
+      "round": 3,
+      "compacted": false,
+      "visible_evidence": [
+        "e1"
+      ],
+      "shelf": [],
+      "shelf_evicted": []
+    },
+    {
+      "round": 4,
+      "compacted": false,
+      "visible_evidence": [
+        "e1"
+      ],
+      "shelf": [],
+      "shelf_evicted": []
+    },
+    {
+      "round": 5,
+      "compacted": false,
+      "visible_evidence": [
+        "e1",
+        "e2"
+      ],
+      "shelf": [],
+      "shelf_evicted": []
+    },
+    {
+      "round": 6,
+      "compacted": false,
+      "visible_evidence": [
+        "e1",
+        "e2",
+        "e3",
+        "e4"
+      ],
+      "shelf": [],
+      "shelf_evicted": []
+    }
+  ],
+  "delivered_refs": [
+    "e1",
+    "e2",
+    "e3",
+    "e4"
+  ],
+  "submitted_refs": [
+    "e1",
+    "e2",
+    "e3",
+    "e4"
+  ],
+  "text_included": true,
+  "limitations": [
+    "Equivalence is compiler equality, not semantic identity or wasted-search proof",
+    "Raw-window visibility/selection is not entailment or complete evidence coverage",
+    "No live q26 replay or independent answer scoring is performed"
+  ]
+}

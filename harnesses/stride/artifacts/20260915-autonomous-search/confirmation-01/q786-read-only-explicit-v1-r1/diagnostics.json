@@ -1,0 +1,776 @@
+{
+  "protocol": "stride-search-3",
+  "head": "6843b3ceefd9dd9d43c08fdc0a5be7ede3cc0c686724a70c595ce83ead28f07a",
+  "outcome": "abstained",
+  "formal_correct": null,
+  "model_attempts": 14,
+  "backend_attempts": 22,
+  "queries": [
+    {
+      "round": 1,
+      "top_k": 5,
+      "equivalence_key": "ad0ce633b0bfcd5f55cfd8c042e457303ec16c3628798577360a7f6c8869df38",
+      "cached": false,
+      "query_sha256": "99e74a7a3b5f3b579b6afd2bb1784416acd1315ac516eabf00ca135d3e308017",
+      "query": "Perfectly formed Indian descent actor born 1950s",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"perfectly\" OR \"formed\" OR \"indian\" OR \"descent\" OR \"actor\" OR \"born\" OR \"1950s\"",
+        "terms": [
+          "perfectly",
+          "formed",
+          "indian",
+          "descent",
+          "actor",
+          "born",
+          "1950s"
+        ]
+      }
+    },
+    {
+      "round": 1,
+      "top_k": 5,
+      "equivalence_key": "f5ebfc4c43d11ea49c8481ee8611be8c604ce0be16ca1e941480cceb012f669c",
+      "cached": false,
+      "query_sha256": "41c14b0ab807b7040b46624379ede4dc01a812dc4cf5f37db58e61d895622436",
+      "query": "short film directed with nephew Indian heritage",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"short\" OR \"film\" OR \"directed\" OR \"with\" OR \"nephew\" OR \"indian\" OR \"heritage\"",
+        "terms": [
+          "short",
+          "film",
+          "directed",
+          "with",
+          "nephew",
+          "indian",
+          "heritage"
+        ]
+      }
+    },
+    {
+      "round": 1,
+      "top_k": 5,
+      "equivalence_key": "aed80d13be2a9662b93adce2a41a7f5d0a3752294d1e231965d7f0a8b2157b39",
+      "cached": false,
+      "query_sha256": "c1d0e70ba1342481f17d9727cab3505c366401aa50d433cb7a6c441a6e3581e2",
+      "query": "dinosaur sci-fi adventure English film series director",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"dinosaur\" OR \"sci\" OR \"fi\" OR \"adventure\" OR \"english\" OR \"film\" OR \"series\" OR \"director\"",
+        "terms": [
+          "dinosaur",
+          "sci",
+          "fi",
+          "adventure",
+          "english",
+          "film",
+          "series",
+          "director"
+        ]
+      }
+    },
+    {
+      "round": 2,
+      "top_k": 5,
+      "equivalence_key": "fd714b43d077cb58cf1077a512bea190e52546f2ccb087fa87f52030eaa02c46",
+      "cached": false,
+      "query_sha256": "e14cd389e4d4e25d36c18a3320f1193e7a2f13a9c320d6969bc53f9447980516",
+      "query": "Ray Harryhausen film 91 minutes actor Indian",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"ray\" OR \"harryhausen\" OR \"film\" OR \"91\" OR \"minutes\" OR \"actor\" OR \"indian\"",
+        "terms": [
+          "ray",
+          "harryhausen",
+          "film",
+          "91",
+          "minutes",
+          "actor",
+          "indian"
+        ]
+      }
+    },
+    {
+      "round": 2,
+      "top_k": 5,
+      "equivalence_key": "dfc268b961e4dd9f5102382c67d6c452ba626e3c958e553db4e959d2a09fd451",
+      "cached": false,
+      "query_sha256": "d984861905be30ee1d3684e383d52e2a47bdaaae807f640347ebae36abe7a470",
+      "query": "short film directed with nephew Ray Harryhausen cast",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"short\" OR \"film\" OR \"directed\" OR \"with\" OR \"nephew\" OR \"ray\" OR \"harryhausen\" OR \"cast\"",
+        "terms": [
+          "short",
+          "film",
+          "directed",
+          "with",
+          "nephew",
+          "ray",
+          "harryhausen",
+          "cast"
+        ]
+      }
+    },
+    {
+      "round": 2,
+      "top_k": 5,
+      "equivalence_key": "68dcc8b460049b3898a31f91f28608ee8b6b523c22f04cfe3144620650335ccd",
+      "cached": false,
+      "query_sha256": "a906a6fe9257df74e6af498b22c3a80111ac32bbd3f87da73a1f0d1057d4f95a",
+      "query": "actor born 1950s Indian immigrant parents Harryhausen film",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"actor\" OR \"born\" OR \"1950s\" OR \"indian\" OR \"immigrant\" OR \"parents\" OR \"harryhausen\" OR \"film\"",
+        "terms": [
+          "actor",
+          "born",
+          "1950s",
+          "indian",
+          "immigrant",
+          "parents",
+          "harryhausen",
+          "film"
+        ]
+      }
+    },
+    {
+      "round": 3,
+      "top_k": 5,
+      "equivalence_key": "bf8d87ab08c743c561f5ff21822f5977cdde7e7e0e3d8806bce3c9e8d6bbdea0",
+      "cached": false,
+      "query_sha256": "419ae5344ba8a36632adb58e714161465bae89cdb43fbfb136ed317d2c04d704",
+      "query": "Don Chaffey filmography 91 minutes running time",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"don\" OR \"chaffey\" OR \"filmography\" OR \"91\" OR \"minutes\" OR \"running\" OR \"time\"",
+        "terms": [
+          "don",
+          "chaffey",
+          "filmography",
+          "91",
+          "minutes",
+          "running",
+          "time"
+        ]
+      }
+    },
+    {
+      "round": 3,
+      "top_k": 5,
+      "equivalence_key": "ecc23d22e4103faf1bf0eac0e4dbbed9dfaab8a2138ec4d068c9fbcf2bb23f2c",
+      "cached": false,
+      "query_sha256": "ccd990c52e2ceab1d08fe83fa6abdd7cb9aefed8fc23418830cce10382151878",
+      "query": "One Million Years B.C. running time 91 minutes cast",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"one\" OR \"million\" OR \"years\" OR \"b\" OR \"c\" OR \"running\" OR \"time\" OR \"91\" OR \"minutes\" OR \"cast\"",
+        "terms": [
+          "one",
+          "million",
+          "years",
+          "b",
+          "c",
+          "running",
+          "time",
+          "91",
+          "minutes",
+          "cast"
+        ]
+      }
+    },
+    {
+      "round": 3,
+      "top_k": 5,
+      "equivalence_key": "ed30684a527299e80d1a23a217633f82a874a381b6edcd4912a3ed31b7fa1b4f",
+      "cached": false,
+      "query_sha256": "4b59b45de4b92be632dbf2df75c052994b37282200a87728d0c89013fb651e94",
+      "query": "actor described themselves perfectly formed Indian parents",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"actor\" OR \"described\" OR \"themselves\" OR \"perfectly\" OR \"formed\" OR \"indian\" OR \"parents\"",
+        "terms": [
+          "actor",
+          "described",
+          "themselves",
+          "perfectly",
+          "formed",
+          "indian",
+          "parents"
+        ]
+      }
+    },
+    {
+      "round": 5,
+      "top_k": 5,
+      "equivalence_key": "73a3ab115dc9237d297afe936e2bfbd99e2d141240574445e29a974f95639b32",
+      "cached": false,
+      "query_sha256": "5786110ec5e17752186a81df26ce1454abc87a9e30277750e28e2a60a6c4f123",
+      "query": "One Million Years B.C. 1966 film runtime cast list",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"one\" OR \"million\" OR \"years\" OR \"b\" OR \"c\" OR \"1966\" OR \"film\" OR \"runtime\" OR \"cast\" OR \"list\"",
+        "terms": [
+          "one",
+          "million",
+          "years",
+          "b",
+          "c",
+          "1966",
+          "film",
+          "runtime",
+          "cast",
+          "list"
+        ]
+      }
+    },
+    {
+      "round": 5,
+      "top_k": 5,
+      "equivalence_key": "ab5bf036c2ad709a16acaa0f233740d2df045123ab34319cc59ca08a08782f82",
+      "cached": false,
+      "query_sha256": "ae5259c289a37f85066fc0519420d8d11b9cefa4e3c52164d67fba49551901c5",
+      "query": "Don Chaffey director filmography dinosaur adventure films",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"don\" OR \"chaffey\" OR \"director\" OR \"filmography\" OR \"dinosaur\" OR \"adventure\" OR \"films\"",
+        "terms": [
+          "don",
+          "chaffey",
+          "director",
+          "filmography",
+          "dinosaur",
+          "adventure",
+          "films"
+        ]
+      }
+    },
+    {
+      "round": 5,
+      "top_k": 5,
+      "equivalence_key": "040d32e4645a50fcac49625cb8705c8273ba187028865ff985f1b12653b84c6b",
+      "cached": false,
+      "query_sha256": "54c307fbf0ed40f53fd3b0a29ed5c557c18241d6c732c1f93126853f80f20feb",
+      "query": "short film directed with nephew actor Indian heritage",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"short\" OR \"film\" OR \"directed\" OR \"with\" OR \"nephew\" OR \"actor\" OR \"indian\" OR \"heritage\"",
+        "terms": [
+          "short",
+          "film",
+          "directed",
+          "with",
+          "nephew",
+          "actor",
+          "indian",
+          "heritage"
+        ]
+      }
+    },
+    {
+      "round": 6,
+      "top_k": 5,
+      "equivalence_key": "1ae30aa8b72cf90615b204a3051d9cbaba494478ad7376214c7ddb39b94cb511",
+      "cached": false,
+      "query_sha256": "82fa6e12252cadd7d80723b075b78082d3a22a7be772c9ad6726cbabd0272c59",
+      "query": "One Million Years B.C. Wikipedia runtime cast",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"one\" OR \"million\" OR \"years\" OR \"b\" OR \"c\" OR \"wikipedia\" OR \"runtime\" OR \"cast\"",
+        "terms": [
+          "one",
+          "million",
+          "years",
+          "b",
+          "c",
+          "wikipedia",
+          "runtime",
+          "cast"
+        ]
+      }
+    },
+    {
+      "round": 6,
+      "top_k": 5,
+      "equivalence_key": "3e90ea8ad998ce613799787536602d2152c877939a5044d915f9ab7a8fadec57",
+      "cached": false,
+      "query_sha256": "19964f1f1ee63796a4926a1bdd5da7d137864ee36331e97796d813a17eeacd5f",
+      "query": "Don Chaffey filmography Wikipedia",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"don\" OR \"chaffey\" OR \"filmography\" OR \"wikipedia\"",
+        "terms": [
+          "don",
+          "chaffey",
+          "filmography",
+          "wikipedia"
+        ]
+      }
+    },
+    {
+      "round": 6,
+      "top_k": 5,
+      "equivalence_key": "fd6707ca0fd0e7f2d9773790d21cc640a3f75ac04b3aafbd1aaffcb199a422e4",
+      "cached": false,
+      "query_sha256": "ed2024f1e196b4dc9a768ca52a8a61007cc6bea9415ed779943e6ce1872cca7d",
+      "query": "Perfectly formed quote actor Indian descent",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"perfectly\" OR \"formed\" OR \"quote\" OR \"actor\" OR \"indian\" OR \"descent\"",
+        "terms": [
+          "perfectly",
+          "formed",
+          "quote",
+          "actor",
+          "indian",
+          "descent"
+        ]
+      }
+    },
+    {
+      "round": 7,
+      "top_k": 5,
+      "equivalence_key": "2c94b8676e78d3ada79c3028f5254618a6842e70c156870d2efb01bec27dc153",
+      "cached": false,
+      "query_sha256": "c5c875246c83a89cc0e41f15a44d5cd2be2de3cd5e3ee7f64732c95abf83c315",
+      "query": "One Million Years B.C. 1966 film Wikipedia",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"one\" OR \"million\" OR \"years\" OR \"b\" OR \"c\" OR \"1966\" OR \"film\" OR \"wikipedia\"",
+        "terms": [
+          "one",
+          "million",
+          "years",
+          "b",
+          "c",
+          "1966",
+          "film",
+          "wikipedia"
+        ]
+      }
+    },
+    {
+      "round": 7,
+      "top_k": 5,
+      "equivalence_key": "95393e94dec76e953f5b15e5845063d8ae6f6770760234dd767a1c8b6053116d",
+      "cached": false,
+      "query_sha256": "e2015e99b3bea03428ad2e5e115b031c849209cbc2ffe6622765ef41cbc3541f",
+      "query": "Don Chaffey director Wikipedia filmography",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"don\" OR \"chaffey\" OR \"director\" OR \"wikipedia\" OR \"filmography\"",
+        "terms": [
+          "don",
+          "chaffey",
+          "director",
+          "wikipedia",
+          "filmography"
+        ]
+      }
+    },
+    {
+      "round": 7,
+      "top_k": 5,
+      "equivalence_key": "1aa76c3777e6c48a7752fcfffe287191250de2ee1d5edfa8b1ad250b84ad2914",
+      "cached": false,
+      "query_sha256": "4a24f1d126f151257e3d881122e1e84604245f2bb6696a9673146ab45c8fc401",
+      "query": "actor born 1950s Indian immigrant parents short film nephew perfectly formed",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"actor\" OR \"born\" OR \"1950s\" OR \"indian\" OR \"immigrant\" OR \"parents\" OR \"short\" OR \"film\" OR \"nephew\" OR \"perfectly\" OR \"formed\"",
+        "terms": [
+          "actor",
+          "born",
+          "1950s",
+          "indian",
+          "immigrant",
+          "parents",
+          "short",
+          "film",
+          "nephew",
+          "perfectly",
+          "formed"
+        ]
+      }
+    },
+    {
+      "round": 8,
+      "top_k": 5,
+      "equivalence_key": "6192e25a384a486f0c63aa9531b177ff438a361693c6a269a39c12cc42d16213",
+      "cached": false,
+      "query_sha256": "bea96cb59c651bf5f6dc59846bf41ddec350a7c52fc90e847ebad025e26463f6",
+      "query": "One Million Years B.C. 1966 film runtime 100 minutes cast",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"one\" OR \"million\" OR \"years\" OR \"b\" OR \"c\" OR \"1966\" OR \"film\" OR \"runtime\" OR \"100\" OR \"minutes\" OR \"cast\"",
+        "terms": [
+          "one",
+          "million",
+          "years",
+          "b",
+          "c",
+          "1966",
+          "film",
+          "runtime",
+          "100",
+          "minutes",
+          "cast"
+        ]
+      }
+    },
+    {
+      "round": 8,
+      "top_k": 5,
+      "equivalence_key": "017df936c69ff7159cf32b007564de9b7743d2524f3aaba22fb917b4050b266a",
+      "cached": false,
+      "query_sha256": "50590fb38d9591dac87c092cf7db066675b525822a0b4dc45f20f83e9a999b40",
+      "query": "Don Chaffey director filmography Wikipedia",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"don\" OR \"chaffey\" OR \"director\" OR \"filmography\" OR \"wikipedia\"",
+        "terms": [
+          "don",
+          "chaffey",
+          "director",
+          "filmography",
+          "wikipedia"
+        ]
+      }
+    },
+    {
+      "round": 8,
+      "top_k": 5,
+      "equivalence_key": "168531ac7ff31240fb9fdff76f78d32a574b69b5be72005b039a5664dd262c75",
+      "cached": false,
+      "query_sha256": "c6fd2045d90693764c4b4aad6a5ee5264ed6e7d3f9fe4133e52c0391eb0c50a0",
+      "query": "short film directed with nephew actor Indian heritage born 1950s",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"short\" OR \"film\" OR \"directed\" OR \"with\" OR \"nephew\" OR \"actor\" OR \"indian\" OR \"heritage\" OR \"born\" OR \"1950s\"",
+        "terms": [
+          "short",
+          "film",
+          "directed",
+          "with",
+          "nephew",
+          "actor",
+          "indian",
+          "heritage",
+          "born",
+          "1950s"
+        ]
+      }
+    },
+    {
+      "round": 9,
+      "top_k": 5,
+      "equivalence_key": "f6e9c408e3e66ac2dc8a6225a4fbb0b3944501c98441ceff8a015f4e6e810117",
+      "cached": false,
+      "query_sha256": "f8aaead8457c86f1dfafb916e666337c7bbc458753e9dfbbd7f369cf33be7e75",
+      "query": "One Million Years B.C. 1966 film Wikipedia runtime cast",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"one\" OR \"million\" OR \"years\" OR \"b\" OR \"c\" OR \"1966\" OR \"film\" OR \"wikipedia\" OR \"runtime\" OR \"cast\"",
+        "terms": [
+          "one",
+          "million",
+          "years",
+          "b",
+          "c",
+          "1966",
+          "film",
+          "wikipedia",
+          "runtime",
+          "cast"
+        ]
+      }
+    },
+    {
+      "round": 9,
+      "top_k": 5,
+      "equivalence_key": "017df936c69ff7159cf32b007564de9b7743d2524f3aaba22fb917b4050b266a",
+      "cached": true,
+      "query_sha256": "50590fb38d9591dac87c092cf7db066675b525822a0b4dc45f20f83e9a999b40",
+      "query": "Don Chaffey director filmography Wikipedia",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"don\" OR \"chaffey\" OR \"director\" OR \"filmography\" OR \"wikipedia\"",
+        "terms": [
+          "don",
+          "chaffey",
+          "director",
+          "filmography",
+          "wikipedia"
+        ]
+      }
+    },
+    {
+      "round": 9,
+      "top_k": 5,
+      "equivalence_key": "168531ac7ff31240fb9fdff76f78d32a574b69b5be72005b039a5664dd262c75",
+      "cached": true,
+      "query_sha256": "c6fd2045d90693764c4b4aad6a5ee5264ed6e7d3f9fe4133e52c0391eb0c50a0",
+      "query": "short film directed with nephew actor Indian heritage born 1950s",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"short\" OR \"film\" OR \"directed\" OR \"with\" OR \"nephew\" OR \"actor\" OR \"indian\" OR \"heritage\" OR \"born\" OR \"1950s\"",
+        "terms": [
+          "short",
+          "film",
+          "directed",
+          "with",
+          "nephew",
+          "actor",
+          "indian",
+          "heritage",
+          "born",
+          "1950s"
+        ]
+      }
+    },
+    {
+      "round": 10,
+      "top_k": 5,
+      "equivalence_key": "f6e9c408e3e66ac2dc8a6225a4fbb0b3944501c98441ceff8a015f4e6e810117",
+      "cached": true,
+      "query_sha256": "f8aaead8457c86f1dfafb916e666337c7bbc458753e9dfbbd7f369cf33be7e75",
+      "query": "One Million Years B.C. 1966 film Wikipedia runtime cast",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"one\" OR \"million\" OR \"years\" OR \"b\" OR \"c\" OR \"1966\" OR \"film\" OR \"wikipedia\" OR \"runtime\" OR \"cast\"",
+        "terms": [
+          "one",
+          "million",
+          "years",
+          "b",
+          "c",
+          "1966",
+          "film",
+          "wikipedia",
+          "runtime",
+          "cast"
+        ]
+      }
+    },
+    {
+      "round": 10,
+      "top_k": 5,
+      "equivalence_key": "017df936c69ff7159cf32b007564de9b7743d2524f3aaba22fb917b4050b266a",
+      "cached": true,
+      "query_sha256": "50590fb38d9591dac87c092cf7db066675b525822a0b4dc45f20f83e9a999b40",
+      "query": "Don Chaffey director filmography Wikipedia",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"don\" OR \"chaffey\" OR \"director\" OR \"filmography\" OR \"wikipedia\"",
+        "terms": [
+          "don",
+          "chaffey",
+          "director",
+          "filmography",
+          "wikipedia"
+        ]
+      }
+    },
+    {
+      "round": 10,
+      "top_k": 5,
+      "equivalence_key": "168531ac7ff31240fb9fdff76f78d32a574b69b5be72005b039a5664dd262c75",
+      "cached": true,
+      "query_sha256": "c6fd2045d90693764c4b4aad6a5ee5264ed6e7d3f9fe4133e52c0391eb0c50a0",
+      "query": "short film directed with nephew actor Indian heritage born 1950s",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"short\" OR \"film\" OR \"directed\" OR \"with\" OR \"nephew\" OR \"actor\" OR \"indian\" OR \"heritage\" OR \"born\" OR \"1950s\"",
+        "terms": [
+          "short",
+          "film",
+          "directed",
+          "with",
+          "nephew",
+          "actor",
+          "indian",
+          "heritage",
+          "born",
+          "1950s"
+        ]
+      }
+    },
+    {
+      "round": 11,
+      "top_k": 5,
+      "equivalence_key": "f6e9c408e3e66ac2dc8a6225a4fbb0b3944501c98441ceff8a015f4e6e810117",
+      "cached": true,
+      "query_sha256": "f8aaead8457c86f1dfafb916e666337c7bbc458753e9dfbbd7f369cf33be7e75",
+      "query": "One Million Years B.C. 1966 film Wikipedia runtime cast",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"one\" OR \"million\" OR \"years\" OR \"b\" OR \"c\" OR \"1966\" OR \"film\" OR \"wikipedia\" OR \"runtime\" OR \"cast\"",
+        "terms": [
+          "one",
+          "million",
+          "years",
+          "b",
+          "c",
+          "1966",
+          "film",
+          "wikipedia",
+          "runtime",
+          "cast"
+        ]
+      }
+    },
+    {
+      "round": 11,
+      "top_k": 5,
+      "equivalence_key": "017df936c69ff7159cf32b007564de9b7743d2524f3aaba22fb917b4050b266a",
+      "cached": true,
+      "query_sha256": "50590fb38d9591dac87c092cf7db066675b525822a0b4dc45f20f83e9a999b40",
+      "query": "Don Chaffey director filmography Wikipedia",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"don\" OR \"chaffey\" OR \"director\" OR \"filmography\" OR \"wikipedia\"",
+        "terms": [
+          "don",
+          "chaffey",
+          "director",
+          "filmography",
+          "wikipedia"
+        ]
+      }
+    },
+    {
+      "round": 11,
+      "top_k": 5,
+      "equivalence_key": "168531ac7ff31240fb9fdff76f78d32a574b69b5be72005b039a5664dd262c75",
+      "cached": true,
+      "query_sha256": "c6fd2045d90693764c4b4aad6a5ee5264ed6e7d3f9fe4133e52c0391eb0c50a0",
+      "query": "short film directed with nephew actor Indian heritage born 1950s",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"short\" OR \"film\" OR \"directed\" OR \"with\" OR \"nephew\" OR \"actor\" OR \"indian\" OR \"heritage\" OR \"born\" OR \"1950s\"",
+        "terms": [
+          "short",
+          "film",
+          "directed",
+          "with",
+          "nephew",
+          "actor",
+          "indian",
+          "heritage",
+          "born",
+          "1950s"
+        ]
+      }
+    }
+  ],
+  "equivalent_query_repeats": 8,
+  "views": [
+    {
+      "round": 1,
+      "compacted": false,
+      "visible_evidence": [],
+      "shelf": [],
+      "shelf_evicted": []
+    },
+    {
+      "round": 2,
+      "compacted": false,
+      "visible_evidence": [],
+      "shelf": [],
+      "shelf_evicted": []
+    },
+    {
+      "round": 3,
+      "compacted": false,
+      "visible_evidence": [],
+      "shelf": [],
+      "shelf_evicted": []
+    },
+    {
+      "round": 4,
+      "compacted": false,
+      "visible_evidence": [],
+      "shelf": [],
+      "shelf_evicted": []
+    },
+    {
+      "round": 5,
+      "compacted": false,
+      "visible_evidence": [],
+      "shelf": [],
+      "shelf_evicted": []
+    },
+    {
+      "round": 6,
+      "compacted": false,
+      "visible_evidence": [],
+      "shelf": [],
+      "shelf_evicted": []
+    },
+    {
+      "round": 7,
+      "compacted": false,
+      "visible_evidence": [],
+      "shelf": [],
+      "shelf_evicted": []
+    },
+    {
+      "round": 8,
+      "compacted": false,
+      "visible_evidence": [],
+      "shelf": [],
+      "shelf_evicted": []
+    },
+    {
+      "round": 9,
+      "compacted": true,
+      "visible_evidence": [],
+      "shelf": [],
+      "shelf_evicted": []
+    },
+    {
+      "round": 10,
+      "compacted": false,
+      "visible_evidence": [],
+      "shelf": [],
+      "shelf_evicted": []
+    },
+    {
+      "round": 11,
+      "compacted": false,
+      "visible_evidence": [],
+      "shelf": [],
+      "shelf_evicted": []
+    },
+    {
+      "round": 12,
+      "compacted": false,
+      "visible_evidence": [],
+      "shelf": [],
+      "shelf_evicted": []
+    },
+    {
+      "round": 13,
+      "compacted": false,
+      "visible_evidence": [],
+      "shelf": [],
+      "shelf_evicted": []
+    },
+    {
+      "round": 14,
+      "compacted": false,
+      "visible_evidence": [],
+      "shelf": [],
+      "shelf_evicted": []
+    }
+  ],
+  "delivered_refs": [],
+  "submitted_refs": [],
+  "text_included": true,
+  "limitations": [
+    "Equivalence is compiler equality, not semantic identity or wasted-search proof",
+    "Raw-window visibility/selection is not entailment or complete evidence coverage",
+    "No live q26 replay or independent answer scoring is performed"
+  ]
+}

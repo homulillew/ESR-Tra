@@ -1,0 +1,41 @@
+{
+  "terminal": {
+    "answer": "Vakkorama",
+    "answer_representation": {
+      "input_type": "string",
+      "operation": "identity",
+      "rule": "string-integer-v1"
+    },
+    "basis": [
+      {
+        "document": "d5",
+        "document_chars": 13639,
+        "end": 3000,
+        "kind": "raw_evidence",
+        "ref": "e1",
+        "sha256": "ed282b99cfb0aae5a430ddfadeb3348fa20e85aac24fb4501bf9cd3b3dadb4b2",
+        "snapshot": "7d8960afbde4b93401ea738e66299a6ee3d0dee47906ba8e3a86ebdea642ffcd",
+        "start": 0
+      },
+      {
+        "document": "d5",
+        "document_chars": 13639,
+        "end": 6000,
+        "kind": "raw_evidence",
+        "ref": "e2",
+        "sha256": "97a6e11f3f34512afbebf984635c4f0118e43a0fd1a04e71a3f4cf755defe729",
+        "snapshot": "7d8960afbde4b93401ea738e66299a6ee3d0dee47906ba8e3a86ebdea642ffcd",
+        "start": 3000
+      }
+    ],
+    "elapsed_seconds": 20.432152399996994,
+    "outcome": "submitted",
+    "refs": [
+      "e1",
+      "e2"
+    ],
+    "semantic_status": "not_automatically_verified"
+  },
+  "formal_correct": null,
+  "http_attempts": 4
+}

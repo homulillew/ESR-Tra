@@ -1,0 +1,825 @@
+{
+  "protocol": "stride-search-3",
+  "head": "b0b8e21d47c39dd75128bfd605a07ea2af562dcd5e055229fa91ada7a4c106b4",
+  "outcome": "abstained",
+  "formal_correct": null,
+  "model_attempts": 11,
+  "backend_attempts": 24,
+  "queries": [
+    {
+      "round": 1,
+      "top_k": 10,
+      "equivalence_key": "9a5857d918149a83ba00ab2daf3e3ed1a60b5f299bd31a004df4fc3015d8561b",
+      "cached": false,
+      "query_sha256": "83b79b42292ab33acb7a1dae965d148a9fa930d577f02bdbfd1fea2d0af9e647",
+      "query": "snooker match breaks 100s 90s 70s 60s 50s frames championship",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"snooker\" OR \"match\" OR \"breaks\" OR \"100s\" OR \"90s\" OR \"70s\" OR \"60s\" OR \"50s\" OR \"frames\" OR \"championship\"",
+        "terms": [
+          "snooker",
+          "match",
+          "breaks",
+          "100s",
+          "90s",
+          "70s",
+          "60s",
+          "50s",
+          "frames",
+          "championship"
+        ]
+      }
+    },
+    {
+      "round": 1,
+      "top_k": 10,
+      "equivalence_key": "808a1a4537c36869c089092647eed4063633fff63ce2fc1da2f675850d4ae919",
+      "cached": false,
+      "query_sha256": "4b6dc6bf5aaf6938f9c1638e30837576499da968013397df7cf9a5bf30868b23",
+      "query": "snooker championship match century breaks 90 break 70 breaks losing player",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"snooker\" OR \"championship\" OR \"match\" OR \"century\" OR \"breaks\" OR \"90\" OR \"break\" OR \"70\" OR \"losing\" OR \"player\"",
+        "terms": [
+          "snooker",
+          "championship",
+          "match",
+          "century",
+          "breaks",
+          "90",
+          "break",
+          "70",
+          "losing",
+          "player"
+        ]
+      }
+    },
+    {
+      "round": 1,
+      "top_k": 10,
+      "equivalence_key": "2f69114b3a52e998d4a4a2c4882f7d2a5a1cd84f5691e54fb4caa3e4bb708fb8",
+      "cached": false,
+      "query_sha256": "ba727fd742788539795ba66c8f266e90609eb0022025bd9591d74a1105210ffd",
+      "query": "snooker match statistics frames breaks 50s 60s 70s 90s 100s",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"snooker\" OR \"match\" OR \"statistics\" OR \"frames\" OR \"breaks\" OR \"50s\" OR \"60s\" OR \"70s\" OR \"90s\" OR \"100s\"",
+        "terms": [
+          "snooker",
+          "match",
+          "statistics",
+          "frames",
+          "breaks",
+          "50s",
+          "60s",
+          "70s",
+          "90s",
+          "100s"
+        ]
+      }
+    },
+    {
+      "round": 1,
+      "top_k": 10,
+      "equivalence_key": "3793f4fbb07f4b8957bda2b830e3c128aef8924abf427cb1701a09277b0aa334",
+      "cached": false,
+      "query_sha256": "b31c098608eaf0a40d08e6d2c152659ea4064261acfe80a5b12eb83fb153fd12",
+      "query": "snooker player turned professional 2011 2012 2013 2014 2015 2016",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"snooker\" OR \"player\" OR \"turned\" OR \"professional\" OR \"2011\" OR \"2012\" OR \"2013\" OR \"2014\" OR \"2015\" OR \"2016\"",
+        "terms": [
+          "snooker",
+          "player",
+          "turned",
+          "professional",
+          "2011",
+          "2012",
+          "2013",
+          "2014",
+          "2015",
+          "2016"
+        ]
+      }
+    },
+    {
+      "round": 1,
+      "top_k": 10,
+      "equivalence_key": "74613c8f35c799aa3c6a6c504d1e8ebc7692cd955e3447f437405f103cd3cf7b",
+      "cached": false,
+      "query_sha256": "f0ed0107f5c0f2074714ef8bd083681d78ac89bccaf0b562431787bb3b589e1e",
+      "query": "snooker professional debut year between 2010 2017",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"snooker\" OR \"professional\" OR \"debut\" OR \"year\" OR \"between\" OR \"2010\" OR \"2017\"",
+        "terms": [
+          "snooker",
+          "professional",
+          "debut",
+          "year",
+          "between",
+          "2010",
+          "2017"
+        ]
+      }
+    },
+    {
+      "round": 2,
+      "top_k": 10,
+      "equivalence_key": "ad3fca762cd7e4117f01b62a1069ef9f3baa5ed441747d2f0e3c673a0f466f81",
+      "cached": false,
+      "query_sha256": "f59e2b073647bb8167ac6b1188243acccd6eac328447cb36a904f30e600ce42b",
+      "query": "snooker referee became international referee December",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"snooker\" OR \"referee\" OR \"became\" OR \"international\" OR \"december\"",
+        "terms": [
+          "snooker",
+          "referee",
+          "became",
+          "international",
+          "december"
+        ]
+      }
+    },
+    {
+      "round": 2,
+      "top_k": 10,
+      "equivalence_key": "8fa7c332232f3139bd69c2a9adebfc28628c1b4a4f66556c939abe6d6c3c8507",
+      "cached": false,
+      "query_sha256": "72859116fa86f24ca8f9819db6de0526e5feb26eb49adcbae4fe36e859d526ca",
+      "query": "snooker international referee qualification December year",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"snooker\" OR \"international\" OR \"referee\" OR \"qualification\" OR \"december\" OR \"year\"",
+        "terms": [
+          "snooker",
+          "international",
+          "referee",
+          "qualification",
+          "december",
+          "year"
+        ]
+      }
+    },
+    {
+      "round": 2,
+      "top_k": 10,
+      "equivalence_key": "ca65487f0fe7c6ecb308308db633d911c2945d7b1d4c15f577f6763b8578e6a2",
+      "cached": false,
+      "query_sha256": "566a0f0a30ee987144870be7518a2fee3b0d1bed55896ca0a75c36ee1662de08",
+      "query": "snooker referee list international qualification date",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"snooker\" OR \"referee\" OR \"list\" OR \"international\" OR \"qualification\" OR \"date\"",
+        "terms": [
+          "snooker",
+          "referee",
+          "list",
+          "international",
+          "qualification",
+          "date"
+        ]
+      }
+    },
+    {
+      "round": 2,
+      "top_k": 10,
+      "equivalence_key": "c11ee91208761d163cd5d45fc3021ff6efe4bf55ef7b47a7457a5550f623885e",
+      "cached": false,
+      "query_sha256": "4454a0744a4db7fcc7ed1b12201f4cc613026a3511a745dd60d46162c9e44ae8",
+      "query": "snooker player turned professional 2012 2013 2014 2015 2016 debut",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"snooker\" OR \"player\" OR \"turned\" OR \"professional\" OR \"2012\" OR \"2013\" OR \"2014\" OR \"2015\" OR \"2016\" OR \"debut\"",
+        "terms": [
+          "snooker",
+          "player",
+          "turned",
+          "professional",
+          "2012",
+          "2013",
+          "2014",
+          "2015",
+          "2016",
+          "debut"
+        ]
+      }
+    },
+    {
+      "round": 2,
+      "top_k": 10,
+      "equivalence_key": "3da6dc2d074d8b011390e2206abd81ea92fb48750389fcae673ce92c1e7a37a4",
+      "cached": false,
+      "query_sha256": "18dfc2b5864e2787000591af0b7740bbb907e011c493f645171f12890896b3c8",
+      "query": "snooker players who turned pro 2012 2013 2014 2015 2016",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"snooker\" OR \"players\" OR \"who\" OR \"turned\" OR \"pro\" OR \"2012\" OR \"2013\" OR \"2014\" OR \"2015\" OR \"2016\"",
+        "terms": [
+          "snooker",
+          "players",
+          "who",
+          "turned",
+          "pro",
+          "2012",
+          "2013",
+          "2014",
+          "2015",
+          "2016"
+        ]
+      }
+    },
+    {
+      "round": 3,
+      "top_k": 10,
+      "equivalence_key": "5c28afcf663fcee0ae0beba6ac262ed5b16f7f019c270497204dba7211cb2020",
+      "cached": false,
+      "query_sha256": "18708aa760a2ae9557f5e73b14c7917989ca86fa331efe548b90365153ce5959",
+      "query": "snooker referee Desislava Bozhilova international referee December",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"snooker\" OR \"referee\" OR \"desislava\" OR \"bozhilova\" OR \"international\" OR \"december\"",
+        "terms": [
+          "snooker",
+          "referee",
+          "desislava",
+          "bozhilova",
+          "international",
+          "december"
+        ]
+      }
+    },
+    {
+      "round": 3,
+      "top_k": 10,
+      "equivalence_key": "9a7d5764bb0cb1ec4fff862bb7714728fefdb347b93279eee45fdb85a685f95e",
+      "cached": false,
+      "query_sha256": "0d0b9e1423fb6649a285b76c866d34b586019a9606158b81b0c4591e8dbbe636",
+      "query": "snooker referee Martina Züblin international qualification date",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"snooker\" OR \"referee\" OR \"martina\" OR \"züblin\" OR \"international\" OR \"qualification\" OR \"date\"",
+        "terms": [
+          "snooker",
+          "referee",
+          "martina",
+          "züblin",
+          "international",
+          "qualification",
+          "date"
+        ]
+      }
+    },
+    {
+      "round": 3,
+      "top_k": 10,
+      "equivalence_key": "7fde7a3bef9a24f555702c0e25408a52bed3c113e48c072279e84269bba81b66",
+      "cached": false,
+      "query_sha256": "1c47845da3be5b203cbe67161e8b70fabe06c79d5c43a47751c59a46c939d283",
+      "query": "snooker referee Olivier Marteel became international referee year",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"snooker\" OR \"referee\" OR \"olivier\" OR \"marteel\" OR \"became\" OR \"international\" OR \"year\"",
+        "terms": [
+          "snooker",
+          "referee",
+          "olivier",
+          "marteel",
+          "became",
+          "international",
+          "year"
+        ]
+      }
+    },
+    {
+      "round": 3,
+      "top_k": 10,
+      "equivalence_key": "5bb176658dce1247eb60c4de747a16060b8e556e04e3feac3661f03339cd8eea",
+      "cached": false,
+      "query_sha256": "6491ae2eedd0d1de669fbf55451007e370ab3538f36de23c763f19e572fdac09",
+      "query": "Luca Brecel turned professional 2011 snooker",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"luca\" OR \"brecel\" OR \"turned\" OR \"professional\" OR \"2011\" OR \"snooker\"",
+        "terms": [
+          "luca",
+          "brecel",
+          "turned",
+          "professional",
+          "2011",
+          "snooker"
+        ]
+      }
+    },
+    {
+      "round": 3,
+      "top_k": 10,
+      "equivalence_key": "1cbd7838b73be6ed07df2e202a4905a1feaf34d49f5ca00f4c548271e75dde72",
+      "cached": false,
+      "query_sha256": "0f9c07a3b9f4f9a3f58cf746cb0b49319ec7c19e5a4670773955f13249ecffc3",
+      "query": "Jack Lisowski turned professional 2012 snooker",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"jack\" OR \"lisowski\" OR \"turned\" OR \"professional\" OR \"2012\" OR \"snooker\"",
+        "terms": [
+          "jack",
+          "lisowski",
+          "turned",
+          "professional",
+          "2012",
+          "snooker"
+        ]
+      }
+    },
+    {
+      "round": 3,
+      "top_k": 10,
+      "equivalence_key": "f8e5e4d1f3e01192feac7b41a7b9d6ee1f3dc13276aa6c5f3070cd6b9bca4fde",
+      "cached": false,
+      "query_sha256": "04f20439b106bd4684c59cbb9e6f02bd8c8a77240e07f0777442d723916e1619",
+      "query": "Yan Bingtao turned professional 2016 snooker",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"yan\" OR \"bingtao\" OR \"turned\" OR \"professional\" OR \"2016\" OR \"snooker\"",
+        "terms": [
+          "yan",
+          "bingtao",
+          "turned",
+          "professional",
+          "2016",
+          "snooker"
+        ]
+      }
+    },
+    {
+      "round": 6,
+      "top_k": 10,
+      "equivalence_key": "45d5de2d5ad477cf7ccce268585f5c92dda22d06d3dcafbc021f812bfc655973",
+      "cached": false,
+      "query_sha256": "46af9b577b1f8da49b73395def064414fdd2c99cb79763556630958f22b8eae0",
+      "query": "snooker referee became international referee December Wikipedia",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"snooker\" OR \"referee\" OR \"became\" OR \"international\" OR \"december\" OR \"wikipedia\"",
+        "terms": [
+          "snooker",
+          "referee",
+          "became",
+          "international",
+          "december",
+          "wikipedia"
+        ]
+      }
+    },
+    {
+      "round": 6,
+      "top_k": 10,
+      "equivalence_key": "c6a0970fc4788223fe27b1b999fb9a5cc6fdf2d12ee0d7e71e915bf99e284a03",
+      "cached": false,
+      "query_sha256": "bfe88f58e079baeda78c29be1a247414d44548c7adeddbd6b3045ed2e2e90ce8",
+      "query": "snooker referee qualified international December year",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"snooker\" OR \"referee\" OR \"qualified\" OR \"international\" OR \"december\" OR \"year\"",
+        "terms": [
+          "snooker",
+          "referee",
+          "qualified",
+          "international",
+          "december",
+          "year"
+        ]
+      }
+    },
+    {
+      "round": 6,
+      "top_k": 10,
+      "equivalence_key": "10a58769656f64b47b8fc025cd3dca3a2878efb8eb16bb7469fde9b3b8550962",
+      "cached": false,
+      "query_sha256": "16a33d661bfcaedfab1f3a96cb981549c3d168ef9317365e70a7076b6802fa31",
+      "query": "snooker referee Wikipedia page international referee December",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"snooker\" OR \"referee\" OR \"wikipedia\" OR \"page\" OR \"international\" OR \"december\"",
+        "terms": [
+          "snooker",
+          "referee",
+          "wikipedia",
+          "page",
+          "international",
+          "december"
+        ]
+      }
+    },
+    {
+      "round": 6,
+      "top_k": 10,
+      "equivalence_key": "1caa05eb7c0500a6e084d29a28f39fbeb1d9275ba21aa8b55048726c1fb61265",
+      "cached": false,
+      "query_sha256": "a16adb5f84580a88cd005d2f283910224d00b7987fe094236192175b2703dd62",
+      "query": "Olivier Marteel snooker referee Wikipedia",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"olivier\" OR \"marteel\" OR \"snooker\" OR \"referee\" OR \"wikipedia\"",
+        "terms": [
+          "olivier",
+          "marteel",
+          "snooker",
+          "referee",
+          "wikipedia"
+        ]
+      }
+    },
+    {
+      "round": 6,
+      "top_k": 10,
+      "equivalence_key": "af095482ec2ec162e418719fd133c5aaa20289d19f290594e9fd50a98cadef1f",
+      "cached": false,
+      "query_sha256": "d1a021fe6523b324fa14850abcd963d49d22e4d0bfa3f61ddab9e336092809d5",
+      "query": "Desislava Bozhilova snooker referee Wikipedia",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"desislava\" OR \"bozhilova\" OR \"snooker\" OR \"referee\" OR \"wikipedia\"",
+        "terms": [
+          "desislava",
+          "bozhilova",
+          "snooker",
+          "referee",
+          "wikipedia"
+        ]
+      }
+    },
+    {
+      "round": 6,
+      "top_k": 10,
+      "equivalence_key": "0da67b838a317488efdfe94f739419ad3c3c71d2aac3f013046c6806daf5cc2d",
+      "cached": false,
+      "query_sha256": "7d0fcff44e3419beb8a48635041c7cdc6cb349d4d4545ef18784cf0354d92ebd",
+      "query": "Brendan Moore snooker referee Wikipedia",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"brendan\" OR \"moore\" OR \"snooker\" OR \"referee\" OR \"wikipedia\"",
+        "terms": [
+          "brendan",
+          "moore",
+          "snooker",
+          "referee",
+          "wikipedia"
+        ]
+      }
+    },
+    {
+      "round": 7,
+      "top_k": 10,
+      "equivalence_key": "1caa05eb7c0500a6e084d29a28f39fbeb1d9275ba21aa8b55048726c1fb61265",
+      "cached": true,
+      "query_sha256": "a16adb5f84580a88cd005d2f283910224d00b7987fe094236192175b2703dd62",
+      "query": "Olivier Marteel snooker referee Wikipedia",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"olivier\" OR \"marteel\" OR \"snooker\" OR \"referee\" OR \"wikipedia\"",
+        "terms": [
+          "olivier",
+          "marteel",
+          "snooker",
+          "referee",
+          "wikipedia"
+        ]
+      }
+    },
+    {
+      "round": 7,
+      "top_k": 10,
+      "equivalence_key": "af095482ec2ec162e418719fd133c5aaa20289d19f290594e9fd50a98cadef1f",
+      "cached": true,
+      "query_sha256": "d1a021fe6523b324fa14850abcd963d49d22e4d0bfa3f61ddab9e336092809d5",
+      "query": "Desislava Bozhilova snooker referee Wikipedia",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"desislava\" OR \"bozhilova\" OR \"snooker\" OR \"referee\" OR \"wikipedia\"",
+        "terms": [
+          "desislava",
+          "bozhilova",
+          "snooker",
+          "referee",
+          "wikipedia"
+        ]
+      }
+    },
+    {
+      "round": 7,
+      "top_k": 10,
+      "equivalence_key": "0da67b838a317488efdfe94f739419ad3c3c71d2aac3f013046c6806daf5cc2d",
+      "cached": true,
+      "query_sha256": "7d0fcff44e3419beb8a48635041c7cdc6cb349d4d4545ef18784cf0354d92ebd",
+      "query": "Brendan Moore snooker referee Wikipedia",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"brendan\" OR \"moore\" OR \"snooker\" OR \"referee\" OR \"wikipedia\"",
+        "terms": [
+          "brendan",
+          "moore",
+          "snooker",
+          "referee",
+          "wikipedia"
+        ]
+      }
+    },
+    {
+      "round": 7,
+      "top_k": 10,
+      "equivalence_key": "45d5de2d5ad477cf7ccce268585f5c92dda22d06d3dcafbc021f812bfc655973",
+      "cached": true,
+      "query_sha256": "46af9b577b1f8da49b73395def064414fdd2c99cb79763556630958f22b8eae0",
+      "query": "snooker referee became international referee December Wikipedia",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"snooker\" OR \"referee\" OR \"became\" OR \"international\" OR \"december\" OR \"wikipedia\"",
+        "terms": [
+          "snooker",
+          "referee",
+          "became",
+          "international",
+          "december",
+          "wikipedia"
+        ]
+      }
+    },
+    {
+      "round": 7,
+      "top_k": 10,
+      "equivalence_key": "c6a0970fc4788223fe27b1b999fb9a5cc6fdf2d12ee0d7e71e915bf99e284a03",
+      "cached": true,
+      "query_sha256": "bfe88f58e079baeda78c29be1a247414d44548c7adeddbd6b3045ed2e2e90ce8",
+      "query": "snooker referee qualified international December year",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"snooker\" OR \"referee\" OR \"qualified\" OR \"international\" OR \"december\" OR \"year\"",
+        "terms": [
+          "snooker",
+          "referee",
+          "qualified",
+          "international",
+          "december",
+          "year"
+        ]
+      }
+    },
+    {
+      "round": 7,
+      "top_k": 10,
+      "equivalence_key": "10a58769656f64b47b8fc025cd3dca3a2878efb8eb16bb7469fde9b3b8550962",
+      "cached": true,
+      "query_sha256": "16a33d661bfcaedfab1f3a96cb981549c3d168ef9317365e70a7076b6802fa31",
+      "query": "snooker referee Wikipedia page international referee December",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"snooker\" OR \"referee\" OR \"wikipedia\" OR \"page\" OR \"international\" OR \"december\"",
+        "terms": [
+          "snooker",
+          "referee",
+          "wikipedia",
+          "page",
+          "international",
+          "december"
+        ]
+      }
+    },
+    {
+      "round": 8,
+      "top_k": 10,
+      "equivalence_key": "45d5de2d5ad477cf7ccce268585f5c92dda22d06d3dcafbc021f812bfc655973",
+      "cached": true,
+      "query_sha256": "46af9b577b1f8da49b73395def064414fdd2c99cb79763556630958f22b8eae0",
+      "query": "snooker referee became international referee December Wikipedia",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"snooker\" OR \"referee\" OR \"became\" OR \"international\" OR \"december\" OR \"wikipedia\"",
+        "terms": [
+          "snooker",
+          "referee",
+          "became",
+          "international",
+          "december",
+          "wikipedia"
+        ]
+      }
+    },
+    {
+      "round": 8,
+      "top_k": 10,
+      "equivalence_key": "c6a0970fc4788223fe27b1b999fb9a5cc6fdf2d12ee0d7e71e915bf99e284a03",
+      "cached": true,
+      "query_sha256": "bfe88f58e079baeda78c29be1a247414d44548c7adeddbd6b3045ed2e2e90ce8",
+      "query": "snooker referee qualified international December year",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"snooker\" OR \"referee\" OR \"qualified\" OR \"international\" OR \"december\" OR \"year\"",
+        "terms": [
+          "snooker",
+          "referee",
+          "qualified",
+          "international",
+          "december",
+          "year"
+        ]
+      }
+    },
+    {
+      "round": 8,
+      "top_k": 10,
+      "equivalence_key": "10a58769656f64b47b8fc025cd3dca3a2878efb8eb16bb7469fde9b3b8550962",
+      "cached": true,
+      "query_sha256": "16a33d661bfcaedfab1f3a96cb981549c3d168ef9317365e70a7076b6802fa31",
+      "query": "snooker referee Wikipedia page international referee December",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"snooker\" OR \"referee\" OR \"wikipedia\" OR \"page\" OR \"international\" OR \"december\"",
+        "terms": [
+          "snooker",
+          "referee",
+          "wikipedia",
+          "page",
+          "international",
+          "december"
+        ]
+      }
+    },
+    {
+      "round": 8,
+      "top_k": 10,
+      "equivalence_key": "1caa05eb7c0500a6e084d29a28f39fbeb1d9275ba21aa8b55048726c1fb61265",
+      "cached": true,
+      "query_sha256": "a16adb5f84580a88cd005d2f283910224d00b7987fe094236192175b2703dd62",
+      "query": "Olivier Marteel snooker referee Wikipedia",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"olivier\" OR \"marteel\" OR \"snooker\" OR \"referee\" OR \"wikipedia\"",
+        "terms": [
+          "olivier",
+          "marteel",
+          "snooker",
+          "referee",
+          "wikipedia"
+        ]
+      }
+    },
+    {
+      "round": 8,
+      "top_k": 10,
+      "equivalence_key": "af095482ec2ec162e418719fd133c5aaa20289d19f290594e9fd50a98cadef1f",
+      "cached": true,
+      "query_sha256": "d1a021fe6523b324fa14850abcd963d49d22e4d0bfa3f61ddab9e336092809d5",
+      "query": "Desislava Bozhilova snooker referee Wikipedia",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"desislava\" OR \"bozhilova\" OR \"snooker\" OR \"referee\" OR \"wikipedia\"",
+        "terms": [
+          "desislava",
+          "bozhilova",
+          "snooker",
+          "referee",
+          "wikipedia"
+        ]
+      }
+    },
+    {
+      "round": 8,
+      "top_k": 10,
+      "equivalence_key": "0da67b838a317488efdfe94f739419ad3c3c71d2aac3f013046c6806daf5cc2d",
+      "cached": true,
+      "query_sha256": "7d0fcff44e3419beb8a48635041c7cdc6cb349d4d4545ef18784cf0354d92ebd",
+      "query": "Brendan Moore snooker referee Wikipedia",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"brendan\" OR \"moore\" OR \"snooker\" OR \"referee\" OR \"wikipedia\"",
+        "terms": [
+          "brendan",
+          "moore",
+          "snooker",
+          "referee",
+          "wikipedia"
+        ]
+      }
+    }
+  ],
+  "equivalent_query_repeats": 12,
+  "views": [
+    {
+      "round": 1,
+      "compacted": false,
+      "visible_evidence": [],
+      "shelf": [],
+      "shelf_evicted": []
+    },
+    {
+      "round": 2,
+      "compacted": false,
+      "visible_evidence": [],
+      "shelf": [],
+      "shelf_evicted": []
+    },
+    {
+      "round": 3,
+      "compacted": false,
+      "visible_evidence": [],
+      "shelf": [],
+      "shelf_evicted": []
+    },
+    {
+      "round": 4,
+      "compacted": true,
+      "visible_evidence": [],
+      "shelf": [],
+      "shelf_evicted": []
+    },
+    {
+      "round": 5,
+      "compacted": true,
+      "visible_evidence": [],
+      "shelf": [],
+      "shelf_evicted": []
+    },
+    {
+      "round": 6,
+      "compacted": false,
+      "visible_evidence": [
+        "e1",
+        "e2"
+      ],
+      "shelf": [],
+      "shelf_evicted": []
+    },
+    {
+      "round": 7,
+      "compacted": true,
+      "visible_evidence": [
+        "e1",
+        "e2"
+      ],
+      "shelf": [],
+      "shelf_evicted": []
+    },
+    {
+      "round": 8,
+      "compacted": false,
+      "visible_evidence": [
+        "e1",
+        "e2"
+      ],
+      "shelf": [],
+      "shelf_evicted": []
+    },
+    {
+      "round": 9,
+      "compacted": true,
+      "visible_evidence": [
+        "e1",
+        "e2"
+      ],
+      "shelf": [
+        "e1",
+        "e2"
+      ],
+      "shelf_evicted": []
+    },
+    {
+      "round": 10,
+      "compacted": false,
+      "visible_evidence": [
+        "e1",
+        "e2"
+      ],
+      "shelf": [
+        "e1",
+        "e2"
+      ],
+      "shelf_evicted": []
+    },
+    {
+      "round": 11,
+      "compacted": false,
+      "visible_evidence": [
+        "e1",
+        "e2"
+      ],
+      "shelf": [
+        "e1",
+        "e2"
+      ],
+      "shelf_evicted": []
+    }
+  ],
+  "delivered_refs": [
+    "e1",
+    "e2"
+  ],
+  "submitted_refs": [],
+  "text_included": true,
+  "limitations": [
+    "Equivalence is compiler equality, not semantic identity or wasted-search proof",
+    "Raw-window visibility/selection is not entailment or complete evidence coverage",
+    "No live q26 replay or independent answer scoring is performed"
+  ]
+}

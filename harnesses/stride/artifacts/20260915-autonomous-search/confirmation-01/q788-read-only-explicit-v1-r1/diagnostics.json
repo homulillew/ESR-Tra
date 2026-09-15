@@ -1,0 +1,297 @@
+{
+  "protocol": "stride-search-3",
+  "head": "4c0d5e8de20d3ed7cfef12cfad5ad0b69f9c2def988675618ce2a9cf90b09976",
+  "outcome": "submitted",
+  "formal_correct": null,
+  "model_attempts": 7,
+  "backend_attempts": 15,
+  "queries": [
+    {
+      "round": 1,
+      "top_k": 5,
+      "equivalence_key": "b4f2df87e8b06aa31f0f4ae76506d6425330904a0eb4da5c06a1bf826f3a58fc",
+      "cached": false,
+      "query_sha256": "1b447e968c18f6894fb1dbc8eba9c672dc890f6a9737e2596fb16d571435657e",
+      "query": "mosque capacity 150000 people interior area 400000 square feet",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"mosque\" OR \"capacity\" OR \"150000\" OR \"people\" OR \"interior\" OR \"area\" OR \"400000\" OR \"square\" OR \"feet\"",
+        "terms": [
+          "mosque",
+          "capacity",
+          "150000",
+          "people",
+          "interior",
+          "area",
+          "400000",
+          "square",
+          "feet"
+        ]
+      }
+    },
+    {
+      "round": 1,
+      "top_k": 5,
+      "equivalence_key": "ffd81d74e7cc97a8c46e55dedca56a55090efc79b2924d4e17e9f61e75664e7d",
+      "cached": false,
+      "query_sha256": "1850953f1708ed884e4138d892abda0d28960a017b010d1f22693ebb08e30b3a",
+      "query": "Imam Reza shrine mosque capacity area",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"imam\" OR \"reza\" OR \"shrine\" OR \"mosque\" OR \"capacity\" OR \"area\"",
+        "terms": [
+          "imam",
+          "reza",
+          "shrine",
+          "mosque",
+          "capacity",
+          "area"
+        ]
+      }
+    },
+    {
+      "round": 1,
+      "top_k": 5,
+      "equivalence_key": "0c969b301eaf2d477352e51c3da85da0e29fd06263b8a02d2443bdaa70a9d1a1",
+      "cached": false,
+      "query_sha256": "a0cfbffa7ba03a582a08681478b96799fc65698e069700c81744b672384f2e30",
+      "query": "mosque completed before 1990 capacity 150000",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"mosque\" OR \"completed\" OR \"before\" OR \"1990\" OR \"capacity\" OR \"150000\"",
+        "terms": [
+          "mosque",
+          "completed",
+          "before",
+          "1990",
+          "capacity",
+          "150000"
+        ]
+      }
+    },
+    {
+      "round": 3,
+      "top_k": 5,
+      "equivalence_key": "cd491455b2f7319a879711ae9dae39f772904e4408cdc731b827577907183c09",
+      "cached": false,
+      "query_sha256": "8bf149d62caf7fc4ded9d5e62db61f5d85e705d57db58c313a6eb970e4fcdde1",
+      "query": "Taj-ul-Masajid Bhopal Wikipedia completion date construction",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"taj\" OR \"ul\" OR \"masajid\" OR \"bhopal\" OR \"wikipedia\" OR \"completion\" OR \"date\" OR \"construction\"",
+        "terms": [
+          "taj",
+          "ul",
+          "masajid",
+          "bhopal",
+          "wikipedia",
+          "completion",
+          "date",
+          "construction"
+        ]
+      }
+    },
+    {
+      "round": 3,
+      "top_k": 5,
+      "equivalence_key": "25311918adf442963b1fb34d23ab7c68dcbf435d0bce9f353f00d6780ee1a132",
+      "cached": false,
+      "query_sha256": "a1b1e2f1a95c16f0ebac1ad7c64958b2dae75929dff51e3b9272e395d91c3f9d",
+      "query": "Taj-ul-Masajid Bhopal nearby mosque hospital",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"taj\" OR \"ul\" OR \"masajid\" OR \"bhopal\" OR \"nearby\" OR \"mosque\" OR \"hospital\"",
+        "terms": [
+          "taj",
+          "ul",
+          "masajid",
+          "bhopal",
+          "nearby",
+          "mosque",
+          "hospital"
+        ]
+      }
+    },
+    {
+      "round": 3,
+      "top_k": 5,
+      "equivalence_key": "cbf0a54b985737f86486dd37a8ea1d1209068d99ee4bafaaa012f3625744584b",
+      "cached": false,
+      "query_sha256": "d764e9fb8e919ed7de7f8afa7dda32a4f6aa652519bff2faa5d8975c57b727bd",
+      "query": "Taj-ul-Masajid Bhopal Moti Masjid Hamidia Hospital",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"taj\" OR \"ul\" OR \"masajid\" OR \"bhopal\" OR \"moti\" OR \"masjid\" OR \"hamidia\" OR \"hospital\"",
+        "terms": [
+          "taj",
+          "ul",
+          "masajid",
+          "bhopal",
+          "moti",
+          "masjid",
+          "hamidia",
+          "hospital"
+        ]
+      }
+    },
+    {
+      "round": 5,
+      "top_k": 5,
+      "equivalence_key": "93a16bf5e3cb2bd64eb13c9480d5dfda05a7413475917739d5986a169e142acb",
+      "cached": false,
+      "query_sha256": "949b392b57ea9626d90d16f6dbe0e08f61e0192dd49fdc51916d6aaba98bd070",
+      "query": "Hamidia Hospital Bhopal established year history",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"hamidia\" OR \"hospital\" OR \"bhopal\" OR \"established\" OR \"year\" OR \"history\"",
+        "terms": [
+          "hamidia",
+          "hospital",
+          "bhopal",
+          "established",
+          "year",
+          "history"
+        ]
+      }
+    },
+    {
+      "round": 5,
+      "top_k": 5,
+      "equivalence_key": "f63384695b77b10064b39aca9c303a5e97f8f50d0f6fa4ed4d09f9ef821a972b",
+      "cached": false,
+      "query_sha256": "d064952dd8d777712911ef49b7a8394e0d440f0fb7c50e0f2335d5ca81967768",
+      "query": "Moti Masjid Bhopal built year Sikander Jahan Begum",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"moti\" OR \"masjid\" OR \"bhopal\" OR \"built\" OR \"year\" OR \"sikander\" OR \"jahan\" OR \"begum\"",
+        "terms": [
+          "moti",
+          "masjid",
+          "bhopal",
+          "built",
+          "year",
+          "sikander",
+          "jahan",
+          "begum"
+        ]
+      }
+    },
+    {
+      "round": 5,
+      "top_k": 5,
+      "equivalence_key": "71693ab48855c192d3294bcf12f66d0148f421b27418a06afcfaaf1ae3fb25cc",
+      "cached": false,
+      "query_sha256": "f27a1d293edab7b8d3ad0893e3d92d8957e42fb563effe44e22f01f859f7fd42",
+      "query": "Taj Mahal Bhopal palace built year mosque",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"taj\" OR \"mahal\" OR \"bhopal\" OR \"palace\" OR \"built\" OR \"year\" OR \"mosque\"",
+        "terms": [
+          "taj",
+          "mahal",
+          "bhopal",
+          "palace",
+          "built",
+          "year",
+          "mosque"
+        ]
+      }
+    }
+  ],
+  "equivalent_query_repeats": 0,
+  "views": [
+    {
+      "round": 1,
+      "compacted": false,
+      "visible_evidence": [],
+      "shelf": [],
+      "shelf_evicted": []
+    },
+    {
+      "round": 2,
+      "compacted": false,
+      "visible_evidence": [],
+      "shelf": [],
+      "shelf_evicted": []
+    },
+    {
+      "round": 3,
+      "compacted": false,
+      "visible_evidence": [
+        "e1",
+        "e2"
+      ],
+      "shelf": [],
+      "shelf_evicted": []
+    },
+    {
+      "round": 4,
+      "compacted": false,
+      "visible_evidence": [
+        "e1",
+        "e2"
+      ],
+      "shelf": [],
+      "shelf_evicted": []
+    },
+    {
+      "round": 5,
+      "compacted": false,
+      "visible_evidence": [
+        "e1",
+        "e2",
+        "e3",
+        "e4"
+      ],
+      "shelf": [],
+      "shelf_evicted": []
+    },
+    {
+      "round": 6,
+      "compacted": false,
+      "visible_evidence": [
+        "e1",
+        "e2",
+        "e3",
+        "e4"
+      ],
+      "shelf": [],
+      "shelf_evicted": []
+    },
+    {
+      "round": 7,
+      "compacted": false,
+      "visible_evidence": [
+        "e1",
+        "e2",
+        "e3",
+        "e4",
+        "e5",
+        "e6"
+      ],
+      "shelf": [],
+      "shelf_evicted": []
+    }
+  ],
+  "delivered_refs": [
+    "e1",
+    "e2",
+    "e3",
+    "e4",
+    "e5",
+    "e6"
+  ],
+  "submitted_refs": [
+    "e3",
+    "e2",
+    "e4",
+    "e6",
+    "e5"
+  ],
+  "text_included": true,
+  "limitations": [
+    "Equivalence is compiler equality, not semantic identity or wasted-search proof",
+    "Raw-window visibility/selection is not entailment or complete evidence coverage",
+    "No live q26 replay or independent answer scoring is performed"
+  ]
+}

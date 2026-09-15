@@ -1,0 +1,2418 @@
+{
+  "q770-baseline-r1": {
+    "seal_files": 80,
+    "seal_verified": true,
+    "chain": {
+      "event_count": 391,
+      "head": "7f7fe1cbd638f0237695ac4adfc3b086565c346f0193df5d63d22d91d7a7330b"
+    },
+    "http_archive_equal": true,
+    "windows_verified": 2,
+    "terminal": {
+      "answer": "Sarah Hatchuel",
+      "answer_representation": {
+        "input_type": "string",
+        "operation": "identity",
+        "rule": "string-integer-v1"
+      },
+      "basis": [
+        {
+          "document": "d30",
+          "document_chars": 45990,
+          "end": 3000,
+          "kind": "raw_evidence",
+          "ref": "e1",
+          "sha256": "6c425210769d1528145667a872b4948f5eaaaea98e426b28765b0125ab595d88",
+          "snapshot": "be58fb82f749ee77102eed93f6ddcac6babc7fbe5610c5090b94be0ec3abfe50",
+          "start": 0
+        },
+        {
+          "document": "d30",
+          "document_chars": 45990,
+          "end": 33600,
+          "kind": "raw_evidence",
+          "ref": "e2",
+          "sha256": "f94f08beadba7d9b735ff75b702ccaf80cb342286429d01f21ab89e200dd8c84",
+          "snapshot": "be58fb82f749ee77102eed93f6ddcac6babc7fbe5610c5090b94be0ec3abfe50",
+          "start": 31600
+        }
+      ],
+      "elapsed_seconds": 152.27670640000724,
+      "outcome": "submitted",
+      "refs": [
+        "e1",
+        "e2"
+      ],
+      "semantic_status": "not_automatically_verified"
+    },
+    "metrics": {
+      "event_count": 391,
+      "head": "7f7fe1cbd638f0237695ac4adfc3b086565c346f0193df5d63d22d91d7a7330b",
+      "protocol": "stride-search-3",
+      "answer_contract": "string-integer-v1",
+      "workflow_contract": {
+        "enabled": true,
+        "gap_state": true,
+        "guided_read": true,
+        "recovery_rounds": 2,
+        "repeat_threshold": 2,
+        "repetition": "bounded",
+        "reuse_results": true,
+        "version": "gap-workflow-v1"
+      },
+      "model_attempts": 16,
+      "backend_attempts": 40,
+      "actions_recorded": 22,
+      "executed_actions": 22,
+      "usage_known": {
+        "input_tokens": 284882,
+        "output_tokens": 1933,
+        "cache_read_tokens": 91264,
+        "cache_write_tokens": 0
+      },
+      "unknown_usage_calls": 0,
+      "outstanding_requests": [],
+      "formal_correct": null,
+      "recovery_events": {
+        "delivery_preflight": 15
+      },
+      "nonblocking_note_failures": 0,
+      "action_counts": {
+        "search": 18,
+        "read": 2,
+        "find": 1,
+        "finish": 1
+      },
+      "action_error_counts": {
+        "duplicate_query_blocked": 1
+      },
+      "final_phase_requests": 1,
+      "compaction_requests": 9,
+      "rounds_receiving_new_raw": 2,
+      "cache_query_hits": 12,
+      "unchanged_note_updates": 0,
+      "limitations": [
+        "No semantic judge has run",
+        "No resume or automatic reissue",
+        "Hashes are not adversarial authentication"
+      ]
+    },
+    "triggers": [],
+    "delivery_windows": [
+      {
+        "round": 6,
+        "ref": "e1",
+        "document": "d30",
+        "range": [
+          0,
+          3000
+        ],
+        "text_sha256": "6c425210769d1528145667a872b4948f5eaaaea98e426b28765b0125ab595d88"
+      },
+      {
+        "round": 7,
+        "ref": "e1",
+        "document": "d30",
+        "range": [
+          0,
+          3000
+        ],
+        "text_sha256": "6c425210769d1528145667a872b4948f5eaaaea98e426b28765b0125ab595d88"
+      },
+      {
+        "round": 8,
+        "ref": "e1",
+        "document": "d30",
+        "range": [
+          0,
+          3000
+        ],
+        "text_sha256": "6c425210769d1528145667a872b4948f5eaaaea98e426b28765b0125ab595d88"
+      },
+      {
+        "round": 8,
+        "ref": "e2",
+        "document": "d30",
+        "range": [
+          31600,
+          33600
+        ],
+        "text_sha256": "f94f08beadba7d9b735ff75b702ccaf80cb342286429d01f21ab89e200dd8c84"
+      },
+      {
+        "round": 9,
+        "ref": "e1",
+        "document": "d30",
+        "range": [
+          0,
+          3000
+        ],
+        "text_sha256": "6c425210769d1528145667a872b4948f5eaaaea98e426b28765b0125ab595d88"
+      },
+      {
+        "round": 9,
+        "ref": "e2",
+        "document": "d30",
+        "range": [
+          31600,
+          33600
+        ],
+        "text_sha256": "f94f08beadba7d9b735ff75b702ccaf80cb342286429d01f21ab89e200dd8c84"
+      },
+      {
+        "round": 10,
+        "ref": "e1",
+        "document": "d30",
+        "range": [
+          0,
+          3000
+        ],
+        "text_sha256": "6c425210769d1528145667a872b4948f5eaaaea98e426b28765b0125ab595d88"
+      },
+      {
+        "round": 10,
+        "ref": "e2",
+        "document": "d30",
+        "range": [
+          31600,
+          33600
+        ],
+        "text_sha256": "f94f08beadba7d9b735ff75b702ccaf80cb342286429d01f21ab89e200dd8c84"
+      },
+      {
+        "round": 11,
+        "ref": "e1",
+        "document": "d30",
+        "range": [
+          0,
+          3000
+        ],
+        "text_sha256": "6c425210769d1528145667a872b4948f5eaaaea98e426b28765b0125ab595d88"
+      },
+      {
+        "round": 11,
+        "ref": "e2",
+        "document": "d30",
+        "range": [
+          31600,
+          33600
+        ],
+        "text_sha256": "f94f08beadba7d9b735ff75b702ccaf80cb342286429d01f21ab89e200dd8c84"
+      },
+      {
+        "round": 12,
+        "ref": "e1",
+        "document": "d30",
+        "range": [
+          0,
+          3000
+        ],
+        "text_sha256": "6c425210769d1528145667a872b4948f5eaaaea98e426b28765b0125ab595d88"
+      },
+      {
+        "round": 12,
+        "ref": "e2",
+        "document": "d30",
+        "range": [
+          31600,
+          33600
+        ],
+        "text_sha256": "f94f08beadba7d9b735ff75b702ccaf80cb342286429d01f21ab89e200dd8c84"
+      },
+      {
+        "round": 13,
+        "ref": "e1",
+        "document": "d30",
+        "range": [
+          0,
+          3000
+        ],
+        "text_sha256": "6c425210769d1528145667a872b4948f5eaaaea98e426b28765b0125ab595d88"
+      },
+      {
+        "round": 13,
+        "ref": "e2",
+        "document": "d30",
+        "range": [
+          31600,
+          33600
+        ],
+        "text_sha256": "f94f08beadba7d9b735ff75b702ccaf80cb342286429d01f21ab89e200dd8c84"
+      },
+      {
+        "round": 14,
+        "ref": "e1",
+        "document": "d30",
+        "range": [
+          0,
+          3000
+        ],
+        "text_sha256": "6c425210769d1528145667a872b4948f5eaaaea98e426b28765b0125ab595d88"
+      },
+      {
+        "round": 14,
+        "ref": "e2",
+        "document": "d30",
+        "range": [
+          31600,
+          33600
+        ],
+        "text_sha256": "f94f08beadba7d9b735ff75b702ccaf80cb342286429d01f21ab89e200dd8c84"
+      },
+      {
+        "round": 15,
+        "ref": "e1",
+        "document": "d30",
+        "range": [
+          0,
+          3000
+        ],
+        "text_sha256": "6c425210769d1528145667a872b4948f5eaaaea98e426b28765b0125ab595d88"
+      },
+      {
+        "round": 15,
+        "ref": "e2",
+        "document": "d30",
+        "range": [
+          31600,
+          33600
+        ],
+        "text_sha256": "f94f08beadba7d9b735ff75b702ccaf80cb342286429d01f21ab89e200dd8c84"
+      },
+      {
+        "round": 16,
+        "ref": "e1",
+        "document": "d30",
+        "range": [
+          0,
+          3000
+        ],
+        "text_sha256": "6c425210769d1528145667a872b4948f5eaaaea98e426b28765b0125ab595d88"
+      },
+      {
+        "round": 16,
+        "ref": "e2",
+        "document": "d30",
+        "range": [
+          31600,
+          33600
+        ],
+        "text_sha256": "f94f08beadba7d9b735ff75b702ccaf80cb342286429d01f21ab89e200dd8c84"
+      }
+    ],
+    "binding_verified": true,
+    "trigger_checks": [],
+    "http_statuses": [
+      200,
+      200,
+      200,
+      200,
+      200,
+      200,
+      200,
+      200,
+      200,
+      200,
+      200,
+      200,
+      200,
+      200,
+      200,
+      200
+    ],
+    "model_identity_sha256": "b13ecc835476e3b17c6f2f26fdaa5eebe6b85872ce7bbe34d102c9b3ff084c3c",
+    "first_read_round": 5
+  },
+  "q770-read-only-explicit-v1-r1": {
+    "seal_files": 80,
+    "seal_verified": true,
+    "chain": {
+      "event_count": 430,
+      "head": "4f1c4702ff4b5583ca3f6190a7cdba0e15e7f39b37017b758b849750e3af3f30"
+    },
+    "http_archive_equal": true,
+    "windows_verified": 2,
+    "terminal": {
+      "answer": "",
+      "elapsed_seconds": 131.14767070001108,
+      "outcome": "abstained",
+      "reason": "The strongest candidate is Isobel Maddison, a scholar of Elizabeth von Arnim (an English writer), with a 2012 article in First World War Studies (per Wikipedia's Elizabeth von Arnim article, e1/e2). However, I could not verify the remaining required clues: (1) a Routledge 2018 co-edited book, (2) coordinator of a research group founded in 2009 as of December 2023, (3) panel convenor before 2020, and (4) completion of a PhD on von Arnim's writings. Searches became repetitive without locating her academic profile page or the specific Routledge 2018 volume. Without verification of these distinguishing clues, I cannot confidently confirm the answer."
+    },
+    "metrics": {
+      "event_count": 430,
+      "head": "4f1c4702ff4b5583ca3f6190a7cdba0e15e7f39b37017b758b849750e3af3f30",
+      "protocol": "stride-search-3",
+      "answer_contract": "string-integer-v1",
+      "workflow_contract": {
+        "enabled": true,
+        "gap_state": true,
+        "guided_read": true,
+        "recovery_rounds": 2,
+        "repeat_threshold": 2,
+        "repetition": "bounded",
+        "reuse_results": true,
+        "version": "gap-workflow-v1"
+      },
+      "model_attempts": 16,
+      "backend_attempts": 48,
+      "actions_recorded": 31,
+      "executed_actions": 29,
+      "usage_known": {
+        "input_tokens": 289625,
+        "output_tokens": 3079,
+        "cache_read_tokens": 76160,
+        "cache_write_tokens": 0
+      },
+      "unknown_usage_calls": 0,
+      "outstanding_requests": [],
+      "formal_correct": null,
+      "recovery_events": {
+        "delivery_preflight": 15
+      },
+      "nonblocking_note_failures": 0,
+      "action_counts": {
+        "search": 27,
+        "read": 2,
+        "find": 1,
+        "finish": 1
+      },
+      "action_error_counts": {
+        "read_only_tool_only": 2
+      },
+      "final_phase_requests": 1,
+      "compaction_requests": 9,
+      "rounds_receiving_new_raw": 2,
+      "cache_query_hits": 26,
+      "unchanged_note_updates": 0,
+      "limitations": [
+        "No semantic judge has run",
+        "No resume or automatic reissue",
+        "Hashes are not adversarial authentication"
+      ]
+    },
+    "triggers": [
+      {
+        "identity": {
+          "base_read_rule": {
+            "kind": "temporary_tool_availability_not_verified_evidence",
+            "rule": {
+              "capacity": "recompute tools and visible navigation on each candidate build",
+              "commit": "after actual request archive before send; failed send consumes",
+              "consecutive_rounds": 3,
+              "extra_model_calls": 0,
+              "final": false,
+              "max_triggers": 1,
+              "messages": "unchanged",
+              "minimum_remaining_model_calls": 3,
+              "navigation": "retained group documents or rendered control pages; intersect read authorization",
+              "observation": "successful search receipt executed and ok; no new raw passage delivered",
+              "tools": "original read schema only; original batch limit; no forced tool choice",
+              "version": "read-only-once-v1"
+            },
+            "rule_sha256": "c5215cce37479fb19aa0f3ff146b2b6e2748cf7f89007140fce59e92f92cd6bc",
+            "version": "read-only-once-v1"
+          },
+          "instruction_location": "append to system content only on triggered request",
+          "instruction_sha256": "acdfd7e4892f31ea311b77c6cd0a90c77c0841ce86c4be99f5f04f5c0957c0ce",
+          "kind": "temporary_tool_availability_with_explicit_stage_instruction",
+          "version": "read-only-explicit-v1"
+        },
+        "native_tools_sha256": "82cba8a4a01c2197f768888ac0896a50f5fc053d172739ddb0b0c30e100141ce",
+        "observation": "no new source passage",
+        "round": 4,
+        "source_rounds": [
+          1,
+          2,
+          3
+        ],
+        "system_sha256": "1f11ec06e870b52a9366aa0d51e4ddedcdd86fa6dafbfcf9b336ae1bbe9addc5",
+        "trigger_number": 1,
+        "visible_read_documents": [
+          "d1",
+          "d2",
+          "d3",
+          "d4",
+          "d5",
+          "d6",
+          "d7",
+          "d8",
+          "d9",
+          "d10",
+          "d11",
+          "d12",
+          "d13",
+          "d14",
+          "d15",
+          "d16",
+          "d17",
+          "d18",
+          "d19",
+          "d20",
+          "d21",
+          "d22",
+          "d23",
+          "d24",
+          "d25",
+          "d26",
+          "d27",
+          "d28",
+          "d29",
+          "d30",
+          "d31",
+          "d32",
+          "d33",
+          "d34",
+          "d35",
+          "d36",
+          "d37",
+          "d38",
+          "d39",
+          "d40",
+          "d41",
+          "d42",
+          "d43",
+          "d44",
+          "d45",
+          "d46",
+          "d47",
+          "d48",
+          "d49",
+          "d50",
+          "d51",
+          "d52",
+          "d53",
+          "d54",
+          "d55"
+        ],
+        "visible_read_documents_sha256": "95f868afb5074fd64ce7f607b3ceddf68e1ca6c60e0a866ec42c8ecba81d1bcd",
+        "wire_sha256": "41336069211d9d41dfce72804cf8c376f728b3b9ad2f502f6652862c27f63bbf",
+        "wire_tools_sha256": "82cba8a4a01c2197f768888ac0896a50f5fc053d172739ddb0b0c30e100141ce"
+      }
+    ],
+    "delivery_windows": [
+      {
+        "round": 10,
+        "ref": "e1",
+        "document": "d60",
+        "range": [
+          0,
+          3000
+        ],
+        "text_sha256": "2935f151219740a13ae5b1cdf30a33f422dd6d07f2d192555a7bb8f0d8e80862"
+      },
+      {
+        "round": 11,
+        "ref": "e1",
+        "document": "d60",
+        "range": [
+          0,
+          3000
+        ],
+        "text_sha256": "2935f151219740a13ae5b1cdf30a33f422dd6d07f2d192555a7bb8f0d8e80862"
+      },
+      {
+        "round": 12,
+        "ref": "e1",
+        "document": "d60",
+        "range": [
+          0,
+          3000
+        ],
+        "text_sha256": "2935f151219740a13ae5b1cdf30a33f422dd6d07f2d192555a7bb8f0d8e80862"
+      },
+      {
+        "round": 12,
+        "ref": "e2",
+        "document": "d60",
+        "range": [
+          3300,
+          3600
+        ],
+        "text_sha256": "2f3f7c8af654a8a3f8ca330327f453d0b631efdd0e973f5d0806a1c6ff6ee2ce"
+      },
+      {
+        "round": 13,
+        "ref": "e1",
+        "document": "d60",
+        "range": [
+          0,
+          3000
+        ],
+        "text_sha256": "2935f151219740a13ae5b1cdf30a33f422dd6d07f2d192555a7bb8f0d8e80862"
+      },
+      {
+        "round": 13,
+        "ref": "e2",
+        "document": "d60",
+        "range": [
+          3300,
+          3600
+        ],
+        "text_sha256": "2f3f7c8af654a8a3f8ca330327f453d0b631efdd0e973f5d0806a1c6ff6ee2ce"
+      },
+      {
+        "round": 14,
+        "ref": "e1",
+        "document": "d60",
+        "range": [
+          0,
+          3000
+        ],
+        "text_sha256": "2935f151219740a13ae5b1cdf30a33f422dd6d07f2d192555a7bb8f0d8e80862"
+      },
+      {
+        "round": 14,
+        "ref": "e2",
+        "document": "d60",
+        "range": [
+          3300,
+          3600
+        ],
+        "text_sha256": "2f3f7c8af654a8a3f8ca330327f453d0b631efdd0e973f5d0806a1c6ff6ee2ce"
+      },
+      {
+        "round": 15,
+        "ref": "e1",
+        "document": "d60",
+        "range": [
+          0,
+          3000
+        ],
+        "text_sha256": "2935f151219740a13ae5b1cdf30a33f422dd6d07f2d192555a7bb8f0d8e80862"
+      },
+      {
+        "round": 15,
+        "ref": "e2",
+        "document": "d60",
+        "range": [
+          3300,
+          3600
+        ],
+        "text_sha256": "2f3f7c8af654a8a3f8ca330327f453d0b631efdd0e973f5d0806a1c6ff6ee2ce"
+      },
+      {
+        "round": 16,
+        "ref": "e1",
+        "document": "d60",
+        "range": [
+          0,
+          3000
+        ],
+        "text_sha256": "2935f151219740a13ae5b1cdf30a33f422dd6d07f2d192555a7bb8f0d8e80862"
+      },
+      {
+        "round": 16,
+        "ref": "e2",
+        "document": "d60",
+        "range": [
+          3300,
+          3600
+        ],
+        "text_sha256": "2f3f7c8af654a8a3f8ca330327f453d0b631efdd0e973f5d0806a1c6ff6ee2ce"
+      }
+    ],
+    "binding_verified": true,
+    "trigger_checks": [
+      {
+        "round": 4,
+        "source_rounds": [
+          1,
+          2,
+          3
+        ],
+        "visible_nav_count": 55,
+        "schema_original_read": true,
+        "system_wire_hash_verified": true,
+        "system_restored_next": true,
+        "response_tools": [
+          "search",
+          "search"
+        ],
+        "actions": [
+          {
+            "arguments": "{\"queries\": [\"co-edited Routledge 2018 contemporary literature coordinator research group founded 2009\", \"PhD on the writings of an English writer convenor panel 2012 article\", \"research group founded 2009 coordinator December 2023 literary studies Routledge\"]}",
+            "executed": false,
+            "result": {
+              "action_slot_charged": false,
+              "blocks_finish": true,
+              "code": "read_only_tool_only",
+              "executed": false,
+              "message": "This decision permits only read; no automatic replacement",
+              "ok": false
+            },
+            "round": 4,
+            "tool": "search",
+            "tool_call_id": "call_1519c3ec3253411392e22f27"
+          },
+          {
+            "arguments": "{\"queries\": [\"Katherine Mansfield research group 2009 coordinator\", \"D.H. Lawrence research group 2009 coordinator Routledge 2018\", \"contemporary women's writing research group 2009 Routledge 2018 co-edited\"]}",
+            "executed": false,
+            "result": {
+              "action_slot_charged": false,
+              "blocks_finish": true,
+              "code": "read_only_tool_only",
+              "executed": false,
+              "message": "This decision permits only read; no automatic replacement",
+              "ok": false
+            },
+            "round": 4,
+            "tool": "search",
+            "tool_call_id": "call_0ad73dcfa1104920ab3b67c7"
+          }
+        ],
+        "retained_native_messages_match_original": true
+      }
+    ],
+    "http_statuses": [
+      200,
+      200,
+      200,
+      200,
+      200,
+      200,
+      200,
+      200,
+      200,
+      200,
+      200,
+      200,
+      200,
+      200,
+      200,
+      200
+    ],
+    "model_identity_sha256": "b13ecc835476e3b17c6f2f26fdaa5eebe6b85872ce7bbe34d102c9b3ff084c3c",
+    "first_read_round": 9
+  },
+  "q772-baseline-r1": {
+    "seal_files": 48,
+    "seal_verified": true,
+    "chain": {
+      "event_count": 159,
+      "head": "134557c88dd31ad9a33da8ab701432245fcf105c8820b1a31010aa0d423a676e"
+    },
+    "http_archive_equal": true,
+    "windows_verified": 3,
+    "terminal": {
+      "answer": "According to the early 2020s article (Ballet Rising, 3 March 2021) about Zama Dance School — which was founded in 1984 in Gugulethu and started in a church hall — the longest-serving employee at the school is Vuyokazi, and her role is the school's secretary.",
+      "answer_representation": {
+        "input_type": "string",
+        "operation": "identity",
+        "rule": "string-integer-v1"
+      },
+      "basis": [
+        {
+          "document": "d42",
+          "document_chars": 14677,
+          "end": 3000,
+          "kind": "raw_evidence",
+          "ref": "e1",
+          "sha256": "c8068747894db7507486348456fdf2dd43558ab673c41302414f0a0414f8a83e",
+          "snapshot": "d7b0c320e182566ae974c560f3636452277559a7ff8713a9c418680f71b1c0c3",
+          "start": 0
+        },
+        {
+          "document": "d42",
+          "document_chars": 14677,
+          "end": 6150,
+          "kind": "raw_evidence",
+          "ref": "e3",
+          "sha256": "6300e4e7627810ff5df794542b7304c637ff9e9428a4d35e74e7bd52bdb06dd5",
+          "snapshot": "d7b0c320e182566ae974c560f3636452277559a7ff8713a9c418680f71b1c0c3",
+          "start": 5850
+        }
+      ],
+      "elapsed_seconds": 44.00959450000664,
+      "outcome": "submitted",
+      "refs": [
+        "e1",
+        "e3"
+      ],
+      "semantic_status": "not_automatically_verified"
+    },
+    "metrics": {
+      "event_count": 159,
+      "head": "134557c88dd31ad9a33da8ab701432245fcf105c8820b1a31010aa0d423a676e",
+      "protocol": "stride-search-3",
+      "answer_contract": "string-integer-v1",
+      "workflow_contract": {
+        "enabled": true,
+        "gap_state": true,
+        "guided_read": true,
+        "recovery_rounds": 2,
+        "repeat_threshold": 2,
+        "repetition": "bounded",
+        "reuse_results": true,
+        "version": "gap-workflow-v1"
+      },
+      "model_attempts": 8,
+      "backend_attempts": 15,
+      "actions_recorded": 10,
+      "executed_actions": 10,
+      "usage_known": {
+        "input_tokens": 128110,
+        "output_tokens": 1036,
+        "cache_read_tokens": 91520,
+        "cache_write_tokens": 0
+      },
+      "unknown_usage_calls": 0,
+      "outstanding_requests": [],
+      "formal_correct": null,
+      "recovery_events": {
+        "delivery_preflight": 7
+      },
+      "nonblocking_note_failures": 0,
+      "action_counts": {
+        "search": 5,
+        "read": 3,
+        "find": 1,
+        "finish": 1
+      },
+      "action_error_counts": {},
+      "final_phase_requests": 0,
+      "compaction_requests": 1,
+      "rounds_receiving_new_raw": 3,
+      "cache_query_hits": 0,
+      "unchanged_note_updates": 0,
+      "limitations": [
+        "No semantic judge has run",
+        "No resume or automatic reissue",
+        "Hashes are not adversarial authentication"
+      ]
+    },
+    "triggers": [],
+    "delivery_windows": [
+      {
+        "round": 5,
+        "ref": "e1",
+        "document": "d42",
+        "range": [
+          0,
+          3000
+        ],
+        "text_sha256": "c8068747894db7507486348456fdf2dd43558ab673c41302414f0a0414f8a83e"
+      },
+      {
+        "round": 6,
+        "ref": "e1",
+        "document": "d42",
+        "range": [
+          0,
+          3000
+        ],
+        "text_sha256": "c8068747894db7507486348456fdf2dd43558ab673c41302414f0a0414f8a83e"
+      },
+      {
+        "round": 7,
+        "ref": "e1",
+        "document": "d42",
+        "range": [
+          0,
+          3000
+        ],
+        "text_sha256": "c8068747894db7507486348456fdf2dd43558ab673c41302414f0a0414f8a83e"
+      },
+      {
+        "round": 7,
+        "ref": "e2",
+        "document": "d42",
+        "range": [
+          5900,
+          6100
+        ],
+        "text_sha256": "2b628cff412f14c6874734720902fdd8bf6dce3c0eeee0523938edede23d6f9a"
+      },
+      {
+        "round": 8,
+        "ref": "e1",
+        "document": "d42",
+        "range": [
+          0,
+          3000
+        ],
+        "text_sha256": "c8068747894db7507486348456fdf2dd43558ab673c41302414f0a0414f8a83e"
+      },
+      {
+        "round": 8,
+        "ref": "e2",
+        "document": "d42",
+        "range": [
+          5900,
+          6100
+        ],
+        "text_sha256": "2b628cff412f14c6874734720902fdd8bf6dce3c0eeee0523938edede23d6f9a"
+      },
+      {
+        "round": 8,
+        "ref": "e3",
+        "document": "d42",
+        "range": [
+          5850,
+          6150
+        ],
+        "text_sha256": "6300e4e7627810ff5df794542b7304c637ff9e9428a4d35e74e7bd52bdb06dd5"
+      }
+    ],
+    "binding_verified": true,
+    "trigger_checks": [],
+    "http_statuses": [
+      200,
+      200,
+      200,
+      200,
+      200,
+      200,
+      200,
+      200
+    ],
+    "model_identity_sha256": "b13ecc835476e3b17c6f2f26fdaa5eebe6b85872ce7bbe34d102c9b3ff084c3c",
+    "first_read_round": 4
+  },
+  "q772-read-only-explicit-v1-r1": {
+    "seal_files": 44,
+    "seal_verified": true,
+    "chain": {
+      "event_count": 141,
+      "head": "021c17f35c62fe5bfeaa449999b507d679b0c45ee5828d7c1ceeb556f9dfbaab"
+    },
+    "http_archive_equal": true,
+    "windows_verified": 2,
+    "terminal": {
+      "answer": "According to the early 2020s article (Ballet Rising, 3 March 2021) about Zama Dance School — which was founded in 1984 in Gugulethu and started in a church hall — the longest-serving employee at the school is Vuyokazi (referred to as \"Vuyo\"), and her role is the school's secretary. The article states: \"I must also mention Vuyokazi, the school's secretary. Thank goodness for Vuyo who worked alongside Arlene for many years. She is our longest serving employee and a valuable part of the team today.\"",
+      "answer_representation": {
+        "input_type": "string",
+        "operation": "identity",
+        "rule": "string-integer-v1"
+      },
+      "basis": [
+        {
+          "document": "d32",
+          "document_chars": 14677,
+          "end": 7500,
+          "kind": "raw_evidence",
+          "ref": "e2",
+          "sha256": "f9e63385997757cd4b3933ad706dea3e15b5bdef659388276f3a096ec389d1ad",
+          "snapshot": "d7b0c320e182566ae974c560f3636452277559a7ff8713a9c418680f71b1c0c3",
+          "start": 4500
+        }
+      ],
+      "elapsed_seconds": 45.699073099996895,
+      "outcome": "submitted",
+      "refs": [
+        "e2"
+      ],
+      "semantic_status": "not_automatically_verified"
+    },
+    "metrics": {
+      "event_count": 141,
+      "head": "021c17f35c62fe5bfeaa449999b507d679b0c45ee5828d7c1ceeb556f9dfbaab",
+      "protocol": "stride-search-3",
+      "answer_contract": "string-integer-v1",
+      "workflow_contract": {
+        "enabled": true,
+        "gap_state": true,
+        "guided_read": true,
+        "recovery_rounds": 2,
+        "repeat_threshold": 2,
+        "repetition": "bounded",
+        "reuse_results": true,
+        "version": "gap-workflow-v1"
+      },
+      "model_attempts": 7,
+      "backend_attempts": 14,
+      "actions_recorded": 10,
+      "executed_actions": 10,
+      "usage_known": {
+        "input_tokens": 102315,
+        "output_tokens": 1130,
+        "cache_read_tokens": 52608,
+        "cache_write_tokens": 0
+      },
+      "unknown_usage_calls": 0,
+      "outstanding_requests": [],
+      "formal_correct": null,
+      "recovery_events": {
+        "delivery_preflight": 6
+      },
+      "nonblocking_note_failures": 0,
+      "action_counts": {
+        "search": 5,
+        "read": 2,
+        "find": 2,
+        "finish": 1
+      },
+      "action_error_counts": {},
+      "final_phase_requests": 0,
+      "compaction_requests": 1,
+      "rounds_receiving_new_raw": 2,
+      "cache_query_hits": 0,
+      "unchanged_note_updates": 0,
+      "limitations": [
+        "No semantic judge has run",
+        "No resume or automatic reissue",
+        "Hashes are not adversarial authentication"
+      ]
+    },
+    "triggers": [
+      {
+        "identity": {
+          "base_read_rule": {
+            "kind": "temporary_tool_availability_not_verified_evidence",
+            "rule": {
+              "capacity": "recompute tools and visible navigation on each candidate build",
+              "commit": "after actual request archive before send; failed send consumes",
+              "consecutive_rounds": 3,
+              "extra_model_calls": 0,
+              "final": false,
+              "max_triggers": 1,
+              "messages": "unchanged",
+              "minimum_remaining_model_calls": 3,
+              "navigation": "retained group documents or rendered control pages; intersect read authorization",
+              "observation": "successful search receipt executed and ok; no new raw passage delivered",
+              "tools": "original read schema only; original batch limit; no forced tool choice",
+              "version": "read-only-once-v1"
+            },
+            "rule_sha256": "c5215cce37479fb19aa0f3ff146b2b6e2748cf7f89007140fce59e92f92cd6bc",
+            "version": "read-only-once-v1"
+          },
+          "instruction_location": "append to system content only on triggered request",
+          "instruction_sha256": "acdfd7e4892f31ea311b77c6cd0a90c77c0841ce86c4be99f5f04f5c0957c0ce",
+          "kind": "temporary_tool_availability_with_explicit_stage_instruction",
+          "version": "read-only-explicit-v1"
+        },
+        "native_tools_sha256": "82cba8a4a01c2197f768888ac0896a50f5fc053d172739ddb0b0c30e100141ce",
+        "observation": "no new source passage",
+        "round": 4,
+        "source_rounds": [
+          1,
+          2,
+          3
+        ],
+        "system_sha256": "1f11ec06e870b52a9366aa0d51e4ddedcdd86fa6dafbfcf9b336ae1bbe9addc5",
+        "trigger_number": 1,
+        "visible_read_documents": [
+          "d1",
+          "d2",
+          "d3",
+          "d4",
+          "d5",
+          "d6",
+          "d7",
+          "d8",
+          "d9",
+          "d10",
+          "d11",
+          "d12",
+          "d13",
+          "d14",
+          "d15",
+          "d16",
+          "d17",
+          "d18",
+          "d19",
+          "d20",
+          "d21",
+          "d22",
+          "d23",
+          "d24",
+          "d25",
+          "d26",
+          "d27",
+          "d28",
+          "d29",
+          "d30",
+          "d31",
+          "d32",
+          "d33",
+          "d34",
+          "d35",
+          "d36"
+        ],
+        "visible_read_documents_sha256": "dccc00ee0abfbec7859bb574211550ef296818453545050c44874fbae0b36297",
+        "wire_sha256": "9f025b633f8ecc2481ea0663fd081f73fdff7f21ca61167653755d3eb252e59a",
+        "wire_tools_sha256": "82cba8a4a01c2197f768888ac0896a50f5fc053d172739ddb0b0c30e100141ce"
+      }
+    ],
+    "delivery_windows": [
+      {
+        "round": 5,
+        "ref": "e1",
+        "document": "d32",
+        "range": [
+          0,
+          3000
+        ],
+        "text_sha256": "c8068747894db7507486348456fdf2dd43558ab673c41302414f0a0414f8a83e"
+      },
+      {
+        "round": 6,
+        "ref": "e1",
+        "document": "d32",
+        "range": [
+          0,
+          3000
+        ],
+        "text_sha256": "c8068747894db7507486348456fdf2dd43558ab673c41302414f0a0414f8a83e"
+      },
+      {
+        "round": 7,
+        "ref": "e1",
+        "document": "d32",
+        "range": [
+          0,
+          3000
+        ],
+        "text_sha256": "c8068747894db7507486348456fdf2dd43558ab673c41302414f0a0414f8a83e"
+      },
+      {
+        "round": 7,
+        "ref": "e2",
+        "document": "d32",
+        "range": [
+          4500,
+          7500
+        ],
+        "text_sha256": "f9e63385997757cd4b3933ad706dea3e15b5bdef659388276f3a096ec389d1ad"
+      }
+    ],
+    "binding_verified": true,
+    "trigger_checks": [
+      {
+        "round": 4,
+        "source_rounds": [
+          1,
+          2,
+          3
+        ],
+        "visible_nav_count": 36,
+        "schema_original_read": true,
+        "system_wire_hash_verified": true,
+        "system_restored_next": true,
+        "response_tools": [
+          "read"
+        ],
+        "actions": [
+          {
+            "arguments": "{\"ref\": \"d32\"}",
+            "executed": true,
+            "result": {
+              "action_slot_charged": true,
+              "evidence": {
+                "document": "d32",
+                "document_chars": 14677,
+                "end": 3000,
+                "kind": "raw_evidence",
+                "ref": "e1",
+                "sha256": "c8068747894db7507486348456fdf2dd43558ab673c41302414f0a0414f8a83e",
+                "snapshot": "d7b0c320e182566ae974c560f3636452277559a7ff8713a9c418680f71b1c0c3",
+                "start": 0,
+                "text": "---\ntitle: Ballet Rising\nauthor: Hendrick January\ndate: 2021-03-03\n---\nZama Dance School was founded in 1984 in Gugulethu, a township in South Africa, with the goal of using ballet to build confidence among young children in South Africa living under apartheid. Ballet Rising's contributor Lindsay Alissa King recently interviewed Zama Dance School's director Andrew Warth about what the school and its students are up to today. Stay tuned because in a few days, we'll publish some testimonials from Zama Dance School's students.\n\nThis interview has been edited and condensed for clarity.\n\nLindsay Alissa King: Tell me about your own dance trajectory. How did you become interested in ballet as a child?\n\nAndrew Warth: My dance journey began at a very young age in the UK. My earliest childhood memories are of me dancing around my grandparents flat in Bayswater, London to my nan's ballet records. Although my father and I have found it difficult to verify exactly where and when, it seems my nan (his mum) was a professional ballet dancer at some point before the second world war, and ballet was definitely in my genes. At the age of ten I was awarded a full scholarship to study at the Legat School of Russian Ballet, in Tunbridge Wells, Kent. Although \"Legat\" was just an hours' drive from our home, I became a full boarder until I graduated at eighteen. My first professional engagement was in Germany with the Essener ballet, under the directorship of Heidrun Swaartz, and I trained with guest teachers such as David Howard and Sir Anton Dolin and choreographers Hans van Manen, Valery Panov and Patricia Neary from the Balanchine Trust. Heidrun was a former soloist with the Staatsballet Berlin and was one the very few female dancers, at the time, allowed to perform Maurice Bejart's Bolero. I would sit in the studio during lunch break watching her rehearse it over and over again. These were incredibly inspiring times.\n\nFour years later I joined the German Opera on the Rhein in Dusseldorf, under the directorship of Paolo Bortoluzzi (former Bejart principal). The company was a lot bigger than in Essen, and again we worked with incredible choreographers. After four years, I wanted a complete change of scenery.\n\nOne of my colleagues had just returned from a year's contract with the CAPAB Ballet Company (now Cape Town City Ballet), and I recalled a conversation I had some years earlier with South African dancer and Artistic Director of the London City Ballet, Harold King. The seed had been planted, and I wanted to explore. I auditioned via video and flew out in 1990.\n\nGreat changes were afoot when I arrived in South Africa, and if I am totally honest it was probably the thrill of the unknown that attracted me in the first place. The comfort of daily training whilst the whole country was in a state of unrest was weirdly intoxicating. I remember, on one occasion, an extremely enthusiastic crowd of political supporters stormed the building during one of our Carmen rehearsals"
+              },
+              "executed": true,
+              "next_start": 3000,
+              "ok": true,
+              "previously_received": false
+            },
+            "round": 4,
+            "tool": "read",
+            "tool_call_id": "call_f9ca87db94db414a98d347c6"
+          }
+        ],
+        "retained_native_messages_match_original": true
+      }
+    ],
+    "http_statuses": [
+      200,
+      200,
+      200,
+      200,
+      200,
+      200,
+      200
+    ],
+    "model_identity_sha256": "b13ecc835476e3b17c6f2f26fdaa5eebe6b85872ce7bbe34d102c9b3ff084c3c",
+    "first_read_round": 4
+  },
+  "q769-baseline-r1": {
+    "seal_files": 44,
+    "seal_verified": true,
+    "chain": {
+      "event_count": 182,
+      "head": "2721fef1b489fdae8590142e2a236a6e5f0e6e3026458bf6397ada72fc56e454"
+    },
+    "http_archive_equal": true,
+    "windows_verified": 4,
+    "terminal": {
+      "answer": "Queen Arwa University (جامعة الملكة أروى)",
+      "answer_representation": {
+        "input_type": "string",
+        "operation": "identity",
+        "rule": "string-integer-v1"
+      },
+      "basis": [
+        {
+          "document": "d24",
+          "document_chars": 2464,
+          "end": 2464,
+          "kind": "raw_evidence",
+          "ref": "e2",
+          "sha256": "22bc740c55a9a335edc92e76fb036399f1ad5b3486a41dc71d4322e1f2922523",
+          "snapshot": "22bc740c55a9a335edc92e76fb036399f1ad5b3486a41dc71d4322e1f2922523",
+          "start": 0
+        },
+        {
+          "document": "d16",
+          "document_chars": 2180,
+          "end": 2180,
+          "kind": "raw_evidence",
+          "ref": "e1",
+          "sha256": "9c886b5421a788e195ed7a893432c4ec637bb333792ff3770d83def36ed848fd",
+          "snapshot": "9c886b5421a788e195ed7a893432c4ec637bb333792ff3770d83def36ed848fd",
+          "start": 0
+        },
+        {
+          "document": "d48",
+          "document_chars": 658,
+          "end": 658,
+          "kind": "raw_evidence",
+          "ref": "e3",
+          "sha256": "4c4c8f037971b3fe48f29aaff95926107bc32494ad3b0f56f4fef05610488fd2",
+          "snapshot": "4c4c8f037971b3fe48f29aaff95926107bc32494ad3b0f56f4fef05610488fd2",
+          "start": 0
+        },
+        {
+          "document": "d53",
+          "document_chars": 903,
+          "end": 903,
+          "kind": "raw_evidence",
+          "ref": "e4",
+          "sha256": "fa5292802570f20e33c07229c088e20499713839e74b49f50a9b9c1975436dbc",
+          "snapshot": "fa5292802570f20e33c07229c088e20499713839e74b49f50a9b9c1975436dbc",
+          "start": 0
+        }
+      ],
+      "elapsed_seconds": 46.54090190000716,
+      "outcome": "submitted",
+      "refs": [
+        "e2",
+        "e1",
+        "e3",
+        "e4"
+      ],
+      "semantic_status": "not_automatically_verified"
+    },
+    "metrics": {
+      "event_count": 182,
+      "head": "2721fef1b489fdae8590142e2a236a6e5f0e6e3026458bf6397ada72fc56e454",
+      "protocol": "stride-search-3",
+      "answer_contract": "string-integer-v1",
+      "workflow_contract": {
+        "enabled": true,
+        "gap_state": true,
+        "guided_read": true,
+        "recovery_rounds": 2,
+        "repeat_threshold": 2,
+        "repetition": "bounded",
+        "reuse_results": true,
+        "version": "gap-workflow-v1"
+      },
+      "model_attempts": 7,
+      "backend_attempts": 19,
+      "actions_recorded": 10,
+      "executed_actions": 10,
+      "usage_known": {
+        "input_tokens": 95256,
+        "output_tokens": 1031,
+        "cache_read_tokens": 49280,
+        "cache_write_tokens": 0
+      },
+      "unknown_usage_calls": 0,
+      "outstanding_requests": [],
+      "formal_correct": null,
+      "recovery_events": {
+        "delivery_preflight": 6
+      },
+      "nonblocking_note_failures": 0,
+      "action_counts": {
+        "search": 5,
+        "read": 4,
+        "finish": 1
+      },
+      "action_error_counts": {},
+      "final_phase_requests": 0,
+      "compaction_requests": 2,
+      "rounds_receiving_new_raw": 4,
+      "cache_query_hits": 0,
+      "unchanged_note_updates": 0,
+      "limitations": [
+        "No semantic judge has run",
+        "No resume or automatic reissue",
+        "Hashes are not adversarial authentication"
+      ]
+    },
+    "triggers": [],
+    "delivery_windows": [
+      {
+        "round": 3,
+        "ref": "e1",
+        "document": "d16",
+        "range": [
+          0,
+          2180
+        ],
+        "text_sha256": "9c886b5421a788e195ed7a893432c4ec637bb333792ff3770d83def36ed848fd"
+      },
+      {
+        "round": 4,
+        "ref": "e1",
+        "document": "d16",
+        "range": [
+          0,
+          2180
+        ],
+        "text_sha256": "9c886b5421a788e195ed7a893432c4ec637bb333792ff3770d83def36ed848fd"
+      },
+      {
+        "round": 4,
+        "ref": "e2",
+        "document": "d24",
+        "range": [
+          0,
+          2464
+        ],
+        "text_sha256": "22bc740c55a9a335edc92e76fb036399f1ad5b3486a41dc71d4322e1f2922523"
+      },
+      {
+        "round": 5,
+        "ref": "e1",
+        "document": "d16",
+        "range": [
+          0,
+          2180
+        ],
+        "text_sha256": "9c886b5421a788e195ed7a893432c4ec637bb333792ff3770d83def36ed848fd"
+      },
+      {
+        "round": 5,
+        "ref": "e2",
+        "document": "d24",
+        "range": [
+          0,
+          2464
+        ],
+        "text_sha256": "22bc740c55a9a335edc92e76fb036399f1ad5b3486a41dc71d4322e1f2922523"
+      },
+      {
+        "round": 6,
+        "ref": "e1",
+        "document": "d16",
+        "range": [
+          0,
+          2180
+        ],
+        "text_sha256": "9c886b5421a788e195ed7a893432c4ec637bb333792ff3770d83def36ed848fd"
+      },
+      {
+        "round": 6,
+        "ref": "e2",
+        "document": "d24",
+        "range": [
+          0,
+          2464
+        ],
+        "text_sha256": "22bc740c55a9a335edc92e76fb036399f1ad5b3486a41dc71d4322e1f2922523"
+      },
+      {
+        "round": 6,
+        "ref": "e3",
+        "document": "d48",
+        "range": [
+          0,
+          658
+        ],
+        "text_sha256": "4c4c8f037971b3fe48f29aaff95926107bc32494ad3b0f56f4fef05610488fd2"
+      },
+      {
+        "round": 7,
+        "ref": "e1",
+        "document": "d16",
+        "range": [
+          0,
+          2180
+        ],
+        "text_sha256": "9c886b5421a788e195ed7a893432c4ec637bb333792ff3770d83def36ed848fd"
+      },
+      {
+        "round": 7,
+        "ref": "e2",
+        "document": "d24",
+        "range": [
+          0,
+          2464
+        ],
+        "text_sha256": "22bc740c55a9a335edc92e76fb036399f1ad5b3486a41dc71d4322e1f2922523"
+      },
+      {
+        "round": 7,
+        "ref": "e3",
+        "document": "d48",
+        "range": [
+          0,
+          658
+        ],
+        "text_sha256": "4c4c8f037971b3fe48f29aaff95926107bc32494ad3b0f56f4fef05610488fd2"
+      },
+      {
+        "round": 7,
+        "ref": "e4",
+        "document": "d53",
+        "range": [
+          0,
+          903
+        ],
+        "text_sha256": "fa5292802570f20e33c07229c088e20499713839e74b49f50a9b9c1975436dbc"
+      }
+    ],
+    "binding_verified": true,
+    "trigger_checks": [],
+    "http_statuses": [
+      200,
+      200,
+      200,
+      200,
+      200,
+      200,
+      200
+    ],
+    "model_identity_sha256": "b13ecc835476e3b17c6f2f26fdaa5eebe6b85872ce7bbe34d102c9b3ff084c3c",
+    "first_read_round": 2
+  },
+  "q769-read-only-explicit-v1-r1": {
+    "seal_files": 48,
+    "seal_verified": true,
+    "chain": {
+      "event_count": 291,
+      "head": "2dca4ca81c45e132f5d2d4a08a7e2e4056ca3fa51f4f02dfc9421c380939314a"
+    },
+    "http_archive_equal": true,
+    "windows_verified": 4,
+    "terminal": {
+      "answer": "Queen Arwa University (جامعة الملكة أروى)",
+      "answer_representation": {
+        "input_type": "string",
+        "operation": "identity",
+        "rule": "string-integer-v1"
+      },
+      "basis": [
+        {
+          "document": "d25",
+          "document_chars": 2464,
+          "end": 2464,
+          "kind": "raw_evidence",
+          "ref": "e2",
+          "sha256": "22bc740c55a9a335edc92e76fb036399f1ad5b3486a41dc71d4322e1f2922523",
+          "snapshot": "22bc740c55a9a335edc92e76fb036399f1ad5b3486a41dc71d4322e1f2922523",
+          "start": 0
+        },
+        {
+          "document": "d1",
+          "document_chars": 2180,
+          "end": 2180,
+          "kind": "raw_evidence",
+          "ref": "e1",
+          "sha256": "9c886b5421a788e195ed7a893432c4ec637bb333792ff3770d83def36ed848fd",
+          "snapshot": "9c886b5421a788e195ed7a893432c4ec637bb333792ff3770d83def36ed848fd",
+          "start": 0
+        },
+        {
+          "document": "d104",
+          "document_chars": 658,
+          "end": 658,
+          "kind": "raw_evidence",
+          "ref": "e3",
+          "sha256": "4c4c8f037971b3fe48f29aaff95926107bc32494ad3b0f56f4fef05610488fd2",
+          "snapshot": "4c4c8f037971b3fe48f29aaff95926107bc32494ad3b0f56f4fef05610488fd2",
+          "start": 0
+        },
+        {
+          "document": "d102",
+          "document_chars": 903,
+          "end": 903,
+          "kind": "raw_evidence",
+          "ref": "e4",
+          "sha256": "fa5292802570f20e33c07229c088e20499713839e74b49f50a9b9c1975436dbc",
+          "snapshot": "fa5292802570f20e33c07229c088e20499713839e74b49f50a9b9c1975436dbc",
+          "start": 0
+        }
+      ],
+      "elapsed_seconds": 57.6170288999856,
+      "outcome": "submitted",
+      "refs": [
+        "e2",
+        "e1",
+        "e3",
+        "e4"
+      ],
+      "semantic_status": "not_automatically_verified"
+    },
+    "metrics": {
+      "event_count": 291,
+      "head": "2dca4ca81c45e132f5d2d4a08a7e2e4056ca3fa51f4f02dfc9421c380939314a",
+      "protocol": "stride-search-3",
+      "answer_contract": "string-integer-v1",
+      "workflow_contract": {
+        "enabled": true,
+        "gap_state": true,
+        "guided_read": true,
+        "recovery_rounds": 2,
+        "repeat_threshold": 2,
+        "repetition": "bounded",
+        "reuse_results": true,
+        "version": "gap-workflow-v1"
+      },
+      "model_attempts": 8,
+      "backend_attempts": 31,
+      "actions_recorded": 14,
+      "executed_actions": 14,
+      "usage_known": {
+        "input_tokens": 109228,
+        "output_tokens": 1139,
+        "cache_read_tokens": 37760,
+        "cache_write_tokens": 0
+      },
+      "unknown_usage_calls": 0,
+      "outstanding_requests": [],
+      "formal_correct": null,
+      "recovery_events": {
+        "delivery_preflight": 7
+      },
+      "nonblocking_note_failures": 0,
+      "action_counts": {
+        "search": 9,
+        "read": 4,
+        "finish": 1
+      },
+      "action_error_counts": {},
+      "final_phase_requests": 0,
+      "compaction_requests": 3,
+      "rounds_receiving_new_raw": 3,
+      "cache_query_hits": 0,
+      "unchanged_note_updates": 0,
+      "limitations": [
+        "No semantic judge has run",
+        "No resume or automatic reissue",
+        "Hashes are not adversarial authentication"
+      ]
+    },
+    "triggers": [
+      {
+        "identity": {
+          "base_read_rule": {
+            "kind": "temporary_tool_availability_not_verified_evidence",
+            "rule": {
+              "capacity": "recompute tools and visible navigation on each candidate build",
+              "commit": "after actual request archive before send; failed send consumes",
+              "consecutive_rounds": 3,
+              "extra_model_calls": 0,
+              "final": false,
+              "max_triggers": 1,
+              "messages": "unchanged",
+              "minimum_remaining_model_calls": 3,
+              "navigation": "retained group documents or rendered control pages; intersect read authorization",
+              "observation": "successful search receipt executed and ok; no new raw passage delivered",
+              "tools": "original read schema only; original batch limit; no forced tool choice",
+              "version": "read-only-once-v1"
+            },
+            "rule_sha256": "c5215cce37479fb19aa0f3ff146b2b6e2748cf7f89007140fce59e92f92cd6bc",
+            "version": "read-only-once-v1"
+          },
+          "instruction_location": "append to system content only on triggered request",
+          "instruction_sha256": "acdfd7e4892f31ea311b77c6cd0a90c77c0841ce86c4be99f5f04f5c0957c0ce",
+          "kind": "temporary_tool_availability_with_explicit_stage_instruction",
+          "version": "read-only-explicit-v1"
+        },
+        "native_tools_sha256": "82cba8a4a01c2197f768888ac0896a50f5fc053d172739ddb0b0c30e100141ce",
+        "observation": "no new source passage",
+        "round": 7,
+        "source_rounds": [
+          4,
+          5,
+          6
+        ],
+        "system_sha256": "1f11ec06e870b52a9366aa0d51e4ddedcdd86fa6dafbfcf9b336ae1bbe9addc5",
+        "trigger_number": 1,
+        "visible_read_documents": [
+          "d1",
+          "d18",
+          "d25",
+          "d26",
+          "d28",
+          "d30",
+          "d32",
+          "d33",
+          "d35",
+          "d37",
+          "d39",
+          "d40",
+          "d41",
+          "d42",
+          "d43",
+          "d48",
+          "d49",
+          "d52",
+          "d54",
+          "d71",
+          "d72",
+          "d73",
+          "d74",
+          "d85",
+          "d86",
+          "d88",
+          "d98",
+          "d99",
+          "d100",
+          "d101",
+          "d102",
+          "d103",
+          "d104",
+          "d105",
+          "d106",
+          "d107",
+          "d108",
+          "d109",
+          "d110",
+          "d111",
+          "d112",
+          "d113",
+          "d114",
+          "d115",
+          "d116",
+          "d117"
+        ],
+        "visible_read_documents_sha256": "3d313cdc910f1d2d28687b59e72243fb947227c9d3b19bcce174ebd0d350bc0a",
+        "wire_sha256": "aa54be739f401e528be710dc4fbae90400d412461412326522dc7867a0fb8ef3",
+        "wire_tools_sha256": "82cba8a4a01c2197f768888ac0896a50f5fc053d172739ddb0b0c30e100141ce"
+      }
+    ],
+    "delivery_windows": [
+      {
+        "round": 3,
+        "ref": "e1",
+        "document": "d1",
+        "range": [
+          0,
+          2180
+        ],
+        "text_sha256": "9c886b5421a788e195ed7a893432c4ec637bb333792ff3770d83def36ed848fd"
+      },
+      {
+        "round": 4,
+        "ref": "e1",
+        "document": "d1",
+        "range": [
+          0,
+          2180
+        ],
+        "text_sha256": "9c886b5421a788e195ed7a893432c4ec637bb333792ff3770d83def36ed848fd"
+      },
+      {
+        "round": 4,
+        "ref": "e2",
+        "document": "d25",
+        "range": [
+          0,
+          2464
+        ],
+        "text_sha256": "22bc740c55a9a335edc92e76fb036399f1ad5b3486a41dc71d4322e1f2922523"
+      },
+      {
+        "round": 5,
+        "ref": "e1",
+        "document": "d1",
+        "range": [
+          0,
+          2180
+        ],
+        "text_sha256": "9c886b5421a788e195ed7a893432c4ec637bb333792ff3770d83def36ed848fd"
+      },
+      {
+        "round": 5,
+        "ref": "e2",
+        "document": "d25",
+        "range": [
+          0,
+          2464
+        ],
+        "text_sha256": "22bc740c55a9a335edc92e76fb036399f1ad5b3486a41dc71d4322e1f2922523"
+      },
+      {
+        "round": 6,
+        "ref": "e1",
+        "document": "d1",
+        "range": [
+          0,
+          2180
+        ],
+        "text_sha256": "9c886b5421a788e195ed7a893432c4ec637bb333792ff3770d83def36ed848fd"
+      },
+      {
+        "round": 6,
+        "ref": "e2",
+        "document": "d25",
+        "range": [
+          0,
+          2464
+        ],
+        "text_sha256": "22bc740c55a9a335edc92e76fb036399f1ad5b3486a41dc71d4322e1f2922523"
+      },
+      {
+        "round": 7,
+        "ref": "e1",
+        "document": "d1",
+        "range": [
+          0,
+          2180
+        ],
+        "text_sha256": "9c886b5421a788e195ed7a893432c4ec637bb333792ff3770d83def36ed848fd"
+      },
+      {
+        "round": 7,
+        "ref": "e2",
+        "document": "d25",
+        "range": [
+          0,
+          2464
+        ],
+        "text_sha256": "22bc740c55a9a335edc92e76fb036399f1ad5b3486a41dc71d4322e1f2922523"
+      },
+      {
+        "round": 8,
+        "ref": "e1",
+        "document": "d1",
+        "range": [
+          0,
+          2180
+        ],
+        "text_sha256": "9c886b5421a788e195ed7a893432c4ec637bb333792ff3770d83def36ed848fd"
+      },
+      {
+        "round": 8,
+        "ref": "e2",
+        "document": "d25",
+        "range": [
+          0,
+          2464
+        ],
+        "text_sha256": "22bc740c55a9a335edc92e76fb036399f1ad5b3486a41dc71d4322e1f2922523"
+      },
+      {
+        "round": 8,
+        "ref": "e3",
+        "document": "d104",
+        "range": [
+          0,
+          658
+        ],
+        "text_sha256": "4c4c8f037971b3fe48f29aaff95926107bc32494ad3b0f56f4fef05610488fd2"
+      },
+      {
+        "round": 8,
+        "ref": "e4",
+        "document": "d102",
+        "range": [
+          0,
+          903
+        ],
+        "text_sha256": "fa5292802570f20e33c07229c088e20499713839e74b49f50a9b9c1975436dbc"
+      }
+    ],
+    "binding_verified": true,
+    "trigger_checks": [
+      {
+        "round": 7,
+        "source_rounds": [
+          4,
+          5,
+          6
+        ],
+        "visible_nav_count": 46,
+        "schema_original_read": true,
+        "system_wire_hash_verified": true,
+        "system_restored_next": true,
+        "response_tools": [
+          "read",
+          "read"
+        ],
+        "actions": [
+          {
+            "arguments": "{\"ref\": \"d104\"}",
+            "executed": true,
+            "result": {
+              "action_slot_charged": true,
+              "evidence": {
+                "document": "d104",
+                "document_chars": 658,
+                "end": 658,
+                "kind": "raw_evidence",
+                "ref": "e3",
+                "sha256": "4c4c8f037971b3fe48f29aaff95926107bc32494ad3b0f56f4fef05610488fd2",
+                "snapshot": "4c4c8f037971b3fe48f29aaff95926107bc32494ad3b0f56f4fef05610488fd2",
+                "start": 0,
+                "text": "---\ntitle: رحلة علمية لطلاب قسم الصيدلة\ndate: 2022-11-03\n---\nاخبار اليوم الصحيفة, رحلة علمية لطلاب اخبار اليوم الصحيفة, رحلة علمية لطلاب\n\nرحلة علمية لطلاب قسم الصيدلة\n\nاقامت كلية العلوم الطبية – قسم الصيدلة – بجامعة الملكة اروى رحلة علمية الى منطقة بيت الكبش لجميع طلاب المستويين الرابع والخامس لجمع العينات النباتية لغرض تصنيفها وتجميعها بالمعامل تحت اشراف القسم ممثلاً بالاستاذ/ عارف عز الدين والمعيدين في الكلية بتاريخ الثلاثاء الموافق 01 / 11 / 2022وتاتي هذه الزيارة ضمن الانشطة الطلابية التي تراعاها الجامعة ممثلة بعمادة شؤون الطلاب – ادارة التدريب والانشطة الطلابية.\n\nرحلة علمية لطلاب قسم الصيدلة\n\nهذا المقال يحتوي على مزيد من التفاصيل حول هذا الموضوع."
+              },
+              "executed": true,
+              "next_start": null,
+              "ok": true,
+              "previously_received": false
+            },
+            "round": 7,
+            "tool": "read",
+            "tool_call_id": "call_55d968f62119496ab62d57c4"
+          },
+          {
+            "arguments": "{\"ref\": \"d102\"}",
+            "executed": true,
+            "result": {
+              "action_slot_charged": true,
+              "evidence": {
+                "document": "d102",
+                "document_chars": 903,
+                "end": 903,
+                "kind": "raw_evidence",
+                "ref": "e4",
+                "sha256": "fa5292802570f20e33c07229c088e20499713839e74b49f50a9b9c1975436dbc",
+                "snapshot": "fa5292802570f20e33c07229c088e20499713839e74b49f50a9b9c1975436dbc",
+                "start": 0,
+                "text": "---\ntitle: تكريم بنك التضامن الاسلامي\ndate: 2022-11-10\n---\nاخبار اليوم الصحيفة, تكريم بنك التضامن اخبار اليوم الصحيفة, تكريم بنك التضامن\n\nتكريم بنك التضامن الاسلامي\n\nنظمت جامعة الملكة اروى _ كلية الاقتصاد والعلوم الادارية – حفل تكريم لادارة بنك التضامن الاسلامي برعاية الدكتور/ غسان علي هاشم – نائب رئيس الجامعة وذلك في القاعة الكبرى يوم الخميس 16 ربيع الثاني 1444هـ الموافق 10 -11- 2022 م الساعة العاشرة AM بحضور رئيس الجامعة ا.د. محمد الخياط ورؤساء الاقسام وعدد من اعضاء هيئه التدريس ومنتسبي وطلاب كلية الاقتصاد والعلوم الادارية تخلل الحفل العديد من الفقرات حيث قدم د.غسان هاشم درع الجامعة لادارة بنك التضامن ممثلة بالاخ د.عبدالقوي حسان رئيس قسم التدريب والتطوير نظير اتاحتهم فرصة تدريب لطلاب المستوى الرابع كلية الاقتصاد والعلوم الادارية، وفي نهاية الحفل تم تقديم شهائد تدريبية للطلاب المشاركين في التدريب لدى البنك.\n\nتكريم بنك التضامن الاسلامي\n\nهذا المقال يحتوي على مزيد من التفاصيل حول هذا الموضوع."
+              },
+              "executed": true,
+              "next_start": null,
+              "ok": true,
+              "previously_received": false
+            },
+            "round": 7,
+            "tool": "read",
+            "tool_call_id": "call_713019e4c8a74620836c99fb"
+          }
+        ],
+        "retained_native_messages_match_original": true
+      }
+    ],
+    "http_statuses": [
+      200,
+      200,
+      200,
+      200,
+      200,
+      200,
+      200,
+      200
+    ],
+    "model_identity_sha256": "b13ecc835476e3b17c6f2f26fdaa5eebe6b85872ce7bbe34d102c9b3ff084c3c",
+    "first_read_round": 2
+  },
+  "q786-baseline-r1": {
+    "seal_files": 80,
+    "seal_verified": true,
+    "chain": {
+      "event_count": 446,
+      "head": "d94b5b683276f668cb23160834dc0eee0374a39b4012250f548a0b0467fd6986"
+    },
+    "http_archive_equal": true,
+    "windows_verified": 3,
+    "terminal": {
+      "answer": "Kiran Shah",
+      "answer_representation": {
+        "input_type": "string",
+        "operation": "identity",
+        "rule": "string-integer-v1"
+      },
+      "basis": [
+        {
+          "document": "d95",
+          "document_chars": 6073,
+          "end": 3000,
+          "kind": "raw_evidence",
+          "ref": "e1",
+          "sha256": "537f755a61d9cbda27eb32b2efa11aeeaeec81efe340766e62f59ce1148f2f32",
+          "snapshot": "d093b6d0dfcf9448fb2d1927b8e9b9245d90c77e1bd2fcc107636885695a39c0",
+          "start": 0
+        },
+        {
+          "document": "d129",
+          "document_chars": 5908,
+          "end": 3000,
+          "kind": "raw_evidence",
+          "ref": "e2",
+          "sha256": "71a38be6f57766f0dd124d2aeb87cb42731217dac7358f4bc8a7801d0ed8f20c",
+          "snapshot": "62e063a66e380b3752a6f796a9e0b9249d039cb64f0a654981bc8c9226d2743c",
+          "start": 0
+        },
+        {
+          "document": "d167",
+          "document_chars": 4714,
+          "end": 3000,
+          "kind": "raw_evidence",
+          "ref": "e3",
+          "sha256": "1f0a1bf520860a6ae5837d7c66ea4fa675d2dfce3884af9fd0b6bb77f0b24172",
+          "snapshot": "5bb9bb92f4b4cce74267422df4e24b420e666228d386aec1c8ddfd5895a0e622",
+          "start": 0
+        }
+      ],
+      "elapsed_seconds": 114.87313520000316,
+      "outcome": "submitted",
+      "refs": [
+        "e1",
+        "e2",
+        "e3"
+      ],
+      "semantic_status": "not_automatically_verified"
+    },
+    "metrics": {
+      "event_count": 446,
+      "head": "d94b5b683276f668cb23160834dc0eee0374a39b4012250f548a0b0467fd6986",
+      "protocol": "stride-search-3",
+      "answer_contract": "string-integer-v1",
+      "workflow_contract": {
+        "enabled": true,
+        "gap_state": true,
+        "guided_read": true,
+        "recovery_rounds": 2,
+        "repeat_threshold": 2,
+        "repetition": "bounded",
+        "reuse_results": true,
+        "version": "gap-workflow-v1"
+      },
+      "model_attempts": 16,
+      "backend_attempts": 39,
+      "actions_recorded": 20,
+      "executed_actions": 20,
+      "usage_known": {
+        "input_tokens": 274383,
+        "output_tokens": 2693,
+        "cache_read_tokens": 129536,
+        "cache_write_tokens": 0
+      },
+      "unknown_usage_calls": 0,
+      "outstanding_requests": [],
+      "formal_correct": null,
+      "recovery_events": {
+        "delivery_preflight": 15
+      },
+      "nonblocking_note_failures": 0,
+      "action_counts": {
+        "search": 16,
+        "read": 3,
+        "finish": 1
+      },
+      "action_error_counts": {},
+      "final_phase_requests": 1,
+      "compaction_requests": 6,
+      "rounds_receiving_new_raw": 3,
+      "cache_query_hits": 3,
+      "unchanged_note_updates": 0,
+      "limitations": [
+        "No semantic judge has run",
+        "No resume or automatic reissue",
+        "Hashes are not adversarial authentication"
+      ]
+    },
+    "triggers": [],
+    "delivery_windows": [
+      {
+        "round": 6,
+        "ref": "e1",
+        "document": "d95",
+        "range": [
+          0,
+          3000
+        ],
+        "text_sha256": "537f755a61d9cbda27eb32b2efa11aeeaeec81efe340766e62f59ce1148f2f32"
+      },
+      {
+        "round": 7,
+        "ref": "e1",
+        "document": "d95",
+        "range": [
+          0,
+          3000
+        ],
+        "text_sha256": "537f755a61d9cbda27eb32b2efa11aeeaeec81efe340766e62f59ce1148f2f32"
+      },
+      {
+        "round": 8,
+        "ref": "e1",
+        "document": "d95",
+        "range": [
+          0,
+          3000
+        ],
+        "text_sha256": "537f755a61d9cbda27eb32b2efa11aeeaeec81efe340766e62f59ce1148f2f32"
+      },
+      {
+        "round": 8,
+        "ref": "e2",
+        "document": "d129",
+        "range": [
+          0,
+          3000
+        ],
+        "text_sha256": "71a38be6f57766f0dd124d2aeb87cb42731217dac7358f4bc8a7801d0ed8f20c"
+      },
+      {
+        "round": 9,
+        "ref": "e1",
+        "document": "d95",
+        "range": [
+          0,
+          3000
+        ],
+        "text_sha256": "537f755a61d9cbda27eb32b2efa11aeeaeec81efe340766e62f59ce1148f2f32"
+      },
+      {
+        "round": 9,
+        "ref": "e2",
+        "document": "d129",
+        "range": [
+          0,
+          3000
+        ],
+        "text_sha256": "71a38be6f57766f0dd124d2aeb87cb42731217dac7358f4bc8a7801d0ed8f20c"
+      },
+      {
+        "round": 10,
+        "ref": "e1",
+        "document": "d95",
+        "range": [
+          0,
+          3000
+        ],
+        "text_sha256": "537f755a61d9cbda27eb32b2efa11aeeaeec81efe340766e62f59ce1148f2f32"
+      },
+      {
+        "round": 10,
+        "ref": "e2",
+        "document": "d129",
+        "range": [
+          0,
+          3000
+        ],
+        "text_sha256": "71a38be6f57766f0dd124d2aeb87cb42731217dac7358f4bc8a7801d0ed8f20c"
+      },
+      {
+        "round": 11,
+        "ref": "e1",
+        "document": "d95",
+        "range": [
+          0,
+          3000
+        ],
+        "text_sha256": "537f755a61d9cbda27eb32b2efa11aeeaeec81efe340766e62f59ce1148f2f32"
+      },
+      {
+        "round": 11,
+        "ref": "e2",
+        "document": "d129",
+        "range": [
+          0,
+          3000
+        ],
+        "text_sha256": "71a38be6f57766f0dd124d2aeb87cb42731217dac7358f4bc8a7801d0ed8f20c"
+      },
+      {
+        "round": 12,
+        "ref": "e1",
+        "document": "d95",
+        "range": [
+          0,
+          3000
+        ],
+        "text_sha256": "537f755a61d9cbda27eb32b2efa11aeeaeec81efe340766e62f59ce1148f2f32"
+      },
+      {
+        "round": 12,
+        "ref": "e2",
+        "document": "d129",
+        "range": [
+          0,
+          3000
+        ],
+        "text_sha256": "71a38be6f57766f0dd124d2aeb87cb42731217dac7358f4bc8a7801d0ed8f20c"
+      },
+      {
+        "round": 12,
+        "ref": "e3",
+        "document": "d167",
+        "range": [
+          0,
+          3000
+        ],
+        "text_sha256": "1f0a1bf520860a6ae5837d7c66ea4fa675d2dfce3884af9fd0b6bb77f0b24172"
+      },
+      {
+        "round": 13,
+        "ref": "e1",
+        "document": "d95",
+        "range": [
+          0,
+          3000
+        ],
+        "text_sha256": "537f755a61d9cbda27eb32b2efa11aeeaeec81efe340766e62f59ce1148f2f32"
+      },
+      {
+        "round": 13,
+        "ref": "e2",
+        "document": "d129",
+        "range": [
+          0,
+          3000
+        ],
+        "text_sha256": "71a38be6f57766f0dd124d2aeb87cb42731217dac7358f4bc8a7801d0ed8f20c"
+      },
+      {
+        "round": 13,
+        "ref": "e3",
+        "document": "d167",
+        "range": [
+          0,
+          3000
+        ],
+        "text_sha256": "1f0a1bf520860a6ae5837d7c66ea4fa675d2dfce3884af9fd0b6bb77f0b24172"
+      },
+      {
+        "round": 14,
+        "ref": "e1",
+        "document": "d95",
+        "range": [
+          0,
+          3000
+        ],
+        "text_sha256": "537f755a61d9cbda27eb32b2efa11aeeaeec81efe340766e62f59ce1148f2f32"
+      },
+      {
+        "round": 14,
+        "ref": "e2",
+        "document": "d129",
+        "range": [
+          0,
+          3000
+        ],
+        "text_sha256": "71a38be6f57766f0dd124d2aeb87cb42731217dac7358f4bc8a7801d0ed8f20c"
+      },
+      {
+        "round": 14,
+        "ref": "e3",
+        "document": "d167",
+        "range": [
+          0,
+          3000
+        ],
+        "text_sha256": "1f0a1bf520860a6ae5837d7c66ea4fa675d2dfce3884af9fd0b6bb77f0b24172"
+      },
+      {
+        "round": 15,
+        "ref": "e1",
+        "document": "d95",
+        "range": [
+          0,
+          3000
+        ],
+        "text_sha256": "537f755a61d9cbda27eb32b2efa11aeeaeec81efe340766e62f59ce1148f2f32"
+      },
+      {
+        "round": 15,
+        "ref": "e2",
+        "document": "d129",
+        "range": [
+          0,
+          3000
+        ],
+        "text_sha256": "71a38be6f57766f0dd124d2aeb87cb42731217dac7358f4bc8a7801d0ed8f20c"
+      },
+      {
+        "round": 15,
+        "ref": "e3",
+        "document": "d167",
+        "range": [
+          0,
+          3000
+        ],
+        "text_sha256": "1f0a1bf520860a6ae5837d7c66ea4fa675d2dfce3884af9fd0b6bb77f0b24172"
+      },
+      {
+        "round": 16,
+        "ref": "e1",
+        "document": "d95",
+        "range": [
+          0,
+          3000
+        ],
+        "text_sha256": "537f755a61d9cbda27eb32b2efa11aeeaeec81efe340766e62f59ce1148f2f32"
+      },
+      {
+        "round": 16,
+        "ref": "e2",
+        "document": "d129",
+        "range": [
+          0,
+          3000
+        ],
+        "text_sha256": "71a38be6f57766f0dd124d2aeb87cb42731217dac7358f4bc8a7801d0ed8f20c"
+      },
+      {
+        "round": 16,
+        "ref": "e3",
+        "document": "d167",
+        "range": [
+          0,
+          3000
+        ],
+        "text_sha256": "1f0a1bf520860a6ae5837d7c66ea4fa675d2dfce3884af9fd0b6bb77f0b24172"
+      }
+    ],
+    "binding_verified": true,
+    "trigger_checks": [],
+    "http_statuses": [
+      200,
+      200,
+      200,
+      200,
+      200,
+      200,
+      200,
+      200,
+      200,
+      200,
+      200,
+      200,
+      200,
+      200,
+      200,
+      200
+    ],
+    "model_identity_sha256": "b13ecc835476e3b17c6f2f26fdaa5eebe6b85872ce7bbe34d102c9b3ff084c3c",
+    "first_read_round": 5
+  },
+  "q786-read-only-explicit-v1-r1": {
+    "seal_files": 72,
+    "seal_verified": true,
+    "chain": {
+      "event_count": 248,
+      "head": "f6f6860f7f952dbeec5eb287aaec6b235727716fea953f2c3eadb9a9db5df0ce"
+    },
+    "http_archive_equal": true,
+    "windows_verified": 0,
+    "terminal": {
+      "answer": "",
+      "elapsed_seconds": 71.49250219998066,
+      "outcome": "abstained",
+      "reason": "Could not confirm the person's identity from delivered evidence. Searches surfaced Don Chaffey as a plausible director of dinosaur/sci-fi/adventure films (e.g., One Million Years B.C., Jason and the Argonauts), but no source page was actually read that verifies the 91-minute film, the \"Perfectly formed\" self-description, the 1950s birth to first/second-generation Indian immigrants, or the short film directed with a nephew. No candidate name is supported by citable evidence."
+    },
+    "metrics": {
+      "event_count": 248,
+      "head": "f6f6860f7f952dbeec5eb287aaec6b235727716fea953f2c3eadb9a9db5df0ce",
+      "protocol": "stride-search-3",
+      "answer_contract": "string-integer-v1",
+      "workflow_contract": {
+        "enabled": true,
+        "gap_state": true,
+        "guided_read": true,
+        "recovery_rounds": 2,
+        "repeat_threshold": 2,
+        "repetition": "bounded",
+        "reuse_results": true,
+        "version": "gap-workflow-v1"
+      },
+      "model_attempts": 14,
+      "backend_attempts": 22,
+      "actions_recorded": 14,
+      "executed_actions": 13,
+      "usage_known": {
+        "input_tokens": 209120,
+        "output_tokens": 1582,
+        "cache_read_tokens": 136704,
+        "cache_write_tokens": 0
+      },
+      "unknown_usage_calls": 0,
+      "outstanding_requests": [],
+      "formal_correct": null,
+      "recovery_events": {
+        "delivery_preflight": 13
+      },
+      "nonblocking_note_failures": 0,
+      "action_counts": {
+        "search": 13,
+        "finish": 1
+      },
+      "action_error_counts": {
+        "read_only_tool_only": 1,
+        "duplicate_query_blocked": 2
+      },
+      "final_phase_requests": 1,
+      "compaction_requests": 1,
+      "rounds_receiving_new_raw": 0,
+      "cache_query_hits": 8,
+      "unchanged_note_updates": 0,
+      "limitations": [
+        "No semantic judge has run",
+        "No resume or automatic reissue",
+        "Hashes are not adversarial authentication"
+      ]
+    },
+    "triggers": [
+      {
+        "identity": {
+          "base_read_rule": {
+            "kind": "temporary_tool_availability_not_verified_evidence",
+            "rule": {
+              "capacity": "recompute tools and visible navigation on each candidate build",
+              "commit": "after actual request archive before send; failed send consumes",
+              "consecutive_rounds": 3,
+              "extra_model_calls": 0,
+              "final": false,
+              "max_triggers": 1,
+              "messages": "unchanged",
+              "minimum_remaining_model_calls": 3,
+              "navigation": "retained group documents or rendered control pages; intersect read authorization",
+              "observation": "successful search receipt executed and ok; no new raw passage delivered",
+              "tools": "original read schema only; original batch limit; no forced tool choice",
+              "version": "read-only-once-v1"
+            },
+            "rule_sha256": "c5215cce37479fb19aa0f3ff146b2b6e2748cf7f89007140fce59e92f92cd6bc",
+            "version": "read-only-once-v1"
+          },
+          "instruction_location": "append to system content only on triggered request",
+          "instruction_sha256": "acdfd7e4892f31ea311b77c6cd0a90c77c0841ce86c4be99f5f04f5c0957c0ce",
+          "kind": "temporary_tool_availability_with_explicit_stage_instruction",
+          "version": "read-only-explicit-v1"
+        },
+        "native_tools_sha256": "82cba8a4a01c2197f768888ac0896a50f5fc053d172739ddb0b0c30e100141ce",
+        "observation": "no new source passage",
+        "round": 4,
+        "source_rounds": [
+          1,
+          2,
+          3
+        ],
+        "system_sha256": "1f11ec06e870b52a9366aa0d51e4ddedcdd86fa6dafbfcf9b336ae1bbe9addc5",
+        "trigger_number": 1,
+        "visible_read_documents": [
+          "d1",
+          "d2",
+          "d3",
+          "d4",
+          "d5",
+          "d6",
+          "d7",
+          "d8",
+          "d9",
+          "d10",
+          "d11",
+          "d12",
+          "d13",
+          "d14",
+          "d15",
+          "d16",
+          "d17",
+          "d18",
+          "d19",
+          "d20",
+          "d21",
+          "d22",
+          "d23",
+          "d24",
+          "d25",
+          "d26",
+          "d27",
+          "d28",
+          "d29",
+          "d30",
+          "d31",
+          "d32",
+          "d33",
+          "d34",
+          "d35",
+          "d36",
+          "d37"
+        ],
+        "visible_read_documents_sha256": "368634206bc9256a4357165e0b8d60b0e5062a211e6c4cf4453ce07a7424abda",
+        "wire_sha256": "39af62a2ae40f0b705e024d8396db693c63f68eddf835902c56bf50a486222a0",
+        "wire_tools_sha256": "82cba8a4a01c2197f768888ac0896a50f5fc053d172739ddb0b0c30e100141ce"
+      }
+    ],
+    "delivery_windows": [],
+    "binding_verified": true,
+    "trigger_checks": [
+      {
+        "round": 4,
+        "source_rounds": [
+          1,
+          2,
+          3
+        ],
+        "visible_nav_count": 37,
+        "schema_original_read": true,
+        "system_wire_hash_verified": true,
+        "system_restored_next": true,
+        "response_tools": [
+          "search"
+        ],
+        "actions": [
+          {
+            "arguments": "{\"queries\": [\"One Million Years B.C. 1966 film runtime cast\", \"Don Chaffey filmography dinosaur films\", \"actor born 1950s Indian immigrant parents short film nephew\"]}",
+            "executed": false,
+            "result": {
+              "action_slot_charged": false,
+              "blocks_finish": true,
+              "code": "read_only_tool_only",
+              "executed": false,
+              "message": "This decision permits only read; no automatic replacement",
+              "ok": false
+            },
+            "round": 4,
+            "tool": "search",
+            "tool_call_id": "call_2e048a28bfdb40f6a0edfc65"
+          }
+        ],
+        "retained_native_messages_match_original": true
+      }
+    ],
+    "http_statuses": [
+      200,
+      200,
+      200,
+      200,
+      200,
+      200,
+      200,
+      200,
+      200,
+      200,
+      200,
+      200,
+      200,
+      200
+    ],
+    "model_identity_sha256": "b13ecc835476e3b17c6f2f26fdaa5eebe6b85872ce7bbe34d102c9b3ff084c3c",
+    "first_read_round": null
+  },
+  "pairs": {
+    "770": {
+      "r1_bytes_equal": true,
+      "r1_response_equal": false
+    },
+    "772": {
+      "r1_bytes_equal": true,
+      "r1_response_equal": false
+    },
+    "769": {
+      "r1_bytes_equal": true,
+      "r1_response_equal": false
+    },
+    "786": {
+      "r1_bytes_equal": true,
+      "r1_response_equal": false
+    }
+  },
+  "scope": "Eight sealed policy slots only: q770/q772/q769/q786 paired arms. No judge/gold/other slots read."
+}

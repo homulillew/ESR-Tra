@@ -1,0 +1,1170 @@
+{
+  "utc": "2026-09-15T14:34:43.950860+00:00",
+  "rows": [
+    {
+      "slot": "q770-baseline-r1",
+      "qid": 770,
+      "protocol": "baseline",
+      "status": "submitted",
+      "terminal": {
+        "answer": "Sarah Hatchuel",
+        "answer_representation": {
+          "input_type": "string",
+          "operation": "identity",
+          "rule": "string-integer-v1"
+        },
+        "basis": [
+          {
+            "document": "d30",
+            "document_chars": 45990,
+            "end": 3000,
+            "kind": "raw_evidence",
+            "ref": "e1",
+            "sha256": "6c425210769d1528145667a872b4948f5eaaaea98e426b28765b0125ab595d88",
+            "snapshot": "be58fb82f749ee77102eed93f6ddcac6babc7fbe5610c5090b94be0ec3abfe50",
+            "start": 0
+          },
+          {
+            "document": "d30",
+            "document_chars": 45990,
+            "end": 33600,
+            "kind": "raw_evidence",
+            "ref": "e2",
+            "sha256": "f94f08beadba7d9b735ff75b702ccaf80cb342286429d01f21ab89e200dd8c84",
+            "snapshot": "be58fb82f749ee77102eed93f6ddcac6babc7fbe5610c5090b94be0ec3abfe50",
+            "start": 31600
+          }
+        ],
+        "elapsed_seconds": 152.27670640000724,
+        "outcome": "submitted",
+        "refs": [
+          "e1",
+          "e2"
+        ],
+        "semantic_status": "not_automatically_verified"
+      },
+      "attempts": 16,
+      "elapsed_seconds": 152.4999370999867,
+      "head": "a18011ba586962a0646e1bc1f43434128d18cc57e926e328ae6068d29a469e42",
+      "seal_sha256": "5b0a1f8bc73436dff8b060ac7b83203a5e13db29054e1726bd288b644347d4a0",
+      "budget_after": {
+        "cap": 1643,
+        "used": 1163,
+        "remaining": 480,
+        "this_run": 16,
+        "epoch_allowance": 1000,
+        "epoch_used": 520,
+        "epoch_remaining": 480
+      }
+    },
+    {
+      "slot": "q770-read-only-explicit-v1-r1",
+      "qid": 770,
+      "protocol": "read-only-explicit-v1",
+      "status": "abstained",
+      "terminal": {
+        "answer": "",
+        "elapsed_seconds": 131.14767070001108,
+        "outcome": "abstained",
+        "reason": "The strongest candidate is Isobel Maddison, a scholar of Elizabeth von Arnim (an English writer), with a 2012 article in First World War Studies (per Wikipedia's Elizabeth von Arnim article, e1/e2). However, I could not verify the remaining required clues: (1) a Routledge 2018 co-edited book, (2) coordinator of a research group founded in 2009 as of December 2023, (3) panel convenor before 2020, and (4) completion of a PhD on von Arnim's writings. Searches became repetitive without locating her academic profile page or the specific Routledge 2018 volume. Without verification of these distinguishing clues, I cannot confidently confirm the answer."
+      },
+      "attempts": 16,
+      "elapsed_seconds": 131.36763259998406,
+      "head": "2e138bbd14f9e85570819429a175e1a9bfde268a125d4b293980732f36584667",
+      "seal_sha256": "c0ee1d9cd794cc652a763bad210ce154f3ca00acb77b61548d736c41fba00c4c",
+      "budget_after": {
+        "cap": 1643,
+        "used": 1179,
+        "remaining": 464,
+        "this_run": 32,
+        "epoch_allowance": 1000,
+        "epoch_used": 536,
+        "epoch_remaining": 464
+      }
+    },
+    {
+      "slot": "q778-read-only-explicit-v1-r1",
+      "qid": 778,
+      "protocol": "read-only-explicit-v1",
+      "status": "submitted",
+      "terminal": {
+        "answer": "21",
+        "answer_representation": {
+          "input_type": "integer",
+          "input_value": 21,
+          "operation": "decimal",
+          "rule": "string-integer-v1"
+        },
+        "basis": [
+          {
+            "document": "d16",
+            "document_chars": 4374,
+            "end": 3000,
+            "kind": "raw_evidence",
+            "ref": "e1",
+            "sha256": "bc0d510dbd6cde0530cf08684de455d82ec1943c0ba50cab130ae01990cc24b8",
+            "snapshot": "d7b7a23b3eb780d78018e5fe30d91613c9769a1cff7564bb0a79c08614acb838",
+            "start": 0
+          }
+        ],
+        "elapsed_seconds": 18.3900275999913,
+        "outcome": "submitted",
+        "refs": [
+          "e1"
+        ],
+        "semantic_status": "not_automatically_verified"
+      },
+      "attempts": 4,
+      "elapsed_seconds": 18.48489939997671,
+      "head": "cf1a6cc40adc691d8e72be65c87428a95de8611c65038d4169eccda277807956",
+      "seal_sha256": "09939770cf3fee93fa9eb577877db4a36406b7535827aa7732b154095939aed6",
+      "budget_after": {
+        "cap": 1643,
+        "used": 1183,
+        "remaining": 460,
+        "this_run": 36,
+        "epoch_allowance": 1000,
+        "epoch_used": 540,
+        "epoch_remaining": 460
+      }
+    },
+    {
+      "slot": "q778-baseline-r1",
+      "qid": 778,
+      "protocol": "baseline",
+      "status": "submitted",
+      "terminal": {
+        "answer": "21",
+        "answer_representation": {
+          "input_type": "integer",
+          "input_value": 21,
+          "operation": "decimal",
+          "rule": "string-integer-v1"
+        },
+        "basis": [
+          {
+            "document": "d16",
+            "document_chars": 4374,
+            "end": 3000,
+            "kind": "raw_evidence",
+            "ref": "e1",
+            "sha256": "bc0d510dbd6cde0530cf08684de455d82ec1943c0ba50cab130ae01990cc24b8",
+            "snapshot": "d7b7a23b3eb780d78018e5fe30d91613c9769a1cff7564bb0a79c08614acb838",
+            "start": 0
+          }
+        ],
+        "elapsed_seconds": 18.689031799993245,
+        "outcome": "submitted",
+        "refs": [
+          "e1"
+        ],
+        "semantic_status": "not_automatically_verified"
+      },
+      "attempts": 4,
+      "elapsed_seconds": 18.778473099984694,
+      "head": "e9b74fd3da53bbc25d5795452a5f40f6857fd462952eb14e3d5f5a246785ab66",
+      "seal_sha256": "970318ef53e5769f248337728a6bc125c99f15b883d86e43e669ab0deea58752",
+      "budget_after": {
+        "cap": 1643,
+        "used": 1187,
+        "remaining": 456,
+        "this_run": 40,
+        "epoch_allowance": 1000,
+        "epoch_used": 544,
+        "epoch_remaining": 456
+      }
+    },
+    {
+      "slot": "q772-baseline-r1",
+      "qid": 772,
+      "protocol": "baseline",
+      "status": "submitted",
+      "terminal": {
+        "answer": "According to the early 2020s article (Ballet Rising, 3 March 2021) about Zama Dance School — which was founded in 1984 in Gugulethu and started in a church hall — the longest-serving employee at the school is Vuyokazi, and her role is the school's secretary.",
+        "answer_representation": {
+          "input_type": "string",
+          "operation": "identity",
+          "rule": "string-integer-v1"
+        },
+        "basis": [
+          {
+            "document": "d42",
+            "document_chars": 14677,
+            "end": 3000,
+            "kind": "raw_evidence",
+            "ref": "e1",
+            "sha256": "c8068747894db7507486348456fdf2dd43558ab673c41302414f0a0414f8a83e",
+            "snapshot": "d7b0c320e182566ae974c560f3636452277559a7ff8713a9c418680f71b1c0c3",
+            "start": 0
+          },
+          {
+            "document": "d42",
+            "document_chars": 14677,
+            "end": 6150,
+            "kind": "raw_evidence",
+            "ref": "e3",
+            "sha256": "6300e4e7627810ff5df794542b7304c637ff9e9428a4d35e74e7bd52bdb06dd5",
+            "snapshot": "d7b0c320e182566ae974c560f3636452277559a7ff8713a9c418680f71b1c0c3",
+            "start": 5850
+          }
+        ],
+        "elapsed_seconds": 44.00959450000664,
+        "outcome": "submitted",
+        "refs": [
+          "e1",
+          "e3"
+        ],
+        "semantic_status": "not_automatically_verified"
+      },
+      "attempts": 8,
+      "elapsed_seconds": 44.14264050000929,
+      "head": "a0872c6a91df56795b259fc23e826bf8e46a839e668e27f75289964ed03d99e8",
+      "seal_sha256": "57bb6fe9e905d2319a1c3766fad88d5b6a7b9927f2cb79c09a9defe1b6141a24",
+      "budget_after": {
+        "cap": 1643,
+        "used": 1195,
+        "remaining": 448,
+        "this_run": 48,
+        "epoch_allowance": 1000,
+        "epoch_used": 552,
+        "epoch_remaining": 448
+      }
+    },
+    {
+      "slot": "q772-read-only-explicit-v1-r1",
+      "qid": 772,
+      "protocol": "read-only-explicit-v1",
+      "status": "submitted",
+      "terminal": {
+        "answer": "According to the early 2020s article (Ballet Rising, 3 March 2021) about Zama Dance School — which was founded in 1984 in Gugulethu and started in a church hall — the longest-serving employee at the school is Vuyokazi (referred to as \"Vuyo\"), and her role is the school's secretary. The article states: \"I must also mention Vuyokazi, the school's secretary. Thank goodness for Vuyo who worked alongside Arlene for many years. She is our longest serving employee and a valuable part of the team today.\"",
+        "answer_representation": {
+          "input_type": "string",
+          "operation": "identity",
+          "rule": "string-integer-v1"
+        },
+        "basis": [
+          {
+            "document": "d32",
+            "document_chars": 14677,
+            "end": 7500,
+            "kind": "raw_evidence",
+            "ref": "e2",
+            "sha256": "f9e63385997757cd4b3933ad706dea3e15b5bdef659388276f3a096ec389d1ad",
+            "snapshot": "d7b0c320e182566ae974c560f3636452277559a7ff8713a9c418680f71b1c0c3",
+            "start": 4500
+          }
+        ],
+        "elapsed_seconds": 45.699073099996895,
+        "outcome": "submitted",
+        "refs": [
+          "e2"
+        ],
+        "semantic_status": "not_automatically_verified"
+      },
+      "attempts": 7,
+      "elapsed_seconds": 45.83663870001328,
+      "head": "3947d97736c74341a033054870e13756c9f5cf7450321dd80dac57fba2f70129",
+      "seal_sha256": "fce995a597b05fa832fa439e8e9da1f690f841ab6ba7494682d99fc8bd9088e6",
+      "budget_after": {
+        "cap": 1643,
+        "used": 1202,
+        "remaining": 441,
+        "this_run": 55,
+        "epoch_allowance": 1000,
+        "epoch_used": 559,
+        "epoch_remaining": 441
+      }
+    },
+    {
+      "slot": "q774-read-only-explicit-v1-r1",
+      "qid": 774,
+      "protocol": "read-only-explicit-v1",
+      "status": "abstained",
+      "terminal": {
+        "answer": "",
+        "elapsed_seconds": 192.80500620001112,
+        "outcome": "abstained",
+        "reason": "I could not identify the entertainer matching all criteria. The clues require a specific combination: a TV series that started between 2000-2020 with more than 3 seasons by 2023; an actor whose real-life height is between 1.66m and 1.69m; whose character was married 3 times in the series; only one of the character's children survives in the series; and who acts alongside a real-life relative playing an unrelated character. My searches across candidate shows (Grey's Anatomy, This Is Us, Yellowstone, Shameless, The 100, Supernatural, Arrow/The Flash) did not yield a confirmed match satisfying all six conditions simultaneously. The \"real-life relative plays unrelated character\" clue surfaced candidates (e.g., Jessica/Richard Harmon on The 100; Jared Padalecki/Genevieve Cortese on Supernatural; Stephen/Robbie Amell on Arrow/The Flash), but none aligned with the marriage/child-survival/height constraints. Without a verified source tying all clues to one named entertainer, I cannot responsibly submit an answer."
+      },
+      "attempts": 16,
+      "elapsed_seconds": 193.0734053000051,
+      "head": "2400263fc112269eacda2839566f90b65f5f9ec565b080b16852956fc57aba41",
+      "seal_sha256": "0832df32eab1579c336b21b76eb7e6ad8dde351b8b2cc850e39e49ded118f574",
+      "budget_after": {
+        "cap": 1643,
+        "used": 1218,
+        "remaining": 425,
+        "this_run": 71,
+        "epoch_allowance": 1000,
+        "epoch_used": 575,
+        "epoch_remaining": 425
+      }
+    },
+    {
+      "slot": "q774-baseline-r1",
+      "qid": 774,
+      "protocol": "baseline",
+      "status": "abstained",
+      "terminal": {
+        "answer": "",
+        "elapsed_seconds": 138.25633470001048,
+        "outcome": "abstained",
+        "reason": "I could not retrieve any citable evidence windows confirming the entertainer's identity or the matching facts (height 1.65–1.70 m, character married 3–4 times, only one surviving child, plays alongside a real-life relative though unrelated in-series, in a show that started 2001–2019 with >3 seasons by 2023). All searches returned only navigation snippets, not delivered eN evidence I can verify. Candidate shows considered (e.g., Muhteşem Yüzyıl/Magnificent Century) could not be confirmed against the clues without readable source text. Abstaining rather than guessing."
+      },
+      "attempts": 16,
+      "elapsed_seconds": 138.50365730002522,
+      "head": "258d87aeffc114a78cb09c803cf0740f7bdb5abe324470e2e9119ba33edd9609",
+      "seal_sha256": "9848e9c654b60a3273f35fb30ec735d8e4e6d8d06f42a08636d50380e6297128",
+      "budget_after": {
+        "cap": 1643,
+        "used": 1234,
+        "remaining": 409,
+        "this_run": 87,
+        "epoch_allowance": 1000,
+        "epoch_used": 591,
+        "epoch_remaining": 409
+      }
+    },
+    {
+      "slot": "q769-baseline-r1",
+      "qid": 769,
+      "protocol": "baseline",
+      "status": "submitted",
+      "terminal": {
+        "answer": "Queen Arwa University (جامعة الملكة أروى)",
+        "answer_representation": {
+          "input_type": "string",
+          "operation": "identity",
+          "rule": "string-integer-v1"
+        },
+        "basis": [
+          {
+            "document": "d24",
+            "document_chars": 2464,
+            "end": 2464,
+            "kind": "raw_evidence",
+            "ref": "e2",
+            "sha256": "22bc740c55a9a335edc92e76fb036399f1ad5b3486a41dc71d4322e1f2922523",
+            "snapshot": "22bc740c55a9a335edc92e76fb036399f1ad5b3486a41dc71d4322e1f2922523",
+            "start": 0
+          },
+          {
+            "document": "d16",
+            "document_chars": 2180,
+            "end": 2180,
+            "kind": "raw_evidence",
+            "ref": "e1",
+            "sha256": "9c886b5421a788e195ed7a893432c4ec637bb333792ff3770d83def36ed848fd",
+            "snapshot": "9c886b5421a788e195ed7a893432c4ec637bb333792ff3770d83def36ed848fd",
+            "start": 0
+          },
+          {
+            "document": "d48",
+            "document_chars": 658,
+            "end": 658,
+            "kind": "raw_evidence",
+            "ref": "e3",
+            "sha256": "4c4c8f037971b3fe48f29aaff95926107bc32494ad3b0f56f4fef05610488fd2",
+            "snapshot": "4c4c8f037971b3fe48f29aaff95926107bc32494ad3b0f56f4fef05610488fd2",
+            "start": 0
+          },
+          {
+            "document": "d53",
+            "document_chars": 903,
+            "end": 903,
+            "kind": "raw_evidence",
+            "ref": "e4",
+            "sha256": "fa5292802570f20e33c07229c088e20499713839e74b49f50a9b9c1975436dbc",
+            "snapshot": "fa5292802570f20e33c07229c088e20499713839e74b49f50a9b9c1975436dbc",
+            "start": 0
+          }
+        ],
+        "elapsed_seconds": 46.54090190000716,
+        "outcome": "submitted",
+        "refs": [
+          "e2",
+          "e1",
+          "e3",
+          "e4"
+        ],
+        "semantic_status": "not_automatically_verified"
+      },
+      "attempts": 7,
+      "elapsed_seconds": 46.68119250002201,
+      "head": "1001df9109ad5c45af68625f535713329b3164b7ff09b82a9e3ee64f3e598177",
+      "seal_sha256": "d0cff0e1484e94277f1529d42d4bba401f36b1b172bf2a0b1e266cffa91e390f",
+      "budget_after": {
+        "cap": 1643,
+        "used": 1241,
+        "remaining": 402,
+        "this_run": 94,
+        "epoch_allowance": 1000,
+        "epoch_used": 598,
+        "epoch_remaining": 402
+      }
+    },
+    {
+      "slot": "q769-read-only-explicit-v1-r1",
+      "qid": 769,
+      "protocol": "read-only-explicit-v1",
+      "status": "submitted",
+      "terminal": {
+        "answer": "Queen Arwa University (جامعة الملكة أروى)",
+        "answer_representation": {
+          "input_type": "string",
+          "operation": "identity",
+          "rule": "string-integer-v1"
+        },
+        "basis": [
+          {
+            "document": "d25",
+            "document_chars": 2464,
+            "end": 2464,
+            "kind": "raw_evidence",
+            "ref": "e2",
+            "sha256": "22bc740c55a9a335edc92e76fb036399f1ad5b3486a41dc71d4322e1f2922523",
+            "snapshot": "22bc740c55a9a335edc92e76fb036399f1ad5b3486a41dc71d4322e1f2922523",
+            "start": 0
+          },
+          {
+            "document": "d1",
+            "document_chars": 2180,
+            "end": 2180,
+            "kind": "raw_evidence",
+            "ref": "e1",
+            "sha256": "9c886b5421a788e195ed7a893432c4ec637bb333792ff3770d83def36ed848fd",
+            "snapshot": "9c886b5421a788e195ed7a893432c4ec637bb333792ff3770d83def36ed848fd",
+            "start": 0
+          },
+          {
+            "document": "d104",
+            "document_chars": 658,
+            "end": 658,
+            "kind": "raw_evidence",
+            "ref": "e3",
+            "sha256": "4c4c8f037971b3fe48f29aaff95926107bc32494ad3b0f56f4fef05610488fd2",
+            "snapshot": "4c4c8f037971b3fe48f29aaff95926107bc32494ad3b0f56f4fef05610488fd2",
+            "start": 0
+          },
+          {
+            "document": "d102",
+            "document_chars": 903,
+            "end": 903,
+            "kind": "raw_evidence",
+            "ref": "e4",
+            "sha256": "fa5292802570f20e33c07229c088e20499713839e74b49f50a9b9c1975436dbc",
+            "snapshot": "fa5292802570f20e33c07229c088e20499713839e74b49f50a9b9c1975436dbc",
+            "start": 0
+          }
+        ],
+        "elapsed_seconds": 57.6170288999856,
+        "outcome": "submitted",
+        "refs": [
+          "e2",
+          "e1",
+          "e3",
+          "e4"
+        ],
+        "semantic_status": "not_automatically_verified"
+      },
+      "attempts": 8,
+      "elapsed_seconds": 57.79123420000542,
+      "head": "f285d1bbee4ea40d9b53de9c00ad38a7589223f522d04754e592782af3553869",
+      "seal_sha256": "aa538e35cdc427f9c2d4bca1e05838cb61b648cfeb0955a05aa39465f215f130",
+      "budget_after": {
+        "cap": 1643,
+        "used": 1249,
+        "remaining": 394,
+        "this_run": 102,
+        "epoch_allowance": 1000,
+        "epoch_used": 606,
+        "epoch_remaining": 394
+      }
+    },
+    {
+      "slot": "q775-read-only-explicit-v1-r1",
+      "qid": 775,
+      "protocol": "read-only-explicit-v1",
+      "status": "abstained",
+      "terminal": {
+        "answer": "",
+        "elapsed_seconds": 83.69983500000671,
+        "outcome": "abstained",
+        "reason": "The puzzle requires identifying: (1) an award created in the 2000s (candidates: Man Booker International Prize 2005, Man Asian Literary Prize 2007, both confirmed in e1); (2) a book translated into 25+ languages that was later shortlisted/contended for that award; (3) a prize-winning book in the 2010s released the preceding year; (4) the prize-winning author born in the city where the first book's author grew up. I could not verify the specific book, author, birth city, or the cross-connection through the available evidence. The search hits (e.g., Chigozie Obioma's novels translated into 30 languages, shortlisted for the Booker Prize) point to the Booker Prize, which was created in 1969, not the 2000s, creating an unresolved conflict. Without confirmed source evidence for the specific author-city link, I cannot reliably determine the birth city of the first book's author."
+      },
+      "attempts": 12,
+      "elapsed_seconds": 83.90046119998442,
+      "head": "81f1e18b02724ce87aa8b9547637c9a3c07d6b54896dc93c1aa7faff79dbeb78",
+      "seal_sha256": "dcbd8e544d27360ae91d366586454940f45a83057c6e76b5f7d17073f51783ec",
+      "budget_after": {
+        "cap": 1643,
+        "used": 1261,
+        "remaining": 382,
+        "this_run": 114,
+        "epoch_allowance": 1000,
+        "epoch_used": 618,
+        "epoch_remaining": 382
+      }
+    },
+    {
+      "slot": "q775-baseline-r1",
+      "qid": 775,
+      "protocol": "baseline",
+      "status": "abstained",
+      "terminal": {
+        "answer": "",
+        "elapsed_seconds": 58.55371119998745,
+        "outcome": "abstained",
+        "reason": "I could not retrieve citable evidence confirming the specific chain of facts needed: which award created in the 2000s is involved, which book translated into 25+ languages was a contender for it, which prize-winning book (released the preceding year) won that award in the 2010s, and the birthplace/upbringing cities of the two authors. The searches returned only general navigation snippets, no verified source windows establishing the birthplace answer. Without confirmed evidence I cannot determine the city where the first book's author was born."
+      },
+      "attempts": 10,
+      "elapsed_seconds": 58.71661179998773,
+      "head": "a5768d45c29834f3fbfe6dec4ad9fc389c82911136f67d5b8bc45fcfd8108eed",
+      "seal_sha256": "c7abb4d12c3c028c9537740e5506f9ac969850a6e638740a3300ce4e3dcc9468",
+      "budget_after": {
+        "cap": 1643,
+        "used": 1271,
+        "remaining": 372,
+        "this_run": 124,
+        "epoch_allowance": 1000,
+        "epoch_used": 628,
+        "epoch_remaining": 372
+      }
+    },
+    {
+      "slot": "q786-baseline-r1",
+      "qid": 786,
+      "protocol": "baseline",
+      "status": "submitted",
+      "terminal": {
+        "answer": "Kiran Shah",
+        "answer_representation": {
+          "input_type": "string",
+          "operation": "identity",
+          "rule": "string-integer-v1"
+        },
+        "basis": [
+          {
+            "document": "d95",
+            "document_chars": 6073,
+            "end": 3000,
+            "kind": "raw_evidence",
+            "ref": "e1",
+            "sha256": "537f755a61d9cbda27eb32b2efa11aeeaeec81efe340766e62f59ce1148f2f32",
+            "snapshot": "d093b6d0dfcf9448fb2d1927b8e9b9245d90c77e1bd2fcc107636885695a39c0",
+            "start": 0
+          },
+          {
+            "document": "d129",
+            "document_chars": 5908,
+            "end": 3000,
+            "kind": "raw_evidence",
+            "ref": "e2",
+            "sha256": "71a38be6f57766f0dd124d2aeb87cb42731217dac7358f4bc8a7801d0ed8f20c",
+            "snapshot": "62e063a66e380b3752a6f796a9e0b9249d039cb64f0a654981bc8c9226d2743c",
+            "start": 0
+          },
+          {
+            "document": "d167",
+            "document_chars": 4714,
+            "end": 3000,
+            "kind": "raw_evidence",
+            "ref": "e3",
+            "sha256": "1f0a1bf520860a6ae5837d7c66ea4fa675d2dfce3884af9fd0b6bb77f0b24172",
+            "snapshot": "5bb9bb92f4b4cce74267422df4e24b420e666228d386aec1c8ddfd5895a0e622",
+            "start": 0
+          }
+        ],
+        "elapsed_seconds": 114.87313520000316,
+        "outcome": "submitted",
+        "refs": [
+          "e1",
+          "e2",
+          "e3"
+        ],
+        "semantic_status": "not_automatically_verified"
+      },
+      "attempts": 16,
+      "elapsed_seconds": 115.08879989999696,
+      "head": "12b6bb3cf09377f97695ec2302d1a0e10f1ac8ad8a12d883e8039ce93500f68c",
+      "seal_sha256": "1d6188028cbb8191fdf03f757fe53c3339289645931012ec9de1277a54f3d50c",
+      "budget_after": {
+        "cap": 1643,
+        "used": 1287,
+        "remaining": 356,
+        "this_run": 140,
+        "epoch_allowance": 1000,
+        "epoch_used": 644,
+        "epoch_remaining": 356
+      }
+    },
+    {
+      "slot": "q786-read-only-explicit-v1-r1",
+      "qid": 786,
+      "protocol": "read-only-explicit-v1",
+      "status": "abstained",
+      "terminal": {
+        "answer": "",
+        "elapsed_seconds": 71.49250219998066,
+        "outcome": "abstained",
+        "reason": "Could not confirm the person's identity from delivered evidence. Searches surfaced Don Chaffey as a plausible director of dinosaur/sci-fi/adventure films (e.g., One Million Years B.C., Jason and the Argonauts), but no source page was actually read that verifies the 91-minute film, the \"Perfectly formed\" self-description, the 1950s birth to first/second-generation Indian immigrants, or the short film directed with a nephew. No candidate name is supported by citable evidence."
+      },
+      "attempts": 14,
+      "elapsed_seconds": 71.64655589999165,
+      "head": "6843b3ceefd9dd9d43c08fdc0a5be7ede3cc0c686724a70c595ce83ead28f07a",
+      "seal_sha256": "d7fc1b1e71244bc226f680f5216d037cd96566bf5e50c1c152655fa572f6d6cd",
+      "budget_after": {
+        "cap": 1643,
+        "used": 1301,
+        "remaining": 342,
+        "this_run": 154,
+        "epoch_allowance": 1000,
+        "epoch_used": 658,
+        "epoch_remaining": 342
+      }
+    },
+    {
+      "slot": "q776-read-only-explicit-v1-r1",
+      "qid": 776,
+      "protocol": "read-only-explicit-v1",
+      "status": "submitted",
+      "terminal": {
+        "answer": "The Dorset Culture of the Eastern Arctic",
+        "answer_representation": {
+          "input_type": "string",
+          "operation": "identity",
+          "rule": "string-integer-v1"
+        },
+        "basis": [
+          {
+            "document": "d29",
+            "document_chars": 5147,
+            "end": 5147,
+            "kind": "raw_evidence",
+            "ref": "e8",
+            "sha256": "eef09a784c75341350344114eba1f20877848442268d02f73a0e875e5e87c924",
+            "snapshot": "eef09a784c75341350344114eba1f20877848442268d02f73a0e875e5e87c924",
+            "start": 0
+          },
+          {
+            "document": "d57",
+            "document_chars": 3229,
+            "end": 3000,
+            "kind": "raw_evidence",
+            "ref": "e6",
+            "sha256": "d69c173c214aab84f8a6a068a77c2365ceed4d7fefbe89df0e0f7ec2a2db8d6b",
+            "snapshot": "91cabfeb55d4c249c456c4111e140c7101078f737f21d73637f040448d29a517",
+            "start": 0
+          },
+          {
+            "document": "d27",
+            "document_chars": 3147,
+            "end": 3000,
+            "kind": "raw_evidence",
+            "ref": "e5",
+            "sha256": "078181267219dc48f0234a22666dfc6124a1b87aef3352f34ab196a0967e29c7",
+            "snapshot": "aea1366c195910f9c2ff23cdfbfd63a260e23d7712f93ab21a1835c70a91d48a",
+            "start": 0
+          },
+          {
+            "document": "d68",
+            "document_chars": 1916,
+            "end": 1916,
+            "kind": "raw_evidence",
+            "ref": "e7",
+            "sha256": "dea61c5126a40e3a0a499921966d0fd804d4747ab57e4187f217221d26d0773f",
+            "snapshot": "dea61c5126a40e3a0a499921966d0fd804d4747ab57e4187f217221d26d0773f",
+            "start": 0
+          }
+        ],
+        "elapsed_seconds": 180.62036509998143,
+        "outcome": "submitted",
+        "refs": [
+          "e8",
+          "e6",
+          "e5",
+          "e7"
+        ],
+        "semantic_status": "not_automatically_verified"
+      },
+      "attempts": 16,
+      "elapsed_seconds": 180.83112320001237,
+      "head": "80b0cb9d168dbf4a553cfefba14a500f7186a3f45e136bf94019a357a4407b80",
+      "seal_sha256": "c9abf91c80160a3bd489e20d40437680648162581f303d1ff2e546af5a4991c3",
+      "budget_after": {
+        "cap": 1643,
+        "used": 1317,
+        "remaining": 326,
+        "this_run": 170,
+        "epoch_allowance": 1000,
+        "epoch_used": 674,
+        "epoch_remaining": 326
+      }
+    },
+    {
+      "slot": "q776-baseline-r1",
+      "qid": 776,
+      "protocol": "baseline",
+      "status": "submitted",
+      "terminal": {
+        "answer": "The Dorset Culture of the Eastern Arctic",
+        "answer_representation": {
+          "input_type": "string",
+          "operation": "identity",
+          "rule": "string-integer-v1"
+        },
+        "basis": [
+          {
+            "document": "d13",
+            "document_chars": 5147,
+            "end": 3000,
+            "kind": "raw_evidence",
+            "ref": "e8",
+            "sha256": "ca371c4748e0515bba5e7dc007a1978cf62c1248a87ec3089860b5f5b9dbcafd",
+            "snapshot": "eef09a784c75341350344114eba1f20877848442268d02f73a0e875e5e87c924",
+            "start": 0
+          },
+          {
+            "document": "d41",
+            "document_chars": 1916,
+            "end": 1916,
+            "kind": "raw_evidence",
+            "ref": "e10",
+            "sha256": "dea61c5126a40e3a0a499921966d0fd804d4747ab57e4187f217221d26d0773f",
+            "snapshot": "dea61c5126a40e3a0a499921966d0fd804d4747ab57e4187f217221d26d0773f",
+            "start": 0
+          }
+        ],
+        "elapsed_seconds": 73.46166329999687,
+        "outcome": "submitted",
+        "refs": [
+          "e8",
+          "e10"
+        ],
+        "semantic_status": "not_automatically_verified"
+      },
+      "attempts": 14,
+      "elapsed_seconds": 73.68582230000175,
+      "head": "959310bd40e9a6bf90e02495658127eebb677916e95a9934b019b61d68daf5c2",
+      "seal_sha256": "98bff50357aeafbf952df6bf712ce25b66b1bef2c0b4d03e01a5d89deba6a30e",
+      "budget_after": {
+        "cap": 1643,
+        "used": 1331,
+        "remaining": 312,
+        "this_run": 184,
+        "epoch_allowance": 1000,
+        "epoch_used": 688,
+        "epoch_remaining": 312
+      }
+    },
+    {
+      "slot": "q771-baseline-r1",
+      "qid": 771,
+      "protocol": "baseline",
+      "status": "submitted",
+      "terminal": {
+        "answer": "Vakkorama",
+        "answer_representation": {
+          "input_type": "string",
+          "operation": "identity",
+          "rule": "string-integer-v1"
+        },
+        "basis": [
+          {
+            "document": "d5",
+            "document_chars": 13639,
+            "end": 6000,
+            "kind": "raw_evidence",
+            "ref": "e3",
+            "sha256": "97a6e11f3f34512afbebf984635c4f0118e43a0fd1a04e71a3f4cf755defe729",
+            "snapshot": "7d8960afbde4b93401ea738e66299a6ee3d0dee47906ba8e3a86ebdea642ffcd",
+            "start": 3000
+          },
+          {
+            "document": "d1",
+            "document_chars": 9095,
+            "end": 6000,
+            "kind": "raw_evidence",
+            "ref": "e4",
+            "sha256": "01ef6425050ddf612695a672f50d2d88e296ce9e1e5d49338047f20a92856164",
+            "snapshot": "446eabd6c86b9aad83f468e7eb034d96105d6e38bc9d97c923416d3ce089e105",
+            "start": 3000
+          }
+        ],
+        "elapsed_seconds": 22.368274499982363,
+        "outcome": "submitted",
+        "refs": [
+          "e3",
+          "e4"
+        ],
+        "semantic_status": "not_automatically_verified"
+      },
+      "attempts": 4,
+      "elapsed_seconds": 22.461461900005816,
+      "head": "2935a49434b66f5ae0172e87a58ebdb1f6993c3de3576a32f2da511328bbda64",
+      "seal_sha256": "8b458a2bad60dbdfa97c75e9d3b5da56dedd4d67941f346c5fccb310314ae4cd",
+      "budget_after": {
+        "cap": 1643,
+        "used": 1335,
+        "remaining": 308,
+        "this_run": 188,
+        "epoch_allowance": 1000,
+        "epoch_used": 692,
+        "epoch_remaining": 308
+      }
+    },
+    {
+      "slot": "q771-read-only-explicit-v1-r1",
+      "qid": 771,
+      "protocol": "read-only-explicit-v1",
+      "status": "submitted",
+      "terminal": {
+        "answer": "Vakkorama",
+        "answer_representation": {
+          "input_type": "string",
+          "operation": "identity",
+          "rule": "string-integer-v1"
+        },
+        "basis": [
+          {
+            "document": "d5",
+            "document_chars": 13639,
+            "end": 3000,
+            "kind": "raw_evidence",
+            "ref": "e1",
+            "sha256": "ed282b99cfb0aae5a430ddfadeb3348fa20e85aac24fb4501bf9cd3b3dadb4b2",
+            "snapshot": "7d8960afbde4b93401ea738e66299a6ee3d0dee47906ba8e3a86ebdea642ffcd",
+            "start": 0
+          },
+          {
+            "document": "d5",
+            "document_chars": 13639,
+            "end": 6000,
+            "kind": "raw_evidence",
+            "ref": "e2",
+            "sha256": "97a6e11f3f34512afbebf984635c4f0118e43a0fd1a04e71a3f4cf755defe729",
+            "snapshot": "7d8960afbde4b93401ea738e66299a6ee3d0dee47906ba8e3a86ebdea642ffcd",
+            "start": 3000
+          }
+        ],
+        "elapsed_seconds": 20.432152399996994,
+        "outcome": "submitted",
+        "refs": [
+          "e1",
+          "e2"
+        ],
+        "semantic_status": "not_automatically_verified"
+      },
+      "attempts": 4,
+      "elapsed_seconds": 20.52399119999609,
+      "head": "2f3c3a6af074ec043bb480ef9dae2da5f4f527de5547f8ca4aa47f1ff919afa8",
+      "seal_sha256": "d97525f5be32baf0a514330429bf80068427cf914a37cb3702a9909755f85f13",
+      "budget_after": {
+        "cap": 1643,
+        "used": 1339,
+        "remaining": 304,
+        "this_run": 192,
+        "epoch_allowance": 1000,
+        "epoch_used": 696,
+        "epoch_remaining": 304
+      }
+    },
+    {
+      "slot": "q788-read-only-explicit-v1-r1",
+      "qid": 788,
+      "protocol": "read-only-explicit-v1",
+      "status": "submitted",
+      "terminal": {
+        "answer": "Taj-ul-Masajid (also spelled Taj-ul-Masjid), located in Bhopal, Madhya Pradesh, India.\n\nIt meets all the criteria:\n- Completed before 1990: Construction was completed in 1958.\n- Capacity over 150,000 people: It has a capacity of 175,000 worshippers.\n- Interior area over 400,000 square feet: It has an interior area of about 430,000 square feet.\n- Walking distance from a mosque built after 1720: Moti Masjid (the Pearl Mosque), built in 1860 by Sikander Begum, is about 1.2 km away (walking distance).\n- Walking distance from a hospital established after 1930: Hamidia Hospital (Govt Hamidia Hospital and Gandhi Medical College), which was shifted to its present venue and expanded during 1927–1949 (present building occupied in 1953), is about 0.5 km away (walking distance).",
+        "answer_representation": {
+          "input_type": "string",
+          "operation": "identity",
+          "rule": "string-integer-v1"
+        },
+        "basis": [
+          {
+            "document": "d16",
+            "document_chars": 4422,
+            "end": 3000,
+            "kind": "raw_evidence",
+            "ref": "e3",
+            "sha256": "cbd8bfa2e9ea977a4f4cad5a55d7bf1c5ec416b60a8e90a2d6ad70ab52acc9dc",
+            "snapshot": "9a1abaf845a1fc844860ab223e44e8a2f5277aaba691e9ef2712a18e2c74bfe2",
+            "start": 0
+          },
+          {
+            "document": "d2",
+            "document_chars": 562,
+            "end": 562,
+            "kind": "raw_evidence",
+            "ref": "e2",
+            "sha256": "c96c8add51c30245eb0a1e0ce87df8ee3d2118726ae550d4e3e704e1b15c6e88",
+            "snapshot": "c96c8add51c30245eb0a1e0ce87df8ee3d2118726ae550d4e3e704e1b15c6e88",
+            "start": 0
+          },
+          {
+            "document": "d19",
+            "document_chars": 1059,
+            "end": 1059,
+            "kind": "raw_evidence",
+            "ref": "e4",
+            "sha256": "f11bcf812eb353d0c53bd36baeb1834eb615a818af0a0263328f5a7185a638f3",
+            "snapshot": "f11bcf812eb353d0c53bd36baeb1834eb615a818af0a0263328f5a7185a638f3",
+            "start": 0
+          },
+          {
+            "document": "d23",
+            "document_chars": 827,
+            "end": 827,
+            "kind": "raw_evidence",
+            "ref": "e6",
+            "sha256": "c54d0be45bd3730e9135d05b27f3b19ee5aad8ed572337b381532680b332bcf4",
+            "snapshot": "c54d0be45bd3730e9135d05b27f3b19ee5aad8ed572337b381532680b332bcf4",
+            "start": 0
+          },
+          {
+            "document": "d21",
+            "document_chars": 1950,
+            "end": 1950,
+            "kind": "raw_evidence",
+            "ref": "e5",
+            "sha256": "47fcee1482500e09ba15da69ccbc957475bb6410313a89ae248ec17c4b9f629a",
+            "snapshot": "47fcee1482500e09ba15da69ccbc957475bb6410313a89ae248ec17c4b9f629a",
+            "start": 0
+          }
+        ],
+        "elapsed_seconds": 35.03778919999604,
+        "outcome": "submitted",
+        "refs": [
+          "e3",
+          "e2",
+          "e4",
+          "e6",
+          "e5"
+        ],
+        "semantic_status": "not_automatically_verified"
+      },
+      "attempts": 7,
+      "elapsed_seconds": 35.16747630000464,
+      "head": "4c0d5e8de20d3ed7cfef12cfad5ad0b69f9c2def988675618ce2a9cf90b09976",
+      "seal_sha256": "e5541343a07038f295a471414db502fbe432e6e26d642a86957dd52226f6b1ed",
+      "budget_after": {
+        "cap": 1643,
+        "used": 1346,
+        "remaining": 297,
+        "this_run": 199,
+        "epoch_allowance": 1000,
+        "epoch_used": 703,
+        "epoch_remaining": 297
+      }
+    },
+    {
+      "slot": "q788-baseline-r1",
+      "qid": 788,
+      "protocol": "baseline",
+      "status": "submitted",
+      "terminal": {
+        "answer": "The mosque that meets all the criteria is **Taj-ul-Masajid** (also spelled Taj-ul-Masjid), located in Bhopal, Madhya Pradesh, India.\n\nHow it satisfies each criterion:\n\n1. **Completed before 1990**: Construction was completed in 1958. (Wikipedia: \"year_completed: 1958\"; \"The construction was complete by 1958 at an expenditure of 20 million Indian rupees.\")\n\n2. **Capacity over 150,000 people**: It has a capacity of 175,000 worshippers. (Wikipedia: \"capacity: 175, 000 worshippers\"; LBB: \"has a capacity of 175,000 people.\")\n\n3. **Interior area over 400,000 square feet**: It has an interior area of about 430,000 square feet. (LBB: \"With an interior area of about 430,000 square feet, the mosque has a capacity of 175,000 people.\")\n\n4. **Walking distance from a mosque built after 1720**: The nearby Moti Masjid (Pearl Mosque) in Bhopal was built by Sikander Begum in 1860 (after 1720). Wikimapia lists Moti Masjid as approximately 1.2 km from Taj-ul-Masajid — within walking distance.\n\n5. **Walking distance from a hospital established after 1930**: Hamidia Hospital in Bhopal, located approximately 0.5–0.9 km away (walking distance per Wikimapia), was shifted to its present venue and established/expanded as Hamidia Hospital in the period leading up to 1949 (after 1930), with further extensions in 1953 and 1956. (Wikipedia: \"Before 1927, it was a small hospital with 25 beds... It was shifted to its present venue in the same period. In 1949, before the merger of the Bhopal State, the Hamidia Hospital had 175 beds. The year 1953 saw further extension in the Hamidia Hospital...\")",
+        "answer_representation": {
+          "input_type": "string",
+          "operation": "identity",
+          "rule": "string-integer-v1"
+        },
+        "basis": [
+          {
+            "document": "d4",
+            "document_chars": 4422,
+            "end": 3000,
+            "kind": "raw_evidence",
+            "ref": "e1",
+            "sha256": "cbd8bfa2e9ea977a4f4cad5a55d7bf1c5ec416b60a8e90a2d6ad70ab52acc9dc",
+            "snapshot": "9a1abaf845a1fc844860ab223e44e8a2f5277aaba691e9ef2712a18e2c74bfe2",
+            "start": 0
+          },
+          {
+            "document": "d25",
+            "document_chars": 988,
+            "end": 988,
+            "kind": "raw_evidence",
+            "ref": "e2",
+            "sha256": "3437f2a3cc533dba005fa23e0a0c3cf0f8ba4813938081ec3d3fce9cd538c08a",
+            "snapshot": "3437f2a3cc533dba005fa23e0a0c3cf0f8ba4813938081ec3d3fce9cd538c08a",
+            "start": 0
+          },
+          {
+            "document": "d34",
+            "document_chars": 1950,
+            "end": 1950,
+            "kind": "raw_evidence",
+            "ref": "e3",
+            "sha256": "47fcee1482500e09ba15da69ccbc957475bb6410313a89ae248ec17c4b9f629a",
+            "snapshot": "47fcee1482500e09ba15da69ccbc957475bb6410313a89ae248ec17c4b9f629a",
+            "start": 0
+          },
+          {
+            "document": "d29",
+            "document_chars": 827,
+            "end": 827,
+            "kind": "raw_evidence",
+            "ref": "e4",
+            "sha256": "c54d0be45bd3730e9135d05b27f3b19ee5aad8ed572337b381532680b332bcf4",
+            "snapshot": "c54d0be45bd3730e9135d05b27f3b19ee5aad8ed572337b381532680b332bcf4",
+            "start": 0
+          }
+        ],
+        "elapsed_seconds": 37.64449969999259,
+        "outcome": "submitted",
+        "refs": [
+          "e1",
+          "e2",
+          "e3",
+          "e4"
+        ],
+        "semantic_status": "not_automatically_verified"
+      },
+      "attempts": 6,
+      "elapsed_seconds": 37.756661500025075,
+      "head": "4d9144847a86e6c2f79561ea333a0246f3c1fd50af2780a4541e03a5f4f1964f",
+      "seal_sha256": "5cb5e5b95c6227fa4e141527c15ee25d153b50ef12ddfd0222dc2c6291607e52",
+      "budget_after": {
+        "cap": 1643,
+        "used": 1352,
+        "remaining": 291,
+        "this_run": 205,
+        "epoch_allowance": 1000,
+        "epoch_used": 709,
+        "epoch_remaining": 291
+      }
+    },
+    {
+      "slot": "q793-baseline-r1",
+      "qid": 793,
+      "protocol": "baseline",
+      "status": "submitted",
+      "terminal": {
+        "answer": "29/02",
+        "answer_representation": {
+          "input_type": "string",
+          "operation": "identity",
+          "rule": "string-integer-v1"
+        },
+        "basis": [
+          {
+            "document": "d4",
+            "document_chars": 1731,
+            "end": 1731,
+            "kind": "raw_evidence",
+            "ref": "e2",
+            "sha256": "6416d01c32217f1389690c64b052da91ddfc312f497a848eb3a20524328f952b",
+            "snapshot": "6416d01c32217f1389690c64b052da91ddfc312f497a848eb3a20524328f952b",
+            "start": 0
+          },
+          {
+            "document": "d100",
+            "document_chars": 2558,
+            "end": 2558,
+            "kind": "raw_evidence",
+            "ref": "e3",
+            "sha256": "01d835c5520daf94252ba061d40cee4bcef9a316b7b9f8d8e2f2c07ae95f698e",
+            "snapshot": "01d835c5520daf94252ba061d40cee4bcef9a316b7b9f8d8e2f2c07ae95f698e",
+            "start": 0
+          }
+        ],
+        "elapsed_seconds": 62.82866169998306,
+        "outcome": "submitted",
+        "refs": [
+          "e2",
+          "e3"
+        ],
+        "semantic_status": "not_automatically_verified"
+      },
+      "attempts": 8,
+      "elapsed_seconds": 62.986432200006675,
+      "head": "514c9414ca5f20c8d085966e87854db3bd64327c359088ac25d0f87085f2187f",
+      "seal_sha256": "f8c93504d2d65b561a06990915b65ae00a0dad55567fa528434b185528564c41",
+      "budget_after": {
+        "cap": 1643,
+        "used": 1360,
+        "remaining": 283,
+        "this_run": 213,
+        "epoch_allowance": 1000,
+        "epoch_used": 717,
+        "epoch_remaining": 283
+      }
+    },
+    {
+      "slot": "q793-read-only-explicit-v1-r1",
+      "qid": 793,
+      "protocol": "read-only-explicit-v1",
+      "status": "abstained",
+      "terminal": {
+        "answer": "",
+        "elapsed_seconds": 76.49030299999868,
+        "outcome": "abstained",
+        "reason": "Unable to identify the couple/child/hospital. Searches for 2021 celebrity babies named after famous novel narrators (Ishmael, Holden, Nick Carraway, Lockwood, Nelly Dean, Offred, Stevens, Scout, Atticus, Humbert) returned no matching evidence of a second child born on the same day as the first, nor a hospital renamed 539 days later. The specific shared birthday (DD/MM) could not be verified from delivered evidence."
+      },
+      "attempts": 11,
+      "elapsed_seconds": 76.65876799999387,
+      "head": "4c375e8f729d5da217333336920ffa9214d5913532536bb5639213ce6c6a7f39",
+      "seal_sha256": "e8572aa948b0b362759e178eb09b589f57a76a722159e473d6c0689543fa0f65",
+      "budget_after": {
+        "cap": 1643,
+        "used": 1371,
+        "remaining": 272,
+        "this_run": 224,
+        "epoch_allowance": 1000,
+        "epoch_used": 728,
+        "epoch_remaining": 272
+      }
+    },
+    {
+      "slot": "q794-read-only-explicit-v1-r1",
+      "qid": 794,
+      "protocol": "read-only-explicit-v1",
+      "status": "abstained",
+      "terminal": {
+        "answer": "",
+        "elapsed_seconds": 66.6204842000152,
+        "outcome": "abstained",
+        "reason": "I could not identify the specific snooker match described. The constraints (winner with one 50s, two 60s, two 70s, and >1 100s break; loser with 3-4 fifty-plus breaks including one 50s, >1 70s, one 90s; loser turned pro 2011-2016; referee became international referee in December before 2022) require locating a specific match's frame-by-frame scoreline and break data, plus referee biographical data. The only delivered evidence (e1: a pantheon list of UK referees; e2: a WST 404/Leo Scullion page fragment) contains none of the needed match details, break distributions, referee December-qualification date, or frame points. Searches in recovery were blocked as duplicates and produced no new candidate. Without a verified match and its frame scores, the combined points total cannot be determined, and I will not fabricate one."
+      },
+      "attempts": 11,
+      "elapsed_seconds": 66.8010924999835,
+      "head": "b0b8e21d47c39dd75128bfd605a07ea2af562dcd5e055229fa91ada7a4c106b4",
+      "seal_sha256": "039dbbcaaa8a433f1ba3a17c3dcb48ba747336dafd08acb0ce49095dc03b7cfb",
+      "budget_after": {
+        "cap": 1643,
+        "used": 1382,
+        "remaining": 261,
+        "this_run": 235,
+        "epoch_allowance": 1000,
+        "epoch_used": 739,
+        "epoch_remaining": 261
+      }
+    },
+    {
+      "slot": "q794-baseline-r1",
+      "qid": 794,
+      "protocol": "baseline",
+      "status": "model_budget",
+      "terminal": {
+        "answer": "",
+        "elapsed_seconds": 154.94187890001922,
+        "outcome": "model_budget"
+      },
+      "attempts": 16,
+      "elapsed_seconds": 155.07567759999074,
+      "head": "189c77af165e8b927ca49f92310ea38f3cfc733b9f107043779bb32bc2710e8f",
+      "seal_sha256": "5e40c5fbc0c65e9d6dc78a96bfbf0061e90cc7d9982808ea00f17a93ab4c3a45",
+      "budget_after": {
+        "cap": 1643,
+        "used": 1398,
+        "remaining": 245,
+        "this_run": 251,
+        "epoch_allowance": 1000,
+        "epoch_used": 755,
+        "epoch_remaining": 245
+      }
+    }
+  ]
+}

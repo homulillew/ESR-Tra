@@ -1,0 +1,642 @@
+{
+  "created_utc": "2026-09-15T14:06:22.953683+00:00",
+  "scope": "completed discovery01-09 q771/q778 controls only; no new judge",
+  "rows": [
+    {
+      "stage": 1,
+      "slot": "q771-baseline-r1",
+      "qid": 771,
+      "status": "NOT_RUN",
+      "requests": 0,
+      "existing_judge": null,
+      "category": "not_run"
+    },
+    {
+      "stage": 1,
+      "slot": "q771-constraint-review-v1-r1",
+      "qid": 771,
+      "status": "NOT_RUN",
+      "requests": 0,
+      "existing_judge": null,
+      "category": "not_run"
+    },
+    {
+      "stage": 1,
+      "slot": "q778-constraint-review-v1-r1",
+      "qid": 778,
+      "status": "NOT_RUN",
+      "requests": 0,
+      "existing_judge": null,
+      "category": "not_run"
+    },
+    {
+      "stage": 1,
+      "slot": "q778-baseline-r1",
+      "qid": 778,
+      "status": "NOT_RUN",
+      "requests": 0,
+      "existing_judge": null,
+      "category": "not_run"
+    },
+    {
+      "stage": 2,
+      "slot": "q771-search-pivot-v1-r1",
+      "qid": 771,
+      "status": "submitted",
+      "requests": 4,
+      "existing_judge": {
+        "correct": true,
+        "parse_error": false
+      },
+      "category": "success_existing_judge",
+      "first_request_sha256": "a61deeac7f2debefea800747f21cf59eb495c83b3fe63081feaef2c7a704fe3b",
+      "first_response_body_sha256": "1e6ca5380e400d2386ba8f5c4de8e1d29e19076b29a7606a3519c56641a1015f",
+      "first_response_semantic_sha256": "334dd642f01f7af31937ccd50b151a9013e56aad08bb6867b321247580b529df",
+      "temperature": 0.0,
+      "model": "EB-GLM-5.2",
+      "protocol_effect_events": [],
+      "protocol_actually_changed_input": false,
+      "chain_verified": true,
+      "seal_verified": true
+    },
+    {
+      "stage": 2,
+      "slot": "q771-baseline-r1",
+      "qid": 771,
+      "status": "submitted",
+      "requests": 4,
+      "existing_judge": {
+        "correct": true,
+        "parse_error": false
+      },
+      "category": "success_existing_judge",
+      "first_request_sha256": "a61deeac7f2debefea800747f21cf59eb495c83b3fe63081feaef2c7a704fe3b",
+      "first_response_body_sha256": "e2735ad112247197a10a1962bc0717ff5abccd9e7b8d449d3cdd90654507f773",
+      "first_response_semantic_sha256": "f4f5899f30cc56d1ad4480ea3c59a355a40fc1ffc4a3eb88d2a1e913bed7811a",
+      "temperature": 0.0,
+      "model": "EB-GLM-5.2",
+      "protocol_effect_events": [],
+      "protocol_actually_changed_input": false,
+      "chain_verified": true,
+      "seal_verified": true
+    },
+    {
+      "stage": 2,
+      "slot": "q778-baseline-r1",
+      "qid": 778,
+      "status": "submitted",
+      "requests": 4,
+      "existing_judge": {
+        "correct": true,
+        "parse_error": false
+      },
+      "category": "success_existing_judge",
+      "first_request_sha256": "7c3b4de711393e1eb56749a873d6860c113e222b59f4a83f8c44136a147268b7",
+      "first_response_body_sha256": "9d350775b60cdd4b441843013d27b58d03256e121ac98ecf2a1889792bcad980",
+      "first_response_semantic_sha256": "35f604f68a2fb1c93d949d7ab11bc9843dca9832eadc81e6f5e4625abfb5ffe5",
+      "temperature": 0.0,
+      "model": "EB-GLM-5.2",
+      "protocol_effect_events": [],
+      "protocol_actually_changed_input": false,
+      "chain_verified": true,
+      "seal_verified": true
+    },
+    {
+      "stage": 2,
+      "slot": "q778-search-pivot-v1-r1",
+      "qid": 778,
+      "status": "submitted",
+      "requests": 4,
+      "existing_judge": {
+        "correct": true,
+        "parse_error": false
+      },
+      "category": "success_existing_judge",
+      "first_request_sha256": "7c3b4de711393e1eb56749a873d6860c113e222b59f4a83f8c44136a147268b7",
+      "first_response_body_sha256": "44536311127a172a5fab7de8f276a130d0f478d2a2de41fb7b1f579480baf73b",
+      "first_response_semantic_sha256": "78c2af664eccb73158b2e81e93bb2bf8e36118ce91d3106d092282701394a420",
+      "temperature": 0.0,
+      "model": "EB-GLM-5.2",
+      "protocol_effect_events": [],
+      "protocol_actually_changed_input": false,
+      "chain_verified": true,
+      "seal_verified": true
+    },
+    {
+      "stage": 3,
+      "slot": "q771-baseline-r1",
+      "qid": 771,
+      "status": "NOT_RUN",
+      "requests": 0,
+      "existing_judge": null,
+      "category": "not_run"
+    },
+    {
+      "stage": 3,
+      "slot": "q771-middle-history-v1-r1",
+      "qid": 771,
+      "status": "NOT_RUN",
+      "requests": 0,
+      "existing_judge": null,
+      "category": "not_run"
+    },
+    {
+      "stage": 3,
+      "slot": "q778-middle-history-v1-r1",
+      "qid": 778,
+      "status": "NOT_RUN",
+      "requests": 0,
+      "existing_judge": null,
+      "category": "not_run"
+    },
+    {
+      "stage": 3,
+      "slot": "q778-baseline-r1",
+      "qid": 778,
+      "status": "NOT_RUN",
+      "requests": 0,
+      "existing_judge": null,
+      "category": "not_run"
+    },
+    {
+      "stage": 4,
+      "slot": "q771-baseline-r1",
+      "qid": 771,
+      "status": "submitted",
+      "requests": 4,
+      "existing_judge": {
+        "correct": true,
+        "parse_error": false
+      },
+      "category": "success_existing_judge",
+      "first_request_sha256": "a61deeac7f2debefea800747f21cf59eb495c83b3fe63081feaef2c7a704fe3b",
+      "first_response_body_sha256": "b65381c7155fb1cd5bc5e8c8c60423a1038435c9593bec11534b55a36f41750a",
+      "first_response_semantic_sha256": "9cba957188f240472ab8d606711ca4dc4b61750687eb7812350a6f822b8c3f04",
+      "temperature": 0.0,
+      "model": "EB-GLM-5.2",
+      "protocol_effect_events": [],
+      "protocol_actually_changed_input": false,
+      "chain_verified": true,
+      "seal_verified": true
+    },
+    {
+      "stage": 4,
+      "slot": "q771-middle-history-v1-r1",
+      "qid": 771,
+      "status": "submitted",
+      "requests": 4,
+      "existing_judge": {
+        "correct": true,
+        "parse_error": false
+      },
+      "category": "success_existing_judge",
+      "first_request_sha256": "a61deeac7f2debefea800747f21cf59eb495c83b3fe63081feaef2c7a704fe3b",
+      "first_response_body_sha256": "5bb2c1017c1d5e10aea8d3cd7fc91df42f04fe01f2e302e869e0fefc62cc5879",
+      "first_response_semantic_sha256": "01f5bc19401d0dcf91a43ed29a1c48db81afb229fdf09c1d68dabe9afb772efe",
+      "temperature": 0.0,
+      "model": "EB-GLM-5.2",
+      "protocol_effect_events": [
+        {
+          "kind": "history_projection",
+          "round": 4,
+          "changes": 1
+        }
+      ],
+      "protocol_actually_changed_input": true,
+      "chain_verified": true,
+      "seal_verified": true
+    },
+    {
+      "stage": 4,
+      "slot": "q778-middle-history-v1-r1",
+      "qid": 778,
+      "status": "submitted",
+      "requests": 4,
+      "existing_judge": {
+        "correct": true,
+        "parse_error": false
+      },
+      "category": "success_existing_judge",
+      "first_request_sha256": "7c3b4de711393e1eb56749a873d6860c113e222b59f4a83f8c44136a147268b7",
+      "first_response_body_sha256": "d95ad120cb70d31126ab6dacd765b2073eb6950d3ae71c719d34cb8fdccd5ba8",
+      "first_response_semantic_sha256": "dde8b7bc99487741ce24cbb2a466638ebe101033079a3d6bdfbedf5b777dd24b",
+      "temperature": 0.0,
+      "model": "EB-GLM-5.2",
+      "protocol_effect_events": [
+        {
+          "kind": "history_projection",
+          "round": 4,
+          "changes": 1
+        }
+      ],
+      "protocol_actually_changed_input": true,
+      "chain_verified": true,
+      "seal_verified": true
+    },
+    {
+      "stage": 4,
+      "slot": "q778-baseline-r1",
+      "qid": 778,
+      "status": "submitted",
+      "requests": 3,
+      "existing_judge": {
+        "correct": true,
+        "parse_error": false
+      },
+      "category": "success_existing_judge",
+      "first_request_sha256": "7c3b4de711393e1eb56749a873d6860c113e222b59f4a83f8c44136a147268b7",
+      "first_response_body_sha256": "1c390485aa703217e8c6b1402ce8c962bc615df2baef5b72fcd2d93596ff6f85",
+      "first_response_semantic_sha256": "ec742403f0f5775cc9cf5710eebc0237e85203bef8ccabbfa0fae9a3cb76caa4",
+      "temperature": 0.0,
+      "model": "EB-GLM-5.2",
+      "protocol_effect_events": [],
+      "protocol_actually_changed_input": false,
+      "chain_verified": true,
+      "seal_verified": true
+    },
+    {
+      "stage": 5,
+      "slot": "q771-once-prose-reset-v1-r1",
+      "qid": 771,
+      "status": "NOT_RUN",
+      "requests": 0,
+      "existing_judge": null,
+      "category": "not_run"
+    },
+    {
+      "stage": 5,
+      "slot": "q771-baseline-r1",
+      "qid": 771,
+      "status": "NOT_RUN",
+      "requests": 0,
+      "existing_judge": null,
+      "category": "not_run"
+    },
+    {
+      "stage": 5,
+      "slot": "q778-baseline-r1",
+      "qid": 778,
+      "status": "NOT_RUN",
+      "requests": 0,
+      "existing_judge": null,
+      "category": "not_run"
+    },
+    {
+      "stage": 5,
+      "slot": "q778-once-prose-reset-v1-r1",
+      "qid": 778,
+      "status": "NOT_RUN",
+      "requests": 0,
+      "existing_judge": null,
+      "category": "not_run"
+    },
+    {
+      "stage": 6,
+      "slot": "q771-baseline-r1",
+      "qid": 771,
+      "status": "submitted",
+      "requests": 4,
+      "existing_judge": {
+        "correct": true,
+        "parse_error": false
+      },
+      "category": "success_existing_judge",
+      "first_request_sha256": "a61deeac7f2debefea800747f21cf59eb495c83b3fe63081feaef2c7a704fe3b",
+      "first_response_body_sha256": "868884c065c4f22f93d4ee29367f9950d4da13b82ddef227e1e318c487b70302",
+      "first_response_semantic_sha256": "b39be7c4e0c6efbbf086f1731daed97a2e950f09c69d7fc097fd3cc86794105b",
+      "temperature": 0.0,
+      "model": "EB-GLM-5.2",
+      "protocol_effect_events": [],
+      "protocol_actually_changed_input": false,
+      "chain_verified": true,
+      "seal_verified": true
+    },
+    {
+      "stage": 6,
+      "slot": "q771-relation-review-once-v1-r1",
+      "qid": 771,
+      "status": "submitted",
+      "requests": 4,
+      "existing_judge": {
+        "correct": true,
+        "parse_error": false
+      },
+      "category": "success_existing_judge",
+      "first_request_sha256": "a61deeac7f2debefea800747f21cf59eb495c83b3fe63081feaef2c7a704fe3b",
+      "first_response_body_sha256": "5aca916be0f4ff5555ae0a36a41df47c0912425a09f03450c4ec0efb98d371f6",
+      "first_response_semantic_sha256": "a6eeaacd9e28ad2942ebd3c48d021467a58c28e0af63d26cd8c5ea6bc86ecc61",
+      "temperature": 0.0,
+      "model": "EB-GLM-5.2",
+      "protocol_effect_events": [],
+      "protocol_actually_changed_input": false,
+      "chain_verified": true,
+      "seal_verified": true
+    },
+    {
+      "stage": 6,
+      "slot": "q778-relation-review-once-v1-r1",
+      "qid": 778,
+      "status": "submitted",
+      "requests": 4,
+      "existing_judge": {
+        "correct": true,
+        "parse_error": false
+      },
+      "category": "success_existing_judge",
+      "first_request_sha256": "7c3b4de711393e1eb56749a873d6860c113e222b59f4a83f8c44136a147268b7",
+      "first_response_body_sha256": "34c91e75f0e8ccf99030936712757aaed31b21dedef0487d992f9f27108dd584",
+      "first_response_semantic_sha256": "56f137d28f85f9aba8260b21703b338a51c08920cb420e1b9c479af943b2d117",
+      "temperature": 0.0,
+      "model": "EB-GLM-5.2",
+      "protocol_effect_events": [],
+      "protocol_actually_changed_input": false,
+      "chain_verified": true,
+      "seal_verified": true
+    },
+    {
+      "stage": 6,
+      "slot": "q778-baseline-r1",
+      "qid": 778,
+      "status": "submitted",
+      "requests": 4,
+      "existing_judge": {
+        "correct": true,
+        "parse_error": false
+      },
+      "category": "success_existing_judge",
+      "first_request_sha256": "7c3b4de711393e1eb56749a873d6860c113e222b59f4a83f8c44136a147268b7",
+      "first_response_body_sha256": "0fd0b2234a84dcb3663463c576de6595fae91c6f8eaf921658de37d1cfb29209",
+      "first_response_semantic_sha256": "3d3f5fb551fc772d59050999a3591355f02a9006bfb6895663fe42655bde37cd",
+      "temperature": 0.0,
+      "model": "EB-GLM-5.2",
+      "protocol_effect_events": [],
+      "protocol_actually_changed_input": false,
+      "chain_verified": true,
+      "seal_verified": true
+    },
+    {
+      "stage": 7,
+      "slot": "q771-relation-review-memory-v1-r1",
+      "qid": 771,
+      "status": "submitted",
+      "requests": 4,
+      "existing_judge": {
+        "correct": true,
+        "parse_error": false
+      },
+      "category": "success_existing_judge",
+      "first_request_sha256": "a61deeac7f2debefea800747f21cf59eb495c83b3fe63081feaef2c7a704fe3b",
+      "first_response_body_sha256": "04fdbe5e33b5f73ebc25c83d3fd7a5ffce1c9d94106a4adb84a9945fd5f0ac6d",
+      "first_response_semantic_sha256": "18a6e2ab28627b9364b1f584c91edc3310980569bb57ba4ccf66151d33fc8834",
+      "temperature": 0.0,
+      "model": "EB-GLM-5.2",
+      "protocol_effect_events": [],
+      "protocol_actually_changed_input": false,
+      "chain_verified": true,
+      "seal_verified": true
+    },
+    {
+      "stage": 7,
+      "slot": "q771-baseline-r1",
+      "qid": 771,
+      "status": "submitted",
+      "requests": 4,
+      "existing_judge": {
+        "correct": true,
+        "parse_error": false
+      },
+      "category": "success_existing_judge",
+      "first_request_sha256": "a61deeac7f2debefea800747f21cf59eb495c83b3fe63081feaef2c7a704fe3b",
+      "first_response_body_sha256": "8d7296dd18c739d66a751af12fc608cc83270236426ba4a018551acf2ab6d26b",
+      "first_response_semantic_sha256": "63f71281ad8b7a74e37eac473b1ccaf713f44a85b74720909e9474c0903805b8",
+      "temperature": 0.0,
+      "model": "EB-GLM-5.2",
+      "protocol_effect_events": [],
+      "protocol_actually_changed_input": false,
+      "chain_verified": true,
+      "seal_verified": true
+    },
+    {
+      "stage": 7,
+      "slot": "q778-baseline-r1",
+      "qid": 778,
+      "status": "submitted",
+      "requests": 4,
+      "existing_judge": {
+        "correct": true,
+        "parse_error": false
+      },
+      "category": "success_existing_judge",
+      "first_request_sha256": "7c3b4de711393e1eb56749a873d6860c113e222b59f4a83f8c44136a147268b7",
+      "first_response_body_sha256": "c482e73014e37322641eb262fc61ba63a20cec206cab9e59db5f7e93f2e9442a",
+      "first_response_semantic_sha256": "6384425bbb7963bec018c7e24894940c3c129e9dc13cce221f7dfa8947144f0a",
+      "temperature": 0.0,
+      "model": "EB-GLM-5.2",
+      "protocol_effect_events": [],
+      "protocol_actually_changed_input": false,
+      "chain_verified": true,
+      "seal_verified": true
+    },
+    {
+      "stage": 7,
+      "slot": "q778-relation-review-memory-v1-r1",
+      "qid": 778,
+      "status": "submitted",
+      "requests": 4,
+      "existing_judge": {
+        "correct": true,
+        "parse_error": false
+      },
+      "category": "success_existing_judge",
+      "first_request_sha256": "7c3b4de711393e1eb56749a873d6860c113e222b59f4a83f8c44136a147268b7",
+      "first_response_body_sha256": "7596a484391fc9ce789193d18bd0f5a49b717376f6fecf91e42672cf26486ab8",
+      "first_response_semantic_sha256": "9630fa910f549139ba016a35b550a622f8d4ff6d87a81d9463f98e13778de0a9",
+      "temperature": 0.0,
+      "model": "EB-GLM-5.2",
+      "protocol_effect_events": [],
+      "protocol_actually_changed_input": false,
+      "chain_verified": true,
+      "seal_verified": true
+    },
+    {
+      "stage": 8,
+      "slot": "q771-baseline-r1",
+      "qid": 771,
+      "status": "NOT_RUN",
+      "requests": 0,
+      "existing_judge": null,
+      "category": "not_run"
+    },
+    {
+      "stage": 8,
+      "slot": "q771-read-only-once-v1-r1",
+      "qid": 771,
+      "status": "NOT_RUN",
+      "requests": 0,
+      "existing_judge": null,
+      "category": "not_run"
+    },
+    {
+      "stage": 8,
+      "slot": "q778-read-only-once-v1-r1",
+      "qid": 778,
+      "status": "NOT_RUN",
+      "requests": 0,
+      "existing_judge": null,
+      "category": "not_run"
+    },
+    {
+      "stage": 8,
+      "slot": "q778-baseline-r1",
+      "qid": 778,
+      "status": "NOT_RUN",
+      "requests": 0,
+      "existing_judge": null,
+      "category": "not_run"
+    },
+    {
+      "stage": 9,
+      "slot": "q771-read-only-explicit-v1-r1",
+      "qid": 771,
+      "status": "submitted",
+      "requests": 4,
+      "existing_judge": {
+        "correct": true,
+        "parse_error": false
+      },
+      "category": "success_existing_judge",
+      "first_request_sha256": "a61deeac7f2debefea800747f21cf59eb495c83b3fe63081feaef2c7a704fe3b",
+      "first_response_body_sha256": "dd0e2cb4259941d0d1a3a1868ca5827e7ce67e3829622b831fea1b163278f9e1",
+      "first_response_semantic_sha256": "ea29c45acd3b5a899bbd8be23737c393b54f810a57c26528d801facc98053a80",
+      "temperature": 0.0,
+      "model": "EB-GLM-5.2",
+      "protocol_effect_events": [],
+      "protocol_actually_changed_input": false,
+      "chain_verified": true,
+      "seal_verified": true
+    },
+    {
+      "stage": 9,
+      "slot": "q771-baseline-r1",
+      "qid": 771,
+      "status": "model_budget",
+      "requests": 4,
+      "existing_judge": null,
+      "category": "unsubmitted",
+      "first_request_sha256": "a61deeac7f2debefea800747f21cf59eb495c83b3fe63081feaef2c7a704fe3b",
+      "first_response_body_sha256": "2a3bb48c4be1bec8580b74ffae6aec41d9d9ed50bff992f300fcf1f961038810",
+      "first_response_semantic_sha256": "dbdd39af0f0b2ffd67854f2acbed7a7da5214e028aa044770dad9c6689c791fb",
+      "temperature": 0.0,
+      "model": "EB-GLM-5.2",
+      "protocol_effect_events": [],
+      "protocol_actually_changed_input": false,
+      "chain_verified": true,
+      "seal_verified": true
+    },
+    {
+      "stage": 9,
+      "slot": "q778-baseline-r1",
+      "qid": 778,
+      "status": "model_budget",
+      "requests": 4,
+      "existing_judge": null,
+      "category": "unsubmitted",
+      "first_request_sha256": "7c3b4de711393e1eb56749a873d6860c113e222b59f4a83f8c44136a147268b7",
+      "first_response_body_sha256": "f4ae90ddc18ee5a62cea4ec0331d81b75d1843e00aa7f1c73353d7c5e8f0dc1b",
+      "first_response_semantic_sha256": "aa6ad710ddfd4387437d256f9e61f0d94851aa69b8f4c4caae9b10dbf68ea96e",
+      "temperature": 0.0,
+      "model": "EB-GLM-5.2",
+      "protocol_effect_events": [],
+      "protocol_actually_changed_input": false,
+      "chain_verified": true,
+      "seal_verified": true
+    },
+    {
+      "stage": 9,
+      "slot": "q778-read-only-explicit-v1-r1",
+      "qid": 778,
+      "status": "submitted",
+      "requests": 4,
+      "existing_judge": {
+        "correct": true,
+        "parse_error": false
+      },
+      "category": "success_existing_judge",
+      "first_request_sha256": "7c3b4de711393e1eb56749a873d6860c113e222b59f4a83f8c44136a147268b7",
+      "first_response_body_sha256": "7e8cadf3e4a8443b86db6f3b4a8952df10dbcf8e47469c2377bd1727f087f56e",
+      "first_response_semantic_sha256": "fb301a69450394062b66b72f18db45f5e9225abcc53dbf1d6fe6ade911f9ab84",
+      "temperature": 0.0,
+      "model": "EB-GLM-5.2",
+      "protocol_effect_events": [],
+      "protocol_actually_changed_input": false,
+      "chain_verified": true,
+      "seal_verified": true
+    }
+  ],
+  "same_first_request_groups": [
+    {
+      "first_request_sha256": "a61deeac7f2debefea800747f21cf59eb495c83b3fe63081feaef2c7a704fe3b",
+      "qid": 771,
+      "slots": [
+        "02/q771-search-pivot-v1-r1",
+        "02/q771-baseline-r1",
+        "04/q771-baseline-r1",
+        "04/q771-middle-history-v1-r1",
+        "06/q771-baseline-r1",
+        "06/q771-relation-review-once-v1-r1",
+        "07/q771-relation-review-memory-v1-r1",
+        "07/q771-baseline-r1",
+        "09/q771-read-only-explicit-v1-r1",
+        "09/q771-baseline-r1"
+      ],
+      "n": 10,
+      "unique_raw_first_response": 10,
+      "unique_semantic_first_response": 10,
+      "outcomes": {
+        "success_existing_judge": 9,
+        "unsubmitted": 1
+      },
+      "inactive_only_outcomes": {
+        "success_existing_judge": 8,
+        "unsubmitted": 1
+      }
+    },
+    {
+      "first_request_sha256": "7c3b4de711393e1eb56749a873d6860c113e222b59f4a83f8c44136a147268b7",
+      "qid": 778,
+      "slots": [
+        "02/q778-baseline-r1",
+        "02/q778-search-pivot-v1-r1",
+        "04/q778-middle-history-v1-r1",
+        "04/q778-baseline-r1",
+        "06/q778-relation-review-once-v1-r1",
+        "06/q778-baseline-r1",
+        "07/q778-baseline-r1",
+        "07/q778-relation-review-memory-v1-r1",
+        "09/q778-baseline-r1",
+        "09/q778-read-only-explicit-v1-r1"
+      ],
+      "n": 10,
+      "unique_raw_first_response": 10,
+      "unique_semantic_first_response": 10,
+      "outcomes": {
+        "success_existing_judge": 9,
+        "unsubmitted": 1
+      },
+      "inactive_only_outcomes": {
+        "success_existing_judge": 8,
+        "unsubmitted": 1
+      }
+    }
+  ],
+  "totals": {
+    "not_run": 16,
+    "success_existing_judge": 18,
+    "unsubmitted": 2
+  },
+  "scope_incident": {
+    "recorded_utc": "2026-09-15T14:06:22.953741+00:00",
+    "timing": "after confirmation-01 frozen launch; exact preceding tool execution timestamp not retained",
+    "description": "A list formatting branch accidentally printed old development q774/q775 judge rationale from RESULTS. No gold file, holdout8, or active trajectory was opened. Excluded from this analysis; agent will not design q774/q775 mechanisms/prompts subsequently."
+  }
+}

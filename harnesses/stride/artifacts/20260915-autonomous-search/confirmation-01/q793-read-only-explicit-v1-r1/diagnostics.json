@@ -1,0 +1,918 @@
+{
+  "protocol": "stride-search-3",
+  "head": "4c375e8f729d5da217333336920ffa9214d5913532536bb5639213ce6c6a7f39",
+  "outcome": "abstained",
+  "formal_correct": null,
+  "model_attempts": 11,
+  "backend_attempts": 25,
+  "queries": [
+    {
+      "round": 1,
+      "top_k": 5,
+      "equivalence_key": "8a75fa4def0cc14d287ca574218112329bd43335a170d96d4ebaa16ab8e4a32c",
+      "cached": false,
+      "query_sha256": "f3540746f5159f2d868b01fb3694b0e76a0644cbd360277fadd3e1a93b0e575c",
+      "query": "second child born same day as first birthday hospital renamed",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"second\" OR \"child\" OR \"born\" OR \"same\" OR \"day\" OR \"as\" OR \"first\" OR \"birthday\" OR \"hospital\" OR \"renamed\"",
+        "terms": [
+          "second",
+          "child",
+          "born",
+          "same",
+          "day",
+          "as",
+          "first",
+          "birthday",
+          "hospital",
+          "renamed"
+        ]
+      }
+    },
+    {
+      "round": 1,
+      "top_k": 5,
+      "equivalence_key": "0541b15d8de358f3cf42536c571d7831e3c6be36554158a58d996a1d72b903eb",
+      "cached": false,
+      "query_sha256": "72658ce52c704898d4d8475477daa98fe89058ddbda53235aa96b127e3a4b46d",
+      "query": "baby born same birthday as older sibling hospital renamed 539 days",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"baby\" OR \"born\" OR \"same\" OR \"birthday\" OR \"as\" OR \"older\" OR \"sibling\" OR \"hospital\" OR \"renamed\" OR \"539\" OR \"days\"",
+        "terms": [
+          "baby",
+          "born",
+          "same",
+          "birthday",
+          "as",
+          "older",
+          "sibling",
+          "hospital",
+          "renamed",
+          "539",
+          "days"
+        ]
+      }
+    },
+    {
+      "round": 1,
+      "top_k": 5,
+      "equivalence_key": "6ab619d5ffd3db4265d517e50c725de286d47015b56da34b3bb611ff4b0ab343",
+      "cached": false,
+      "query_sha256": "3dd8be91f47646ab6a5fd08e4e0fb0d63a9e4d5f5865f71d9cf2754db929b12c",
+      "query": "couple second child same birthday first child hospital renamed",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"couple\" OR \"second\" OR \"child\" OR \"same\" OR \"birthday\" OR \"first\" OR \"hospital\" OR \"renamed\"",
+        "terms": [
+          "couple",
+          "second",
+          "child",
+          "same",
+          "birthday",
+          "first",
+          "hospital",
+          "renamed"
+        ]
+      }
+    },
+    {
+      "round": 2,
+      "top_k": 5,
+      "equivalence_key": "b611f68ed2f1ebe4c429a149fc0f4b7651b26dddd29a14a4b316be24608fe34b",
+      "cached": false,
+      "query_sha256": "95af46344e504e7b38c15f54a069c064d4079282f50fa6201261d2ad0d61b028",
+      "query": "hospital renamed 539 days after birth baby",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"hospital\" OR \"renamed\" OR \"539\" OR \"days\" OR \"after\" OR \"birth\" OR \"baby\"",
+        "terms": [
+          "hospital",
+          "renamed",
+          "539",
+          "days",
+          "after",
+          "birth",
+          "baby"
+        ]
+      }
+    },
+    {
+      "round": 2,
+      "top_k": 5,
+      "equivalence_key": "3657a0f54440a1d3669c3a0686beaeee88ca56efb9591c90c681a3a64f0c85bb",
+      "cached": false,
+      "query_sha256": "331d482836fd7bedda0090b3ad1af3cb5ed39ace9d653a0fd278007ce2c03cff",
+      "query": "hospital renamed 2021 2022 maternity",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"hospital\" OR \"renamed\" OR \"2021\" OR \"2022\" OR \"maternity\"",
+        "terms": [
+          "hospital",
+          "renamed",
+          "2021",
+          "2022",
+          "maternity"
+        ]
+      }
+    },
+    {
+      "round": 2,
+      "top_k": 5,
+      "equivalence_key": "e8ce39d25f1682515ed19cb5080358adfb0e251ad805f4e1bc3980001c08c0ed",
+      "cached": false,
+      "query_sha256": "ecd0d1310d6cf66e45db26a3044d2a2ac23bd358bbdf108b9bf2842134da9042",
+      "query": "novel narrator name baby born same day sibling",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"novel\" OR \"narrator\" OR \"name\" OR \"baby\" OR \"born\" OR \"same\" OR \"day\" OR \"sibling\"",
+        "terms": [
+          "novel",
+          "narrator",
+          "name",
+          "baby",
+          "born",
+          "same",
+          "day",
+          "sibling"
+        ]
+      }
+    },
+    {
+      "round": 2,
+      "top_k": 5,
+      "equivalence_key": "ed19bc5678eb619075b78fda9f4d1064bcc3bff8909ee69d24980a4ff90fc61b",
+      "cached": false,
+      "query_sha256": "435c9e428109c6251179054c84c1900d621ffbbe304798f270704e0e23faba1c",
+      "query": "second child born same date as first child celebrity 2021",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"second\" OR \"child\" OR \"born\" OR \"same\" OR \"date\" OR \"as\" OR \"first\" OR \"celebrity\" OR \"2021\"",
+        "terms": [
+          "second",
+          "child",
+          "born",
+          "same",
+          "date",
+          "as",
+          "first",
+          "celebrity",
+          "2021"
+        ]
+      }
+    },
+    {
+      "round": 2,
+      "top_k": 5,
+      "equivalence_key": "fcaa3c0f407e2295c8312b9d71b8332242bf3f8b9f7eea64163d428549350cc8",
+      "cached": false,
+      "query_sha256": "9d3fb836e9c08df7ca0c1b4bba3cffac29c9a7adcfc884b061aa2c4b21d0f78d",
+      "query": "siblings born same day different years celebrity",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"siblings\" OR \"born\" OR \"same\" OR \"day\" OR \"different\" OR \"years\" OR \"celebrity\"",
+        "terms": [
+          "siblings",
+          "born",
+          "same",
+          "day",
+          "different",
+          "years",
+          "celebrity"
+        ]
+      }
+    },
+    {
+      "round": 3,
+      "top_k": 5,
+      "equivalence_key": "60528d9a5729266b75d486b4577b6aa88092de3b16f1c81349a1e7cc300ae2d4",
+      "cached": false,
+      "query_sha256": "89afccc51bf16dac8bbc6e8511904556db119efd3b4bf9a3b864412befcfaa61",
+      "query": "celebrity baby named Ishmael born 2021",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"celebrity\" OR \"baby\" OR \"named\" OR \"ishmael\" OR \"born\" OR \"2021\"",
+        "terms": [
+          "celebrity",
+          "baby",
+          "named",
+          "ishmael",
+          "born",
+          "2021"
+        ]
+      }
+    },
+    {
+      "round": 3,
+      "top_k": 5,
+      "equivalence_key": "78c6a9815638a88ad0dc78c0a244c4794160d9a9023f249ba80fb79af1380623",
+      "cached": false,
+      "query_sha256": "88d01c1a373ae348ba3f1baf3f08b145a43eefcf7f45100dd0897d8990aa5033",
+      "query": "celebrity baby named Nick born 2021 second child same birthday",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"celebrity\" OR \"baby\" OR \"named\" OR \"nick\" OR \"born\" OR \"2021\" OR \"second\" OR \"child\" OR \"same\" OR \"birthday\"",
+        "terms": [
+          "celebrity",
+          "baby",
+          "named",
+          "nick",
+          "born",
+          "2021",
+          "second",
+          "child",
+          "same",
+          "birthday"
+        ]
+      }
+    },
+    {
+      "round": 3,
+      "top_k": 5,
+      "equivalence_key": "3e4c337517c09173ddcf69329898a2ca78231d6f6d684f77b6bddeb9c0cf1ef7",
+      "cached": false,
+      "query_sha256": "8ca6b777d73706caf2eee356ec7e0ae3ffd9d4eb08ce8f31c4941d254f594add",
+      "query": "celebrity baby named Humbert born 2021",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"celebrity\" OR \"baby\" OR \"named\" OR \"humbert\" OR \"born\" OR \"2021\"",
+        "terms": [
+          "celebrity",
+          "baby",
+          "named",
+          "humbert",
+          "born",
+          "2021"
+        ]
+      }
+    },
+    {
+      "round": 3,
+      "top_k": 5,
+      "equivalence_key": "14e1ee6cde3dc7dd655ac1fe34eae1ff7e94f4a4efa7dd27470cf8c0329417a7",
+      "cached": false,
+      "query_sha256": "c6dabb3f06e7257d0deadcdfaa7fb01d4df1b63674ec66ff7354615689dbfa29",
+      "query": "celebrity baby born 2021 named after novel narrator",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"celebrity\" OR \"baby\" OR \"born\" OR \"2021\" OR \"named\" OR \"after\" OR \"novel\" OR \"narrator\"",
+        "terms": [
+          "celebrity",
+          "baby",
+          "born",
+          "2021",
+          "named",
+          "after",
+          "novel",
+          "narrator"
+        ]
+      }
+    },
+    {
+      "round": 3,
+      "top_k": 5,
+      "equivalence_key": "005e88dea93291a00b272e80c4f7792566c894b62d02f9c33c6c1321cba33e02",
+      "cached": false,
+      "query_sha256": "4ed92024f4d1600cef1b43b6456704d97bc4025c4954b98e40c123c0291a52f9",
+      "query": "celebrity siblings born same day different year 2021",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"celebrity\" OR \"siblings\" OR \"born\" OR \"same\" OR \"day\" OR \"different\" OR \"year\" OR \"2021\"",
+        "terms": [
+          "celebrity",
+          "siblings",
+          "born",
+          "same",
+          "day",
+          "different",
+          "year",
+          "2021"
+        ]
+      }
+    },
+    {
+      "round": 5,
+      "top_k": 5,
+      "equivalence_key": "5f028d37912bbcd3899a3ef19e00b3c2c5f7c7942774ae2f64608bdff9c42e43",
+      "cached": false,
+      "query_sha256": "7a32c4786637ce123879f42fe30083ef5f12f3ab6f3133c06d81b59320f817fa",
+      "query": "celebrity baby named Holden born 2021",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"celebrity\" OR \"baby\" OR \"named\" OR \"holden\" OR \"born\" OR \"2021\"",
+        "terms": [
+          "celebrity",
+          "baby",
+          "named",
+          "holden",
+          "born",
+          "2021"
+        ]
+      }
+    },
+    {
+      "round": 5,
+      "top_k": 5,
+      "equivalence_key": "f97b6d710c12200fd5e618700323acb7011f99eed2541a8430e3b0fadbb79f78",
+      "cached": false,
+      "query_sha256": "d4ee878b6e1bf080aece3cc589ca6ddb86c8c1f0da9a6f145fbb02c232054ecd",
+      "query": "celebrity baby named Ishmael 2021 second child",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"celebrity\" OR \"baby\" OR \"named\" OR \"ishmael\" OR \"2021\" OR \"second\" OR \"child\"",
+        "terms": [
+          "celebrity",
+          "baby",
+          "named",
+          "ishmael",
+          "2021",
+          "second",
+          "child"
+        ]
+      }
+    },
+    {
+      "round": 5,
+      "top_k": 5,
+      "equivalence_key": "ae68f8d781d17cc04c56178aaa40cc7659c8bce628cdc4924bf31c189382b6a2",
+      "cached": false,
+      "query_sha256": "a883711305c976682954aae34ca2e9634f52eea0e15a75f700476b9f7e2b1d30",
+      "query": "celebrity baby named Stevens 2021",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"celebrity\" OR \"baby\" OR \"named\" OR \"stevens\" OR \"2021\"",
+        "terms": [
+          "celebrity",
+          "baby",
+          "named",
+          "stevens",
+          "2021"
+        ]
+      }
+    },
+    {
+      "round": 5,
+      "top_k": 5,
+      "equivalence_key": "3d66a459c5efac67e04fa8373df9a409f8f35cdf457922e1137648636292d99d",
+      "cached": false,
+      "query_sha256": "89915f1ba7277b2494c26b0228357688ee384755a357cad3e184160f0ec5a5db",
+      "query": "celebrity baby born 2021 named Lockwood",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"celebrity\" OR \"baby\" OR \"born\" OR \"2021\" OR \"named\" OR \"lockwood\"",
+        "terms": [
+          "celebrity",
+          "baby",
+          "born",
+          "2021",
+          "named",
+          "lockwood"
+        ]
+      }
+    },
+    {
+      "round": 5,
+      "top_k": 5,
+      "equivalence_key": "b018b315adcf3ba2dbd5cff1377a44f315ec74aab05568ab7cd89127f9efc709",
+      "cached": false,
+      "query_sha256": "763771d805aa71489ab0786bf400245e1c0d965d5feeca87def0938501b7b433",
+      "query": "celebrity baby born 2021 named Nelly Dean",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"celebrity\" OR \"baby\" OR \"born\" OR \"2021\" OR \"named\" OR \"nelly\" OR \"dean\"",
+        "terms": [
+          "celebrity",
+          "baby",
+          "born",
+          "2021",
+          "named",
+          "nelly",
+          "dean"
+        ]
+      }
+    },
+    {
+      "round": 5,
+      "top_k": 5,
+      "equivalence_key": "08134c2b6fb98fec9f3aca7cff06807da407e4dcda512c8fcac5f2f4043b9fe4",
+      "cached": false,
+      "query_sha256": "9174ec6154ffc0ee77872b146ed48f6f5861831b92a2cfe24b259618ba84833c",
+      "query": "celebrity baby born 2021 named Offred",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"celebrity\" OR \"baby\" OR \"born\" OR \"2021\" OR \"named\" OR \"offred\"",
+        "terms": [
+          "celebrity",
+          "baby",
+          "born",
+          "2021",
+          "named",
+          "offred"
+        ]
+      }
+    },
+    {
+      "round": 6,
+      "top_k": 5,
+      "equivalence_key": "723aa117f34a8d327b94776be7768923181e6575751a0e1a344b2de0a27a84f6",
+      "cached": false,
+      "query_sha256": "2df1cd08dc9b1f89dd2ef4951b773da0c8138b9c885219c0fa3d4f7ff5862b67",
+      "query": "celebrity baby named Ishmael born 2021 second child same birthday",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"celebrity\" OR \"baby\" OR \"named\" OR \"ishmael\" OR \"born\" OR \"2021\" OR \"second\" OR \"child\" OR \"same\" OR \"birthday\"",
+        "terms": [
+          "celebrity",
+          "baby",
+          "named",
+          "ishmael",
+          "born",
+          "2021",
+          "second",
+          "child",
+          "same",
+          "birthday"
+        ]
+      }
+    },
+    {
+      "round": 6,
+      "top_k": 5,
+      "equivalence_key": "391431730fdf79fc0280160bbc34848805a18a80c0b14aafc9c473fdf070cb05",
+      "cached": false,
+      "query_sha256": "f1d8901fa92abb02aa5584b9f0ab3b22086155dfbf74cfa333e34d838dc6e557",
+      "query": "celebrity baby named Holden born 2021 second child same birthday",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"celebrity\" OR \"baby\" OR \"named\" OR \"holden\" OR \"born\" OR \"2021\" OR \"second\" OR \"child\" OR \"same\" OR \"birthday\"",
+        "terms": [
+          "celebrity",
+          "baby",
+          "named",
+          "holden",
+          "born",
+          "2021",
+          "second",
+          "child",
+          "same",
+          "birthday"
+        ]
+      }
+    },
+    {
+      "round": 6,
+      "top_k": 5,
+      "equivalence_key": "09f97e5af6a090ed4772dddf12283f8ce5bff86b1520ef7a6118aae3f50b59a7",
+      "cached": false,
+      "query_sha256": "842059ee4557cf7bfecab524960ffd357b9e9f98272b2964f2be633b8765eaf2",
+      "query": "celebrity baby named Nick Carraway born 2021",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"celebrity\" OR \"baby\" OR \"named\" OR \"nick\" OR \"carraway\" OR \"born\" OR \"2021\"",
+        "terms": [
+          "celebrity",
+          "baby",
+          "named",
+          "nick",
+          "carraway",
+          "born",
+          "2021"
+        ]
+      }
+    },
+    {
+      "round": 6,
+      "top_k": 5,
+      "equivalence_key": "e31aa4a76f75b7ae2a9c2f0b73e55f6ecdb1d53e8471edb3326669300b2824f1",
+      "cached": false,
+      "query_sha256": "8fde76609887364c76ab523fc1cba6512559e050c769eb619d7f799c2debe281",
+      "query": "celebrity baby born 2021 named after literary character narrator",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"celebrity\" OR \"baby\" OR \"born\" OR \"2021\" OR \"named\" OR \"after\" OR \"literary\" OR \"character\" OR \"narrator\"",
+        "terms": [
+          "celebrity",
+          "baby",
+          "born",
+          "2021",
+          "named",
+          "after",
+          "literary",
+          "character",
+          "narrator"
+        ]
+      }
+    },
+    {
+      "round": 6,
+      "top_k": 5,
+      "equivalence_key": "372a6ac76ce2b066958560b0b0fff6b664c66dfa501ec3f263f2c17b3f75aa37",
+      "cached": false,
+      "query_sha256": "888b1cf688ddb5f915ebe00dd748e20bfc01f6b4d59fbca002b1a734e9f0add6",
+      "query": "celebrity baby born 2021 named Scout or Atticus or Holden",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"celebrity\" OR \"baby\" OR \"born\" OR \"2021\" OR \"named\" OR \"scout\" OR \"or\" OR \"atticus\" OR \"holden\"",
+        "terms": [
+          "celebrity",
+          "baby",
+          "born",
+          "2021",
+          "named",
+          "scout",
+          "or",
+          "atticus",
+          "holden"
+        ]
+      }
+    },
+    {
+      "round": 6,
+      "top_k": 5,
+      "equivalence_key": "957c105a5828d8925937961d2c8c1297d06f346697d6bfc9056050fe55e3b73a",
+      "cached": false,
+      "query_sha256": "faf45eae8cdca9158b7182abc9bb612eb5f2421ea1aa2ff9a2f63e29ab8d1a16",
+      "query": "celebrity baby born 2021 named Ishmael or Humbert or Nick",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"celebrity\" OR \"baby\" OR \"born\" OR \"2021\" OR \"named\" OR \"ishmael\" OR \"or\" OR \"humbert\" OR \"nick\"",
+        "terms": [
+          "celebrity",
+          "baby",
+          "born",
+          "2021",
+          "named",
+          "ishmael",
+          "or",
+          "humbert",
+          "nick"
+        ]
+      }
+    },
+    {
+      "round": 7,
+      "top_k": 5,
+      "equivalence_key": "723aa117f34a8d327b94776be7768923181e6575751a0e1a344b2de0a27a84f6",
+      "cached": true,
+      "query_sha256": "2df1cd08dc9b1f89dd2ef4951b773da0c8138b9c885219c0fa3d4f7ff5862b67",
+      "query": "celebrity baby named Ishmael born 2021 second child same birthday",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"celebrity\" OR \"baby\" OR \"named\" OR \"ishmael\" OR \"born\" OR \"2021\" OR \"second\" OR \"child\" OR \"same\" OR \"birthday\"",
+        "terms": [
+          "celebrity",
+          "baby",
+          "named",
+          "ishmael",
+          "born",
+          "2021",
+          "second",
+          "child",
+          "same",
+          "birthday"
+        ]
+      }
+    },
+    {
+      "round": 7,
+      "top_k": 5,
+      "equivalence_key": "391431730fdf79fc0280160bbc34848805a18a80c0b14aafc9c473fdf070cb05",
+      "cached": true,
+      "query_sha256": "f1d8901fa92abb02aa5584b9f0ab3b22086155dfbf74cfa333e34d838dc6e557",
+      "query": "celebrity baby named Holden born 2021 second child same birthday",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"celebrity\" OR \"baby\" OR \"named\" OR \"holden\" OR \"born\" OR \"2021\" OR \"second\" OR \"child\" OR \"same\" OR \"birthday\"",
+        "terms": [
+          "celebrity",
+          "baby",
+          "named",
+          "holden",
+          "born",
+          "2021",
+          "second",
+          "child",
+          "same",
+          "birthday"
+        ]
+      }
+    },
+    {
+      "round": 7,
+      "top_k": 5,
+      "equivalence_key": "09f97e5af6a090ed4772dddf12283f8ce5bff86b1520ef7a6118aae3f50b59a7",
+      "cached": true,
+      "query_sha256": "842059ee4557cf7bfecab524960ffd357b9e9f98272b2964f2be633b8765eaf2",
+      "query": "celebrity baby named Nick Carraway born 2021",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"celebrity\" OR \"baby\" OR \"named\" OR \"nick\" OR \"carraway\" OR \"born\" OR \"2021\"",
+        "terms": [
+          "celebrity",
+          "baby",
+          "named",
+          "nick",
+          "carraway",
+          "born",
+          "2021"
+        ]
+      }
+    },
+    {
+      "round": 7,
+      "top_k": 5,
+      "equivalence_key": "e31aa4a76f75b7ae2a9c2f0b73e55f6ecdb1d53e8471edb3326669300b2824f1",
+      "cached": true,
+      "query_sha256": "8fde76609887364c76ab523fc1cba6512559e050c769eb619d7f799c2debe281",
+      "query": "celebrity baby born 2021 named after literary character narrator",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"celebrity\" OR \"baby\" OR \"born\" OR \"2021\" OR \"named\" OR \"after\" OR \"literary\" OR \"character\" OR \"narrator\"",
+        "terms": [
+          "celebrity",
+          "baby",
+          "born",
+          "2021",
+          "named",
+          "after",
+          "literary",
+          "character",
+          "narrator"
+        ]
+      }
+    },
+    {
+      "round": 7,
+      "top_k": 5,
+      "equivalence_key": "372a6ac76ce2b066958560b0b0fff6b664c66dfa501ec3f263f2c17b3f75aa37",
+      "cached": true,
+      "query_sha256": "888b1cf688ddb5f915ebe00dd748e20bfc01f6b4d59fbca002b1a734e9f0add6",
+      "query": "celebrity baby born 2021 named Scout or Atticus or Holden",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"celebrity\" OR \"baby\" OR \"born\" OR \"2021\" OR \"named\" OR \"scout\" OR \"or\" OR \"atticus\" OR \"holden\"",
+        "terms": [
+          "celebrity",
+          "baby",
+          "born",
+          "2021",
+          "named",
+          "scout",
+          "or",
+          "atticus",
+          "holden"
+        ]
+      }
+    },
+    {
+      "round": 7,
+      "top_k": 5,
+      "equivalence_key": "957c105a5828d8925937961d2c8c1297d06f346697d6bfc9056050fe55e3b73a",
+      "cached": true,
+      "query_sha256": "faf45eae8cdca9158b7182abc9bb612eb5f2421ea1aa2ff9a2f63e29ab8d1a16",
+      "query": "celebrity baby born 2021 named Ishmael or Humbert or Nick",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"celebrity\" OR \"baby\" OR \"born\" OR \"2021\" OR \"named\" OR \"ishmael\" OR \"or\" OR \"humbert\" OR \"nick\"",
+        "terms": [
+          "celebrity",
+          "baby",
+          "born",
+          "2021",
+          "named",
+          "ishmael",
+          "or",
+          "humbert",
+          "nick"
+        ]
+      }
+    },
+    {
+      "round": 8,
+      "top_k": 5,
+      "equivalence_key": "723aa117f34a8d327b94776be7768923181e6575751a0e1a344b2de0a27a84f6",
+      "cached": true,
+      "query_sha256": "2df1cd08dc9b1f89dd2ef4951b773da0c8138b9c885219c0fa3d4f7ff5862b67",
+      "query": "celebrity baby named Ishmael born 2021 second child same birthday",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"celebrity\" OR \"baby\" OR \"named\" OR \"ishmael\" OR \"born\" OR \"2021\" OR \"second\" OR \"child\" OR \"same\" OR \"birthday\"",
+        "terms": [
+          "celebrity",
+          "baby",
+          "named",
+          "ishmael",
+          "born",
+          "2021",
+          "second",
+          "child",
+          "same",
+          "birthday"
+        ]
+      }
+    },
+    {
+      "round": 8,
+      "top_k": 5,
+      "equivalence_key": "391431730fdf79fc0280160bbc34848805a18a80c0b14aafc9c473fdf070cb05",
+      "cached": true,
+      "query_sha256": "f1d8901fa92abb02aa5584b9f0ab3b22086155dfbf74cfa333e34d838dc6e557",
+      "query": "celebrity baby named Holden born 2021 second child same birthday",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"celebrity\" OR \"baby\" OR \"named\" OR \"holden\" OR \"born\" OR \"2021\" OR \"second\" OR \"child\" OR \"same\" OR \"birthday\"",
+        "terms": [
+          "celebrity",
+          "baby",
+          "named",
+          "holden",
+          "born",
+          "2021",
+          "second",
+          "child",
+          "same",
+          "birthday"
+        ]
+      }
+    },
+    {
+      "round": 8,
+      "top_k": 5,
+      "equivalence_key": "09f97e5af6a090ed4772dddf12283f8ce5bff86b1520ef7a6118aae3f50b59a7",
+      "cached": true,
+      "query_sha256": "842059ee4557cf7bfecab524960ffd357b9e9f98272b2964f2be633b8765eaf2",
+      "query": "celebrity baby named Nick Carraway born 2021",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"celebrity\" OR \"baby\" OR \"named\" OR \"nick\" OR \"carraway\" OR \"born\" OR \"2021\"",
+        "terms": [
+          "celebrity",
+          "baby",
+          "named",
+          "nick",
+          "carraway",
+          "born",
+          "2021"
+        ]
+      }
+    },
+    {
+      "round": 8,
+      "top_k": 5,
+      "equivalence_key": "e31aa4a76f75b7ae2a9c2f0b73e55f6ecdb1d53e8471edb3326669300b2824f1",
+      "cached": true,
+      "query_sha256": "8fde76609887364c76ab523fc1cba6512559e050c769eb619d7f799c2debe281",
+      "query": "celebrity baby born 2021 named after literary character narrator",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"celebrity\" OR \"baby\" OR \"born\" OR \"2021\" OR \"named\" OR \"after\" OR \"literary\" OR \"character\" OR \"narrator\"",
+        "terms": [
+          "celebrity",
+          "baby",
+          "born",
+          "2021",
+          "named",
+          "after",
+          "literary",
+          "character",
+          "narrator"
+        ]
+      }
+    },
+    {
+      "round": 8,
+      "top_k": 5,
+      "equivalence_key": "372a6ac76ce2b066958560b0b0fff6b664c66dfa501ec3f263f2c17b3f75aa37",
+      "cached": true,
+      "query_sha256": "888b1cf688ddb5f915ebe00dd748e20bfc01f6b4d59fbca002b1a734e9f0add6",
+      "query": "celebrity baby born 2021 named Scout or Atticus or Holden",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"celebrity\" OR \"baby\" OR \"born\" OR \"2021\" OR \"named\" OR \"scout\" OR \"or\" OR \"atticus\" OR \"holden\"",
+        "terms": [
+          "celebrity",
+          "baby",
+          "born",
+          "2021",
+          "named",
+          "scout",
+          "or",
+          "atticus",
+          "holden"
+        ]
+      }
+    },
+    {
+      "round": 8,
+      "top_k": 5,
+      "equivalence_key": "957c105a5828d8925937961d2c8c1297d06f346697d6bfc9056050fe55e3b73a",
+      "cached": true,
+      "query_sha256": "faf45eae8cdca9158b7182abc9bb612eb5f2421ea1aa2ff9a2f63e29ab8d1a16",
+      "query": "celebrity baby born 2021 named Ishmael or Humbert or Nick",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"celebrity\" OR \"baby\" OR \"born\" OR \"2021\" OR \"named\" OR \"ishmael\" OR \"or\" OR \"humbert\" OR \"nick\"",
+        "terms": [
+          "celebrity",
+          "baby",
+          "born",
+          "2021",
+          "named",
+          "ishmael",
+          "or",
+          "humbert",
+          "nick"
+        ]
+      }
+    }
+  ],
+  "equivalent_query_repeats": 12,
+  "views": [
+    {
+      "round": 1,
+      "compacted": false,
+      "visible_evidence": [],
+      "shelf": [],
+      "shelf_evicted": []
+    },
+    {
+      "round": 2,
+      "compacted": false,
+      "visible_evidence": [],
+      "shelf": [],
+      "shelf_evicted": []
+    },
+    {
+      "round": 3,
+      "compacted": false,
+      "visible_evidence": [],
+      "shelf": [],
+      "shelf_evicted": []
+    },
+    {
+      "round": 4,
+      "compacted": false,
+      "visible_evidence": [],
+      "shelf": [],
+      "shelf_evicted": []
+    },
+    {
+      "round": 5,
+      "compacted": false,
+      "visible_evidence": [],
+      "shelf": [],
+      "shelf_evicted": []
+    },
+    {
+      "round": 6,
+      "compacted": false,
+      "visible_evidence": [],
+      "shelf": [],
+      "shelf_evicted": []
+    },
+    {
+      "round": 7,
+      "compacted": true,
+      "visible_evidence": [],
+      "shelf": [],
+      "shelf_evicted": []
+    },
+    {
+      "round": 8,
+      "compacted": true,
+      "visible_evidence": [],
+      "shelf": [],
+      "shelf_evicted": []
+    },
+    {
+      "round": 9,
+      "compacted": false,
+      "visible_evidence": [],
+      "shelf": [],
+      "shelf_evicted": []
+    },
+    {
+      "round": 10,
+      "compacted": false,
+      "visible_evidence": [],
+      "shelf": [],
+      "shelf_evicted": []
+    },
+    {
+      "round": 11,
+      "compacted": false,
+      "visible_evidence": [],
+      "shelf": [],
+      "shelf_evicted": []
+    }
+  ],
+  "delivered_refs": [],
+  "submitted_refs": [],
+  "text_included": true,
+  "limitations": [
+    "Equivalence is compiler equality, not semantic identity or wasted-search proof",
+    "Raw-window visibility/selection is not entailment or complete evidence coverage",
+    "No live q26 replay or independent answer scoring is performed"
+  ]
+}

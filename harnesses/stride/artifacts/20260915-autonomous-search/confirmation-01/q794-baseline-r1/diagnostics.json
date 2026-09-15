@@ -1,0 +1,1068 @@
+{
+  "protocol": "stride-search-3",
+  "head": "189c77af165e8b927ca49f92310ea38f3cfc733b9f107043779bb32bc2710e8f",
+  "outcome": "model_budget",
+  "formal_correct": null,
+  "model_attempts": 16,
+  "backend_attempts": 25,
+  "queries": [
+    {
+      "round": 1,
+      "top_k": 10,
+      "equivalence_key": "33fddcef0e35080c1b38d58dcdd53e380626ffb42cad36c3643ff936c92d1e1b",
+      "cached": false,
+      "query_sha256": "1cde17b00680c7b04126ac1dfebb5d530043a138563520d4be33c9e60c9ac6bc",
+      "query": "snooker championship match breaks 100 90 70 50 frames",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"snooker\" OR \"championship\" OR \"match\" OR \"breaks\" OR \"100\" OR \"90\" OR \"70\" OR \"50\" OR \"frames\"",
+        "terms": [
+          "snooker",
+          "championship",
+          "match",
+          "breaks",
+          "100",
+          "90",
+          "70",
+          "50",
+          "frames"
+        ]
+      }
+    },
+    {
+      "round": 1,
+      "top_k": 10,
+      "equivalence_key": "e05f30ce34a5d02ba7a830b182c2e2272326be473e8c0782c48a445b0e17a123",
+      "cached": false,
+      "query_sha256": "745c9a7d95d055122640ba30d9f4be58faa5e2273d7edd96a12a5dd04c6c8305",
+      "query": "snooker match century break 90 break losing player professional",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"snooker\" OR \"match\" OR \"century\" OR \"break\" OR \"90\" OR \"losing\" OR \"player\" OR \"professional\"",
+        "terms": [
+          "snooker",
+          "match",
+          "century",
+          "break",
+          "90",
+          "losing",
+          "player",
+          "professional"
+        ]
+      }
+    },
+    {
+      "round": 1,
+      "top_k": 10,
+      "equivalence_key": "dcdbf5015fa9b610060ccc9bf2652a0c377cf1d3274f494ee3fe2cecdf6d1b0d",
+      "cached": false,
+      "query_sha256": "445e884d426b063eb5863fe58e0b6097c11dad74017204a179d39d7746e11084",
+      "query": "snooker championship match winning player two centuries breaks",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"snooker\" OR \"championship\" OR \"match\" OR \"winning\" OR \"player\" OR \"two\" OR \"centuries\" OR \"breaks\"",
+        "terms": [
+          "snooker",
+          "championship",
+          "match",
+          "winning",
+          "player",
+          "two",
+          "centuries",
+          "breaks"
+        ]
+      }
+    },
+    {
+      "round": 2,
+      "top_k": 10,
+      "equivalence_key": "b04f493d567d4482f9cf7244bd21268d1f20dc4294f5a4d2c93f473766a9b04b",
+      "cached": false,
+      "query_sha256": "50a814d857f6b9ec55cfec170d849c7d15afdb64f8cc323e49ba0279cc06eb2d",
+      "query": "snooker match loser 90 break century break winner two centuries",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"snooker\" OR \"match\" OR \"loser\" OR \"90\" OR \"break\" OR \"century\" OR \"winner\" OR \"two\" OR \"centuries\"",
+        "terms": [
+          "snooker",
+          "match",
+          "loser",
+          "90",
+          "break",
+          "century",
+          "winner",
+          "two",
+          "centuries"
+        ]
+      }
+    },
+    {
+      "round": 2,
+      "top_k": 10,
+      "equivalence_key": "a1591416154a51b026c1f3ec105280adeeb05559c630ec88a2d9a981c92481d3",
+      "cached": false,
+      "query_sha256": "4295624edd9c41f8ae923993bc6a5148d9cc981e273d105e46ef382c848bd017",
+      "query": "snooker championship match breaks 90s 70s 50s frames score",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"snooker\" OR \"championship\" OR \"match\" OR \"breaks\" OR \"90s\" OR \"70s\" OR \"50s\" OR \"frames\" OR \"score\"",
+        "terms": [
+          "snooker",
+          "championship",
+          "match",
+          "breaks",
+          "90s",
+          "70s",
+          "50s",
+          "frames",
+          "score"
+        ]
+      }
+    },
+    {
+      "round": 2,
+      "top_k": 10,
+      "equivalence_key": "04d368c475a29db5ea5f13d53470a9d67b1fffc43000d9c80d1def6177c1ca38",
+      "cached": false,
+      "query_sha256": "4da04b8d2a9fb2f6a829d4e660793a819fbde5cd3924f74747f9d3b5431a976d",
+      "query": "snooker match report breaks 95 96 97 98 99 century 100",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"snooker\" OR \"match\" OR \"report\" OR \"breaks\" OR \"95\" OR \"96\" OR \"97\" OR \"98\" OR \"99\" OR \"century\" OR \"100\"",
+        "terms": [
+          "snooker",
+          "match",
+          "report",
+          "breaks",
+          "95",
+          "96",
+          "97",
+          "98",
+          "99",
+          "century",
+          "100"
+        ]
+      }
+    },
+    {
+      "round": 5,
+      "top_k": 10,
+      "equivalence_key": "5e79d5aade0974e4e21129bec095d9416f5ea2ca8c3848a598afa244235d4235",
+      "cached": false,
+      "query_sha256": "0c10c1db7205776fcb4d1843cc523724e4d3e97f58b886619da414601a91a941",
+      "query": "cuetracker world championship 2021 breaks 50s 60s 70s 90s 100s",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"cuetracker\" OR \"world\" OR \"championship\" OR \"2021\" OR \"breaks\" OR \"50s\" OR \"60s\" OR \"70s\" OR \"90s\" OR \"100s\"",
+        "terms": [
+          "cuetracker",
+          "world",
+          "championship",
+          "2021",
+          "breaks",
+          "50s",
+          "60s",
+          "70s",
+          "90s",
+          "100s"
+        ]
+      }
+    },
+    {
+      "round": 5,
+      "top_k": 10,
+      "equivalence_key": "1d249b102902d187b5918c10e172afb2278100bb9e8444f856072f6efaea5892",
+      "cached": false,
+      "query_sha256": "8a61cc86e63ef1af16d8946fa930d521cac1cbee3a994ab57c5a63e390789b58",
+      "query": "cuetracker world championship 2020 quarter final breaks table",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"cuetracker\" OR \"world\" OR \"championship\" OR \"2020\" OR \"quarter\" OR \"final\" OR \"breaks\" OR \"table\"",
+        "terms": [
+          "cuetracker",
+          "world",
+          "championship",
+          "2020",
+          "quarter",
+          "final",
+          "breaks",
+          "table"
+        ]
+      }
+    },
+    {
+      "round": 5,
+      "top_k": 10,
+      "equivalence_key": "9ac3c2050c234f3a00d69c065907eb914144585029194f27d86ed7c643a50d43",
+      "cached": false,
+      "query_sha256": "949a3f0dbaa4cc60a635019a0670a43f74ab36349f0157dfd2e1fc261858a65e",
+      "query": "cuetracker world snooker championship 2019 2020 2021 match breaks",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"cuetracker\" OR \"world\" OR \"snooker\" OR \"championship\" OR \"2019\" OR \"2020\" OR \"2021\" OR \"match\" OR \"breaks\"",
+        "terms": [
+          "cuetracker",
+          "world",
+          "snooker",
+          "championship",
+          "2019",
+          "2020",
+          "2021",
+          "match",
+          "breaks"
+        ]
+      }
+    },
+    {
+      "round": 6,
+      "top_k": 8,
+      "equivalence_key": "a71100417556b099cfa8047aafddbcbdedd0060d933c2142806db3b1f55fbd5d",
+      "cached": false,
+      "query_sha256": "46f3f104f5b595db7fead88cf4d42a23064a95d6807add0cb9326926c26efdf3",
+      "query": "cuetracker 2021 world championship breaks 50s 60s 70s 90s 100s",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"cuetracker\" OR \"2021\" OR \"world\" OR \"championship\" OR \"breaks\" OR \"50s\" OR \"60s\" OR \"70s\" OR \"90s\" OR \"100s\"",
+        "terms": [
+          "cuetracker",
+          "2021",
+          "world",
+          "championship",
+          "breaks",
+          "50s",
+          "60s",
+          "70s",
+          "90s",
+          "100s"
+        ]
+      }
+    },
+    {
+      "round": 6,
+      "top_k": 8,
+      "equivalence_key": "4ebb274b151a5f2f2dff6aebd294f2a5d15d8e34b005166ea2d19de5e4102f11",
+      "cached": false,
+      "query_sha256": "eb2f28299808ae4316bfe99145b0fcbe4fe314654654b34f97219e4819d472d3",
+      "query": "cuetracker world championship 2021 quarter final semi final breaks table",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"cuetracker\" OR \"world\" OR \"championship\" OR \"2021\" OR \"quarter\" OR \"final\" OR \"semi\" OR \"breaks\" OR \"table\"",
+        "terms": [
+          "cuetracker",
+          "world",
+          "championship",
+          "2021",
+          "quarter",
+          "final",
+          "semi",
+          "breaks",
+          "table"
+        ]
+      }
+    },
+    {
+      "round": 7,
+      "top_k": 10,
+      "equivalence_key": "64e0134ceef6f43ba3a73dea8c76959476a7c954e636029f8e2adbe99fca7ea2",
+      "cached": false,
+      "query_sha256": "4d9adcd525bd0e6b0b567f88959754e430f95c6fc69c5ab6563c7cf74278ab7d",
+      "query": "cuetracker.net 2021 world snooker championship",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"cuetracker\" OR \"net\" OR \"2021\" OR \"world\" OR \"snooker\" OR \"championship\"",
+        "terms": [
+          "cuetracker",
+          "net",
+          "2021",
+          "world",
+          "snooker",
+          "championship"
+        ]
+      }
+    },
+    {
+      "round": 7,
+      "top_k": 10,
+      "equivalence_key": "096389c8d5763fbd094c33e94264ef7c8693643b7a63acd35a8dad9fb1f59821",
+      "cached": false,
+      "query_sha256": "b6e7364e37efc673af1ee76480ddffb1bb6639b41779ce64229d9db12ad4fdb0",
+      "query": "cuetracker 2021 world championship selby",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"cuetracker\" OR \"2021\" OR \"world\" OR \"championship\" OR \"selby\"",
+        "terms": [
+          "cuetracker",
+          "2021",
+          "world",
+          "championship",
+          "selby"
+        ]
+      }
+    },
+    {
+      "round": 7,
+      "top_k": 10,
+      "equivalence_key": "e75ade64aa4aee94c0d9b3a9064dae21fa8464bc1f5e36a3e0b98e568f61885e",
+      "cached": false,
+      "query_sha256": "ad239b6b134dad24841fe37f082e52828a485adae25338f728cd755ef797077c",
+      "query": "cuetracker world championship 2021 final semi final",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"cuetracker\" OR \"world\" OR \"championship\" OR \"2021\" OR \"final\" OR \"semi\"",
+        "terms": [
+          "cuetracker",
+          "world",
+          "championship",
+          "2021",
+          "final",
+          "semi"
+        ]
+      }
+    },
+    {
+      "round": 8,
+      "top_k": 10,
+      "equivalence_key": "f703b0bac0624570a9a71d0bb545f8a88b258a671b27385bbb2c001d2426e162",
+      "cached": false,
+      "query_sha256": "053aac622a859d9bbc98ebb0718ec6ee327edcc49261bbdca8f26a253f1f5656",
+      "query": "cuetracker.net 2021 world snooker championship selby murphy breaks",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"cuetracker\" OR \"net\" OR \"2021\" OR \"world\" OR \"snooker\" OR \"championship\" OR \"selby\" OR \"murphy\" OR \"breaks\"",
+        "terms": [
+          "cuetracker",
+          "net",
+          "2021",
+          "world",
+          "snooker",
+          "championship",
+          "selby",
+          "murphy",
+          "breaks"
+        ]
+      }
+    },
+    {
+      "round": 8,
+      "top_k": 10,
+      "equivalence_key": "7979aa863af9613ef76db1bbf97b7d58f8f9a4e3157592935d5a497db4bb57c6",
+      "cached": false,
+      "query_sha256": "49bbd9ac333c85805284f61a67ac016ebf3cfe3349e7cc960bb6aaf1623ff306",
+      "query": "cuetracker 2021 world championship final selby murphy frame scores",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"cuetracker\" OR \"2021\" OR \"world\" OR \"championship\" OR \"final\" OR \"selby\" OR \"murphy\" OR \"frame\" OR \"scores\"",
+        "terms": [
+          "cuetracker",
+          "2021",
+          "world",
+          "championship",
+          "final",
+          "selby",
+          "murphy",
+          "frame",
+          "scores"
+        ]
+      }
+    },
+    {
+      "round": 8,
+      "top_k": 10,
+      "equivalence_key": "c525aaf6b81d017f13f3b37b48ee62fd53e51b321b3f71fec01ea9e1d8970844",
+      "cached": false,
+      "query_sha256": "b29f703b32f1238f8a5c29c3389580a8e8524c3a4740dd39524a5cf2d9005975",
+      "query": "cuetracker 2021 world snooker championship quarter final breaks table",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"cuetracker\" OR \"2021\" OR \"world\" OR \"snooker\" OR \"championship\" OR \"quarter\" OR \"final\" OR \"breaks\" OR \"table\"",
+        "terms": [
+          "cuetracker",
+          "2021",
+          "world",
+          "snooker",
+          "championship",
+          "quarter",
+          "final",
+          "breaks",
+          "table"
+        ]
+      }
+    },
+    {
+      "round": 9,
+      "top_k": 10,
+      "equivalence_key": "2b6a8fd565884fa19e6a12b9438828b71973558bcd0edced607727a9ae01a41c",
+      "cached": false,
+      "query_sha256": "21c9067cea1b5c540477c45af27b9d5207bca65e395ac702533a1e985becc1ac",
+      "query": "cuetracker.net tournaments world-championship 2021",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"cuetracker\" OR \"net\" OR \"tournaments\" OR \"world\" OR \"championship\" OR \"2021\"",
+        "terms": [
+          "cuetracker",
+          "net",
+          "tournaments",
+          "world",
+          "championship",
+          "2021"
+        ]
+      }
+    },
+    {
+      "round": 9,
+      "top_k": 10,
+      "equivalence_key": "db9ddada4dd326902ab1aa5bf9c4ad329b91f31dee57e69768a02cf74882c31e",
+      "cached": false,
+      "query_sha256": "556fc7f4469844e3e8ca09ea38c0c232c3969b3220e63d521ab1f1b4daef3cb9",
+      "query": "cuetracker 2021 world snooker championship selby murphy final",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"cuetracker\" OR \"2021\" OR \"world\" OR \"snooker\" OR \"championship\" OR \"selby\" OR \"murphy\" OR \"final\"",
+        "terms": [
+          "cuetracker",
+          "2021",
+          "world",
+          "snooker",
+          "championship",
+          "selby",
+          "murphy",
+          "final"
+        ]
+      }
+    },
+    {
+      "round": 9,
+      "top_k": 10,
+      "equivalence_key": "01a2ffa9d39590fe2b2123ecfd494701ed93738438274d3c0695f3f6817286cc",
+      "cached": false,
+      "query_sha256": "5005739eced9696d0469f925d6aff2217e3516bbaebfcbadc6aa0396a6618b66",
+      "query": "cuetracker 2021 world championship quarter final breaks",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"cuetracker\" OR \"2021\" OR \"world\" OR \"championship\" OR \"quarter\" OR \"final\" OR \"breaks\"",
+        "terms": [
+          "cuetracker",
+          "2021",
+          "world",
+          "championship",
+          "quarter",
+          "final",
+          "breaks"
+        ]
+      }
+    },
+    {
+      "round": 10,
+      "top_k": 10,
+      "equivalence_key": "2b6a8fd565884fa19e6a12b9438828b71973558bcd0edced607727a9ae01a41c",
+      "cached": true,
+      "query_sha256": "21c9067cea1b5c540477c45af27b9d5207bca65e395ac702533a1e985becc1ac",
+      "query": "cuetracker.net tournaments world-championship 2021",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"cuetracker\" OR \"net\" OR \"tournaments\" OR \"world\" OR \"championship\" OR \"2021\"",
+        "terms": [
+          "cuetracker",
+          "net",
+          "tournaments",
+          "world",
+          "championship",
+          "2021"
+        ]
+      }
+    },
+    {
+      "round": 10,
+      "top_k": 10,
+      "equivalence_key": "db9ddada4dd326902ab1aa5bf9c4ad329b91f31dee57e69768a02cf74882c31e",
+      "cached": true,
+      "query_sha256": "556fc7f4469844e3e8ca09ea38c0c232c3969b3220e63d521ab1f1b4daef3cb9",
+      "query": "cuetracker 2021 world snooker championship selby murphy final",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"cuetracker\" OR \"2021\" OR \"world\" OR \"snooker\" OR \"championship\" OR \"selby\" OR \"murphy\" OR \"final\"",
+        "terms": [
+          "cuetracker",
+          "2021",
+          "world",
+          "snooker",
+          "championship",
+          "selby",
+          "murphy",
+          "final"
+        ]
+      }
+    },
+    {
+      "round": 10,
+      "top_k": 10,
+      "equivalence_key": "01a2ffa9d39590fe2b2123ecfd494701ed93738438274d3c0695f3f6817286cc",
+      "cached": true,
+      "query_sha256": "5005739eced9696d0469f925d6aff2217e3516bbaebfcbadc6aa0396a6618b66",
+      "query": "cuetracker 2021 world championship quarter final breaks",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"cuetracker\" OR \"2021\" OR \"world\" OR \"championship\" OR \"quarter\" OR \"final\" OR \"breaks\"",
+        "terms": [
+          "cuetracker",
+          "2021",
+          "world",
+          "championship",
+          "quarter",
+          "final",
+          "breaks"
+        ]
+      }
+    },
+    {
+      "round": 11,
+      "top_k": 10,
+      "equivalence_key": "05883409e9d279c0ad38098ffabcfd7ea5415316cc2f9f22efd5fd95a10af4fd",
+      "cached": false,
+      "query_sha256": "69503591b92707c0c7a841f6989a4ccf709dfac00e866346b3db076126dc6860",
+      "query": "cuetracker.net world championship 2021 selby murphy breaks",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"cuetracker\" OR \"net\" OR \"world\" OR \"championship\" OR \"2021\" OR \"selby\" OR \"murphy\" OR \"breaks\"",
+        "terms": [
+          "cuetracker",
+          "net",
+          "world",
+          "championship",
+          "2021",
+          "selby",
+          "murphy",
+          "breaks"
+        ]
+      }
+    },
+    {
+      "round": 11,
+      "top_k": 10,
+      "equivalence_key": "a130133abac6ab32ccec3f2f7e204595f7f6de1bf1a089b39ecf136bd13e8a54",
+      "cached": false,
+      "query_sha256": "8e8e9c9ef924e55888e726d8b893d7e39a306949e882b101a3ee4bd100e342b5",
+      "query": "2021 world snooker championship final selby 18 murphy 15 frame scores breaks",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"2021\" OR \"world\" OR \"snooker\" OR \"championship\" OR \"final\" OR \"selby\" OR \"18\" OR \"murphy\" OR \"15\" OR \"frame\" OR \"scores\" OR \"breaks\"",
+        "terms": [
+          "2021",
+          "world",
+          "snooker",
+          "championship",
+          "final",
+          "selby",
+          "18",
+          "murphy",
+          "15",
+          "frame",
+          "scores",
+          "breaks"
+        ]
+      }
+    },
+    {
+      "round": 11,
+      "top_k": 10,
+      "equivalence_key": "cb893fe88d33945892cd4d9aeb2c8e490baabfbcc3e190fc098a07d821159816",
+      "cached": false,
+      "query_sha256": "5956716fbadcda23f3717571fbaa522e98ce1c14b4699c4be7d442d0ffda5bfd",
+      "query": "cuetracker 2021 world championship selby quarter final breaks table",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"cuetracker\" OR \"2021\" OR \"world\" OR \"championship\" OR \"selby\" OR \"quarter\" OR \"final\" OR \"breaks\" OR \"table\"",
+        "terms": [
+          "cuetracker",
+          "2021",
+          "world",
+          "championship",
+          "selby",
+          "quarter",
+          "final",
+          "breaks",
+          "table"
+        ]
+      }
+    },
+    {
+      "round": 12,
+      "top_k": 10,
+      "equivalence_key": "2b6a8fd565884fa19e6a12b9438828b71973558bcd0edced607727a9ae01a41c",
+      "cached": true,
+      "query_sha256": "21c9067cea1b5c540477c45af27b9d5207bca65e395ac702533a1e985becc1ac",
+      "query": "cuetracker.net tournaments world-championship 2021",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"cuetracker\" OR \"net\" OR \"tournaments\" OR \"world\" OR \"championship\" OR \"2021\"",
+        "terms": [
+          "cuetracker",
+          "net",
+          "tournaments",
+          "world",
+          "championship",
+          "2021"
+        ]
+      }
+    },
+    {
+      "round": 12,
+      "top_k": 10,
+      "equivalence_key": "db9ddada4dd326902ab1aa5bf9c4ad329b91f31dee57e69768a02cf74882c31e",
+      "cached": true,
+      "query_sha256": "556fc7f4469844e3e8ca09ea38c0c232c3969b3220e63d521ab1f1b4daef3cb9",
+      "query": "cuetracker 2021 world snooker championship selby murphy final",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"cuetracker\" OR \"2021\" OR \"world\" OR \"snooker\" OR \"championship\" OR \"selby\" OR \"murphy\" OR \"final\"",
+        "terms": [
+          "cuetracker",
+          "2021",
+          "world",
+          "snooker",
+          "championship",
+          "selby",
+          "murphy",
+          "final"
+        ]
+      }
+    },
+    {
+      "round": 12,
+      "top_k": 10,
+      "equivalence_key": "01a2ffa9d39590fe2b2123ecfd494701ed93738438274d3c0695f3f6817286cc",
+      "cached": true,
+      "query_sha256": "5005739eced9696d0469f925d6aff2217e3516bbaebfcbadc6aa0396a6618b66",
+      "query": "cuetracker 2021 world championship quarter final breaks",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"cuetracker\" OR \"2021\" OR \"world\" OR \"championship\" OR \"quarter\" OR \"final\" OR \"breaks\"",
+        "terms": [
+          "cuetracker",
+          "2021",
+          "world",
+          "championship",
+          "quarter",
+          "final",
+          "breaks"
+        ]
+      }
+    },
+    {
+      "round": 13,
+      "top_k": 10,
+      "equivalence_key": "05883409e9d279c0ad38098ffabcfd7ea5415316cc2f9f22efd5fd95a10af4fd",
+      "cached": true,
+      "query_sha256": "69503591b92707c0c7a841f6989a4ccf709dfac00e866346b3db076126dc6860",
+      "query": "cuetracker.net world championship 2021 selby murphy breaks",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"cuetracker\" OR \"net\" OR \"world\" OR \"championship\" OR \"2021\" OR \"selby\" OR \"murphy\" OR \"breaks\"",
+        "terms": [
+          "cuetracker",
+          "net",
+          "world",
+          "championship",
+          "2021",
+          "selby",
+          "murphy",
+          "breaks"
+        ]
+      }
+    },
+    {
+      "round": 13,
+      "top_k": 10,
+      "equivalence_key": "a130133abac6ab32ccec3f2f7e204595f7f6de1bf1a089b39ecf136bd13e8a54",
+      "cached": true,
+      "query_sha256": "8e8e9c9ef924e55888e726d8b893d7e39a306949e882b101a3ee4bd100e342b5",
+      "query": "2021 world snooker championship final selby 18 murphy 15 frame scores breaks",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"2021\" OR \"world\" OR \"snooker\" OR \"championship\" OR \"final\" OR \"selby\" OR \"18\" OR \"murphy\" OR \"15\" OR \"frame\" OR \"scores\" OR \"breaks\"",
+        "terms": [
+          "2021",
+          "world",
+          "snooker",
+          "championship",
+          "final",
+          "selby",
+          "18",
+          "murphy",
+          "15",
+          "frame",
+          "scores",
+          "breaks"
+        ]
+      }
+    },
+    {
+      "round": 13,
+      "top_k": 10,
+      "equivalence_key": "4da24e11f573774f1e415e24b20ee18509e3d35afb8793c32c73fc29b319f93c",
+      "cached": false,
+      "query_sha256": "6f6a34be7d8ca5a17121c3e9a4f23c469c0c2d1ee0c18d300874749fd935c0a6",
+      "query": "cuetracker 2021 world championship quarter final breaks table",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"cuetracker\" OR \"2021\" OR \"world\" OR \"championship\" OR \"quarter\" OR \"final\" OR \"breaks\" OR \"table\"",
+        "terms": [
+          "cuetracker",
+          "2021",
+          "world",
+          "championship",
+          "quarter",
+          "final",
+          "breaks",
+          "table"
+        ]
+      }
+    },
+    {
+      "round": 14,
+      "top_k": 10,
+      "equivalence_key": "05883409e9d279c0ad38098ffabcfd7ea5415316cc2f9f22efd5fd95a10af4fd",
+      "cached": true,
+      "query_sha256": "69503591b92707c0c7a841f6989a4ccf709dfac00e866346b3db076126dc6860",
+      "query": "cuetracker.net world championship 2021 selby murphy breaks",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"cuetracker\" OR \"net\" OR \"world\" OR \"championship\" OR \"2021\" OR \"selby\" OR \"murphy\" OR \"breaks\"",
+        "terms": [
+          "cuetracker",
+          "net",
+          "world",
+          "championship",
+          "2021",
+          "selby",
+          "murphy",
+          "breaks"
+        ]
+      }
+    },
+    {
+      "round": 14,
+      "top_k": 10,
+      "equivalence_key": "a130133abac6ab32ccec3f2f7e204595f7f6de1bf1a089b39ecf136bd13e8a54",
+      "cached": true,
+      "query_sha256": "8e8e9c9ef924e55888e726d8b893d7e39a306949e882b101a3ee4bd100e342b5",
+      "query": "2021 world snooker championship final selby 18 murphy 15 frame scores breaks",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"2021\" OR \"world\" OR \"snooker\" OR \"championship\" OR \"final\" OR \"selby\" OR \"18\" OR \"murphy\" OR \"15\" OR \"frame\" OR \"scores\" OR \"breaks\"",
+        "terms": [
+          "2021",
+          "world",
+          "snooker",
+          "championship",
+          "final",
+          "selby",
+          "18",
+          "murphy",
+          "15",
+          "frame",
+          "scores",
+          "breaks"
+        ]
+      }
+    },
+    {
+      "round": 14,
+      "top_k": 10,
+      "equivalence_key": "4da24e11f573774f1e415e24b20ee18509e3d35afb8793c32c73fc29b319f93c",
+      "cached": true,
+      "query_sha256": "6f6a34be7d8ca5a17121c3e9a4f23c469c0c2d1ee0c18d300874749fd935c0a6",
+      "query": "cuetracker 2021 world championship quarter final breaks table",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"cuetracker\" OR \"2021\" OR \"world\" OR \"championship\" OR \"quarter\" OR \"final\" OR \"breaks\" OR \"table\"",
+        "terms": [
+          "cuetracker",
+          "2021",
+          "world",
+          "championship",
+          "quarter",
+          "final",
+          "breaks",
+          "table"
+        ]
+      }
+    },
+    {
+      "round": 15,
+      "top_k": 10,
+      "equivalence_key": "05883409e9d279c0ad38098ffabcfd7ea5415316cc2f9f22efd5fd95a10af4fd",
+      "cached": true,
+      "query_sha256": "69503591b92707c0c7a841f6989a4ccf709dfac00e866346b3db076126dc6860",
+      "query": "cuetracker.net world championship 2021 selby murphy breaks",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"cuetracker\" OR \"net\" OR \"world\" OR \"championship\" OR \"2021\" OR \"selby\" OR \"murphy\" OR \"breaks\"",
+        "terms": [
+          "cuetracker",
+          "net",
+          "world",
+          "championship",
+          "2021",
+          "selby",
+          "murphy",
+          "breaks"
+        ]
+      }
+    },
+    {
+      "round": 15,
+      "top_k": 10,
+      "equivalence_key": "a130133abac6ab32ccec3f2f7e204595f7f6de1bf1a089b39ecf136bd13e8a54",
+      "cached": true,
+      "query_sha256": "8e8e9c9ef924e55888e726d8b893d7e39a306949e882b101a3ee4bd100e342b5",
+      "query": "2021 world snooker championship final selby 18 murphy 15 frame scores breaks",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"2021\" OR \"world\" OR \"snooker\" OR \"championship\" OR \"final\" OR \"selby\" OR \"18\" OR \"murphy\" OR \"15\" OR \"frame\" OR \"scores\" OR \"breaks\"",
+        "terms": [
+          "2021",
+          "world",
+          "snooker",
+          "championship",
+          "final",
+          "selby",
+          "18",
+          "murphy",
+          "15",
+          "frame",
+          "scores",
+          "breaks"
+        ]
+      }
+    },
+    {
+      "round": 15,
+      "top_k": 10,
+      "equivalence_key": "4da24e11f573774f1e415e24b20ee18509e3d35afb8793c32c73fc29b319f93c",
+      "cached": true,
+      "query_sha256": "6f6a34be7d8ca5a17121c3e9a4f23c469c0c2d1ee0c18d300874749fd935c0a6",
+      "query": "cuetracker 2021 world championship quarter final breaks table",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"cuetracker\" OR \"2021\" OR \"world\" OR \"championship\" OR \"quarter\" OR \"final\" OR \"breaks\" OR \"table\"",
+        "terms": [
+          "cuetracker",
+          "2021",
+          "world",
+          "championship",
+          "quarter",
+          "final",
+          "breaks",
+          "table"
+        ]
+      }
+    }
+  ],
+  "equivalent_query_repeats": 14,
+  "views": [
+    {
+      "round": 1,
+      "compacted": false,
+      "visible_evidence": [],
+      "shelf": [],
+      "shelf_evicted": []
+    },
+    {
+      "round": 2,
+      "compacted": false,
+      "visible_evidence": [],
+      "shelf": [],
+      "shelf_evicted": []
+    },
+    {
+      "round": 3,
+      "compacted": false,
+      "visible_evidence": [],
+      "shelf": [],
+      "shelf_evicted": []
+    },
+    {
+      "round": 4,
+      "compacted": false,
+      "visible_evidence": [
+        "e1"
+      ],
+      "shelf": [],
+      "shelf_evicted": []
+    },
+    {
+      "round": 5,
+      "compacted": false,
+      "visible_evidence": [
+        "e1",
+        "e2"
+      ],
+      "shelf": [],
+      "shelf_evicted": []
+    },
+    {
+      "round": 6,
+      "compacted": false,
+      "visible_evidence": [
+        "e1",
+        "e2"
+      ],
+      "shelf": [],
+      "shelf_evicted": []
+    },
+    {
+      "round": 7,
+      "compacted": true,
+      "visible_evidence": [
+        "e1",
+        "e2",
+        "e3"
+      ],
+      "shelf": [],
+      "shelf_evicted": []
+    },
+    {
+      "round": 8,
+      "compacted": false,
+      "visible_evidence": [
+        "e1",
+        "e2",
+        "e3"
+      ],
+      "shelf": [],
+      "shelf_evicted": []
+    },
+    {
+      "round": 9,
+      "compacted": true,
+      "visible_evidence": [
+        "e1",
+        "e2",
+        "e3"
+      ],
+      "shelf": [
+        "e1",
+        "e2"
+      ],
+      "shelf_evicted": []
+    },
+    {
+      "round": 10,
+      "compacted": true,
+      "visible_evidence": [
+        "e1",
+        "e2",
+        "e3"
+      ],
+      "shelf": [
+        "e1",
+        "e2",
+        "e3"
+      ],
+      "shelf_evicted": []
+    },
+    {
+      "round": 11,
+      "compacted": true,
+      "visible_evidence": [
+        "e1",
+        "e2",
+        "e3"
+      ],
+      "shelf": [
+        "e1",
+        "e2",
+        "e3"
+      ],
+      "shelf_evicted": []
+    },
+    {
+      "round": 12,
+      "compacted": true,
+      "visible_evidence": [
+        "e1",
+        "e2",
+        "e3"
+      ],
+      "shelf": [
+        "e1",
+        "e2",
+        "e3"
+      ],
+      "shelf_evicted": []
+    },
+    {
+      "round": 13,
+      "compacted": true,
+      "visible_evidence": [
+        "e1",
+        "e2",
+        "e3"
+      ],
+      "shelf": [
+        "e1",
+        "e2",
+        "e3"
+      ],
+      "shelf_evicted": []
+    },
+    {
+      "round": 14,
+      "compacted": false,
+      "visible_evidence": [
+        "e1",
+        "e2",
+        "e3"
+      ],
+      "shelf": [
+        "e1",
+        "e2",
+        "e3"
+      ],
+      "shelf_evicted": []
+    },
+    {
+      "round": 15,
+      "compacted": true,
+      "visible_evidence": [
+        "e1",
+        "e2",
+        "e3"
+      ],
+      "shelf": [
+        "e1",
+        "e2",
+        "e3"
+      ],
+      "shelf_evicted": []
+    },
+    {
+      "round": 16,
+      "compacted": false,
+      "visible_evidence": [
+        "e1",
+        "e2",
+        "e3"
+      ],
+      "shelf": [
+        "e1",
+        "e2",
+        "e3"
+      ],
+      "shelf_evicted": []
+    }
+  ],
+  "delivered_refs": [
+    "e1",
+    "e2",
+    "e3"
+  ],
+  "submitted_refs": [],
+  "text_included": true,
+  "limitations": [
+    "Equivalence is compiler equality, not semantic identity or wasted-search proof",
+    "Raw-window visibility/selection is not entailment or complete evidence coverage",
+    "No live q26 replay or independent answer scoring is performed"
+  ]
+}

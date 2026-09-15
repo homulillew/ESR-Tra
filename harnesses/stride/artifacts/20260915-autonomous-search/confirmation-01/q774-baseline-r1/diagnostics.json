@@ -1,0 +1,923 @@
+{
+  "protocol": "stride-search-3",
+  "head": "258d87aeffc114a78cb09c803cf0740f7bdb5abe324470e2e9119ba33edd9609",
+  "outcome": "abstained",
+  "formal_correct": null,
+  "model_attempts": 16,
+  "backend_attempts": 33,
+  "queries": [
+    {
+      "round": 1,
+      "top_k": 8,
+      "equivalence_key": "2687d95417a436cc04e51d35ba1e0b5d28155c60283097b4bb465e76978bb811",
+      "cached": false,
+      "query_sha256": "c4795b054b5217f32a72469a6cec9e5d636b7629331b47db374ded5467b729a8",
+      "query": "TV series character married three times one surviving child",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"tv\" OR \"series\" OR \"character\" OR \"married\" OR \"three\" OR \"times\" OR \"one\" OR \"surviving\" OR \"child\"",
+        "terms": [
+          "tv",
+          "series",
+          "character",
+          "married",
+          "three",
+          "times",
+          "one",
+          "surviving",
+          "child"
+        ]
+      }
+    },
+    {
+      "round": 1,
+      "top_k": 8,
+      "equivalence_key": "db9c92e137c9e47af7f02b7e787085fbd17edc129939d8ef82eee0df6e630503",
+      "cached": false,
+      "query_sha256": "80fa4a72db414b6f9084b48aa4baa67b8121b8f6e742d5273248a6f445341c95",
+      "query": "actor real life relative plays family member series",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"actor\" OR \"real\" OR \"life\" OR \"relative\" OR \"plays\" OR \"family\" OR \"member\" OR \"series\"",
+        "terms": [
+          "actor",
+          "real",
+          "life",
+          "relative",
+          "plays",
+          "family",
+          "member",
+          "series"
+        ]
+      }
+    },
+    {
+      "round": 1,
+      "top_k": 8,
+      "equivalence_key": "86b3403bcfa7c0f3b810bff48836fd89313a598131e4582a085df77ca67d471f",
+      "cached": false,
+      "query_sha256": "9541b0787977bca8d9ac033083fec400563bd56b138b0661aa47306f71afb21a",
+      "query": "character married multiple times one child survives series",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"character\" OR \"married\" OR \"multiple\" OR \"times\" OR \"one\" OR \"child\" OR \"survives\" OR \"series\"",
+        "terms": [
+          "character",
+          "married",
+          "multiple",
+          "times",
+          "one",
+          "child",
+          "survives",
+          "series"
+        ]
+      }
+    },
+    {
+      "round": 2,
+      "top_k": 8,
+      "equivalence_key": "3a2fdd257927c9a196146dd40c0cdf5fce034eafec2b155b9e9cb6c42b48b706",
+      "cached": false,
+      "query_sha256": "6aafca5d57cd640d86c6889ad20b4a2f0d1ee9e82e9443898a2b2eba21e44972",
+      "query": "telenovela character married three times children died series",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"telenovela\" OR \"character\" OR \"married\" OR \"three\" OR \"times\" OR \"children\" OR \"died\" OR \"series\"",
+        "terms": [
+          "telenovela",
+          "character",
+          "married",
+          "three",
+          "times",
+          "children",
+          "died",
+          "series"
+        ]
+      }
+    },
+    {
+      "round": 2,
+      "top_k": 8,
+      "equivalence_key": "fcffa5a3105270198db978337db7c1dcaff3af7c1d5b5ba93949303bf842ac41",
+      "cached": false,
+      "query_sha256": "db81bafb94761ab75fdabf875cefb92af0ea131ad50a6558c112fd823e1f5263",
+      "query": "actor plays with real life spouse unrelated characters series",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"actor\" OR \"plays\" OR \"with\" OR \"real\" OR \"life\" OR \"spouse\" OR \"unrelated\" OR \"characters\" OR \"series\"",
+        "terms": [
+          "actor",
+          "plays",
+          "with",
+          "real",
+          "life",
+          "spouse",
+          "unrelated",
+          "characters",
+          "series"
+        ]
+      }
+    },
+    {
+      "round": 2,
+      "top_k": 8,
+      "equivalence_key": "e1c67377d5bb15153f069e264f7609789c509e19cbafebbe40a097426d6f625e",
+      "cached": false,
+      "query_sha256": "db834dd06883cfec7b6857ff55ae8a348f2387a5d351d2bd58954e0f9bf51adf",
+      "query": "character four marriages one surviving child drama series",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"character\" OR \"four\" OR \"marriages\" OR \"one\" OR \"surviving\" OR \"child\" OR \"drama\" OR \"series\"",
+        "terms": [
+          "character",
+          "four",
+          "marriages",
+          "one",
+          "surviving",
+          "child",
+          "drama",
+          "series"
+        ]
+      }
+    },
+    {
+      "round": 3,
+      "top_k": 8,
+      "equivalence_key": "a68c9b660b613901598b0711e6be8a8369161dccf5ac6d4444a1156e51bea24c",
+      "cached": false,
+      "query_sha256": "04595502d61d37c786622290fc23ea3044ad187ae687a905da2cb6c8220dde93",
+      "query": "actor real life brother sister plays unrelated character same series",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"actor\" OR \"real\" OR \"life\" OR \"brother\" OR \"sister\" OR \"plays\" OR \"unrelated\" OR \"character\" OR \"same\" OR \"series\"",
+        "terms": [
+          "actor",
+          "real",
+          "life",
+          "brother",
+          "sister",
+          "plays",
+          "unrelated",
+          "character",
+          "same",
+          "series"
+        ]
+      }
+    },
+    {
+      "round": 3,
+      "top_k": 8,
+      "equivalence_key": "91ce59ad4b86adae9f71ba43e62d3b59cc8fdd44ba7a612a2e4598a9f30c340f",
+      "cached": false,
+      "query_sha256": "517512e6177baee328f494066e0f6097a0c9723e829035147589cdc9e94748e7",
+      "query": "Turkish dizi actor real life relative plays different character",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"turkish\" OR \"dizi\" OR \"actor\" OR \"real\" OR \"life\" OR \"relative\" OR \"plays\" OR \"different\" OR \"character\"",
+        "terms": [
+          "turkish",
+          "dizi",
+          "actor",
+          "real",
+          "life",
+          "relative",
+          "plays",
+          "different",
+          "character"
+        ]
+      }
+    },
+    {
+      "round": 3,
+      "top_k": 8,
+      "equivalence_key": "acf2c13b788547fc24050ac59dd3e94a668c27300ebb6239e37ccd4c7f8aa568",
+      "cached": false,
+      "query_sha256": "120124d6b3b837b085408cde938d9079d28ba68d2bc6aed1835d9cc8902daec9",
+      "query": "series actor husband wife plays unrelated characters on screen",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"series\" OR \"actor\" OR \"husband\" OR \"wife\" OR \"plays\" OR \"unrelated\" OR \"characters\" OR \"on\" OR \"screen\"",
+        "terms": [
+          "series",
+          "actor",
+          "husband",
+          "wife",
+          "plays",
+          "unrelated",
+          "characters",
+          "on",
+          "screen"
+        ]
+      }
+    },
+    {
+      "round": 4,
+      "top_k": 8,
+      "equivalence_key": "73400bcd8d9e19cfd4eef34fd4da5a3959cf559bdec67049ed4fbf67543fc9c4",
+      "cached": false,
+      "query_sha256": "53186a57afbf288e230fce4a9fc0f18300015c69b6a5f88f74b2c31a0d2b658a",
+      "query": "Dirilis Ertugrul cast real life relatives married couples",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"dirilis\" OR \"ertugrul\" OR \"cast\" OR \"real\" OR \"life\" OR \"relatives\" OR \"married\" OR \"couples\"",
+        "terms": [
+          "dirilis",
+          "ertugrul",
+          "cast",
+          "real",
+          "life",
+          "relatives",
+          "married",
+          "couples"
+        ]
+      }
+    },
+    {
+      "round": 4,
+      "top_k": 8,
+      "equivalence_key": "1e319fd279faaa4c2a6d36f6be43533d8786035a44587bdd37cfa1f7b0288797",
+      "cached": false,
+      "query_sha256": "d83143cd6ade1dae061b09f6c60ce898f13caa87ca9cc863d553a189199d53ae",
+      "query": "Kurulus Osman actor real life spouse sibling plays different character",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"kurulus\" OR \"osman\" OR \"actor\" OR \"real\" OR \"life\" OR \"spouse\" OR \"sibling\" OR \"plays\" OR \"different\" OR \"character\"",
+        "terms": [
+          "kurulus",
+          "osman",
+          "actor",
+          "real",
+          "life",
+          "spouse",
+          "sibling",
+          "plays",
+          "different",
+          "character"
+        ]
+      }
+    },
+    {
+      "round": 4,
+      "top_k": 8,
+      "equivalence_key": "07ecf6a213992d2cfc1815bf8db3d9ff81796f1f48c63eda722401da9e27331e",
+      "cached": false,
+      "query_sha256": "a427895e9101be1ed254b8c70347af5139aa9658f3a0fc10ed32f731c9177a55",
+      "query": "Turkish series actor real life wife husband different role same show",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"turkish\" OR \"series\" OR \"actor\" OR \"real\" OR \"life\" OR \"wife\" OR \"husband\" OR \"different\" OR \"role\" OR \"same\" OR \"show\"",
+        "terms": [
+          "turkish",
+          "series",
+          "actor",
+          "real",
+          "life",
+          "wife",
+          "husband",
+          "different",
+          "role",
+          "same",
+          "show"
+        ]
+      }
+    },
+    {
+      "round": 5,
+      "top_k": 8,
+      "equivalence_key": "bafd62ca19a2fe0dbd2e64b846fa26c299d227ee0b3f3384a2021e67a70b59a8",
+      "cached": false,
+      "query_sha256": "7a90c7e848e625f66effdd31b1d148967e39c0ca78985e7c05ca6bdfb7bda7d0",
+      "query": "Muhtesem Yuzyil Suleyman wives marriages children died",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"muhtesem\" OR \"yuzyil\" OR \"suleyman\" OR \"wives\" OR \"marriages\" OR \"children\" OR \"died\"",
+        "terms": [
+          "muhtesem",
+          "yuzyil",
+          "suleyman",
+          "wives",
+          "marriages",
+          "children",
+          "died"
+        ]
+      }
+    },
+    {
+      "round": 5,
+      "top_k": 8,
+      "equivalence_key": "68bb7156033d8227b609d790bd4e9a7d92d8038b3a5d3f72dfbeef67a11abdcf",
+      "cached": false,
+      "query_sha256": "49c5ffc3f3ed740882fd83dc121c761a2dd7eae60b262b2eac32f67a493c02a3",
+      "query": "Magnificent Century cast real life couples married",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"magnificent\" OR \"century\" OR \"cast\" OR \"real\" OR \"life\" OR \"couples\" OR \"married\"",
+        "terms": [
+          "magnificent",
+          "century",
+          "cast",
+          "real",
+          "life",
+          "couples",
+          "married"
+        ]
+      }
+    },
+    {
+      "round": 5,
+      "top_k": 8,
+      "equivalence_key": "c01372619e2d54f2d1dd66a5cf887cfd05cd1bc4b83c732cfaa5069512e95c8e",
+      "cached": false,
+      "query_sha256": "c0a1e65c2193025ac47e04beb59e14d05336d35ec21e80b8de72d83082b5aed6",
+      "query": "Meryem Uzerli Halit Ergenc real life relationship",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"meryem\" OR \"uzerli\" OR \"halit\" OR \"ergenc\" OR \"real\" OR \"life\" OR \"relationship\"",
+        "terms": [
+          "meryem",
+          "uzerli",
+          "halit",
+          "ergenc",
+          "real",
+          "life",
+          "relationship"
+        ]
+      }
+    },
+    {
+      "round": 6,
+      "top_k": 8,
+      "equivalence_key": "acbd9814cfe8ff8cd89386ae6a9d818781142710afc847490e5a0842495d2f76",
+      "cached": false,
+      "query_sha256": "da3b5dc0e937a167e3fe7fea8901ff07dd3009ba96e6a7681d5abfa642ad0ab4",
+      "query": "Muhtesem Yuzyil Wikipedia Suleyman children sons died",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"muhtesem\" OR \"yuzyil\" OR \"wikipedia\" OR \"suleyman\" OR \"children\" OR \"sons\" OR \"died\"",
+        "terms": [
+          "muhtesem",
+          "yuzyil",
+          "wikipedia",
+          "suleyman",
+          "children",
+          "sons",
+          "died"
+        ]
+      }
+    },
+    {
+      "round": 6,
+      "top_k": 8,
+      "equivalence_key": "e0846dd39f18bb3b3a5e7fce29eb207d690b322cf8579c19544269a4e0cb182c",
+      "cached": false,
+      "query_sha256": "689540cbe5ae9c2d86d947f11c7adb404c8be611660fb6bd7004cddf64625f5a",
+      "query": "Magnificent Century Halit Ergenc height wife Berguzar Korel",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"magnificent\" OR \"century\" OR \"halit\" OR \"ergenc\" OR \"height\" OR \"wife\" OR \"berguzar\" OR \"korel\"",
+        "terms": [
+          "magnificent",
+          "century",
+          "halit",
+          "ergenc",
+          "height",
+          "wife",
+          "berguzar",
+          "korel"
+        ]
+      }
+    },
+    {
+      "round": 6,
+      "top_k": 8,
+      "equivalence_key": "7d793e16db6224e120c187808deb4e8d7e126b5ef0bfad1da01d74658c76cd65",
+      "cached": false,
+      "query_sha256": "b98ce229c9b29ac0d360780033ae62b204c55db81d581607ff7b64084ae9b82f",
+      "query": "Berguzar Korel Halit Ergenc married real life couple Muhtesem Yuzyil",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"berguzar\" OR \"korel\" OR \"halit\" OR \"ergenc\" OR \"married\" OR \"real\" OR \"life\" OR \"couple\" OR \"muhtesem\" OR \"yuzyil\"",
+        "terms": [
+          "berguzar",
+          "korel",
+          "halit",
+          "ergenc",
+          "married",
+          "real",
+          "life",
+          "couple",
+          "muhtesem",
+          "yuzyil"
+        ]
+      }
+    },
+    {
+      "round": 7,
+      "top_k": 8,
+      "equivalence_key": "4b1a053489b29d48536a92735f3f9fd9a56bd74aef4d5cdbb34fae287d6c63c6",
+      "cached": false,
+      "query_sha256": "45810a1ff345757f91925f0f6ca8a0cd73bf821c91a4a9ab34fcabac9c358145",
+      "query": "Muhtesem Yuzyil Magnificent Century Wikipedia cast characters",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"muhtesem\" OR \"yuzyil\" OR \"magnificent\" OR \"century\" OR \"wikipedia\" OR \"cast\" OR \"characters\"",
+        "terms": [
+          "muhtesem",
+          "yuzyil",
+          "magnificent",
+          "century",
+          "wikipedia",
+          "cast",
+          "characters"
+        ]
+      }
+    },
+    {
+      "round": 7,
+      "top_k": 8,
+      "equivalence_key": "7f08d0afe7235026df6b1ed24e83fdf3b460199d517f540959bf8c2ce4444158",
+      "cached": false,
+      "query_sha256": "88a293c1f24e98cccb03e96cede8d7fa4b1b497df1130dc63a91dec22d76811a",
+      "query": "Halit Ergenc height cm",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"halit\" OR \"ergenc\" OR \"height\" OR \"cm\"",
+        "terms": [
+          "halit",
+          "ergenc",
+          "height",
+          "cm"
+        ]
+      }
+    },
+    {
+      "round": 7,
+      "top_k": 8,
+      "equivalence_key": "b2e61033dc05e5410fe9438707851fbdd81edc7441d2c6c426ce3e10d195db39",
+      "cached": false,
+      "query_sha256": "dbfde44d4f38f40f80f7f4b6c4f7d95e49c786a525fc274bda0e5b28ed78068c",
+      "query": "Berguzar Korel Halit Ergenc married couple Magnificent Century unrelated characters",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"berguzar\" OR \"korel\" OR \"halit\" OR \"ergenc\" OR \"married\" OR \"couple\" OR \"magnificent\" OR \"century\" OR \"unrelated\" OR \"characters\"",
+        "terms": [
+          "berguzar",
+          "korel",
+          "halit",
+          "ergenc",
+          "married",
+          "couple",
+          "magnificent",
+          "century",
+          "unrelated",
+          "characters"
+        ]
+      }
+    },
+    {
+      "round": 8,
+      "top_k": 8,
+      "equivalence_key": "46f8c52938dffa174b27679d861c6d48cde97ba6a3e47d2b7af816da35c6e20f",
+      "cached": false,
+      "query_sha256": "a7f66bba58bb5f438288c3e5611fb8e601cfe57a8f21b3745a982a93a0b0e3ac",
+      "query": "Muhtesem Yuzyil Wikipedia",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"muhtesem\" OR \"yuzyil\" OR \"wikipedia\"",
+        "terms": [
+          "muhtesem",
+          "yuzyil",
+          "wikipedia"
+        ]
+      }
+    },
+    {
+      "round": 8,
+      "top_k": 8,
+      "equivalence_key": "d63ecbdb45405d1b2cf1eadbf3a6043bb38ea933a9000cde540891e45d883aec",
+      "cached": false,
+      "query_sha256": "693920f5225b8a805597bf163de90c2d06d86f8d3907078a9a1ac957b1261592",
+      "query": "Magnificent Century TV series Wikipedia cast",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"magnificent\" OR \"century\" OR \"tv\" OR \"series\" OR \"wikipedia\" OR \"cast\"",
+        "terms": [
+          "magnificent",
+          "century",
+          "tv",
+          "series",
+          "wikipedia",
+          "cast"
+        ]
+      }
+    },
+    {
+      "round": 8,
+      "top_k": 8,
+      "equivalence_key": "ee94b3c76fc0587dfeb6925848bf68e2619cfd40894bca6b6a4a0a8488abf483",
+      "cached": false,
+      "query_sha256": "a8cf1761160feca471effbc712f4171806396504996208b63ca7b7e4808fd14b",
+      "query": "Suleiman Hurrem Mahidevran wives children",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"suleiman\" OR \"hurrem\" OR \"mahidevran\" OR \"wives\" OR \"children\"",
+        "terms": [
+          "suleiman",
+          "hurrem",
+          "mahidevran",
+          "wives",
+          "children"
+        ]
+      }
+    },
+    {
+      "round": 9,
+      "top_k": 8,
+      "equivalence_key": "a7291b7928108f4f5d92c79a340fcf9f5cf02be1a71e6df4a4733dd93ca0e951",
+      "cached": false,
+      "query_sha256": "3be20c9186efa783ccc715853358f7e5ec87b3f3f3b8b2a99d5ab4bf4d0e52e5",
+      "query": "Muhtesem Yuzyil Magnificent Century Wikipedia",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"muhtesem\" OR \"yuzyil\" OR \"magnificent\" OR \"century\" OR \"wikipedia\"",
+        "terms": [
+          "muhtesem",
+          "yuzyil",
+          "magnificent",
+          "century",
+          "wikipedia"
+        ]
+      }
+    },
+    {
+      "round": 9,
+      "top_k": 8,
+      "equivalence_key": "87af1b6ec76fb13efa2bfc3e33f4a7bbe595ec3390f0a40f7d714d9a1611ebde",
+      "cached": false,
+      "query_sha256": "e244945a3b8211bcf5ef6c6428ed77e6b88c813361d7b3ad19012f22a490210c",
+      "query": "Halit Ergenc Wikipedia height",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"halit\" OR \"ergenc\" OR \"wikipedia\" OR \"height\"",
+        "terms": [
+          "halit",
+          "ergenc",
+          "wikipedia",
+          "height"
+        ]
+      }
+    },
+    {
+      "round": 9,
+      "top_k": 8,
+      "equivalence_key": "79fb6e6ab893a8320a8ffca4ec4b34be15d7ca3d03c73b32c164e48b2c8d9f73",
+      "cached": false,
+      "query_sha256": "f04611914cc6501b5093af027ba1138f7cdc0d3e0190d13b7d38e7f0f7b4a525",
+      "query": "Berguzar Korel Wikipedia",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"berguzar\" OR \"korel\" OR \"wikipedia\"",
+        "terms": [
+          "berguzar",
+          "korel",
+          "wikipedia"
+        ]
+      }
+    },
+    {
+      "round": 10,
+      "top_k": 8,
+      "equivalence_key": "23c8a4617d911388529cf742020ae3042f9b2ec136aa2abb6acd32293c646d45",
+      "cached": false,
+      "query_sha256": "663f430904049c7bef4d086473479776f08fc6036d9dab42f9f23a01b3d89fdf",
+      "query": "Muhteşem Yüzyıl Wikipedia",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"muhteşem\" OR \"yüzyıl\" OR \"wikipedia\"",
+        "terms": [
+          "muhteşem",
+          "yüzyıl",
+          "wikipedia"
+        ]
+      }
+    },
+    {
+      "round": 10,
+      "top_k": 8,
+      "equivalence_key": "46e1a378d34c8ccb7d689197cb2211623dec0f760ddd4324f4471d2da3c16cf8",
+      "cached": false,
+      "query_sha256": "24f5dd6b5c204cc577dd41f7fc6aa550bdfda12e41193f3dd2adf488f02c1b04",
+      "query": "Halit Ergenç Wikipedia",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"halit\" OR \"ergenç\" OR \"wikipedia\"",
+        "terms": [
+          "halit",
+          "ergenç",
+          "wikipedia"
+        ]
+      }
+    },
+    {
+      "round": 10,
+      "top_k": 8,
+      "equivalence_key": "ea7bc4b43bb96095e1663fffb7fa2323354ae9abbc933dd03954247a3238b730",
+      "cached": false,
+      "query_sha256": "081ad359c6888ca36d0b747ff55b935e094f7a67d5b6e424f3fdc6895161a0b4",
+      "query": "Bergüzar Korel Wikipedia",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"bergüzar\" OR \"korel\" OR \"wikipedia\"",
+        "terms": [
+          "bergüzar",
+          "korel",
+          "wikipedia"
+        ]
+      }
+    },
+    {
+      "round": 11,
+      "top_k": 8,
+      "equivalence_key": "e17bc41cea8773bd1e28569aed67b9a436dae883cb3953b1c1462b7fe24632af",
+      "cached": false,
+      "query_sha256": "a43da9910895186a34bb35bd1270a9d9575d57f8975e576462da71c2261b5821",
+      "query": "Muhteşem Yüzyıl TV series Wikipedia",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"muhteşem\" OR \"yüzyıl\" OR \"tv\" OR \"series\" OR \"wikipedia\"",
+        "terms": [
+          "muhteşem",
+          "yüzyıl",
+          "tv",
+          "series",
+          "wikipedia"
+        ]
+      }
+    },
+    {
+      "round": 11,
+      "top_k": 8,
+      "equivalence_key": "26f4b23d8347681913cd43b1a3e9ea4235cb08e101d41c9017cf1901e9c87d54",
+      "cached": false,
+      "query_sha256": "6bd70bdbb711335f43fd3054cc5b567aae2d6c61219e55e3f84f2cfe1df33f57",
+      "query": "Magnificent Century Turkish television series Wikipedia",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"magnificent\" OR \"century\" OR \"turkish\" OR \"television\" OR \"series\" OR \"wikipedia\"",
+        "terms": [
+          "magnificent",
+          "century",
+          "turkish",
+          "television",
+          "series",
+          "wikipedia"
+        ]
+      }
+    },
+    {
+      "round": 11,
+      "top_k": 8,
+      "equivalence_key": "d556bcb860030a609e7c1a7e0afc1e9b447009813da19589ba6612ab746708c7",
+      "cached": false,
+      "query_sha256": "0388db365f7cfac38a7a62011d48110f73ad78a9b8d6064bcc7b3c581b3ecd42",
+      "query": "Muhtesem Yuzyil cast Halit Ergenc Suleiman",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"muhtesem\" OR \"yuzyil\" OR \"cast\" OR \"halit\" OR \"ergenc\" OR \"suleiman\"",
+        "terms": [
+          "muhtesem",
+          "yuzyil",
+          "cast",
+          "halit",
+          "ergenc",
+          "suleiman"
+        ]
+      }
+    },
+    {
+      "round": 12,
+      "top_k": 8,
+      "equivalence_key": "23c8a4617d911388529cf742020ae3042f9b2ec136aa2abb6acd32293c646d45",
+      "cached": true,
+      "query_sha256": "663f430904049c7bef4d086473479776f08fc6036d9dab42f9f23a01b3d89fdf",
+      "query": "Muhteşem Yüzyıl Wikipedia",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"muhteşem\" OR \"yüzyıl\" OR \"wikipedia\"",
+        "terms": [
+          "muhteşem",
+          "yüzyıl",
+          "wikipedia"
+        ]
+      }
+    },
+    {
+      "round": 12,
+      "top_k": 8,
+      "equivalence_key": "46e1a378d34c8ccb7d689197cb2211623dec0f760ddd4324f4471d2da3c16cf8",
+      "cached": true,
+      "query_sha256": "24f5dd6b5c204cc577dd41f7fc6aa550bdfda12e41193f3dd2adf488f02c1b04",
+      "query": "Halit Ergenç Wikipedia",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"halit\" OR \"ergenç\" OR \"wikipedia\"",
+        "terms": [
+          "halit",
+          "ergenç",
+          "wikipedia"
+        ]
+      }
+    },
+    {
+      "round": 12,
+      "top_k": 8,
+      "equivalence_key": "ea7bc4b43bb96095e1663fffb7fa2323354ae9abbc933dd03954247a3238b730",
+      "cached": true,
+      "query_sha256": "081ad359c6888ca36d0b747ff55b935e094f7a67d5b6e424f3fdc6895161a0b4",
+      "query": "Bergüzar Korel Wikipedia",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"bergüzar\" OR \"korel\" OR \"wikipedia\"",
+        "terms": [
+          "bergüzar",
+          "korel",
+          "wikipedia"
+        ]
+      }
+    },
+    {
+      "round": 13,
+      "top_k": 8,
+      "equivalence_key": "23c8a4617d911388529cf742020ae3042f9b2ec136aa2abb6acd32293c646d45",
+      "cached": true,
+      "query_sha256": "663f430904049c7bef4d086473479776f08fc6036d9dab42f9f23a01b3d89fdf",
+      "query": "Muhteşem Yüzyıl Wikipedia",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"muhteşem\" OR \"yüzyıl\" OR \"wikipedia\"",
+        "terms": [
+          "muhteşem",
+          "yüzyıl",
+          "wikipedia"
+        ]
+      }
+    },
+    {
+      "round": 13,
+      "top_k": 8,
+      "equivalence_key": "46e1a378d34c8ccb7d689197cb2211623dec0f760ddd4324f4471d2da3c16cf8",
+      "cached": true,
+      "query_sha256": "24f5dd6b5c204cc577dd41f7fc6aa550bdfda12e41193f3dd2adf488f02c1b04",
+      "query": "Halit Ergenç Wikipedia",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"halit\" OR \"ergenç\" OR \"wikipedia\"",
+        "terms": [
+          "halit",
+          "ergenç",
+          "wikipedia"
+        ]
+      }
+    },
+    {
+      "round": 13,
+      "top_k": 8,
+      "equivalence_key": "ea7bc4b43bb96095e1663fffb7fa2323354ae9abbc933dd03954247a3238b730",
+      "cached": true,
+      "query_sha256": "081ad359c6888ca36d0b747ff55b935e094f7a67d5b6e424f3fdc6895161a0b4",
+      "query": "Bergüzar Korel Wikipedia",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"bergüzar\" OR \"korel\" OR \"wikipedia\"",
+        "terms": [
+          "bergüzar",
+          "korel",
+          "wikipedia"
+        ]
+      }
+    }
+  ],
+  "equivalent_query_repeats": 6,
+  "views": [
+    {
+      "round": 1,
+      "compacted": false,
+      "visible_evidence": [],
+      "shelf": [],
+      "shelf_evicted": []
+    },
+    {
+      "round": 2,
+      "compacted": false,
+      "visible_evidence": [],
+      "shelf": [],
+      "shelf_evicted": []
+    },
+    {
+      "round": 3,
+      "compacted": false,
+      "visible_evidence": [],
+      "shelf": [],
+      "shelf_evicted": []
+    },
+    {
+      "round": 4,
+      "compacted": false,
+      "visible_evidence": [],
+      "shelf": [],
+      "shelf_evicted": []
+    },
+    {
+      "round": 5,
+      "compacted": false,
+      "visible_evidence": [],
+      "shelf": [],
+      "shelf_evicted": []
+    },
+    {
+      "round": 6,
+      "compacted": true,
+      "visible_evidence": [],
+      "shelf": [],
+      "shelf_evicted": []
+    },
+    {
+      "round": 7,
+      "compacted": true,
+      "visible_evidence": [],
+      "shelf": [],
+      "shelf_evicted": []
+    },
+    {
+      "round": 8,
+      "compacted": true,
+      "visible_evidence": [],
+      "shelf": [],
+      "shelf_evicted": []
+    },
+    {
+      "round": 9,
+      "compacted": true,
+      "visible_evidence": [],
+      "shelf": [],
+      "shelf_evicted": []
+    },
+    {
+      "round": 10,
+      "compacted": true,
+      "visible_evidence": [],
+      "shelf": [],
+      "shelf_evicted": []
+    },
+    {
+      "round": 11,
+      "compacted": true,
+      "visible_evidence": [],
+      "shelf": [],
+      "shelf_evicted": []
+    },
+    {
+      "round": 12,
+      "compacted": true,
+      "visible_evidence": [],
+      "shelf": [],
+      "shelf_evicted": []
+    },
+    {
+      "round": 13,
+      "compacted": true,
+      "visible_evidence": [],
+      "shelf": [],
+      "shelf_evicted": []
+    },
+    {
+      "round": 14,
+      "compacted": false,
+      "visible_evidence": [],
+      "shelf": [],
+      "shelf_evicted": []
+    },
+    {
+      "round": 15,
+      "compacted": false,
+      "visible_evidence": [],
+      "shelf": [],
+      "shelf_evicted": []
+    },
+    {
+      "round": 16,
+      "compacted": false,
+      "visible_evidence": [],
+      "shelf": [],
+      "shelf_evicted": []
+    }
+  ],
+  "delivered_refs": [],
+  "submitted_refs": [],
+  "text_included": true,
+  "limitations": [
+    "Equivalence is compiler equality, not semantic identity or wasted-search proof",
+    "Raw-window visibility/selection is not entailment or complete evidence coverage",
+    "No live q26 replay or independent answer scoring is performed"
+  ]
+}
