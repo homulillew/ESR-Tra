@@ -1,0 +1,38 @@
+{
+  "runs": [
+    {
+      "run": "01",
+      "tests": 52,
+      "errors": 15,
+      "failures": 0,
+      "skipped": 0,
+      "seconds": 16.192,
+      "raw_log_sha256": "992b7821249e1e0b9927302e24c82dfdd47df181d239122c4c5f5c4d59f9dd9f",
+      "public_log_sha256": "4d34650ab2b39d52d7fb16ef451bbafae1fb46636fa528e10946e292868da30d",
+      "public_log_is_excerpt": true
+    },
+    {
+      "run": "02",
+      "tests": 52,
+      "errors": 0,
+      "failures": 0,
+      "skipped": 0,
+      "seconds": 13.626,
+      "raw_log_sha256": "c23b18153a2abd3b13f9a9d321104ad201cc359dfe6b8cfd47880a664d13818f",
+      "public_log_sha256": "b29f648122a25f2af0592b46897f87373aac06ba3acaab44cb50ea9f5fb9ae0d"
+    }
+  ],
+  "final_passed": 52,
+  "final_new_executor_tests": 11,
+  "real_model_requests": 0,
+  "paid_judge_requests": 0,
+  "initial_failure": "Default pytest temp directory permission denied before 15 tmp_path fixtures. Used a new workspace-local --basetemp; no test assertions weakened.",
+  "checks": {
+    "legality_and_no_rewrite": "existing tests rerun",
+    "real_validation_error_and_feedback": "existing tests rerun",
+    "prefix_and_two_message_whitelist": "existing tests rerun plus new preparation check",
+    "switch_accounting_capture_caps_failures": "new local fixtures passed"
+  },
+  "historical_312_not_claimed_as_current": true,
+  "scripted_outputs_are_not_effect_evidence": true
+}

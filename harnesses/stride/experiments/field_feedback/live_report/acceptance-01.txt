@@ -1,0 +1,54 @@
+.....................................EEEEEEEEEEEEEEE                     [100%]
+=================================== ERRORS ====================================
+____ ERROR at setup of test_prefix_and_exact_r5_only_error_messages_differ ____
+
+cls = <class '_pytest.runner.CallInfo'>
+func = <function call_and_report.<locals>.<lambda> at 0x000001BC92B30400>
+when = 'setup'
+reraise = (<class '_pytest.outcomes.Exit'>, <class 'KeyboardInterrupt'>)
+
+    @classmethod
+    def from_call(
+        cls,
+        func: Callable[[], TResult],
+        when: Literal["collect", "setup", "call", "teardown"],
+        reraise: type[BaseException] | tuple[type[BaseException], ...] | None = None,
+    ) -> CallInfo[TResult]:
+        """Call func, wrapping the result in a CallInfo.
+    
+        :param func:
+            The function to call. Called without arguments.
+        :type func: Callable[[], _pytest.runner.TResult]
+        :param when:
+            The phase in which the function is called.
+        :param reraise:
+            Exception or exceptions that shall propagate if raised by the
+            function, instead of being wrapped in the CallInfo.
+        """
+        excinfo = None
+        instant = timing.Instant()
+        try:
+>           result: TResult | None = func()
+                                     ^^^^^^
+
+..\ESR-Tra-stride-a3-hard12\runs\hard12-20260914T095418Z\venv\Lib\site-packages\_pytest\runner.py:361: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+[Repeated fixture setup tracebacks omitted; full original log retained locally and SHA-256 recorded.]
+..\ESR-Tra-stride-a3-hard12\runs\hard12-20260914T095418Z\venv\Lib\site-packages\_pytest\pathlib.py:175: PermissionError
+=========================== short test summary info ===========================
+ERROR harnesses\stride\tests\test_field_feedback_prefix.py::test_prefix_and_exact_r5_only_error_messages_differ
+ERROR harnesses\stride\tests\test_field_feedback_prefix.py::test_replay_cannot_use_suffix_or_unknown_backend
+ERROR harnesses\stride\tests\test_field_feedback_prefix.py::test_difference_whitelist_rejects_extra_instruction
+ERROR harnesses\stride\tests\test_field_feedback_prefix.py::test_gate_never_treats_cli_flag_as_readiness
+ERROR harnesses\stride\tests\test_field_feedback_live.py::test_real_adapter_switch_capture_and_literal_submission[legacy]
+ERROR harnesses\stride\tests\test_field_feedback_live.py::test_real_adapter_switch_capture_and_literal_submission[field]
+ERROR harnesses\stride\tests\test_field_feedback_live.py::test_four_numeric_errors_external_cap_and_feedback
+ERROR harnesses\stride\tests\test_field_feedback_live.py::test_new_search_goes_to_replacement_backend
+ERROR harnesses\stride\tests\test_field_feedback_live.py::test_failure_charged_and_stops_queue[bad0-model_identity_changed]
+ERROR harnesses\stride\tests\test_field_feedback_live.py::test_failure_charged_and_stops_queue[bad1-incomplete_response]
+ERROR harnesses\stride\tests\test_field_feedback_live.py::test_failure_charged_and_stops_queue[bad2-http_error]
+ERROR harnesses\stride\tests\test_field_feedback_live.py::test_failure_charged_and_stops_queue[bad3-transport_error]
+ERROR harnesses\stride\tests\test_field_feedback_live.py::test_real_local_clock_stops_without_harness_terminal
+ERROR harnesses\stride\tests\test_field_feedback_live.py::test_budget_never_creates_or_resets
+ERROR harnesses\stride\tests\test_field_feedback_live.py::test_pre_send_integrity_gate_prevents_transport_and_charge
+37 passed, 15 errors in 16.45s
