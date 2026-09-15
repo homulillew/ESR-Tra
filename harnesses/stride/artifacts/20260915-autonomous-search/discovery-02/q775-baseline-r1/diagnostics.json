@@ -1,0 +1,1108 @@
+{
+  "protocol": "stride-search-3",
+  "head": "14f1c1434fbba323bece47bcfc6fb956631309eb109ef98f9936ba987cdfb97d",
+  "outcome": "stalled_no_submission",
+  "formal_correct": null,
+  "model_attempts": 14,
+  "backend_attempts": 40,
+  "queries": [
+    {
+      "round": 1,
+      "top_k": 10,
+      "equivalence_key": "8560df1d3cfa53163e359c12f96249e068e77119c01b3ce0f088f77fc7753a23",
+      "cached": false,
+      "query_sha256": "0d8b1b7322d2fdb33d803e1cd9184dd5e88f130a4b07a7e260a9b7bc1e23ec21",
+      "query": "literary award created founded 2000s",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"literary\" OR \"award\" OR \"created\" OR \"founded\" OR \"2000s\"",
+        "terms": [
+          "literary",
+          "award",
+          "created",
+          "founded",
+          "2000s"
+        ]
+      }
+    },
+    {
+      "round": 1,
+      "top_k": 10,
+      "equivalence_key": "4acdac22bf3a89843dea0f48d1e798fa2bfc21d1b9e7d2375bac10ed3bb29945",
+      "cached": false,
+      "query_sha256": "2bd09914b21004956215c5749fd1f9165d3f4cf99c8621746af83462ffeaea75",
+      "query": "book award established 2000s translated twenty five languages",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"book\" OR \"award\" OR \"established\" OR \"2000s\" OR \"translated\" OR \"twenty\" OR \"five\" OR \"languages\"",
+        "terms": [
+          "book",
+          "award",
+          "established",
+          "2000s",
+          "translated",
+          "twenty",
+          "five",
+          "languages"
+        ]
+      }
+    },
+    {
+      "round": 1,
+      "top_k": 10,
+      "equivalence_key": "572460ea29f677388d056843a7fda2471da74215d3e4916be9ea8494790aeb7c",
+      "cached": false,
+      "query_sha256": "8cf299e066d2b39af5520954fcb4be1895a530f56f3eb7bae38697b70c8eb66d",
+      "query": "international book award founded 2000s",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"international\" OR \"book\" OR \"award\" OR \"founded\" OR \"2000s\"",
+        "terms": [
+          "international",
+          "book",
+          "award",
+          "founded",
+          "2000s"
+        ]
+      }
+    },
+    {
+      "round": 2,
+      "top_k": 10,
+      "equivalence_key": "93639367292d7cd58439de6074813eee1e4410e75b16a7cd01a0cd52c96a1b50",
+      "cached": false,
+      "query_sha256": "0389428753b117eb35fcbf48200cb1ed0fd41fdd9fb0c97be3bb4b03ea0628f7",
+      "query": "International Booker Prize 2016 winner The Vegetarian Han Kang",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"international\" OR \"booker\" OR \"prize\" OR \"2016\" OR \"winner\" OR \"the\" OR \"vegetarian\" OR \"han\" OR \"kang\"",
+        "terms": [
+          "international",
+          "booker",
+          "prize",
+          "2016",
+          "winner",
+          "the",
+          "vegetarian",
+          "han",
+          "kang"
+        ]
+      }
+    },
+    {
+      "round": 2,
+      "top_k": 10,
+      "equivalence_key": "b6b92d23056f719cf2910f605a049e1e7ee4c45e0705e674109e03ed50fb29c8",
+      "cached": false,
+      "query_sha256": "068fafd9a4f5ce1ffd8a4716b625447cb2223e2fa909215d84ba09c2eb2cb1b2",
+      "query": "book translated over 25 languages award contender 2010s",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"book\" OR \"translated\" OR \"over\" OR \"25\" OR \"languages\" OR \"award\" OR \"contender\" OR \"2010s\"",
+        "terms": [
+          "book",
+          "translated",
+          "over",
+          "25",
+          "languages",
+          "award",
+          "contender",
+          "2010s"
+        ]
+      }
+    },
+    {
+      "round": 2,
+      "top_k": 10,
+      "equivalence_key": "03cc9217c60c7e3702b339a2beac8e93ec59ea5c3890ed1bc6d0fbbbb4b31092",
+      "cached": false,
+      "query_sha256": "9a9e376c04d709981643bc8813fba260ecc3051b5e2a9d9ccdb58d468d79f0d7",
+      "query": "The Vegetarian Han Kang translated languages award",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"the\" OR \"vegetarian\" OR \"han\" OR \"kang\" OR \"translated\" OR \"languages\" OR \"award\"",
+        "terms": [
+          "the",
+          "vegetarian",
+          "han",
+          "kang",
+          "translated",
+          "languages",
+          "award"
+        ]
+      }
+    },
+    {
+      "round": 2,
+      "top_k": 10,
+      "equivalence_key": "a3c0b7191a918d20337ffb94539a0b43250e21d1ea16a4056c04ad0da007a818",
+      "cached": false,
+      "query_sha256": "11805272d177da40eff89dbc11830d6853d0dbe7bd563296f6303ccd23d2b4ca",
+      "query": "Strega Prize winner born city author grew up",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"strega\" OR \"prize\" OR \"winner\" OR \"born\" OR \"city\" OR \"author\" OR \"grew\" OR \"up\"",
+        "terms": [
+          "strega",
+          "prize",
+          "winner",
+          "born",
+          "city",
+          "author",
+          "grew",
+          "up"
+        ]
+      }
+    },
+    {
+      "round": 2,
+      "top_k": 10,
+      "equivalence_key": "b06986845a1dbc2bdb1278aeec5588f43dffd749bbeb9d3df2d79e6c79817084",
+      "cached": false,
+      "query_sha256": "91bf01341b6cafd0836fa7d6c78cebae46e90a4f692009ca0eb835e90e1b2153",
+      "query": "PEN/Nabokov Award translated 25 languages",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"pen\" OR \"nabokov\" OR \"award\" OR \"translated\" OR \"25\" OR \"languages\"",
+        "terms": [
+          "pen",
+          "nabokov",
+          "award",
+          "translated",
+          "25",
+          "languages"
+        ]
+      }
+    },
+    {
+      "round": 2,
+      "top_k": 10,
+      "equivalence_key": "0a3c3712de588a061e6ff46967eb1f0280a5b7e5cc3f2e11b9b7f54a1a04a398",
+      "cached": false,
+      "query_sha256": "113273f589af36bf98c132769448177564cf720a7c7ac80ff3d46ba845f05170",
+      "query": "Jan Michalski Prize translated 25 languages",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"jan\" OR \"michalski\" OR \"prize\" OR \"translated\" OR \"25\" OR \"languages\"",
+        "terms": [
+          "jan",
+          "michalski",
+          "prize",
+          "translated",
+          "25",
+          "languages"
+        ]
+      }
+    },
+    {
+      "round": 3,
+      "top_k": 10,
+      "equivalence_key": "f50a3c78bee63faef01b452df379203ad6c26270301e6e515a313f77610d78ab",
+      "cached": false,
+      "query_sha256": "8fa6249c67b75fb1a89bfe14eb789f2a62aab0df0cb6cd2b7140ecfc8aa2c44c",
+      "query": "Man Booker International Prize created 2004 history",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"man\" OR \"booker\" OR \"international\" OR \"prize\" OR \"created\" OR \"2004\" OR \"history\"",
+        "terms": [
+          "man",
+          "booker",
+          "international",
+          "prize",
+          "created",
+          "2004",
+          "history"
+        ]
+      }
+    },
+    {
+      "round": 3,
+      "top_k": 10,
+      "equivalence_key": "b790ef10182cb716d2185a6fdf8bf0b02c0d7b9d86fae4a0721daab023db3427",
+      "cached": false,
+      "query_sha256": "9b6bd0cbec5c9ffd3abd45a420a409ceece975847b7a593ab8cb35f0fbe42cc7",
+      "query": "International Dublin Literary Award IMPAC founded 1996",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"international\" OR \"dublin\" OR \"literary\" OR \"award\" OR \"impac\" OR \"founded\" OR \"1996\"",
+        "terms": [
+          "international",
+          "dublin",
+          "literary",
+          "award",
+          "impac",
+          "founded",
+          "1996"
+        ]
+      }
+    },
+    {
+      "round": 3,
+      "top_k": 10,
+      "equivalence_key": "2979217023926bb0a52ef71b5c7ecd5576d9692d60642f2d68a61b0a0ba7cc04",
+      "cached": false,
+      "query_sha256": "4dc26e5d326f8f823b4735e78235388cf1246ae24137221b71628483b1fdac5e",
+      "query": "book translated 25 languages shortlisted International Booker Prize 2016 2017",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"book\" OR \"translated\" OR \"25\" OR \"languages\" OR \"shortlisted\" OR \"international\" OR \"booker\" OR \"prize\" OR \"2016\" OR \"2017\"",
+        "terms": [
+          "book",
+          "translated",
+          "25",
+          "languages",
+          "shortlisted",
+          "international",
+          "booker",
+          "prize",
+          "2016",
+          "2017"
+        ]
+      }
+    },
+    {
+      "round": 3,
+      "top_k": 10,
+      "equivalence_key": "8ee50c2e1206f0bc5d8dac6593e2c08cef74d817f63844937fb11272904d3862",
+      "cached": false,
+      "query_sha256": "3e31d984cb6349f16b89599fb39115f25bcac936df17809eb85a55c641ae33bf",
+      "query": "The Vegetarian Han Kang translated 25 languages",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"the\" OR \"vegetarian\" OR \"han\" OR \"kang\" OR \"translated\" OR \"25\" OR \"languages\"",
+        "terms": [
+          "the",
+          "vegetarian",
+          "han",
+          "kang",
+          "translated",
+          "25",
+          "languages"
+        ]
+      }
+    },
+    {
+      "round": 3,
+      "top_k": 10,
+      "equivalence_key": "d6c8a95bb7fec687e7803eca0efa46ef65f8fdad9a67de0a95b2e67ffe16c8d2",
+      "cached": false,
+      "query_sha256": "511a37a9a748f9b22012b546e610b42d9ac596f693321bd08a3eff2c18f96ad4",
+      "query": "Han Kang born Gwangju grew up Seoul",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"han\" OR \"kang\" OR \"born\" OR \"gwangju\" OR \"grew\" OR \"up\" OR \"seoul\"",
+        "terms": [
+          "han",
+          "kang",
+          "born",
+          "gwangju",
+          "grew",
+          "up",
+          "seoul"
+        ]
+      }
+    },
+    {
+      "round": 3,
+      "top_k": 10,
+      "equivalence_key": "db280aa389e0665c62e6ea215040b17dfe0936d83c0b98e7ed37e87823ea90d6",
+      "cached": false,
+      "query_sha256": "b11bec3c449c27b38f4d9fc5a07976c44068beacfee8a50fc721a752dbd52d46",
+      "query": "Han Kang biography birthplace",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"han\" OR \"kang\" OR \"biography\" OR \"birthplace\"",
+        "terms": [
+          "han",
+          "kang",
+          "biography",
+          "birthplace"
+        ]
+      }
+    },
+    {
+      "round": 4,
+      "top_k": 10,
+      "equivalence_key": "26acbb629b763a224eb9d8067c8238b7e45557244fcfdf64535f5663324e0d56",
+      "cached": false,
+      "query_sha256": "235c4c3ac480b8f429cd753313408e0acab183a504b1b8b2d7d7546797aa6eb4",
+      "query": "International Booker Prize winners 2010s list",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"international\" OR \"booker\" OR \"prize\" OR \"winners\" OR \"2010s\" OR \"list\"",
+        "terms": [
+          "international",
+          "booker",
+          "prize",
+          "winners",
+          "2010s",
+          "list"
+        ]
+      }
+    },
+    {
+      "round": 4,
+      "top_k": 10,
+      "equivalence_key": "e43220e8bdadd25ac4ad81147ff744f9ca598c6cdb02d60164012efc96922acd",
+      "cached": false,
+      "query_sha256": "6f85f24e30175df877364e9d40e044d5d95a7a6ced0f20689a97bd387952b30a",
+      "query": "Man Booker International Prize 2016 2017 2018 2019 winner shortlist",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"man\" OR \"booker\" OR \"international\" OR \"prize\" OR \"2016\" OR \"2017\" OR \"2018\" OR \"2019\" OR \"winner\" OR \"shortlist\"",
+        "terms": [
+          "man",
+          "booker",
+          "international",
+          "prize",
+          "2016",
+          "2017",
+          "2018",
+          "2019",
+          "winner",
+          "shortlist"
+        ]
+      }
+    },
+    {
+      "round": 4,
+      "top_k": 10,
+      "equivalence_key": "b822b4949910dd3c50417b90f971392b5b466c29afbe5a8c0116cc669cc5d358",
+      "cached": false,
+      "query_sha256": "3e83b4c80fbdd86e0be64bcfc96efba7e870863fbfeb2ff93a9b5fd65c7bcded",
+      "query": "book translated 25 languages shortlisted International Booker Prize",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"book\" OR \"translated\" OR \"25\" OR \"languages\" OR \"shortlisted\" OR \"international\" OR \"booker\" OR \"prize\"",
+        "terms": [
+          "book",
+          "translated",
+          "25",
+          "languages",
+          "shortlisted",
+          "international",
+          "booker",
+          "prize"
+        ]
+      }
+    },
+    {
+      "round": 4,
+      "top_k": 10,
+      "equivalence_key": "71b17f82c96bc98953cd9f650e86f27a50bd91953bd84f3334eec1ef2add5149",
+      "cached": false,
+      "query_sha256": "e227b5271c5b1835a093d85c006b8780fd73a3fd4da7d47e7b05810009942b65",
+      "query": "The Labyrinth of the Spirits Isabel Allende translated languages",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"the\" OR \"labyrinth\" OR \"of\" OR \"spirits\" OR \"isabel\" OR \"allende\" OR \"translated\" OR \"languages\"",
+        "terms": [
+          "the",
+          "labyrinth",
+          "of",
+          "spirits",
+          "isabel",
+          "allende",
+          "translated",
+          "languages"
+        ]
+      }
+    },
+    {
+      "round": 4,
+      "top_k": 10,
+      "equivalence_key": "3f1d69151fbd5a5a9a2c5a6db1cc5458c26122eeb4e0e377c261eca0d4724af1",
+      "cached": false,
+      "query_sha256": "0c49173d997d28691c88037f58b9417d49373253ee15b36e42905fa5cb0374aa",
+      "query": "Isabel Allende born Lima Peru",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"isabel\" OR \"allende\" OR \"born\" OR \"lima\" OR \"peru\"",
+        "terms": [
+          "isabel",
+          "allende",
+          "born",
+          "lima",
+          "peru"
+        ]
+      }
+    },
+    {
+      "round": 4,
+      "top_k": 10,
+      "equivalence_key": "1e2b49e40c491595203c94dd10d1538e4e5a3ebec6a573b065a1b01eb7cd35a8",
+      "cached": false,
+      "query_sha256": "88cdb769f973ab53dec99dc92949179b63756232e4ed596cc2c2eb00e3dfb795",
+      "query": "Isabel Allende birthplace biography",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"isabel\" OR \"allende\" OR \"birthplace\" OR \"biography\"",
+        "terms": [
+          "isabel",
+          "allende",
+          "birthplace",
+          "biography"
+        ]
+      }
+    },
+    {
+      "round": 5,
+      "top_k": 10,
+      "equivalence_key": "cc7cf90e770200534abbf36f8400f3904e6f7f19b007f19577127c4c1eea1f8b",
+      "cached": false,
+      "query_sha256": "0284356c594f0302ec101a2ba97267f643b2022e922d928d5f5c1f6e22e95030",
+      "query": "Chigozie Obioma The Fishermen International Booker Prize shortlist 2015",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"chigozie\" OR \"obioma\" OR \"the\" OR \"fishermen\" OR \"international\" OR \"booker\" OR \"prize\" OR \"shortlist\" OR \"2015\"",
+        "terms": [
+          "chigozie",
+          "obioma",
+          "the",
+          "fishermen",
+          "international",
+          "booker",
+          "prize",
+          "shortlist",
+          "2015"
+        ]
+      }
+    },
+    {
+      "round": 5,
+      "top_k": 10,
+      "equivalence_key": "9a3c73113bd9e627d4d7d7424eb0a05ddf2695f4e248659bb5ec08fc6c198f47",
+      "cached": false,
+      "query_sha256": "7f0e169b44944efa23dc21bf9bc1dcbab8c4b38220d34ee4adbbb9755e64c515",
+      "query": "An Orchestra of Minorities International Booker Prize 2019 shortlist",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"an\" OR \"orchestra\" OR \"of\" OR \"minorities\" OR \"international\" OR \"booker\" OR \"prize\" OR \"2019\" OR \"shortlist\"",
+        "terms": [
+          "an",
+          "orchestra",
+          "of",
+          "minorities",
+          "international",
+          "booker",
+          "prize",
+          "2019",
+          "shortlist"
+        ]
+      }
+    },
+    {
+      "round": 5,
+      "top_k": 10,
+      "equivalence_key": "427bb4346900401b897ea2ca5f88adf0c72b94ebeeaa527ed93eb24e22e33512",
+      "cached": false,
+      "query_sha256": "571701d7cb3c6f19c346551ef958e93d7385f5c556a95e2cd857ebb0868d6b2e",
+      "query": "Chigozie Obioma born Akure Nigeria biography",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"chigozie\" OR \"obioma\" OR \"born\" OR \"akure\" OR \"nigeria\" OR \"biography\"",
+        "terms": [
+          "chigozie",
+          "obioma",
+          "born",
+          "akure",
+          "nigeria",
+          "biography"
+        ]
+      }
+    },
+    {
+      "round": 6,
+      "top_k": 10,
+      "equivalence_key": "f9397bc7a4be8dbbc20c1ca4d5ea3c1020d23be213d3c2864eab73280a8a16c8",
+      "cached": false,
+      "query_sha256": "4ee70ffea590cc6226367ad4470fc6330ddc3b55a0376d3bcc6540224802dbe8",
+      "query": "Man Booker International Prize 2015 winner László Krasznahorkai",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"man\" OR \"booker\" OR \"international\" OR \"prize\" OR \"2015\" OR \"winner\" OR \"lászló\" OR \"krasznahorkai\"",
+        "terms": [
+          "man",
+          "booker",
+          "international",
+          "prize",
+          "2015",
+          "winner",
+          "lászló",
+          "krasznahorkai"
+        ]
+      }
+    },
+    {
+      "round": 6,
+      "top_k": 10,
+      "equivalence_key": "3146875aa21a726abf2ff072da500d74ea7ab207b1e70768becbc63735ce5733",
+      "cached": false,
+      "query_sha256": "0f9f30889d3ef3e02cd3c113ba00468eed4e3e00ecc25c0c59ff8f9933eb3d5f",
+      "query": "International Booker Prize 2015 shortlist The Fishermen Chigozie Obioma",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"international\" OR \"booker\" OR \"prize\" OR \"2015\" OR \"shortlist\" OR \"the\" OR \"fishermen\" OR \"chigozie\" OR \"obioma\"",
+        "terms": [
+          "international",
+          "booker",
+          "prize",
+          "2015",
+          "shortlist",
+          "the",
+          "fishermen",
+          "chigozie",
+          "obioma"
+        ]
+      }
+    },
+    {
+      "round": 6,
+      "top_k": 10,
+      "equivalence_key": "0a0f30237e31cebc31e372f17304ed56f9ec87d57bdcc3c6b6fcc70ac84b5bd2",
+      "cached": false,
+      "query_sha256": "63bbe7d5b4dad1e6582e0abad784f8d228c3cc6da9b1d81d5a7c48da380017d8",
+      "query": "László Krasznahorkai born birthplace city",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"lászló\" OR \"krasznahorkai\" OR \"born\" OR \"birthplace\" OR \"city\"",
+        "terms": [
+          "lászló",
+          "krasznahorkai",
+          "born",
+          "birthplace",
+          "city"
+        ]
+      }
+    },
+    {
+      "round": 6,
+      "top_k": 10,
+      "equivalence_key": "8ab583a1f5792b4abc6cd6592bdf04e745952fb4177b5715766f51e97fc81360",
+      "cached": false,
+      "query_sha256": "1dab2492e1f7c6ef597304d0846048ebdc1fdce3de5ba8b88f31033edb45bc14",
+      "query": "Chigozie Obioma grew up Akure childhood biography",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"chigozie\" OR \"obioma\" OR \"grew\" OR \"up\" OR \"akure\" OR \"childhood\" OR \"biography\"",
+        "terms": [
+          "chigozie",
+          "obioma",
+          "grew",
+          "up",
+          "akure",
+          "childhood",
+          "biography"
+        ]
+      }
+    },
+    {
+      "round": 6,
+      "top_k": 10,
+      "equivalence_key": "35778a450e908961d1f2b2dba913623f650746e292521972218553a7209fe22d",
+      "cached": false,
+      "query_sha256": "9fcfae54e529f8b84e4574b789fce96b8914c958513588b5ee62f43611a64abe",
+      "query": "Chigozie Obioma early life Nigeria where raised",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"chigozie\" OR \"obioma\" OR \"early\" OR \"life\" OR \"nigeria\" OR \"where\" OR \"raised\"",
+        "terms": [
+          "chigozie",
+          "obioma",
+          "early",
+          "life",
+          "nigeria",
+          "where",
+          "raised"
+        ]
+      }
+    },
+    {
+      "round": 7,
+      "top_k": 10,
+      "equivalence_key": "458be35e2d17269de9c035f7a3359dc6cb8e2d523cbc56cf8ceed2c2117009cb",
+      "cached": false,
+      "query_sha256": "686e0f0aebcdaae1e53148e072a96a7aa9b72a64a52dfa8e34d1cb85e9a06591",
+      "query": "International Booker Prize 2019 winner shortlist",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"international\" OR \"booker\" OR \"prize\" OR \"2019\" OR \"winner\" OR \"shortlist\"",
+        "terms": [
+          "international",
+          "booker",
+          "prize",
+          "2019",
+          "winner",
+          "shortlist"
+        ]
+      }
+    },
+    {
+      "round": 7,
+      "top_k": 10,
+      "equivalence_key": "7e5f42573b22803958a5220e07780f36d3cf0d6a3eaf5e31d60dd05318438b20",
+      "cached": false,
+      "query_sha256": "1cf6ec5fa226f82d444f381dd22267afdd754627927d9de9a8a90e966824b023",
+      "query": "Man Booker International Prize 2019 winner",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"man\" OR \"booker\" OR \"international\" OR \"prize\" OR \"2019\" OR \"winner\"",
+        "terms": [
+          "man",
+          "booker",
+          "international",
+          "prize",
+          "2019",
+          "winner"
+        ]
+      }
+    },
+    {
+      "round": 7,
+      "top_k": 10,
+      "equivalence_key": "4b45a23b1ade25def44040a8328a54b25b95b1e792031a11d37eead1ea92ed7f",
+      "cached": false,
+      "query_sha256": "b9b4beaf09e90e80c386cdafdb15e03f4e728b2c4eb1e042993f0bf87302bae4",
+      "query": "An Orchestra of Minorities International Booker Prize contender",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"an\" OR \"orchestra\" OR \"of\" OR \"minorities\" OR \"international\" OR \"booker\" OR \"prize\" OR \"contender\"",
+        "terms": [
+          "an",
+          "orchestra",
+          "of",
+          "minorities",
+          "international",
+          "booker",
+          "prize",
+          "contender"
+        ]
+      }
+    },
+    {
+      "round": 8,
+      "top_k": 10,
+      "equivalence_key": "e863adc1f831e406b558f8c458dc0ca0deab687643067e85c4b1039fc6bdb70d",
+      "cached": false,
+      "query_sha256": "3209802cde86d99f295afedc2c1e0f76daab399deb9d97aeb12a0ae44b1f13b2",
+      "query": "Marlon James born birthplace city Jamaica",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"marlon\" OR \"james\" OR \"born\" OR \"birthplace\" OR \"city\" OR \"jamaica\"",
+        "terms": [
+          "marlon",
+          "james",
+          "born",
+          "birthplace",
+          "city",
+          "jamaica"
+        ]
+      }
+    },
+    {
+      "round": 8,
+      "top_k": 10,
+      "equivalence_key": "d1d4e74a63dc797e192dadf43c2c0b60015b5806bc5f8e7b3a06a8160e7aedf0",
+      "cached": false,
+      "query_sha256": "6c661c58f799e2a3e03e8b964ba11af5d4abe0b3b7117a0d1aa3c22382ef86bf",
+      "query": "A Brief History of Seven Killings publication date 2014 Booker Prize 2015",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"a\" OR \"brief\" OR \"history\" OR \"of\" OR \"seven\" OR \"killings\" OR \"publication\" OR \"date\" OR \"2014\" OR \"booker\" OR \"prize\" OR \"2015\"",
+        "terms": [
+          "a",
+          "brief",
+          "history",
+          "of",
+          "seven",
+          "killings",
+          "publication",
+          "date",
+          "2014",
+          "booker",
+          "prize",
+          "2015"
+        ]
+      }
+    },
+    {
+      "round": 8,
+      "top_k": 10,
+      "equivalence_key": "b1b95815a85d4c7ba22374878918016ddf277ccbc8b4a69bd674bde7111f4071",
+      "cached": false,
+      "query_sha256": "2037badc778e2f6ef6d85d07706104650268f57804e200af91bc09002646c20b",
+      "query": "Chigozie Obioma grew up Akure childhood where raised",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"chigozie\" OR \"obioma\" OR \"grew\" OR \"up\" OR \"akure\" OR \"childhood\" OR \"where\" OR \"raised\"",
+        "terms": [
+          "chigozie",
+          "obioma",
+          "grew",
+          "up",
+          "akure",
+          "childhood",
+          "where",
+          "raised"
+        ]
+      }
+    },
+    {
+      "round": 9,
+      "top_k": 10,
+      "equivalence_key": "ac68834fc35827dbfc8e3b717f17b032d9fb849bfd31df1ffd2d0dd3cd689bb3",
+      "cached": false,
+      "query_sha256": "d99238431ebe7b547711cef41327c5012a90673c03adc2a06419e97baaa577a6",
+      "query": "Marlon James born Kingston Jamaica novelist biography",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"marlon\" OR \"james\" OR \"born\" OR \"kingston\" OR \"jamaica\" OR \"novelist\" OR \"biography\"",
+        "terms": [
+          "marlon",
+          "james",
+          "born",
+          "kingston",
+          "jamaica",
+          "novelist",
+          "biography"
+        ]
+      }
+    },
+    {
+      "round": 9,
+      "top_k": 10,
+      "equivalence_key": "f505d9efdcf0e81c73ce010c92243df899bf0aa8f33e398fa587f9491ff64a49",
+      "cached": false,
+      "query_sha256": "d397a6c431584b869662a344ddd62b2c83e52cb94609a3b551769ed35c54ff46",
+      "query": "Chigozie Obioma biography born Akure grew up childhood city",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"chigozie\" OR \"obioma\" OR \"biography\" OR \"born\" OR \"akure\" OR \"grew\" OR \"up\" OR \"childhood\" OR \"city\"",
+        "terms": [
+          "chigozie",
+          "obioma",
+          "biography",
+          "born",
+          "akure",
+          "grew",
+          "up",
+          "childhood",
+          "city"
+        ]
+      }
+    },
+    {
+      "round": 9,
+      "top_k": 10,
+      "equivalence_key": "609948ffc82b40c33b3e3552a308d3f022c298ba869b1be1de58a393d0cd9365",
+      "cached": false,
+      "query_sha256": "11717febf131a205b517f11c42ceb043106d3b8e0250b22efe6553bb777ef808",
+      "query": "A Brief History of Seven Killings Marlon James birthplace",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"a\" OR \"brief\" OR \"history\" OR \"of\" OR \"seven\" OR \"killings\" OR \"marlon\" OR \"james\" OR \"birthplace\"",
+        "terms": [
+          "a",
+          "brief",
+          "history",
+          "of",
+          "seven",
+          "killings",
+          "marlon",
+          "james",
+          "birthplace"
+        ]
+      }
+    },
+    {
+      "round": 10,
+      "top_k": 10,
+      "equivalence_key": "ac68834fc35827dbfc8e3b717f17b032d9fb849bfd31df1ffd2d0dd3cd689bb3",
+      "cached": true,
+      "query_sha256": "d99238431ebe7b547711cef41327c5012a90673c03adc2a06419e97baaa577a6",
+      "query": "Marlon James born Kingston Jamaica novelist biography",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"marlon\" OR \"james\" OR \"born\" OR \"kingston\" OR \"jamaica\" OR \"novelist\" OR \"biography\"",
+        "terms": [
+          "marlon",
+          "james",
+          "born",
+          "kingston",
+          "jamaica",
+          "novelist",
+          "biography"
+        ]
+      }
+    },
+    {
+      "round": 10,
+      "top_k": 10,
+      "equivalence_key": "f505d9efdcf0e81c73ce010c92243df899bf0aa8f33e398fa587f9491ff64a49",
+      "cached": true,
+      "query_sha256": "d397a6c431584b869662a344ddd62b2c83e52cb94609a3b551769ed35c54ff46",
+      "query": "Chigozie Obioma biography born Akure grew up childhood city",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"chigozie\" OR \"obioma\" OR \"biography\" OR \"born\" OR \"akure\" OR \"grew\" OR \"up\" OR \"childhood\" OR \"city\"",
+        "terms": [
+          "chigozie",
+          "obioma",
+          "biography",
+          "born",
+          "akure",
+          "grew",
+          "up",
+          "childhood",
+          "city"
+        ]
+      }
+    },
+    {
+      "round": 10,
+      "top_k": 10,
+      "equivalence_key": "609948ffc82b40c33b3e3552a308d3f022c298ba869b1be1de58a393d0cd9365",
+      "cached": true,
+      "query_sha256": "11717febf131a205b517f11c42ceb043106d3b8e0250b22efe6553bb777ef808",
+      "query": "A Brief History of Seven Killings Marlon James birthplace",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"a\" OR \"brief\" OR \"history\" OR \"of\" OR \"seven\" OR \"killings\" OR \"marlon\" OR \"james\" OR \"birthplace\"",
+        "terms": [
+          "a",
+          "brief",
+          "history",
+          "of",
+          "seven",
+          "killings",
+          "marlon",
+          "james",
+          "birthplace"
+        ]
+      }
+    },
+    {
+      "round": 11,
+      "top_k": 10,
+      "equivalence_key": "ac68834fc35827dbfc8e3b717f17b032d9fb849bfd31df1ffd2d0dd3cd689bb3",
+      "cached": true,
+      "query_sha256": "d99238431ebe7b547711cef41327c5012a90673c03adc2a06419e97baaa577a6",
+      "query": "Marlon James born Kingston Jamaica novelist biography",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"marlon\" OR \"james\" OR \"born\" OR \"kingston\" OR \"jamaica\" OR \"novelist\" OR \"biography\"",
+        "terms": [
+          "marlon",
+          "james",
+          "born",
+          "kingston",
+          "jamaica",
+          "novelist",
+          "biography"
+        ]
+      }
+    },
+    {
+      "round": 11,
+      "top_k": 10,
+      "equivalence_key": "f505d9efdcf0e81c73ce010c92243df899bf0aa8f33e398fa587f9491ff64a49",
+      "cached": true,
+      "query_sha256": "d397a6c431584b869662a344ddd62b2c83e52cb94609a3b551769ed35c54ff46",
+      "query": "Chigozie Obioma biography born Akure grew up childhood city",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"chigozie\" OR \"obioma\" OR \"biography\" OR \"born\" OR \"akure\" OR \"grew\" OR \"up\" OR \"childhood\" OR \"city\"",
+        "terms": [
+          "chigozie",
+          "obioma",
+          "biography",
+          "born",
+          "akure",
+          "grew",
+          "up",
+          "childhood",
+          "city"
+        ]
+      }
+    },
+    {
+      "round": 11,
+      "top_k": 10,
+      "equivalence_key": "609948ffc82b40c33b3e3552a308d3f022c298ba869b1be1de58a393d0cd9365",
+      "cached": true,
+      "query_sha256": "11717febf131a205b517f11c42ceb043106d3b8e0250b22efe6553bb777ef808",
+      "query": "A Brief History of Seven Killings Marlon James birthplace",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"a\" OR \"brief\" OR \"history\" OR \"of\" OR \"seven\" OR \"killings\" OR \"marlon\" OR \"james\" OR \"birthplace\"",
+        "terms": [
+          "a",
+          "brief",
+          "history",
+          "of",
+          "seven",
+          "killings",
+          "marlon",
+          "james",
+          "birthplace"
+        ]
+      }
+    }
+  ],
+  "equivalent_query_repeats": 6,
+  "views": [
+    {
+      "round": 1,
+      "compacted": false,
+      "visible_evidence": [],
+      "shelf": [],
+      "shelf_evicted": []
+    },
+    {
+      "round": 2,
+      "compacted": false,
+      "visible_evidence": [],
+      "shelf": [],
+      "shelf_evicted": []
+    },
+    {
+      "round": 3,
+      "compacted": false,
+      "visible_evidence": [],
+      "shelf": [],
+      "shelf_evicted": []
+    },
+    {
+      "round": 4,
+      "compacted": true,
+      "visible_evidence": [],
+      "shelf": [],
+      "shelf_evicted": []
+    },
+    {
+      "round": 5,
+      "compacted": true,
+      "visible_evidence": [],
+      "shelf": [],
+      "shelf_evicted": []
+    },
+    {
+      "round": 6,
+      "compacted": false,
+      "visible_evidence": [
+        "e1"
+      ],
+      "shelf": [],
+      "shelf_evicted": []
+    },
+    {
+      "round": 7,
+      "compacted": true,
+      "visible_evidence": [
+        "e1"
+      ],
+      "shelf": [],
+      "shelf_evicted": []
+    },
+    {
+      "round": 8,
+      "compacted": true,
+      "visible_evidence": [
+        "e1",
+        "e2"
+      ],
+      "shelf": [
+        "e1"
+      ],
+      "shelf_evicted": []
+    },
+    {
+      "round": 9,
+      "compacted": true,
+      "visible_evidence": [
+        "e1",
+        "e2"
+      ],
+      "shelf": [
+        "e1"
+      ],
+      "shelf_evicted": []
+    },
+    {
+      "round": 10,
+      "compacted": true,
+      "visible_evidence": [
+        "e1",
+        "e2"
+      ],
+      "shelf": [
+        "e1",
+        "e2"
+      ],
+      "shelf_evicted": []
+    },
+    {
+      "round": 11,
+      "compacted": false,
+      "visible_evidence": [
+        "e1",
+        "e2"
+      ],
+      "shelf": [
+        "e1",
+        "e2"
+      ],
+      "shelf_evicted": []
+    },
+    {
+      "round": 12,
+      "compacted": true,
+      "visible_evidence": [
+        "e1",
+        "e2"
+      ],
+      "shelf": [
+        "e1",
+        "e2"
+      ],
+      "shelf_evicted": []
+    },
+    {
+      "round": 13,
+      "compacted": false,
+      "visible_evidence": [
+        "e1",
+        "e2"
+      ],
+      "shelf": [
+        "e1",
+        "e2"
+      ],
+      "shelf_evicted": []
+    },
+    {
+      "round": 14,
+      "compacted": false,
+      "visible_evidence": [
+        "e1",
+        "e2"
+      ],
+      "shelf": [
+        "e1",
+        "e2"
+      ],
+      "shelf_evicted": []
+    }
+  ],
+  "delivered_refs": [
+    "e1",
+    "e2"
+  ],
+  "submitted_refs": [],
+  "text_included": true,
+  "limitations": [
+    "Equivalence is compiler equality, not semantic identity or wasted-search proof",
+    "Raw-window visibility/selection is not entailment or complete evidence coverage",
+    "No live q26 replay or independent answer scoring is performed"
+  ]
+}

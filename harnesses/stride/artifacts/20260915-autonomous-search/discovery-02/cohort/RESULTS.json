@@ -1,0 +1,370 @@
+{
+  "rows": [
+    {
+      "slot": "q775-search-pivot-v1-r1",
+      "qid": 775,
+      "protocol": "search-pivot-v1",
+      "status": "model_budget",
+      "terminal": {
+        "answer": "",
+        "elapsed_seconds": 120.50063870000304,
+        "outcome": "model_budget"
+      },
+      "attempts": 16,
+      "elapsed_seconds": 120.63717780000297,
+      "head": "9e3abbdcd2a2769b6ab9f97bfc36c494549b69b6c3ab3097859fae4dd89df9fd",
+      "seal_sha256": "60af0460ab074d39bb2251aa5cb120a17c03b8080a8ca957b4d65dffff54c9ae",
+      "budget_after": {
+        "cap": 1643,
+        "used": 693,
+        "remaining": 950,
+        "this_run": 16,
+        "epoch_allowance": 1000,
+        "epoch_used": 50,
+        "epoch_remaining": 950
+      }
+    },
+    {
+      "slot": "q775-baseline-r1",
+      "qid": 775,
+      "protocol": "baseline",
+      "status": "stalled_no_submission",
+      "terminal": {
+        "answer": "",
+        "detail": "No legal finish in bounded recovery final decision",
+        "elapsed_seconds": 264.5972025000083,
+        "outcome": "stalled_no_submission"
+      },
+      "attempts": 14,
+      "elapsed_seconds": 264.7373384000093,
+      "head": "14f1c1434fbba323bece47bcfc6fb956631309eb109ef98f9936ba987cdfb97d",
+      "seal_sha256": "8eba8801dde7b077e026d4376a64650eb4211182ae174c13ceee6b629e2498e8",
+      "budget_after": {
+        "cap": 1643,
+        "used": 707,
+        "remaining": 936,
+        "this_run": 30,
+        "epoch_allowance": 1000,
+        "epoch_used": 64,
+        "epoch_remaining": 936
+      }
+    },
+    {
+      "slot": "q774-baseline-r1",
+      "qid": 774,
+      "protocol": "baseline",
+      "status": "abstained",
+      "terminal": {
+        "answer": "",
+        "elapsed_seconds": 350.6406358999957,
+        "outcome": "abstained",
+        "reason": "The clue about a real-life relative playing an unrelated character on the same series points to Richard Harmon (John Murphy) and his sister Jessica Harmon (Niylah) on The 100, confirmed in delivered evidence (e2). However, I could not verify the remaining required clues from delivered source windows: (1) Murphy's character being married more than 2 but less than 5 times in the series, (2) only one of his children surviving in the series, (3) Richard Harmon's real-life height being over 1.65m but below 1.70m, and (4) The 100 having more than 3 seasons as of 2023. Searches returned only navigation snippets, not citable evidence windows for these facts, so I cannot confirm all constraints are satisfied."
+      },
+      "attempts": 16,
+      "elapsed_seconds": 350.8940722999978,
+      "head": "ba0e2d564dcadba8928f20b16420ea6499540226bab326e889989db09c56eb95",
+      "seal_sha256": "b1784df1e9f123c4c55bdc542880d6f048725eb1a65c692c9ec450553f009813",
+      "budget_after": {
+        "cap": 1643,
+        "used": 723,
+        "remaining": 920,
+        "this_run": 46,
+        "epoch_allowance": 1000,
+        "epoch_used": 80,
+        "epoch_remaining": 920
+      }
+    },
+    {
+      "slot": "q774-search-pivot-v1-r1",
+      "qid": 774,
+      "protocol": "search-pivot-v1",
+      "status": "abstained",
+      "terminal": {
+        "answer": "",
+        "elapsed_seconds": 257.2379493000044,
+        "outcome": "abstained",
+        "reason": "I have strong evidence for the core candidate: Richard Harmon plays John Murphy in \"The 100\" (premiered 2014, 7 seasons as of 2023 — confirmed by e3), and his real-life sister Jessica Harmon plays Niylah on the same show while their characters are unrelated (confirmed by e1/e2). This satisfies the \"first appeared in a season that started before 2020 but after 2000,\" \"more than 3 seasons as of 2023,\" and \"plays along their real-life relative even though unrelated in the series\" clues. However, I could not retrieve any source verifying the remaining specific clues: John Murphy's character being married more than 2 but less than 5 times, only one of his children surviving in the series, and Richard Harmon's real-life height being over 1.65m but below 1.70m. Repeated searches returned only cached/repetitive navigation hits and never surfaced the John Murphy character page or a Richard Harmon biography with height data. Without verification of these three clues, I cannot confirm the candidate fully matches all stated criteria, so I abstain."
+      },
+      "attempts": 16,
+      "elapsed_seconds": 257.4669531999971,
+      "head": "6ed3d6338464365e613c60bb01bf4ff7bb95cab211422aedc972a03703c069b0",
+      "seal_sha256": "ac9db34fe969c04e76b5bcbbdce52f9cffc032049ae805cb063c0eae7d998ce9",
+      "budget_after": {
+        "cap": 1643,
+        "used": 739,
+        "remaining": 904,
+        "this_run": 62,
+        "epoch_allowance": 1000,
+        "epoch_used": 96,
+        "epoch_remaining": 904
+      }
+    },
+    {
+      "slot": "q771-search-pivot-v1-r1",
+      "qid": 771,
+      "protocol": "search-pivot-v1",
+      "status": "submitted",
+      "terminal": {
+        "answer": "Vakkorama",
+        "answer_representation": {
+          "input_type": "string",
+          "operation": "identity",
+          "rule": "string-integer-v1"
+        },
+        "basis": [
+          {
+            "document": "d1",
+            "document_chars": 9095,
+            "end": 3000,
+            "kind": "raw_evidence",
+            "ref": "e1",
+            "sha256": "521deb8f6549e7ea288326ea13a34d4635283fc59820929b6ad3b4c3edade321",
+            "snapshot": "446eabd6c86b9aad83f468e7eb034d96105d6e38bc9d97c923416d3ce089e105",
+            "start": 0
+          },
+          {
+            "document": "d12",
+            "document_chars": 13639,
+            "end": 3000,
+            "kind": "raw_evidence",
+            "ref": "e2",
+            "sha256": "ed282b99cfb0aae5a430ddfadeb3348fa20e85aac24fb4501bf9cd3b3dadb4b2",
+            "snapshot": "7d8960afbde4b93401ea738e66299a6ee3d0dee47906ba8e3a86ebdea642ffcd",
+            "start": 0
+          },
+          {
+            "document": "d12",
+            "document_chars": 13639,
+            "end": 6000,
+            "kind": "raw_evidence",
+            "ref": "e3",
+            "sha256": "97a6e11f3f34512afbebf984635c4f0118e43a0fd1a04e71a3f4cf755defe729",
+            "snapshot": "7d8960afbde4b93401ea738e66299a6ee3d0dee47906ba8e3a86ebdea642ffcd",
+            "start": 3000
+          }
+        ],
+        "elapsed_seconds": 23.178807899996173,
+        "outcome": "submitted",
+        "refs": [
+          "e1",
+          "e2",
+          "e3"
+        ],
+        "semantic_status": "not_automatically_verified"
+      },
+      "attempts": 4,
+      "elapsed_seconds": 23.273466199985705,
+      "head": "986e0cf01c413d6e8c866fe4593cd135f6cc48436cb5553a7635e6ed72697bcc",
+      "seal_sha256": "294a8ad165c0b58766f0a9ba12632e8342e61312c2031013037b2071a75b5f93",
+      "budget_after": {
+        "cap": 1643,
+        "used": 743,
+        "remaining": 900,
+        "this_run": 66,
+        "epoch_allowance": 1000,
+        "epoch_used": 100,
+        "epoch_remaining": 900
+      }
+    },
+    {
+      "slot": "q771-baseline-r1",
+      "qid": 771,
+      "protocol": "baseline",
+      "status": "submitted",
+      "terminal": {
+        "answer": "Vakkorama",
+        "answer_representation": {
+          "input_type": "string",
+          "operation": "identity",
+          "rule": "string-integer-v1"
+        },
+        "basis": [
+          {
+            "document": "d1",
+            "document_chars": 9095,
+            "end": 3000,
+            "kind": "raw_evidence",
+            "ref": "e1",
+            "sha256": "521deb8f6549e7ea288326ea13a34d4635283fc59820929b6ad3b4c3edade321",
+            "snapshot": "446eabd6c86b9aad83f468e7eb034d96105d6e38bc9d97c923416d3ce089e105",
+            "start": 0
+          },
+          {
+            "document": "d1",
+            "document_chars": 9095,
+            "end": 6000,
+            "kind": "raw_evidence",
+            "ref": "e2",
+            "sha256": "01ef6425050ddf612695a672f50d2d88e296ce9e1e5d49338047f20a92856164",
+            "snapshot": "446eabd6c86b9aad83f468e7eb034d96105d6e38bc9d97c923416d3ce089e105",
+            "start": 3000
+          }
+        ],
+        "elapsed_seconds": 17.58918989999802,
+        "outcome": "submitted",
+        "refs": [
+          "e1",
+          "e2"
+        ],
+        "semantic_status": "not_automatically_verified"
+      },
+      "attempts": 4,
+      "elapsed_seconds": 17.693954299989855,
+      "head": "134e2f904ea1c92c424713d254a55424357ac7e66f7c1a256e9e6020af3a4f7d",
+      "seal_sha256": "d734ea320b04c5a9878b2c091586708ced2cdf93240291f2b1fd55917f64ed64",
+      "budget_after": {
+        "cap": 1643,
+        "used": 747,
+        "remaining": 896,
+        "this_run": 70,
+        "epoch_allowance": 1000,
+        "epoch_used": 104,
+        "epoch_remaining": 896
+      }
+    },
+    {
+      "slot": "q778-baseline-r1",
+      "qid": 778,
+      "protocol": "baseline",
+      "status": "submitted",
+      "terminal": {
+        "answer": "21",
+        "answer_representation": {
+          "input_type": "integer",
+          "input_value": 21,
+          "operation": "decimal",
+          "rule": "string-integer-v1"
+        },
+        "basis": [
+          {
+            "document": "d41",
+            "document_chars": 4374,
+            "end": 3000,
+            "kind": "raw_evidence",
+            "ref": "e1",
+            "sha256": "bc0d510dbd6cde0530cf08684de455d82ec1943c0ba50cab130ae01990cc24b8",
+            "snapshot": "d7b7a23b3eb780d78018e5fe30d91613c9769a1cff7564bb0a79c08614acb838",
+            "start": 0
+          }
+        ],
+        "elapsed_seconds": 59.80863069999032,
+        "outcome": "submitted",
+        "refs": [
+          "e1"
+        ],
+        "semantic_status": "not_automatically_verified"
+      },
+      "attempts": 4,
+      "elapsed_seconds": 59.93176289999974,
+      "head": "b8e99d42e42033ccda52b10d3b9e2d5aa5b7d89757f7fc61577281905713538f",
+      "seal_sha256": "67e91593bd3afaf8c589764bd4e1eb5937b3ebf558b6f4d31de8bd5803c4a955",
+      "budget_after": {
+        "cap": 1643,
+        "used": 751,
+        "remaining": 892,
+        "this_run": 74,
+        "epoch_allowance": 1000,
+        "epoch_used": 108,
+        "epoch_remaining": 892
+      }
+    },
+    {
+      "slot": "q778-search-pivot-v1-r1",
+      "qid": 778,
+      "protocol": "search-pivot-v1",
+      "status": "submitted",
+      "terminal": {
+        "answer": "21",
+        "answer_representation": {
+          "input_type": "integer",
+          "input_value": 21,
+          "operation": "decimal",
+          "rule": "string-integer-v1"
+        },
+        "basis": [
+          {
+            "document": "d16",
+            "document_chars": 4374,
+            "end": 3000,
+            "kind": "raw_evidence",
+            "ref": "e1",
+            "sha256": "bc0d510dbd6cde0530cf08684de455d82ec1943c0ba50cab130ae01990cc24b8",
+            "snapshot": "d7b7a23b3eb780d78018e5fe30d91613c9769a1cff7564bb0a79c08614acb838",
+            "start": 0
+          }
+        ],
+        "elapsed_seconds": 18.23639240002376,
+        "outcome": "submitted",
+        "refs": [
+          "e1"
+        ],
+        "semantic_status": "not_automatically_verified"
+      },
+      "attempts": 4,
+      "elapsed_seconds": 18.337040600017644,
+      "head": "1713c6963d6da83d7a4302ca18e96bc83851b42b5b57cf2e057f63a72081ebd2",
+      "seal_sha256": "26a015e1ac79183f7e3fc1973f350d9053a6f4b3289f65f281959f62fd96fbe2",
+      "budget_after": {
+        "cap": 1643,
+        "used": 755,
+        "remaining": 888,
+        "this_run": 78,
+        "epoch_allowance": 1000,
+        "epoch_used": 112,
+        "epoch_remaining": 888
+      }
+    }
+  ],
+  "judgments": [
+    {
+      "slot": "q771-search-pivot-v1-r1",
+      "head": "986e0cf01c413d6e8c866fe4593cd135f6cc48436cb5553a7635e6ed72697bcc",
+      "http_sequence": 1,
+      "correct": true,
+      "confidence": 1.0,
+      "extracted_answer": "Vakkorama",
+      "rationale": "The candidate answer matches the standard answer exactly.",
+      "parse_error": false
+    },
+    {
+      "slot": "q771-baseline-r1",
+      "head": "134e2f904ea1c92c424713d254a55424357ac7e66f7c1a256e9e6020af3a4f7d",
+      "http_sequence": 2,
+      "correct": true,
+      "confidence": 1.0,
+      "extracted_answer": "Vakkorama",
+      "rationale": "The candidate answer matches the standard answer exactly.",
+      "parse_error": false
+    },
+    {
+      "slot": "q778-baseline-r1",
+      "head": "b8e99d42e42033ccda52b10d3b9e2d5aa5b7d89757f7fc61577281905713538f",
+      "http_sequence": 3,
+      "correct": true,
+      "confidence": 1.0,
+      "extracted_answer": "21",
+      "rationale": "The candidate answer matches the standard answer.",
+      "parse_error": false
+    },
+    {
+      "slot": "q778-search-pivot-v1-r1",
+      "head": "1713c6963d6da83d7a4302ca18e96bc83851b42b5b57cf2e057f63a72081ebd2",
+      "http_sequence": 4,
+      "correct": true,
+      "confidence": 1.0,
+      "extracted_answer": "21",
+      "rationale": "The candidate answer matches the standard answer.",
+      "parse_error": false
+    }
+  ],
+  "budget_after": {
+    "cap": 1643,
+    "used": 759,
+    "remaining": 884,
+    "this_run": 82,
+    "epoch_allowance": 1000,
+    "epoch_used": 116,
+    "epoch_remaining": 884
+  },
+  "utc_finished": "2026-09-15T10:35:14.973759+00:00"
+}

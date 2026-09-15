@@ -41,6 +41,7 @@ class Harness:
         self.clock, self.started = clock, clock()
         self.archive = Archive(path)
         self.groups, self.group_refs = [], []
+        self.first_complete_round = None
         self.exposed, self.published_docs = set(), set()
         self.evidence_order, self.doc_order = [], []
         self.notes, self.note_history = {}, []
@@ -252,6 +253,8 @@ class Harness:
             "final": final, "compacted": plan["compacted"], "capacity": plan["capacity"], "counter": self.counter.identity, "output_reservation": output_limit,
             "evidence_shelf": plan["shelf"], "shelf_evicted_for_capacity": plan["shelf_evicted"], **({"workflow_view": plan["workflow_view"]} if self.workflow.options.enabled else {})})
         start = self.clock()
+        if "history_projection" in plan:
+            self.archive.append("history_projection", {"round": round_no, **plan["history_projection"]})
         if self.search_pivot is not None:
             projection = plan["search_pivot_projection"]
             self.search_pivot.commit(projection)
@@ -317,6 +320,8 @@ class Harness:
         group = make_group(reply.message, records, round_no) if fatal else fit_result_group(self, model, reply.message, records)
         for record in records: self.archive.append("action_result", {k: v for k, v in record.items() if k not in ("documents", "evidence")})
         self.groups.append(group); group_ref = self.archive.put_json(group); self.group_refs.append(group_ref)
+        if self.first_complete_round is None:
+            self.first_complete_round = group["round"]
         if self.search_pivot is not None:
             self.search_pivot.complete(group)
         self.archive.append("round_end", {"round": round_no, "group": group_ref, "notes": self.archive.put_json(sorted(self.notes.values(), key=lambda n: n["order"])), "remaining": self.remaining()})

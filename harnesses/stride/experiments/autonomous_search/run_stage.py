@@ -45,6 +45,7 @@ def sources():
               Path(__file__).parent.parent / 'field_feedback/live_pilot.py']
     paths += list((ROOT / 'harnesses/stride/tests').glob('test_decision*.py'))
     paths += [ROOT / 'harnesses/stride/tests/test_search_pivot.py',
+              ROOT / 'harnesses/stride/tests/test_middle_history.py',
               ROOT / 'harnesses/stride/tests/test_stage_publication.py']
     return {p.relative_to(ROOT).as_posix(): sha(p) for p in sorted(paths)}
 
@@ -76,7 +77,7 @@ def prepare(manifest, target, qids, protocol, repeats=1, reverse=False):
         budget='Existing ledger, authorized 1000-call epoch; failed/unknown charged before send; no retries.',
         judge='Project judge, full submitted terminal answers only, after all policy slots sealed.',
         decision_protocols={name:decision_identity(name) for name in ['baseline',protocol]},
-        unique_variable='Named decision_protocol instruction/trigger; same full workflow and all other settings within each pair')
+        unique_variable='Named decision_protocol as declared by its identity; same full workflow and all other settings within each pair')
     save(target / 'PLAN.json', plan)
     (target / 'PLAN.sha256').write_bytes((sha(target / 'PLAN.json') + '\n').encode())
 

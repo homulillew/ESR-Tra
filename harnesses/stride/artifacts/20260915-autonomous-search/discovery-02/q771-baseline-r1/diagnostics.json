@@ -1,0 +1,126 @@
+{
+  "protocol": "stride-search-3",
+  "head": "134e2f904ea1c92c424713d254a55424357ac7e66f7c1a256e9e6020af3a4f7d",
+  "outcome": "submitted",
+  "formal_correct": null,
+  "model_attempts": 4,
+  "backend_attempts": 4,
+  "queries": [
+    {
+      "round": 1,
+      "top_k": 8,
+      "equivalence_key": "dbca3c24f77488e32d2c92421cc69510c38c1a0e42b71298a73fe2399be82682",
+      "cached": false,
+      "query_sha256": "e59e9be7248297a04539547b5d3cfb9449128c3fd1ca74bc24ce1c6e37709b69",
+      "query": "hat shop 1930s scarves renamed initials sibling surname",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"hat\" OR \"shop\" OR \"1930s\" OR \"scarves\" OR \"renamed\" OR \"initials\" OR \"sibling\" OR \"surname\"",
+        "terms": [
+          "hat",
+          "shop",
+          "1930s",
+          "scarves",
+          "renamed",
+          "initials",
+          "sibling",
+          "surname"
+        ]
+      }
+    },
+    {
+      "round": 1,
+      "top_k": 8,
+      "equivalence_key": "4f1d1f1b531b98c20d9be2a00b554aabbaf2634c96cb956be56b60d92bd13014",
+      "cached": false,
+      "query_sha256": "ad6be13e81c3346def7666129f86c99c72dca4477db3605fdb8f5d58e30d9294",
+      "query": "tower built 1340s city hat shop",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"tower\" OR \"built\" OR \"1340s\" OR \"city\" OR \"hat\" OR \"shop\"",
+        "terms": [
+          "tower",
+          "built",
+          "1340s",
+          "city",
+          "hat",
+          "shop"
+        ]
+      }
+    },
+    {
+      "round": 1,
+      "top_k": 8,
+      "equivalence_key": "77832ca37d0c5b166587746ddf76c117992f7b82ec2c3fc6e8d084eec062d28a",
+      "cached": false,
+      "query_sha256": "ad17ef94ce852185db979c2630e77943c53c3534d560fe8a56fe7d870603bb96",
+      "query": "fashion brand created 1980s child younger audience hat shop history",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"fashion\" OR \"brand\" OR \"created\" OR \"1980s\" OR \"child\" OR \"younger\" OR \"audience\" OR \"hat\" OR \"shop\" OR \"history\"",
+        "terms": [
+          "fashion",
+          "brand",
+          "created",
+          "1980s",
+          "child",
+          "younger",
+          "audience",
+          "hat",
+          "shop",
+          "history"
+        ]
+      }
+    }
+  ],
+  "equivalent_query_repeats": 0,
+  "views": [
+    {
+      "round": 1,
+      "compacted": false,
+      "visible_evidence": [],
+      "shelf": [],
+      "shelf_evicted": []
+    },
+    {
+      "round": 2,
+      "compacted": false,
+      "visible_evidence": [],
+      "shelf": [],
+      "shelf_evicted": []
+    },
+    {
+      "round": 3,
+      "compacted": false,
+      "visible_evidence": [
+        "e1"
+      ],
+      "shelf": [],
+      "shelf_evicted": []
+    },
+    {
+      "round": 4,
+      "compacted": false,
+      "visible_evidence": [
+        "e1",
+        "e2"
+      ],
+      "shelf": [],
+      "shelf_evicted": []
+    }
+  ],
+  "delivered_refs": [
+    "e1",
+    "e2"
+  ],
+  "submitted_refs": [
+    "e1",
+    "e2"
+  ],
+  "text_included": true,
+  "limitations": [
+    "Equivalence is compiler equality, not semantic identity or wasted-search proof",
+    "Raw-window visibility/selection is not entailment or complete evidence coverage",
+    "No live q26 replay or independent answer scoring is performed"
+  ]
+}

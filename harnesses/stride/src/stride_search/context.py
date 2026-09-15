@@ -6,11 +6,17 @@ from copy import deepcopy
 from .contract import system_message, ContractError, canonical
 from .workflow_contract import POLICY, toolset
 from .decision_protocol import PROTOCOLS
+from .history_projection import project as project_history
 
 
 def build(harness, model, counter, *, final: bool, output_limit: int, groups=None):
     config = harness.config
     history = list(harness.groups if groups is None else groups)
+    middle_history = harness.decision_protocol == "middle-history-v1"
+    first_round = harness.first_complete_round
+    if first_round is None and history:
+        first_round = history[0]["round"]  # Prospective first group during preflight.
+    latest_round = history[-1]["round"] if history else None
     active_notes = sorted(harness.notes.values(), key=lambda n: n["order"])
     nav = list(harness.doc_order)[-16:]
     feedback = harness.feedback
@@ -31,8 +37,14 @@ def build(harness, model, counter, *, final: bool, output_limit: int, groups=Non
         policy = system_message(harness.answer_contract) + (POLICY if harness.workflow.options.enabled else "") + PROTOCOLS[harness.decision_protocol]
         messages = [{"role": "system", "content": policy}, {"role": "user", "content": harness.question}]
         visible, issued = set(), list(nav)
+        history_view = None
+        if middle_history:
+            projected_messages, history_view = project_history(history,
+                first_round=first_round, latest_round=latest_round)
+            messages.extend(projected_messages)
         for group in history:
-            messages.extend(group["messages"])
+            if not middle_history:
+                messages.extend(group["messages"])
             visible.update(group["evidence"])
             issued.extend(r for r in group["documents"] if r not in issued)
         restored = [ref for ref in shelf if ref not in visible]
@@ -76,7 +88,8 @@ def build(harness, model, counter, *, final: bool, output_limit: int, groups=Non
                     "compacted": compacted, "groups": history, "capacity": size, "final": effective_final,
                     "workflow_final": workflow_final, "workflow_view": workflow_view,
                     "rendered_note_keys": [n["key"] for n in active_notes], "shelf": restored, "shelf_evicted": evicted,
-                    **({"search_pivot_projection": pivot} if pivot is not None else {})}
+                    **({"search_pivot_projection": pivot} if pivot is not None else {}),
+                    **({"history_projection": history_view} if middle_history else {})}
         if config.context_mode == "full":
             raise ContractError("context_capacity", "Full-history arm cannot fit its actual wire request", fatal=True)
         compacted = True
