@@ -1,0 +1,1344 @@
+{
+  "protocol": "stride-search-3",
+  "head": "33b38f5b19eb86197a08689978cbd08a8d12c9bafa6be18c8e3187403c7b1207",
+  "outcome": "abstained",
+  "formal_correct": null,
+  "model_attempts": 16,
+  "backend_attempts": 43,
+  "queries": [
+    {
+      "round": 1,
+      "top_k": 10,
+      "equivalence_key": "d1ae356f0c0f594c443d04739599af46251e34070133d9a02ee03a14e8c68b92",
+      "cached": false,
+      "query_sha256": "d03c84fd80694d2e6361eaf1556e69a50669e51a86b9fd6164ec3fe31b44685f",
+      "query": "actor character married three times series one child survives",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"actor\" OR \"character\" OR \"married\" OR \"three\" OR \"times\" OR \"series\" OR \"one\" OR \"child\" OR \"survives\"",
+        "terms": [
+          "actor",
+          "character",
+          "married",
+          "three",
+          "times",
+          "series",
+          "one",
+          "child",
+          "survives"
+        ]
+      }
+    },
+    {
+      "round": 1,
+      "top_k": 10,
+      "equivalence_key": "eeb4246a71a1aafc45bf4866212c2921bea7b40593d6689c0a3284f9aa9a59d5",
+      "cached": false,
+      "query_sha256": "590b3831c494431ae63de98f38692848dc1e581e7cec6d8c9f44a87469864739",
+      "query": "TV series character married multiple times only one child survives real life relative co-star",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"tv\" OR \"series\" OR \"character\" OR \"married\" OR \"multiple\" OR \"times\" OR \"only\" OR \"one\" OR \"child\" OR \"survives\" OR \"real\" OR \"life\" OR \"relative\" OR \"co\" OR \"star\"",
+        "terms": [
+          "tv",
+          "series",
+          "character",
+          "married",
+          "multiple",
+          "times",
+          "only",
+          "one",
+          "child",
+          "survives",
+          "real",
+          "life",
+          "relative",
+          "co",
+          "star"
+        ]
+      }
+    },
+    {
+      "round": 1,
+      "top_k": 10,
+      "equivalence_key": "f0634037631759a198e30ce4106ef5788f86ee225a42c9e583a33b1f3e3f649e",
+      "cached": false,
+      "query_sha256": "ece3d9230a6549de6825fdabcc3f18d41c83bfa40a986c04f86035e0ce7609f4",
+      "query": "soap opera character three marriages one surviving child actor real life family member co-star",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"soap\" OR \"opera\" OR \"character\" OR \"three\" OR \"marriages\" OR \"one\" OR \"surviving\" OR \"child\" OR \"actor\" OR \"real\" OR \"life\" OR \"family\" OR \"member\" OR \"co\" OR \"star\"",
+        "terms": [
+          "soap",
+          "opera",
+          "character",
+          "three",
+          "marriages",
+          "one",
+          "surviving",
+          "child",
+          "actor",
+          "real",
+          "life",
+          "family",
+          "member",
+          "co",
+          "star"
+        ]
+      }
+    },
+    {
+      "round": 1,
+      "top_k": 10,
+      "equivalence_key": "38b5847eb8b2f8f8703ee2d425bd867a2343ce5ef1c8aecd4485ee38ad475cea",
+      "cached": false,
+      "query_sha256": "ec3e04fd4626e210c3c12df8a1bca914f1d33f640d53e3fb028426078997b898",
+      "query": "actor plays with real life relative on TV series unrelated characters",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"actor\" OR \"plays\" OR \"with\" OR \"real\" OR \"life\" OR \"relative\" OR \"on\" OR \"tv\" OR \"series\" OR \"unrelated\" OR \"characters\"",
+        "terms": [
+          "actor",
+          "plays",
+          "with",
+          "real",
+          "life",
+          "relative",
+          "on",
+          "tv",
+          "series",
+          "unrelated",
+          "characters"
+        ]
+      }
+    },
+    {
+      "round": 1,
+      "top_k": 10,
+      "equivalence_key": "3b5e28111d243980b70752323e18d105066b9fd5f7dbdf5d5361e0015592e52a",
+      "cached": false,
+      "query_sha256": "7ad0536afb577a74ef3162ab382d40476403fa6be15c8c5063587232d4c31f03",
+      "query": "entertainer height 1.66 1.67 1.68 1.69 character married three times",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"entertainer\" OR \"height\" OR \"1\" OR \"66\" OR \"67\" OR \"68\" OR \"69\" OR \"character\" OR \"married\" OR \"three\" OR \"times\"",
+        "terms": [
+          "entertainer",
+          "height",
+          "1",
+          "66",
+          "67",
+          "68",
+          "69",
+          "character",
+          "married",
+          "three",
+          "times"
+        ]
+      }
+    },
+    {
+      "round": 2,
+      "top_k": 10,
+      "equivalence_key": "27ea2fade9eb64f630b38ba7be35993130e76e63c048dd9fd7ef9400e0b85116",
+      "cached": false,
+      "query_sha256": "344983848d5a66777e72374d5c425525574f0d52be58c303edec1f53e9e9b3c8",
+      "query": "character married three times only one child survives series real life relative co-star unrelated",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"character\" OR \"married\" OR \"three\" OR \"times\" OR \"only\" OR \"one\" OR \"child\" OR \"survives\" OR \"series\" OR \"real\" OR \"life\" OR \"relative\" OR \"co\" OR \"star\" OR \"unrelated\"",
+        "terms": [
+          "character",
+          "married",
+          "three",
+          "times",
+          "only",
+          "one",
+          "child",
+          "survives",
+          "series",
+          "real",
+          "life",
+          "relative",
+          "co",
+          "star",
+          "unrelated"
+        ]
+      }
+    },
+    {
+      "round": 2,
+      "top_k": 10,
+      "equivalence_key": "31d59ebdb491c0ad60ec2722aab7699c430eea0c5350c009285e656568a12eec",
+      "cached": false,
+      "query_sha256": "65ea7450abb9a556070a80304cb544f6f9c8b16c17b89560ddae1e78f6d4f3ed",
+      "query": "long running TV series character three marriages one surviving child actor real life family member plays unrelated character",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"long\" OR \"running\" OR \"tv\" OR \"series\" OR \"character\" OR \"three\" OR \"marriages\" OR \"one\" OR \"surviving\" OR \"child\" OR \"actor\" OR \"real\" OR \"life\" OR \"family\" OR \"member\" OR \"plays\" OR \"unrelated\"",
+        "terms": [
+          "long",
+          "running",
+          "tv",
+          "series",
+          "character",
+          "three",
+          "marriages",
+          "one",
+          "surviving",
+          "child",
+          "actor",
+          "real",
+          "life",
+          "family",
+          "member",
+          "plays",
+          "unrelated"
+        ]
+      }
+    },
+    {
+      "round": 2,
+      "top_k": 10,
+      "equivalence_key": "5b70816fc64ceb619fdd0330d9414de5b0b547483b09f80dd4fb8ed3b00abf47",
+      "cached": false,
+      "query_sha256": "12ac7fdd7c6898116af000a62e779556d0ba7d27565b2c9fc2f124a7c5083c9f",
+      "query": "Grey's Anatomy character married three times one child survives",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"grey\" OR \"s\" OR \"anatomy\" OR \"character\" OR \"married\" OR \"three\" OR \"times\" OR \"one\" OR \"child\" OR \"survives\"",
+        "terms": [
+          "grey",
+          "s",
+          "anatomy",
+          "character",
+          "married",
+          "three",
+          "times",
+          "one",
+          "child",
+          "survives"
+        ]
+      }
+    },
+    {
+      "round": 2,
+      "top_k": 10,
+      "equivalence_key": "861bd0cb1a3c06ecb929d5f0364fb192f991385bdce64c5d04a8929f4f5f1bea",
+      "cached": false,
+      "query_sha256": "26dad6611c11da83471ee48aebf48328902e4469ecd82b34e2ee008e0bb7afe0",
+      "query": "Grey's Anatomy actor real life relative co-star unrelated characters height",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"grey\" OR \"s\" OR \"anatomy\" OR \"actor\" OR \"real\" OR \"life\" OR \"relative\" OR \"co\" OR \"star\" OR \"unrelated\" OR \"characters\" OR \"height\"",
+        "terms": [
+          "grey",
+          "s",
+          "anatomy",
+          "actor",
+          "real",
+          "life",
+          "relative",
+          "co",
+          "star",
+          "unrelated",
+          "characters",
+          "height"
+        ]
+      }
+    },
+    {
+      "round": 3,
+      "top_k": 10,
+      "equivalence_key": "6228b9954586153fe803f7dc47cacda9254b578cfe7eecc328ba3cde0326fbaa",
+      "cached": false,
+      "query_sha256": "a0cac7ab05eee75cf2caaab9326c08365977ba450496e4f7f7619bf0c8530e42",
+      "query": "Jane the Virgin character married three times one child survives",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"jane\" OR \"the\" OR \"virgin\" OR \"character\" OR \"married\" OR \"three\" OR \"times\" OR \"one\" OR \"child\" OR \"survives\"",
+        "terms": [
+          "jane",
+          "the",
+          "virgin",
+          "character",
+          "married",
+          "three",
+          "times",
+          "one",
+          "child",
+          "survives"
+        ]
+      }
+    },
+    {
+      "round": 3,
+      "top_k": 10,
+      "equivalence_key": "46107d1450c94821da6d1cd7d107922ebb1dfd33f42b8c953fda140b953e00b5",
+      "cached": false,
+      "query_sha256": "450694553b7cf40ca973d6feee88f6a88b8a3eefc64363cbec86d16b38e03f5b",
+      "query": "Jane the Virgin actor real life relative co-star unrelated characters",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"jane\" OR \"the\" OR \"virgin\" OR \"actor\" OR \"real\" OR \"life\" OR \"relative\" OR \"co\" OR \"star\" OR \"unrelated\" OR \"characters\"",
+        "terms": [
+          "jane",
+          "the",
+          "virgin",
+          "actor",
+          "real",
+          "life",
+          "relative",
+          "co",
+          "star",
+          "unrelated",
+          "characters"
+        ]
+      }
+    },
+    {
+      "round": 3,
+      "top_k": 10,
+      "equivalence_key": "a99d1f280b6312cdd2cfbbad9387786d7834a8abb66a3a0deb1da2002b0378a5",
+      "cached": false,
+      "query_sha256": "3815a77a86cf57be6a7bf58a99675ffd5d5c282518d5de45da072b2cd43a0770",
+      "query": "This Is Us character married three times one child survives",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"this\" OR \"is\" OR \"us\" OR \"character\" OR \"married\" OR \"three\" OR \"times\" OR \"one\" OR \"child\" OR \"survives\"",
+        "terms": [
+          "this",
+          "is",
+          "us",
+          "character",
+          "married",
+          "three",
+          "times",
+          "one",
+          "child",
+          "survives"
+        ]
+      }
+    },
+    {
+      "round": 3,
+      "top_k": 10,
+      "equivalence_key": "e8d001293a2a204c666fae6fdb4c0e17e4a16687c71e21830b3a1e156adaaab3",
+      "cached": false,
+      "query_sha256": "fd2590f2d303a2a8e51e44df672ec0bce89bcd5df6d0963c35afe2c18f16c0c7",
+      "query": "This Is Us actor real life relative co-star height",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"this\" OR \"is\" OR \"us\" OR \"actor\" OR \"real\" OR \"life\" OR \"relative\" OR \"co\" OR \"star\" OR \"height\"",
+        "terms": [
+          "this",
+          "is",
+          "us",
+          "actor",
+          "real",
+          "life",
+          "relative",
+          "co",
+          "star",
+          "height"
+        ]
+      }
+    },
+    {
+      "round": 4,
+      "top_k": 10,
+      "equivalence_key": "ddf30dc5d2b448226935c19f43ed72963dc5f5c9dda653977fd368dd2df2c0a4",
+      "cached": false,
+      "query_sha256": "c5d02ead7dedb8ed820dea2bf844c3bc41f332c3699dd9630b4fc8d5dcaa36f7",
+      "query": "Grey's Anatomy Callie Torres marriages children",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"grey\" OR \"s\" OR \"anatomy\" OR \"callie\" OR \"torres\" OR \"marriages\" OR \"children\"",
+        "terms": [
+          "grey",
+          "s",
+          "anatomy",
+          "callie",
+          "torres",
+          "marriages",
+          "children"
+        ]
+      }
+    },
+    {
+      "round": 4,
+      "top_k": 10,
+      "equivalence_key": "1903dfd43c2af06a360a85950f614457a3fed99be6608234a861c1fc9d1eac90",
+      "cached": false,
+      "query_sha256": "f08ebcea4fbc7f345faeaf0d62f01bb24eff531a4254f34a9adf8e9c31644ac1",
+      "query": "Sara Ramirez height real life",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"sara\" OR \"ramirez\" OR \"height\" OR \"real\" OR \"life\"",
+        "terms": [
+          "sara",
+          "ramirez",
+          "height",
+          "real",
+          "life"
+        ]
+      }
+    },
+    {
+      "round": 4,
+      "top_k": 10,
+      "equivalence_key": "e48d770820f7b5bbc546c901db4b63361deb7bc4197dcc6945783482794b250d",
+      "cached": false,
+      "query_sha256": "f75cd7ee5222523f6fb37b88babe5b616b7d652622b8860f8123f9e350a49ab1",
+      "query": "Modern Family Sofia Vergara height real life relative co-star",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"modern\" OR \"family\" OR \"sofia\" OR \"vergara\" OR \"height\" OR \"real\" OR \"life\" OR \"relative\" OR \"co\" OR \"star\"",
+        "terms": [
+          "modern",
+          "family",
+          "sofia",
+          "vergara",
+          "height",
+          "real",
+          "life",
+          "relative",
+          "co",
+          "star"
+        ]
+      }
+    },
+    {
+      "round": 4,
+      "top_k": 10,
+      "equivalence_key": "32894c3fac9b4a00cd6d1559af3916cef2a871f62baba2cc4874481099c0bd7f",
+      "cached": false,
+      "query_sha256": "a50fe5f1cbf1d9796a051c02355eacda51587d4f67a8efb330bcc4e3edf7c68b",
+      "query": "Modern Family Gloria character marriages children",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"modern\" OR \"family\" OR \"gloria\" OR \"character\" OR \"marriages\" OR \"children\"",
+        "terms": [
+          "modern",
+          "family",
+          "gloria",
+          "character",
+          "marriages",
+          "children"
+        ]
+      }
+    },
+    {
+      "round": 5,
+      "top_k": 10,
+      "equivalence_key": "7d403a2e2f6b78df8cb9f86647f16967b8651aff09494c2be23bead0f7b87114",
+      "cached": false,
+      "query_sha256": "1a4d9b953f5160c29dbe5b799c135267f057092ead324f77eb4c1e53e32db453",
+      "query": "Grey's Anatomy Callie Torres marriages George Arizona Penny",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"grey\" OR \"s\" OR \"anatomy\" OR \"callie\" OR \"torres\" OR \"marriages\" OR \"george\" OR \"arizona\" OR \"penny\"",
+        "terms": [
+          "grey",
+          "s",
+          "anatomy",
+          "callie",
+          "torres",
+          "marriages",
+          "george",
+          "arizona",
+          "penny"
+        ]
+      }
+    },
+    {
+      "round": 5,
+      "top_k": 10,
+      "equivalence_key": "8479cd25fc1bfc7fe8bc43f8101e0c3fddea25a278c815e58d156fa72efb246c",
+      "cached": false,
+      "query_sha256": "1bb48191af992eb9acd7d7036a1df656e54b5cd24bd9eadceecedf61cfee0dc2",
+      "query": "Callie Torres children Sofia only child survives",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"callie\" OR \"torres\" OR \"children\" OR \"sofia\" OR \"only\" OR \"child\" OR \"survives\"",
+        "terms": [
+          "callie",
+          "torres",
+          "children",
+          "sofia",
+          "only",
+          "child",
+          "survives"
+        ]
+      }
+    },
+    {
+      "round": 5,
+      "top_k": 10,
+      "equivalence_key": "6c7168b28a33068709fe09a44b06b4671b6e29dea43ad5c99d6e08da5bd0404e",
+      "cached": false,
+      "query_sha256": "f5cb7ee38019db6dd096faaa713db6f5e4efaec04d3cd32c6842d7ffc863f528",
+      "query": "Sofia Vergara height cm",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"sofia\" OR \"vergara\" OR \"height\" OR \"cm\"",
+        "terms": [
+          "sofia",
+          "vergara",
+          "height",
+          "cm"
+        ]
+      }
+    },
+    {
+      "round": 5,
+      "top_k": 10,
+      "equivalence_key": "39ec086be7c5868f1951e8f184f4eecbb0f2bb601432e850c4242e11764905f4",
+      "cached": false,
+      "query_sha256": "6556ad7faf2ba42dfe0b0d0b6a6f61c68648ccf0de49822efa9972793dd26503",
+      "query": "Sofia Vergara real life relative Modern Family co-star son Manolo",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"sofia\" OR \"vergara\" OR \"real\" OR \"life\" OR \"relative\" OR \"modern\" OR \"family\" OR \"co\" OR \"star\" OR \"son\" OR \"manolo\"",
+        "terms": [
+          "sofia",
+          "vergara",
+          "real",
+          "life",
+          "relative",
+          "modern",
+          "family",
+          "co",
+          "star",
+          "son",
+          "manolo"
+        ]
+      }
+    },
+    {
+      "round": 6,
+      "top_k": 10,
+      "equivalence_key": "b0226f441a35bd604d439994e42921804620d1adb15d7c800650e96d6eb16f9a",
+      "cached": false,
+      "query_sha256": "09fb2627bde7e2447fc610527f3c3e9fb7f03359024216104fdd47f66e66f2e1",
+      "query": "Callie Torres Wikipedia marriages children Grey's Anatomy",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"callie\" OR \"torres\" OR \"wikipedia\" OR \"marriages\" OR \"children\" OR \"grey\" OR \"s\" OR \"anatomy\"",
+        "terms": [
+          "callie",
+          "torres",
+          "wikipedia",
+          "marriages",
+          "children",
+          "grey",
+          "s",
+          "anatomy"
+        ]
+      }
+    },
+    {
+      "round": 6,
+      "top_k": 10,
+      "equivalence_key": "e75c5f0a804ac10adcafafb2edc083273c6332d0f8f8a6b03059317905abaedc",
+      "cached": false,
+      "query_sha256": "3d234a5da05eab4f9c4febe5852c42f0da7ae57ca0d6b1dc32f12a2a7efa9638",
+      "query": "Sara Ramirez height",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"sara\" OR \"ramirez\" OR \"height\"",
+        "terms": [
+          "sara",
+          "ramirez",
+          "height"
+        ]
+      }
+    },
+    {
+      "round": 6,
+      "top_k": 10,
+      "equivalence_key": "5d2a04ff2b357b4cc4fe481ee999e000639bf9fee13bc4fc5c1d4f39f963c35d",
+      "cached": false,
+      "query_sha256": "e09490e9488416d62a3421007facb05591f18655cdcb6f980de86d19d5d9dced",
+      "query": "TV character married three times one child survives real life relative co-star unrelated series",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"tv\" OR \"character\" OR \"married\" OR \"three\" OR \"times\" OR \"one\" OR \"child\" OR \"survives\" OR \"real\" OR \"life\" OR \"relative\" OR \"co\" OR \"star\" OR \"unrelated\" OR \"series\"",
+        "terms": [
+          "tv",
+          "character",
+          "married",
+          "three",
+          "times",
+          "one",
+          "child",
+          "survives",
+          "real",
+          "life",
+          "relative",
+          "co",
+          "star",
+          "unrelated",
+          "series"
+        ]
+      }
+    },
+    {
+      "round": 6,
+      "top_k": 10,
+      "equivalence_key": "0298e5fc742817a32e6288947a6618c353f69f4263894456551533173f7c7cea",
+      "cached": false,
+      "query_sha256": "6c4a6c467a1a9e07e13f56e946caa4c6a8965b78f01738a76752a89e1adde42e",
+      "query": "actress plays with real life relative unrelated on TV show married three times",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"actress\" OR \"plays\" OR \"with\" OR \"real\" OR \"life\" OR \"relative\" OR \"unrelated\" OR \"on\" OR \"tv\" OR \"show\" OR \"married\" OR \"three\" OR \"times\"",
+        "terms": [
+          "actress",
+          "plays",
+          "with",
+          "real",
+          "life",
+          "relative",
+          "unrelated",
+          "on",
+          "tv",
+          "show",
+          "married",
+          "three",
+          "times"
+        ]
+      }
+    },
+    {
+      "round": 7,
+      "top_k": 10,
+      "equivalence_key": "072130382aba821b4451a256edb155aea7c0bf4f499289d8b0e3c44537494b72",
+      "cached": false,
+      "query_sha256": "f7a10085fceefd66a244bdbc63c68bc54e959e694d63e24bbf4909ae39f8ac15",
+      "query": "Grey's Anatomy Callie Torres marriages George O'Malley Arizona Robbins Penny Blake",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"grey\" OR \"s\" OR \"anatomy\" OR \"callie\" OR \"torres\" OR \"marriages\" OR \"george\" OR \"o\" OR \"malley\" OR \"arizona\" OR \"robbins\" OR \"penny\" OR \"blake\"",
+        "terms": [
+          "grey",
+          "s",
+          "anatomy",
+          "callie",
+          "torres",
+          "marriages",
+          "george",
+          "o",
+          "malley",
+          "arizona",
+          "robbins",
+          "penny",
+          "blake"
+        ]
+      }
+    },
+    {
+      "round": 7,
+      "top_k": 10,
+      "equivalence_key": "a6d5cbb47f7f98597df789f18e491743334a6754737d9c2d8760aca5056fa19e",
+      "cached": false,
+      "query_sha256": "35984bc1e197ea18a5611518bbda892c6717628c6b4d6e5d8e9dc74b2b2516fc",
+      "query": "Callie Torres daughter Sofia Robbins Torres Grey's Anatomy",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"callie\" OR \"torres\" OR \"daughter\" OR \"sofia\" OR \"robbins\" OR \"grey\" OR \"s\" OR \"anatomy\"",
+        "terms": [
+          "callie",
+          "torres",
+          "daughter",
+          "sofia",
+          "robbins",
+          "grey",
+          "s",
+          "anatomy"
+        ]
+      }
+    },
+    {
+      "round": 7,
+      "top_k": 10,
+      "equivalence_key": "77b9924069f279f9be527d689d998c8390d04526ce732453d3809106bae23ee3",
+      "cached": false,
+      "query_sha256": "c6b0b9b16e9f60120bcf9d4163eab1845368265aae43239e27099f0cf10830a9",
+      "query": "Sofia Vergara height 1.70 meters",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"sofia\" OR \"vergara\" OR \"height\" OR \"1\" OR \"70\" OR \"meters\"",
+        "terms": [
+          "sofia",
+          "vergara",
+          "height",
+          "1",
+          "70",
+          "meters"
+        ]
+      }
+    },
+    {
+      "round": 7,
+      "top_k": 10,
+      "equivalence_key": "2fd44ce88091eb5f08e85dac00f823ca6573c2b220d83992b7874869c0c5c8fc",
+      "cached": false,
+      "query_sha256": "5b5b9a74d677b1f0e7d276f9bdbe2a6e80ee3cc275fa99b00f6056f0d7d8c4ed",
+      "query": "Sofia Vergara Modern Family son Manolo co-star",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"sofia\" OR \"vergara\" OR \"modern\" OR \"family\" OR \"son\" OR \"manolo\" OR \"co\" OR \"star\"",
+        "terms": [
+          "sofia",
+          "vergara",
+          "modern",
+          "family",
+          "son",
+          "manolo",
+          "co",
+          "star"
+        ]
+      }
+    },
+    {
+      "round": 8,
+      "top_k": 10,
+      "equivalence_key": "665bf5409212b2bc3e148a2ec4174486c6c30259f2859e0505385158dda37604",
+      "cached": false,
+      "query_sha256": "b525e1f76e3eff732af1e7661eb6e0ffa97851d934fe9a453b7247f142c2b77b",
+      "query": "Callie Torres Wikipedia Grey's Anatomy character marriages children",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"callie\" OR \"torres\" OR \"wikipedia\" OR \"grey\" OR \"s\" OR \"anatomy\" OR \"character\" OR \"marriages\" OR \"children\"",
+        "terms": [
+          "callie",
+          "torres",
+          "wikipedia",
+          "grey",
+          "s",
+          "anatomy",
+          "character",
+          "marriages",
+          "children"
+        ]
+      }
+    },
+    {
+      "round": 8,
+      "top_k": 10,
+      "equivalence_key": "44b3636d29de2ebe7a81e208b14fde7d2d473d81543d847a39e0e13f7c5e6552",
+      "cached": false,
+      "query_sha256": "624f1256645948e0285e7a9aae35a3a529a57b76e844196b6205a9d948dad459",
+      "query": "Sara Ramirez height cm",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"sara\" OR \"ramirez\" OR \"height\" OR \"cm\"",
+        "terms": [
+          "sara",
+          "ramirez",
+          "height",
+          "cm"
+        ]
+      }
+    },
+    {
+      "round": 8,
+      "top_k": 10,
+      "equivalence_key": "a5ec6097745c151c3cec9503ba27e767a22d5b009804eede138fb3efedaa09a7",
+      "cached": false,
+      "query_sha256": "468445d3bc31b0a3ee812de0a1b05d17ddc7060ff03942db546638e3f043ca10",
+      "query": "actress real life relative co-star unrelated character TV series married three times one child survives",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"actress\" OR \"real\" OR \"life\" OR \"relative\" OR \"co\" OR \"star\" OR \"unrelated\" OR \"character\" OR \"tv\" OR \"series\" OR \"married\" OR \"three\" OR \"times\" OR \"one\" OR \"child\" OR \"survives\"",
+        "terms": [
+          "actress",
+          "real",
+          "life",
+          "relative",
+          "co",
+          "star",
+          "unrelated",
+          "character",
+          "tv",
+          "series",
+          "married",
+          "three",
+          "times",
+          "one",
+          "child",
+          "survives"
+        ]
+      }
+    },
+    {
+      "round": 8,
+      "top_k": 10,
+      "equivalence_key": "8caf9de1f98500a7cd2bf61451819888bab3728571a772597a6d011b7c4495fd",
+      "cached": false,
+      "query_sha256": "fd2e422d8bed46e5aa2d6823f61e6328f104229e9fa4560326d60bccd2d1d58f",
+      "query": "TV show character married three times only one child survives actress plays with real life relative",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"tv\" OR \"show\" OR \"character\" OR \"married\" OR \"three\" OR \"times\" OR \"only\" OR \"one\" OR \"child\" OR \"survives\" OR \"actress\" OR \"plays\" OR \"with\" OR \"real\" OR \"life\" OR \"relative\"",
+        "terms": [
+          "tv",
+          "show",
+          "character",
+          "married",
+          "three",
+          "times",
+          "only",
+          "one",
+          "child",
+          "survives",
+          "actress",
+          "plays",
+          "with",
+          "real",
+          "life",
+          "relative"
+        ]
+      }
+    },
+    {
+      "round": 9,
+      "top_k": 10,
+      "equivalence_key": "81f72e26a0bb690d7c57b5628d0ef9854bcfdc730f3c0cd6e1f7a05ad1b05901",
+      "cached": false,
+      "query_sha256": "56425b02e7b4c8d3e18a08b95a89bd0701a1d08839b60b816c8c91e8e906ab4b",
+      "query": "Callie Torres Wikipedia",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"callie\" OR \"torres\" OR \"wikipedia\"",
+        "terms": [
+          "callie",
+          "torres",
+          "wikipedia"
+        ]
+      }
+    },
+    {
+      "round": 9,
+      "top_k": 10,
+      "equivalence_key": "e75c5f0a804ac10adcafafb2edc083273c6332d0f8f8a6b03059317905abaedc",
+      "cached": true,
+      "query_sha256": "3d234a5da05eab4f9c4febe5852c42f0da7ae57ca0d6b1dc32f12a2a7efa9638",
+      "query": "Sara Ramirez height",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"sara\" OR \"ramirez\" OR \"height\"",
+        "terms": [
+          "sara",
+          "ramirez",
+          "height"
+        ]
+      }
+    },
+    {
+      "round": 9,
+      "top_k": 10,
+      "equivalence_key": "636f1a0243006684fc9e36cc00cdeb9f13ead08d279b8b378ad232c94d2a1f61",
+      "cached": false,
+      "query_sha256": "ff2c0db5f955bfcd9bce7bd5059f3abad6b1be4ae45d3b1086caea3493d584b7",
+      "query": "Gloria Pritchett Modern Family married three times Joe Fulgencio",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"gloria\" OR \"pritchett\" OR \"modern\" OR \"family\" OR \"married\" OR \"three\" OR \"times\" OR \"joe\" OR \"fulgencio\"",
+        "terms": [
+          "gloria",
+          "pritchett",
+          "modern",
+          "family",
+          "married",
+          "three",
+          "times",
+          "joe",
+          "fulgencio"
+        ]
+      }
+    },
+    {
+      "round": 9,
+      "top_k": 10,
+      "equivalence_key": "32c493d632b82ed4c89773bb91566fd64ba7141f38465f8ebfdfca8fb83b0d8a",
+      "cached": false,
+      "query_sha256": "06201ec8639cbc97add0f0f4c6c88ce926ad82e54dda8571e5447bab04624d36",
+      "query": "Sofia Vergara real life son Manolo Modern Family co-star unrelated",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"sofia\" OR \"vergara\" OR \"real\" OR \"life\" OR \"son\" OR \"manolo\" OR \"modern\" OR \"family\" OR \"co\" OR \"star\" OR \"unrelated\"",
+        "terms": [
+          "sofia",
+          "vergara",
+          "real",
+          "life",
+          "son",
+          "manolo",
+          "modern",
+          "family",
+          "co",
+          "star",
+          "unrelated"
+        ]
+      }
+    },
+    {
+      "round": 10,
+      "top_k": 10,
+      "equivalence_key": "1daa251bf1977e689f107681b0295798366a62f4aa4b26393bd71c4f687cb89d",
+      "cached": false,
+      "query_sha256": "9b3f740b453317f5187459943365276f9864feca8105edd9c3f323edfdc894c9",
+      "query": "Gloria Delgado-Pritchett Wikipedia Modern Family character",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"gloria\" OR \"delgado\" OR \"pritchett\" OR \"wikipedia\" OR \"modern\" OR \"family\" OR \"character\"",
+        "terms": [
+          "gloria",
+          "delgado",
+          "pritchett",
+          "wikipedia",
+          "modern",
+          "family",
+          "character"
+        ]
+      }
+    },
+    {
+      "round": 10,
+      "top_k": 10,
+      "equivalence_key": "e6f7872b2fc8ca3916e540002bcd3ae7c5b5871e74ddb5a297ef9c6f94667635",
+      "cached": false,
+      "query_sha256": "6b98365baa2edcb85eba77f4b1645dc115558dfc34994dc3148ca2df51909fcf",
+      "query": "Sofia Vergara Wikipedia height",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"sofia\" OR \"vergara\" OR \"wikipedia\" OR \"height\"",
+        "terms": [
+          "sofia",
+          "vergara",
+          "wikipedia",
+          "height"
+        ]
+      }
+    },
+    {
+      "round": 10,
+      "top_k": 10,
+      "equivalence_key": "599e2de86d62376594ef5bab992a5bb88832d42f535d4453142adc8fb39c13e5",
+      "cached": false,
+      "query_sha256": "c967a2389fc8f0d6a487b035f7973907eef5fd3e9fbe41494571c2f0db93e890",
+      "query": "Modern Family Gloria first husband Javier second husband Jay children Manny Joe",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"modern\" OR \"family\" OR \"gloria\" OR \"first\" OR \"husband\" OR \"javier\" OR \"second\" OR \"jay\" OR \"children\" OR \"manny\" OR \"joe\"",
+        "terms": [
+          "modern",
+          "family",
+          "gloria",
+          "first",
+          "husband",
+          "javier",
+          "second",
+          "jay",
+          "children",
+          "manny",
+          "joe"
+        ]
+      }
+    },
+    {
+      "round": 10,
+      "top_k": 10,
+      "equivalence_key": "2c3085f1a4cd4b5ddeb2f124273de4878d3e08fbb2281c6512ef550794e85d8d",
+      "cached": false,
+      "query_sha256": "7858433dedd522a7e56a472d4470a1c1029c4b3adeafa49f3205facd775763ce",
+      "query": "Sofia Vergara son Manolo Modern Family cameo unrelated character",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"sofia\" OR \"vergara\" OR \"son\" OR \"manolo\" OR \"modern\" OR \"family\" OR \"cameo\" OR \"unrelated\" OR \"character\"",
+        "terms": [
+          "sofia",
+          "vergara",
+          "son",
+          "manolo",
+          "modern",
+          "family",
+          "cameo",
+          "unrelated",
+          "character"
+        ]
+      }
+    },
+    {
+      "round": 11,
+      "top_k": 10,
+      "equivalence_key": "e6f7872b2fc8ca3916e540002bcd3ae7c5b5871e74ddb5a297ef9c6f94667635",
+      "cached": true,
+      "query_sha256": "6b98365baa2edcb85eba77f4b1645dc115558dfc34994dc3148ca2df51909fcf",
+      "query": "Sofia Vergara Wikipedia height",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"sofia\" OR \"vergara\" OR \"wikipedia\" OR \"height\"",
+        "terms": [
+          "sofia",
+          "vergara",
+          "wikipedia",
+          "height"
+        ]
+      }
+    },
+    {
+      "round": 11,
+      "top_k": 10,
+      "equivalence_key": "9a8cce04a85e8bd7f2215d3f535d4ac41a39d285a423b43245b34e69d3c237ce",
+      "cached": false,
+      "query_sha256": "ab879cb2ad3367a94910470412f3732d357033e04476a40b03e0af52240dac8a",
+      "query": "Gloria Delgado-Pritchett Wikipedia character",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"gloria\" OR \"delgado\" OR \"pritchett\" OR \"wikipedia\" OR \"character\"",
+        "terms": [
+          "gloria",
+          "delgado",
+          "pritchett",
+          "wikipedia",
+          "character"
+        ]
+      }
+    },
+    {
+      "round": 11,
+      "top_k": 10,
+      "equivalence_key": "af96bfdb5ed622ad6c55301feca1d772937be8c79d1c86246a2bfac6aa727bf3",
+      "cached": false,
+      "query_sha256": "66b677dcfdf90688428b1cf6d5d62b3b9156a3becbd30b594d112cc4aac660e5",
+      "query": "Modern Family Gloria husbands Javier Jay children Manny Joe Fulgencio",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"modern\" OR \"family\" OR \"gloria\" OR \"husbands\" OR \"javier\" OR \"jay\" OR \"children\" OR \"manny\" OR \"joe\" OR \"fulgencio\"",
+        "terms": [
+          "modern",
+          "family",
+          "gloria",
+          "husbands",
+          "javier",
+          "jay",
+          "children",
+          "manny",
+          "joe",
+          "fulgencio"
+        ]
+      }
+    },
+    {
+      "round": 11,
+      "top_k": 10,
+      "equivalence_key": "b1bb0226b6cabd6142986203f3619e252221ac39990d5f65206e2fc8dd07ee2d",
+      "cached": false,
+      "query_sha256": "1d9d3ab3e05e402e5269cbd8fcd182883f3149906f111a59f081e297741ddc47",
+      "query": "Sofia Vergara son Manolo Modern Family cameo",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"sofia\" OR \"vergara\" OR \"son\" OR \"manolo\" OR \"modern\" OR \"family\" OR \"cameo\"",
+        "terms": [
+          "sofia",
+          "vergara",
+          "son",
+          "manolo",
+          "modern",
+          "family",
+          "cameo"
+        ]
+      }
+    },
+    {
+      "round": 12,
+      "top_k": 10,
+      "equivalence_key": "e6f7872b2fc8ca3916e540002bcd3ae7c5b5871e74ddb5a297ef9c6f94667635",
+      "cached": true,
+      "query_sha256": "6b98365baa2edcb85eba77f4b1645dc115558dfc34994dc3148ca2df51909fcf",
+      "query": "Sofia Vergara Wikipedia height",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"sofia\" OR \"vergara\" OR \"wikipedia\" OR \"height\"",
+        "terms": [
+          "sofia",
+          "vergara",
+          "wikipedia",
+          "height"
+        ]
+      }
+    },
+    {
+      "round": 12,
+      "top_k": 10,
+      "equivalence_key": "9a8cce04a85e8bd7f2215d3f535d4ac41a39d285a423b43245b34e69d3c237ce",
+      "cached": true,
+      "query_sha256": "ab879cb2ad3367a94910470412f3732d357033e04476a40b03e0af52240dac8a",
+      "query": "Gloria Delgado-Pritchett Wikipedia character",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"gloria\" OR \"delgado\" OR \"pritchett\" OR \"wikipedia\" OR \"character\"",
+        "terms": [
+          "gloria",
+          "delgado",
+          "pritchett",
+          "wikipedia",
+          "character"
+        ]
+      }
+    },
+    {
+      "round": 12,
+      "top_k": 10,
+      "equivalence_key": "af96bfdb5ed622ad6c55301feca1d772937be8c79d1c86246a2bfac6aa727bf3",
+      "cached": true,
+      "query_sha256": "66b677dcfdf90688428b1cf6d5d62b3b9156a3becbd30b594d112cc4aac660e5",
+      "query": "Modern Family Gloria husbands Javier Jay children Manny Joe Fulgencio",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"modern\" OR \"family\" OR \"gloria\" OR \"husbands\" OR \"javier\" OR \"jay\" OR \"children\" OR \"manny\" OR \"joe\" OR \"fulgencio\"",
+        "terms": [
+          "modern",
+          "family",
+          "gloria",
+          "husbands",
+          "javier",
+          "jay",
+          "children",
+          "manny",
+          "joe",
+          "fulgencio"
+        ]
+      }
+    },
+    {
+      "round": 12,
+      "top_k": 10,
+      "equivalence_key": "b1bb0226b6cabd6142986203f3619e252221ac39990d5f65206e2fc8dd07ee2d",
+      "cached": true,
+      "query_sha256": "1d9d3ab3e05e402e5269cbd8fcd182883f3149906f111a59f081e297741ddc47",
+      "query": "Sofia Vergara son Manolo Modern Family cameo",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"sofia\" OR \"vergara\" OR \"son\" OR \"manolo\" OR \"modern\" OR \"family\" OR \"cameo\"",
+        "terms": [
+          "sofia",
+          "vergara",
+          "son",
+          "manolo",
+          "modern",
+          "family",
+          "cameo"
+        ]
+      }
+    },
+    {
+      "round": 13,
+      "top_k": 10,
+      "equivalence_key": "e6f7872b2fc8ca3916e540002bcd3ae7c5b5871e74ddb5a297ef9c6f94667635",
+      "cached": true,
+      "query_sha256": "6b98365baa2edcb85eba77f4b1645dc115558dfc34994dc3148ca2df51909fcf",
+      "query": "Sofia Vergara Wikipedia height",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"sofia\" OR \"vergara\" OR \"wikipedia\" OR \"height\"",
+        "terms": [
+          "sofia",
+          "vergara",
+          "wikipedia",
+          "height"
+        ]
+      }
+    },
+    {
+      "round": 13,
+      "top_k": 10,
+      "equivalence_key": "9a8cce04a85e8bd7f2215d3f535d4ac41a39d285a423b43245b34e69d3c237ce",
+      "cached": true,
+      "query_sha256": "ab879cb2ad3367a94910470412f3732d357033e04476a40b03e0af52240dac8a",
+      "query": "Gloria Delgado-Pritchett Wikipedia character",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"gloria\" OR \"delgado\" OR \"pritchett\" OR \"wikipedia\" OR \"character\"",
+        "terms": [
+          "gloria",
+          "delgado",
+          "pritchett",
+          "wikipedia",
+          "character"
+        ]
+      }
+    },
+    {
+      "round": 13,
+      "top_k": 10,
+      "equivalence_key": "af96bfdb5ed622ad6c55301feca1d772937be8c79d1c86246a2bfac6aa727bf3",
+      "cached": true,
+      "query_sha256": "66b677dcfdf90688428b1cf6d5d62b3b9156a3becbd30b594d112cc4aac660e5",
+      "query": "Modern Family Gloria husbands Javier Jay children Manny Joe Fulgencio",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"modern\" OR \"family\" OR \"gloria\" OR \"husbands\" OR \"javier\" OR \"jay\" OR \"children\" OR \"manny\" OR \"joe\" OR \"fulgencio\"",
+        "terms": [
+          "modern",
+          "family",
+          "gloria",
+          "husbands",
+          "javier",
+          "jay",
+          "children",
+          "manny",
+          "joe",
+          "fulgencio"
+        ]
+      }
+    },
+    {
+      "round": 13,
+      "top_k": 10,
+      "equivalence_key": "b1bb0226b6cabd6142986203f3619e252221ac39990d5f65206e2fc8dd07ee2d",
+      "cached": true,
+      "query_sha256": "1d9d3ab3e05e402e5269cbd8fcd182883f3149906f111a59f081e297741ddc47",
+      "query": "Sofia Vergara son Manolo Modern Family cameo",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"sofia\" OR \"vergara\" OR \"son\" OR \"manolo\" OR \"modern\" OR \"family\" OR \"cameo\"",
+        "terms": [
+          "sofia",
+          "vergara",
+          "son",
+          "manolo",
+          "modern",
+          "family",
+          "cameo"
+        ]
+      }
+    }
+  ],
+  "equivalent_query_repeats": 10,
+  "views": [
+    {
+      "round": 1,
+      "compacted": false,
+      "visible_evidence": [],
+      "shelf": [],
+      "shelf_evicted": []
+    },
+    {
+      "round": 2,
+      "compacted": false,
+      "visible_evidence": [],
+      "shelf": [],
+      "shelf_evicted": []
+    },
+    {
+      "round": 3,
+      "compacted": false,
+      "visible_evidence": [],
+      "shelf": [],
+      "shelf_evicted": []
+    },
+    {
+      "round": 4,
+      "compacted": true,
+      "visible_evidence": [],
+      "shelf": [],
+      "shelf_evicted": []
+    },
+    {
+      "round": 5,
+      "compacted": true,
+      "visible_evidence": [],
+      "shelf": [],
+      "shelf_evicted": []
+    },
+    {
+      "round": 6,
+      "compacted": true,
+      "visible_evidence": [],
+      "shelf": [],
+      "shelf_evicted": []
+    },
+    {
+      "round": 7,
+      "compacted": true,
+      "visible_evidence": [],
+      "shelf": [],
+      "shelf_evicted": []
+    },
+    {
+      "round": 8,
+      "compacted": true,
+      "visible_evidence": [],
+      "shelf": [],
+      "shelf_evicted": []
+    },
+    {
+      "round": 9,
+      "compacted": true,
+      "visible_evidence": [],
+      "shelf": [],
+      "shelf_evicted": []
+    },
+    {
+      "round": 10,
+      "compacted": true,
+      "visible_evidence": [],
+      "shelf": [],
+      "shelf_evicted": []
+    },
+    {
+      "round": 11,
+      "compacted": true,
+      "visible_evidence": [],
+      "shelf": [],
+      "shelf_evicted": []
+    },
+    {
+      "round": 12,
+      "compacted": true,
+      "visible_evidence": [],
+      "shelf": [],
+      "shelf_evicted": []
+    },
+    {
+      "round": 13,
+      "compacted": false,
+      "visible_evidence": [],
+      "shelf": [],
+      "shelf_evicted": []
+    },
+    {
+      "round": 14,
+      "compacted": true,
+      "visible_evidence": [],
+      "shelf": [],
+      "shelf_evicted": []
+    },
+    {
+      "round": 15,
+      "compacted": false,
+      "visible_evidence": [],
+      "shelf": [],
+      "shelf_evicted": []
+    },
+    {
+      "round": 16,
+      "compacted": false,
+      "visible_evidence": [],
+      "shelf": [],
+      "shelf_evicted": []
+    }
+  ],
+  "delivered_refs": [],
+  "submitted_refs": [],
+  "text_included": true,
+  "limitations": [
+    "Equivalence is compiler equality, not semantic identity or wasted-search proof",
+    "Raw-window visibility/selection is not entailment or complete evidence coverage",
+    "No live q26 replay or independent answer scoring is performed"
+  ]
+}

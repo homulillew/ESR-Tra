@@ -1,0 +1,217 @@
+{
+  "all_checks_passed": true,
+  "seal_files": 60,
+  "chain": {
+    "event_count": 238,
+    "head": "afd2858ea33588fc38053f616aa4e071457f374ab9ac1ced302515cba0c9e8c3"
+  },
+  "wire_matches_archive": true,
+  "r4_system_suffix_hash_verified": true,
+  "read_schema_original": true,
+  "r5_system_tools_restored": true,
+  "trigger": {
+    "identity": {
+      "base_read_rule": {
+        "kind": "temporary_tool_availability_not_verified_evidence",
+        "rule": {
+          "capacity": "recompute tools and visible navigation on each candidate build",
+          "commit": "after actual request archive before send; failed send consumes",
+          "consecutive_rounds": 3,
+          "extra_model_calls": 0,
+          "final": false,
+          "max_triggers": 1,
+          "messages": "unchanged",
+          "minimum_remaining_model_calls": 3,
+          "navigation": "retained group documents or rendered control pages; intersect read authorization",
+          "observation": "successful search receipt executed and ok; no new raw passage delivered",
+          "tools": "original read schema only; original batch limit; no forced tool choice",
+          "version": "read-only-once-v1"
+        },
+        "rule_sha256": "c5215cce37479fb19aa0f3ff146b2b6e2748cf7f89007140fce59e92f92cd6bc",
+        "version": "read-only-once-v1"
+      },
+      "instruction_location": "append to system content only on triggered request",
+      "instruction_sha256": "acdfd7e4892f31ea311b77c6cd0a90c77c0841ce86c4be99f5f04f5c0957c0ce",
+      "kind": "temporary_tool_availability_with_explicit_stage_instruction",
+      "version": "read-only-explicit-v1"
+    },
+    "native_tools_sha256": "82cba8a4a01c2197f768888ac0896a50f5fc053d172739ddb0b0c30e100141ce",
+    "observation": "no new source passage",
+    "round": 4,
+    "source_rounds": [
+      1,
+      2,
+      3
+    ],
+    "system_sha256": "1f11ec06e870b52a9366aa0d51e4ddedcdd86fa6dafbfcf9b336ae1bbe9addc5",
+    "trigger_number": 1,
+    "visible_read_documents": [
+      "d2",
+      "d5",
+      "d7",
+      "d16",
+      "d18",
+      "d23",
+      "d25",
+      "d27",
+      "d29",
+      "d33",
+      "d35",
+      "d37",
+      "d38",
+      "d40",
+      "d41",
+      "d42",
+      "d43",
+      "d44",
+      "d45",
+      "d46",
+      "d47",
+      "d48",
+      "d49",
+      "d50",
+      "d51",
+      "d52",
+      "d53",
+      "d54",
+      "d55",
+      "d56",
+      "d57",
+      "d58",
+      "d59",
+      "d60",
+      "d61",
+      "d62",
+      "d63",
+      "d64",
+      "d65",
+      "d66",
+      "d67",
+      "d68",
+      "d69",
+      "d70",
+      "d71",
+      "d72",
+      "d73",
+      "d74",
+      "d75",
+      "d76",
+      "d77",
+      "d78"
+    ],
+    "visible_read_documents_sha256": "e1ee6f9d56109b8ef38841b347b8726586765d5c6a5129e64a4b9f29a79fd9ae",
+    "wire_sha256": "60ce203a7a6b231b79936946bd5ae84b5deb5d6b2dfad2ec4996535a14b8c651",
+    "wire_tools_sha256": "82cba8a4a01c2197f768888ac0896a50f5fc053d172739ddb0b0c30e100141ce"
+  },
+  "metrics": {
+    "event_count": 238,
+    "head": "afd2858ea33588fc38053f616aa4e071457f374ab9ac1ced302515cba0c9e8c3",
+    "protocol": "stride-search-3",
+    "answer_contract": "string-integer-v1",
+    "workflow_contract": {
+      "enabled": true,
+      "gap_state": true,
+      "guided_read": true,
+      "recovery_rounds": 2,
+      "repeat_threshold": 2,
+      "repetition": "bounded",
+      "reuse_results": true,
+      "version": "gap-workflow-v1"
+    },
+    "model_attempts": 11,
+    "backend_attempts": 19,
+    "actions_recorded": 15,
+    "executed_actions": 13,
+    "usage_known": {
+      "input_tokens": 178771,
+      "output_tokens": 1734,
+      "cache_read_tokens": 83456,
+      "cache_write_tokens": 0
+    },
+    "unknown_usage_calls": 0,
+    "outstanding_requests": [],
+    "formal_correct": null,
+    "recovery_events": {
+      "delivery_preflight": 10
+    },
+    "nonblocking_note_failures": 0,
+    "action_counts": {
+      "search": 14,
+      "finish": 1
+    },
+    "action_error_counts": {
+      "read_only_tool_only": 2,
+      "duplicate_query_blocked": 1
+    },
+    "final_phase_requests": 1,
+    "compaction_requests": 2,
+    "rounds_receiving_new_raw": 0,
+    "cache_query_hits": 6,
+    "unchanged_note_updates": 0,
+    "limitations": [
+      "No semantic judge has run",
+      "No resume or automatic reissue",
+      "Hashes are not adversarial authentication"
+    ]
+  },
+  "baseline": {
+    "seal_files": 80,
+    "chain": {
+      "event_count": 340,
+      "head": "cdedce079fcd7980a26fbdc39fbb837a76a52fe761c9e4a37cb9468b84e543be"
+    },
+    "wire_matches_archive": true,
+    "metrics": {
+      "event_count": 340,
+      "head": "cdedce079fcd7980a26fbdc39fbb837a76a52fe761c9e4a37cb9468b84e543be",
+      "protocol": "stride-search-3",
+      "answer_contract": "string-integer-v1",
+      "workflow_contract": {
+        "enabled": true,
+        "gap_state": true,
+        "guided_read": true,
+        "recovery_rounds": 2,
+        "repeat_threshold": 2,
+        "repetition": "bounded",
+        "reuse_results": true,
+        "version": "gap-workflow-v1"
+      },
+      "model_attempts": 16,
+      "backend_attempts": 36,
+      "actions_recorded": 19,
+      "executed_actions": 19,
+      "usage_known": {
+        "input_tokens": 286183,
+        "output_tokens": 3454,
+        "cache_read_tokens": 95360,
+        "cache_write_tokens": 0
+      },
+      "unknown_usage_calls": 0,
+      "outstanding_requests": [],
+      "formal_correct": null,
+      "recovery_events": {
+        "delivery_preflight": 15
+      },
+      "nonblocking_note_failures": 0,
+      "action_counts": {
+        "search": 17,
+        "read": 1,
+        "finish": 1
+      },
+      "action_error_counts": {
+        "duplicate_query_blocked": 2
+      },
+      "final_phase_requests": 1,
+      "compaction_requests": 9,
+      "rounds_receiving_new_raw": 1,
+      "cache_query_hits": 7,
+      "unchanged_note_updates": 0,
+      "limitations": [
+        "No semantic judge has run",
+        "No resume or automatic reissue",
+        "Hashes are not adversarial authentication"
+      ]
+    }
+  },
+  "r1_byte_identical": true
+}

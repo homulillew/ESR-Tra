@@ -1,0 +1,198 @@
+{
+  "protocol": "stride-search-3",
+  "head": "d68c1530b2a58021c5fbcefb679192919dd941a06afbcc7e66dd81c4de24983a",
+  "outcome": "model_budget",
+  "formal_correct": null,
+  "model_attempts": 4,
+  "backend_attempts": 8,
+  "queries": [
+    {
+      "round": 1,
+      "top_k": 5,
+      "equivalence_key": "00a4b669422f1e3f311dd1850febbfadfb6b07242015eb03acc4b7f3937c5233",
+      "cached": false,
+      "query_sha256": "7cca9d6dae51aa3d7c02845e1861a1f94c252ec3a397158a56f18af5eea13cc6",
+      "query": "hat shop scarves renamed initials surname siblings 1970s branches",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"hat\" OR \"shop\" OR \"scarves\" OR \"renamed\" OR \"initials\" OR \"surname\" OR \"siblings\" OR \"1970s\" OR \"branches\"",
+        "terms": [
+          "hat",
+          "shop",
+          "scarves",
+          "renamed",
+          "initials",
+          "surname",
+          "siblings",
+          "1970s",
+          "branches"
+        ]
+      }
+    },
+    {
+      "round": 1,
+      "top_k": 5,
+      "equivalence_key": "ff95913ccda3a4a1d7b371dd2c2b14ca71aaf8cbbfdbbd99940378791b3e3f10",
+      "cached": false,
+      "query_sha256": "e923b7c7196f9e1e862840e63f5d5a862d7cc29ad6472935e76890bd7a5ce8a5",
+      "query": "hat shop owner father railway worker mother housewife tower 1340s city",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"hat\" OR \"shop\" OR \"owner\" OR \"father\" OR \"railway\" OR \"worker\" OR \"mother\" OR \"housewife\" OR \"tower\" OR \"1340s\" OR \"city\"",
+        "terms": [
+          "hat",
+          "shop",
+          "owner",
+          "father",
+          "railway",
+          "worker",
+          "mother",
+          "housewife",
+          "tower",
+          "1340s",
+          "city"
+        ]
+      }
+    },
+    {
+      "round": 1,
+      "top_k": 5,
+      "equivalence_key": "044cae6cb4678cbaf65a17dc86fe00bd54f1c0c1da24a4b645328c87d9967922",
+      "cached": false,
+      "query_sha256": "1d351744ddc728cd57eb9ccfb53d0d19eaa03bd68c2933256f3c5d7624e15262",
+      "query": "hats no longer popular scarves shop new name initials first names surname",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"hats\" OR \"no\" OR \"longer\" OR \"popular\" OR \"scarves\" OR \"shop\" OR \"new\" OR \"name\" OR \"initials\" OR \"first\" OR \"names\" OR \"surname\"",
+        "terms": [
+          "hats",
+          "no",
+          "longer",
+          "popular",
+          "scarves",
+          "shop",
+          "new",
+          "name",
+          "initials",
+          "first",
+          "names",
+          "surname"
+        ]
+      }
+    },
+    {
+      "round": 3,
+      "top_k": 5,
+      "equivalence_key": "3ba2f5e01f8c61422c3dd7fbb8493db990b5cf515878458cb117b61c99e4dd56",
+      "cached": false,
+      "query_sha256": "6d693fb69516abbdfa44dbaa7acf54eb8625327c0fc8698e83a92f14907559e9",
+      "query": "Vakko 1980s new brand younger audience Cem Hakko son",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"vakko\" OR \"1980s\" OR \"new\" OR \"brand\" OR \"younger\" OR \"audience\" OR \"cem\" OR \"hakko\" OR \"son\"",
+        "terms": [
+          "vakko",
+          "1980s",
+          "new",
+          "brand",
+          "younger",
+          "audience",
+          "cem",
+          "hakko",
+          "son"
+        ]
+      }
+    },
+    {
+      "round": 3,
+      "top_k": 5,
+      "equivalence_key": "c55db241ba2b5b641cada50d81f3181b647ad354472bb6e2573bd492969dbeff",
+      "cached": false,
+      "query_sha256": "97cd5c9a931b2b605a4fb416ee7d7f5515c9bbbe49b2db3897355157670e1351",
+      "query": "Vakkorama brand Vitali Hakko Cem Hakko 1980s youth",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"vakkorama\" OR \"brand\" OR \"vitali\" OR \"hakko\" OR \"cem\" OR \"1980s\" OR \"youth\"",
+        "terms": [
+          "vakkorama",
+          "brand",
+          "vitali",
+          "hakko",
+          "cem",
+          "1980s",
+          "youth"
+        ]
+      }
+    },
+    {
+      "round": 3,
+      "top_k": 5,
+      "equivalence_key": "8f246d57647de55dabb0a8afc5c7e75d8b6222953c8da980c8affd65ef450bd1",
+      "cached": false,
+      "query_sha256": "e40ca653d95bb1dde8d90f9ca22a67b33b8f2630248fc9c5bb64e1a21a7b15b2",
+      "query": "Vakko younger brand created 1980s Vitali Cem Hakko",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"vakko\" OR \"younger\" OR \"brand\" OR \"created\" OR \"1980s\" OR \"vitali\" OR \"cem\" OR \"hakko\"",
+        "terms": [
+          "vakko",
+          "younger",
+          "brand",
+          "created",
+          "1980s",
+          "vitali",
+          "cem",
+          "hakko"
+        ]
+      }
+    }
+  ],
+  "equivalent_query_repeats": 0,
+  "views": [
+    {
+      "round": 1,
+      "compacted": false,
+      "visible_evidence": [],
+      "shelf": [],
+      "shelf_evicted": []
+    },
+    {
+      "round": 2,
+      "compacted": false,
+      "visible_evidence": [],
+      "shelf": [],
+      "shelf_evicted": []
+    },
+    {
+      "round": 3,
+      "compacted": false,
+      "visible_evidence": [
+        "e1",
+        "e2"
+      ],
+      "shelf": [],
+      "shelf_evicted": []
+    },
+    {
+      "round": 4,
+      "compacted": false,
+      "visible_evidence": [
+        "e1",
+        "e2"
+      ],
+      "shelf": [],
+      "shelf_evicted": []
+    }
+  ],
+  "delivered_refs": [
+    "e1",
+    "e2"
+  ],
+  "submitted_refs": [],
+  "text_included": true,
+  "limitations": [
+    "Equivalence is compiler equality, not semantic identity or wasted-search proof",
+    "Raw-window visibility/selection is not entailment or complete evidence coverage",
+    "No live q26 replay or independent answer scoring is performed"
+  ]
+}

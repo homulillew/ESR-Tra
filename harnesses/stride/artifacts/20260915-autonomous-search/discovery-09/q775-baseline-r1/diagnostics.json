@@ -1,0 +1,1063 @@
+{
+  "protocol": "stride-search-3",
+  "head": "0e327c59cdb982add0e03630b6be5ed1133336a32659ca0d34bc4957e65516c6",
+  "outcome": "submitted",
+  "formal_correct": null,
+  "model_attempts": 16,
+  "backend_attempts": 36,
+  "queries": [
+    {
+      "round": 1,
+      "top_k": 8,
+      "equivalence_key": "bf23b59795ceb988a6280355252e05673ebb57924f04091afb9f5db0155e93e8",
+      "cached": false,
+      "query_sha256": "96e54c068c088dc1275943d4c4952d1b05475d0051dd8653d22c9c121b8cf95d",
+      "query": "literary award created founded 2000s international book prize",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"literary\" OR \"award\" OR \"created\" OR \"founded\" OR \"2000s\" OR \"international\" OR \"book\" OR \"prize\"",
+        "terms": [
+          "literary",
+          "award",
+          "created",
+          "founded",
+          "2000s",
+          "international",
+          "book",
+          "prize"
+        ]
+      }
+    },
+    {
+      "round": 1,
+      "top_k": 8,
+      "equivalence_key": "304868dde06ab3518acf2b80f12a44fa35fc4ce08f294db71a25bf7aa15b321e",
+      "cached": false,
+      "query_sha256": "465a891c65f767890ff531a7e4603d5c702775232c503789b8eb87bc8ae65bd0",
+      "query": "book award established 2000s translated many languages",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"book\" OR \"award\" OR \"established\" OR \"2000s\" OR \"translated\" OR \"many\" OR \"languages\"",
+        "terms": [
+          "book",
+          "award",
+          "established",
+          "2000s",
+          "translated",
+          "many",
+          "languages"
+        ]
+      }
+    },
+    {
+      "round": 1,
+      "top_k": 8,
+      "equivalence_key": "7305c583a47f488c3dd7ae12758364ad9a3e4051e577e07901e94eaeab126355",
+      "cached": false,
+      "query_sha256": "4168c03adb0804b2e2349eb7e8ecc4db219fa31b9d9758d3fab1630374b92cca",
+      "query": "international literary prize founded 2000s debut",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"international\" OR \"literary\" OR \"prize\" OR \"founded\" OR \"2000s\" OR \"debut\"",
+        "terms": [
+          "international",
+          "literary",
+          "prize",
+          "founded",
+          "2000s",
+          "debut"
+        ]
+      }
+    },
+    {
+      "round": 2,
+      "top_k": 8,
+      "equivalence_key": "41e1f50edb49be8d460b166df2de378958a30c1fe7463571d65a92d873989ded",
+      "cached": false,
+      "query_sha256": "eab078b779604a85f917b824eec983c403861c590f265f261858d27bbcdcd754",
+      "query": "Man Asian Literary Prize winners 2010s",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"man\" OR \"asian\" OR \"literary\" OR \"prize\" OR \"winners\" OR \"2010s\"",
+        "terms": [
+          "man",
+          "asian",
+          "literary",
+          "prize",
+          "winners",
+          "2010s"
+        ]
+      }
+    },
+    {
+      "round": 2,
+      "top_k": 8,
+      "equivalence_key": "16de004bace361766f39533abd8f447773cdd9e03412e6a94e6b5e19a3490c07",
+      "cached": false,
+      "query_sha256": "49f3b271e71aa73e4062da31df5490dc63324b8c70bac73c61c0fbe7122253ae",
+      "query": "Man Asian Literary Prize shortlist contender translated 25 languages",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"man\" OR \"asian\" OR \"literary\" OR \"prize\" OR \"shortlist\" OR \"contender\" OR \"translated\" OR \"25\" OR \"languages\"",
+        "terms": [
+          "man",
+          "asian",
+          "literary",
+          "prize",
+          "shortlist",
+          "contender",
+          "translated",
+          "25",
+          "languages"
+        ]
+      }
+    },
+    {
+      "round": 2,
+      "top_k": 8,
+      "equivalence_key": "e05d1b6787d3a2f94dc96cc323ccc367118332e813e2804dc537bd650772262f",
+      "cached": false,
+      "query_sha256": "59b5ba22a58edb0f0f309c25cc01578faa4372ec2ad2c0e178dbe080e2be35f2",
+      "query": "book translated over twenty five languages Man Asian Literary Prize",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"book\" OR \"translated\" OR \"over\" OR \"twenty\" OR \"five\" OR \"languages\" OR \"man\" OR \"asian\" OR \"literary\" OR \"prize\"",
+        "terms": [
+          "book",
+          "translated",
+          "over",
+          "twenty",
+          "five",
+          "languages",
+          "man",
+          "asian",
+          "literary",
+          "prize"
+        ]
+      }
+    },
+    {
+      "round": 2,
+      "top_k": 8,
+      "equivalence_key": "49d8797346b4fcee6d6ee9dc7c4531e1148343bc503dc36ef32a92bae1e31938",
+      "cached": false,
+      "query_sha256": "6cae76f3c5dce768a08189d0ee1fd793b35d288fbc24a4951dc9c516c60ef120",
+      "query": "novel translated into 25 languages award contender 2010s",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"novel\" OR \"translated\" OR \"into\" OR \"25\" OR \"languages\" OR \"award\" OR \"contender\" OR \"2010s\"",
+        "terms": [
+          "novel",
+          "translated",
+          "into",
+          "25",
+          "languages",
+          "award",
+          "contender",
+          "2010s"
+        ]
+      }
+    },
+    {
+      "round": 2,
+      "top_k": 8,
+      "equivalence_key": "90274d82b9836054201912a647fdff2fb9b3b421ca20dfb3a64c07122b7d4299",
+      "cached": false,
+      "query_sha256": "6422bf4872b18c372b9b1c121ad8ce94abb6fab8256ccced4762810ec382a6dc",
+      "query": "book translated into more than 25 languages literary prize shortlist",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"book\" OR \"translated\" OR \"into\" OR \"more\" OR \"than\" OR \"25\" OR \"languages\" OR \"literary\" OR \"prize\" OR \"shortlist\"",
+        "terms": [
+          "book",
+          "translated",
+          "into",
+          "more",
+          "than",
+          "25",
+          "languages",
+          "literary",
+          "prize",
+          "shortlist"
+        ]
+      }
+    },
+    {
+      "round": 3,
+      "top_k": 8,
+      "equivalence_key": "2692f033e1cec72c6065e19f3c49342596afb6b4c9c7016b38795d8a920120eb",
+      "cached": false,
+      "query_sha256": "d72136808d39351add5f04c98c1daece86a202a5577309ba77a9502ca43dd6b6",
+      "query": "Chigozie Obioma born city birthplace",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"chigozie\" OR \"obioma\" OR \"born\" OR \"city\" OR \"birthplace\"",
+        "terms": [
+          "chigozie",
+          "obioma",
+          "born",
+          "city",
+          "birthplace"
+        ]
+      }
+    },
+    {
+      "round": 3,
+      "top_k": 8,
+      "equivalence_key": "20486e82be8c346196d4305d4b09a69662dad1b95a9a017ca1a56510b1ff1aa9",
+      "cached": false,
+      "query_sha256": "05189c0c2c32fd7a214588cfa8a8e9ea0f4ed8d5c1c445c5fd4e4adffa0c18b3",
+      "query": "Chigozie Obioma grew up hometown",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"chigozie\" OR \"obioma\" OR \"grew\" OR \"up\" OR \"hometown\"",
+        "terms": [
+          "chigozie",
+          "obioma",
+          "grew",
+          "up",
+          "hometown"
+        ]
+      }
+    },
+    {
+      "round": 3,
+      "top_k": 8,
+      "equivalence_key": "bed5c5dd269e353d500477f72739cf6187db8ff17a4e83290a9fc8f1bce7cffa",
+      "cached": false,
+      "query_sha256": "16dee26edae9d1ac3ceb94c93fdbe661617fb1721da14efd3a283c62760b0f09",
+      "query": "Chigozie Obioma biography birthplace Nigeria",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"chigozie\" OR \"obioma\" OR \"biography\" OR \"birthplace\" OR \"nigeria\"",
+        "terms": [
+          "chigozie",
+          "obioma",
+          "biography",
+          "birthplace",
+          "nigeria"
+        ]
+      }
+    },
+    {
+      "round": 4,
+      "top_k": 8,
+      "equivalence_key": "49435c85bc1a0373156e9d2652ca10a51cff4563dc127140c8c4ccb9a502fc41",
+      "cached": false,
+      "query_sha256": "269c46160ce0eeb4749123f7264676dedc15c6998d2697655e4f2b3257ff26f0",
+      "query": "Man Asian Literary Prize shortlist 2010 2011 2012 2013 2014 2015",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"man\" OR \"asian\" OR \"literary\" OR \"prize\" OR \"shortlist\" OR \"2010\" OR \"2011\" OR \"2012\" OR \"2013\" OR \"2014\" OR \"2015\"",
+        "terms": [
+          "man",
+          "asian",
+          "literary",
+          "prize",
+          "shortlist",
+          "2010",
+          "2011",
+          "2012",
+          "2013",
+          "2014",
+          "2015"
+        ]
+      }
+    },
+    {
+      "round": 4,
+      "top_k": 8,
+      "equivalence_key": "2ab04aac745918c41ba3ee72a0f60b31a6ab9189ae0857183f6156dafc32c357",
+      "cached": false,
+      "query_sha256": "014d8cb0d2cd0e349d72f4552834f68c4d5faf8259fcb88664b135797c9428cc",
+      "query": "Man Asian Literary Prize winners list all years",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"man\" OR \"asian\" OR \"literary\" OR \"prize\" OR \"winners\" OR \"list\" OR \"all\" OR \"years\"",
+        "terms": [
+          "man",
+          "asian",
+          "literary",
+          "prize",
+          "winners",
+          "list",
+          "all",
+          "years"
+        ]
+      }
+    },
+    {
+      "round": 4,
+      "top_k": 8,
+      "equivalence_key": "295c9a387dc746a7daa92b115e7a4a6695a171a048ee6520e3a86a3b5ea6fae9",
+      "cached": false,
+      "query_sha256": "e6ed027a4c2c7461f0ec34b7dd8a6b2473ad769172d3ba1e0bf4abaa26bf0b16",
+      "query": "Man Asian Literary Prize 2010s winner shortlist",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"man\" OR \"asian\" OR \"literary\" OR \"prize\" OR \"2010s\" OR \"winner\" OR \"shortlist\"",
+        "terms": [
+          "man",
+          "asian",
+          "literary",
+          "prize",
+          "2010s",
+          "winner",
+          "shortlist"
+        ]
+      }
+    },
+    {
+      "round": 4,
+      "top_k": 5,
+      "equivalence_key": "1d070afe1940e818c32ef5ae27a70e9aca752898cfcd60511a17c9f3ae1f2cf1",
+      "cached": false,
+      "query_sha256": "0a51e7701d10def73e760e0c0df270b4f05021cd0486cfcf8fc06227fb0ca59a",
+      "query": "Man Asian Literary Prize Wikipedia",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"man\" OR \"asian\" OR \"literary\" OR \"prize\" OR \"wikipedia\"",
+        "terms": [
+          "man",
+          "asian",
+          "literary",
+          "prize",
+          "wikipedia"
+        ]
+      }
+    },
+    {
+      "round": 4,
+      "top_k": 5,
+      "equivalence_key": "aae8595278c1f7fc4d75a22acec5dc6478d6752228643ffb07a0242ab2385022",
+      "cached": false,
+      "query_sha256": "33ae83e88999d4567c134d0c414c96dbed45f691720e8e759b0cd35a8d0503c1",
+      "query": "Man Asian Literary Prize established 2007 winners",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"man\" OR \"asian\" OR \"literary\" OR \"prize\" OR \"established\" OR \"2007\" OR \"winners\"",
+        "terms": [
+          "man",
+          "asian",
+          "literary",
+          "prize",
+          "established",
+          "2007",
+          "winners"
+        ]
+      }
+    },
+    {
+      "round": 5,
+      "top_k": 10,
+      "equivalence_key": "698456e6f6fbee7434007b162d8ad91530f21a9c820e83d276a01d076b007617",
+      "cached": false,
+      "query_sha256": "cc04dcfa38cb69b2ee06749a640f9b74f687f5f4d4b20d5608a4d09705347977",
+      "query": "Man Asian Literary Prize shortlist novels translated languages",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"man\" OR \"asian\" OR \"literary\" OR \"prize\" OR \"shortlist\" OR \"novels\" OR \"translated\" OR \"languages\"",
+        "terms": [
+          "man",
+          "asian",
+          "literary",
+          "prize",
+          "shortlist",
+          "novels",
+          "translated",
+          "languages"
+        ]
+      }
+    },
+    {
+      "round": 5,
+      "top_k": 10,
+      "equivalence_key": "f3a39b4b55baa8018574e1841964e7b5ab9fb0271b0f8bb2598097195cd8f7b7",
+      "cached": false,
+      "query_sha256": "983d8e7a3feed15ec03925ebb70f86d4a00686eff0c6e5471ddb9f87bc5b5930",
+      "query": "Man Asian Literary Prize 2010 2011 2012 2013 winner",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"man\" OR \"asian\" OR \"literary\" OR \"prize\" OR \"2010\" OR \"2011\" OR \"2012\" OR \"2013\" OR \"winner\"",
+        "terms": [
+          "man",
+          "asian",
+          "literary",
+          "prize",
+          "2010",
+          "2011",
+          "2012",
+          "2013",
+          "winner"
+        ]
+      }
+    },
+    {
+      "round": 5,
+      "top_k": 10,
+      "equivalence_key": "20219eca2d0f726c6129bb4e93dbb9c092d550363f809270823f47f62de9eb03",
+      "cached": false,
+      "query_sha256": "827a7d948820504cd1b7b6f02bc0ba7049772c836d68165cc4f217c41c14ee63",
+      "query": "Man Asian Literary Prize Wikipedia page",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"man\" OR \"asian\" OR \"literary\" OR \"prize\" OR \"wikipedia\" OR \"page\"",
+        "terms": [
+          "man",
+          "asian",
+          "literary",
+          "prize",
+          "wikipedia",
+          "page"
+        ]
+      }
+    },
+    {
+      "round": 6,
+      "top_k": 10,
+      "equivalence_key": "02a81bd5eee6c780c7affd8a4c7eb20203f9a917fb6648ec13754d5b8511dd92",
+      "cached": false,
+      "query_sha256": "738e1628e6cbc58e2875439c80478cb3f6bd7ba18b85d39a1ca657e89733b2bc",
+      "query": "Man Asian Literary Prize",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"man\" OR \"asian\" OR \"literary\" OR \"prize\"",
+        "terms": [
+          "man",
+          "asian",
+          "literary",
+          "prize"
+        ]
+      }
+    },
+    {
+      "round": 6,
+      "top_k": 10,
+      "equivalence_key": "a185ca576f83658680dde4b93a3e7350ec8f87e3c825c4ea9342b4b5f4d6cdcb",
+      "cached": false,
+      "query_sha256": "90b2e5710fca37ae1f0b3feaf1d85df6cb95f9cd6519753a55fd96dbca404e1b",
+      "query": "Man Asian Literary Prize winners shortlist",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"man\" OR \"asian\" OR \"literary\" OR \"prize\" OR \"winners\" OR \"shortlist\"",
+        "terms": [
+          "man",
+          "asian",
+          "literary",
+          "prize",
+          "winners",
+          "shortlist"
+        ]
+      }
+    },
+    {
+      "round": 7,
+      "top_k": 10,
+      "equivalence_key": "aeeb89676415a37e00f3295d6c66082a96d8e983774b07a40e01989e3caabca8",
+      "cached": false,
+      "query_sha256": "0a51e7701d10def73e760e0c0df270b4f05021cd0486cfcf8fc06227fb0ca59a",
+      "query": "Man Asian Literary Prize Wikipedia",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"man\" OR \"asian\" OR \"literary\" OR \"prize\" OR \"wikipedia\"",
+        "terms": [
+          "man",
+          "asian",
+          "literary",
+          "prize",
+          "wikipedia"
+        ]
+      }
+    },
+    {
+      "round": 7,
+      "top_k": 10,
+      "equivalence_key": "5c73542106df93f61cb5743d2897558dd59b745f15a174c51e3618edb4a8bbcc",
+      "cached": false,
+      "query_sha256": "597b47bfa0d83ddf71c8496258ae429957c8d48579d4cdf45b22420c3d0a0f83",
+      "query": "Man Asian Literary Prize 2010 2011 2012 2013 2014 2015 winner shortlist",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"man\" OR \"asian\" OR \"literary\" OR \"prize\" OR \"2010\" OR \"2011\" OR \"2012\" OR \"2013\" OR \"2014\" OR \"2015\" OR \"winner\" OR \"shortlist\"",
+        "terms": [
+          "man",
+          "asian",
+          "literary",
+          "prize",
+          "2010",
+          "2011",
+          "2012",
+          "2013",
+          "2014",
+          "2015",
+          "winner",
+          "shortlist"
+        ]
+      }
+    },
+    {
+      "round": 7,
+      "top_k": 10,
+      "equivalence_key": "ce5f43cb182850a51f99f71906b65d81d04acee665eeb703fd3c69cd0666fc16",
+      "cached": false,
+      "query_sha256": "b50cc1232c7717226177f5bac32108f440d61dd3d461b1f7f0a3da511c6f3c5d",
+      "query": "Man Asian Literary Prize established 2007 discontinued",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"man\" OR \"asian\" OR \"literary\" OR \"prize\" OR \"established\" OR \"2007\" OR \"discontinued\"",
+        "terms": [
+          "man",
+          "asian",
+          "literary",
+          "prize",
+          "established",
+          "2007",
+          "discontinued"
+        ]
+      }
+    },
+    {
+      "round": 8,
+      "top_k": 10,
+      "equivalence_key": "02a81bd5eee6c780c7affd8a4c7eb20203f9a917fb6648ec13754d5b8511dd92",
+      "cached": true,
+      "query_sha256": "738e1628e6cbc58e2875439c80478cb3f6bd7ba18b85d39a1ca657e89733b2bc",
+      "query": "Man Asian Literary Prize",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"man\" OR \"asian\" OR \"literary\" OR \"prize\"",
+        "terms": [
+          "man",
+          "asian",
+          "literary",
+          "prize"
+        ]
+      }
+    },
+    {
+      "round": 8,
+      "top_k": 10,
+      "equivalence_key": "3c76a66f6deb9608345c741fc1ab15fd275b8e770c87b8f51583d525312ac4e7",
+      "cached": false,
+      "query_sha256": "e01958839d6a64a8764b8dc96dbfdd4dbee9d2571e8dde0f9d35fac48d97bf30",
+      "query": "Man Asian Literary Prize winners list",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"man\" OR \"asian\" OR \"literary\" OR \"prize\" OR \"winners\" OR \"list\"",
+        "terms": [
+          "man",
+          "asian",
+          "literary",
+          "prize",
+          "winners",
+          "list"
+        ]
+      }
+    },
+    {
+      "round": 8,
+      "top_k": 10,
+      "equivalence_key": "64aa92f64416d8c01363a5c171641c526c2112584de58084c14385b4db618c25",
+      "cached": false,
+      "query_sha256": "6306a03367d632db3e13375349249c036143a557ad7f5dd48060bd665ee0c117",
+      "query": "Man Asian Literary Prize 2010 2011 2012 2013 2014 2015",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"man\" OR \"asian\" OR \"literary\" OR \"prize\" OR \"2010\" OR \"2011\" OR \"2012\" OR \"2013\" OR \"2014\" OR \"2015\"",
+        "terms": [
+          "man",
+          "asian",
+          "literary",
+          "prize",
+          "2010",
+          "2011",
+          "2012",
+          "2013",
+          "2014",
+          "2015"
+        ]
+      }
+    },
+    {
+      "round": 9,
+      "top_k": 10,
+      "equivalence_key": "8edee18d9b75a1d61b167b0296f8a8ab13c147dd7dbdc3e862ca158696266364",
+      "cached": false,
+      "query_sha256": "b224821c772f8c3dcbe46339e56db0e1f1280387a3317ad3cf0e52ccdd27ad78",
+      "query": "Chigozie Obioma The Fishermen awards shortlisted translated languages",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"chigozie\" OR \"obioma\" OR \"the\" OR \"fishermen\" OR \"awards\" OR \"shortlisted\" OR \"translated\" OR \"languages\"",
+        "terms": [
+          "chigozie",
+          "obioma",
+          "the",
+          "fishermen",
+          "awards",
+          "shortlisted",
+          "translated",
+          "languages"
+        ]
+      }
+    },
+    {
+      "round": 9,
+      "top_k": 10,
+      "equivalence_key": "073be5ae580a3708f36b22de909296f371a4eb791b1a8f4cccfd31361c5efabb",
+      "cached": false,
+      "query_sha256": "3aff909c8d8b81a0bab142fdcf1efe3c42e1694c84c81d9f5105f80aedbbbac2",
+      "query": "The Fishermen novel 2015 awards nominations translated",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"the\" OR \"fishermen\" OR \"novel\" OR \"2015\" OR \"awards\" OR \"nominations\" OR \"translated\"",
+        "terms": [
+          "the",
+          "fishermen",
+          "novel",
+          "2015",
+          "awards",
+          "nominations",
+          "translated"
+        ]
+      }
+    },
+    {
+      "round": 9,
+      "top_k": 10,
+      "equivalence_key": "e67e1657e9620dd761d9299caf667ddc549f90a4b79ad9c2810fc8950571f3b5",
+      "cached": false,
+      "query_sha256": "13eda2020fa6a560adc77c9c0778ae63a8f5f3d95652581a7343c158157ef4e5",
+      "query": "Chigozie Obioma awards nominations The Fishermen An Orchestra of Minorities",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"chigozie\" OR \"obioma\" OR \"awards\" OR \"nominations\" OR \"the\" OR \"fishermen\" OR \"an\" OR \"orchestra\" OR \"of\" OR \"minorities\"",
+        "terms": [
+          "chigozie",
+          "obioma",
+          "awards",
+          "nominations",
+          "the",
+          "fishermen",
+          "an",
+          "orchestra",
+          "of",
+          "minorities"
+        ]
+      }
+    },
+    {
+      "round": 10,
+      "top_k": 10,
+      "equivalence_key": "dc2d4da663c7687d585eec4a23eade7d9fda58c000074f30118a78ab12fb2126",
+      "cached": false,
+      "query_sha256": "c71f7f6a36d4a4fe794a38cb4b5378b5bba2f3c9a911d21b559303437f08eb8a",
+      "query": "Chigozie Obioma The Fishermen grew up city",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"chigozie\" OR \"obioma\" OR \"the\" OR \"fishermen\" OR \"grew\" OR \"up\" OR \"city\"",
+        "terms": [
+          "chigozie",
+          "obioma",
+          "the",
+          "fishermen",
+          "grew",
+          "up",
+          "city"
+        ]
+      }
+    },
+    {
+      "round": 10,
+      "top_k": 10,
+      "equivalence_key": "e8bba3d302dfba8112620866f26f05015f830c7f68a037d573bfcb81176fbc19",
+      "cached": false,
+      "query_sha256": "dd4a46c2a0d28e097d0d3f3244195c288f283d10d7f1ecf5739550080388e500",
+      "query": "Chigozie Obioma biography grew up",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"chigozie\" OR \"obioma\" OR \"biography\" OR \"grew\" OR \"up\"",
+        "terms": [
+          "chigozie",
+          "obioma",
+          "biography",
+          "grew",
+          "up"
+        ]
+      }
+    },
+    {
+      "round": 10,
+      "top_k": 10,
+      "equivalence_key": "9a2752707265f9900b5a80c95211737b78d1d1f4683ec719ad6397dd3dad5e8a",
+      "cached": false,
+      "query_sha256": "ccf235df0af5ea2e656e78b8534f5d8e03032e134ba1f38efc7ce0f48f39e3be",
+      "query": "Chigozie Obioma childhood hometown",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"chigozie\" OR \"obioma\" OR \"childhood\" OR \"hometown\"",
+        "terms": [
+          "chigozie",
+          "obioma",
+          "childhood",
+          "hometown"
+        ]
+      }
+    },
+    {
+      "round": 11,
+      "top_k": 10,
+      "equivalence_key": "debf560c2769789f825539b3bf01aa5e6f9fa66def52bb48002ff6d70abef871",
+      "cached": false,
+      "query_sha256": "9160c4f8a575ced6cfe9b1c3a98516c7747f077cb49e460df01f127a279d73ba",
+      "query": "Chigozie Obioma The Fishermen grew up city biography",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"chigozie\" OR \"obioma\" OR \"the\" OR \"fishermen\" OR \"grew\" OR \"up\" OR \"city\" OR \"biography\"",
+        "terms": [
+          "chigozie",
+          "obioma",
+          "the",
+          "fishermen",
+          "grew",
+          "up",
+          "city",
+          "biography"
+        ]
+      }
+    },
+    {
+      "round": 11,
+      "top_k": 10,
+      "equivalence_key": "7fdd21c6db9241717e40bf2a91137204a0cc4ff45ce906924b5d52a0bdc30aef",
+      "cached": false,
+      "query_sha256": "378f761b34336b1953d388b89ea4c91d4df5457f17d5e22533c9f8b540081d79",
+      "query": "Chigozie Obioma biography childhood hometown",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"chigozie\" OR \"obioma\" OR \"biography\" OR \"childhood\" OR \"hometown\"",
+        "terms": [
+          "chigozie",
+          "obioma",
+          "biography",
+          "childhood",
+          "hometown"
+        ]
+      }
+    },
+    {
+      "round": 11,
+      "top_k": 10,
+      "equivalence_key": "d46d426c900f12914f33709e3c0335a7ebffc9c6ce66737492e7ac5eea7cfb8f",
+      "cached": false,
+      "query_sha256": "5cf8d04e37cb35fbfb10357667f057a6d41a57242896e905e6303a6a87e0de7e",
+      "query": "Chigozie Obioma grew up in city",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"chigozie\" OR \"obioma\" OR \"grew\" OR \"up\" OR \"in\" OR \"city\"",
+        "terms": [
+          "chigozie",
+          "obioma",
+          "grew",
+          "up",
+          "in",
+          "city"
+        ]
+      }
+    },
+    {
+      "round": 12,
+      "top_k": 10,
+      "equivalence_key": "debf560c2769789f825539b3bf01aa5e6f9fa66def52bb48002ff6d70abef871",
+      "cached": true,
+      "query_sha256": "9160c4f8a575ced6cfe9b1c3a98516c7747f077cb49e460df01f127a279d73ba",
+      "query": "Chigozie Obioma The Fishermen grew up city biography",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"chigozie\" OR \"obioma\" OR \"the\" OR \"fishermen\" OR \"grew\" OR \"up\" OR \"city\" OR \"biography\"",
+        "terms": [
+          "chigozie",
+          "obioma",
+          "the",
+          "fishermen",
+          "grew",
+          "up",
+          "city",
+          "biography"
+        ]
+      }
+    },
+    {
+      "round": 12,
+      "top_k": 10,
+      "equivalence_key": "7fdd21c6db9241717e40bf2a91137204a0cc4ff45ce906924b5d52a0bdc30aef",
+      "cached": true,
+      "query_sha256": "378f761b34336b1953d388b89ea4c91d4df5457f17d5e22533c9f8b540081d79",
+      "query": "Chigozie Obioma biography childhood hometown",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"chigozie\" OR \"obioma\" OR \"biography\" OR \"childhood\" OR \"hometown\"",
+        "terms": [
+          "chigozie",
+          "obioma",
+          "biography",
+          "childhood",
+          "hometown"
+        ]
+      }
+    },
+    {
+      "round": 12,
+      "top_k": 10,
+      "equivalence_key": "d46d426c900f12914f33709e3c0335a7ebffc9c6ce66737492e7ac5eea7cfb8f",
+      "cached": true,
+      "query_sha256": "5cf8d04e37cb35fbfb10357667f057a6d41a57242896e905e6303a6a87e0de7e",
+      "query": "Chigozie Obioma grew up in city",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"chigozie\" OR \"obioma\" OR \"grew\" OR \"up\" OR \"in\" OR \"city\"",
+        "terms": [
+          "chigozie",
+          "obioma",
+          "grew",
+          "up",
+          "in",
+          "city"
+        ]
+      }
+    },
+    {
+      "round": 13,
+      "top_k": 10,
+      "equivalence_key": "debf560c2769789f825539b3bf01aa5e6f9fa66def52bb48002ff6d70abef871",
+      "cached": true,
+      "query_sha256": "9160c4f8a575ced6cfe9b1c3a98516c7747f077cb49e460df01f127a279d73ba",
+      "query": "Chigozie Obioma The Fishermen grew up city biography",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"chigozie\" OR \"obioma\" OR \"the\" OR \"fishermen\" OR \"grew\" OR \"up\" OR \"city\" OR \"biography\"",
+        "terms": [
+          "chigozie",
+          "obioma",
+          "the",
+          "fishermen",
+          "grew",
+          "up",
+          "city",
+          "biography"
+        ]
+      }
+    },
+    {
+      "round": 13,
+      "top_k": 10,
+      "equivalence_key": "7fdd21c6db9241717e40bf2a91137204a0cc4ff45ce906924b5d52a0bdc30aef",
+      "cached": true,
+      "query_sha256": "378f761b34336b1953d388b89ea4c91d4df5457f17d5e22533c9f8b540081d79",
+      "query": "Chigozie Obioma biography childhood hometown",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"chigozie\" OR \"obioma\" OR \"biography\" OR \"childhood\" OR \"hometown\"",
+        "terms": [
+          "chigozie",
+          "obioma",
+          "biography",
+          "childhood",
+          "hometown"
+        ]
+      }
+    },
+    {
+      "round": 13,
+      "top_k": 10,
+      "equivalence_key": "d46d426c900f12914f33709e3c0335a7ebffc9c6ce66737492e7ac5eea7cfb8f",
+      "cached": true,
+      "query_sha256": "5cf8d04e37cb35fbfb10357667f057a6d41a57242896e905e6303a6a87e0de7e",
+      "query": "Chigozie Obioma grew up in city",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"chigozie\" OR \"obioma\" OR \"grew\" OR \"up\" OR \"in\" OR \"city\"",
+        "terms": [
+          "chigozie",
+          "obioma",
+          "grew",
+          "up",
+          "in",
+          "city"
+        ]
+      }
+    }
+  ],
+  "equivalent_query_repeats": 7,
+  "views": [
+    {
+      "round": 1,
+      "compacted": false,
+      "visible_evidence": [],
+      "shelf": [],
+      "shelf_evicted": []
+    },
+    {
+      "round": 2,
+      "compacted": false,
+      "visible_evidence": [],
+      "shelf": [],
+      "shelf_evicted": []
+    },
+    {
+      "round": 3,
+      "compacted": false,
+      "visible_evidence": [],
+      "shelf": [],
+      "shelf_evicted": []
+    },
+    {
+      "round": 4,
+      "compacted": false,
+      "visible_evidence": [
+        "e1"
+      ],
+      "shelf": [],
+      "shelf_evicted": []
+    },
+    {
+      "round": 5,
+      "compacted": true,
+      "visible_evidence": [
+        "e1"
+      ],
+      "shelf": [],
+      "shelf_evicted": []
+    },
+    {
+      "round": 6,
+      "compacted": true,
+      "visible_evidence": [
+        "e1"
+      ],
+      "shelf": [],
+      "shelf_evicted": []
+    },
+    {
+      "round": 7,
+      "compacted": true,
+      "visible_evidence": [
+        "e1"
+      ],
+      "shelf": [
+        "e1"
+      ],
+      "shelf_evicted": []
+    },
+    {
+      "round": 8,
+      "compacted": true,
+      "visible_evidence": [
+        "e1"
+      ],
+      "shelf": [
+        "e1"
+      ],
+      "shelf_evicted": []
+    },
+    {
+      "round": 9,
+      "compacted": true,
+      "visible_evidence": [
+        "e1"
+      ],
+      "shelf": [
+        "e1"
+      ],
+      "shelf_evicted": []
+    },
+    {
+      "round": 10,
+      "compacted": true,
+      "visible_evidence": [
+        "e1"
+      ],
+      "shelf": [
+        "e1"
+      ],
+      "shelf_evicted": []
+    },
+    {
+      "round": 11,
+      "compacted": true,
+      "visible_evidence": [
+        "e1"
+      ],
+      "shelf": [
+        "e1"
+      ],
+      "shelf_evicted": []
+    },
+    {
+      "round": 12,
+      "compacted": true,
+      "visible_evidence": [
+        "e1"
+      ],
+      "shelf": [
+        "e1"
+      ],
+      "shelf_evicted": []
+    },
+    {
+      "round": 13,
+      "compacted": true,
+      "visible_evidence": [
+        "e1"
+      ],
+      "shelf": [
+        "e1"
+      ],
+      "shelf_evicted": []
+    },
+    {
+      "round": 14,
+      "compacted": false,
+      "visible_evidence": [
+        "e1"
+      ],
+      "shelf": [
+        "e1"
+      ],
+      "shelf_evicted": []
+    },
+    {
+      "round": 15,
+      "compacted": false,
+      "visible_evidence": [
+        "e1"
+      ],
+      "shelf": [
+        "e1"
+      ],
+      "shelf_evicted": []
+    },
+    {
+      "round": 16,
+      "compacted": false,
+      "visible_evidence": [
+        "e1"
+      ],
+      "shelf": [
+        "e1"
+      ],
+      "shelf_evicted": []
+    }
+  ],
+  "delivered_refs": [
+    "e1"
+  ],
+  "submitted_refs": [
+    "e1"
+  ],
+  "text_included": true,
+  "limitations": [
+    "Equivalence is compiler equality, not semantic identity or wasted-search proof",
+    "Raw-window visibility/selection is not entailment or complete evidence coverage",
+    "No live q26 replay or independent answer scoring is performed"
+  ]
+}

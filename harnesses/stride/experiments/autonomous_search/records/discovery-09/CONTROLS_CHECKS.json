@@ -1,0 +1,1397 @@
+{
+  "scope": "SEALED q771/q778 only; no judge/gold",
+  "slots": {
+    "q771-baseline-r1": {
+      "seal_sha256": "16929dfbbb335ae32e27d70c28ab43ce2582b151afa71a0bf58806edccf9281a",
+      "sealed_files": {
+        "all-objects.json": true,
+        "analysis-data.json": true,
+        "diagnostics.json": true,
+        "episode.sqlite": true,
+        "events-timed.jsonl": true,
+        "EVIDENCE_TABLE.csv": true,
+        "FULL_INTERACTION.md": true,
+        "http/001/attempt-start.json": true,
+        "http/001/metadata.json": true,
+        "http/001/request.body": true,
+        "http/001/response.body": true,
+        "http/002/attempt-start.json": true,
+        "http/002/metadata.json": true,
+        "http/002/request.body": true,
+        "http/002/response.body": true,
+        "http/003/attempt-start.json": true,
+        "http/003/metadata.json": true,
+        "http/003/request.body": true,
+        "http/003/response.body": true,
+        "http/004/attempt-start.json": true,
+        "http/004/metadata.json": true,
+        "http/004/request.body": true,
+        "http/004/response.body": true,
+        "INTEGRITY_CHECKS.json": true,
+        "metrics.sanitized.json": true,
+        "QUERY_EXECUTION.csv": true,
+        "report.json": true,
+        "result.json": true,
+        "ROUND_TABLE.csv": true,
+        "TOOL_INTEGRITY.csv": true,
+        "trajectory.jsonl": true,
+        "VISIBILITY_TABLE.csv": true
+      },
+      "chain": {
+        "event_count": 76,
+        "head": "780ab9bb73a6f621d6dfed22fa3a272aa531bfbbeed666d7668aa19a8fd6f9f1"
+      },
+      "wires": [
+        {
+          "round": 1,
+          "request_sha256": "a61deeac7f2debefea800747f21cf59eb495c83b3fe63081feaef2c7a704fe3b",
+          "request_archive_equals_http": true,
+          "response_archive_equals_http": true,
+          "visible": []
+        },
+        {
+          "round": 2,
+          "request_sha256": "d1e083ac3130cbb875495303a753b77651756bb3a10baa8f1e2a39a46b6d6fd3",
+          "request_archive_equals_http": true,
+          "response_archive_equals_http": true,
+          "visible": []
+        },
+        {
+          "round": 3,
+          "request_sha256": "6af5eea6e1ab11ffe0ef5db7f74f117fca9a2d0bf3ed34035e750d0d0e7e1d04",
+          "request_archive_equals_http": true,
+          "response_archive_equals_http": true,
+          "visible": [
+            "e1",
+            "e2"
+          ]
+        },
+        {
+          "round": 4,
+          "request_sha256": "30f13359ba20808f1bad33383b3b0ce50d639d6cce7aef681050c65dea3a1b64",
+          "request_archive_equals_http": true,
+          "response_archive_equals_http": true,
+          "visible": [
+            "e1",
+            "e2"
+          ]
+        }
+      ],
+      "raw_windows": [
+        {
+          "ref": "e1",
+          "document": "d5",
+          "snapshot": "7d8960afbde4b93401ea738e66299a6ee3d0dee47906ba8e3a86ebdea642ffcd",
+          "start": 0,
+          "end": 3000,
+          "sha256": "ed282b99cfb0aae5a430ddfadeb3348fa20e85aac24fb4501bf9cd3b3dadb4b2"
+        },
+        {
+          "ref": "e2",
+          "document": "d1",
+          "snapshot": "446eabd6c86b9aad83f468e7eb034d96105d6e38bc9d97c923416d3ce089e105",
+          "start": 0,
+          "end": 3000,
+          "sha256": "521deb8f6549e7ea288326ea13a34d4635283fc59820929b6ad3b4c3edade321"
+        }
+      ],
+      "terminal": [
+        {
+          "answer": "",
+          "elapsed_seconds": 39.08675190000213,
+          "outcome": "model_budget"
+        }
+      ],
+      "actions": [
+        {
+          "arguments": "{\"queries\": [\"hat shop scarves renamed initials surname siblings 1970s branches\", \"hat shop owner father railway worker mother housewife tower 1340s city\", \"hats no longer popular scarves shop new name initials first names surname\"]}",
+          "executed": true,
+          "round": 1,
+          "tool": "search",
+          "tool_call_id": "call_b7fffec7ea934862b1a4d947",
+          "ok": true,
+          "code": null
+        },
+        {
+          "arguments": "{\"ref\": \"d5\"}",
+          "executed": true,
+          "round": 2,
+          "tool": "read",
+          "tool_call_id": "call_e5754559c68a41f0b69862f1",
+          "ok": true,
+          "code": null
+        },
+        {
+          "arguments": "{\"ref\": \"d1\"}",
+          "executed": true,
+          "round": 2,
+          "tool": "read",
+          "tool_call_id": "call_1a0d60960fca4c3591ca1ae3",
+          "ok": true,
+          "code": null
+        },
+        {
+          "arguments": "{\"queries\": [\"Vakko 1980s new brand younger audience Cem Hakko son\", \"Vakkorama brand Vitali Hakko Cem Hakko 1980s youth\", \"Vakko younger brand created 1980s Vitali Cem Hakko\"]}",
+          "executed": true,
+          "round": 3,
+          "tool": "search",
+          "tool_call_id": "call_dba7d3780f88487ea5bf81f6",
+          "ok": true,
+          "code": null
+        },
+        {
+          "arguments": "{\"ref\": \"d14\"}",
+          "executed": false,
+          "round": 4,
+          "tool": "read",
+          "tool_call_id": "call_7cf8b1091bc34573b82ebadb",
+          "ok": false,
+          "code": "final_only"
+        }
+      ],
+      "model_identity": [
+        {
+          "endpoint": "http://lanz.hikvision.com/v3/openai/model",
+          "expected_response_model": "glm-5.2",
+          "kind": "openai",
+          "model": "EB-GLM-5.2",
+          "output_parameter": "max_tokens",
+          "revision_label": "user-configured-EB-GLM-5.2",
+          "temperature": 0.0
+        }
+      ],
+      "review_or_memory_events": [],
+      "cost": {
+        "model_calls": 4,
+        "actions": {
+          "search": 2,
+          "read": 3
+        },
+        "backend_attempts": 8,
+        "usage": {
+          "input_tokens": 29812,
+          "output_tokens": 422,
+          "cache_read_tokens": 14464,
+          "cache_write_tokens": 0
+        },
+        "model_elapsed_seconds": 13.540406899963273,
+        "backend_elapsed_seconds": 24.6530519000371,
+        "event_span_seconds": 39.062568
+      },
+      "source_audit": "no_submitted_answer",
+      "episode_config": {
+        "answer_prefix": "",
+        "answer_suffix": "",
+        "centered_recall": true,
+        "compiled_query_cache": false,
+        "context_limit": 96000,
+        "context_mode": "rolling",
+        "delivery_preflight": true,
+        "disclose_retriever": true,
+        "evidence_shelf_size": 3,
+        "max_actions": 200,
+        "max_backend_calls": 120,
+        "max_batch": 4,
+        "max_document_chars": 2000000,
+        "max_model_calls": 4,
+        "max_notes": 6,
+        "max_output_tokens": 4096,
+        "max_queries_per_search": 3,
+        "max_seconds": 600,
+        "max_total_output_tokens": 48000,
+        "nonblocking_notes": true,
+        "notes_enabled": true,
+        "read_chars": 3000,
+        "recall_navigation": true,
+        "recent_groups": 4,
+        "repair_context": true,
+        "require_sources": true,
+        "reserve_finish": true,
+        "response_reserve": 4096
+      },
+      "delivery_ack": [
+        {
+          "documents": [],
+          "evidence": [],
+          "round": 1
+        },
+        {
+          "documents": [
+            "d1",
+            "d2",
+            "d3",
+            "d4",
+            "d5",
+            "d6",
+            "d7",
+            "d8",
+            "d9",
+            "d10",
+            "d11",
+            "d12",
+            "d13"
+          ],
+          "evidence": [],
+          "round": 2
+        },
+        {
+          "documents": [
+            "d1",
+            "d2",
+            "d3",
+            "d4",
+            "d5",
+            "d6",
+            "d7",
+            "d8",
+            "d9",
+            "d10",
+            "d11",
+            "d12",
+            "d13"
+          ],
+          "evidence": [
+            "e1",
+            "e2"
+          ],
+          "round": 3
+        },
+        {
+          "documents": [
+            "d1",
+            "d2",
+            "d3",
+            "d4",
+            "d5",
+            "d6",
+            "d7",
+            "d8",
+            "d9",
+            "d10",
+            "d11",
+            "d12",
+            "d13",
+            "d14",
+            "d15",
+            "d16"
+          ],
+          "evidence": [
+            "e1",
+            "e2"
+          ],
+          "round": 4
+        }
+      ],
+      "all_request_tool_names": [
+        [
+          "search",
+          "read",
+          "find",
+          "recall",
+          "notes",
+          "finish",
+          "update_gap"
+        ],
+        [
+          "search",
+          "read",
+          "find",
+          "recall",
+          "notes",
+          "finish",
+          "update_gap"
+        ],
+        [
+          "search",
+          "read",
+          "find",
+          "recall",
+          "notes",
+          "finish",
+          "update_gap"
+        ],
+        [
+          "finish"
+        ]
+      ]
+    },
+    "q771-read-only-explicit-v1-r1": {
+      "seal_sha256": "c183281127239fb0511e1c77d38f9b9bc5fe5afae483a62c4b87523b8056037a",
+      "sealed_files": {
+        "all-objects.json": true,
+        "analysis-data.json": true,
+        "diagnostics.json": true,
+        "episode.sqlite": true,
+        "events-timed.jsonl": true,
+        "EVIDENCE_TABLE.csv": true,
+        "FULL_INTERACTION.md": true,
+        "http/001/attempt-start.json": true,
+        "http/001/metadata.json": true,
+        "http/001/request.body": true,
+        "http/001/response.body": true,
+        "http/002/attempt-start.json": true,
+        "http/002/metadata.json": true,
+        "http/002/request.body": true,
+        "http/002/response.body": true,
+        "http/003/attempt-start.json": true,
+        "http/003/metadata.json": true,
+        "http/003/request.body": true,
+        "http/003/response.body": true,
+        "http/004/attempt-start.json": true,
+        "http/004/metadata.json": true,
+        "http/004/request.body": true,
+        "http/004/response.body": true,
+        "INTEGRITY_CHECKS.json": true,
+        "metrics.sanitized.json": true,
+        "QUERY_EXECUTION.csv": true,
+        "report.json": true,
+        "result.json": true,
+        "ROUND_TABLE.csv": true,
+        "TOOL_INTEGRITY.csv": true,
+        "trajectory.jsonl": true,
+        "VISIBILITY_TABLE.csv": true
+      },
+      "chain": {
+        "event_count": 68,
+        "head": "665fb53ee509b39888954279ff1e3a36d8b9233af16d1a1f89dafcd907f1e7a9"
+      },
+      "wires": [
+        {
+          "round": 1,
+          "request_sha256": "a61deeac7f2debefea800747f21cf59eb495c83b3fe63081feaef2c7a704fe3b",
+          "request_archive_equals_http": true,
+          "response_archive_equals_http": true,
+          "visible": []
+        },
+        {
+          "round": 2,
+          "request_sha256": "f8d7ea29cba26858a080aff81533ebcd4fe4f112e8bcb90e52eab6d93b7df321",
+          "request_archive_equals_http": true,
+          "response_archive_equals_http": true,
+          "visible": []
+        },
+        {
+          "round": 3,
+          "request_sha256": "7ac7e356c727b2d693596ca3c90eccfe1a3481aff1d205c3a067e4980ee655c9",
+          "request_archive_equals_http": true,
+          "response_archive_equals_http": true,
+          "visible": [
+            "e1",
+            "e2"
+          ]
+        },
+        {
+          "round": 4,
+          "request_sha256": "2051e05faba772db53e44caf52a524632bc443f273d7d489ec4a9173f77cced0",
+          "request_archive_equals_http": true,
+          "response_archive_equals_http": true,
+          "visible": [
+            "e1",
+            "e2",
+            "e3",
+            "e4"
+          ]
+        }
+      ],
+      "raw_windows": [
+        {
+          "ref": "e1",
+          "document": "d8",
+          "snapshot": "7d8960afbde4b93401ea738e66299a6ee3d0dee47906ba8e3a86ebdea642ffcd",
+          "start": 0,
+          "end": 3000,
+          "sha256": "ed282b99cfb0aae5a430ddfadeb3348fa20e85aac24fb4501bf9cd3b3dadb4b2"
+        },
+        {
+          "ref": "e2",
+          "document": "d1",
+          "snapshot": "446eabd6c86b9aad83f468e7eb034d96105d6e38bc9d97c923416d3ce089e105",
+          "start": 0,
+          "end": 3000,
+          "sha256": "521deb8f6549e7ea288326ea13a34d4635283fc59820929b6ad3b4c3edade321"
+        },
+        {
+          "ref": "e3",
+          "document": "d8",
+          "snapshot": "7d8960afbde4b93401ea738e66299a6ee3d0dee47906ba8e3a86ebdea642ffcd",
+          "start": 3000,
+          "end": 6000,
+          "sha256": "97a6e11f3f34512afbebf984635c4f0118e43a0fd1a04e71a3f4cf755defe729"
+        },
+        {
+          "ref": "e4",
+          "document": "d1",
+          "snapshot": "446eabd6c86b9aad83f468e7eb034d96105d6e38bc9d97c923416d3ce089e105",
+          "start": 3000,
+          "end": 6000,
+          "sha256": "01ef6425050ddf612695a672f50d2d88e296ce9e1e5d49338047f20a92856164"
+        }
+      ],
+      "terminal": [
+        {
+          "answer": "Vakkorama",
+          "answer_representation": {
+            "input_type": "string",
+            "operation": "identity",
+            "rule": "string-integer-v1"
+          },
+          "basis": [
+            {
+              "document": "d8",
+              "document_chars": 13639,
+              "end": 6000,
+              "kind": "raw_evidence",
+              "ref": "e3",
+              "sha256": "97a6e11f3f34512afbebf984635c4f0118e43a0fd1a04e71a3f4cf755defe729",
+              "snapshot": "7d8960afbde4b93401ea738e66299a6ee3d0dee47906ba8e3a86ebdea642ffcd",
+              "start": 3000
+            },
+            {
+              "document": "d1",
+              "document_chars": 9095,
+              "end": 6000,
+              "kind": "raw_evidence",
+              "ref": "e4",
+              "sha256": "01ef6425050ddf612695a672f50d2d88e296ce9e1e5d49338047f20a92856164",
+              "snapshot": "446eabd6c86b9aad83f468e7eb034d96105d6e38bc9d97c923416d3ce089e105",
+              "start": 3000
+            }
+          ],
+          "elapsed_seconds": 17.97358049999457,
+          "outcome": "submitted",
+          "refs": [
+            "e3",
+            "e4"
+          ],
+          "semantic_status": "not_automatically_verified"
+        }
+      ],
+      "actions": [
+        {
+          "arguments": "{\"queries\": [\"hat shop scarves renamed initials siblings surname\", \"hat shop 1930s scarves 1970s branches brand child younger audience\", \"wooden house tower 1340s city hat shop railway father\"]}",
+          "executed": true,
+          "round": 1,
+          "tool": "search",
+          "tool_call_id": "call_9b7e5cf67990465793d9b045",
+          "ok": true,
+          "code": null
+        },
+        {
+          "arguments": "{\"ref\": \"d8\"}",
+          "executed": true,
+          "round": 2,
+          "tool": "read",
+          "tool_call_id": "call_38174c8e754b4302a8d157ef",
+          "ok": true,
+          "code": null
+        },
+        {
+          "arguments": "{\"ref\": \"d1\"}",
+          "executed": true,
+          "round": 2,
+          "tool": "read",
+          "tool_call_id": "call_fa249b99be4243aab664055e",
+          "ok": true,
+          "code": null
+        },
+        {
+          "arguments": "{\"ref\": \"d8\", \"start\": 3000, \"length\": 3000}",
+          "executed": true,
+          "round": 3,
+          "tool": "read",
+          "tool_call_id": "call_8637b3b5fc8c49369bdf2756",
+          "ok": true,
+          "code": null
+        },
+        {
+          "arguments": "{\"ref\": \"d1\", \"start\": 3000, \"length\": 3000}",
+          "executed": true,
+          "round": 3,
+          "tool": "read",
+          "tool_call_id": "call_0fdfe0305d084407959dc103",
+          "ok": true,
+          "code": null
+        },
+        {
+          "arguments": "{\"answer\": \"Vakkorama\", \"refs\": [\"e3\", \"e4\"]}",
+          "executed": true,
+          "round": 4,
+          "tool": "finish",
+          "tool_call_id": "call_179bc542e46a4e20b34e5ad1",
+          "ok": true,
+          "code": null
+        }
+      ],
+      "model_identity": [
+        {
+          "endpoint": "http://lanz.hikvision.com/v3/openai/model",
+          "expected_response_model": "glm-5.2",
+          "kind": "openai",
+          "model": "EB-GLM-5.2",
+          "output_parameter": "max_tokens",
+          "revision_label": "user-configured-EB-GLM-5.2",
+          "temperature": 0.0
+        }
+      ],
+      "review_or_memory_events": [],
+      "cost": {
+        "model_calls": 4,
+        "actions": {
+          "search": 1,
+          "read": 4,
+          "finish": 1
+        },
+        "backend_attempts": 5,
+        "usage": {
+          "input_tokens": 28667,
+          "output_tokens": 418,
+          "cache_read_tokens": 13440,
+          "cache_write_tokens": 0
+        },
+        "model_elapsed_seconds": 15.014812200010056,
+        "backend_elapsed_seconds": 1.967460799991386,
+        "event_span_seconds": 17.987547
+      },
+      "source_audit": "supported",
+      "episode_config": {
+        "answer_prefix": "",
+        "answer_suffix": "",
+        "centered_recall": true,
+        "compiled_query_cache": false,
+        "context_limit": 96000,
+        "context_mode": "rolling",
+        "delivery_preflight": true,
+        "disclose_retriever": true,
+        "evidence_shelf_size": 3,
+        "max_actions": 200,
+        "max_backend_calls": 120,
+        "max_batch": 4,
+        "max_document_chars": 2000000,
+        "max_model_calls": 4,
+        "max_notes": 6,
+        "max_output_tokens": 4096,
+        "max_queries_per_search": 3,
+        "max_seconds": 600,
+        "max_total_output_tokens": 48000,
+        "nonblocking_notes": true,
+        "notes_enabled": true,
+        "read_chars": 3000,
+        "recall_navigation": true,
+        "recent_groups": 4,
+        "repair_context": true,
+        "require_sources": true,
+        "reserve_finish": true,
+        "response_reserve": 4096
+      },
+      "delivery_ack": [
+        {
+          "documents": [],
+          "evidence": [],
+          "round": 1
+        },
+        {
+          "documents": [
+            "d1",
+            "d2",
+            "d3",
+            "d4",
+            "d5",
+            "d6",
+            "d7",
+            "d8",
+            "d9",
+            "d10",
+            "d11",
+            "d12",
+            "d13",
+            "d14"
+          ],
+          "evidence": [],
+          "round": 2
+        },
+        {
+          "documents": [
+            "d1",
+            "d2",
+            "d3",
+            "d4",
+            "d5",
+            "d6",
+            "d7",
+            "d8",
+            "d9",
+            "d10",
+            "d11",
+            "d12",
+            "d13",
+            "d14"
+          ],
+          "evidence": [
+            "e1",
+            "e2"
+          ],
+          "round": 3
+        },
+        {
+          "documents": [
+            "d1",
+            "d2",
+            "d3",
+            "d4",
+            "d5",
+            "d6",
+            "d7",
+            "d8",
+            "d9",
+            "d10",
+            "d11",
+            "d12",
+            "d13",
+            "d14"
+          ],
+          "evidence": [
+            "e1",
+            "e2",
+            "e3",
+            "e4"
+          ],
+          "round": 4
+        }
+      ],
+      "all_request_tool_names": [
+        [
+          "search",
+          "read",
+          "find",
+          "recall",
+          "notes",
+          "finish",
+          "update_gap"
+        ],
+        [
+          "search",
+          "read",
+          "find",
+          "recall",
+          "notes",
+          "finish",
+          "update_gap"
+        ],
+        [
+          "search",
+          "read",
+          "find",
+          "recall",
+          "notes",
+          "finish",
+          "update_gap"
+        ],
+        [
+          "finish"
+        ]
+      ]
+    },
+    "q778-baseline-r1": {
+      "seal_sha256": "5ff473710b4769006f0d34be22abaf7939bc42a3fe7148c908bef6b5792d0057",
+      "sealed_files": {
+        "all-objects.json": true,
+        "analysis-data.json": true,
+        "diagnostics.json": true,
+        "episode.sqlite": true,
+        "events-timed.jsonl": true,
+        "EVIDENCE_TABLE.csv": true,
+        "FULL_INTERACTION.md": true,
+        "http/001/attempt-start.json": true,
+        "http/001/metadata.json": true,
+        "http/001/request.body": true,
+        "http/001/response.body": true,
+        "http/002/attempt-start.json": true,
+        "http/002/metadata.json": true,
+        "http/002/request.body": true,
+        "http/002/response.body": true,
+        "http/003/attempt-start.json": true,
+        "http/003/metadata.json": true,
+        "http/003/request.body": true,
+        "http/003/response.body": true,
+        "http/004/attempt-start.json": true,
+        "http/004/metadata.json": true,
+        "http/004/request.body": true,
+        "http/004/response.body": true,
+        "INTEGRITY_CHECKS.json": true,
+        "metrics.sanitized.json": true,
+        "QUERY_EXECUTION.csv": true,
+        "report.json": true,
+        "result.json": true,
+        "ROUND_TABLE.csv": true,
+        "TOOL_INTEGRITY.csv": true,
+        "trajectory.jsonl": true,
+        "VISIBILITY_TABLE.csv": true
+      },
+      "chain": {
+        "event_count": 86,
+        "head": "a83dd137983c3bdfa511054b61e8edc2bd8755f8ef3d3d845d5ce248c3e270cf"
+      },
+      "wires": [
+        {
+          "round": 1,
+          "request_sha256": "7c3b4de711393e1eb56749a873d6860c113e222b59f4a83f8c44136a147268b7",
+          "request_archive_equals_http": true,
+          "response_archive_equals_http": true,
+          "visible": []
+        },
+        {
+          "round": 2,
+          "request_sha256": "dbca5f025edac46c3095e55ed473753db5a87cfac9335c5e4bb4400c929d6e93",
+          "request_archive_equals_http": true,
+          "response_archive_equals_http": true,
+          "visible": []
+        },
+        {
+          "round": 3,
+          "request_sha256": "47092e0d741d135d62473da182abc549360acec60ffb863d9cf7ea3dd10fc78d",
+          "request_archive_equals_http": true,
+          "response_archive_equals_http": true,
+          "visible": []
+        },
+        {
+          "round": 4,
+          "request_sha256": "779c18075a4a5f32e091dbd2be0a274547c37da3949827db569e87345a6b34b7",
+          "request_archive_equals_http": true,
+          "response_archive_equals_http": true,
+          "visible": []
+        }
+      ],
+      "raw_windows": [],
+      "terminal": [
+        {
+          "answer": "",
+          "elapsed_seconds": 19.8034733000095,
+          "outcome": "model_budget"
+        }
+      ],
+      "actions": [
+        {
+          "arguments": "{\"queries\": [\"CEO founded company mid-1990s raised Southern Africa father engineer\", \"first child SIDS CEO younger sister co-founded film streaming service\", \"CEO child unusual name internet buzzing early 2020s Southern Africa\"], \"top_k\": 8}",
+          "executed": true,
+          "round": 1,
+          "tool": "search",
+          "tool_call_id": "call_731d1540cff1442f88d6c10f",
+          "ok": true,
+          "code": null
+        },
+        {
+          "arguments": "{\"queries\": \"woman claimed related Elon Musk mother age gave birth article\\\", \\\"Elon Musk relative claim woman mother young age birth early 2020s\\\", \\\"lady claimed Elon Musk relative mother age when born article\\\"]\", \"top_k\": 8}",
+          "executed": false,
+          "round": 2,
+          "tool": "search",
+          "tool_call_id": "call_261acc255c94414f959e23e0",
+          "ok": false,
+          "code": "arguments_invalid"
+        },
+        {
+          "arguments": "{\"queries\": [\"woman claimed related Elon Musk mother age gave birth article\", \"Elon Musk relative claim woman mother young age birth early 2020s\", \"lady claimed Elon Musk relative mother age when born article\"], \"top_k\": 8}",
+          "executed": true,
+          "round": 3,
+          "tool": "search",
+          "tool_call_id": "call_d5a53d236c804aa894b83531",
+          "ok": true,
+          "code": null
+        },
+        {
+          "arguments": "{\"ref\": \"d26\"}",
+          "executed": false,
+          "round": 4,
+          "tool": "read",
+          "tool_call_id": "call_b582817093ae4882a7619dc7",
+          "ok": false,
+          "code": "final_only"
+        }
+      ],
+      "model_identity": [
+        {
+          "endpoint": "http://lanz.hikvision.com/v3/openai/model",
+          "expected_response_model": "glm-5.2",
+          "kind": "openai",
+          "model": "EB-GLM-5.2",
+          "output_parameter": "max_tokens",
+          "revision_label": "user-configured-EB-GLM-5.2",
+          "temperature": 0.0
+        }
+      ],
+      "review_or_memory_events": [],
+      "cost": {
+        "model_calls": 4,
+        "actions": {
+          "search": 3,
+          "read": 1
+        },
+        "backend_attempts": 6,
+        "usage": {
+          "input_tokens": 31360,
+          "output_tokens": 439,
+          "cache_read_tokens": 14720,
+          "cache_write_tokens": 0
+        },
+        "model_elapsed_seconds": 13.2970142000122,
+        "backend_elapsed_seconds": 5.330662999971537,
+        "event_span_seconds": 19.600157
+      },
+      "source_audit": "no_submitted_answer",
+      "episode_config": {
+        "answer_prefix": "",
+        "answer_suffix": "",
+        "centered_recall": true,
+        "compiled_query_cache": false,
+        "context_limit": 96000,
+        "context_mode": "rolling",
+        "delivery_preflight": true,
+        "disclose_retriever": true,
+        "evidence_shelf_size": 3,
+        "max_actions": 200,
+        "max_backend_calls": 120,
+        "max_batch": 4,
+        "max_document_chars": 2000000,
+        "max_model_calls": 4,
+        "max_notes": 6,
+        "max_output_tokens": 4096,
+        "max_queries_per_search": 3,
+        "max_seconds": 600,
+        "max_total_output_tokens": 48000,
+        "nonblocking_notes": true,
+        "notes_enabled": true,
+        "read_chars": 3000,
+        "recall_navigation": true,
+        "recent_groups": 4,
+        "repair_context": true,
+        "require_sources": true,
+        "reserve_finish": true,
+        "response_reserve": 4096
+      },
+      "delivery_ack": [
+        {
+          "documents": [],
+          "evidence": [],
+          "round": 1
+        },
+        {
+          "documents": [
+            "d1",
+            "d2",
+            "d3",
+            "d4",
+            "d5",
+            "d6",
+            "d7",
+            "d8",
+            "d9",
+            "d10",
+            "d11",
+            "d12",
+            "d13",
+            "d14",
+            "d15",
+            "d16",
+            "d17",
+            "d18",
+            "d19",
+            "d20",
+            "d21",
+            "d22",
+            "d23",
+            "d24"
+          ],
+          "evidence": [],
+          "round": 2
+        },
+        {
+          "documents": [
+            "d9",
+            "d10",
+            "d11",
+            "d12",
+            "d13",
+            "d14",
+            "d15",
+            "d16",
+            "d17",
+            "d18",
+            "d19",
+            "d20",
+            "d21",
+            "d22",
+            "d23",
+            "d24",
+            "d1",
+            "d2",
+            "d3",
+            "d4",
+            "d5",
+            "d6",
+            "d7",
+            "d8"
+          ],
+          "evidence": [],
+          "round": 3
+        },
+        {
+          "documents": [
+            "d9",
+            "d10",
+            "d11",
+            "d12",
+            "d13",
+            "d14",
+            "d15",
+            "d16",
+            "d17",
+            "d18",
+            "d19",
+            "d20",
+            "d21",
+            "d22",
+            "d23",
+            "d24",
+            "d1",
+            "d2",
+            "d3",
+            "d4",
+            "d5",
+            "d6",
+            "d7",
+            "d8",
+            "d25",
+            "d26",
+            "d27",
+            "d28",
+            "d29",
+            "d30",
+            "d31",
+            "d32",
+            "d33",
+            "d34",
+            "d35",
+            "d36"
+          ],
+          "evidence": [],
+          "round": 4
+        }
+      ],
+      "all_request_tool_names": [
+        [
+          "search",
+          "read",
+          "find",
+          "recall",
+          "notes",
+          "finish",
+          "update_gap"
+        ],
+        [
+          "search",
+          "read",
+          "find",
+          "recall",
+          "notes",
+          "finish",
+          "update_gap"
+        ],
+        [
+          "search",
+          "read",
+          "find",
+          "recall",
+          "notes",
+          "finish",
+          "update_gap"
+        ],
+        [
+          "finish"
+        ]
+      ]
+    },
+    "q778-read-only-explicit-v1-r1": {
+      "seal_sha256": "db9039bdddd0e142aabe9428d1cd6f802f5ccf87f78644e50a526bd11c287d75",
+      "sealed_files": {
+        "all-objects.json": true,
+        "analysis-data.json": true,
+        "diagnostics.json": true,
+        "episode.sqlite": true,
+        "events-timed.jsonl": true,
+        "EVIDENCE_TABLE.csv": true,
+        "FULL_INTERACTION.md": true,
+        "http/001/attempt-start.json": true,
+        "http/001/metadata.json": true,
+        "http/001/request.body": true,
+        "http/001/response.body": true,
+        "http/002/attempt-start.json": true,
+        "http/002/metadata.json": true,
+        "http/002/request.body": true,
+        "http/002/response.body": true,
+        "http/003/attempt-start.json": true,
+        "http/003/metadata.json": true,
+        "http/003/request.body": true,
+        "http/003/response.body": true,
+        "http/004/attempt-start.json": true,
+        "http/004/metadata.json": true,
+        "http/004/request.body": true,
+        "http/004/response.body": true,
+        "INTEGRITY_CHECKS.json": true,
+        "metrics.sanitized.json": true,
+        "QUERY_EXECUTION.csv": true,
+        "report.json": true,
+        "result.json": true,
+        "ROUND_TABLE.csv": true,
+        "TOOL_INTEGRITY.csv": true,
+        "trajectory.jsonl": true,
+        "VISIBILITY_TABLE.csv": true
+      },
+      "chain": {
+        "event_count": 88,
+        "head": "c283355d298ef009bc377c6cf8b9544c2dbefa335bd73b736e294d24d49a8e34"
+      },
+      "wires": [
+        {
+          "round": 1,
+          "request_sha256": "7c3b4de711393e1eb56749a873d6860c113e222b59f4a83f8c44136a147268b7",
+          "request_archive_equals_http": true,
+          "response_archive_equals_http": true,
+          "visible": []
+        },
+        {
+          "round": 2,
+          "request_sha256": "f839518a39212bc9937833bd27ebd6525b8a7350f2293d1aaf5eedbe020e8876",
+          "request_archive_equals_http": true,
+          "response_archive_equals_http": true,
+          "visible": []
+        },
+        {
+          "round": 3,
+          "request_sha256": "b2e50cce8409b097a43596f8812793981f3d0a4acfba36d704aafd24f0a8ce87",
+          "request_archive_equals_http": true,
+          "response_archive_equals_http": true,
+          "visible": []
+        },
+        {
+          "round": 4,
+          "request_sha256": "e5e441cfa6efefd691fb9a5f45021f6502b26a60944becae4a781f73148e838d",
+          "request_archive_equals_http": true,
+          "response_archive_equals_http": true,
+          "visible": [
+            "e1"
+          ]
+        }
+      ],
+      "raw_windows": [
+        {
+          "ref": "e1",
+          "document": "d28",
+          "snapshot": "d7b7a23b3eb780d78018e5fe30d91613c9769a1cff7564bb0a79c08614acb838",
+          "start": 0,
+          "end": 3000,
+          "sha256": "bc0d510dbd6cde0530cf08684de455d82ec1943c0ba50cab130ae01990cc24b8"
+        }
+      ],
+      "terminal": [
+        {
+          "answer": "21",
+          "answer_representation": {
+            "input_type": "integer",
+            "input_value": 21,
+            "operation": "decimal",
+            "rule": "string-integer-v1"
+          },
+          "basis": [
+            {
+              "document": "d28",
+              "document_chars": 4374,
+              "end": 3000,
+              "kind": "raw_evidence",
+              "ref": "e1",
+              "sha256": "bc0d510dbd6cde0530cf08684de455d82ec1943c0ba50cab130ae01990cc24b8",
+              "snapshot": "d7b7a23b3eb780d78018e5fe30d91613c9769a1cff7564bb0a79c08614acb838",
+              "start": 0
+            }
+          ],
+          "elapsed_seconds": 27.715858399984427,
+          "outcome": "submitted",
+          "refs": [
+            "e1"
+          ],
+          "semantic_status": "not_automatically_verified"
+        }
+      ],
+      "actions": [
+        {
+          "arguments": "{\"queries\": [\"CEO founded company mid-1990s raised Southern Africa father engineer first child SIDS\", \"younger sister co-founded film streaming service CEO Southern Africa\", \"CEO child buzzworthy name early 2020s Southern Africa raised\"], \"top_k\": 8}",
+          "executed": true,
+          "round": 1,
+          "tool": "search",
+          "tool_call_id": "call_e0c4761196c7442ea84bd323",
+          "ok": true,
+          "code": null
+        },
+        {
+          "arguments": "{\"queries\": [\"woman claimed to be Elon Musk's secret child daughter mother age gave birth\", \"Elon Musk secret daughter claimed related mother age birth article\", \"lady claimed to be Elon Musk's daughter mother gave birth age\"], \"top_k\": 8}",
+          "executed": true,
+          "round": 2,
+          "tool": "search",
+          "tool_call_id": "call_ab4361cac6804e14a9c6b384",
+          "ok": true,
+          "code": null
+        },
+        {
+          "arguments": "{\"ref\": \"d28\"}",
+          "executed": true,
+          "round": 3,
+          "tool": "read",
+          "tool_call_id": "call_83f3a095904a4f0581354897",
+          "ok": true,
+          "code": null
+        },
+        {
+          "arguments": "{\"answer\": 21, \"refs\": [\"e1\"]}",
+          "executed": true,
+          "round": 4,
+          "tool": "finish",
+          "tool_call_id": "call_dc62226a815a46d298f086df",
+          "ok": true,
+          "code": null
+        }
+      ],
+      "model_identity": [
+        {
+          "endpoint": "http://lanz.hikvision.com/v3/openai/model",
+          "expected_response_model": "glm-5.2",
+          "kind": "openai",
+          "model": "EB-GLM-5.2",
+          "output_parameter": "max_tokens",
+          "revision_label": "user-configured-EB-GLM-5.2",
+          "temperature": 0.0
+        }
+      ],
+      "review_or_memory_events": [],
+      "cost": {
+        "model_calls": 4,
+        "actions": {
+          "search": 2,
+          "read": 1,
+          "finish": 1
+        },
+        "backend_attempts": 7,
+        "usage": {
+          "input_tokens": 35827,
+          "output_tokens": 466,
+          "cache_read_tokens": 15360,
+          "cache_write_tokens": 0
+        },
+        "model_elapsed_seconds": 16.872588000027463,
+        "backend_elapsed_seconds": 9.771123400016222,
+        "event_span_seconds": 27.739841
+      },
+      "source_audit": "supported",
+      "episode_config": {
+        "answer_prefix": "",
+        "answer_suffix": "",
+        "centered_recall": true,
+        "compiled_query_cache": false,
+        "context_limit": 96000,
+        "context_mode": "rolling",
+        "delivery_preflight": true,
+        "disclose_retriever": true,
+        "evidence_shelf_size": 3,
+        "max_actions": 200,
+        "max_backend_calls": 120,
+        "max_batch": 4,
+        "max_document_chars": 2000000,
+        "max_model_calls": 4,
+        "max_notes": 6,
+        "max_output_tokens": 4096,
+        "max_queries_per_search": 3,
+        "max_seconds": 600,
+        "max_total_output_tokens": 48000,
+        "nonblocking_notes": true,
+        "notes_enabled": true,
+        "read_chars": 3000,
+        "recall_navigation": true,
+        "recent_groups": 4,
+        "repair_context": true,
+        "require_sources": true,
+        "reserve_finish": true,
+        "response_reserve": 4096
+      },
+      "delivery_ack": [
+        {
+          "documents": [],
+          "evidence": [],
+          "round": 1
+        },
+        {
+          "documents": [
+            "d1",
+            "d2",
+            "d3",
+            "d4",
+            "d5",
+            "d6",
+            "d7",
+            "d8",
+            "d9",
+            "d10",
+            "d11",
+            "d12",
+            "d13",
+            "d14",
+            "d15",
+            "d16",
+            "d17",
+            "d18",
+            "d19",
+            "d20",
+            "d21",
+            "d22",
+            "d23"
+          ],
+          "evidence": [],
+          "round": 2
+        },
+        {
+          "documents": [
+            "d8",
+            "d9",
+            "d10",
+            "d11",
+            "d12",
+            "d13",
+            "d14",
+            "d15",
+            "d16",
+            "d17",
+            "d18",
+            "d19",
+            "d20",
+            "d21",
+            "d22",
+            "d23",
+            "d1",
+            "d2",
+            "d3",
+            "d4",
+            "d5",
+            "d6",
+            "d7",
+            "d24",
+            "d25",
+            "d26",
+            "d27",
+            "d28",
+            "d29",
+            "d30",
+            "d31",
+            "d32",
+            "d33",
+            "d34"
+          ],
+          "evidence": [],
+          "round": 3
+        },
+        {
+          "documents": [
+            "d19",
+            "d20",
+            "d21",
+            "d22",
+            "d23",
+            "d24",
+            "d25",
+            "d26",
+            "d27",
+            "d28",
+            "d29",
+            "d30",
+            "d31",
+            "d32",
+            "d33",
+            "d34",
+            "d1",
+            "d2",
+            "d3",
+            "d4",
+            "d5",
+            "d6",
+            "d7",
+            "d8",
+            "d9",
+            "d10",
+            "d11",
+            "d12",
+            "d13",
+            "d14",
+            "d15",
+            "d16",
+            "d17",
+            "d18"
+          ],
+          "evidence": [
+            "e1"
+          ],
+          "round": 4
+        }
+      ],
+      "all_request_tool_names": [
+        [
+          "search",
+          "read",
+          "find",
+          "recall",
+          "notes",
+          "finish",
+          "update_gap"
+        ],
+        [
+          "search",
+          "read",
+          "find",
+          "recall",
+          "notes",
+          "finish",
+          "update_gap"
+        ],
+        [
+          "search",
+          "read",
+          "find",
+          "recall",
+          "notes",
+          "finish",
+          "update_gap"
+        ],
+        [
+          "finish"
+        ]
+      ]
+    }
+  },
+  "pairs": {
+    "771": {
+      "first_wire_byte_equal": true,
+      "sha256": "a61deeac7f2debefea800747f21cf59eb495c83b3fe63081feaef2c7a704fe3b",
+      "config_equal": true,
+      "model_identity_equal": true,
+      "first_response_queries_differ": true,
+      "mechanism_attribution": "not_identifiable: neither arm activated the intervention"
+    },
+    "778": {
+      "first_wire_byte_equal": true,
+      "sha256": "7c3b4de711393e1eb56749a873d6860c113e222b59f4a83f8c44136a147268b7",
+      "config_equal": true,
+      "model_identity_equal": true,
+      "first_response_queries_differ": true,
+      "mechanism_attribution": "not_identifiable: neither arm activated the intervention"
+    }
+  },
+  "verification_totals": {
+    "sealed_files": 128,
+    "http_archive_request_response_pairs": 16,
+    "raw_windows": 7
+  }
+}

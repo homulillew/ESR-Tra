@@ -1,0 +1,953 @@
+{
+  "protocol": "stride-search-3",
+  "head": "dc7a480fee5349ed8d34792d9cf5ed88e7901afdf9b5e098fd2a2bf907d00881",
+  "outcome": "abstained",
+  "formal_correct": null,
+  "model_attempts": 15,
+  "backend_attempts": 26,
+  "queries": [
+    {
+      "round": 1,
+      "top_k": 5,
+      "equivalence_key": "545718514185e2967f069d9b7fb0660ed3cc79488bcd4ccba3446ca0c3491227",
+      "cached": false,
+      "query_sha256": "e6c42804fe44b1a3d488308e645f598e0c7b82f61e8e3b02f50ad938d9aabfc9",
+      "query": "actor plays alongside real-life relative character married multiple times series",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"actor\" OR \"plays\" OR \"alongside\" OR \"real\" OR \"life\" OR \"relative\" OR \"character\" OR \"married\" OR \"multiple\" OR \"times\" OR \"series\"",
+        "terms": [
+          "actor",
+          "plays",
+          "alongside",
+          "real",
+          "life",
+          "relative",
+          "character",
+          "married",
+          "multiple",
+          "times",
+          "series"
+        ]
+      }
+    },
+    {
+      "round": 1,
+      "top_k": 5,
+      "equivalence_key": "8d0863be1cb5c78c545ce5acc1c64842d647446cfe4625334a97ff7aad65d22f",
+      "cached": false,
+      "query_sha256": "f256ab25251b80b5ae20ce97f8211c0e9f554002cab53a2f0849d7b41971dbf9",
+      "query": "TV series character married more than twice only one child survives",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"tv\" OR \"series\" OR \"character\" OR \"married\" OR \"more\" OR \"than\" OR \"twice\" OR \"only\" OR \"one\" OR \"child\" OR \"survives\"",
+        "terms": [
+          "tv",
+          "series",
+          "character",
+          "married",
+          "more",
+          "than",
+          "twice",
+          "only",
+          "one",
+          "child",
+          "survives"
+        ]
+      }
+    },
+    {
+      "round": 1,
+      "top_k": 5,
+      "equivalence_key": "91276ff75d2b9421e4c09b6c87b3e7f91b13c6affa6051910870c607dd11bfc3",
+      "cached": false,
+      "query_sha256": "e6091c9ee1af95e56489375bf2d79f57a10c6a6598e05dfd561bbe89e273bf1e",
+      "query": "entertainer height 1.65 1.70 real-life relative co-star",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"entertainer\" OR \"height\" OR \"1\" OR \"65\" OR \"70\" OR \"real\" OR \"life\" OR \"relative\" OR \"co\" OR \"star\"",
+        "terms": [
+          "entertainer",
+          "height",
+          "1",
+          "65",
+          "70",
+          "real",
+          "life",
+          "relative",
+          "co",
+          "star"
+        ]
+      }
+    },
+    {
+      "round": 2,
+      "top_k": 5,
+      "equivalence_key": "d7af7215e1099c9388c09069d524260f696346b92f686fc427f6e614ff36926a",
+      "cached": false,
+      "query_sha256": "12ac7fdd7c6898116af000a62e779556d0ba7d27565b2c9fc2f124a7c5083c9f",
+      "query": "Grey's Anatomy character married three times one child survives",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"grey\" OR \"s\" OR \"anatomy\" OR \"character\" OR \"married\" OR \"three\" OR \"times\" OR \"one\" OR \"child\" OR \"survives\"",
+        "terms": [
+          "grey",
+          "s",
+          "anatomy",
+          "character",
+          "married",
+          "three",
+          "times",
+          "one",
+          "child",
+          "survives"
+        ]
+      }
+    },
+    {
+      "round": 2,
+      "top_k": 5,
+      "equivalence_key": "724968c492b6d1fcc81af07548830a5b8ebcca1ac888f433465a921bcb8dbf95",
+      "cached": false,
+      "query_sha256": "a02e098fc24041e160a182b1373fb2eff9d8e4495f98db625105cead9b6d6a7d",
+      "query": "Grey's Anatomy actor real-life relative co-star height",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"grey\" OR \"s\" OR \"anatomy\" OR \"actor\" OR \"real\" OR \"life\" OR \"relative\" OR \"co\" OR \"star\" OR \"height\"",
+        "terms": [
+          "grey",
+          "s",
+          "anatomy",
+          "actor",
+          "real",
+          "life",
+          "relative",
+          "co",
+          "star",
+          "height"
+        ]
+      }
+    },
+    {
+      "round": 2,
+      "top_k": 5,
+      "equivalence_key": "b90094411aa4e7f3a1556aed54332b458dc8482ae0750f302d73e4c2627bbce1",
+      "cached": false,
+      "query_sha256": "4c5576dacc58ac81dd30b151c24aa89bead4bc255d80ac25f18af32574072619",
+      "query": "Grey's Anatomy cast height 1.65 1.70 meters real-life family",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"grey\" OR \"s\" OR \"anatomy\" OR \"cast\" OR \"height\" OR \"1\" OR \"65\" OR \"70\" OR \"meters\" OR \"real\" OR \"life\" OR \"family\"",
+        "terms": [
+          "grey",
+          "s",
+          "anatomy",
+          "cast",
+          "height",
+          "1",
+          "65",
+          "70",
+          "meters",
+          "real",
+          "life",
+          "family"
+        ]
+      }
+    },
+    {
+      "round": 2,
+      "top_k": 5,
+      "equivalence_key": "c3d8d1e6040804680a40b224abdbd335f732b06f45a8d36f1f10fb245bbf6797",
+      "cached": false,
+      "query_sha256": "1ef97d5c39c2ed5cf2e236f91152280432ca9d697a4e3f49ecbccaa34909a176",
+      "query": "TV character married four times only one child survives series",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"tv\" OR \"character\" OR \"married\" OR \"four\" OR \"times\" OR \"only\" OR \"one\" OR \"child\" OR \"survives\" OR \"series\"",
+        "terms": [
+          "tv",
+          "character",
+          "married",
+          "four",
+          "times",
+          "only",
+          "one",
+          "child",
+          "survives",
+          "series"
+        ]
+      }
+    },
+    {
+      "round": 2,
+      "top_k": 5,
+      "equivalence_key": "f32d76ead3c1f850a0076ffdcd3a3336b9ce823dd8c824526c897afbdfd893e3",
+      "cached": false,
+      "query_sha256": "89fb98f7bda48b93f4edc42ea3c4e8463b8046e41f4d027bf5d940b17291f3fc",
+      "query": "actor plays with real-life sibling spouse parent series unrelated on screen",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"actor\" OR \"plays\" OR \"with\" OR \"real\" OR \"life\" OR \"sibling\" OR \"spouse\" OR \"parent\" OR \"series\" OR \"unrelated\" OR \"on\" OR \"screen\"",
+        "terms": [
+          "actor",
+          "plays",
+          "with",
+          "real",
+          "life",
+          "sibling",
+          "spouse",
+          "parent",
+          "series",
+          "unrelated",
+          "on",
+          "screen"
+        ]
+      }
+    },
+    {
+      "round": 2,
+      "top_k": 5,
+      "equivalence_key": "2a1cb2310a13837fc8a4d3d2f7e26f01792fc64d2c169e7be28adde09a8fbc96",
+      "cached": false,
+      "query_sha256": "4dd639ceaec2c90f2c7300ebd506090a8bd8fc010d3e2251578c122c135535c2",
+      "query": "long-running TV series season started 2000s more than 3 seasons character multiple marriages",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"long\" OR \"running\" OR \"tv\" OR \"series\" OR \"season\" OR \"started\" OR \"2000s\" OR \"more\" OR \"than\" OR \"3\" OR \"seasons\" OR \"character\" OR \"multiple\" OR \"marriages\"",
+        "terms": [
+          "long",
+          "running",
+          "tv",
+          "series",
+          "season",
+          "started",
+          "2000s",
+          "more",
+          "than",
+          "3",
+          "seasons",
+          "character",
+          "multiple",
+          "marriages"
+        ]
+      }
+    },
+    {
+      "round": 3,
+      "top_k": 5,
+      "equivalence_key": "7dfefaf93ea8a185f50e95d469a1d96d7a3b50367b06dd2a6dfc323ff7c0e307",
+      "cached": false,
+      "query_sha256": "c8cf070351e4026af0ad637533442e8f34000b97416dd879ce3a61fe520c1d5e",
+      "query": "Jane the Virgin character married multiple times one child survives",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"jane\" OR \"the\" OR \"virgin\" OR \"character\" OR \"married\" OR \"multiple\" OR \"times\" OR \"one\" OR \"child\" OR \"survives\"",
+        "terms": [
+          "jane",
+          "the",
+          "virgin",
+          "character",
+          "married",
+          "multiple",
+          "times",
+          "one",
+          "child",
+          "survives"
+        ]
+      }
+    },
+    {
+      "round": 3,
+      "top_k": 5,
+      "equivalence_key": "5dfbaf7f1f1b0d2a6099b6eb2beeba8d09785e18fcaf10ed9d64430dbd7452dc",
+      "cached": false,
+      "query_sha256": "a4dd0f23f716f8c0164c8a685c623d8d6b7449a1e1c1dfbf6cdbc770393be87f",
+      "query": "Jane the Virgin cast real-life relative co-star height",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"jane\" OR \"the\" OR \"virgin\" OR \"cast\" OR \"real\" OR \"life\" OR \"relative\" OR \"co\" OR \"star\" OR \"height\"",
+        "terms": [
+          "jane",
+          "the",
+          "virgin",
+          "cast",
+          "real",
+          "life",
+          "relative",
+          "co",
+          "star",
+          "height"
+        ]
+      }
+    },
+    {
+      "round": 3,
+      "top_k": 5,
+      "equivalence_key": "3efb6639c36d656934ff0d77a708c023f619e59e67ef8a153ccdd2620a979b51",
+      "cached": false,
+      "query_sha256": "afeb7a0c7833262da3980a2e6b3b8d2fe8f0d3b3eedd078a26b2408f2baef4c4",
+      "query": "This Is Us character married three times one child survives actor real-life relative",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"this\" OR \"is\" OR \"us\" OR \"character\" OR \"married\" OR \"three\" OR \"times\" OR \"one\" OR \"child\" OR \"survives\" OR \"actor\" OR \"real\" OR \"life\" OR \"relative\"",
+        "terms": [
+          "this",
+          "is",
+          "us",
+          "character",
+          "married",
+          "three",
+          "times",
+          "one",
+          "child",
+          "survives",
+          "actor",
+          "real",
+          "life",
+          "relative"
+        ]
+      }
+    },
+    {
+      "round": 3,
+      "top_k": 5,
+      "equivalence_key": "1d7ee39ed83dcc0d52a03bc0d436b15133c9453e868706cdbeb7123bee65eb46",
+      "cached": false,
+      "query_sha256": "3f9f9488079053a86596f9134351a918b6cac92396300488d8c0757e651e3684",
+      "query": "telenovela character married four times only one child survives actor real-life sibling co-star",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"telenovela\" OR \"character\" OR \"married\" OR \"four\" OR \"times\" OR \"only\" OR \"one\" OR \"child\" OR \"survives\" OR \"actor\" OR \"real\" OR \"life\" OR \"sibling\" OR \"co\" OR \"star\"",
+        "terms": [
+          "telenovela",
+          "character",
+          "married",
+          "four",
+          "times",
+          "only",
+          "one",
+          "child",
+          "survives",
+          "actor",
+          "real",
+          "life",
+          "sibling",
+          "co",
+          "star"
+        ]
+      }
+    },
+    {
+      "round": 3,
+      "top_k": 5,
+      "equivalence_key": "a51721fedacd40dae7c0a0e4f63aba2505501d2b83510c98ba60db5f5d4e16d9",
+      "cached": false,
+      "query_sha256": "18b5e9ef4b978fc3d6685e68181e3505b6ac2e5d0dac3ada761f45d683db891f",
+      "query": "TV series actor plays with real-life mother father sibling on screen character multiple marriages",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"tv\" OR \"series\" OR \"actor\" OR \"plays\" OR \"with\" OR \"real\" OR \"life\" OR \"mother\" OR \"father\" OR \"sibling\" OR \"on\" OR \"screen\" OR \"character\" OR \"multiple\" OR \"marriages\"",
+        "terms": [
+          "tv",
+          "series",
+          "actor",
+          "plays",
+          "with",
+          "real",
+          "life",
+          "mother",
+          "father",
+          "sibling",
+          "on",
+          "screen",
+          "character",
+          "multiple",
+          "marriages"
+        ]
+      }
+    },
+    {
+      "round": 5,
+      "top_k": 5,
+      "equivalence_key": "8253881f17eff1cd5572b3e98c85f9013f20019c5ccb1f4dc2fbdadd09352b28",
+      "cached": false,
+      "query_sha256": "02ebe288f4013e71f115b753e2fbd1804faa06066cba38b06878e4697aade434",
+      "query": "Game of Thrones Cersei married children surviving actor real-life relative co-star height",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"game\" OR \"of\" OR \"thrones\" OR \"cersei\" OR \"married\" OR \"children\" OR \"surviving\" OR \"actor\" OR \"real\" OR \"life\" OR \"relative\" OR \"co\" OR \"star\" OR \"height\"",
+        "terms": [
+          "game",
+          "of",
+          "thrones",
+          "cersei",
+          "married",
+          "children",
+          "surviving",
+          "actor",
+          "real",
+          "life",
+          "relative",
+          "co",
+          "star",
+          "height"
+        ]
+      }
+    },
+    {
+      "round": 5,
+      "top_k": 5,
+      "equivalence_key": "6fe6dc33fd5b578f0bfdc13c7997e6c4104f5855cb597be59a2bf9b7c14a8cef",
+      "cached": false,
+      "query_sha256": "95f5801983f90fda694f4f1f5a77ca09c2bca4b24108d7938aab98d8306ab3c5",
+      "query": "soap opera character married four times one child survives actor real-life sibling co-star",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"soap\" OR \"opera\" OR \"character\" OR \"married\" OR \"four\" OR \"times\" OR \"one\" OR \"child\" OR \"survives\" OR \"actor\" OR \"real\" OR \"life\" OR \"sibling\" OR \"co\" OR \"star\"",
+        "terms": [
+          "soap",
+          "opera",
+          "character",
+          "married",
+          "four",
+          "times",
+          "one",
+          "child",
+          "survives",
+          "actor",
+          "real",
+          "life",
+          "sibling",
+          "co",
+          "star"
+        ]
+      }
+    },
+    {
+      "round": 6,
+      "top_k": 5,
+      "equivalence_key": "dc66504800cc05328bde9e1f3667c7f5bae163a99dfef596632bd5ebf1e9b9e7",
+      "cached": false,
+      "query_sha256": "d12ffcc13c14caadf7cd7420d88076e7dcba4a70336b8144f836699257027b22",
+      "query": "Cersei Lannister marriages children died actor Lena Headey real-life relative co-star height",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"cersei\" OR \"lannister\" OR \"marriages\" OR \"children\" OR \"died\" OR \"actor\" OR \"lena\" OR \"headey\" OR \"real\" OR \"life\" OR \"relative\" OR \"co\" OR \"star\" OR \"height\"",
+        "terms": [
+          "cersei",
+          "lannister",
+          "marriages",
+          "children",
+          "died",
+          "actor",
+          "lena",
+          "headey",
+          "real",
+          "life",
+          "relative",
+          "co",
+          "star",
+          "height"
+        ]
+      }
+    },
+    {
+      "round": 6,
+      "top_k": 5,
+      "equivalence_key": "d9725d6489ff434d65ad2b90aec76d8c7843a31bcc10ecd176e11ea2e149e2cb",
+      "cached": false,
+      "query_sha256": "ca382f0b332d547a365b59641c1a8d572f05d0cdb292029c7c4773d90954b7ae",
+      "query": "Erica Kane All My Children marriages children actor Susan Lucci real-life relative co-star height",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"erica\" OR \"kane\" OR \"all\" OR \"my\" OR \"children\" OR \"marriages\" OR \"actor\" OR \"susan\" OR \"lucci\" OR \"real\" OR \"life\" OR \"relative\" OR \"co\" OR \"star\" OR \"height\"",
+        "terms": [
+          "erica",
+          "kane",
+          "all",
+          "my",
+          "children",
+          "marriages",
+          "actor",
+          "susan",
+          "lucci",
+          "real",
+          "life",
+          "relative",
+          "co",
+          "star",
+          "height"
+        ]
+      }
+    },
+    {
+      "round": 7,
+      "top_k": 5,
+      "equivalence_key": "ea035343c8b0cc266531200e13b87f380456b9990227deba92e5cdb8597b54cf",
+      "cached": false,
+      "query_sha256": "21208f126605eac47f93a1fb586b61c6ee7656c67b4ef415064f9468f17bd653",
+      "query": "Bold and the Beautiful character married three times one child survives actor real-life relative co-star",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"bold\" OR \"and\" OR \"the\" OR \"beautiful\" OR \"character\" OR \"married\" OR \"three\" OR \"times\" OR \"one\" OR \"child\" OR \"survives\" OR \"actor\" OR \"real\" OR \"life\" OR \"relative\" OR \"co\" OR \"star\"",
+        "terms": [
+          "bold",
+          "and",
+          "the",
+          "beautiful",
+          "character",
+          "married",
+          "three",
+          "times",
+          "one",
+          "child",
+          "survives",
+          "actor",
+          "real",
+          "life",
+          "relative",
+          "co",
+          "star"
+        ]
+      }
+    },
+    {
+      "round": 7,
+      "top_k": 5,
+      "equivalence_key": "e4955cfc4e5311876b0f92b3961cca0ba10c35a1a85deb1f23d84be9aff39cc7",
+      "cached": false,
+      "query_sha256": "9f4ef6183bd18738ac3ee35ed9e4c09cab90162fd0ff97cd18982d01293e3190",
+      "query": "Days of Our Lives character married four times one surviving child actor real-life sibling spouse co-star height",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"days\" OR \"of\" OR \"our\" OR \"lives\" OR \"character\" OR \"married\" OR \"four\" OR \"times\" OR \"one\" OR \"surviving\" OR \"child\" OR \"actor\" OR \"real\" OR \"life\" OR \"sibling\" OR \"spouse\" OR \"co\" OR \"star\" OR \"height\"",
+        "terms": [
+          "days",
+          "of",
+          "our",
+          "lives",
+          "character",
+          "married",
+          "four",
+          "times",
+          "one",
+          "surviving",
+          "child",
+          "actor",
+          "real",
+          "life",
+          "sibling",
+          "spouse",
+          "co",
+          "star",
+          "height"
+        ]
+      }
+    },
+    {
+      "round": 8,
+      "top_k": 5,
+      "equivalence_key": "6fc03dfa570fe08f73ab721d3920bc24298f666dacf501f594b5651acb83b336",
+      "cached": false,
+      "query_sha256": "4a02db41aed5469012fbed7d04369bcac3b57a2dfb5f7861c1d0d8a5014dece7",
+      "query": "Cersei Lannister marriages Robert Baratheon children Joffrey Myrcella Tommen died actor Lena Headey real-life relative co-star height",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"cersei\" OR \"lannister\" OR \"marriages\" OR \"robert\" OR \"baratheon\" OR \"children\" OR \"joffrey\" OR \"myrcella\" OR \"tommen\" OR \"died\" OR \"actor\" OR \"lena\" OR \"headey\" OR \"real\" OR \"life\" OR \"relative\" OR \"co\" OR \"star\" OR \"height\"",
+        "terms": [
+          "cersei",
+          "lannister",
+          "marriages",
+          "robert",
+          "baratheon",
+          "children",
+          "joffrey",
+          "myrcella",
+          "tommen",
+          "died",
+          "actor",
+          "lena",
+          "headey",
+          "real",
+          "life",
+          "relative",
+          "co",
+          "star",
+          "height"
+        ]
+      }
+    },
+    {
+      "round": 8,
+      "top_k": 5,
+      "equivalence_key": "41e182bafb2953eb1dacde9f0b28c7b5d75f05021b32a14c4633affd55592d6a",
+      "cached": false,
+      "query_sha256": "4415f1f6af79a8f46a8c06e0f4788ec7b220eed1c05a46f6273d627f318e1881",
+      "query": "soap opera character married three four times one child survives actor real-life sibling spouse co-star height 1.65 1.70",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"soap\" OR \"opera\" OR \"character\" OR \"married\" OR \"three\" OR \"four\" OR \"times\" OR \"one\" OR \"child\" OR \"survives\" OR \"actor\" OR \"real\" OR \"life\" OR \"sibling\" OR \"spouse\" OR \"co\" OR \"star\" OR \"height\" OR \"1\" OR \"65\" OR \"70\"",
+        "terms": [
+          "soap",
+          "opera",
+          "character",
+          "married",
+          "three",
+          "four",
+          "times",
+          "one",
+          "child",
+          "survives",
+          "actor",
+          "real",
+          "life",
+          "sibling",
+          "spouse",
+          "co",
+          "star",
+          "height",
+          "1",
+          "65",
+          "70"
+        ]
+      }
+    },
+    {
+      "round": 9,
+      "top_k": 5,
+      "equivalence_key": "07ffba92513a73b95676c03782e82b971a7668da20d6541ac3a2744daeb76706",
+      "cached": false,
+      "query_sha256": "11e525dafc53a0059a19827c30af97310c512538b4abea997bfe71d5cc2c136c",
+      "query": "Cersei Lannister marriages Robert Baratheon children Joffrey Myrcella Tommen died Lena Headey height real-life relative",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"cersei\" OR \"lannister\" OR \"marriages\" OR \"robert\" OR \"baratheon\" OR \"children\" OR \"joffrey\" OR \"myrcella\" OR \"tommen\" OR \"died\" OR \"lena\" OR \"headey\" OR \"height\" OR \"real\" OR \"life\" OR \"relative\"",
+        "terms": [
+          "cersei",
+          "lannister",
+          "marriages",
+          "robert",
+          "baratheon",
+          "children",
+          "joffrey",
+          "myrcella",
+          "tommen",
+          "died",
+          "lena",
+          "headey",
+          "height",
+          "real",
+          "life",
+          "relative"
+        ]
+      }
+    },
+    {
+      "round": 9,
+      "top_k": 5,
+      "equivalence_key": "1b3c1411e0f6d1b4b0b3e60168e1a195617c822a0f1e5e2308afd7a495d972a5",
+      "cached": false,
+      "query_sha256": "8364da164d19ef159e4186385c03884f4f67407a45fcc564bd176af5cffa2d08",
+      "query": "Lena Headey height cm real-life relative Game of Thrones co-star",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"lena\" OR \"headey\" OR \"height\" OR \"cm\" OR \"real\" OR \"life\" OR \"relative\" OR \"game\" OR \"of\" OR \"thrones\" OR \"co\" OR \"star\"",
+        "terms": [
+          "lena",
+          "headey",
+          "height",
+          "cm",
+          "real",
+          "life",
+          "relative",
+          "game",
+          "of",
+          "thrones",
+          "co",
+          "star"
+        ]
+      }
+    },
+    {
+      "round": 10,
+      "top_k": 5,
+      "equivalence_key": "6abd16ea6ab9302b5778c166cf67c857dfe736ff7af5e6f7470dc464d53e8245",
+      "cached": false,
+      "query_sha256": "2b431b870326352608caf7dc03ec911bc2196beed40189de96e3ab5f5ba49dc2",
+      "query": "Cersei Lannister marriages Robert Baratheon children Joffrey Myrcella Tommen died Lena Headey height",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"cersei\" OR \"lannister\" OR \"marriages\" OR \"robert\" OR \"baratheon\" OR \"children\" OR \"joffrey\" OR \"myrcella\" OR \"tommen\" OR \"died\" OR \"lena\" OR \"headey\" OR \"height\"",
+        "terms": [
+          "cersei",
+          "lannister",
+          "marriages",
+          "robert",
+          "baratheon",
+          "children",
+          "joffrey",
+          "myrcella",
+          "tommen",
+          "died",
+          "lena",
+          "headey",
+          "height"
+        ]
+      }
+    },
+    {
+      "round": 10,
+      "top_k": 5,
+      "equivalence_key": "f67f0eec02c353035e784a6e33990e7463f78becda499d9d91e76abefda3075c",
+      "cached": false,
+      "query_sha256": "7a170268f3b06c3a317210a1bbbcb3e1052e75ce68464427a5f6108155939fee",
+      "query": "Lena Headey height 1.66 cm real-life relative Game of Thrones co-star",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"lena\" OR \"headey\" OR \"height\" OR \"1\" OR \"66\" OR \"cm\" OR \"real\" OR \"life\" OR \"relative\" OR \"game\" OR \"of\" OR \"thrones\" OR \"co\" OR \"star\"",
+        "terms": [
+          "lena",
+          "headey",
+          "height",
+          "1",
+          "66",
+          "cm",
+          "real",
+          "life",
+          "relative",
+          "game",
+          "of",
+          "thrones",
+          "co",
+          "star"
+        ]
+      }
+    },
+    {
+      "round": 11,
+      "top_k": 5,
+      "equivalence_key": "6abd16ea6ab9302b5778c166cf67c857dfe736ff7af5e6f7470dc464d53e8245",
+      "cached": true,
+      "query_sha256": "2b431b870326352608caf7dc03ec911bc2196beed40189de96e3ab5f5ba49dc2",
+      "query": "Cersei Lannister marriages Robert Baratheon children Joffrey Myrcella Tommen died Lena Headey height",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"cersei\" OR \"lannister\" OR \"marriages\" OR \"robert\" OR \"baratheon\" OR \"children\" OR \"joffrey\" OR \"myrcella\" OR \"tommen\" OR \"died\" OR \"lena\" OR \"headey\" OR \"height\"",
+        "terms": [
+          "cersei",
+          "lannister",
+          "marriages",
+          "robert",
+          "baratheon",
+          "children",
+          "joffrey",
+          "myrcella",
+          "tommen",
+          "died",
+          "lena",
+          "headey",
+          "height"
+        ]
+      }
+    },
+    {
+      "round": 11,
+      "top_k": 5,
+      "equivalence_key": "f67f0eec02c353035e784a6e33990e7463f78becda499d9d91e76abefda3075c",
+      "cached": true,
+      "query_sha256": "7a170268f3b06c3a317210a1bbbcb3e1052e75ce68464427a5f6108155939fee",
+      "query": "Lena Headey height 1.66 cm real-life relative Game of Thrones co-star",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"lena\" OR \"headey\" OR \"height\" OR \"1\" OR \"66\" OR \"cm\" OR \"real\" OR \"life\" OR \"relative\" OR \"game\" OR \"of\" OR \"thrones\" OR \"co\" OR \"star\"",
+        "terms": [
+          "lena",
+          "headey",
+          "height",
+          "1",
+          "66",
+          "cm",
+          "real",
+          "life",
+          "relative",
+          "game",
+          "of",
+          "thrones",
+          "co",
+          "star"
+        ]
+      }
+    },
+    {
+      "round": 12,
+      "top_k": 5,
+      "equivalence_key": "6abd16ea6ab9302b5778c166cf67c857dfe736ff7af5e6f7470dc464d53e8245",
+      "cached": true,
+      "query_sha256": "2b431b870326352608caf7dc03ec911bc2196beed40189de96e3ab5f5ba49dc2",
+      "query": "Cersei Lannister marriages Robert Baratheon children Joffrey Myrcella Tommen died Lena Headey height",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"cersei\" OR \"lannister\" OR \"marriages\" OR \"robert\" OR \"baratheon\" OR \"children\" OR \"joffrey\" OR \"myrcella\" OR \"tommen\" OR \"died\" OR \"lena\" OR \"headey\" OR \"height\"",
+        "terms": [
+          "cersei",
+          "lannister",
+          "marriages",
+          "robert",
+          "baratheon",
+          "children",
+          "joffrey",
+          "myrcella",
+          "tommen",
+          "died",
+          "lena",
+          "headey",
+          "height"
+        ]
+      }
+    },
+    {
+      "round": 12,
+      "top_k": 5,
+      "equivalence_key": "f67f0eec02c353035e784a6e33990e7463f78becda499d9d91e76abefda3075c",
+      "cached": true,
+      "query_sha256": "7a170268f3b06c3a317210a1bbbcb3e1052e75ce68464427a5f6108155939fee",
+      "query": "Lena Headey height 1.66 cm real-life relative Game of Thrones co-star",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"lena\" OR \"headey\" OR \"height\" OR \"1\" OR \"66\" OR \"cm\" OR \"real\" OR \"life\" OR \"relative\" OR \"game\" OR \"of\" OR \"thrones\" OR \"co\" OR \"star\"",
+        "terms": [
+          "lena",
+          "headey",
+          "height",
+          "1",
+          "66",
+          "cm",
+          "real",
+          "life",
+          "relative",
+          "game",
+          "of",
+          "thrones",
+          "co",
+          "star"
+        ]
+      }
+    }
+  ],
+  "equivalent_query_repeats": 4,
+  "views": [
+    {
+      "round": 1,
+      "compacted": false,
+      "visible_evidence": [],
+      "shelf": [],
+      "shelf_evicted": []
+    },
+    {
+      "round": 2,
+      "compacted": false,
+      "visible_evidence": [],
+      "shelf": [],
+      "shelf_evicted": []
+    },
+    {
+      "round": 3,
+      "compacted": false,
+      "visible_evidence": [],
+      "shelf": [],
+      "shelf_evicted": []
+    },
+    {
+      "round": 4,
+      "compacted": false,
+      "visible_evidence": [],
+      "shelf": [],
+      "shelf_evicted": []
+    },
+    {
+      "round": 5,
+      "compacted": false,
+      "visible_evidence": [],
+      "shelf": [],
+      "shelf_evicted": []
+    },
+    {
+      "round": 6,
+      "compacted": false,
+      "visible_evidence": [],
+      "shelf": [],
+      "shelf_evicted": []
+    },
+    {
+      "round": 7,
+      "compacted": false,
+      "visible_evidence": [],
+      "shelf": [],
+      "shelf_evicted": []
+    },
+    {
+      "round": 8,
+      "compacted": true,
+      "visible_evidence": [],
+      "shelf": [],
+      "shelf_evicted": []
+    },
+    {
+      "round": 9,
+      "compacted": false,
+      "visible_evidence": [],
+      "shelf": [],
+      "shelf_evicted": []
+    },
+    {
+      "round": 10,
+      "compacted": false,
+      "visible_evidence": [],
+      "shelf": [],
+      "shelf_evicted": []
+    },
+    {
+      "round": 11,
+      "compacted": false,
+      "visible_evidence": [],
+      "shelf": [],
+      "shelf_evicted": []
+    },
+    {
+      "round": 12,
+      "compacted": false,
+      "visible_evidence": [],
+      "shelf": [],
+      "shelf_evicted": []
+    },
+    {
+      "round": 13,
+      "compacted": false,
+      "visible_evidence": [],
+      "shelf": [],
+      "shelf_evicted": []
+    },
+    {
+      "round": 14,
+      "compacted": false,
+      "visible_evidence": [],
+      "shelf": [],
+      "shelf_evicted": []
+    },
+    {
+      "round": 15,
+      "compacted": false,
+      "visible_evidence": [],
+      "shelf": [],
+      "shelf_evicted": []
+    }
+  ],
+  "delivered_refs": [],
+  "submitted_refs": [],
+  "text_included": true,
+  "limitations": [
+    "Equivalence is compiler equality, not semantic identity or wasted-search proof",
+    "Raw-window visibility/selection is not entailment or complete evidence coverage",
+    "No live q26 replay or independent answer scoring is performed"
+  ]
+}

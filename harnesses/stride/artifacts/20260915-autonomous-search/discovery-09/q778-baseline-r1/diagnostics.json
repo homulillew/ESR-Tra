@@ -1,0 +1,195 @@
+{
+  "protocol": "stride-search-3",
+  "head": "5c43cb1535ef2dd3a709d5ed62dc2adca2fd318e236b4914b3b9b7bd517d2df2",
+  "outcome": "model_budget",
+  "formal_correct": null,
+  "model_attempts": 4,
+  "backend_attempts": 6,
+  "queries": [
+    {
+      "round": 1,
+      "top_k": 8,
+      "equivalence_key": "6e69d177ff8e935eb14c4b2aa16ee03123739edd19242a28808a5f04214c0666",
+      "cached": false,
+      "query_sha256": "41b42c64a7da191aab5454ac9a88bff6ffb51a094ae4454ffa177910df7428ce",
+      "query": "CEO founded company mid-1990s raised Southern Africa father engineer",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"ceo\" OR \"founded\" OR \"company\" OR \"mid\" OR \"1990s\" OR \"raised\" OR \"southern\" OR \"africa\" OR \"father\" OR \"engineer\"",
+        "terms": [
+          "ceo",
+          "founded",
+          "company",
+          "mid",
+          "1990s",
+          "raised",
+          "southern",
+          "africa",
+          "father",
+          "engineer"
+        ]
+      }
+    },
+    {
+      "round": 1,
+      "top_k": 8,
+      "equivalence_key": "1eec04d604d56b8d4fdbf15b930d8c0dd87e301d8aefe31a26f4f549be6c130b",
+      "cached": false,
+      "query_sha256": "6604baca89a73c082ea553ead1f97662fe68b9e104bf14ef4727905da6f6897e",
+      "query": "first child SIDS CEO younger sister co-founded film streaming service",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"first\" OR \"child\" OR \"sids\" OR \"ceo\" OR \"younger\" OR \"sister\" OR \"co\" OR \"founded\" OR \"film\" OR \"streaming\" OR \"service\"",
+        "terms": [
+          "first",
+          "child",
+          "sids",
+          "ceo",
+          "younger",
+          "sister",
+          "co",
+          "founded",
+          "film",
+          "streaming",
+          "service"
+        ]
+      }
+    },
+    {
+      "round": 1,
+      "top_k": 8,
+      "equivalence_key": "3c1bebb60959ff6b4923f3b88f7c9990482cd5c88787172f810b44977fa9c289",
+      "cached": false,
+      "query_sha256": "5ecb4332e9a16d54029f607519126fa4734a05f71ebb2206c88505b07bf05e8b",
+      "query": "CEO child unusual name internet buzzing early 2020s Southern Africa",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"ceo\" OR \"child\" OR \"unusual\" OR \"name\" OR \"internet\" OR \"buzzing\" OR \"early\" OR \"2020s\" OR \"southern\" OR \"africa\"",
+        "terms": [
+          "ceo",
+          "child",
+          "unusual",
+          "name",
+          "internet",
+          "buzzing",
+          "early",
+          "2020s",
+          "southern",
+          "africa"
+        ]
+      }
+    },
+    {
+      "round": 3,
+      "top_k": 8,
+      "equivalence_key": "243cb2c7d61b20a89166818836f16b842f945db108d5d9c0d80375590bb1a3ff",
+      "cached": false,
+      "query_sha256": "eb5926fcd9fd02897349152c4264b28d22800b3538878d8692210642e7474775",
+      "query": "woman claimed related Elon Musk mother age gave birth article",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"woman\" OR \"claimed\" OR \"related\" OR \"elon\" OR \"musk\" OR \"mother\" OR \"age\" OR \"gave\" OR \"birth\" OR \"article\"",
+        "terms": [
+          "woman",
+          "claimed",
+          "related",
+          "elon",
+          "musk",
+          "mother",
+          "age",
+          "gave",
+          "birth",
+          "article"
+        ]
+      }
+    },
+    {
+      "round": 3,
+      "top_k": 8,
+      "equivalence_key": "709ff6354aeef0e16c4f02a22abfb6a2a1b0858d5959f60fd3f6088e55e0db62",
+      "cached": false,
+      "query_sha256": "0febcc6376e04a07ac3460dfcef471a29803ef5b928c45af6737db222a576a7f",
+      "query": "Elon Musk relative claim woman mother young age birth early 2020s",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"elon\" OR \"musk\" OR \"relative\" OR \"claim\" OR \"woman\" OR \"mother\" OR \"young\" OR \"age\" OR \"birth\" OR \"early\" OR \"2020s\"",
+        "terms": [
+          "elon",
+          "musk",
+          "relative",
+          "claim",
+          "woman",
+          "mother",
+          "young",
+          "age",
+          "birth",
+          "early",
+          "2020s"
+        ]
+      }
+    },
+    {
+      "round": 3,
+      "top_k": 8,
+      "equivalence_key": "21427ef1e700cbb91d6542a48b66ac8b7ca6bf169e4ca3e0577c401d26d439b5",
+      "cached": false,
+      "query_sha256": "ff9169fe628065e18d8dcb06d09c143dbcd3e62aff89a8a9d4926aa08e23428c",
+      "query": "lady claimed Elon Musk relative mother age when born article",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"lady\" OR \"claimed\" OR \"elon\" OR \"musk\" OR \"relative\" OR \"mother\" OR \"age\" OR \"when\" OR \"born\" OR \"article\"",
+        "terms": [
+          "lady",
+          "claimed",
+          "elon",
+          "musk",
+          "relative",
+          "mother",
+          "age",
+          "when",
+          "born",
+          "article"
+        ]
+      }
+    }
+  ],
+  "equivalent_query_repeats": 0,
+  "views": [
+    {
+      "round": 1,
+      "compacted": false,
+      "visible_evidence": [],
+      "shelf": [],
+      "shelf_evicted": []
+    },
+    {
+      "round": 2,
+      "compacted": false,
+      "visible_evidence": [],
+      "shelf": [],
+      "shelf_evicted": []
+    },
+    {
+      "round": 3,
+      "compacted": false,
+      "visible_evidence": [],
+      "shelf": [],
+      "shelf_evicted": []
+    },
+    {
+      "round": 4,
+      "compacted": false,
+      "visible_evidence": [],
+      "shelf": [],
+      "shelf_evicted": []
+    }
+  ],
+  "delivered_refs": [],
+  "submitted_refs": [],
+  "text_included": true,
+  "limitations": [
+    "Equivalence is compiler equality, not semantic identity or wasted-search proof",
+    "Raw-window visibility/selection is not entailment or complete evidence coverage",
+    "No live q26 replay or independent answer scoring is performed"
+  ]
+}

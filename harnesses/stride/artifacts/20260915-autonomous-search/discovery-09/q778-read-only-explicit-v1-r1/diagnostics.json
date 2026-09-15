@@ -1,0 +1,207 @@
+{
+  "protocol": "stride-search-3",
+  "head": "fc3cbf63fa4b5cf8dfe4fd9f900b2d7eab727214407d7ea86e76a6b47bf2fd13",
+  "outcome": "submitted",
+  "formal_correct": null,
+  "model_attempts": 4,
+  "backend_attempts": 7,
+  "queries": [
+    {
+      "round": 1,
+      "top_k": 8,
+      "equivalence_key": "2dc02a58e8808adf807602cc47495865933c9ebce26a996c489fd34321a601fd",
+      "cached": false,
+      "query_sha256": "357a29e594a9e038c429a10faca65a17176d63e1c6a3c36a258d5cba60bc0693",
+      "query": "CEO founded company mid-1990s raised Southern Africa father engineer first child SIDS",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"ceo\" OR \"founded\" OR \"company\" OR \"mid\" OR \"1990s\" OR \"raised\" OR \"southern\" OR \"africa\" OR \"father\" OR \"engineer\" OR \"first\" OR \"child\" OR \"sids\"",
+        "terms": [
+          "ceo",
+          "founded",
+          "company",
+          "mid",
+          "1990s",
+          "raised",
+          "southern",
+          "africa",
+          "father",
+          "engineer",
+          "first",
+          "child",
+          "sids"
+        ]
+      }
+    },
+    {
+      "round": 1,
+      "top_k": 8,
+      "equivalence_key": "abbe09cfd9ca2ca2841abae8ca9ea563b0a34de142a44b24699649166dd8a5cb",
+      "cached": false,
+      "query_sha256": "8bb35a1220611abed076691e362329bf3dfc5f7eceb9990f842c1b21e410bc10",
+      "query": "younger sister co-founded film streaming service CEO Southern Africa",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"younger\" OR \"sister\" OR \"co\" OR \"founded\" OR \"film\" OR \"streaming\" OR \"service\" OR \"ceo\" OR \"southern\" OR \"africa\"",
+        "terms": [
+          "younger",
+          "sister",
+          "co",
+          "founded",
+          "film",
+          "streaming",
+          "service",
+          "ceo",
+          "southern",
+          "africa"
+        ]
+      }
+    },
+    {
+      "round": 1,
+      "top_k": 8,
+      "equivalence_key": "2e988d2a150c2b0e684114e7c514238ff27b41b653515b90ce2ff890a0ba44ed",
+      "cached": false,
+      "query_sha256": "897edf16a779ec69ac3e3ca893b40ac8e50761afa45218a93a91cf7dd4b187d7",
+      "query": "CEO child buzzworthy name early 2020s Southern Africa raised",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"ceo\" OR \"child\" OR \"buzzworthy\" OR \"name\" OR \"early\" OR \"2020s\" OR \"southern\" OR \"africa\" OR \"raised\"",
+        "terms": [
+          "ceo",
+          "child",
+          "buzzworthy",
+          "name",
+          "early",
+          "2020s",
+          "southern",
+          "africa",
+          "raised"
+        ]
+      }
+    },
+    {
+      "round": 2,
+      "top_k": 8,
+      "equivalence_key": "0dd5b5afffe4d630b6d0206f69f91464f24e717529db299f66ff62d82dc7257a",
+      "cached": false,
+      "query_sha256": "f3baa936f8b24348d2228be82ac6475fa917c0f438e0fafd34dc7b1e3086aa66",
+      "query": "woman claimed to be Elon Musk's secret child daughter mother age gave birth",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"woman\" OR \"claimed\" OR \"to\" OR \"be\" OR \"elon\" OR \"musk\" OR \"s\" OR \"secret\" OR \"child\" OR \"daughter\" OR \"mother\" OR \"age\" OR \"gave\" OR \"birth\"",
+        "terms": [
+          "woman",
+          "claimed",
+          "to",
+          "be",
+          "elon",
+          "musk",
+          "s",
+          "secret",
+          "child",
+          "daughter",
+          "mother",
+          "age",
+          "gave",
+          "birth"
+        ]
+      }
+    },
+    {
+      "round": 2,
+      "top_k": 8,
+      "equivalence_key": "4ab6faf3fddd267bd89dddbde7d083028093665b1c357977c408e9cb1209aace",
+      "cached": false,
+      "query_sha256": "2fa55beafd1b95145656728a28f00173b05b53294a17f28ee0af00b81ad10d4d",
+      "query": "Elon Musk secret daughter claimed related mother age birth article",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"elon\" OR \"musk\" OR \"secret\" OR \"daughter\" OR \"claimed\" OR \"related\" OR \"mother\" OR \"age\" OR \"birth\" OR \"article\"",
+        "terms": [
+          "elon",
+          "musk",
+          "secret",
+          "daughter",
+          "claimed",
+          "related",
+          "mother",
+          "age",
+          "birth",
+          "article"
+        ]
+      }
+    },
+    {
+      "round": 2,
+      "top_k": 8,
+      "equivalence_key": "59f2fe654456848f1b27d7387a62249e5d04fa91798ed39fb91f08189ce6b034",
+      "cached": false,
+      "query_sha256": "97fab35f672e63b68075d2c82d8cada9b0888d66cbe879f88964c567148e3019",
+      "query": "lady claimed to be Elon Musk's daughter mother gave birth age",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"lady\" OR \"claimed\" OR \"to\" OR \"be\" OR \"elon\" OR \"musk\" OR \"s\" OR \"daughter\" OR \"mother\" OR \"gave\" OR \"birth\" OR \"age\"",
+        "terms": [
+          "lady",
+          "claimed",
+          "to",
+          "be",
+          "elon",
+          "musk",
+          "s",
+          "daughter",
+          "mother",
+          "gave",
+          "birth",
+          "age"
+        ]
+      }
+    }
+  ],
+  "equivalent_query_repeats": 0,
+  "views": [
+    {
+      "round": 1,
+      "compacted": false,
+      "visible_evidence": [],
+      "shelf": [],
+      "shelf_evicted": []
+    },
+    {
+      "round": 2,
+      "compacted": false,
+      "visible_evidence": [],
+      "shelf": [],
+      "shelf_evicted": []
+    },
+    {
+      "round": 3,
+      "compacted": false,
+      "visible_evidence": [],
+      "shelf": [],
+      "shelf_evicted": []
+    },
+    {
+      "round": 4,
+      "compacted": false,
+      "visible_evidence": [
+        "e1"
+      ],
+      "shelf": [],
+      "shelf_evicted": []
+    }
+  ],
+  "delivered_refs": [
+    "e1"
+  ],
+  "submitted_refs": [
+    "e1"
+  ],
+  "text_included": true,
+  "limitations": [
+    "Equivalence is compiler equality, not semantic identity or wasted-search proof",
+    "Raw-window visibility/selection is not entailment or complete evidence coverage",
+    "No live q26 replay or independent answer scoring is performed"
+  ]
+}

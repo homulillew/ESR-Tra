@@ -9,4 +9,6 @@
 - [Discovery-07：保留未验证审阅，72 次请求完成四题对照](discovery-07/README.md)。基线与候选均为 2/4；记录实际呈现但未改变难题结果。
 - [Discovery-08：一次仅提供read工具，49次请求后服务拒绝中止](discovery-08/README.md)。两次限制均未产生read；没有judge，四控制未运行，不能报告完整准确率。
 
+- [Discovery-09：read 阶段说明，77 次请求完成四题对照](discovery-09/README.md)。基线 0/4、候选 2/4，增益均在未触发机制的控制题；来源通过，机制有效性尚未证实，将按冻结规则独立复验。
+
 各阶段均保存实际模型输入、输出、工具、原文、终态、预算与脱敏映射。新增方案在阶段之间冻结，失败不会被新运行覆盖。研究代码、计划和报告位于 [autonomous_search](../../experiments/autonomous_search/)。

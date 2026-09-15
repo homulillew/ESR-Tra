@@ -1,0 +1,614 @@
+{
+  "protocol": "stride-search-3",
+  "head": "eea322deb65c983061b2b79d56b728f36b5d1046cf022897a2ff4a2073c93f10",
+  "outcome": "abstained",
+  "formal_correct": null,
+  "model_attempts": 11,
+  "backend_attempts": 19,
+  "queries": [
+    {
+      "round": 1,
+      "top_k": 10,
+      "equivalence_key": "cf63af5efc588474eefa8ab868c43e82ac128d9e8ff6bd841710df19d9f7a0b4",
+      "cached": false,
+      "query_sha256": "fa083827a4d9c149b6b675f0cf04e33ccc532ccf0ca40ed68f78519162d5d29d",
+      "query": "literary award created 2000s international book prize",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"literary\" OR \"award\" OR \"created\" OR \"2000s\" OR \"international\" OR \"book\" OR \"prize\"",
+        "terms": [
+          "literary",
+          "award",
+          "created",
+          "2000s",
+          "international",
+          "book",
+          "prize"
+        ]
+      }
+    },
+    {
+      "round": 1,
+      "top_k": 10,
+      "equivalence_key": "08f892b9a48f527d8e4dcdb516bbc4da7a47908cd7bb2f59c7460927fdada105",
+      "cached": false,
+      "query_sha256": "8a6aa8f52e6c80a9a4a531e7d8fd603aa44fe841f3881ba7c3f8f140506360d7",
+      "query": "book award founded 2000s translated many languages",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"book\" OR \"award\" OR \"founded\" OR \"2000s\" OR \"translated\" OR \"many\" OR \"languages\"",
+        "terms": [
+          "book",
+          "award",
+          "founded",
+          "2000s",
+          "translated",
+          "many",
+          "languages"
+        ]
+      }
+    },
+    {
+      "round": 1,
+      "top_k": 10,
+      "equivalence_key": "56f3d8d02b329523bfbf135666a9e67d802b4a03c5a2464342149afc131583f2",
+      "cached": false,
+      "query_sha256": "5d01b83200c1abd6b184f43781d0b60d1c04b0832ce6d1f53687e9f592f8f623",
+      "query": "international literary prize established 2000s",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"international\" OR \"literary\" OR \"prize\" OR \"established\" OR \"2000s\"",
+        "terms": [
+          "international",
+          "literary",
+          "prize",
+          "established",
+          "2000s"
+        ]
+      }
+    },
+    {
+      "round": 1,
+      "top_k": 10,
+      "equivalence_key": "80b0b7e17b6069b65949c34ea5f8c695fefe5657948748195d55a85e75abee3a",
+      "cached": false,
+      "query_sha256": "c0d43d1caa99a0e61fb56d11f27f46c4e5f140086b65930b1b77abe8d229f110",
+      "query": "book translated over twenty five languages award contender",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"book\" OR \"translated\" OR \"over\" OR \"twenty\" OR \"five\" OR \"languages\" OR \"award\" OR \"contender\"",
+        "terms": [
+          "book",
+          "translated",
+          "over",
+          "twenty",
+          "five",
+          "languages",
+          "award",
+          "contender"
+        ]
+      }
+    },
+    {
+      "round": 1,
+      "top_k": 10,
+      "equivalence_key": "eb08ea32fb49c0ed11f4d402a1c9bd133545d991768faae783f58610271fffed",
+      "cached": false,
+      "query_sha256": "bed32e63961ec4bf4dde42778a5ee5953939ecc376960f2fdb81b9acb662bfe7",
+      "query": "novel translated 25 languages award shortlist 2010s",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"novel\" OR \"translated\" OR \"25\" OR \"languages\" OR \"award\" OR \"shortlist\" OR \"2010s\"",
+        "terms": [
+          "novel",
+          "translated",
+          "25",
+          "languages",
+          "award",
+          "shortlist",
+          "2010s"
+        ]
+      }
+    },
+    {
+      "round": 2,
+      "top_k": 10,
+      "equivalence_key": "a4ba99c33e50bc90b3a56490473d1517d77c904c1f868dc77c9347a7d103cbea",
+      "cached": false,
+      "query_sha256": "32e4514cdabd2fd6062f23c0e58943ee81dd9ec37e88984ce7394df196dfd325",
+      "query": "International Booker Prize shortlist book translated 25 languages",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"international\" OR \"booker\" OR \"prize\" OR \"shortlist\" OR \"book\" OR \"translated\" OR \"25\" OR \"languages\"",
+        "terms": [
+          "international",
+          "booker",
+          "prize",
+          "shortlist",
+          "book",
+          "translated",
+          "25",
+          "languages"
+        ]
+      }
+    },
+    {
+      "round": 2,
+      "top_k": 10,
+      "equivalence_key": "d2466ba18749daa7405b8ff49d90b430441d41cead9138adc392d6fe9fafbbb1",
+      "cached": false,
+      "query_sha256": "a144bd4e37e8b739e8c9b8b2c846a963d6ae823e98e2eaa4a39496ec0a51bb8e",
+      "query": "Man Booker International Prize contender novel translated many languages 2010s",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"man\" OR \"booker\" OR \"international\" OR \"prize\" OR \"contender\" OR \"novel\" OR \"translated\" OR \"many\" OR \"languages\" OR \"2010s\"",
+        "terms": [
+          "man",
+          "booker",
+          "international",
+          "prize",
+          "contender",
+          "novel",
+          "translated",
+          "many",
+          "languages",
+          "2010s"
+        ]
+      }
+    },
+    {
+      "round": 2,
+      "top_k": 10,
+      "equivalence_key": "f750ffe006ca92f2c4e036e3a6131bd8bde596c2f3f3236db46470583d681685",
+      "cached": false,
+      "query_sha256": "8a165638279e65107ff3087f30f14f0187b7787e47c2030053588ed6b4bcf012",
+      "query": "International Dublin Literary Award shortlist translated over twenty languages",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"international\" OR \"dublin\" OR \"literary\" OR \"award\" OR \"shortlist\" OR \"translated\" OR \"over\" OR \"twenty\" OR \"languages\"",
+        "terms": [
+          "international",
+          "dublin",
+          "literary",
+          "award",
+          "shortlist",
+          "translated",
+          "over",
+          "twenty",
+          "languages"
+        ]
+      }
+    },
+    {
+      "round": 2,
+      "top_k": 10,
+      "equivalence_key": "20d5f32d9aaa830264eaea55fc7fbd15f1730a32be65d77de76204f1689dd14d",
+      "cached": false,
+      "query_sha256": "6f7b5f77bc3ea261027100bd4b65a614aa8bb47fb7422efa7e6cf776861fc9a6",
+      "query": "novel translated 30 languages shortlisted International Booker Prize",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"novel\" OR \"translated\" OR \"30\" OR \"languages\" OR \"shortlisted\" OR \"international\" OR \"booker\" OR \"prize\"",
+        "terms": [
+          "novel",
+          "translated",
+          "30",
+          "languages",
+          "shortlisted",
+          "international",
+          "booker",
+          "prize"
+        ]
+      }
+    },
+    {
+      "round": 2,
+      "top_k": 10,
+      "equivalence_key": "0267c4bf2b43c0c4ae1605b37ab4f6c0f8f0f09dcf8a92a3a1b2227f05803058",
+      "cached": false,
+      "query_sha256": "589520ec0c20a587f17d89d7fa5b09f927ade69bf42e93c223ee52f0519a90da",
+      "query": "book translated more than 25 languages International Booker Prize contender",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"book\" OR \"translated\" OR \"more\" OR \"than\" OR \"25\" OR \"languages\" OR \"international\" OR \"booker\" OR \"prize\" OR \"contender\"",
+        "terms": [
+          "book",
+          "translated",
+          "more",
+          "than",
+          "25",
+          "languages",
+          "international",
+          "booker",
+          "prize",
+          "contender"
+        ]
+      }
+    },
+    {
+      "round": 3,
+      "top_k": 10,
+      "equivalence_key": "e31d0a46fa3e27bd4777c42d582c2e0d1789681aa9fd3fcfd10dd819681671fa",
+      "cached": false,
+      "query_sha256": "eed337fade691567c40b710d432592e42ee0d13f005fa6df444399377991f8ba",
+      "query": "International Booker Prize 2017 winner The Unseen Roy Jacobsen",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"international\" OR \"booker\" OR \"prize\" OR \"2017\" OR \"winner\" OR \"the\" OR \"unseen\" OR \"roy\" OR \"jacobsen\"",
+        "terms": [
+          "international",
+          "booker",
+          "prize",
+          "2017",
+          "winner",
+          "the",
+          "unseen",
+          "roy",
+          "jacobsen"
+        ]
+      }
+    },
+    {
+      "round": 3,
+      "top_k": 10,
+      "equivalence_key": "ba40e4e7ea3cd7cd0e0f16e3afa2fe148921b23d37e47160c689054f9dfb1ac2",
+      "cached": false,
+      "query_sha256": "4cf9a7e7c1b45ba73739d5b43eccd70d9b41a5f4c176dcdca878219e71dd7592",
+      "query": "International Booker Prize winners list 2010s by year",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"international\" OR \"booker\" OR \"prize\" OR \"winners\" OR \"list\" OR \"2010s\" OR \"by\" OR \"year\"",
+        "terms": [
+          "international",
+          "booker",
+          "prize",
+          "winners",
+          "list",
+          "2010s",
+          "by",
+          "year"
+        ]
+      }
+    },
+    {
+      "round": 3,
+      "top_k": 10,
+      "equivalence_key": "9ad87cdef1574be8cd9db1558da8af717d963942feae5e16a04e12f6f67d2409",
+      "cached": false,
+      "query_sha256": "63d43f14f0bc424a183f8f8d1e3df699835e14f3b062a2d5d4d15f97e118761e",
+      "query": "Man Booker International Prize 2016 2017 2018 winner",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"man\" OR \"booker\" OR \"international\" OR \"prize\" OR \"2016\" OR \"2017\" OR \"2018\" OR \"winner\"",
+        "terms": [
+          "man",
+          "booker",
+          "international",
+          "prize",
+          "2016",
+          "2017",
+          "2018",
+          "winner"
+        ]
+      }
+    },
+    {
+      "round": 3,
+      "top_k": 10,
+      "equivalence_key": "1db8f83f8de02d9e60bc139b7f28ce3523716273fbf27246468b08b18cd8d4f9",
+      "cached": false,
+      "query_sha256": "aebd0198ba263cc64d1fbf7082f180c2dd76aab5e6db74cdb6136811c9c16800",
+      "query": "novel published 2017 translated 25 languages International Booker Prize shortlist",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"novel\" OR \"published\" OR \"2017\" OR \"translated\" OR \"25\" OR \"languages\" OR \"international\" OR \"booker\" OR \"prize\" OR \"shortlist\"",
+        "terms": [
+          "novel",
+          "published",
+          "2017",
+          "translated",
+          "25",
+          "languages",
+          "international",
+          "booker",
+          "prize",
+          "shortlist"
+        ]
+      }
+    },
+    {
+      "round": 3,
+      "top_k": 10,
+      "equivalence_key": "5a93adf9a15db4f2248d62b9fa5d6e81e21ad377234aaf6011af583056c64aff",
+      "cached": false,
+      "query_sha256": "7470206d8bbbb9011504217ca0baa882afc206a2bde45c9e1d9a15ca89a166c5",
+      "query": "book translated over 25 languages published 2017 award contender",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"book\" OR \"translated\" OR \"over\" OR \"25\" OR \"languages\" OR \"published\" OR \"2017\" OR \"award\" OR \"contender\"",
+        "terms": [
+          "book",
+          "translated",
+          "over",
+          "25",
+          "languages",
+          "published",
+          "2017",
+          "award",
+          "contender"
+        ]
+      }
+    },
+    {
+      "round": 5,
+      "top_k": 5,
+      "equivalence_key": "ef6a6dbbf0343f929455f45302ad63e69ab7f6094e6b3fd3cf5c5e619f70f21d",
+      "cached": false,
+      "query_sha256": "ee7c24de161aa98c1fa5146b997b43aa4943b75e44fb5b3b75bcb255353b85ac",
+      "query": "International Booker Prize Wikipedia winners list",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"international\" OR \"booker\" OR \"prize\" OR \"wikipedia\" OR \"winners\" OR \"list\"",
+        "terms": [
+          "international",
+          "booker",
+          "prize",
+          "wikipedia",
+          "winners",
+          "list"
+        ]
+      }
+    },
+    {
+      "round": 5,
+      "top_k": 5,
+      "equivalence_key": "f6468578c1f9364ce2c937f932398df08fbeb7697fcc3dd8d691dc8710714d3a",
+      "cached": false,
+      "query_sha256": "54a785a3223da5dbcb4bf4f4a99ef595781e4561d5d22ba9cbfb2ea29febba38",
+      "query": "Man Booker International Prize Wikipedia",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"man\" OR \"booker\" OR \"international\" OR \"prize\" OR \"wikipedia\"",
+        "terms": [
+          "man",
+          "booker",
+          "international",
+          "prize",
+          "wikipedia"
+        ]
+      }
+    },
+    {
+      "round": 6,
+      "top_k": 5,
+      "equivalence_key": "76a6d47e85b71b1e1cd86c3f46e519eb7c803b96e587a82a48a344e37be5f64c",
+      "cached": false,
+      "query_sha256": "e5ec8650a62c496669401b9676f77a4995746ac6357020727f6382b071b0ba0b",
+      "query": "International Booker Prize Wikipedia",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"international\" OR \"booker\" OR \"prize\" OR \"wikipedia\"",
+        "terms": [
+          "international",
+          "booker",
+          "prize",
+          "wikipedia"
+        ]
+      }
+    },
+    {
+      "round": 6,
+      "top_k": 5,
+      "equivalence_key": "69b319f7c253106582a58a96539e22bb0f16beaad5b34e226b2b8dcd1813943a",
+      "cached": false,
+      "query_sha256": "90235d512f925b1f0b1473a39a904a8c9c17e2aa30e8e3641c3b222fa33407a9",
+      "query": "Booker Prize Wikipedia International",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"booker\" OR \"prize\" OR \"wikipedia\" OR \"international\"",
+        "terms": [
+          "booker",
+          "prize",
+          "wikipedia",
+          "international"
+        ]
+      }
+    },
+    {
+      "round": 7,
+      "top_k": 5,
+      "equivalence_key": "76a6d47e85b71b1e1cd86c3f46e519eb7c803b96e587a82a48a344e37be5f64c",
+      "cached": true,
+      "query_sha256": "e5ec8650a62c496669401b9676f77a4995746ac6357020727f6382b071b0ba0b",
+      "query": "International Booker Prize Wikipedia",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"international\" OR \"booker\" OR \"prize\" OR \"wikipedia\"",
+        "terms": [
+          "international",
+          "booker",
+          "prize",
+          "wikipedia"
+        ]
+      }
+    },
+    {
+      "round": 7,
+      "top_k": 5,
+      "equivalence_key": "69b319f7c253106582a58a96539e22bb0f16beaad5b34e226b2b8dcd1813943a",
+      "cached": true,
+      "query_sha256": "90235d512f925b1f0b1473a39a904a8c9c17e2aa30e8e3641c3b222fa33407a9",
+      "query": "Booker Prize Wikipedia International",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"booker\" OR \"prize\" OR \"wikipedia\" OR \"international\"",
+        "terms": [
+          "booker",
+          "prize",
+          "wikipedia",
+          "international"
+        ]
+      }
+    },
+    {
+      "round": 8,
+      "top_k": 5,
+      "equivalence_key": "76a6d47e85b71b1e1cd86c3f46e519eb7c803b96e587a82a48a344e37be5f64c",
+      "cached": true,
+      "query_sha256": "e5ec8650a62c496669401b9676f77a4995746ac6357020727f6382b071b0ba0b",
+      "query": "International Booker Prize Wikipedia",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"international\" OR \"booker\" OR \"prize\" OR \"wikipedia\"",
+        "terms": [
+          "international",
+          "booker",
+          "prize",
+          "wikipedia"
+        ]
+      }
+    },
+    {
+      "round": 8,
+      "top_k": 5,
+      "equivalence_key": "69b319f7c253106582a58a96539e22bb0f16beaad5b34e226b2b8dcd1813943a",
+      "cached": true,
+      "query_sha256": "90235d512f925b1f0b1473a39a904a8c9c17e2aa30e8e3641c3b222fa33407a9",
+      "query": "Booker Prize Wikipedia International",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"booker\" OR \"prize\" OR \"wikipedia\" OR \"international\"",
+        "terms": [
+          "booker",
+          "prize",
+          "wikipedia",
+          "international"
+        ]
+      }
+    },
+    {
+      "round": 10,
+      "top_k": 5,
+      "equivalence_key": "76a6d47e85b71b1e1cd86c3f46e519eb7c803b96e587a82a48a344e37be5f64c",
+      "cached": true,
+      "query_sha256": "e5ec8650a62c496669401b9676f77a4995746ac6357020727f6382b071b0ba0b",
+      "query": "International Booker Prize Wikipedia",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"international\" OR \"booker\" OR \"prize\" OR \"wikipedia\"",
+        "terms": [
+          "international",
+          "booker",
+          "prize",
+          "wikipedia"
+        ]
+      }
+    },
+    {
+      "round": 10,
+      "top_k": 5,
+      "equivalence_key": "69b319f7c253106582a58a96539e22bb0f16beaad5b34e226b2b8dcd1813943a",
+      "cached": true,
+      "query_sha256": "90235d512f925b1f0b1473a39a904a8c9c17e2aa30e8e3641c3b222fa33407a9",
+      "query": "Booker Prize Wikipedia International",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"booker\" OR \"prize\" OR \"wikipedia\" OR \"international\"",
+        "terms": [
+          "booker",
+          "prize",
+          "wikipedia",
+          "international"
+        ]
+      }
+    }
+  ],
+  "equivalent_query_repeats": 6,
+  "views": [
+    {
+      "round": 1,
+      "compacted": false,
+      "visible_evidence": [],
+      "shelf": [],
+      "shelf_evicted": []
+    },
+    {
+      "round": 2,
+      "compacted": false,
+      "visible_evidence": [],
+      "shelf": [],
+      "shelf_evicted": []
+    },
+    {
+      "round": 3,
+      "compacted": false,
+      "visible_evidence": [],
+      "shelf": [],
+      "shelf_evicted": []
+    },
+    {
+      "round": 4,
+      "compacted": true,
+      "visible_evidence": [],
+      "shelf": [],
+      "shelf_evicted": []
+    },
+    {
+      "round": 5,
+      "compacted": false,
+      "visible_evidence": [],
+      "shelf": [],
+      "shelf_evicted": []
+    },
+    {
+      "round": 6,
+      "compacted": true,
+      "visible_evidence": [],
+      "shelf": [],
+      "shelf_evicted": []
+    },
+    {
+      "round": 7,
+      "compacted": false,
+      "visible_evidence": [],
+      "shelf": [],
+      "shelf_evicted": []
+    },
+    {
+      "round": 8,
+      "compacted": false,
+      "visible_evidence": [],
+      "shelf": [],
+      "shelf_evicted": []
+    },
+    {
+      "round": 9,
+      "compacted": false,
+      "visible_evidence": [],
+      "shelf": [],
+      "shelf_evicted": []
+    },
+    {
+      "round": 10,
+      "compacted": false,
+      "visible_evidence": [],
+      "shelf": [],
+      "shelf_evicted": []
+    },
+    {
+      "round": 11,
+      "compacted": false,
+      "visible_evidence": [],
+      "shelf": [],
+      "shelf_evicted": []
+    }
+  ],
+  "delivered_refs": [],
+  "submitted_refs": [],
+  "text_included": true,
+  "limitations": [
+    "Equivalence is compiler equality, not semantic identity or wasted-search proof",
+    "Raw-window visibility/selection is not entailment or complete evidence coverage",
+    "No live q26 replay or independent answer scoring is performed"
+  ]
+}
