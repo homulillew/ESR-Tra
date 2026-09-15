@@ -1,0 +1,911 @@
+{
+  "scope": "SEALED q771/q778 only; no judge/gold",
+  "slots": {
+    "q771-baseline-r1": {
+      "seal_sha256": "87d1256bd9b660e8f285d19d62aafe646fdadf44b22497b2902e23cae7a2fe2c",
+      "sealed_files": {
+        "all-objects.json": true,
+        "analysis-data.json": true,
+        "diagnostics.json": true,
+        "episode.sqlite": true,
+        "events-timed.jsonl": true,
+        "EVIDENCE_TABLE.csv": true,
+        "FULL_INTERACTION.md": true,
+        "http/001/attempt-start.json": true,
+        "http/001/metadata.json": true,
+        "http/001/request.body": true,
+        "http/001/response.body": true,
+        "http/002/attempt-start.json": true,
+        "http/002/metadata.json": true,
+        "http/002/request.body": true,
+        "http/002/response.body": true,
+        "http/003/attempt-start.json": true,
+        "http/003/metadata.json": true,
+        "http/003/request.body": true,
+        "http/003/response.body": true,
+        "http/004/attempt-start.json": true,
+        "http/004/metadata.json": true,
+        "http/004/request.body": true,
+        "http/004/response.body": true,
+        "INTEGRITY_CHECKS.json": true,
+        "metrics.sanitized.json": true,
+        "QUERY_EXECUTION.csv": true,
+        "report.json": true,
+        "result.json": true,
+        "ROUND_TABLE.csv": true,
+        "TOOL_INTEGRITY.csv": true,
+        "trajectory.jsonl": true,
+        "VISIBILITY_TABLE.csv": true
+      },
+      "chain": {
+        "event_count": 65,
+        "head": "2f92d68ced15eaa9fcd1216956fc2a44b991ed60ac72ba72be0d81032a68a19c"
+      },
+      "wires": [
+        {
+          "round": 1,
+          "request_sha256": "a61deeac7f2debefea800747f21cf59eb495c83b3fe63081feaef2c7a704fe3b",
+          "request_archive_equals_http": true,
+          "response_archive_equals_http": true,
+          "visible": []
+        },
+        {
+          "round": 2,
+          "request_sha256": "73e17841a1d7fd57bad7a2997318243e18582bc05974c61674c19c8d3bee90e5",
+          "request_archive_equals_http": true,
+          "response_archive_equals_http": true,
+          "visible": []
+        },
+        {
+          "round": 3,
+          "request_sha256": "7a40fa7a28b8b249cf11d86aa9457c5f194542d6d78496849125976ad8fddfaa",
+          "request_archive_equals_http": true,
+          "response_archive_equals_http": true,
+          "visible": [
+            "e1",
+            "e2"
+          ]
+        },
+        {
+          "round": 4,
+          "request_sha256": "a76351633adb0709a3c48b7dae7198a737a6ec8ec4d09f5f4f8a342d2aa486be",
+          "request_archive_equals_http": true,
+          "response_archive_equals_http": true,
+          "visible": [
+            "e1",
+            "e2",
+            "e3"
+          ]
+        }
+      ],
+      "raw_windows": [
+        {
+          "ref": "e1",
+          "document": "d8",
+          "snapshot": "7d8960afbde4b93401ea738e66299a6ee3d0dee47906ba8e3a86ebdea642ffcd",
+          "start": 0,
+          "end": 3000,
+          "sha256": "ed282b99cfb0aae5a430ddfadeb3348fa20e85aac24fb4501bf9cd3b3dadb4b2"
+        },
+        {
+          "ref": "e2",
+          "document": "d1",
+          "snapshot": "446eabd6c86b9aad83f468e7eb034d96105d6e38bc9d97c923416d3ce089e105",
+          "start": 0,
+          "end": 3000,
+          "sha256": "521deb8f6549e7ea288326ea13a34d4635283fc59820929b6ad3b4c3edade321"
+        },
+        {
+          "ref": "e3",
+          "document": "d8",
+          "snapshot": "7d8960afbde4b93401ea738e66299a6ee3d0dee47906ba8e3a86ebdea642ffcd",
+          "start": 3000,
+          "end": 6000,
+          "sha256": "97a6e11f3f34512afbebf984635c4f0118e43a0fd1a04e71a3f4cf755defe729"
+        }
+      ],
+      "terminal": [
+        {
+          "answer": "Vakkorama",
+          "answer_representation": {
+            "input_type": "string",
+            "operation": "identity",
+            "rule": "string-integer-v1"
+          },
+          "basis": [
+            {
+              "document": "d8",
+              "document_chars": 13639,
+              "end": 3000,
+              "kind": "raw_evidence",
+              "ref": "e1",
+              "sha256": "ed282b99cfb0aae5a430ddfadeb3348fa20e85aac24fb4501bf9cd3b3dadb4b2",
+              "snapshot": "7d8960afbde4b93401ea738e66299a6ee3d0dee47906ba8e3a86ebdea642ffcd",
+              "start": 0
+            },
+            {
+              "document": "d1",
+              "document_chars": 9095,
+              "end": 3000,
+              "kind": "raw_evidence",
+              "ref": "e2",
+              "sha256": "521deb8f6549e7ea288326ea13a34d4635283fc59820929b6ad3b4c3edade321",
+              "snapshot": "446eabd6c86b9aad83f468e7eb034d96105d6e38bc9d97c923416d3ce089e105",
+              "start": 0
+            },
+            {
+              "document": "d8",
+              "document_chars": 13639,
+              "end": 6000,
+              "kind": "raw_evidence",
+              "ref": "e3",
+              "sha256": "97a6e11f3f34512afbebf984635c4f0118e43a0fd1a04e71a3f4cf755defe729",
+              "snapshot": "7d8960afbde4b93401ea738e66299a6ee3d0dee47906ba8e3a86ebdea642ffcd",
+              "start": 3000
+            }
+          ],
+          "elapsed_seconds": 16.096175500017125,
+          "outcome": "submitted",
+          "refs": [
+            "e1",
+            "e2",
+            "e3"
+          ],
+          "semantic_status": "not_automatically_verified"
+        }
+      ],
+      "actions": [
+        {
+          "executed": true,
+          "round": 1,
+          "tool": "search",
+          "tool_call_id": "call_c0a69c133f0f44ce98a4d699",
+          "ok": true,
+          "code": null
+        },
+        {
+          "executed": true,
+          "round": 2,
+          "tool": "read",
+          "tool_call_id": "call_0affc5a590534797a7fc8747",
+          "ok": true,
+          "code": null
+        },
+        {
+          "executed": true,
+          "round": 2,
+          "tool": "read",
+          "tool_call_id": "call_fbc66530e5cb4645a5ce1ed5",
+          "ok": true,
+          "code": null
+        },
+        {
+          "executed": true,
+          "round": 3,
+          "tool": "read",
+          "tool_call_id": "call_e300dd6ca6a54683b37c1327",
+          "ok": true,
+          "code": null
+        },
+        {
+          "executed": true,
+          "round": 4,
+          "tool": "finish",
+          "tool_call_id": "call_ed073052bc924966b1428c59",
+          "ok": true,
+          "code": null
+        }
+      ],
+      "review_or_memory_events": [],
+      "cost": {
+        "model_calls": 4,
+        "actions": {
+          "search": 1,
+          "read": 3,
+          "finish": 1
+        },
+        "backend_attempts": 5,
+        "usage": {
+          "input_tokens": 28196,
+          "output_tokens": 631,
+          "cache_read_tokens": 13568,
+          "cache_write_tokens": 0
+        },
+        "model_elapsed_seconds": 13.482722300017485,
+        "backend_elapsed_seconds": 1.9405551999807358,
+        "event_span_seconds": 16.107263
+      },
+      "source_audit": "see independent report",
+      "actual_wire_delivery_rounds": {
+        "e1": [
+          3,
+          4
+        ],
+        "e2": [
+          3,
+          4
+        ],
+        "e3": [
+          4
+        ]
+      },
+      "search_raw_success": [],
+      "wire_binding_pass": true
+    },
+    "q771-search-raw-window-v1-r1": {
+      "seal_sha256": "32f272f51b504ec270933bb09f7a8d1ea7dccce8fbac4d1095eccf4441399634",
+      "sealed_files": {
+        "all-objects.json": true,
+        "analysis-data.json": true,
+        "diagnostics.json": true,
+        "episode.sqlite": true,
+        "events-timed.jsonl": true,
+        "EVIDENCE_TABLE.csv": true,
+        "FULL_INTERACTION.md": true,
+        "http/001/attempt-start.json": true,
+        "http/001/metadata.json": true,
+        "http/001/request.body": true,
+        "http/001/response.body": true,
+        "http/002/attempt-start.json": true,
+        "http/002/metadata.json": true,
+        "http/002/request.body": true,
+        "http/002/response.body": true,
+        "http/003/attempt-start.json": true,
+        "http/003/metadata.json": true,
+        "http/003/request.body": true,
+        "http/003/response.body": true,
+        "INTEGRITY_CHECKS.json": true,
+        "metrics.sanitized.json": true,
+        "QUERY_EXECUTION.csv": true,
+        "report.json": true,
+        "result.json": true,
+        "ROUND_TABLE.csv": true,
+        "TOOL_INTEGRITY.csv": true,
+        "trajectory.jsonl": true,
+        "VISIBILITY_TABLE.csv": true
+      },
+      "chain": {
+        "event_count": 53,
+        "head": "1ca3606ee16671df42b0fad56a4d1764a448f6622389fcf1e67e43c9b4cc0102"
+      },
+      "wires": [
+        {
+          "round": 1,
+          "request_sha256": "d2d270c3e05258e13b5f7694e8fedca00ff59cc0e2f3bcb280e5be2a12e5cce4",
+          "request_archive_equals_http": true,
+          "response_archive_equals_http": true,
+          "visible": []
+        },
+        {
+          "round": 2,
+          "request_sha256": "1d619f58ac1aff8f150f76a1eed95967fdad0436d314a927ca3b97cc1fabb995",
+          "request_archive_equals_http": true,
+          "response_archive_equals_http": true,
+          "visible": [
+            "e1"
+          ]
+        },
+        {
+          "round": 3,
+          "request_sha256": "2c24f48c5071a5481709e68b7d5aee31c92a6a8cd0a75b7f30352c6ce170a383",
+          "request_archive_equals_http": true,
+          "response_archive_equals_http": true,
+          "visible": [
+            "e1",
+            "e2"
+          ]
+        }
+      ],
+      "raw_windows": [
+        {
+          "ref": "e1",
+          "document": "d1",
+          "snapshot": "446eabd6c86b9aad83f468e7eb034d96105d6e38bc9d97c923416d3ce089e105",
+          "start": 2830,
+          "end": 5830,
+          "sha256": "3c0bbc1ac3d0b3e97c6329f97b74dfbdd070f12da49de85c269acd773f9a5a03"
+        },
+        {
+          "ref": "e2",
+          "document": "d1",
+          "snapshot": "446eabd6c86b9aad83f468e7eb034d96105d6e38bc9d97c923416d3ce089e105",
+          "start": 5600,
+          "end": 6000,
+          "sha256": "d57e3a3db4e8cef22724ba2798f5c9f9279cacb678a09454de4c1189305334d9"
+        }
+      ],
+      "terminal": [
+        {
+          "answer": "Vakkorama",
+          "answer_representation": {
+            "input_type": "string",
+            "operation": "identity",
+            "rule": "string-integer-v1"
+          },
+          "basis": [
+            {
+              "document": "d1",
+              "document_chars": 9095,
+              "end": 5830,
+              "kind": "raw_evidence",
+              "ref": "e1",
+              "sha256": "3c0bbc1ac3d0b3e97c6329f97b74dfbdd070f12da49de85c269acd773f9a5a03",
+              "snapshot": "446eabd6c86b9aad83f468e7eb034d96105d6e38bc9d97c923416d3ce089e105",
+              "start": 2830
+            },
+            {
+              "document": "d1",
+              "document_chars": 9095,
+              "end": 6000,
+              "kind": "raw_evidence",
+              "ref": "e2",
+              "sha256": "d57e3a3db4e8cef22724ba2798f5c9f9279cacb678a09454de4c1189305334d9",
+              "snapshot": "446eabd6c86b9aad83f468e7eb034d96105d6e38bc9d97c923416d3ce089e105",
+              "start": 5600
+            }
+          ],
+          "elapsed_seconds": 13.23824129998684,
+          "outcome": "submitted",
+          "refs": [
+            "e1",
+            "e2"
+          ],
+          "semantic_status": "not_automatically_verified"
+        }
+      ],
+      "actions": [
+        {
+          "executed": true,
+          "round": 1,
+          "tool": "search",
+          "tool_call_id": "call_77822c333d6c4dc691ab67e5",
+          "ok": true,
+          "code": null
+        },
+        {
+          "executed": true,
+          "round": 2,
+          "tool": "read",
+          "tool_call_id": "call_6a5ee06530f0450babfb4d03",
+          "ok": true,
+          "code": null
+        },
+        {
+          "executed": true,
+          "round": 3,
+          "tool": "finish",
+          "tool_call_id": "call_b1d443fc096d47028007b07b",
+          "ok": true,
+          "code": null
+        }
+      ],
+      "review_or_memory_events": [],
+      "cost": {
+        "model_calls": 3,
+        "actions": {
+          "search": 1,
+          "read": 1,
+          "finish": 1
+        },
+        "backend_attempts": 4,
+        "usage": {
+          "input_tokens": 21358,
+          "output_tokens": 247,
+          "cache_read_tokens": 14208,
+          "cache_write_tokens": 0
+        },
+        "model_elapsed_seconds": 11.001002700009849,
+        "backend_elapsed_seconds": 1.707675100013148,
+        "event_span_seconds": 13.245813
+      },
+      "source_audit": "see independent report",
+      "actual_wire_delivery_rounds": {
+        "e1": [
+          2,
+          3
+        ],
+        "e2": [
+          3
+        ]
+      },
+      "search_raw_success": [
+        {
+          "round": 1,
+          "document": "d1",
+          "evidence": "e1",
+          "attempts_used": 1,
+          "selection": {
+            "block_truncated": false,
+            "end": 5830,
+            "instruction": "Check the subject and adjoining context; lexical overlap does not establish the requested relation.",
+            "matched": true,
+            "matched_terms": [
+              "scarves",
+              "initials",
+              "surname",
+              "brand"
+            ],
+            "method": "paragraph-lexical-v1",
+            "score": 8.211958,
+            "selected_block": [
+              3241,
+              4124
+            ],
+            "selection_is_semantic_support": false,
+            "start": 2830
+          }
+        }
+      ],
+      "wire_binding_pass": true
+    },
+    "q778-baseline-r1": {
+      "seal_sha256": "05ad1af220c07d7111bfe9c51ea598203db6888a6569c5b30f8bf2b61d8007de",
+      "sealed_files": {
+        "all-objects.json": true,
+        "analysis-data.json": true,
+        "diagnostics.json": true,
+        "episode.sqlite": true,
+        "events-timed.jsonl": true,
+        "EVIDENCE_TABLE.csv": true,
+        "FULL_INTERACTION.md": true,
+        "http/001/attempt-start.json": true,
+        "http/001/metadata.json": true,
+        "http/001/request.body": true,
+        "http/001/response.body": true,
+        "http/002/attempt-start.json": true,
+        "http/002/metadata.json": true,
+        "http/002/request.body": true,
+        "http/002/response.body": true,
+        "http/003/attempt-start.json": true,
+        "http/003/metadata.json": true,
+        "http/003/request.body": true,
+        "http/003/response.body": true,
+        "http/004/attempt-start.json": true,
+        "http/004/metadata.json": true,
+        "http/004/request.body": true,
+        "http/004/response.body": true,
+        "INTEGRITY_CHECKS.json": true,
+        "metrics.sanitized.json": true,
+        "QUERY_EXECUTION.csv": true,
+        "report.json": true,
+        "result.json": true,
+        "ROUND_TABLE.csv": true,
+        "TOOL_INTEGRITY.csv": true,
+        "trajectory.jsonl": true,
+        "VISIBILITY_TABLE.csv": true
+      },
+      "chain": {
+        "event_count": 76,
+        "head": "e6f7e731adee541bf75909baee0d13db8b0640aecd587a43ab95d4c8a1c359d2"
+      },
+      "wires": [
+        {
+          "round": 1,
+          "request_sha256": "7c3b4de711393e1eb56749a873d6860c113e222b59f4a83f8c44136a147268b7",
+          "request_archive_equals_http": true,
+          "response_archive_equals_http": true,
+          "visible": []
+        },
+        {
+          "round": 2,
+          "request_sha256": "80ad6074f68d0fbc1bed4a3b55fd5d96575c435312ea0d615750984a4f76d353",
+          "request_archive_equals_http": true,
+          "response_archive_equals_http": true,
+          "visible": []
+        },
+        {
+          "round": 3,
+          "request_sha256": "495d796dfcf9aee0c609d0be7ecf9a09c80a6e0d834c92d29227f7b31d64786d",
+          "request_archive_equals_http": true,
+          "response_archive_equals_http": true,
+          "visible": []
+        },
+        {
+          "round": 4,
+          "request_sha256": "425b32fce60872a5f0a8decb9264db759703ff6bb2565741a2d857fd5f6e8eff",
+          "request_archive_equals_http": true,
+          "response_archive_equals_http": true,
+          "visible": [
+            "e1"
+          ]
+        }
+      ],
+      "raw_windows": [
+        {
+          "ref": "e1",
+          "document": "d16",
+          "snapshot": "d7b7a23b3eb780d78018e5fe30d91613c9769a1cff7564bb0a79c08614acb838",
+          "start": 0,
+          "end": 3000,
+          "sha256": "bc0d510dbd6cde0530cf08684de455d82ec1943c0ba50cab130ae01990cc24b8"
+        }
+      ],
+      "terminal": [
+        {
+          "answer": "21",
+          "answer_representation": {
+            "input_type": "integer",
+            "input_value": 21,
+            "operation": "decimal",
+            "rule": "string-integer-v1"
+          },
+          "basis": [
+            {
+              "document": "d16",
+              "document_chars": 4374,
+              "end": 3000,
+              "kind": "raw_evidence",
+              "ref": "e1",
+              "sha256": "bc0d510dbd6cde0530cf08684de455d82ec1943c0ba50cab130ae01990cc24b8",
+              "snapshot": "d7b7a23b3eb780d78018e5fe30d91613c9769a1cff7564bb0a79c08614acb838",
+              "start": 0
+            }
+          ],
+          "elapsed_seconds": 21.867296299984446,
+          "outcome": "submitted",
+          "refs": [
+            "e1"
+          ],
+          "semantic_status": "not_automatically_verified"
+        }
+      ],
+      "actions": [
+        {
+          "executed": true,
+          "round": 1,
+          "tool": "search",
+          "tool_call_id": "call_ea1f0123f2f1496787bfd460",
+          "ok": true,
+          "code": null
+        },
+        {
+          "executed": true,
+          "round": 2,
+          "tool": "search",
+          "tool_call_id": "call_b37a2a7721b345ac93990c2e",
+          "ok": true,
+          "code": null
+        },
+        {
+          "executed": true,
+          "round": 3,
+          "tool": "read",
+          "tool_call_id": "call_6fc76cf8644e4515bdb0d455",
+          "ok": true,
+          "code": null
+        },
+        {
+          "executed": true,
+          "round": 4,
+          "tool": "finish",
+          "tool_call_id": "call_5ae607dd93294c0c9cf21d84",
+          "ok": true,
+          "code": null
+        }
+      ],
+      "review_or_memory_events": [],
+      "cost": {
+        "model_calls": 4,
+        "actions": {
+          "search": 2,
+          "read": 1,
+          "finish": 1
+        },
+        "backend_attempts": 7,
+        "usage": {
+          "input_tokens": 30068,
+          "output_tokens": 394,
+          "cache_read_tokens": 13440,
+          "cache_write_tokens": 0
+        },
+        "model_elapsed_seconds": 15.686955199984368,
+        "backend_elapsed_seconds": 5.321483299980173,
+        "event_span_seconds": 21.885032
+      },
+      "source_audit": "see independent report",
+      "actual_wire_delivery_rounds": {
+        "e1": [
+          4
+        ]
+      },
+      "search_raw_success": [],
+      "wire_binding_pass": true
+    },
+    "q778-search-raw-window-v1-r1": {
+      "seal_sha256": "6c85eb528b888e50c11421bdcaf4e8b6db0a3f2dc32466dbf387e7da2253c60c",
+      "sealed_files": {
+        "all-objects.json": true,
+        "analysis-data.json": true,
+        "diagnostics.json": true,
+        "episode.sqlite": true,
+        "events-timed.jsonl": true,
+        "EVIDENCE_TABLE.csv": true,
+        "FULL_INTERACTION.md": true,
+        "http/001/attempt-start.json": true,
+        "http/001/metadata.json": true,
+        "http/001/request.body": true,
+        "http/001/response.body": true,
+        "http/002/attempt-start.json": true,
+        "http/002/metadata.json": true,
+        "http/002/request.body": true,
+        "http/002/response.body": true,
+        "http/003/attempt-start.json": true,
+        "http/003/metadata.json": true,
+        "http/003/request.body": true,
+        "http/003/response.body": true,
+        "http/004/attempt-start.json": true,
+        "http/004/metadata.json": true,
+        "http/004/request.body": true,
+        "http/004/response.body": true,
+        "INTEGRITY_CHECKS.json": true,
+        "metrics.sanitized.json": true,
+        "QUERY_EXECUTION.csv": true,
+        "report.json": true,
+        "result.json": true,
+        "ROUND_TABLE.csv": true,
+        "TOOL_INTEGRITY.csv": true,
+        "trajectory.jsonl": true,
+        "VISIBILITY_TABLE.csv": true
+      },
+      "chain": {
+        "event_count": 89,
+        "head": "964ed464c9413f287c74605f80b6bedf9f3ee5abcd6ed66b34832f85a7d09d1e"
+      },
+      "wires": [
+        {
+          "round": 1,
+          "request_sha256": "0afc50186ed6002301d5ff4cefb66ef29a00da1e77ad0aa1983a64077579205d",
+          "request_archive_equals_http": true,
+          "response_archive_equals_http": true,
+          "visible": []
+        },
+        {
+          "round": 2,
+          "request_sha256": "e4e9f3bf90f2ed52792c52d72ce3ce0577590560d40b382662727bc4719f3e9f",
+          "request_archive_equals_http": true,
+          "response_archive_equals_http": true,
+          "visible": [
+            "e1"
+          ]
+        },
+        {
+          "round": 3,
+          "request_sha256": "fcc527fd3fb7abb5fa0783f72fb74b95df872d09f2d1c29bfb30e9d338b2cf46",
+          "request_archive_equals_http": true,
+          "response_archive_equals_http": true,
+          "visible": [
+            "e1",
+            "e2"
+          ]
+        },
+        {
+          "round": 4,
+          "request_sha256": "9fa8fa815c6bfcb02c9bc4aacb3f9374a3d79b6599211241e63f02096f537d3c",
+          "request_archive_equals_http": true,
+          "response_archive_equals_http": true,
+          "visible": [
+            "e1",
+            "e2",
+            "e3"
+          ]
+        }
+      ],
+      "raw_windows": [
+        {
+          "ref": "e1",
+          "document": "d1",
+          "snapshot": "ff4a3823ecf0962d3364168b79b37eee5d5c2b90bf724dd30beb6d873eae2332",
+          "start": 33861,
+          "end": 36861,
+          "sha256": "a3fe0ca11fc2f2aad38884068a72aed3ac4a0d4a2fc64db1bb43732fae564e96"
+        },
+        {
+          "ref": "e2",
+          "document": "d14",
+          "snapshot": "d7b7a23b3eb780d78018e5fe30d91613c9769a1cff7564bb0a79c08614acb838",
+          "start": 0,
+          "end": 3000,
+          "sha256": "bc0d510dbd6cde0530cf08684de455d82ec1943c0ba50cab130ae01990cc24b8"
+        },
+        {
+          "ref": "e3",
+          "document": "d14",
+          "snapshot": "d7b7a23b3eb780d78018e5fe30d91613c9769a1cff7564bb0a79c08614acb838",
+          "start": 1800,
+          "end": 2700,
+          "sha256": "63f4b03548f6620e11fc0fb6c3e6eefd89c242a46dac7023be9a83ebb6bcb70c"
+        }
+      ],
+      "terminal": [
+        {
+          "answer": "21",
+          "answer_representation": {
+            "input_type": "integer",
+            "input_value": 21,
+            "operation": "decimal",
+            "rule": "string-integer-v1"
+          },
+          "basis": [
+            {
+              "document": "d14",
+              "document_chars": 4374,
+              "end": 3000,
+              "kind": "raw_evidence",
+              "ref": "e2",
+              "sha256": "bc0d510dbd6cde0530cf08684de455d82ec1943c0ba50cab130ae01990cc24b8",
+              "snapshot": "d7b7a23b3eb780d78018e5fe30d91613c9769a1cff7564bb0a79c08614acb838",
+              "start": 0
+            },
+            {
+              "document": "d14",
+              "document_chars": 4374,
+              "end": 2700,
+              "kind": "raw_evidence",
+              "ref": "e3",
+              "sha256": "63f4b03548f6620e11fc0fb6c3e6eefd89c242a46dac7023be9a83ebb6bcb70c",
+              "snapshot": "d7b7a23b3eb780d78018e5fe30d91613c9769a1cff7564bb0a79c08614acb838",
+              "start": 1800
+            }
+          ],
+          "elapsed_seconds": 21.469716199993854,
+          "outcome": "submitted",
+          "refs": [
+            "e2",
+            "e3"
+          ],
+          "semantic_status": "not_automatically_verified"
+        }
+      ],
+      "actions": [
+        {
+          "executed": true,
+          "round": 1,
+          "tool": "search",
+          "tool_call_id": "call_ebe6773783374e9c9389a717",
+          "ok": true,
+          "code": null
+        },
+        {
+          "executed": true,
+          "round": 2,
+          "tool": "search",
+          "tool_call_id": "call_e16c5d25128f4edaba9b82d4",
+          "ok": true,
+          "code": null
+        },
+        {
+          "executed": true,
+          "round": 3,
+          "tool": "read",
+          "tool_call_id": "call_2ae9aa9ec26946848c30cc4f",
+          "ok": true,
+          "code": null
+        },
+        {
+          "executed": true,
+          "round": 4,
+          "tool": "finish",
+          "tool_call_id": "call_91ddd17c65e743b7829ab007",
+          "ok": true,
+          "code": null
+        }
+      ],
+      "review_or_memory_events": [],
+      "cost": {
+        "model_calls": 4,
+        "actions": {
+          "search": 2,
+          "read": 1,
+          "finish": 1
+        },
+        "backend_attempts": 8,
+        "usage": {
+          "input_tokens": 36050,
+          "output_tokens": 580,
+          "cache_read_tokens": 15488,
+          "cache_write_tokens": 0
+        },
+        "model_elapsed_seconds": 15.9606868000119,
+        "backend_elapsed_seconds": 4.476855999964755,
+        "event_span_seconds": 21.484636
+      },
+      "source_audit": "see independent report",
+      "actual_wire_delivery_rounds": {
+        "e1": [
+          2,
+          3,
+          4
+        ],
+        "e2": [
+          3,
+          4
+        ],
+        "e3": [
+          4
+        ]
+      },
+      "search_raw_success": [
+        {
+          "round": 1,
+          "document": "d1",
+          "evidence": "e1",
+          "attempts_used": 1,
+          "selection": {
+            "block_truncated": false,
+            "end": 36861,
+            "instruction": "Check the subject and adjoining context; lexical overlap does not establish the requested relation.",
+            "matched": true,
+            "matched_terms": [
+              "co",
+              "founded",
+              "film",
+              "ceo"
+            ],
+            "method": "paragraph-lexical-v1",
+            "score": 13.117192,
+            "selected_block": [
+              34307,
+              35530
+            ],
+            "selection_is_semantic_support": false,
+            "start": 33861
+          }
+        },
+        {
+          "round": 2,
+          "document": "d14",
+          "evidence": "e2",
+          "attempts_used": 2,
+          "selection": {
+            "block_truncated": false,
+            "end": 3000,
+            "instruction": "Check the subject and adjoining context; lexical overlap does not establish the requested relation.",
+            "matched": true,
+            "matched_terms": [
+              "woman",
+              "elon",
+              "musk",
+              "mother"
+            ],
+            "method": "paragraph-lexical-v1",
+            "score": 5.620401,
+            "selected_block": [
+              188,
+              653
+            ],
+            "selection_is_semantic_support": false,
+            "start": 0
+          }
+        }
+      ],
+      "wire_binding_pass": true
+    }
+  },
+  "pairs": {
+    "771": {
+      "first_wire_byte_equal": false,
+      "baseline_sha256": "a61deeac7f2debefea800747f21cf59eb495c83b3fe63081feaef2c7a704fe3b",
+      "candidate_sha256": "d2d270c3e05258e13b5f7694e8fedca00ff59cc0e2f3bcb280e5be2a12e5cce4",
+      "differing_top_fields": [
+        "messages",
+        "tools"
+      ],
+      "messages_equal": false
+    },
+    "778": {
+      "first_wire_byte_equal": false,
+      "baseline_sha256": "7c3b4de711393e1eb56749a873d6860c113e222b59f4a83f8c44136a147268b7",
+      "candidate_sha256": "0afc50186ed6002301d5ff4cefb66ef29a00da1e77ad0aa1983a64077579205d",
+      "differing_top_fields": [
+        "messages",
+        "tools"
+      ],
+      "messages_equal": false
+    }
+  },
+  "totals": {
+    "files": 124,
+    "requests": 15,
+    "windows": 9
+  }
+}

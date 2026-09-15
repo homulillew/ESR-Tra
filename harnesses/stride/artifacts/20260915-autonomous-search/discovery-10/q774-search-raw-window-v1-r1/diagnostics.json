@@ -1,0 +1,1209 @@
+{
+  "protocol": "stride-search-3",
+  "head": "0f1c3f45e12c29cf8df1b97231db1318ff1d00aecdbd0e365881dbe40f107316",
+  "outcome": "abstained",
+  "formal_correct": null,
+  "model_attempts": 16,
+  "backend_attempts": 43,
+  "queries": [
+    {
+      "round": 1,
+      "top_k": 10,
+      "equivalence_key": "2e0bc104e10c252c3ee4915da41ddbd64a93539bfdbd614e16844a4e09d589bf",
+      "cached": false,
+      "query_sha256": "b13a5a06ee43a1c5b94705be2cf02f5a2ecfb963ebdd7743712c4e62cc8b6432",
+      "query": "actor height 1.65 1.70 character married three times one child survives series",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"actor\" OR \"height\" OR \"1\" OR \"65\" OR \"70\" OR \"character\" OR \"married\" OR \"three\" OR \"times\" OR \"one\" OR \"child\" OR \"survives\" OR \"series\"",
+        "terms": [
+          "actor",
+          "height",
+          "1",
+          "65",
+          "70",
+          "character",
+          "married",
+          "three",
+          "times",
+          "one",
+          "child",
+          "survives",
+          "series"
+        ]
+      }
+    },
+    {
+      "round": 1,
+      "top_k": 10,
+      "equivalence_key": "eeb4246a71a1aafc45bf4866212c2921bea7b40593d6689c0a3284f9aa9a59d5",
+      "cached": false,
+      "query_sha256": "590b3831c494431ae63de98f38692848dc1e581e7cec6d8c9f44a87469864739",
+      "query": "TV series character married multiple times only one child survives real life relative co-star",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"tv\" OR \"series\" OR \"character\" OR \"married\" OR \"multiple\" OR \"times\" OR \"only\" OR \"one\" OR \"child\" OR \"survives\" OR \"real\" OR \"life\" OR \"relative\" OR \"co\" OR \"star\"",
+        "terms": [
+          "tv",
+          "series",
+          "character",
+          "married",
+          "multiple",
+          "times",
+          "only",
+          "one",
+          "child",
+          "survives",
+          "real",
+          "life",
+          "relative",
+          "co",
+          "star"
+        ]
+      }
+    },
+    {
+      "round": 1,
+      "top_k": 10,
+      "equivalence_key": "d044a6ae9acd069ee1c2aedec1418648a4c15426da6dd0c07742b0d61ea1f453",
+      "cached": false,
+      "query_sha256": "ad6c423201db77cb15021d02e48cd2b131fb8adb6afffb4c1ad9f36b8c79f4c6",
+      "query": "soap opera character married more than twice one surviving child actor real life family member co-star",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"soap\" OR \"opera\" OR \"character\" OR \"married\" OR \"more\" OR \"than\" OR \"twice\" OR \"one\" OR \"surviving\" OR \"child\" OR \"actor\" OR \"real\" OR \"life\" OR \"family\" OR \"member\" OR \"co\" OR \"star\"",
+        "terms": [
+          "soap",
+          "opera",
+          "character",
+          "married",
+          "more",
+          "than",
+          "twice",
+          "one",
+          "surviving",
+          "child",
+          "actor",
+          "real",
+          "life",
+          "family",
+          "member",
+          "co",
+          "star"
+        ]
+      }
+    },
+    {
+      "round": 2,
+      "top_k": 10,
+      "equivalence_key": "5b70816fc64ceb619fdd0330d9414de5b0b547483b09f80dd4fb8ed3b00abf47",
+      "cached": false,
+      "query_sha256": "12ac7fdd7c6898116af000a62e779556d0ba7d27565b2c9fc2f124a7c5083c9f",
+      "query": "Grey's Anatomy character married three times one child survives",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"grey\" OR \"s\" OR \"anatomy\" OR \"character\" OR \"married\" OR \"three\" OR \"times\" OR \"one\" OR \"child\" OR \"survives\"",
+        "terms": [
+          "grey",
+          "s",
+          "anatomy",
+          "character",
+          "married",
+          "three",
+          "times",
+          "one",
+          "child",
+          "survives"
+        ]
+      }
+    },
+    {
+      "round": 2,
+      "top_k": 10,
+      "equivalence_key": "f1c0b51055334943446ba0f4157b8bf198f05aeb917ae2cda4c8cfc9c684c4b9",
+      "cached": false,
+      "query_sha256": "07bd5a9ce7a2cfeebc3c891b676a9a24559f7e4257b99ac6bea0d13c360dfd9f",
+      "query": "character married four times one surviving child TV series",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"character\" OR \"married\" OR \"four\" OR \"times\" OR \"one\" OR \"surviving\" OR \"child\" OR \"tv\" OR \"series\"",
+        "terms": [
+          "character",
+          "married",
+          "four",
+          "times",
+          "one",
+          "surviving",
+          "child",
+          "tv",
+          "series"
+        ]
+      }
+    },
+    {
+      "round": 2,
+      "top_k": 10,
+      "equivalence_key": "6f61cd6b0ac607920bd10c870962614214dc1e28b6b5228909244cf78a566030",
+      "cached": false,
+      "query_sha256": "7cbffff3d8534fa842cbea529f135a16b7bbe22a41193de20e88fa37cfa8c380",
+      "query": "actor plays with real life relative on TV show unrelated on screen",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"actor\" OR \"plays\" OR \"with\" OR \"real\" OR \"life\" OR \"relative\" OR \"on\" OR \"tv\" OR \"show\" OR \"unrelated\" OR \"screen\"",
+        "terms": [
+          "actor",
+          "plays",
+          "with",
+          "real",
+          "life",
+          "relative",
+          "on",
+          "tv",
+          "show",
+          "unrelated",
+          "screen"
+        ]
+      }
+    },
+    {
+      "round": 3,
+      "top_k": 10,
+      "equivalence_key": "eb72676a9b799e8c86e9372066b4b81d7e35f0128440abbd1b42085f2dcc1b73",
+      "cached": false,
+      "query_sha256": "05cb69ad558fbd3927aa0a28a06d8cbbb63bfdd82b84c8f254973461310ed1e7",
+      "query": "character married three times only one child survives series real life relative co-star",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"character\" OR \"married\" OR \"three\" OR \"times\" OR \"only\" OR \"one\" OR \"child\" OR \"survives\" OR \"series\" OR \"real\" OR \"life\" OR \"relative\" OR \"co\" OR \"star\"",
+        "terms": [
+          "character",
+          "married",
+          "three",
+          "times",
+          "only",
+          "one",
+          "child",
+          "survives",
+          "series",
+          "real",
+          "life",
+          "relative",
+          "co",
+          "star"
+        ]
+      }
+    },
+    {
+      "round": 3,
+      "top_k": 10,
+      "equivalence_key": "1e09bf77518d413d4f37e60d01d5f8f942757afc1118a85757df4329fcf0bdc1",
+      "cached": false,
+      "query_sha256": "2f70a7015ac9574caf80fc11e30d35da2200779b4ff2333340418ad12c3850b8",
+      "query": "telenovela actor real life relative co-star character married multiple times",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"telenovela\" OR \"actor\" OR \"real\" OR \"life\" OR \"relative\" OR \"co\" OR \"star\" OR \"character\" OR \"married\" OR \"multiple\" OR \"times\"",
+        "terms": [
+          "telenovela",
+          "actor",
+          "real",
+          "life",
+          "relative",
+          "co",
+          "star",
+          "character",
+          "married",
+          "multiple",
+          "times"
+        ]
+      }
+    },
+    {
+      "round": 3,
+      "top_k": 10,
+      "equivalence_key": "63827c966ac21e5ba2edc678232e2c5d3d08de5e66bbd71a82bcd1467dc3aeb7",
+      "cached": false,
+      "query_sha256": "c2dc67161e07540a94efaa61d75f56d9dad20d5995841bd1c6e1088ce23f327d",
+      "query": "TV character four marriages one surviving child actor height 1.68",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"tv\" OR \"character\" OR \"four\" OR \"marriages\" OR \"one\" OR \"surviving\" OR \"child\" OR \"actor\" OR \"height\" OR \"1\" OR \"68\"",
+        "terms": [
+          "tv",
+          "character",
+          "four",
+          "marriages",
+          "one",
+          "surviving",
+          "child",
+          "actor",
+          "height",
+          "1",
+          "68"
+        ]
+      }
+    },
+    {
+      "round": 4,
+      "top_k": 10,
+      "equivalence_key": "6228b9954586153fe803f7dc47cacda9254b578cfe7eecc328ba3cde0326fbaa",
+      "cached": false,
+      "query_sha256": "a0cac7ab05eee75cf2caaab9326c08365977ba450496e4f7f7619bf0c8530e42",
+      "query": "Jane the Virgin character married three times one child survives",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"jane\" OR \"the\" OR \"virgin\" OR \"character\" OR \"married\" OR \"three\" OR \"times\" OR \"one\" OR \"child\" OR \"survives\"",
+        "terms": [
+          "jane",
+          "the",
+          "virgin",
+          "character",
+          "married",
+          "three",
+          "times",
+          "one",
+          "child",
+          "survives"
+        ]
+      }
+    },
+    {
+      "round": 4,
+      "top_k": 10,
+      "equivalence_key": "eaf8cba1f897bef99e7e7feca8ab8ef1424f51c3f5b357f8b9b0ca4ff00bbb24",
+      "cached": false,
+      "query_sha256": "1dbcb826ed99e88a0aa3d55b857517f2bf1967f95de70251ae9a4412bf9b0680",
+      "query": "actor real life relative co-star unrelated on screen Jane Virgin",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"actor\" OR \"real\" OR \"life\" OR \"relative\" OR \"co\" OR \"star\" OR \"unrelated\" OR \"on\" OR \"screen\" OR \"jane\" OR \"virgin\"",
+        "terms": [
+          "actor",
+          "real",
+          "life",
+          "relative",
+          "co",
+          "star",
+          "unrelated",
+          "on",
+          "screen",
+          "jane",
+          "virgin"
+        ]
+      }
+    },
+    {
+      "round": 4,
+      "top_k": 10,
+      "equivalence_key": "ff9e8bb30ab91a5566e2e13b230798e16154b9ebc8e0defab64b732f054482e6",
+      "cached": false,
+      "query_sha256": "c967911f6e3c47803b1f1900ec1cfeab475a371829099d6ce9844f04d85bc65d",
+      "query": "telenovela character married four times one surviving child",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"telenovela\" OR \"character\" OR \"married\" OR \"four\" OR \"times\" OR \"one\" OR \"surviving\" OR \"child\"",
+        "terms": [
+          "telenovela",
+          "character",
+          "married",
+          "four",
+          "times",
+          "one",
+          "surviving",
+          "child"
+        ]
+      }
+    },
+    {
+      "round": 4,
+      "top_k": 10,
+      "equivalence_key": "9e8200e43f731cc04d5b3303915d0038cf41556009792f676d0e637ea9d4a1fd",
+      "cached": false,
+      "query_sha256": "dfaacaa50ca00063f74051533c19c25a6f2831843c167e0bccecbd80ce1f6fb6",
+      "query": "This Is Us character married multiple times one child survives",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"this\" OR \"is\" OR \"us\" OR \"character\" OR \"married\" OR \"multiple\" OR \"times\" OR \"one\" OR \"child\" OR \"survives\"",
+        "terms": [
+          "this",
+          "is",
+          "us",
+          "character",
+          "married",
+          "multiple",
+          "times",
+          "one",
+          "child",
+          "survives"
+        ]
+      }
+    },
+    {
+      "round": 4,
+      "top_k": 10,
+      "equivalence_key": "c6510c0c6771303dd8b04167f3e987cabf036431149a9c0b1dc8b690d888f211",
+      "cached": false,
+      "query_sha256": "934abde9ca7dba89e89618729900facf1534a8f634e8b84604d0b47255256496",
+      "query": "actor plays with real life sibling on show unrelated characters",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"actor\" OR \"plays\" OR \"with\" OR \"real\" OR \"life\" OR \"sibling\" OR \"on\" OR \"show\" OR \"unrelated\" OR \"characters\"",
+        "terms": [
+          "actor",
+          "plays",
+          "with",
+          "real",
+          "life",
+          "sibling",
+          "on",
+          "show",
+          "unrelated",
+          "characters"
+        ]
+      }
+    },
+    {
+      "round": 4,
+      "top_k": 10,
+      "equivalence_key": "4275ccfed0af8a2cba7e588cf0a820ba357703b61803015d265d56c3dd5e34ba",
+      "cached": false,
+      "query_sha256": "0d1bc87335d66ef97bc83d66eb2602fd6ab1103ff5388191f6d7a6483fbf4a35",
+      "query": "TV series character married three times only one child alive",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"tv\" OR \"series\" OR \"character\" OR \"married\" OR \"three\" OR \"times\" OR \"only\" OR \"one\" OR \"child\" OR \"alive\"",
+        "terms": [
+          "tv",
+          "series",
+          "character",
+          "married",
+          "three",
+          "times",
+          "only",
+          "one",
+          "child",
+          "alive"
+        ]
+      }
+    },
+    {
+      "round": 5,
+      "top_k": 10,
+      "equivalence_key": "6337b096d632417ae4e7cc1d0028751f866cd90baadc3804bf73113a407ef28e",
+      "cached": false,
+      "query_sha256": "e86182df4400950131ca9f7773c479422094f249f07863d0596ec658cb5a3bb1",
+      "query": "Richard Harmon The 100 character married multiple times children",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"richard\" OR \"harmon\" OR \"the\" OR \"100\" OR \"character\" OR \"married\" OR \"multiple\" OR \"times\" OR \"children\"",
+        "terms": [
+          "richard",
+          "harmon",
+          "the",
+          "100",
+          "character",
+          "married",
+          "multiple",
+          "times",
+          "children"
+        ]
+      }
+    },
+    {
+      "round": 5,
+      "top_k": 10,
+      "equivalence_key": "50e99227f2cb90ac6777a04e769b0b9e25e1fcc7f2ba87bbe78cad8f80e291e3",
+      "cached": false,
+      "query_sha256": "07af9906c066ea7bb396e3aa77d565a07e2f63a416df23fb8bec55e20dba215a",
+      "query": "Jessica Harmon The 100 actor siblings unrelated characters",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"jessica\" OR \"harmon\" OR \"the\" OR \"100\" OR \"actor\" OR \"siblings\" OR \"unrelated\" OR \"characters\"",
+        "terms": [
+          "jessica",
+          "harmon",
+          "the",
+          "100",
+          "actor",
+          "siblings",
+          "unrelated",
+          "characters"
+        ]
+      }
+    },
+    {
+      "round": 5,
+      "top_k": 10,
+      "equivalence_key": "b80dc1ffa5470ab8b3d9eeefa1ec1d7a512e2e06de5f668f48a9b4ea0fb17eb7",
+      "cached": false,
+      "query_sha256": "9ad625107e08cdfe803098698386e702e91ec4564360a03a1aff886ceeb069a5",
+      "query": "The 100 series seasons number 7",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"the\" OR \"100\" OR \"series\" OR \"seasons\" OR \"number\" OR \"7\"",
+        "terms": [
+          "the",
+          "100",
+          "series",
+          "seasons",
+          "number",
+          "7"
+        ]
+      }
+    },
+    {
+      "round": 6,
+      "top_k": 10,
+      "equivalence_key": "293870d4703414d55e32457c3f9060cf2a6862324e7f83686d47ac22c5d1ba14",
+      "cached": false,
+      "query_sha256": "cf17b3f23054304af171b28306587db2ec34e7c9aff0104fc44297ccd9e6f33a",
+      "query": "John Murphy The 100 marriages Emori wife",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"john\" OR \"murphy\" OR \"the\" OR \"100\" OR \"marriages\" OR \"emori\" OR \"wife\"",
+        "terms": [
+          "john",
+          "murphy",
+          "the",
+          "100",
+          "marriages",
+          "emori",
+          "wife"
+        ]
+      }
+    },
+    {
+      "round": 6,
+      "top_k": 10,
+      "equivalence_key": "ad910b6541abdb8a3ce5986bafbc7a6fd2005834f4ef288c77339f0cb1739a07",
+      "cached": false,
+      "query_sha256": "f349b3c0b4074215130bc06041b13140e8fa59458929ac1ab32270bb67cde669",
+      "query": "Richard Harmon height cm",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"richard\" OR \"harmon\" OR \"height\" OR \"cm\"",
+        "terms": [
+          "richard",
+          "harmon",
+          "height",
+          "cm"
+        ]
+      }
+    },
+    {
+      "round": 6,
+      "top_k": 10,
+      "equivalence_key": "7e5aafd2b4a4c846097a74bd6c461cdf962ac269e4c6cf33fdd33c82213e388d",
+      "cached": false,
+      "query_sha256": "be2d0904482cb76024b1261ee5aff3e184bfedbcf81897c281ecf406cea99fb2",
+      "query": "Niylah The 100 character Clarke relationship",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"niylah\" OR \"the\" OR \"100\" OR \"character\" OR \"clarke\" OR \"relationship\"",
+        "terms": [
+          "niylah",
+          "the",
+          "100",
+          "character",
+          "clarke",
+          "relationship"
+        ]
+      }
+    },
+    {
+      "round": 7,
+      "top_k": 10,
+      "equivalence_key": "81e86de942db013b3d28568a6e94b4f2c6e7421bc6ab0c4a5d09cafe80420917",
+      "cached": false,
+      "query_sha256": "2a1de33b905c003738a572e17af59ce19f6dec3be7cf7ab5d40f01528ab1997e",
+      "query": "TV character married three times one surviving child series",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"tv\" OR \"character\" OR \"married\" OR \"three\" OR \"times\" OR \"one\" OR \"surviving\" OR \"child\" OR \"series\"",
+        "terms": [
+          "tv",
+          "character",
+          "married",
+          "three",
+          "times",
+          "one",
+          "surviving",
+          "child",
+          "series"
+        ]
+      }
+    },
+    {
+      "round": 7,
+      "top_k": 10,
+      "equivalence_key": "c6406e91bdc775321952cce8cfcf7203487293e71eff713c514490e5c4a291f7",
+      "cached": false,
+      "query_sha256": "fc39c954441a59921d35999c2a71ce7025d96bc69509c4812ef256d035bf54b3",
+      "query": "actor plays real life relative unrelated character series married three times",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"actor\" OR \"plays\" OR \"real\" OR \"life\" OR \"relative\" OR \"unrelated\" OR \"character\" OR \"series\" OR \"married\" OR \"three\" OR \"times\"",
+        "terms": [
+          "actor",
+          "plays",
+          "real",
+          "life",
+          "relative",
+          "unrelated",
+          "character",
+          "series",
+          "married",
+          "three",
+          "times"
+        ]
+      }
+    },
+    {
+      "round": 7,
+      "top_k": 10,
+      "equivalence_key": "9a9c45d3c073724b4909e38130ba9b997621a6a4284f51eb325b7f858fd9844c",
+      "cached": false,
+      "query_sha256": "ad5f22127149f66b0d84ab8501705f911d42ad73de47fb22c9f6194700e612bf",
+      "query": "entertainer height 1.68 m character married multiple times one child survives",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"entertainer\" OR \"height\" OR \"1\" OR \"68\" OR \"m\" OR \"character\" OR \"married\" OR \"multiple\" OR \"times\" OR \"one\" OR \"child\" OR \"survives\"",
+        "terms": [
+          "entertainer",
+          "height",
+          "1",
+          "68",
+          "m",
+          "character",
+          "married",
+          "multiple",
+          "times",
+          "one",
+          "child",
+          "survives"
+        ]
+      }
+    },
+    {
+      "round": 8,
+      "top_k": 10,
+      "equivalence_key": "f33f947285446bad73fa8040233bfce3db9abb99c04d88b03bf546b48cb36b0c",
+      "cached": false,
+      "query_sha256": "be07b4c7fe1aa687244a5599410f558f3c3ec825338ddf0f9336dfc51999f3ee",
+      "query": "John Murphy The 100 character wiki Emori marriage child",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"john\" OR \"murphy\" OR \"the\" OR \"100\" OR \"character\" OR \"wiki\" OR \"emori\" OR \"marriage\" OR \"child\"",
+        "terms": [
+          "john",
+          "murphy",
+          "the",
+          "100",
+          "character",
+          "wiki",
+          "emori",
+          "marriage",
+          "child"
+        ]
+      }
+    },
+    {
+      "round": 8,
+      "top_k": 10,
+      "equivalence_key": "223f37238b799bcd6e42a4818f2f0263e6c13118ddd480acd958ba51bf27e72a",
+      "cached": false,
+      "query_sha256": "221cf9f22741911db3be4b3ea8171be40d0ee2d8b8ec1c49d62198abcce09625",
+      "query": "Niylah The 100 character wiki marriages children",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"niylah\" OR \"the\" OR \"100\" OR \"character\" OR \"wiki\" OR \"marriages\" OR \"children\"",
+        "terms": [
+          "niylah",
+          "the",
+          "100",
+          "character",
+          "wiki",
+          "marriages",
+          "children"
+        ]
+      }
+    },
+    {
+      "round": 8,
+      "top_k": 10,
+      "equivalence_key": "ce1aa511b1c3e635d3335c4a948f473e4b78cce8786edcd77b56e406c27025b2",
+      "cached": false,
+      "query_sha256": "d77925c9e231d1d488b5a35e15dc1c032f6d41558ab20521f288a5f6d3d107ac",
+      "query": "The 100 TV series 7 seasons premiered 2014 finale 2020",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"the\" OR \"100\" OR \"tv\" OR \"series\" OR \"7\" OR \"seasons\" OR \"premiered\" OR \"2014\" OR \"finale\" OR \"2020\"",
+        "terms": [
+          "the",
+          "100",
+          "tv",
+          "series",
+          "7",
+          "seasons",
+          "premiered",
+          "2014",
+          "finale",
+          "2020"
+        ]
+      }
+    },
+    {
+      "round": 9,
+      "top_k": 10,
+      "equivalence_key": "519d26439dcfd8b0f9cc9c86202b3ed2e25e60cd3cb40bc1af25031f72abcb3f",
+      "cached": false,
+      "query_sha256": "cce3c15936edd8c8547b873feb30644e81a93a6f5565161b9e87ff384d2dbc21",
+      "query": "John Murphy The 100 character biography Emori wife child",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"john\" OR \"murphy\" OR \"the\" OR \"100\" OR \"character\" OR \"biography\" OR \"emori\" OR \"wife\" OR \"child\"",
+        "terms": [
+          "john",
+          "murphy",
+          "the",
+          "100",
+          "character",
+          "biography",
+          "emori",
+          "wife",
+          "child"
+        ]
+      }
+    },
+    {
+      "round": 9,
+      "top_k": 10,
+      "equivalence_key": "14374de137c1eba20c7baac460a908066b997334d58729480d9d67771af5a0f5",
+      "cached": false,
+      "query_sha256": "a8867fb7773e74b8398bac5662385945b05225962f219ae0a6e1f92152df786c",
+      "query": "Murphy The 100 wiki fandom character page",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"murphy\" OR \"the\" OR \"100\" OR \"wiki\" OR \"fandom\" OR \"character\" OR \"page\"",
+        "terms": [
+          "murphy",
+          "the",
+          "100",
+          "wiki",
+          "fandom",
+          "character",
+          "page"
+        ]
+      }
+    },
+    {
+      "round": 11,
+      "top_k": 10,
+      "equivalence_key": "b05da90036b12e9270c813b3f2e2f41741ed4dcec7bddec2f97028d56253934d",
+      "cached": false,
+      "query_sha256": "889050316175742c6378fb5fcaec2ab471652f9a08634f1d788b97643593a886",
+      "query": "John Murphy The 100 character Emori wife child wiki",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"john\" OR \"murphy\" OR \"the\" OR \"100\" OR \"character\" OR \"emori\" OR \"wife\" OR \"child\" OR \"wiki\"",
+        "terms": [
+          "john",
+          "murphy",
+          "the",
+          "100",
+          "character",
+          "emori",
+          "wife",
+          "child",
+          "wiki"
+        ]
+      }
+    },
+    {
+      "round": 11,
+      "top_k": 10,
+      "equivalence_key": "3e95ffc4aadcc13523b9fa8295fa93830466322e2c250b49f458978d4ed3a528",
+      "cached": false,
+      "query_sha256": "250832d133bc81121add982d0e8a41bc4af1ec2adf3261c1656ecb956f3a63f5",
+      "query": "the100 fandom wiki John Murphy character page",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"the100\" OR \"fandom\" OR \"wiki\" OR \"john\" OR \"murphy\" OR \"character\" OR \"page\"",
+        "terms": [
+          "the100",
+          "fandom",
+          "wiki",
+          "john",
+          "murphy",
+          "character",
+          "page"
+        ]
+      }
+    },
+    {
+      "round": 11,
+      "top_k": 10,
+      "equivalence_key": "1aff82ad542d221dae255ec71ac5700fa8aee69d8f5f5566d63343f15f1441e1",
+      "cached": false,
+      "query_sha256": "3f3c165875662ff88d956cb1cdcbc8897a3e7806445b27e5a234387e4baa0766",
+      "query": "John Murphy The 100 married Emori son",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"john\" OR \"murphy\" OR \"the\" OR \"100\" OR \"married\" OR \"emori\" OR \"son\"",
+        "terms": [
+          "john",
+          "murphy",
+          "the",
+          "100",
+          "married",
+          "emori",
+          "son"
+        ]
+      }
+    },
+    {
+      "round": 12,
+      "top_k": 10,
+      "equivalence_key": "b05da90036b12e9270c813b3f2e2f41741ed4dcec7bddec2f97028d56253934d",
+      "cached": true,
+      "query_sha256": "889050316175742c6378fb5fcaec2ab471652f9a08634f1d788b97643593a886",
+      "query": "John Murphy The 100 character Emori wife child wiki",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"john\" OR \"murphy\" OR \"the\" OR \"100\" OR \"character\" OR \"emori\" OR \"wife\" OR \"child\" OR \"wiki\"",
+        "terms": [
+          "john",
+          "murphy",
+          "the",
+          "100",
+          "character",
+          "emori",
+          "wife",
+          "child",
+          "wiki"
+        ]
+      }
+    },
+    {
+      "round": 12,
+      "top_k": 10,
+      "equivalence_key": "3e95ffc4aadcc13523b9fa8295fa93830466322e2c250b49f458978d4ed3a528",
+      "cached": true,
+      "query_sha256": "250832d133bc81121add982d0e8a41bc4af1ec2adf3261c1656ecb956f3a63f5",
+      "query": "the100 fandom wiki John Murphy character page",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"the100\" OR \"fandom\" OR \"wiki\" OR \"john\" OR \"murphy\" OR \"character\" OR \"page\"",
+        "terms": [
+          "the100",
+          "fandom",
+          "wiki",
+          "john",
+          "murphy",
+          "character",
+          "page"
+        ]
+      }
+    },
+    {
+      "round": 12,
+      "top_k": 10,
+      "equivalence_key": "1aff82ad542d221dae255ec71ac5700fa8aee69d8f5f5566d63343f15f1441e1",
+      "cached": true,
+      "query_sha256": "3f3c165875662ff88d956cb1cdcbc8897a3e7806445b27e5a234387e4baa0766",
+      "query": "John Murphy The 100 married Emori son",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"john\" OR \"murphy\" OR \"the\" OR \"100\" OR \"married\" OR \"emori\" OR \"son\"",
+        "terms": [
+          "john",
+          "murphy",
+          "the",
+          "100",
+          "married",
+          "emori",
+          "son"
+        ]
+      }
+    },
+    {
+      "round": 13,
+      "top_k": 8,
+      "equivalence_key": "a6b06f730b261d6b398c9c1004ae2b56d7a0590e08295af8a95a9ec308027d00",
+      "cached": false,
+      "query_sha256": "f349b3c0b4074215130bc06041b13140e8fa59458929ac1ab32270bb67cde669",
+      "query": "Richard Harmon height cm",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"richard\" OR \"harmon\" OR \"height\" OR \"cm\"",
+        "terms": [
+          "richard",
+          "harmon",
+          "height",
+          "cm"
+        ]
+      }
+    },
+    {
+      "round": 13,
+      "top_k": 8,
+      "equivalence_key": "062e0d7b74f87a3e845ce870b19b3bce2f96a948db013db97594ddb4459e9ffe",
+      "cached": false,
+      "query_sha256": "832f35e7b9c21acd42ead5c6438befc5b5c4a3d5ec70f257c4dcc08d3db6c658",
+      "query": "Richard Harmon actor height meters",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"richard\" OR \"harmon\" OR \"actor\" OR \"height\" OR \"meters\"",
+        "terms": [
+          "richard",
+          "harmon",
+          "actor",
+          "height",
+          "meters"
+        ]
+      }
+    },
+    {
+      "round": 14,
+      "top_k": 8,
+      "equivalence_key": "4379fb83c1fac4b967444cca3d2efe7a9a927fe0245039bff33c1c13e19a7e73",
+      "cached": false,
+      "query_sha256": "1193df9d07cc0a75be42a9d97bdfbd0d816710feacc0b2988bfbcdfcdacee031",
+      "query": "Richard Harmon height 5 feet",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"richard\" OR \"harmon\" OR \"height\" OR \"5\" OR \"feet\"",
+        "terms": [
+          "richard",
+          "harmon",
+          "height",
+          "5",
+          "feet"
+        ]
+      }
+    },
+    {
+      "round": 14,
+      "top_k": 8,
+      "equivalence_key": "54be01806d5a0ff47741d40c1c680ed4a6aacf4695ea038712562fb95226ca40",
+      "cached": false,
+      "query_sha256": "0079c0ce5fc0bb25bd02c5d530051c1cd8fa3ff7afdbce130ed816cc7dece707",
+      "query": "Richard Harmon The 100 actor biography height",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"richard\" OR \"harmon\" OR \"the\" OR \"100\" OR \"actor\" OR \"biography\" OR \"height\"",
+        "terms": [
+          "richard",
+          "harmon",
+          "the",
+          "100",
+          "actor",
+          "biography",
+          "height"
+        ]
+      }
+    },
+    {
+      "round": 15,
+      "top_k": 10,
+      "equivalence_key": "b05da90036b12e9270c813b3f2e2f41741ed4dcec7bddec2f97028d56253934d",
+      "cached": true,
+      "query_sha256": "889050316175742c6378fb5fcaec2ab471652f9a08634f1d788b97643593a886",
+      "query": "John Murphy The 100 character Emori wife child wiki",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"john\" OR \"murphy\" OR \"the\" OR \"100\" OR \"character\" OR \"emori\" OR \"wife\" OR \"child\" OR \"wiki\"",
+        "terms": [
+          "john",
+          "murphy",
+          "the",
+          "100",
+          "character",
+          "emori",
+          "wife",
+          "child",
+          "wiki"
+        ]
+      }
+    },
+    {
+      "round": 15,
+      "top_k": 10,
+      "equivalence_key": "3e95ffc4aadcc13523b9fa8295fa93830466322e2c250b49f458978d4ed3a528",
+      "cached": true,
+      "query_sha256": "250832d133bc81121add982d0e8a41bc4af1ec2adf3261c1656ecb956f3a63f5",
+      "query": "the100 fandom wiki John Murphy character page",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"the100\" OR \"fandom\" OR \"wiki\" OR \"john\" OR \"murphy\" OR \"character\" OR \"page\"",
+        "terms": [
+          "the100",
+          "fandom",
+          "wiki",
+          "john",
+          "murphy",
+          "character",
+          "page"
+        ]
+      }
+    },
+    {
+      "round": 15,
+      "top_k": 10,
+      "equivalence_key": "1aff82ad542d221dae255ec71ac5700fa8aee69d8f5f5566d63343f15f1441e1",
+      "cached": true,
+      "query_sha256": "3f3c165875662ff88d956cb1cdcbc8897a3e7806445b27e5a234387e4baa0766",
+      "query": "John Murphy The 100 married Emori son",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"john\" OR \"murphy\" OR \"the\" OR \"100\" OR \"married\" OR \"emori\" OR \"son\"",
+        "terms": [
+          "john",
+          "murphy",
+          "the",
+          "100",
+          "married",
+          "emori",
+          "son"
+        ]
+      }
+    }
+  ],
+  "equivalent_query_repeats": 6,
+  "views": [
+    {
+      "round": 1,
+      "compacted": false,
+      "visible_evidence": [],
+      "shelf": [],
+      "shelf_evicted": []
+    },
+    {
+      "round": 2,
+      "compacted": false,
+      "visible_evidence": [
+        "e1"
+      ],
+      "shelf": [],
+      "shelf_evicted": []
+    },
+    {
+      "round": 3,
+      "compacted": false,
+      "visible_evidence": [
+        "e1",
+        "e2"
+      ],
+      "shelf": [],
+      "shelf_evicted": []
+    },
+    {
+      "round": 4,
+      "compacted": true,
+      "visible_evidence": [
+        "e1",
+        "e2",
+        "e3"
+      ],
+      "shelf": [
+        "e1"
+      ],
+      "shelf_evicted": []
+    },
+    {
+      "round": 5,
+      "compacted": true,
+      "visible_evidence": [
+        "e1",
+        "e2",
+        "e3",
+        "e4",
+        "e5"
+      ],
+      "shelf": [
+        "e1",
+        "e2",
+        "e3"
+      ],
+      "shelf_evicted": []
+    },
+    {
+      "round": 6,
+      "compacted": true,
+      "visible_evidence": [
+        "e3",
+        "e4",
+        "e5",
+        "e6",
+        "e7"
+      ],
+      "shelf": [
+        "e3",
+        "e4",
+        "e5"
+      ],
+      "shelf_evicted": []
+    },
+    {
+      "round": 7,
+      "compacted": false,
+      "visible_evidence": [
+        "e5",
+        "e6",
+        "e7"
+      ],
+      "shelf": [
+        "e5"
+      ],
+      "shelf_evicted": []
+    },
+    {
+      "round": 8,
+      "compacted": false,
+      "visible_evidence": [
+        "e5",
+        "e6",
+        "e7"
+      ],
+      "shelf": [
+        "e5"
+      ],
+      "shelf_evicted": []
+    },
+    {
+      "round": 9,
+      "compacted": true,
+      "visible_evidence": [
+        "e5",
+        "e6",
+        "e7"
+      ],
+      "shelf": [
+        "e5",
+        "e6",
+        "e7"
+      ],
+      "shelf_evicted": []
+    },
+    {
+      "round": 10,
+      "compacted": true,
+      "visible_evidence": [
+        "e5",
+        "e6",
+        "e7"
+      ],
+      "shelf": [
+        "e5",
+        "e6",
+        "e7"
+      ],
+      "shelf_evicted": []
+    },
+    {
+      "round": 11,
+      "compacted": false,
+      "visible_evidence": [
+        "e5",
+        "e6",
+        "e7",
+        "e8"
+      ],
+      "shelf": [
+        "e5",
+        "e6",
+        "e7"
+      ],
+      "shelf_evicted": []
+    },
+    {
+      "round": 12,
+      "compacted": true,
+      "visible_evidence": [
+        "e6",
+        "e7",
+        "e8"
+      ],
+      "shelf": [
+        "e6",
+        "e7"
+      ],
+      "shelf_evicted": []
+    },
+    {
+      "round": 13,
+      "compacted": true,
+      "visible_evidence": [
+        "e6",
+        "e7",
+        "e8"
+      ],
+      "shelf": [
+        "e6",
+        "e7"
+      ],
+      "shelf_evicted": []
+    },
+    {
+      "round": 14,
+      "compacted": false,
+      "visible_evidence": [
+        "e6",
+        "e7",
+        "e8"
+      ],
+      "shelf": [
+        "e6",
+        "e7"
+      ],
+      "shelf_evicted": []
+    },
+    {
+      "round": 15,
+      "compacted": true,
+      "visible_evidence": [
+        "e6",
+        "e7",
+        "e8"
+      ],
+      "shelf": [
+        "e6",
+        "e7",
+        "e8"
+      ],
+      "shelf_evicted": []
+    },
+    {
+      "round": 16,
+      "compacted": false,
+      "visible_evidence": [
+        "e6",
+        "e7",
+        "e8"
+      ],
+      "shelf": [
+        "e6",
+        "e7",
+        "e8"
+      ],
+      "shelf_evicted": []
+    }
+  ],
+  "delivered_refs": [
+    "e1",
+    "e2",
+    "e3",
+    "e4",
+    "e5",
+    "e6",
+    "e7",
+    "e8"
+  ],
+  "submitted_refs": [],
+  "text_included": true,
+  "limitations": [
+    "Equivalence is compiler equality, not semantic identity or wasted-search proof",
+    "Raw-window visibility/selection is not entailment or complete evidence coverage",
+    "No live q26 replay or independent answer scoring is performed"
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "archive": {
+    "event_count": 53,
+    "head": "98bf0bf0ae2020f34e9264103faaa4953e410891841f540e6418ff5b3c6d0578"
+  },
+  "request_correspondence": [
+    {
+      "round": 1,
+      "http_body_exists": true,
+      "json_equivalent": true,
+      "canonical_serialization_matches_sent_body": true
+    },
+    {
+      "round": 2,
+      "http_body_exists": true,
+      "json_equivalent": true,
+      "canonical_serialization_matches_sent_body": true
+    },
+    {
+      "round": 3,
+      "http_body_exists": true,
+      "json_equivalent": true,
+      "canonical_serialization_matches_sent_body": true
+    }
+  ],
+  "request_bytes_note": "Compared captured urllib Request.data with deterministic Archive reconstruction; not TCP framing bytes",
+  "all_json_equivalent": true,
+  "http_attempts": 3,
+  "formal_correct": null
+}

@@ -1,0 +1,1642 @@
+{
+  "rounds": [
+    {
+      "round": 1,
+      "utc": "2026-09-15T16:08:51.179762+00:00",
+      "final": false,
+      "compacted": false,
+      "visible": [],
+      "shelf_restored": [],
+      "shelf_evicted": [],
+      "wire_bytes": 17476,
+      "usage": {
+        "cache_read_tokens": 3456,
+        "input_tokens": 4097,
+        "output_tokens": 145
+      },
+      "http": {
+        "sequence": 1,
+        "utc_start": "2026-09-15T16:08:51.272901+00:00",
+        "http_status": 200,
+        "requested_model": "EB-GLM-5.2",
+        "returned_model": "glm-5.2",
+        "finish_reason": "tool_calls",
+        "usage": {
+          "prompt_tokens": 4097,
+          "completion_tokens": 145,
+          "reasoning_tokens": 0,
+          "total_tokens": 4242,
+          "cached_tokens": 3456,
+          "prompt_tokens_details": {
+            "cached_tokens": 3456
+          },
+          "prompt_cost": 0.0,
+          "completion_cost": 0.0,
+          "cache_cost": 0.0
+        },
+        "input_tokens": 4097,
+        "output_tokens": 145,
+        "cache_read_tokens": 3456,
+        "cache_write_tokens": null,
+        "request_bytes": 17476,
+        "response_bytes": 1222,
+        "request_body_sha256": "0afc50186ed6002301d5ff4cefb66ef29a00da1e77ad0aa1983a64077579205d",
+        "sanitized_response": false,
+        "ledger_id": 1475,
+        "utc_end": "2026-09-15T16:08:55.489633+00:00",
+        "latency_seconds": 4.1990947000158485,
+        "response_representation": "original response body bytes",
+        "saved_response_body_sha256": "55b17dffc568d067d5d92f845656938098fd34445ce6c4181f3a0f33619b1ada"
+      }
+    },
+    {
+      "round": 2,
+      "utc": "2026-09-15T16:08:58.661227+00:00",
+      "final": false,
+      "compacted": false,
+      "visible": [
+        "e1"
+      ],
+      "shelf_restored": [],
+      "shelf_evicted": [],
+      "wire_bytes": 36306,
+      "usage": {
+        "cache_read_tokens": 3584,
+        "input_tokens": 8677,
+        "output_tokens": 184
+      },
+      "http": {
+        "sequence": 2,
+        "utc_start": "2026-09-15T16:08:58.759047+00:00",
+        "http_status": 200,
+        "requested_model": "EB-GLM-5.2",
+        "returned_model": "glm-5.2",
+        "finish_reason": "tool_calls",
+        "usage": {
+          "prompt_tokens": 8677,
+          "completion_tokens": 184,
+          "reasoning_tokens": 0,
+          "total_tokens": 8861,
+          "cached_tokens": 3584,
+          "prompt_tokens_details": {
+            "cached_tokens": 3584
+          },
+          "prompt_cost": 0.0,
+          "completion_cost": 0.0,
+          "cache_cost": 0.0
+        },
+        "input_tokens": 8677,
+        "output_tokens": 184,
+        "cache_read_tokens": 3584,
+        "cache_write_tokens": null,
+        "request_bytes": 36306,
+        "response_bytes": 1369,
+        "request_body_sha256": "e4e9f3bf90f2ed52792c52d72ce3ce0577590560d40b382662727bc4719f3e9f",
+        "sanitized_response": false,
+        "ledger_id": 1476,
+        "utc_end": "2026-09-15T16:09:02.209969+00:00",
+        "latency_seconds": 3.4302781999867875,
+        "response_representation": "original response body bytes",
+        "saved_response_body_sha256": "86122c1f01d28ef541cf51c2d92d809b4f79e39051555ebe2813bf528e1253f3"
+      }
+    },
+    {
+      "round": 3,
+      "utc": "2026-09-15T16:09:04.385974+00:00",
+      "final": false,
+      "compacted": false,
+      "visible": [
+        "e1",
+        "e2"
+      ],
+      "shelf_restored": [],
+      "shelf_evicted": [],
+      "wire_bytes": 52134,
+      "usage": {
+        "cache_read_tokens": 7424,
+        "input_tokens": 12571,
+        "output_tokens": 219
+      },
+      "http": {
+        "sequence": 3,
+        "utc_start": "2026-09-15T16:09:04.482817+00:00",
+        "http_status": 200,
+        "requested_model": "EB-GLM-5.2",
+        "returned_model": "glm-5.2",
+        "finish_reason": "tool_calls",
+        "usage": {
+          "prompt_tokens": 12571,
+          "completion_tokens": 219,
+          "reasoning_tokens": 0,
+          "total_tokens": 12790,
+          "cached_tokens": 7424,
+          "prompt_tokens_details": {
+            "cached_tokens": 7424
+          },
+          "prompt_cost": 0.0,
+          "completion_cost": 0.0,
+          "cache_cost": 0.0
+        },
+        "input_tokens": 12571,
+        "output_tokens": 219,
+        "cache_read_tokens": 7424,
+        "cache_write_tokens": null,
+        "request_bytes": 52134,
+        "response_bytes": 1447,
+        "request_body_sha256": "fcc527fd3fb7abb5fa0783f72fb74b95df872d09f2d1c29bfb30e9d338b2cf46",
+        "sanitized_response": false,
+        "ledger_id": 1477,
+        "utc_end": "2026-09-15T16:09:09.050397+00:00",
+        "latency_seconds": 4.549405199999455,
+        "response_representation": "original response body bytes",
+        "saved_response_body_sha256": "28ec78b9299302db200fc760dedf36881d812b5deedcdd3db2967afc161ab42c"
+      }
+    },
+    {
+      "round": 4,
+      "utc": "2026-09-15T16:09:09.209729+00:00",
+      "final": true,
+      "compacted": false,
+      "visible": [
+        "e1",
+        "e2",
+        "e3"
+      ],
+      "shelf_restored": [],
+      "shelf_evicted": [],
+      "wire_bytes": 44352,
+      "usage": {
+        "cache_read_tokens": 1024,
+        "input_tokens": 10705,
+        "output_tokens": 32
+      },
+      "http": {
+        "sequence": 4,
+        "utc_start": "2026-09-15T16:09:09.314716+00:00",
+        "http_status": 200,
+        "requested_model": "EB-GLM-5.2",
+        "returned_model": "glm-5.2",
+        "finish_reason": "tool_calls",
+        "usage": {
+          "prompt_tokens": 10705,
+          "completion_tokens": 32,
+          "reasoning_tokens": 0,
+          "total_tokens": 10737,
+          "cached_tokens": 1024,
+          "prompt_tokens_details": {
+            "cached_tokens": 1024
+          },
+          "prompt_cost": 0.0,
+          "completion_cost": 0.0,
+          "cache_cost": 0.0
+        },
+        "input_tokens": 10705,
+        "output_tokens": 32,
+        "cache_read_tokens": 1024,
+        "cache_write_tokens": null,
+        "request_bytes": 44352,
+        "response_bytes": 680,
+        "request_body_sha256": "9fa8fa815c6bfcb02c9bc4aacb3f9374a3d79b6599211241e63f02096f537d3c",
+        "sanitized_response": false,
+        "ledger_id": 1478,
+        "utc_end": "2026-09-15T16:09:12.554885+00:00",
+        "latency_seconds": 3.2189812999858987,
+        "response_representation": "original response body bytes",
+        "saved_response_body_sha256": "74d184eedabcd56029f47e4e8f904b9091aeb10a364bd9ad027ef8f2c43b4f77"
+      }
+    }
+  ],
+  "actions": [
+    {
+      "arguments": "{\"queries\": [\"sister co-founded film streaming service CEO raised Southern Africa\", \"CEO founded company 1990s raised South Africa first child SIDS\", \"younger sister film streaming service co-founder CEO South Africa\"]}",
+      "executed": true,
+      "result": {
+        "action_slot_charged": true,
+        "executed": true,
+        "ok": true,
+        "raw_windows": [
+          {
+            "evidence": {
+              "document": "d1",
+              "document_chars": 156072,
+              "end": 36861,
+              "kind": "raw_evidence",
+              "ref": "e1",
+              "sha256": "a3fe0ca11fc2f2aad38884068a72aed3ac4a0d4a2fc64db1bb43732fae564e96",
+              "snapshot": "ff4a3823ecf0962d3364168b79b37eee5d5c2b90bf724dd30beb6d873eae2332",
+              "start": 33861,
+              "text": "Flavoring her recipes with cherished family anecdotes, memories, and helpful tips, The Way Home is a perfect blend of the modern and the traditional. Kardea honors her proud heritage and shows off her own signature class and sass. The result is a marvelous, big-hearted collection of recipes and stories that will nourish you, body and soul. The Way Home became an instant New York Times Bestselling Cookbook, making it to number 6 on the list.\n\nMeredith O'Sullivan\n\nCo-Founder/Co-CEO, The Lede Company\n\nMeredith O'Sullivan is a Co-founder and Co-CEO of The Lede Company, a female-owned strategy, communications, integrated marketing and social impact consulting firm, specializing in corporate, entertainment, lifestyle, fashion, beauty, tech, consumer products, and nonprofit sectors founded in 2018. With dedicated Talent, Strategic Communications, Crisis, Brand, Content and Social Impact divisions, the firm works with a range of clients including Amy Schumer, Cara Delevigne, Charlize Theron, Emma Stone, Gael Garcia Bernal, Halle Berry, Halsey, Jennifer Garner, Jessica Biel, Lady Gaga, Mary J. Blige, Pharrell Williams, Penelope Cruz, Reese Witherspoon, Rihanna, Shakira, Will Ferrell, Will Smith, Anonymous Content, Candle Media, The Gotham Film & Media Institute, Hello Sunshine, Higher Ground, Illumination, Live Nation, Paramount, Westbrook, Nice Crowd (fka ABFF Ventures), content from Netflix, Hulu, Apple TV+, Freeform, as well as independent films and documentaries, ONE Campaign, The Global Fund, Thom Browne, Altuzarra, Kenzo, PANGAIA, Savage x Fenty, Tony's Chocolonely, Blue Bottle Coffee, Essence Ventures, Violet Grey and WhatsApp, among others.\n\nShelley Zalis\n\nCEO, Female Quotient\n\nKnown as the \"Chief Troublemaker,\" Shelley Zalis is a trailblazer for women in the workplace. She is an internationally renowned entrepreneur, a pioneer for online research, a sought-after speaker, a well-known thought leader, and a devoted mentor.\n\nAs founder and CEO of The Female Quotient, Zalis is in the business of equality™. Her mission is to change the equation and close the gender gap in the workplace. Together with Fortune 500 companies, impact organizations, and conscious leaders, The FQ curates experiences, media, and solutions that advance gender equality. The FQ has forever altered the business agenda through its signature Equality Lounges® advancing equality at the largest global business and industry conferences, including Davos, CES, SXSW, Cannes and more.\n\nPrior to The FQ, Zalis became the mother of online research when she founded OTX (Online Testing Exchange), which quickly grew into one of the world's largest research companies and earned Zalis distinction as the first female chief executive ranked in the research industry's top 25. She sold OTX to Ipsos in 2010, where she led global innovation in over 80 countries.\n\nWith a bold approach to leadership, business, and life, Zalis is an acclaimed speaker and dynamic moderator who has interviewed top-level CE"
+            },
+            "kind": "harness_acquired_raw_window",
+            "previously_received": false,
+            "selection": {
+              "block_truncated": false,
+              "end": 36861,
+              "instruction": "Check the subject and adjoining context; lexical overlap does not establish the requested relation.",
+              "matched": true,
+              "matched_terms": [
+                "co",
+                "founded",
+                "film",
+                "ceo"
+              ],
+              "method": "paragraph-lexical-v1",
+              "score": 13.117192,
+              "selected_block": [
+                34307,
+                35530
+              ],
+              "selection_is_semantic_support": false,
+              "start": 33861
+            },
+            "source_document": "d1",
+            "source_query_index": 0
+          }
+        ],
+        "results": [
+          {
+            "cached": false,
+            "hits": [
+              {
+                "kind": "navigation_not_evidence",
+                "navigation_seen": false,
+                "previously_received": false,
+                "raw_ranges_delivered": [],
+                "read_action": {
+                  "ref": "d1"
+                },
+                "ref": "d1",
+                "snippet": " ... In 1972, he co-founded and served as the first president of Big Brothers of Greater Fort Wayne and later served as president of the national board of Big Brothers Big Sisters of America from 1977-1980.\n\nIn addition, he founded Study Connection in 1989 in partnership with ... ",
+                "title": "https://www.bbbs.org/alumni-hall-of-fame/"
+              },
+              {
+                "kind": "navigation_not_evidence",
+                "navigation_seen": false,
+                "previously_received": false,
+                "raw_ranges_delivered": [],
+                "read_action": {
+                  "ref": "d2"
+                },
+                "ref": "d2",
+                "snippet": " ... Tosca is the co-founder of a streaming service and production company\n\nTosca is the co-founder and CEO of Passionflix, a streaming service and production company that adapts romance novels into films.\n\nSpeaking with CNN in November 2022, Tosca said she and her co-founder Joany Kane ... ",
+                "title": "https://people.com/all-about-elon-musk-siblings-kimbal-tosca-musk-7643832"
+              },
+              {
+                "kind": "navigation_not_evidence",
+                "navigation_seen": false,
+                "previously_received": false,
+                "raw_ranges_delivered": [],
+                "read_action": {
+                  "ref": "d3"
+                },
+                "ref": "d3",
+                "snippet": " ... She co-founded Passionflix, a streaming platform that hosts movie adaptions of romance novels. The fan-focused service is home to many movies directed by Musk herself.\n\nThe entrepreneur is making waves as a woman in the male-dominated movie industry. However, Tosca's own brother, Kimbal Musk ... ",
+                "title": "https://www.nickiswift.com/870938/the-untold-truth-of-tosca-musk-elons-younger-sister/"
+              },
+              {
+                "kind": "navigation_not_evidence",
+                "navigation_seen": false,
+                "previously_received": false,
+                "raw_ranges_delivered": [],
+                "read_action": {
+                  "ref": "d4"
+                },
+                "ref": "d4",
+                "snippet": " ... Raphael Holloway\n\nCEO\n\nGateway Center\n\nRaphael Holloway is CEO of the Gateway Center, which provides services and stable housing for people experiencing homelessness. Holloway has more than 25 years of experience in the social services arena, specializing in the behavioral health, correction, homelessness, and public health sectors. Before ... ",
+                "title": "https://www.atlantamagazine.com/news-culture-articles/2022-atlanta-500-religion-nonprofits-advocacy/"
+              },
+              {
+                "kind": "navigation_not_evidence",
+                "navigation_seen": false,
+                "previously_received": false,
+                "raw_ranges_delivered": [],
+                "read_action": {
+                  "ref": "d5"
+                },
+                "ref": "d5",
+                "snippet": " ... He founded Legazy in 2016. The company takes South Africa's brewing startup talent and exposes these talents to the world at the most recognized tech exhibitions to the world's most powerful tech communities.\n\nSOCIAL ENTREPRISE & PHILANTHROPY\n\nAmonge Sinxoto [Co-Founder, Blackboard Africa]: 18-year-old youth ... ",
+                "title": "https://avancemedia.org/2019miysa/"
+              }
+            ],
+            "next_step": "Inspect navigation; read a relevant page or change the locating clue.",
+            "observation": {
+              "first_delivered_source_round": null,
+              "prior_deliveries": 0,
+              "query_key": "cb7dfed267a90d45b68fdcecb09fe06a3caac03921702d0a7606ae6a123ea42e",
+              "replay_requested": false,
+              "result_fingerprint": "1aa695cd7b5bf29fb9478e663b93303e2c1b7fe6592b67afdba0a1c902cec021",
+              "semantic_progress": "not_measured"
+            },
+            "query": "sister co-founded film streaming service CEO raised Southern Africa",
+            "view": "full"
+          },
+          {
+            "cached": false,
+            "hits": [
+              {
+                "kind": "navigation_not_evidence",
+                "navigation_seen": false,
+                "previously_received": false,
+                "raw_ranges_delivered": [],
+                "read_action": {
+                  "ref": "d6"
+                },
+                "ref": "d6",
+                "snippet": " ... Kimbal is the cofounder of three food-related companies: The Kitchen Restaurant Group, a nonprofit called Big Green, and Square Roots, an urban farming company.\n\nKimbal moved from South Africa to Canada along with Elon as a teenager, eventually founding Zip2 with Elon and selling it for about ... ",
+                "title": "https://www.businessinsider.com/elon-musk-family-tree"
+              },
+              {
+                "kind": "navigation_not_evidence",
+                "navigation_seen": false,
+                "previously_received": false,
+                "raw_ranges_delivered": [],
+                "read_action": {
+                  "ref": "d7"
+                },
+                "ref": "d7",
+                "snippet": " ... Sid was also recognized as an Entrepreneurial Leader for South East USA by TechBridge in 2019.\n\nPrior, in 1994, Sid founded Software Paradigms International (SPI) and served as its CEO and Chairman. SPI provided technology solutions to 350+ retail businesses on five continents. Under Sid's leadership, SPI ... ",
+                "title": "https://www.ventureatlanta.org/event-overview/"
+              },
+              {
+                "kind": "navigation_not_evidence",
+                "navigation_seen": false,
+                "previously_received": false,
+                "raw_ranges_delivered": [],
+                "read_action": {
+                  "ref": "d8"
+                },
+                "ref": "d8",
+                "snippet": " ... 2006)\n\n- Jan 12 Vic Toweel, South African boxer (undisputed world bantamweight champion), born in Benoni, South Africa (d. 2008)\n\n- Jan 13 David Sheiner, American character actor (They Call Me Mister Tibbs!; THe Odd Couple (film); Diana - \"Norman\"), born in New York City\n\n- Jan 13 Gregory Walcott, American actor ... ",
+                "title": "https://www.onthisday.com/birthdays/date/1928"
+              },
+              {
+                "kind": "navigation_not_evidence",
+                "navigation_seen": false,
+                "previously_received": false,
+                "raw_ranges_delivered": [],
+                "read_action": {
+                  "ref": "d9"
+                },
+                "ref": "d9",
+                "snippet": " ... South African podcast Wide Awake, Errol Musk said that the tech mogul's first kid with Wilson died due to Sudden Infant Death Syndrome (SIDS) and that his father did not spend much time with him and he was mostly under the care of nannies. \"The first child ... ",
+                "title": "https://www.hindustantimes.com/world-news/us-news/elon-musks-dad-makes-cruel-claims-about-tesla-ceos-first-son-nevada-alexanders-tragic-death-hes-gonna-shoot-me-101739553927980.html"
+              },
+              {
+                "kind": "navigation_not_evidence",
+                "navigation_seen": false,
+                "previously_received": false,
+                "raw_ranges_delivered": [],
+                "read_action": {
+                  "ref": "d10"
+                },
+                "ref": "d10",
+                "snippet": " ... It has raised over $40 million for the hospital since its founding.\n\nOn April 25, 2017, the guild association celebrates its 30th anniversary.\n\n-\n\n1990 to 1993: Birth of a Practice Plan\n\nBirth of a Practice Plan\n\nPhysicians present the greatest challenge to CEO Treuman Katz. In the mid ... ",
+                "title": "https://www.seattlechildrens.org/about/history/"
+              }
+            ],
+            "next_step": "Inspect navigation; read a relevant page or change the locating clue.",
+            "observation": {
+              "first_delivered_source_round": null,
+              "prior_deliveries": 0,
+              "query_key": "6bc8c0a4d0c125f9d7a4f79d0b8aff7331c78d1e93e4d7efba6fcd1b1e1b3028",
+              "replay_requested": false,
+              "result_fingerprint": "36786b589139dafe01badb26c674af709bb6354a8548098b331fff3857a23cb8",
+              "semantic_progress": "not_measured"
+            },
+            "query": "CEO founded company 1990s raised South Africa first child SIDS",
+            "view": "full"
+          },
+          {
+            "cached": false,
+            "hits": [
+              {
+                "kind": "navigation_not_evidence",
+                "navigation_seen": false,
+                "previously_received": false,
+                "raw_ranges_delivered": [],
+                "read_action": {
+                  "ref": "d11"
+                },
+                "ref": "d11",
+                "snippet": " ... to Georgia's vibrant film industry.\"\n\nTosca Musk, 47, grew up in South Africa. She and her mother, Maye Musk, eventually followed Tosca's older brothers to Canada. Elon Musk is founder and CEO of SpaceX, and he is a founder and CEO of Tesla Inc.\n\nAs Tosca ... ",
+                "title": "https://saportareport.com/filmmaker-tosca-musk-moves-her-base-to-georgia/sections/reports/maria_saporta/"
+              },
+              {
+                "kind": "navigation_not_evidence",
+                "navigation_seen": false,
+                "previously_received": false,
+                "raw_ranges_delivered": [],
+                "read_action": {
+                  "ref": "d2"
+                },
+                "ref": "d2",
+                "snippet": " ... Tosca is the co-founder of a streaming service and production company\n\nTosca is the co-founder and CEO of Passionflix, a streaming service and production company that adapts romance novels into films.\n\nSpeaking with CNN in November 2022, Tosca said she and her co-founder Joany Kane ... ",
+                "title": "https://people.com/all-about-elon-musk-siblings-kimbal-tosca-musk-7643832"
+              },
+              {
+                "kind": "navigation_not_evidence",
+                "navigation_seen": false,
+                "previously_received": false,
+                "raw_ranges_delivered": [],
+                "read_action": {
+                  "ref": "d12"
+                },
+                "ref": "d12",
+                "snippet": " ... Meet Elon Musk's sister, Tosca Musk, the founder of a Netflix-like streaming service for romance\nauthor: Paige Leskin\ndate: 2022-06-06\n---\n- Elon Musk has two siblings named Kimbal and Tosca who have each founded their own companies.\n\n- Tosca Musk is the cofounder and CEO of ... ",
+                "title": "https://www.businessinsider.com/elon-musk-sister-tosca-passionflix-streaming-service-romance-books-movies-2019-7"
+              },
+              {
+                "kind": "navigation_not_evidence",
+                "navigation_seen": false,
+                "previously_received": false,
+                "raw_ranges_delivered": [],
+                "read_action": {
+                  "ref": "d3"
+                },
+                "ref": "d3",
+                "snippet": " ... There's a lot more to Tosca than just being Elon's younger sister. This is her untold truth.\n\nTosca Musk was born and raised in South Africa\n\nElon, Kimbal, and Tosca Musk were born in South Africa and spent their early childhood years there. Growing up, Tosca ... ",
+                "title": "https://www.nickiswift.com/870938/the-untold-truth-of-tosca-musk-elons-younger-sister/"
+              },
+              {
+                "kind": "navigation_not_evidence",
+                "navigation_seen": false,
+                "previously_received": false,
+                "raw_ranges_delivered": [],
+                "read_action": {
+                  "ref": "d13"
+                },
+                "ref": "d13",
+                "snippet": " ... He is currently writing a memoir about his journey to the US and co-producing as well as co-directing a documentary series about the lived experiences of African asylum-seekers in the US.\n\n8. Menzi Mcunu, 22, South Africa\n\nFounder: Afrocentric Gentlemvn\n\nMenzi Mcunu is one of ... ",
+                "title": "https://www.forbesafrica.com/under-30/2019/07/01/30under30-creatives-category-2019/"
+              }
+            ],
+            "next_step": "Inspect navigation; read a relevant page or change the locating clue.",
+            "observation": {
+              "first_delivered_source_round": null,
+              "prior_deliveries": 0,
+              "query_key": "707255074a0f732d937ddfcfa00c18d694549fa8837b8215325f37cbb8521ba4",
+              "replay_requested": false,
+              "result_fingerprint": "57e7f520b29a723b8f763a5192b995f8b0d605342a91ff83126882a6da286f2d",
+              "semantic_progress": "not_measured"
+            },
+            "query": "younger sister film streaming service co-founder CEO South Africa",
+            "view": "full"
+          }
+        ],
+        "search_raw": {
+          "attempt_limit": 6,
+          "attempts_used": 1,
+          "document": "d1",
+          "selection": {
+            "block_truncated": false,
+            "end": 36861,
+            "instruction": "Check the subject and adjoining context; lexical overlap does not establish the requested relation.",
+            "matched": true,
+            "matched_terms": [
+              "co",
+              "founded",
+              "film",
+              "ceo"
+            ],
+            "method": "paragraph-lexical-v1",
+            "score": 13.117192,
+            "selected_block": [
+              34307,
+              35530
+            ],
+            "selection_is_semantic_support": false,
+            "start": 33861
+          },
+          "status": "success",
+          "version": "search-raw-window-v1"
+        }
+      },
+      "round": 1,
+      "tool": "search",
+      "tool_call_id": "call_ebe6773783374e9c9389a717",
+      "seq": 37,
+      "utc": "2026-09-15T16:08:58.629789+00:00",
+      "next_request": 2,
+      "next_input_receipt": true,
+      "action_commit": "NOT_A_SEPARATE_STRIDE_EVENT; action_result and round_end are recorded",
+      "receipt_not_required_after_terminal": false
+    },
+    {
+      "arguments": "{\"queries\": [\"woman claimed Elon Musk daughter relative mother age gave birth\", \"lady claimed related Elon Musk secret daughter mother age\", \"claimed Elon Musk child relative mother gave birth age article\"]}",
+      "executed": true,
+      "result": {
+        "action_slot_charged": true,
+        "executed": true,
+        "ok": true,
+        "raw_windows": [
+          {
+            "evidence": {
+              "document": "d14",
+              "document_chars": 4374,
+              "end": 3000,
+              "kind": "raw_evidence",
+              "ref": "e2",
+              "sha256": "bc0d510dbd6cde0530cf08684de455d82ec1943c0ba50cab130ae01990cc24b8",
+              "snapshot": "d7b7a23b3eb780d78018e5fe30d91613c9769a1cff7564bb0a79c08614acb838",
+              "start": 0,
+              "text": "---\ntitle: RECOMMENDED\nauthor: Bernie Zilio\ndate: 2025-01-01\n---\nElon Musk Attempts To Go Incognito In First Sighting Since Alleged Half-Sister Claimed Dad Errol Refuses To Take DNA Test\n\nSept. 17 2021, Published 2:29 p.m. ET\n\nElon Musk is going about his merry, billionaire way despite all the recent drama plaguing his family.\n\nSpotted in New York City with his baby mama, Grimes, the second richest person in the world actually looked like he might've been going the extra mile to not be seen or recognized after a woman claiming to be his half-sister came forward last week and insisted that her late mother was Errol Musk's mistress in the 1970s.\n\nIn addition to sporting a black baseball cap that darn near covered his eyes, the 50-year-old technology tycoon also had a black bandana shielding the majority of his face and all of his neck.\n\nHe paired his tight-fitting navy blue SpaceX T-shirt with black denim jeans.\n\nThe aerospace company's CEO was likely preoccupied with what we now know was a successful launch of SpaceX's historic all-civilian shuttle into space on Wednesday night, but it's possible he was also giving thought to everything his newly revealed alleged half-sibling had to say.\n\nThe South African woman, 46-year-old Riette Nel (formerly van Deventer), claims that her mom, Riana van Deventer, confessed to Riana's son/Riette's half-brother, Gerrit van Deventer, on her deathbed in October of 2019 that Elon's father, 75-year-old Errol Musk, was Riette's father, too.\n\nRiette said Gerrit told her earlier this year and that she eventually got in contact with Errol, who she claims showed initial interest in taking a DNA test but has since backed out and left her hanging.\n\n\"I don't want anything from Errol or Elon, I just want to know what my roots are,\" Riette said in the shocking interview. \"I have told Errol you are welcome to have your attorneys draw up a contract which says I am not entitled to any kind of remuneration. The only thing I am interested in is to know if you're my dad.\"\n\nAccording to her birth certificate, Riette was born Mariette van Deventer in Ladysmith in eastern South Africa on August 8, 1975. Her mother was 21 when she gave birth, and there is no father named in the paperwork.\n\nRiette said her mom told her that she had gotten pregnant with her during a tryst at the Union Buildings (South Africa's Parliament).\n\n\"All she told me was that the guy had a lot of money, he had a Rolls Royce and a yacht,\" she explained. \"I believe that man was Errol because everything just fits. He was the guy with the money. He was the arrogant guy, self-entitled, self-assured. And he didn't treat women the way he was supposed to.\"\n\nAs for Gerrit, he said his mother \"was sure that Elon Musk was Riette's brother. She didn't tell me it as an absolute fact, but she had that confidence in her voice that made me believe her immediately.\"\n\nRiette added, \"Why would my mother lie to my brother? She knew she was dying, she had nothing to lose and nothing t"
+            },
+            "kind": "harness_acquired_raw_window",
+            "previously_received": false,
+            "selection": {
+              "block_truncated": false,
+              "end": 3000,
+              "instruction": "Check the subject and adjoining context; lexical overlap does not establish the requested relation.",
+              "matched": true,
+              "matched_terms": [
+                "woman",
+                "elon",
+                "musk",
+                "mother"
+              ],
+              "method": "paragraph-lexical-v1",
+              "score": 5.620401,
+              "selected_block": [
+                188,
+                653
+              ],
+              "selection_is_semantic_support": false,
+              "start": 0
+            },
+            "source_document": "d14",
+            "source_query_index": 0
+          }
+        ],
+        "results": [
+          {
+            "cached": false,
+            "hits": [
+              {
+                "kind": "navigation_not_evidence",
+                "navigation_seen": false,
+                "previously_received": false,
+                "raw_ranges_delivered": [],
+                "read_action": {
+                  "ref": "d14"
+                },
+                "ref": "d14",
+                "snippet": " ... The South African woman, 46-year-old Riette Nel (formerly van Deventer), claims that her mom, Riana van Deventer, confessed to Riana's son/Riette's half-brother, Gerrit van Deventer, on her deathbed in October of 2019 that Elon's father, 75-year-old Errol Musk, was ... ",
+                "title": "https://radaronline.com/p/elon-musk-first-photos-sighting-half-sister-dad-dna-test/"
+              },
+              {
+                "kind": "navigation_not_evidence",
+                "navigation_seen": false,
+                "previously_received": false,
+                "raw_ranges_delivered": [],
+                "read_action": {
+                  "ref": "d15"
+                },
+                "ref": "d15",
+                "snippet": " ... Within the next five years, I gave birth to twins, then triplets,\" she wrote.\n\nIn April 2022, one of Musk's twins petitioned the court to legally change her name to Vivian Jenna Wilson (the maiden name of her mother, Justine Wilson) and to recognize her gender as ... ",
+                "title": "https://people.com/all-about-elon-musk-children-11678749"
+              },
+              {
+                "kind": "navigation_not_evidence",
+                "navigation_seen": false,
+                "previously_received": false,
+                "raw_ranges_delivered": [],
+                "read_action": {
+                  "ref": "d16"
+                },
+                "ref": "d16",
+                "snippet": " ... already begun given the age she transitioned. Their effects are considered reversible once a patient stops taking them. Hormone treatment and later surgery does remove a trans woman's ability to reproduce.\n\nThe fact that Musk would say such things about his daughter shows how cruel of a ... ",
+                "title": "https://www.disconnect.blog/p/elon-musk-doesnt-care-about-kids-he-cares-about-demographics-2"
+              },
+              {
+                "kind": "navigation_not_evidence",
+                "navigation_seen": false,
+                "previously_received": false,
+                "raw_ranges_delivered": [],
+                "read_action": {
+                  "ref": "d17"
+                },
+                "ref": "d17",
+                "snippet": " ... In addition to Elon, Errol is dad to son Kimbal Musk and daughters Tosca, Alexandra and Asha Rose Musk. He has also fathered two children, a son and a daughter, with his stepdaughter Jana Bezuidenhout.\n\nThough Errol has made headlines in recent years after the births of his ... ",
+                "title": "https://people.com/human-interest/who-is-errol-musk-elon-musk-father/"
+              },
+              {
+                "kind": "navigation_not_evidence",
+                "navigation_seen": false,
+                "previously_received": false,
+                "raw_ranges_delivered": [],
+                "read_action": {
+                  "ref": "d18"
+                },
+                "ref": "d18",
+                "snippet": " ... visit to an IVF clinic less than two months later. Elon and I planned to get pregnant again as swiftly as possible. Within the next five years, I gave birth to twins, then triplets,\" she wrote.\n\nMusk and Wilson had twins, Vivian and Griffin, through IVF in 2004 ... ",
+                "title": "https://people.com/all-about-elon-musk-mothers-of-children-blended-family-8668121"
+              }
+            ],
+            "next_step": "Inspect navigation; read a relevant page or change the locating clue.",
+            "observation": {
+              "first_delivered_source_round": null,
+              "prior_deliveries": 0,
+              "query_key": "a3474537f72342e4dd4f639484fcffc287c4c50b9e25be9c97c95d8c80a629a0",
+              "replay_requested": false,
+              "result_fingerprint": "f987ac5f2765c175221339d1cbfb19796ccfa7149fc2889923cc6c53e2f26462",
+              "semantic_progress": "not_measured"
+            },
+            "query": "woman claimed Elon Musk daughter relative mother age gave birth",
+            "view": "full"
+          },
+          {
+            "cached": false,
+            "hits": [
+              {
+                "kind": "navigation_not_evidence",
+                "navigation_seen": false,
+                "previously_received": false,
+                "raw_ranges_delivered": [],
+                "read_action": {
+                  "ref": "d19"
+                },
+                "ref": "d19",
+                "snippet": " ... I felt his heartbeat.\"\n\nMusk's child Vivian, came out as transgender in 2022 and legally changed her name from Xavier Musk, including taking her mother's last name.\n\nIn court, Vivian said she \"no longer lives with or wishes to be related to my biological father in ... ",
+                "title": "https://nypost.com/2024/06/23/us-news/elon-musks-12-kids-and-counting-what-to-know-about-the-tesla-billionaires-big-brood/"
+              },
+              {
+                "kind": "navigation_not_evidence",
+                "navigation_seen": false,
+                "previously_received": false,
+                "raw_ranges_delivered": [],
+                "read_action": {
+                  "ref": "d20"
+                },
+                "ref": "d20",
+                "snippet": " ... 2022-07-14\n---\nWho is Errol Musk? What we know about Elon's dad\n\nMove over, Elon — there's another Musk hitting the headlines.\n\nErrol Musk, the family's patriarch, is in the news after confirming he fathered a second secret love child with his stepdaughter, Jana Bezuidenhout ... ",
+                "title": "https://nypost.com/2022/07/14/who-is-errol-musk-what-we-know-about-elons-dad/"
+              },
+              {
+                "kind": "navigation_not_evidence",
+                "navigation_seen": false,
+                "previously_received": false,
+                "raw_ranges_delivered": [],
+                "read_action": {
+                  "ref": "d21"
+                },
+                "ref": "d21",
+                "snippet": " ... very intelligent, mostly young people, headed up by Elon We appreciate it. We found hundreds of billions of dollars of fraud.\n\nFrom CNN's Casey Tolan: This figure, which is uncorroborated, needs context. Musk and other Trump allies have claimed DOGE's work is aimed at targeting waste ... ",
+                "title": "https://www.cnn.com/interactive/2025/03/politics/transcript-speech-trump-congress-annotated-dg/"
+              },
+              {
+                "kind": "navigation_not_evidence",
+                "navigation_seen": false,
+                "previously_received": false,
+                "raw_ranges_delivered": [],
+                "read_action": {
+                  "ref": "d16"
+                },
+                "ref": "d16",
+                "snippet": " ... Musk's oldest living children filed to change her name and gender, a request that included a desire to drop her father's surname in favor of her mother's. On the petition, his daughter Vivian explained, \"I no longer live with or wish to be related to ... ",
+                "title": "https://www.disconnect.blog/p/elon-musk-doesnt-care-about-kids-he-cares-about-demographics-2"
+              },
+              {
+                "kind": "navigation_not_evidence",
+                "navigation_seen": false,
+                "previously_received": false,
+                "raw_ranges_delivered": [],
+                "read_action": {
+                  "ref": "d15"
+                },
+                "ref": "d15",
+                "snippet": " ... Elon Musk's 14 Children: All About the Tesla CEO's Sons and Daughters (and the 4 Women He Shares Them With)\nauthor: Skyler Caruso\ndate: 2025-06-06\n---\nElon Musk has welcomed 14 children over 20 years.\n\nThe Tesla founder first became a father in 2002 when ... ",
+                "title": "https://people.com/all-about-elon-musk-children-11678749"
+              }
+            ],
+            "next_step": "Inspect navigation; read a relevant page or change the locating clue.",
+            "observation": {
+              "first_delivered_source_round": null,
+              "prior_deliveries": 0,
+              "query_key": "bf961f69e80501517c4120eab64fe8abbde46a06e3cbae63192addf74c3a6526",
+              "replay_requested": false,
+              "result_fingerprint": "8a0436fd996efd32285ba706bf25b42eca7f9f4abab9613ba457f3c8445f9aaf",
+              "semantic_progress": "not_measured"
+            },
+            "query": "lady claimed related Elon Musk secret daughter mother age",
+            "view": "full"
+          },
+          {
+            "cached": false,
+            "hits": [
+              {
+                "kind": "navigation_not_evidence",
+                "navigation_seen": false,
+                "previously_received": false,
+                "raw_ranges_delivered": [],
+                "read_action": {
+                  "ref": "d15"
+                },
+                "ref": "d15",
+                "snippet": " ... Clair told The New York Times that Musk told her that he had also fathered a child with a Japanese pop star, though this claim has not been confirmed.\n\nHere's everything to know about Elon Musk's 14 children: Nevada, Vivian, Griffin, Kai, Saxon, Damian, X Æ ... ",
+                "title": "https://people.com/all-about-elon-musk-children-11678749"
+              },
+              {
+                "kind": "navigation_not_evidence",
+                "navigation_seen": false,
+                "previously_received": false,
+                "raw_ranges_delivered": [],
+                "read_action": {
+                  "ref": "d22"
+                },
+                "ref": "d22",
+                "snippet": " ... Errol Musk\nmother: Maye Musk\nrelatives: Musk family\nawards: Full list\nmodule: Elon Musk on his departure from the Department of Government Efficiency.wav, press conference, Elon Musk on his departure from the Department of Government Efficiency, May 30, 2025\nsignature: Elon Musk Signature.svg\nparty: Independent\n\nElon ... ",
+                "title": "https://en.wikipedia.org/wiki/Elon_Musk"
+              },
+              {
+                "kind": "navigation_not_evidence",
+                "navigation_seen": false,
+                "previously_received": false,
+                "raw_ranges_delivered": [],
+                "read_action": {
+                  "ref": "d23"
+                },
+                "ref": "d23",
+                "snippet": " ... Musk later welcomed a third child with Zilis in early 2024.\n\nIn February 2025, author Ashley St. Clair revealed on X that she gave birth to Musk's 13th child. However, she did not disclose any additional details about their baby together, and the tech entrepreneur has not ... ",
+                "title": "https://people.com/elon-musk-complete-dating-history-7502497"
+              },
+              {
+                "kind": "navigation_not_evidence",
+                "navigation_seen": false,
+                "previously_received": false,
+                "raw_ranges_delivered": [],
+                "read_action": {
+                  "ref": "d24"
+                },
+                "ref": "d24",
+                "snippet": " ... Elon Musk has yet to confirm or deny the claim.\n\nIn a recent interview with the Daily Mail, Errol Musk, father of Tesla CEO Elon Musk, expressed his skepticism regarding a woman's claim that she is the mother of Elon's child. The woman in question, right ... ",
+                "title": "https://timesofindia.indiatimes.com/technology/tech-news/elon-musks-father-on-woman-claiming-to-be-mother-of-tesla-ceos-child-i-would-find-it-strange-if-a-woman-/articleshow/118835846.cms"
+              },
+              {
+                "kind": "navigation_not_evidence",
+                "navigation_seen": false,
+                "previously_received": false,
+                "raw_ranges_delivered": [],
+                "read_action": {
+                  "ref": "d17"
+                },
+                "ref": "d17",
+                "snippet": " ... In addition to Elon, Errol is dad to son Kimbal Musk and daughters Tosca, Alexandra and Asha Rose Musk. He has also fathered two children, a son and a daughter, with his stepdaughter Jana Bezuidenhout.\n\nThough Errol has made headlines in recent years after the births of his ... ",
+                "title": "https://people.com/human-interest/who-is-errol-musk-elon-musk-father/"
+              }
+            ],
+            "next_step": "Inspect navigation; read a relevant page or change the locating clue.",
+            "observation": {
+              "first_delivered_source_round": null,
+              "prior_deliveries": 0,
+              "query_key": "6aeb94f22831d648382e5cdcbfdc6b70e55d3845be8e03a0d1222f27d0c6ead9",
+              "replay_requested": false,
+              "result_fingerprint": "b654d672d4d58a10b8ee309fe1d6bd9f78cd1bf8caa1b82c09ae690af6f07230",
+              "semantic_progress": "not_measured"
+            },
+            "query": "claimed Elon Musk child relative mother gave birth age article",
+            "view": "full"
+          }
+        ],
+        "search_raw": {
+          "attempt_limit": 6,
+          "attempts_used": 2,
+          "document": "d14",
+          "selection": {
+            "block_truncated": false,
+            "end": 3000,
+            "instruction": "Check the subject and adjoining context; lexical overlap does not establish the requested relation.",
+            "matched": true,
+            "matched_terms": [
+              "woman",
+              "elon",
+              "musk",
+              "mother"
+            ],
+            "method": "paragraph-lexical-v1",
+            "score": 5.620401,
+            "selected_block": [
+              188,
+              653
+            ],
+            "selection_is_semantic_support": false,
+            "start": 0
+          },
+          "status": "success",
+          "version": "search-raw-window-v1"
+        }
+      },
+      "round": 2,
+      "tool": "search",
+      "tool_call_id": "call_e16c5d25128f4edaba9b82d4",
+      "seq": 72,
+      "utc": "2026-09-15T16:09:04.345392+00:00",
+      "next_request": 3,
+      "next_input_receipt": true,
+      "action_commit": "NOT_A_SEPARATE_STRIDE_EVENT; action_result and round_end are recorded",
+      "receipt_not_required_after_terminal": false
+    },
+    {
+      "arguments": "{\"ref\": \"d14\", \"start\": 1800, \"length\": 900}",
+      "executed": true,
+      "result": {
+        "action_slot_charged": true,
+        "evidence": {
+          "document": "d14",
+          "document_chars": 4374,
+          "end": 2700,
+          "kind": "raw_evidence",
+          "ref": "e3",
+          "sha256": "63f4b03548f6620e11fc0fb6c3e6eefd89c242a46dac7023be9a83ebb6bcb70c",
+          "snapshot": "d7b7a23b3eb780d78018e5fe30d91613c9769a1cff7564bb0a79c08614acb838",
+          "start": 1800,
+          "text": "he shocking interview. \"I have told Errol you are welcome to have your attorneys draw up a contract which says I am not entitled to any kind of remuneration. The only thing I am interested in is to know if you're my dad.\"\n\nAccording to her birth certificate, Riette was born Mariette van Deventer in Ladysmith in eastern South Africa on August 8, 1975. Her mother was 21 when she gave birth, and there is no father named in the paperwork.\n\nRiette said her mom told her that she had gotten pregnant with her during a tryst at the Union Buildings (South Africa's Parliament).\n\n\"All she told me was that the guy had a lot of money, he had a Rolls Royce and a yacht,\" she explained. \"I believe that man was Errol because everything just fits. He was the guy with the money. He was the arrogant guy, self-entitled, self-assured. And he didn't treat women the way he was supposed to.\"\n\nAs for Gerrit, he sa"
+        },
+        "executed": true,
+        "next_start": 2700,
+        "ok": true,
+        "previously_received": false
+      },
+      "round": 3,
+      "tool": "read",
+      "tool_call_id": "call_2ae9aa9ec26946848c30cc4f",
+      "seq": 81,
+      "utc": "2026-09-15T16:09:09.163763+00:00",
+      "next_request": 4,
+      "next_input_receipt": true,
+      "action_commit": "NOT_A_SEPARATE_STRIDE_EVENT; action_result and round_end are recorded",
+      "receipt_not_required_after_terminal": false
+    },
+    {
+      "arguments": "{\"answer\": 21, \"refs\": [\"e2\", \"e3\"]}",
+      "executed": true,
+      "result": {
+        "action_slot_charged": true,
+        "executed": true,
+        "ok": true,
+        "terminal": {
+          "answer": "21",
+          "answer_representation": {
+            "input_type": "integer",
+            "input_value": 21,
+            "operation": "decimal",
+            "rule": "string-integer-v1"
+          },
+          "basis": [
+            {
+              "document": "d14",
+              "document_chars": 4374,
+              "end": 3000,
+              "kind": "raw_evidence",
+              "ref": "e2",
+              "sha256": "bc0d510dbd6cde0530cf08684de455d82ec1943c0ba50cab130ae01990cc24b8",
+              "snapshot": "d7b7a23b3eb780d78018e5fe30d91613c9769a1cff7564bb0a79c08614acb838",
+              "start": 0
+            },
+            {
+              "document": "d14",
+              "document_chars": 4374,
+              "end": 2700,
+              "kind": "raw_evidence",
+              "ref": "e3",
+              "sha256": "63f4b03548f6620e11fc0fb6c3e6eefd89c242a46dac7023be9a83ebb6bcb70c",
+              "snapshot": "d7b7a23b3eb780d78018e5fe30d91613c9769a1cff7564bb0a79c08614acb838",
+              "start": 1800
+            }
+          ],
+          "elapsed_seconds": 21.469716199993854,
+          "outcome": "submitted",
+          "refs": [
+            "e2",
+            "e3"
+          ],
+          "semantic_status": "not_automatically_verified"
+        }
+      },
+      "round": 4,
+      "tool": "finish",
+      "tool_call_id": "call_91ddd17c65e743b7829ab007",
+      "seq": 88,
+      "utc": "2026-09-15T16:09:12.639688+00:00",
+      "next_request": null,
+      "next_input_receipt": false,
+      "action_commit": "NOT_A_SEPARATE_STRIDE_EVENT; action_result and round_end are recorded",
+      "receipt_not_required_after_terminal": true
+    }
+  ],
+  "queries": [
+    {
+      "cache_key": "cb7dfed267a90d45b68fdcecb09fe06a3caac03921702d0a7606ae6a123ea42e",
+      "cached": false,
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"sister\" OR \"co\" OR \"founded\" OR \"film\" OR \"streaming\" OR \"service\" OR \"ceo\" OR \"raised\" OR \"southern\" OR \"africa\"",
+        "terms": [
+          "sister",
+          "co",
+          "founded",
+          "film",
+          "streaming",
+          "service",
+          "ceo",
+          "raised",
+          "southern",
+          "africa"
+        ]
+      },
+      "equivalence_key": "99ba095ca8535b23c30dce704cd7cf15d009407ec51f4cf061652646d4c71890",
+      "query": "sister co-founded film streaming service CEO raised Southern Africa",
+      "round": 1,
+      "top_k": 5,
+      "seq": 6,
+      "utc": "2026-09-15T16:08:55.565079+00:00",
+      "terms": [
+        "sister",
+        "co",
+        "founded",
+        "film",
+        "streaming",
+        "service",
+        "ceo",
+        "raised",
+        "southern",
+        "africa"
+      ],
+      "expression": "\"sister\" OR \"co\" OR \"founded\" OR \"film\" OR \"streaming\" OR \"service\" OR \"ceo\" OR \"raised\" OR \"southern\" OR \"africa\"",
+      "result_docs": [
+        {
+          "docid": "55040",
+          "score": 21.64065240092639,
+          "snippet": " ... In 1972, he co-founded and served as the first president of Big Brothers of Greater Fort Wayne and later served as president of the national board of Big Brothers Big Sisters of America from 1977-1980.\n\nIn addition, he founded Study Connection in 1989 in partnership with ... ",
+          "title": "https://www.bbbs.org/alumni-hall-of-fame/"
+        },
+        {
+          "docid": "42179",
+          "score": 21.459335310288047,
+          "snippet": " ... Tosca is the co-founder of a streaming service and production company\n\nTosca is the co-founder and CEO of Passionflix, a streaming service and production company that adapts romance novels into films.\n\nSpeaking with CNN in November 2022, Tosca said she and her co-founder Joany Kane ... ",
+          "title": "https://people.com/all-about-elon-musk-siblings-kimbal-tosca-musk-7643832"
+        },
+        {
+          "docid": "54887",
+          "score": 21.28265330440253,
+          "snippet": " ... She co-founded Passionflix, a streaming platform that hosts movie adaptions of romance novels. The fan-focused service is home to many movies directed by Musk herself.\n\nThe entrepreneur is making waves as a woman in the male-dominated movie industry. However, Tosca's own brother, Kimbal Musk ... ",
+          "title": "https://www.nickiswift.com/870938/the-untold-truth-of-tosca-musk-elons-younger-sister/"
+        },
+        {
+          "docid": "52441",
+          "score": 20.97642244974355,
+          "snippet": " ... Raphael Holloway\n\nCEO\n\nGateway Center\n\nRaphael Holloway is CEO of the Gateway Center, which provides services and stable housing for people experiencing homelessness. Holloway has more than 25 years of experience in the social services arena, specializing in the behavioral health, correction, homelessness, and public health sectors. Before ... ",
+          "title": "https://www.atlantamagazine.com/news-culture-articles/2022-atlanta-500-religion-nonprofits-advocacy/"
+        },
+        {
+          "docid": "51485",
+          "score": 20.684467689587112,
+          "snippet": " ... He founded Legazy in 2016. The company takes South Africa's brewing startup talent and exposes these talents to the world at the most recognized tech exhibitions to the world's most powerful tech communities.\n\nSOCIAL ENTREPRISE & PHILANTHROPY\n\nAmonge Sinxoto [Co-Founder, Blackboard Africa]: 18-year-old youth ... ",
+          "title": "https://avancemedia.org/2019miysa/"
+        }
+      ],
+      "returned_dN": [
+        "d1",
+        "d2",
+        "d3",
+        "d4",
+        "d5"
+      ],
+      "returned_docids": [
+        "55040",
+        "42179",
+        "54887",
+        "52441",
+        "51485"
+      ]
+    },
+    {
+      "cache_key": "6bc8c0a4d0c125f9d7a4f79d0b8aff7331c78d1e93e4d7efba6fcd1b1e1b3028",
+      "cached": false,
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"ceo\" OR \"founded\" OR \"company\" OR \"1990s\" OR \"raised\" OR \"south\" OR \"africa\" OR \"first\" OR \"child\" OR \"sids\"",
+        "terms": [
+          "ceo",
+          "founded",
+          "company",
+          "1990s",
+          "raised",
+          "south",
+          "africa",
+          "first",
+          "child",
+          "sids"
+        ]
+      },
+      "equivalence_key": "aa8cdf7511e00bf4340a4ff79314e91f1c7a57736883e6edc51a942daf692184",
+      "query": "CEO founded company 1990s raised South Africa first child SIDS",
+      "round": 1,
+      "top_k": 5,
+      "seq": 14,
+      "utc": "2026-09-15T16:08:56.686226+00:00",
+      "terms": [
+        "ceo",
+        "founded",
+        "company",
+        "1990s",
+        "raised",
+        "south",
+        "africa",
+        "first",
+        "child",
+        "sids"
+      ],
+      "expression": "\"ceo\" OR \"founded\" OR \"company\" OR \"1990s\" OR \"raised\" OR \"south\" OR \"africa\" OR \"first\" OR \"child\" OR \"sids\"",
+      "result_docs": [
+        {
+          "docid": "68457",
+          "score": 22.454929815983682,
+          "snippet": " ... Kimbal is the cofounder of three food-related companies: The Kitchen Restaurant Group, a nonprofit called Big Green, and Square Roots, an urban farming company.\n\nKimbal moved from South Africa to Canada along with Elon as a teenager, eventually founding Zip2 with Elon and selling it for about ... ",
+          "title": "https://www.businessinsider.com/elon-musk-family-tree"
+        },
+        {
+          "docid": "46556",
+          "score": 22.319852381784777,
+          "snippet": " ... Sid was also recognized as an Entrepreneurial Leader for South East USA by TechBridge in 2019.\n\nPrior, in 1994, Sid founded Software Paradigms International (SPI) and served as its CEO and Chairman. SPI provided technology solutions to 350+ retail businesses on five continents. Under Sid's leadership, SPI ... ",
+          "title": "https://www.ventureatlanta.org/event-overview/"
+        },
+        {
+          "docid": "55442",
+          "score": 20.35643137798307,
+          "snippet": " ... 2006)\n\n- Jan 12 Vic Toweel, South African boxer (undisputed world bantamweight champion), born in Benoni, South Africa (d. 2008)\n\n- Jan 13 David Sheiner, American character actor (They Call Me Mister Tibbs!; THe Odd Couple (film); Diana - \"Norman\"), born in New York City\n\n- Jan 13 Gregory Walcott, American actor ... ",
+          "title": "https://www.onthisday.com/birthdays/date/1928"
+        },
+        {
+          "docid": "62573",
+          "score": 19.20279731153449,
+          "snippet": " ... South African podcast Wide Awake, Errol Musk said that the tech mogul's first kid with Wilson died due to Sudden Infant Death Syndrome (SIDS) and that his father did not spend much time with him and he was mostly under the care of nannies. \"The first child ... ",
+          "title": "https://www.hindustantimes.com/world-news/us-news/elon-musks-dad-makes-cruel-claims-about-tesla-ceos-first-son-nevada-alexanders-tragic-death-hes-gonna-shoot-me-101739553927980.html"
+        },
+        {
+          "docid": "27100",
+          "score": 19.11725473395767,
+          "snippet": " ... It has raised over $40 million for the hospital since its founding.\n\nOn April 25, 2017, the guild association celebrates its 30th anniversary.\n\n-\n\n1990 to 1993: Birth of a Practice Plan\n\nBirth of a Practice Plan\n\nPhysicians present the greatest challenge to CEO Treuman Katz. In the mid ... ",
+          "title": "https://www.seattlechildrens.org/about/history/"
+        }
+      ],
+      "returned_dN": [
+        "d6",
+        "d7",
+        "d8",
+        "d9",
+        "d10"
+      ],
+      "returned_docids": [
+        "68457",
+        "46556",
+        "55442",
+        "62573",
+        "27100"
+      ]
+    },
+    {
+      "cache_key": "707255074a0f732d937ddfcfa00c18d694549fa8837b8215325f37cbb8521ba4",
+      "cached": false,
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"younger\" OR \"sister\" OR \"film\" OR \"streaming\" OR \"service\" OR \"co\" OR \"founder\" OR \"ceo\" OR \"south\" OR \"africa\"",
+        "terms": [
+          "younger",
+          "sister",
+          "film",
+          "streaming",
+          "service",
+          "co",
+          "founder",
+          "ceo",
+          "south",
+          "africa"
+        ]
+      },
+      "equivalence_key": "1353e529fe362a86ff0113326756804112c79b0262c12f4b857a394e6469cc2e",
+      "query": "younger sister film streaming service co-founder CEO South Africa",
+      "round": 1,
+      "top_k": 5,
+      "seq": 22,
+      "utc": "2026-09-15T16:08:57.728258+00:00",
+      "terms": [
+        "younger",
+        "sister",
+        "film",
+        "streaming",
+        "service",
+        "co",
+        "founder",
+        "ceo",
+        "south",
+        "africa"
+      ],
+      "expression": "\"younger\" OR \"sister\" OR \"film\" OR \"streaming\" OR \"service\" OR \"co\" OR \"founder\" OR \"ceo\" OR \"south\" OR \"africa\"",
+      "result_docs": [
+        {
+          "docid": "85373",
+          "score": 28.64868719590278,
+          "snippet": " ... to Georgia's vibrant film industry.\"\n\nTosca Musk, 47, grew up in South Africa. She and her mother, Maye Musk, eventually followed Tosca's older brothers to Canada. Elon Musk is founder and CEO of SpaceX, and he is a founder and CEO of Tesla Inc.\n\nAs Tosca ... ",
+          "title": "https://saportareport.com/filmmaker-tosca-musk-moves-her-base-to-georgia/sections/reports/maria_saporta/"
+        },
+        {
+          "docid": "42179",
+          "score": 27.377969542985394,
+          "snippet": " ... Tosca is the co-founder of a streaming service and production company\n\nTosca is the co-founder and CEO of Passionflix, a streaming service and production company that adapts romance novels into films.\n\nSpeaking with CNN in November 2022, Tosca said she and her co-founder Joany Kane ... ",
+          "title": "https://people.com/all-about-elon-musk-siblings-kimbal-tosca-musk-7643832"
+        },
+        {
+          "docid": "25969",
+          "score": 25.402517278587105,
+          "snippet": " ... Meet Elon Musk's sister, Tosca Musk, the founder of a Netflix-like streaming service for romance\nauthor: Paige Leskin\ndate: 2022-06-06\n---\n- Elon Musk has two siblings named Kimbal and Tosca who have each founded their own companies.\n\n- Tosca Musk is the cofounder and CEO of ... ",
+          "title": "https://www.businessinsider.com/elon-musk-sister-tosca-passionflix-streaming-service-romance-books-movies-2019-7"
+        },
+        {
+          "docid": "54887",
+          "score": 24.757923623960203,
+          "snippet": " ... There's a lot more to Tosca than just being Elon's younger sister. This is her untold truth.\n\nTosca Musk was born and raised in South Africa\n\nElon, Kimbal, and Tosca Musk were born in South Africa and spent their early childhood years there. Growing up, Tosca ... ",
+          "title": "https://www.nickiswift.com/870938/the-untold-truth-of-tosca-musk-elons-younger-sister/"
+        },
+        {
+          "docid": "62561",
+          "score": 23.564200802080254,
+          "snippet": " ... He is currently writing a memoir about his journey to the US and co-producing as well as co-directing a documentary series about the lived experiences of African asylum-seekers in the US.\n\n8. Menzi Mcunu, 22, South Africa\n\nFounder: Afrocentric Gentlemvn\n\nMenzi Mcunu is one of ... ",
+          "title": "https://www.forbesafrica.com/under-30/2019/07/01/30under30-creatives-category-2019/"
+        }
+      ],
+      "returned_dN": [
+        "d11",
+        "d2",
+        "d12",
+        "d3",
+        "d13"
+      ],
+      "returned_docids": [
+        "85373",
+        "42179",
+        "25969",
+        "54887",
+        "62561"
+      ]
+    },
+    {
+      "cache_key": "a3474537f72342e4dd4f639484fcffc287c4c50b9e25be9c97c95d8c80a629a0",
+      "cached": false,
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"woman\" OR \"claimed\" OR \"elon\" OR \"musk\" OR \"daughter\" OR \"relative\" OR \"mother\" OR \"age\" OR \"gave\" OR \"birth\"",
+        "terms": [
+          "woman",
+          "claimed",
+          "elon",
+          "musk",
+          "daughter",
+          "relative",
+          "mother",
+          "age",
+          "gave",
+          "birth"
+        ]
+      },
+      "equivalence_key": "092daf2a94cd0d274ae65e651c6590e90b187b0dd248170c17fcbba320d29648",
+      "query": "woman claimed Elon Musk daughter relative mother age gave birth",
+      "round": 2,
+      "top_k": 5,
+      "seq": 43,
+      "utc": "2026-09-15T16:09:02.268104+00:00",
+      "terms": [
+        "woman",
+        "claimed",
+        "elon",
+        "musk",
+        "daughter",
+        "relative",
+        "mother",
+        "age",
+        "gave",
+        "birth"
+      ],
+      "expression": "\"woman\" OR \"claimed\" OR \"elon\" OR \"musk\" OR \"daughter\" OR \"relative\" OR \"mother\" OR \"age\" OR \"gave\" OR \"birth\"",
+      "result_docs": [
+        {
+          "docid": "29008",
+          "score": 35.28500723704495,
+          "snippet": " ... The South African woman, 46-year-old Riette Nel (formerly van Deventer), claims that her mom, Riana van Deventer, confessed to Riana's son/Riette's half-brother, Gerrit van Deventer, on her deathbed in October of 2019 that Elon's father, 75-year-old Errol Musk, was ... ",
+          "title": "https://radaronline.com/p/elon-musk-first-photos-sighting-half-sister-dad-dna-test/"
+        },
+        {
+          "docid": "21038",
+          "score": 35.01723371352159,
+          "snippet": " ... Within the next five years, I gave birth to twins, then triplets,\" she wrote.\n\nIn April 2022, one of Musk's twins petitioned the court to legally change her name to Vivian Jenna Wilson (the maiden name of her mother, Justine Wilson) and to recognize her gender as ... ",
+          "title": "https://people.com/all-about-elon-musk-children-11678749"
+        },
+        {
+          "docid": "47858",
+          "score": 34.664809732057606,
+          "snippet": " ... already begun given the age she transitioned. Their effects are considered reversible once a patient stops taking them. Hormone treatment and later surgery does remove a trans woman's ability to reproduce.\n\nThe fact that Musk would say such things about his daughter shows how cruel of a ... ",
+          "title": "https://www.disconnect.blog/p/elon-musk-doesnt-care-about-kids-he-cares-about-demographics-2"
+        },
+        {
+          "docid": "61176",
+          "score": 34.58650617959219,
+          "snippet": " ... In addition to Elon, Errol is dad to son Kimbal Musk and daughters Tosca, Alexandra and Asha Rose Musk. He has also fathered two children, a son and a daughter, with his stepdaughter Jana Bezuidenhout.\n\nThough Errol has made headlines in recent years after the births of his ... ",
+          "title": "https://people.com/human-interest/who-is-errol-musk-elon-musk-father/"
+        },
+        {
+          "docid": "66428",
+          "score": 32.46451267047343,
+          "snippet": " ... visit to an IVF clinic less than two months later. Elon and I planned to get pregnant again as swiftly as possible. Within the next five years, I gave birth to twins, then triplets,\" she wrote.\n\nMusk and Wilson had twins, Vivian and Griffin, through IVF in 2004 ... ",
+          "title": "https://people.com/all-about-elon-musk-mothers-of-children-blended-family-8668121"
+        }
+      ],
+      "returned_dN": [
+        "d14",
+        "d15",
+        "d16",
+        "d17",
+        "d18"
+      ],
+      "returned_docids": [
+        "29008",
+        "21038",
+        "47858",
+        "61176",
+        "66428"
+      ]
+    },
+    {
+      "cache_key": "bf961f69e80501517c4120eab64fe8abbde46a06e3cbae63192addf74c3a6526",
+      "cached": false,
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"lady\" OR \"claimed\" OR \"related\" OR \"elon\" OR \"musk\" OR \"secret\" OR \"daughter\" OR \"mother\" OR \"age\"",
+        "terms": [
+          "lady",
+          "claimed",
+          "related",
+          "elon",
+          "musk",
+          "secret",
+          "daughter",
+          "mother",
+          "age"
+        ]
+      },
+      "equivalence_key": "f03e4eb49c32a7f42663c821aedfb50b63f699a8154112c51cf12e44f67af552",
+      "query": "lady claimed related Elon Musk secret daughter mother age",
+      "round": 2,
+      "top_k": 5,
+      "seq": 51,
+      "utc": "2026-09-15T16:09:02.994982+00:00",
+      "terms": [
+        "lady",
+        "claimed",
+        "related",
+        "elon",
+        "musk",
+        "secret",
+        "daughter",
+        "mother",
+        "age"
+      ],
+      "expression": "\"lady\" OR \"claimed\" OR \"related\" OR \"elon\" OR \"musk\" OR \"secret\" OR \"daughter\" OR \"mother\" OR \"age\"",
+      "result_docs": [
+        {
+          "docid": "22160",
+          "score": 30.727944073523027,
+          "snippet": " ... I felt his heartbeat.\"\n\nMusk's child Vivian, came out as transgender in 2022 and legally changed her name from Xavier Musk, including taking her mother's last name.\n\nIn court, Vivian said she \"no longer lives with or wishes to be related to my biological father in ... ",
+          "title": "https://nypost.com/2024/06/23/us-news/elon-musks-12-kids-and-counting-what-to-know-about-the-tesla-billionaires-big-brood/"
+        },
+        {
+          "docid": "33771",
+          "score": 30.165743910456147,
+          "snippet": " ... 2022-07-14\n---\nWho is Errol Musk? What we know about Elon's dad\n\nMove over, Elon — there's another Musk hitting the headlines.\n\nErrol Musk, the family's patriarch, is in the news after confirming he fathered a second secret love child with his stepdaughter, Jana Bezuidenhout ... ",
+          "title": "https://nypost.com/2022/07/14/who-is-errol-musk-what-we-know-about-elons-dad/"
+        },
+        {
+          "docid": "59883",
+          "score": 29.009997100223384,
+          "snippet": " ... very intelligent, mostly young people, headed up by Elon We appreciate it. We found hundreds of billions of dollars of fraud.\n\nFrom CNN's Casey Tolan: This figure, which is uncorroborated, needs context. Musk and other Trump allies have claimed DOGE's work is aimed at targeting waste ... ",
+          "title": "https://www.cnn.com/interactive/2025/03/politics/transcript-speech-trump-congress-annotated-dg/"
+        },
+        {
+          "docid": "47858",
+          "score": 28.862001128295653,
+          "snippet": " ... Musk's oldest living children filed to change her name and gender, a request that included a desire to drop her father's surname in favor of her mother's. On the petition, his daughter Vivian explained, \"I no longer live with or wish to be related to ... ",
+          "title": "https://www.disconnect.blog/p/elon-musk-doesnt-care-about-kids-he-cares-about-demographics-2"
+        },
+        {
+          "docid": "21038",
+          "score": 28.59879982449625,
+          "snippet": " ... Elon Musk's 14 Children: All About the Tesla CEO's Sons and Daughters (and the 4 Women He Shares Them With)\nauthor: Skyler Caruso\ndate: 2025-06-06\n---\nElon Musk has welcomed 14 children over 20 years.\n\nThe Tesla founder first became a father in 2002 when ... ",
+          "title": "https://people.com/all-about-elon-musk-children-11678749"
+        }
+      ],
+      "returned_dN": [
+        "d19",
+        "d20",
+        "d21",
+        "d16",
+        "d15"
+      ],
+      "returned_docids": [
+        "22160",
+        "33771",
+        "59883",
+        "47858",
+        "21038"
+      ]
+    },
+    {
+      "cache_key": "6aeb94f22831d648382e5cdcbfdc6b70e55d3845be8e03a0d1222f27d0c6ead9",
+      "cached": false,
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"claimed\" OR \"elon\" OR \"musk\" OR \"child\" OR \"relative\" OR \"mother\" OR \"gave\" OR \"birth\" OR \"age\" OR \"article\"",
+        "terms": [
+          "claimed",
+          "elon",
+          "musk",
+          "child",
+          "relative",
+          "mother",
+          "gave",
+          "birth",
+          "age",
+          "article"
+        ]
+      },
+      "equivalence_key": "7d2dc26ca659fea66486e1f008df27254cecb9e059ab04ae826fc2e9a5e94d41",
+      "query": "claimed Elon Musk child relative mother gave birth age article",
+      "round": 2,
+      "top_k": 5,
+      "seq": 57,
+      "utc": "2026-09-15T16:09:03.605560+00:00",
+      "terms": [
+        "claimed",
+        "elon",
+        "musk",
+        "child",
+        "relative",
+        "mother",
+        "gave",
+        "birth",
+        "age",
+        "article"
+      ],
+      "expression": "\"claimed\" OR \"elon\" OR \"musk\" OR \"child\" OR \"relative\" OR \"mother\" OR \"gave\" OR \"birth\" OR \"age\" OR \"article\"",
+      "result_docs": [
+        {
+          "docid": "21038",
+          "score": 34.61571162444547,
+          "snippet": " ... Clair told The New York Times that Musk told her that he had also fathered a child with a Japanese pop star, though this claim has not been confirmed.\n\nHere's everything to know about Elon Musk's 14 children: Nevada, Vivian, Griffin, Kai, Saxon, Damian, X Æ ... ",
+          "title": "https://people.com/all-about-elon-musk-children-11678749"
+        },
+        {
+          "docid": "1031",
+          "score": 34.06143516993876,
+          "snippet": " ... Errol Musk\nmother: Maye Musk\nrelatives: Musk family\nawards: Full list\nmodule: Elon Musk on his departure from the Department of Government Efficiency.wav, press conference, Elon Musk on his departure from the Department of Government Efficiency, May 30, 2025\nsignature: Elon Musk Signature.svg\nparty: Independent\n\nElon ... ",
+          "title": "https://en.wikipedia.org/wiki/Elon_Musk"
+        },
+        {
+          "docid": "80337",
+          "score": 33.398033474001494,
+          "snippet": " ... Musk later welcomed a third child with Zilis in early 2024.\n\nIn February 2025, author Ashley St. Clair revealed on X that she gave birth to Musk's 13th child. However, she did not disclose any additional details about their baby together, and the tech entrepreneur has not ... ",
+          "title": "https://people.com/elon-musk-complete-dating-history-7502497"
+        },
+        {
+          "docid": "56025",
+          "score": 32.40103020272635,
+          "snippet": " ... Elon Musk has yet to confirm or deny the claim.\n\nIn a recent interview with the Daily Mail, Errol Musk, father of Tesla CEO Elon Musk, expressed his skepticism regarding a woman's claim that she is the mother of Elon's child. The woman in question, right ... ",
+          "title": "https://timesofindia.indiatimes.com/technology/tech-news/elon-musks-father-on-woman-claiming-to-be-mother-of-tesla-ceos-child-i-would-find-it-strange-if-a-woman-/articleshow/118835846.cms"
+        },
+        {
+          "docid": "61176",
+          "score": 31.564747235705592,
+          "snippet": " ... In addition to Elon, Errol is dad to son Kimbal Musk and daughters Tosca, Alexandra and Asha Rose Musk. He has also fathered two children, a son and a daughter, with his stepdaughter Jana Bezuidenhout.\n\nThough Errol has made headlines in recent years after the births of his ... ",
+          "title": "https://people.com/human-interest/who-is-errol-musk-elon-musk-father/"
+        }
+      ],
+      "returned_dN": [
+        "d15",
+        "d22",
+        "d23",
+        "d24",
+        "d17"
+      ],
+      "returned_docids": [
+        "21038",
+        "1031",
+        "80337",
+        "56025",
+        "61176"
+      ]
+    }
+  ],
+  "evidence": [
+    {
+      "ref": "e1",
+      "document": "d1",
+      "snapshot": "ff4a3823ecf0962d3364168b79b37eee5d5c2b90bf724dd30beb6d873eae2332",
+      "start": 33861,
+      "end": 36861,
+      "document_chars": 156072,
+      "text": "Flavoring her recipes with cherished family anecdotes, memories, and helpful tips, The Way Home is a perfect blend of the modern and the traditional. Kardea honors her proud heritage and shows off her own signature class and sass. The result is a marvelous, big-hearted collection of recipes and stories that will nourish you, body and soul. The Way Home became an instant New York Times Bestselling Cookbook, making it to number 6 on the list.\n\nMeredith O'Sullivan\n\nCo-Founder/Co-CEO, The Lede Company\n\nMeredith O'Sullivan is a Co-founder and Co-CEO of The Lede Company, a female-owned strategy, communications, integrated marketing and social impact consulting firm, specializing in corporate, entertainment, lifestyle, fashion, beauty, tech, consumer products, and nonprofit sectors founded in 2018. With dedicated Talent, Strategic Communications, Crisis, Brand, Content and Social Impact divisions, the firm works with a range of clients including Amy Schumer, Cara Delevigne, Charlize Theron, Emma Stone, Gael Garcia Bernal, Halle Berry, Halsey, Jennifer Garner, Jessica Biel, Lady Gaga, Mary J. Blige, Pharrell Williams, Penelope Cruz, Reese Witherspoon, Rihanna, Shakira, Will Ferrell, Will Smith, Anonymous Content, Candle Media, The Gotham Film & Media Institute, Hello Sunshine, Higher Ground, Illumination, Live Nation, Paramount, Westbrook, Nice Crowd (fka ABFF Ventures), content from Netflix, Hulu, Apple TV+, Freeform, as well as independent films and documentaries, ONE Campaign, The Global Fund, Thom Browne, Altuzarra, Kenzo, PANGAIA, Savage x Fenty, Tony's Chocolonely, Blue Bottle Coffee, Essence Ventures, Violet Grey and WhatsApp, among others.\n\nShelley Zalis\n\nCEO, Female Quotient\n\nKnown as the \"Chief Troublemaker,\" Shelley Zalis is a trailblazer for women in the workplace. She is an internationally renowned entrepreneur, a pioneer for online research, a sought-after speaker, a well-known thought leader, and a devoted mentor.\n\nAs founder and CEO of The Female Quotient, Zalis is in the business of equality™. Her mission is to change the equation and close the gender gap in the workplace. Together with Fortune 500 companies, impact organizations, and conscious leaders, The FQ curates experiences, media, and solutions that advance gender equality. The FQ has forever altered the business agenda through its signature Equality Lounges® advancing equality at the largest global business and industry conferences, including Davos, CES, SXSW, Cannes and more.\n\nPrior to The FQ, Zalis became the mother of online research when she founded OTX (Online Testing Exchange), which quickly grew into one of the world's largest research companies and earned Zalis distinction as the first female chief executive ranked in the research industry's top 25. She sold OTX to Ipsos in 2010, where she led global innovation in over 80 countries.\n\nWith a bold approach to leadership, business, and life, Zalis is an acclaimed speaker and dynamic moderator who has interviewed top-level CE",
+      "sha256": "a3fe0ca11fc2f2aad38884068a72aed3ac4a0d4a2fc64db1bb43732fae564e96",
+      "kind": "raw_evidence",
+      "created_utc": "2026-09-15T16:08:58.582378+00:00",
+      "backend_snapshot_utc": "2026-09-15T16:08:58.551218+00:00",
+      "first_request": 2,
+      "first_ack_round": 2,
+      "first_ack_utc": "2026-09-15T16:09:02.245305+00:00",
+      "visible_rounds": [
+        2,
+        3,
+        4
+      ],
+      "shelf_restored_rounds": [],
+      "final_cited": false
+    },
+    {
+      "ref": "e2",
+      "document": "d14",
+      "snapshot": "d7b7a23b3eb780d78018e5fe30d91613c9769a1cff7564bb0a79c08614acb838",
+      "start": 0,
+      "end": 3000,
+      "document_chars": 4374,
+      "text": "---\ntitle: RECOMMENDED\nauthor: Bernie Zilio\ndate: 2025-01-01\n---\nElon Musk Attempts To Go Incognito In First Sighting Since Alleged Half-Sister Claimed Dad Errol Refuses To Take DNA Test\n\nSept. 17 2021, Published 2:29 p.m. ET\n\nElon Musk is going about his merry, billionaire way despite all the recent drama plaguing his family.\n\nSpotted in New York City with his baby mama, Grimes, the second richest person in the world actually looked like he might've been going the extra mile to not be seen or recognized after a woman claiming to be his half-sister came forward last week and insisted that her late mother was Errol Musk's mistress in the 1970s.\n\nIn addition to sporting a black baseball cap that darn near covered his eyes, the 50-year-old technology tycoon also had a black bandana shielding the majority of his face and all of his neck.\n\nHe paired his tight-fitting navy blue SpaceX T-shirt with black denim jeans.\n\nThe aerospace company's CEO was likely preoccupied with what we now know was a successful launch of SpaceX's historic all-civilian shuttle into space on Wednesday night, but it's possible he was also giving thought to everything his newly revealed alleged half-sibling had to say.\n\nThe South African woman, 46-year-old Riette Nel (formerly van Deventer), claims that her mom, Riana van Deventer, confessed to Riana's son/Riette's half-brother, Gerrit van Deventer, on her deathbed in October of 2019 that Elon's father, 75-year-old Errol Musk, was Riette's father, too.\n\nRiette said Gerrit told her earlier this year and that she eventually got in contact with Errol, who she claims showed initial interest in taking a DNA test but has since backed out and left her hanging.\n\n\"I don't want anything from Errol or Elon, I just want to know what my roots are,\" Riette said in the shocking interview. \"I have told Errol you are welcome to have your attorneys draw up a contract which says I am not entitled to any kind of remuneration. The only thing I am interested in is to know if you're my dad.\"\n\nAccording to her birth certificate, Riette was born Mariette van Deventer in Ladysmith in eastern South Africa on August 8, 1975. Her mother was 21 when she gave birth, and there is no father named in the paperwork.\n\nRiette said her mom told her that she had gotten pregnant with her during a tryst at the Union Buildings (South Africa's Parliament).\n\n\"All she told me was that the guy had a lot of money, he had a Rolls Royce and a yacht,\" she explained. \"I believe that man was Errol because everything just fits. He was the guy with the money. He was the arrogant guy, self-entitled, self-assured. And he didn't treat women the way he was supposed to.\"\n\nAs for Gerrit, he said his mother \"was sure that Elon Musk was Riette's brother. She didn't tell me it as an absolute fact, but she had that confidence in her voice that made me believe her immediately.\"\n\nRiette added, \"Why would my mother lie to my brother? She knew she was dying, she had nothing to lose and nothing t",
+      "sha256": "bc0d510dbd6cde0530cf08684de455d82ec1943c0ba50cab130ae01990cc24b8",
+      "kind": "raw_evidence",
+      "created_utc": "2026-09-15T16:09:04.285031+00:00",
+      "backend_snapshot_utc": "2026-09-15T16:09:04.273385+00:00",
+      "first_request": 3,
+      "first_ack_round": 3,
+      "first_ack_utc": "2026-09-15T16:09:09.087486+00:00",
+      "visible_rounds": [
+        3,
+        4
+      ],
+      "shelf_restored_rounds": [],
+      "final_cited": true
+    },
+    {
+      "ref": "e3",
+      "document": "d14",
+      "snapshot": "d7b7a23b3eb780d78018e5fe30d91613c9769a1cff7564bb0a79c08614acb838",
+      "start": 1800,
+      "end": 2700,
+      "document_chars": 4374,
+      "text": "he shocking interview. \"I have told Errol you are welcome to have your attorneys draw up a contract which says I am not entitled to any kind of remuneration. The only thing I am interested in is to know if you're my dad.\"\n\nAccording to her birth certificate, Riette was born Mariette van Deventer in Ladysmith in eastern South Africa on August 8, 1975. Her mother was 21 when she gave birth, and there is no father named in the paperwork.\n\nRiette said her mom told her that she had gotten pregnant with her during a tryst at the Union Buildings (South Africa's Parliament).\n\n\"All she told me was that the guy had a lot of money, he had a Rolls Royce and a yacht,\" she explained. \"I believe that man was Errol because everything just fits. He was the guy with the money. He was the arrogant guy, self-entitled, self-assured. And he didn't treat women the way he was supposed to.\"\n\nAs for Gerrit, he sa",
+      "sha256": "63f4b03548f6620e11fc0fb6c3e6eefd89c242a46dac7023be9a83ebb6bcb70c",
+      "kind": "raw_evidence",
+      "created_utc": "2026-09-15T16:09:09.113861+00:00",
+      "backend_snapshot_utc": "2026-09-15T16:09:04.273385+00:00",
+      "first_request": 4,
+      "first_ack_round": 4,
+      "first_ack_utc": "2026-09-15T16:09:12.599541+00:00",
+      "visible_rounds": [
+        4
+      ],
+      "shelf_restored_rounds": [],
+      "final_cited": true
+    }
+  ],
+  "http": [
+    {
+      "sequence": 1,
+      "utc_start": "2026-09-15T16:08:51.272901+00:00",
+      "http_status": 200,
+      "requested_model": "EB-GLM-5.2",
+      "returned_model": "glm-5.2",
+      "finish_reason": "tool_calls",
+      "usage": {
+        "prompt_tokens": 4097,
+        "completion_tokens": 145,
+        "reasoning_tokens": 0,
+        "total_tokens": 4242,
+        "cached_tokens": 3456,
+        "prompt_tokens_details": {
+          "cached_tokens": 3456
+        },
+        "prompt_cost": 0.0,
+        "completion_cost": 0.0,
+        "cache_cost": 0.0
+      },
+      "input_tokens": 4097,
+      "output_tokens": 145,
+      "cache_read_tokens": 3456,
+      "cache_write_tokens": null,
+      "request_bytes": 17476,
+      "response_bytes": 1222,
+      "request_body_sha256": "0afc50186ed6002301d5ff4cefb66ef29a00da1e77ad0aa1983a64077579205d",
+      "sanitized_response": false,
+      "ledger_id": 1475,
+      "utc_end": "2026-09-15T16:08:55.489633+00:00",
+      "latency_seconds": 4.1990947000158485,
+      "response_representation": "original response body bytes",
+      "saved_response_body_sha256": "55b17dffc568d067d5d92f845656938098fd34445ce6c4181f3a0f33619b1ada"
+    },
+    {
+      "sequence": 2,
+      "utc_start": "2026-09-15T16:08:58.759047+00:00",
+      "http_status": 200,
+      "requested_model": "EB-GLM-5.2",
+      "returned_model": "glm-5.2",
+      "finish_reason": "tool_calls",
+      "usage": {
+        "prompt_tokens": 8677,
+        "completion_tokens": 184,
+        "reasoning_tokens": 0,
+        "total_tokens": 8861,
+        "cached_tokens": 3584,
+        "prompt_tokens_details": {
+          "cached_tokens": 3584
+        },
+        "prompt_cost": 0.0,
+        "completion_cost": 0.0,
+        "cache_cost": 0.0
+      },
+      "input_tokens": 8677,
+      "output_tokens": 184,
+      "cache_read_tokens": 3584,
+      "cache_write_tokens": null,
+      "request_bytes": 36306,
+      "response_bytes": 1369,
+      "request_body_sha256": "e4e9f3bf90f2ed52792c52d72ce3ce0577590560d40b382662727bc4719f3e9f",
+      "sanitized_response": false,
+      "ledger_id": 1476,
+      "utc_end": "2026-09-15T16:09:02.209969+00:00",
+      "latency_seconds": 3.4302781999867875,
+      "response_representation": "original response body bytes",
+      "saved_response_body_sha256": "86122c1f01d28ef541cf51c2d92d809b4f79e39051555ebe2813bf528e1253f3"
+    },
+    {
+      "sequence": 3,
+      "utc_start": "2026-09-15T16:09:04.482817+00:00",
+      "http_status": 200,
+      "requested_model": "EB-GLM-5.2",
+      "returned_model": "glm-5.2",
+      "finish_reason": "tool_calls",
+      "usage": {
+        "prompt_tokens": 12571,
+        "completion_tokens": 219,
+        "reasoning_tokens": 0,
+        "total_tokens": 12790,
+        "cached_tokens": 7424,
+        "prompt_tokens_details": {
+          "cached_tokens": 7424
+        },
+        "prompt_cost": 0.0,
+        "completion_cost": 0.0,
+        "cache_cost": 0.0
+      },
+      "input_tokens": 12571,
+      "output_tokens": 219,
+      "cache_read_tokens": 7424,
+      "cache_write_tokens": null,
+      "request_bytes": 52134,
+      "response_bytes": 1447,
+      "request_body_sha256": "fcc527fd3fb7abb5fa0783f72fb74b95df872d09f2d1c29bfb30e9d338b2cf46",
+      "sanitized_response": false,
+      "ledger_id": 1477,
+      "utc_end": "2026-09-15T16:09:09.050397+00:00",
+      "latency_seconds": 4.549405199999455,
+      "response_representation": "original response body bytes",
+      "saved_response_body_sha256": "28ec78b9299302db200fc760dedf36881d812b5deedcdd3db2967afc161ab42c"
+    },
+    {
+      "sequence": 4,
+      "utc_start": "2026-09-15T16:09:09.314716+00:00",
+      "http_status": 200,
+      "requested_model": "EB-GLM-5.2",
+      "returned_model": "glm-5.2",
+      "finish_reason": "tool_calls",
+      "usage": {
+        "prompt_tokens": 10705,
+        "completion_tokens": 32,
+        "reasoning_tokens": 0,
+        "total_tokens": 10737,
+        "cached_tokens": 1024,
+        "prompt_tokens_details": {
+          "cached_tokens": 1024
+        },
+        "prompt_cost": 0.0,
+        "completion_cost": 0.0,
+        "cache_cost": 0.0
+      },
+      "input_tokens": 10705,
+      "output_tokens": 32,
+      "cache_read_tokens": 1024,
+      "cache_write_tokens": null,
+      "request_bytes": 44352,
+      "response_bytes": 680,
+      "request_body_sha256": "9fa8fa815c6bfcb02c9bc4aacb3f9374a3d79b6599211241e63f02096f537d3c",
+      "sanitized_response": false,
+      "ledger_id": 1478,
+      "utc_end": "2026-09-15T16:09:12.554885+00:00",
+      "latency_seconds": 3.2189812999858987,
+      "response_representation": "original response body bytes",
+      "saved_response_body_sha256": "74d184eedabcd56029f47e4e8f904b9091aeb10a364bd9ad027ef8f2c43b4f77"
+    }
+  ]
+}

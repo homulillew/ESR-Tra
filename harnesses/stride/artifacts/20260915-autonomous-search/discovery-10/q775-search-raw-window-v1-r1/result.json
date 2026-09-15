@@ -1,0 +1,41 @@
+{
+  "terminal": {
+    "answer": "Gwangju",
+    "answer_representation": {
+      "input_type": "string",
+      "operation": "identity",
+      "rule": "string-integer-v1"
+    },
+    "basis": [
+      {
+        "document": "d23",
+        "document_chars": 5590,
+        "end": 3000,
+        "kind": "raw_evidence",
+        "ref": "e2",
+        "sha256": "2d508167d68898ab9a94c04692e5dd49383dedb168f97d4bee80fdb0b10e35ba",
+        "snapshot": "cf73f3198b61e06ea1409d0fa598f3ca5393950bb56774813f67f99bb8d90e1d",
+        "start": 0
+      },
+      {
+        "document": "d5",
+        "document_chars": 27249,
+        "end": 26993,
+        "kind": "raw_evidence",
+        "ref": "e3",
+        "sha256": "929b0e4b40f9a98330736c3b4fe3c125939ffa5b61388671abffeda41ec0fac6",
+        "snapshot": "25e42c9d9629a06063929aefe4e8f050cac2c095d797b7476410c1a6fe277c5a",
+        "start": 23993
+      }
+    ],
+    "elapsed_seconds": 81.73891200000071,
+    "outcome": "submitted",
+    "refs": [
+      "e2",
+      "e3"
+    ],
+    "semantic_status": "not_automatically_verified"
+  },
+  "formal_correct": null,
+  "http_attempts": 10
+}

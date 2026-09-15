@@ -1,0 +1,122 @@
+{
+  "protocol": "stride-search-3",
+  "head": "98bf0bf0ae2020f34e9264103faaa4953e410891841f540e6418ff5b3c6d0578",
+  "outcome": "submitted",
+  "formal_correct": null,
+  "model_attempts": 3,
+  "backend_attempts": 4,
+  "queries": [
+    {
+      "round": 1,
+      "top_k": 5,
+      "equivalence_key": "63f16d5e10d73d3ced67001adb208f4dd0600eab2a41138faeb85958c0a746d3",
+      "cached": false,
+      "query_sha256": "44e881dbb425100b7226a90001f22c2a1071a946a9bf84d1849afa1e57786179",
+      "query": "hat shop scarves initials surname siblings brand",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"hat\" OR \"shop\" OR \"scarves\" OR \"initials\" OR \"surname\" OR \"siblings\" OR \"brand\"",
+        "terms": [
+          "hat",
+          "shop",
+          "scarves",
+          "initials",
+          "surname",
+          "siblings",
+          "brand"
+        ]
+      }
+    },
+    {
+      "round": 1,
+      "top_k": 5,
+      "equivalence_key": "0f16fb0af033eb71ad4cea970faad6ab0e5d148af6aca86c221877c47bc3e48e",
+      "cached": false,
+      "query_sha256": "38331ea4c62cee32e70fa696d724fa66dc7dd4cc8cb4e53b1dc42d59d3178517",
+      "query": "hat shop 1930s scarves branches 1970s new brand child 1980s",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"hat\" OR \"shop\" OR \"1930s\" OR \"scarves\" OR \"branches\" OR \"1970s\" OR \"new\" OR \"brand\" OR \"child\" OR \"1980s\"",
+        "terms": [
+          "hat",
+          "shop",
+          "1930s",
+          "scarves",
+          "branches",
+          "1970s",
+          "new",
+          "brand",
+          "child",
+          "1980s"
+        ]
+      }
+    },
+    {
+      "round": 1,
+      "top_k": 5,
+      "equivalence_key": "926d821bc27e01342d58b2968b581c2dd36097c1f8fc5dab657f429740f33d9a",
+      "cached": false,
+      "query_sha256": "49d9540e1e6f7d67064249c4fdb720b1d56c483f84635e001df68ba0639af196",
+      "query": "wooden house tower 1340s city hat shop owner railway father",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"wooden\" OR \"house\" OR \"tower\" OR \"1340s\" OR \"city\" OR \"hat\" OR \"shop\" OR \"owner\" OR \"railway\" OR \"father\"",
+        "terms": [
+          "wooden",
+          "house",
+          "tower",
+          "1340s",
+          "city",
+          "hat",
+          "shop",
+          "owner",
+          "railway",
+          "father"
+        ]
+      }
+    }
+  ],
+  "equivalent_query_repeats": 0,
+  "views": [
+    {
+      "round": 1,
+      "compacted": false,
+      "visible_evidence": [],
+      "shelf": [],
+      "shelf_evicted": []
+    },
+    {
+      "round": 2,
+      "compacted": false,
+      "visible_evidence": [
+        "e1"
+      ],
+      "shelf": [],
+      "shelf_evicted": []
+    },
+    {
+      "round": 3,
+      "compacted": false,
+      "visible_evidence": [
+        "e1",
+        "e2"
+      ],
+      "shelf": [],
+      "shelf_evicted": []
+    }
+  ],
+  "delivered_refs": [
+    "e1",
+    "e2"
+  ],
+  "submitted_refs": [
+    "e1",
+    "e2"
+  ],
+  "text_included": true,
+  "limitations": [
+    "Equivalence is compiler equality, not semantic identity or wasted-search proof",
+    "Raw-window visibility/selection is not entailment or complete evidence coverage",
+    "No live q26 replay or independent answer scoring is performed"
+  ]
+}

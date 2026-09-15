@@ -1,0 +1,208 @@
+{
+  "protocol": "stride-search-3",
+  "head": "259ee6a0213c3c15eba987f7b6d1d176d114af5872c4fe2c614e358f0f947be1",
+  "outcome": "submitted",
+  "formal_correct": null,
+  "model_attempts": 4,
+  "backend_attempts": 8,
+  "queries": [
+    {
+      "round": 1,
+      "top_k": 5,
+      "equivalence_key": "99ba095ca8535b23c30dce704cd7cf15d009407ec51f4cf061652646d4c71890",
+      "cached": false,
+      "query_sha256": "8a843ae505205c2e66a69f567813b29aa5c583b0904958c6283e8b4c2e34d44b",
+      "query": "sister co-founded film streaming service CEO raised Southern Africa",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"sister\" OR \"co\" OR \"founded\" OR \"film\" OR \"streaming\" OR \"service\" OR \"ceo\" OR \"raised\" OR \"southern\" OR \"africa\"",
+        "terms": [
+          "sister",
+          "co",
+          "founded",
+          "film",
+          "streaming",
+          "service",
+          "ceo",
+          "raised",
+          "southern",
+          "africa"
+        ]
+      }
+    },
+    {
+      "round": 1,
+      "top_k": 5,
+      "equivalence_key": "aa8cdf7511e00bf4340a4ff79314e91f1c7a57736883e6edc51a942daf692184",
+      "cached": false,
+      "query_sha256": "f7224bae0283f4021f1b27bed518041ed6c965025da3ca158006989e4911a27e",
+      "query": "CEO founded company 1990s raised South Africa first child SIDS",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"ceo\" OR \"founded\" OR \"company\" OR \"1990s\" OR \"raised\" OR \"south\" OR \"africa\" OR \"first\" OR \"child\" OR \"sids\"",
+        "terms": [
+          "ceo",
+          "founded",
+          "company",
+          "1990s",
+          "raised",
+          "south",
+          "africa",
+          "first",
+          "child",
+          "sids"
+        ]
+      }
+    },
+    {
+      "round": 1,
+      "top_k": 5,
+      "equivalence_key": "1353e529fe362a86ff0113326756804112c79b0262c12f4b857a394e6469cc2e",
+      "cached": false,
+      "query_sha256": "af07d3c4ae0ccb6662f4ed84d59c62614737f440933a761c42432636ed40f360",
+      "query": "younger sister film streaming service co-founder CEO South Africa",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"younger\" OR \"sister\" OR \"film\" OR \"streaming\" OR \"service\" OR \"co\" OR \"founder\" OR \"ceo\" OR \"south\" OR \"africa\"",
+        "terms": [
+          "younger",
+          "sister",
+          "film",
+          "streaming",
+          "service",
+          "co",
+          "founder",
+          "ceo",
+          "south",
+          "africa"
+        ]
+      }
+    },
+    {
+      "round": 2,
+      "top_k": 5,
+      "equivalence_key": "092daf2a94cd0d274ae65e651c6590e90b187b0dd248170c17fcbba320d29648",
+      "cached": false,
+      "query_sha256": "0052cadbd8c095d5a16651cd60ac9efc58cb6742b561d90eaa57a93dc04b72b7",
+      "query": "woman claimed Elon Musk daughter relative mother age gave birth",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"woman\" OR \"claimed\" OR \"elon\" OR \"musk\" OR \"daughter\" OR \"relative\" OR \"mother\" OR \"age\" OR \"gave\" OR \"birth\"",
+        "terms": [
+          "woman",
+          "claimed",
+          "elon",
+          "musk",
+          "daughter",
+          "relative",
+          "mother",
+          "age",
+          "gave",
+          "birth"
+        ]
+      }
+    },
+    {
+      "round": 2,
+      "top_k": 5,
+      "equivalence_key": "f03e4eb49c32a7f42663c821aedfb50b63f699a8154112c51cf12e44f67af552",
+      "cached": false,
+      "query_sha256": "25320b563139872b5e993a4c62fb600fc5b0d9526677f1919ee91245a4f49d0f",
+      "query": "lady claimed related Elon Musk secret daughter mother age",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"lady\" OR \"claimed\" OR \"related\" OR \"elon\" OR \"musk\" OR \"secret\" OR \"daughter\" OR \"mother\" OR \"age\"",
+        "terms": [
+          "lady",
+          "claimed",
+          "related",
+          "elon",
+          "musk",
+          "secret",
+          "daughter",
+          "mother",
+          "age"
+        ]
+      }
+    },
+    {
+      "round": 2,
+      "top_k": 5,
+      "equivalence_key": "7d2dc26ca659fea66486e1f008df27254cecb9e059ab04ae826fc2e9a5e94d41",
+      "cached": false,
+      "query_sha256": "aabbcaa46c9926e4e5d07bc17398e23d2ce88c6e00eca5dab8c988b17510be13",
+      "query": "claimed Elon Musk child relative mother gave birth age article",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"claimed\" OR \"elon\" OR \"musk\" OR \"child\" OR \"relative\" OR \"mother\" OR \"gave\" OR \"birth\" OR \"age\" OR \"article\"",
+        "terms": [
+          "claimed",
+          "elon",
+          "musk",
+          "child",
+          "relative",
+          "mother",
+          "gave",
+          "birth",
+          "age",
+          "article"
+        ]
+      }
+    }
+  ],
+  "equivalent_query_repeats": 0,
+  "views": [
+    {
+      "round": 1,
+      "compacted": false,
+      "visible_evidence": [],
+      "shelf": [],
+      "shelf_evicted": []
+    },
+    {
+      "round": 2,
+      "compacted": false,
+      "visible_evidence": [
+        "e1"
+      ],
+      "shelf": [],
+      "shelf_evicted": []
+    },
+    {
+      "round": 3,
+      "compacted": false,
+      "visible_evidence": [
+        "e1",
+        "e2"
+      ],
+      "shelf": [],
+      "shelf_evicted": []
+    },
+    {
+      "round": 4,
+      "compacted": false,
+      "visible_evidence": [
+        "e1",
+        "e2",
+        "e3"
+      ],
+      "shelf": [],
+      "shelf_evicted": []
+    }
+  ],
+  "delivered_refs": [
+    "e1",
+    "e2",
+    "e3"
+  ],
+  "submitted_refs": [
+    "e2",
+    "e3"
+  ],
+  "text_included": true,
+  "limitations": [
+    "Equivalence is compiler equality, not semantic identity or wasted-search proof",
+    "Raw-window visibility/selection is not entailment or complete evidence coverage",
+    "No live q26 replay or independent answer scoring is performed"
+  ]
+}

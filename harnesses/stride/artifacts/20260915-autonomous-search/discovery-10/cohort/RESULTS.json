@@ -1,0 +1,422 @@
+{
+  "rows": [
+    {
+      "slot": "q775-baseline-r1",
+      "qid": 775,
+      "protocol": "baseline",
+      "status": "model_budget",
+      "terminal": {
+        "answer": "",
+        "elapsed_seconds": 84.57988109998405,
+        "outcome": "model_budget"
+      },
+      "attempts": 16,
+      "elapsed_seconds": 84.68263350002235,
+      "head": "0bc0614617d6c64b7dca7b55dfd9fa54cfd4e7c72a9dada8f71da35d001bc398",
+      "seal_sha256": "8ba9ca9e441c4c56c3375c9eb0ae4c26c1f007e4b56d97218786aa9a5c8bcdfe",
+      "budget_after": {
+        "cap": 2413,
+        "used": 1429,
+        "remaining": 984,
+        "this_run": 16,
+        "epoch_allowance": 1000,
+        "epoch_used": 16,
+        "epoch_remaining": 984
+      }
+    },
+    {
+      "slot": "q775-search-raw-window-v1-r1",
+      "qid": 775,
+      "protocol": "search-raw-window-v1",
+      "status": "submitted",
+      "terminal": {
+        "answer": "Gwangju",
+        "answer_representation": {
+          "input_type": "string",
+          "operation": "identity",
+          "rule": "string-integer-v1"
+        },
+        "basis": [
+          {
+            "document": "d23",
+            "document_chars": 5590,
+            "end": 3000,
+            "kind": "raw_evidence",
+            "ref": "e2",
+            "sha256": "2d508167d68898ab9a94c04692e5dd49383dedb168f97d4bee80fdb0b10e35ba",
+            "snapshot": "cf73f3198b61e06ea1409d0fa598f3ca5393950bb56774813f67f99bb8d90e1d",
+            "start": 0
+          },
+          {
+            "document": "d5",
+            "document_chars": 27249,
+            "end": 26993,
+            "kind": "raw_evidence",
+            "ref": "e3",
+            "sha256": "929b0e4b40f9a98330736c3b4fe3c125939ffa5b61388671abffeda41ec0fac6",
+            "snapshot": "25e42c9d9629a06063929aefe4e8f050cac2c095d797b7476410c1a6fe277c5a",
+            "start": 23993
+          }
+        ],
+        "elapsed_seconds": 81.73891200000071,
+        "outcome": "submitted",
+        "refs": [
+          "e2",
+          "e3"
+        ],
+        "semantic_status": "not_automatically_verified"
+      },
+      "attempts": 10,
+      "elapsed_seconds": 81.90243389998795,
+      "head": "a2d7899ba19fe1733bc44318a273d12e0c7d17f8ba4a10b41f5156339e9b9041",
+      "seal_sha256": "18bfa861838f0da08499dd0b7783ee3c3daba378072e396e7e3a093083fecb98",
+      "budget_after": {
+        "cap": 2413,
+        "used": 1439,
+        "remaining": 974,
+        "this_run": 26,
+        "epoch_allowance": 1000,
+        "epoch_used": 26,
+        "epoch_remaining": 974
+      }
+    },
+    {
+      "slot": "q774-search-raw-window-v1-r1",
+      "qid": 774,
+      "protocol": "search-raw-window-v1",
+      "status": "abstained",
+      "terminal": {
+        "answer": "",
+        "elapsed_seconds": 192.36292380001396,
+        "outcome": "abstained",
+        "reason": "I could verify one clue — that siblings Jessica and Richard Harmon play unrelated characters (Niylah and John Murphy) in The 100, a CW series that premiered in 2014 and ran 7 seasons (e7). However, I could not verify the remaining required criteria from available sources: Richard Harmon's real-life height being between 1.65 m and 1.70 m, John Murphy's character being married more than 2 but less than 5 times in the series, and only one of his children surviving. Searches for the John Murphy character page and Richard Harmon's height returned no usable evidence, and the character details do not clearly match the marriage/child criteria. Without verification of these distinguishing clues, I cannot confidently identify the entertainer."
+      },
+      "attempts": 16,
+      "elapsed_seconds": 192.59871230000863,
+      "head": "0f1c3f45e12c29cf8df1b97231db1318ff1d00aecdbd0e365881dbe40f107316",
+      "seal_sha256": "98f4abd9f658749487be2fd5828370f5361f0c3de5cc6f48da10a98babe3a35b",
+      "budget_after": {
+        "cap": 2413,
+        "used": 1455,
+        "remaining": 958,
+        "this_run": 42,
+        "epoch_allowance": 1000,
+        "epoch_used": 42,
+        "epoch_remaining": 958
+      }
+    },
+    {
+      "slot": "q774-baseline-r1",
+      "qid": 774,
+      "protocol": "baseline",
+      "status": "abstained",
+      "terminal": {
+        "answer": "",
+        "elapsed_seconds": 132.86526809999486,
+        "outcome": "abstained",
+        "reason": "The available evidence does not identify the entertainer. The clues (series started 2001-2019 with >3 seasons by 2023; actor height 1.66-1.69 m; character married 3-4 times; only one child survives; real-life relative co-stars as unrelated character) point toward a long-running telenovela such as El Señor de los Cielos / Aurelio Casillas, but no delivered source window confirms the actor's name, height, marriage count, surviving child, or the real-life relative co-star. Searches returned only unrelated navigation hits (sports, Filipino actresses, Cave Story, etc.). I cannot verify any candidate against the required criteria with the evidence on hand."
+      },
+      "attempts": 12,
+      "elapsed_seconds": 133.0372628000041,
+      "head": "30e801cfe1c6cdb450add883f9e2772319ef1a9bb0b0cb6862af6578fde251dd",
+      "seal_sha256": "69a705dc16f7cf0cd17f82d3c55204bf5ebc0f36e24c15528365143f04b285ee",
+      "budget_after": {
+        "cap": 2413,
+        "used": 1467,
+        "remaining": 946,
+        "this_run": 54,
+        "epoch_allowance": 1000,
+        "epoch_used": 54,
+        "epoch_remaining": 946
+      }
+    },
+    {
+      "slot": "q771-baseline-r1",
+      "qid": 771,
+      "protocol": "baseline",
+      "status": "submitted",
+      "terminal": {
+        "answer": "Vakkorama",
+        "answer_representation": {
+          "input_type": "string",
+          "operation": "identity",
+          "rule": "string-integer-v1"
+        },
+        "basis": [
+          {
+            "document": "d8",
+            "document_chars": 13639,
+            "end": 3000,
+            "kind": "raw_evidence",
+            "ref": "e1",
+            "sha256": "ed282b99cfb0aae5a430ddfadeb3348fa20e85aac24fb4501bf9cd3b3dadb4b2",
+            "snapshot": "7d8960afbde4b93401ea738e66299a6ee3d0dee47906ba8e3a86ebdea642ffcd",
+            "start": 0
+          },
+          {
+            "document": "d1",
+            "document_chars": 9095,
+            "end": 3000,
+            "kind": "raw_evidence",
+            "ref": "e2",
+            "sha256": "521deb8f6549e7ea288326ea13a34d4635283fc59820929b6ad3b4c3edade321",
+            "snapshot": "446eabd6c86b9aad83f468e7eb034d96105d6e38bc9d97c923416d3ce089e105",
+            "start": 0
+          },
+          {
+            "document": "d8",
+            "document_chars": 13639,
+            "end": 6000,
+            "kind": "raw_evidence",
+            "ref": "e3",
+            "sha256": "97a6e11f3f34512afbebf984635c4f0118e43a0fd1a04e71a3f4cf755defe729",
+            "snapshot": "7d8960afbde4b93401ea738e66299a6ee3d0dee47906ba8e3a86ebdea642ffcd",
+            "start": 3000
+          }
+        ],
+        "elapsed_seconds": 16.096175500017125,
+        "outcome": "submitted",
+        "refs": [
+          "e1",
+          "e2",
+          "e3"
+        ],
+        "semantic_status": "not_automatically_verified"
+      },
+      "attempts": 4,
+      "elapsed_seconds": 16.17990440002177,
+      "head": "126ad739f7ecb0954d2ea4971b412461e4fe637c449e2d9e86b4f197e4b2d347",
+      "seal_sha256": "87d1256bd9b660e8f285d19d62aafe646fdadf44b22497b2902e23cae7a2fe2c",
+      "budget_after": {
+        "cap": 2413,
+        "used": 1471,
+        "remaining": 942,
+        "this_run": 58,
+        "epoch_allowance": 1000,
+        "epoch_used": 58,
+        "epoch_remaining": 942
+      }
+    },
+    {
+      "slot": "q771-search-raw-window-v1-r1",
+      "qid": 771,
+      "protocol": "search-raw-window-v1",
+      "status": "submitted",
+      "terminal": {
+        "answer": "Vakkorama",
+        "answer_representation": {
+          "input_type": "string",
+          "operation": "identity",
+          "rule": "string-integer-v1"
+        },
+        "basis": [
+          {
+            "document": "d1",
+            "document_chars": 9095,
+            "end": 5830,
+            "kind": "raw_evidence",
+            "ref": "e1",
+            "sha256": "3c0bbc1ac3d0b3e97c6329f97b74dfbdd070f12da49de85c269acd773f9a5a03",
+            "snapshot": "446eabd6c86b9aad83f468e7eb034d96105d6e38bc9d97c923416d3ce089e105",
+            "start": 2830
+          },
+          {
+            "document": "d1",
+            "document_chars": 9095,
+            "end": 6000,
+            "kind": "raw_evidence",
+            "ref": "e2",
+            "sha256": "d57e3a3db4e8cef22724ba2798f5c9f9279cacb678a09454de4c1189305334d9",
+            "snapshot": "446eabd6c86b9aad83f468e7eb034d96105d6e38bc9d97c923416d3ce089e105",
+            "start": 5600
+          }
+        ],
+        "elapsed_seconds": 13.23824129998684,
+        "outcome": "submitted",
+        "refs": [
+          "e1",
+          "e2"
+        ],
+        "semantic_status": "not_automatically_verified"
+      },
+      "attempts": 3,
+      "elapsed_seconds": 13.31784949998837,
+      "head": "98bf0bf0ae2020f34e9264103faaa4953e410891841f540e6418ff5b3c6d0578",
+      "seal_sha256": "32f272f51b504ec270933bb09f7a8d1ea7dccce8fbac4d1095eccf4441399634",
+      "budget_after": {
+        "cap": 2413,
+        "used": 1474,
+        "remaining": 939,
+        "this_run": 61,
+        "epoch_allowance": 1000,
+        "epoch_used": 61,
+        "epoch_remaining": 939
+      }
+    },
+    {
+      "slot": "q778-search-raw-window-v1-r1",
+      "qid": 778,
+      "protocol": "search-raw-window-v1",
+      "status": "submitted",
+      "terminal": {
+        "answer": "21",
+        "answer_representation": {
+          "input_type": "integer",
+          "input_value": 21,
+          "operation": "decimal",
+          "rule": "string-integer-v1"
+        },
+        "basis": [
+          {
+            "document": "d14",
+            "document_chars": 4374,
+            "end": 3000,
+            "kind": "raw_evidence",
+            "ref": "e2",
+            "sha256": "bc0d510dbd6cde0530cf08684de455d82ec1943c0ba50cab130ae01990cc24b8",
+            "snapshot": "d7b7a23b3eb780d78018e5fe30d91613c9769a1cff7564bb0a79c08614acb838",
+            "start": 0
+          },
+          {
+            "document": "d14",
+            "document_chars": 4374,
+            "end": 2700,
+            "kind": "raw_evidence",
+            "ref": "e3",
+            "sha256": "63f4b03548f6620e11fc0fb6c3e6eefd89c242a46dac7023be9a83ebb6bcb70c",
+            "snapshot": "d7b7a23b3eb780d78018e5fe30d91613c9769a1cff7564bb0a79c08614acb838",
+            "start": 1800
+          }
+        ],
+        "elapsed_seconds": 21.469716199993854,
+        "outcome": "submitted",
+        "refs": [
+          "e2",
+          "e3"
+        ],
+        "semantic_status": "not_automatically_verified"
+      },
+      "attempts": 4,
+      "elapsed_seconds": 21.566260699997656,
+      "head": "259ee6a0213c3c15eba987f7b6d1d176d114af5872c4fe2c614e358f0f947be1",
+      "seal_sha256": "6c85eb528b888e50c11421bdcaf4e8b6db0a3f2dc32466dbf387e7da2253c60c",
+      "budget_after": {
+        "cap": 2413,
+        "used": 1478,
+        "remaining": 935,
+        "this_run": 65,
+        "epoch_allowance": 1000,
+        "epoch_used": 65,
+        "epoch_remaining": 935
+      }
+    },
+    {
+      "slot": "q778-baseline-r1",
+      "qid": 778,
+      "protocol": "baseline",
+      "status": "submitted",
+      "terminal": {
+        "answer": "21",
+        "answer_representation": {
+          "input_type": "integer",
+          "input_value": 21,
+          "operation": "decimal",
+          "rule": "string-integer-v1"
+        },
+        "basis": [
+          {
+            "document": "d16",
+            "document_chars": 4374,
+            "end": 3000,
+            "kind": "raw_evidence",
+            "ref": "e1",
+            "sha256": "bc0d510dbd6cde0530cf08684de455d82ec1943c0ba50cab130ae01990cc24b8",
+            "snapshot": "d7b7a23b3eb780d78018e5fe30d91613c9769a1cff7564bb0a79c08614acb838",
+            "start": 0
+          }
+        ],
+        "elapsed_seconds": 21.867296299984446,
+        "outcome": "submitted",
+        "refs": [
+          "e1"
+        ],
+        "semantic_status": "not_automatically_verified"
+      },
+      "attempts": 4,
+      "elapsed_seconds": 21.95782209999743,
+      "head": "d2dd56eb6106a8c25987e1206de2d2f8afe00f2927a8f0dc497f364ab91d1f36",
+      "seal_sha256": "05ad1af220c07d7111bfe9c51ea598203db6888a6569c5b30f8bf2b61d8007de",
+      "budget_after": {
+        "cap": 2413,
+        "used": 1482,
+        "remaining": 931,
+        "this_run": 69,
+        "epoch_allowance": 1000,
+        "epoch_used": 69,
+        "epoch_remaining": 931
+      }
+    }
+  ],
+  "judgments": [
+    {
+      "slot": "q775-search-raw-window-v1-r1",
+      "head": "a2d7899ba19fe1733bc44318a273d12e0c7d17f8ba4a10b41f5156339e9b9041",
+      "http_sequence": 1,
+      "correct": false,
+      "confidence": 1.0,
+      "extracted_answer": "Gwangju",
+      "rationale": "The standard answer is Boston, not Gwangju.",
+      "parse_error": false
+    },
+    {
+      "slot": "q771-baseline-r1",
+      "head": "126ad739f7ecb0954d2ea4971b412461e4fe637c449e2d9e86b4f197e4b2d347",
+      "http_sequence": 2,
+      "correct": true,
+      "confidence": 1.0,
+      "extracted_answer": "Vakkorama",
+      "rationale": "The candidate answer matches the standard answer exactly.",
+      "parse_error": false
+    },
+    {
+      "slot": "q771-search-raw-window-v1-r1",
+      "head": "98bf0bf0ae2020f34e9264103faaa4953e410891841f540e6418ff5b3c6d0578",
+      "http_sequence": 3,
+      "correct": true,
+      "confidence": 1.0,
+      "extracted_answer": "Vakkorama",
+      "rationale": "The candidate answer matches the standard answer exactly.",
+      "parse_error": false
+    },
+    {
+      "slot": "q778-search-raw-window-v1-r1",
+      "head": "259ee6a0213c3c15eba987f7b6d1d176d114af5872c4fe2c614e358f0f947be1",
+      "http_sequence": 4,
+      "correct": true,
+      "confidence": 1.0,
+      "extracted_answer": "21",
+      "rationale": "The candidate answer matches the standard answer exactly.",
+      "parse_error": false
+    },
+    {
+      "slot": "q778-baseline-r1",
+      "head": "d2dd56eb6106a8c25987e1206de2d2f8afe00f2927a8f0dc497f364ab91d1f36",
+      "http_sequence": 5,
+      "correct": true,
+      "confidence": 1.0,
+      "extracted_answer": "21",
+      "rationale": "The candidate answer matches the standard answer.",
+      "parse_error": false
+    }
+  ],
+  "budget_after": {
+    "cap": 2413,
+    "used": 1487,
+    "remaining": 926,
+    "this_run": 74,
+    "epoch_allowance": 1000,
+    "epoch_used": 74,
+    "epoch_remaining": 926
+  },
+  "utc_finished": "2026-09-15T16:10:13.596515+00:00"
+}

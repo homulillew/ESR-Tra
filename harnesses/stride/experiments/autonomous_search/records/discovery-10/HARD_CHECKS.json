@@ -1,0 +1,667 @@
+{
+  "q775-baseline-r1": {
+    "passed": true,
+    "fixture_mode": false,
+    "seal_files": 80,
+    "chain": {
+      "event_count": 255,
+      "head": "754ea0dfc4a64a339b31829ad302a11363f817bba603e09d2dd579e83b93e3e3"
+    },
+    "model_requests": 16,
+    "normal_responses": 16,
+    "unparsed_or_failed_requests": 0,
+    "http_response_files": 16,
+    "search_raw_events": {},
+    "automatic_get_document_attempts": 0,
+    "unique_windows_verified": 1,
+    "delivery_ack": [
+      {
+        "round": 1,
+        "evidence": []
+      },
+      {
+        "round": 2,
+        "evidence": []
+      },
+      {
+        "round": 3,
+        "evidence": []
+      },
+      {
+        "round": 4,
+        "evidence": []
+      },
+      {
+        "round": 5,
+        "evidence": []
+      },
+      {
+        "round": 6,
+        "evidence": [
+          "e1"
+        ]
+      },
+      {
+        "round": 7,
+        "evidence": [
+          "e1"
+        ]
+      },
+      {
+        "round": 8,
+        "evidence": [
+          "e1"
+        ]
+      },
+      {
+        "round": 9,
+        "evidence": [
+          "e1"
+        ]
+      },
+      {
+        "round": 10,
+        "evidence": [
+          "e1"
+        ]
+      },
+      {
+        "round": 11,
+        "evidence": [
+          "e1"
+        ]
+      },
+      {
+        "round": 12,
+        "evidence": [
+          "e1"
+        ]
+      },
+      {
+        "round": 13,
+        "evidence": [
+          "e1"
+        ]
+      },
+      {
+        "round": 14,
+        "evidence": [
+          "e1"
+        ]
+      },
+      {
+        "round": 15,
+        "evidence": [
+          "e1"
+        ]
+      },
+      {
+        "round": 16,
+        "evidence": [
+          "e1"
+        ]
+      }
+    ],
+    "backend_attempts": 18,
+    "usage_known": {
+      "input_tokens": 204385,
+      "output_tokens": 1352,
+      "cache_read_tokens": 142720
+    },
+    "native_read_actions": 1,
+    "withheld_calls": 0,
+    "limitations": [
+      "Structural delivery and integrity checks do not establish semantic answer support.",
+      "Failed HTTP response bodies are seal-covered, not normal model_response objects."
+    ],
+    "terminal": {
+      "answer": "",
+      "elapsed_seconds": 84.57988109998405,
+      "outcome": "model_budget"
+    },
+    "metrics": {
+      "model_attempts": 16,
+      "backend_attempts": 18,
+      "executed_actions": 23,
+      "action_counts": {
+        "search": 25,
+        "read": 1
+      },
+      "action_error_counts": {
+        "arguments_invalid": 2,
+        "duplicate_query_blocked": 1,
+        "final_only": 1
+      },
+      "usage_known": {
+        "input_tokens": 204385,
+        "output_tokens": 1352,
+        "cache_read_tokens": 142720,
+        "cache_write_tokens": 0
+      },
+      "compaction_requests": 1,
+      "cache_query_hits": 6
+    },
+    "raw_origins": [
+      {
+        "round": 5,
+        "ref": "e1",
+        "mode": "native"
+      }
+    ]
+  },
+  "q775-search-raw-window-v1-r1": {
+    "passed": true,
+    "fixture_mode": false,
+    "seal_files": 56,
+    "chain": {
+      "event_count": 237,
+      "head": "a93aa0f321a53f4d42dc4e87f128a7d3cb141fb9409d425dfe191b331f25e7ec"
+    },
+    "model_requests": 10,
+    "normal_responses": 10,
+    "unparsed_or_failed_requests": 0,
+    "http_response_files": 10,
+    "search_raw_events": {
+      "navigation": 8,
+      "attempt": 3,
+      "success": 3,
+      "skip": 5
+    },
+    "automatic_get_document_attempts": 3,
+    "unique_windows_verified": 3,
+    "delivery_ack": [
+      {
+        "round": 1,
+        "evidence": []
+      },
+      {
+        "round": 2,
+        "evidence": [
+          "e1"
+        ]
+      },
+      {
+        "round": 3,
+        "evidence": [
+          "e1",
+          "e2"
+        ]
+      },
+      {
+        "round": 4,
+        "evidence": [
+          "e1",
+          "e2",
+          "e3"
+        ]
+      },
+      {
+        "round": 5,
+        "evidence": [
+          "e1",
+          "e2",
+          "e3"
+        ]
+      },
+      {
+        "round": 6,
+        "evidence": [
+          "e1",
+          "e2",
+          "e3"
+        ]
+      },
+      {
+        "round": 7,
+        "evidence": [
+          "e1",
+          "e2",
+          "e3"
+        ]
+      },
+      {
+        "round": 8,
+        "evidence": [
+          "e1",
+          "e2",
+          "e3"
+        ]
+      },
+      {
+        "round": 9,
+        "evidence": [
+          "e1",
+          "e2",
+          "e3"
+        ]
+      },
+      {
+        "round": 10,
+        "evidence": [
+          "e1",
+          "e2",
+          "e3"
+        ]
+      }
+    ],
+    "backend_attempts": 20,
+    "usage_known": {
+      "input_tokens": 162720,
+      "output_tokens": 2711,
+      "cache_read_tokens": 54912
+    },
+    "native_read_actions": 0,
+    "withheld_calls": 0,
+    "limitations": [
+      "Structural delivery and integrity checks do not establish semantic answer support.",
+      "Failed HTTP response bodies are seal-covered, not normal model_response objects."
+    ],
+    "terminal": {
+      "answer": "Gwangju",
+      "answer_representation": {
+        "input_type": "string",
+        "operation": "identity",
+        "rule": "string-integer-v1"
+      },
+      "basis": [
+        {
+          "document": "d23",
+          "document_chars": 5590,
+          "end": 3000,
+          "kind": "raw_evidence",
+          "ref": "e2",
+          "sha256": "2d508167d68898ab9a94c04692e5dd49383dedb168f97d4bee80fdb0b10e35ba",
+          "snapshot": "cf73f3198b61e06ea1409d0fa598f3ca5393950bb56774813f67f99bb8d90e1d",
+          "start": 0
+        },
+        {
+          "document": "d5",
+          "document_chars": 27249,
+          "end": 26993,
+          "kind": "raw_evidence",
+          "ref": "e3",
+          "sha256": "929b0e4b40f9a98330736c3b4fe3c125939ffa5b61388671abffeda41ec0fac6",
+          "snapshot": "25e42c9d9629a06063929aefe4e8f050cac2c095d797b7476410c1a6fe277c5a",
+          "start": 23993
+        }
+      ],
+      "elapsed_seconds": 81.73891200000071,
+      "outcome": "submitted",
+      "refs": [
+        "e2",
+        "e3"
+      ],
+      "semantic_status": "not_automatically_verified"
+    },
+    "metrics": {
+      "model_attempts": 10,
+      "backend_attempts": 20,
+      "executed_actions": 11,
+      "action_counts": {
+        "search": 10,
+        "finish": 1
+      },
+      "action_error_counts": {
+        "duplicate_query_blocked": 2
+      },
+      "usage_known": {
+        "input_tokens": 162720,
+        "output_tokens": 2711,
+        "cache_read_tokens": 54912,
+        "cache_write_tokens": 0
+      },
+      "compaction_requests": 4,
+      "cache_query_hits": 6
+    },
+    "raw_origins": [
+      {
+        "round": 1,
+        "ref": "e1",
+        "mode": "automatic"
+      },
+      {
+        "round": 2,
+        "ref": "e2",
+        "mode": "automatic"
+      },
+      {
+        "round": 3,
+        "ref": "e3",
+        "mode": "automatic"
+      }
+    ]
+  },
+  "q774-baseline-r1": {
+    "passed": true,
+    "fixture_mode": false,
+    "seal_files": 64,
+    "chain": {
+      "event_count": 260,
+      "head": "d1c8b1b1d5cc8bbc418d165af1dab6110157786691c534e36e28a388b313e1ad"
+    },
+    "model_requests": 12,
+    "normal_responses": 12,
+    "unparsed_or_failed_requests": 0,
+    "http_response_files": 12,
+    "search_raw_events": {},
+    "automatic_get_document_attempts": 0,
+    "unique_windows_verified": 0,
+    "delivery_ack": [
+      {
+        "round": 1,
+        "evidence": []
+      },
+      {
+        "round": 2,
+        "evidence": []
+      },
+      {
+        "round": 3,
+        "evidence": []
+      },
+      {
+        "round": 4,
+        "evidence": []
+      },
+      {
+        "round": 5,
+        "evidence": []
+      },
+      {
+        "round": 6,
+        "evidence": []
+      },
+      {
+        "round": 7,
+        "evidence": []
+      },
+      {
+        "round": 8,
+        "evidence": []
+      },
+      {
+        "round": 9,
+        "evidence": []
+      },
+      {
+        "round": 10,
+        "evidence": []
+      },
+      {
+        "round": 11,
+        "evidence": []
+      },
+      {
+        "round": 12,
+        "evidence": []
+      }
+    ],
+    "backend_attempts": 21,
+    "usage_known": {
+      "input_tokens": 206962,
+      "output_tokens": 1955,
+      "cache_read_tokens": 92288
+    },
+    "native_read_actions": 0,
+    "withheld_calls": 0,
+    "limitations": [
+      "Structural delivery and integrity checks do not establish semantic answer support.",
+      "Failed HTTP response bodies are seal-covered, not normal model_response objects."
+    ],
+    "terminal": {
+      "answer": "",
+      "elapsed_seconds": 132.86526809999486,
+      "outcome": "abstained",
+      "reason": "The available evidence does not identify the entertainer. The clues (series started 2001-2019 with >3 seasons by 2023; actor height 1.66-1.69 m; character married 3-4 times; only one child survives; real-life relative co-stars as unrelated character) point toward a long-running telenovela such as El Señor de los Cielos / Aurelio Casillas, but no delivered source window confirms the actor's name, height, marriage count, surviving child, or the real-life relative co-star. Searches returned only unrelated navigation hits (sports, Filipino actresses, Cave Story, etc.). I cannot verify any candidate against the required criteria with the evidence on hand."
+    },
+    "metrics": {
+      "model_attempts": 12,
+      "backend_attempts": 21,
+      "executed_actions": 12,
+      "action_counts": {
+        "search": 11,
+        "finish": 1
+      },
+      "action_error_counts": {
+        "duplicate_query_blocked": 2
+      },
+      "usage_known": {
+        "input_tokens": 206962,
+        "output_tokens": 1955,
+        "cache_read_tokens": 92288,
+        "cache_write_tokens": 0
+      },
+      "compaction_requests": 4,
+      "cache_query_hits": 6
+    },
+    "raw_origins": []
+  },
+  "q774-search-raw-window-v1-r1": {
+    "passed": true,
+    "fixture_mode": false,
+    "seal_files": 80,
+    "chain": {
+      "event_count": 540,
+      "head": "6ea909e2c6815ccc4d5c025ec13fa3af054592cd0787bbb7663d5734d7d7fb86"
+    },
+    "model_requests": 16,
+    "normal_responses": 16,
+    "unparsed_or_failed_requests": 0,
+    "http_response_files": 16,
+    "search_raw_events": {
+      "navigation": 15,
+      "attempt": 6,
+      "success": 6,
+      "skip": 9
+    },
+    "automatic_get_document_attempts": 5,
+    "unique_windows_verified": 8,
+    "delivery_ack": [
+      {
+        "round": 1,
+        "evidence": []
+      },
+      {
+        "round": 2,
+        "evidence": [
+          "e1"
+        ]
+      },
+      {
+        "round": 3,
+        "evidence": [
+          "e1",
+          "e2"
+        ]
+      },
+      {
+        "round": 4,
+        "evidence": [
+          "e1",
+          "e2",
+          "e3"
+        ]
+      },
+      {
+        "round": 5,
+        "evidence": [
+          "e1",
+          "e2",
+          "e3",
+          "e4",
+          "e5"
+        ]
+      },
+      {
+        "round": 6,
+        "evidence": [
+          "e3",
+          "e4",
+          "e5",
+          "e6",
+          "e7"
+        ]
+      },
+      {
+        "round": 7,
+        "evidence": [
+          "e5",
+          "e6",
+          "e7"
+        ]
+      },
+      {
+        "round": 8,
+        "evidence": [
+          "e5",
+          "e6",
+          "e7"
+        ]
+      },
+      {
+        "round": 9,
+        "evidence": [
+          "e5",
+          "e6",
+          "e7"
+        ]
+      },
+      {
+        "round": 10,
+        "evidence": [
+          "e5",
+          "e6",
+          "e7"
+        ]
+      },
+      {
+        "round": 11,
+        "evidence": [
+          "e5",
+          "e6",
+          "e7",
+          "e8"
+        ]
+      },
+      {
+        "round": 12,
+        "evidence": [
+          "e6",
+          "e7",
+          "e8"
+        ]
+      },
+      {
+        "round": 13,
+        "evidence": [
+          "e6",
+          "e7",
+          "e8"
+        ]
+      },
+      {
+        "round": 14,
+        "evidence": [
+          "e6",
+          "e7",
+          "e8"
+        ]
+      },
+      {
+        "round": 15,
+        "evidence": [
+          "e6",
+          "e7",
+          "e8"
+        ]
+      },
+      {
+        "round": 16,
+        "evidence": [
+          "e6",
+          "e7",
+          "e8"
+        ]
+      }
+    ],
+    "backend_attempts": 43,
+    "usage_known": {
+      "input_tokens": 283458,
+      "output_tokens": 2592,
+      "cache_read_tokens": 103296
+    },
+    "native_read_actions": 2,
+    "withheld_calls": 0,
+    "limitations": [
+      "Structural delivery and integrity checks do not establish semantic answer support.",
+      "Failed HTTP response bodies are seal-covered, not normal model_response objects."
+    ],
+    "terminal": {
+      "answer": "",
+      "elapsed_seconds": 192.36292380001396,
+      "outcome": "abstained",
+      "reason": "I could verify one clue — that siblings Jessica and Richard Harmon play unrelated characters (Niylah and John Murphy) in The 100, a CW series that premiered in 2014 and ran 7 seasons (e7). However, I could not verify the remaining required criteria from available sources: Richard Harmon's real-life height being between 1.65 m and 1.70 m, John Murphy's character being married more than 2 but less than 5 times in the series, and only one of his children surviving. Searches for the John Murphy character page and Richard Harmon's height returned no usable evidence, and the character details do not clearly match the marriage/child criteria. Without verification of these distinguishing clues, I cannot confidently identify the entertainer."
+    },
+    "metrics": {
+      "model_attempts": 16,
+      "backend_attempts": 43,
+      "executed_actions": 18,
+      "action_counts": {
+        "search": 15,
+        "read": 2,
+        "finish": 1
+      },
+      "action_error_counts": {},
+      "usage_known": {
+        "input_tokens": 283458,
+        "output_tokens": 2592,
+        "cache_read_tokens": 103296,
+        "cache_write_tokens": 0
+      },
+      "compaction_requests": 8,
+      "cache_query_hits": 6
+    },
+    "raw_origins": [
+      {
+        "round": 1,
+        "ref": "e1",
+        "mode": "automatic"
+      },
+      {
+        "round": 2,
+        "ref": "e2",
+        "mode": "automatic"
+      },
+      {
+        "round": 3,
+        "ref": "e3",
+        "mode": "automatic"
+      },
+      {
+        "round": 4,
+        "ref": "e4",
+        "mode": "automatic"
+      },
+      {
+        "round": 4,
+        "ref": "e5",
+        "mode": "automatic"
+      },
+      {
+        "round": 5,
+        "ref": "e7",
+        "mode": "automatic"
+      },
+      {
+        "round": 5,
+        "ref": "e6",
+        "mode": "native"
+      },
+      {
+        "round": 10,
+        "ref": "e8",
+        "mode": "native"
+      }
+    ]
+  }
+}

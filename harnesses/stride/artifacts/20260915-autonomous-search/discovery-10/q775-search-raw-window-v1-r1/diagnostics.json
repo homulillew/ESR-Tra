@@ -1,0 +1,651 @@
+{
+  "protocol": "stride-search-3",
+  "head": "a2d7899ba19fe1733bc44318a273d12e0c7d17f8ba4a10b41f5156339e9b9041",
+  "outcome": "submitted",
+  "formal_correct": null,
+  "model_attempts": 10,
+  "backend_attempts": 20,
+  "queries": [
+    {
+      "round": 1,
+      "top_k": 8,
+      "equivalence_key": "544b0c8eeb10bd7d0ca95f97d7654ea3688bccdddeed9a167ff69555feab2204",
+      "cached": false,
+      "query_sha256": "fa083827a4d9c149b6b675f0cf04e33ccc532ccf0ca40ed68f78519162d5d29d",
+      "query": "literary award created 2000s international book prize",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"literary\" OR \"award\" OR \"created\" OR \"2000s\" OR \"international\" OR \"book\" OR \"prize\"",
+        "terms": [
+          "literary",
+          "award",
+          "created",
+          "2000s",
+          "international",
+          "book",
+          "prize"
+        ]
+      }
+    },
+    {
+      "round": 1,
+      "top_k": 8,
+      "equivalence_key": "66cbce57367b533ed2f1f3a9c9091cd82729833e7eb572f5b057d1f297df5254",
+      "cached": false,
+      "query_sha256": "54dcd303ad355c376d4e4743b72b3238c9f9006f41009566606def12cd53ad69",
+      "query": "book award founded 2000s translated twenty five languages",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"book\" OR \"award\" OR \"founded\" OR \"2000s\" OR \"translated\" OR \"twenty\" OR \"five\" OR \"languages\"",
+        "terms": [
+          "book",
+          "award",
+          "founded",
+          "2000s",
+          "translated",
+          "twenty",
+          "five",
+          "languages"
+        ]
+      }
+    },
+    {
+      "round": 1,
+      "top_k": 8,
+      "equivalence_key": "25b574c0c804a8d360985d3f745ce584e7c92cbff769b251865a3326a58ad096",
+      "cached": false,
+      "query_sha256": "f53663a0e4a5284096022f5ee96613c28d52bb163b8106d3611eb8b25dca355a",
+      "query": "international literary prize established 2000s debut",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"international\" OR \"literary\" OR \"prize\" OR \"established\" OR \"2000s\" OR \"debut\"",
+        "terms": [
+          "international",
+          "literary",
+          "prize",
+          "established",
+          "2000s",
+          "debut"
+        ]
+      }
+    },
+    {
+      "round": 2,
+      "top_k": 8,
+      "equivalence_key": "0221735276975d45d537d84cc6a33b1579e9c6cf5de2047c1ddc3bd4a8ca7d3c",
+      "cached": false,
+      "query_sha256": "f402258b309b79443387a098f2facb145b07b3dea071e8ca0cd628c69cb188db",
+      "query": "Man Booker International Prize 2016 winner The Vegetarian Han Kang",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"man\" OR \"booker\" OR \"international\" OR \"prize\" OR \"2016\" OR \"winner\" OR \"the\" OR \"vegetarian\" OR \"han\" OR \"kang\"",
+        "terms": [
+          "man",
+          "booker",
+          "international",
+          "prize",
+          "2016",
+          "winner",
+          "the",
+          "vegetarian",
+          "han",
+          "kang"
+        ]
+      }
+    },
+    {
+      "round": 2,
+      "top_k": 8,
+      "equivalence_key": "7b85b31dffb93337ea5f2595944e6931054d02ac1c37fde4a08e741f3cd71c69",
+      "cached": false,
+      "query_sha256": "5547b2a2a338baa24ab7fb4385cb052d43491534e8717b832cdbcd00e8b66e01",
+      "query": "book translated into 25 languages shortlisted Man Booker International Prize",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"book\" OR \"translated\" OR \"into\" OR \"25\" OR \"languages\" OR \"shortlisted\" OR \"man\" OR \"booker\" OR \"international\" OR \"prize\"",
+        "terms": [
+          "book",
+          "translated",
+          "into",
+          "25",
+          "languages",
+          "shortlisted",
+          "man",
+          "booker",
+          "international",
+          "prize"
+        ]
+      }
+    },
+    {
+      "round": 2,
+      "top_k": 8,
+      "equivalence_key": "b65ec0c66767539ebe1e336f5c48893fc4f4b61a68c175b4d7a999fe1c2501e8",
+      "cached": false,
+      "query_sha256": "9cb5f825a4a0cb215353cdfcd42404a3e10166b1a3bd7eabc340c136a6aa5460",
+      "query": "The Vegetarian Han Kang translated languages published 2016",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"the\" OR \"vegetarian\" OR \"han\" OR \"kang\" OR \"translated\" OR \"languages\" OR \"published\" OR \"2016\"",
+        "terms": [
+          "the",
+          "vegetarian",
+          "han",
+          "kang",
+          "translated",
+          "languages",
+          "published",
+          "2016"
+        ]
+      }
+    },
+    {
+      "round": 3,
+      "top_k": 8,
+      "equivalence_key": "dcf2f86d262ea245d8050660e96f26d7e90ee83b9f7ef510bba81f41d11923fb",
+      "cached": false,
+      "query_sha256": "9efba95b04b5eb4287727e801f9853ee9223757d2887ed835bc772f5f56f802f",
+      "query": "Man Booker International Prize 2016 shortlist nominees",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"man\" OR \"booker\" OR \"international\" OR \"prize\" OR \"2016\" OR \"shortlist\" OR \"nominees\"",
+        "terms": [
+          "man",
+          "booker",
+          "international",
+          "prize",
+          "2016",
+          "shortlist",
+          "nominees"
+        ]
+      }
+    },
+    {
+      "round": 3,
+      "top_k": 8,
+      "equivalence_key": "57dcac9ed8c38a5a1c617f2074ac9092f33a2dad8566eb2c089ecefdf70f4d5b",
+      "cached": false,
+      "query_sha256": "3095cf40e6591b58567197408bbdc5ff0e64ee37f5198a5fc4a16a5b824254eb",
+      "query": "book published 2016 translated 25 languages author grew up Gwangju",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"book\" OR \"published\" OR \"2016\" OR \"translated\" OR \"25\" OR \"languages\" OR \"author\" OR \"grew\" OR \"up\" OR \"gwangju\"",
+        "terms": [
+          "book",
+          "published",
+          "2016",
+          "translated",
+          "25",
+          "languages",
+          "author",
+          "grew",
+          "up",
+          "gwangju"
+        ]
+      }
+    },
+    {
+      "round": 3,
+      "top_k": 8,
+      "equivalence_key": "db7e7ec190cdcbce8be7cca2011942d287445fc9d5e68b34b3522d24cfd57cd0",
+      "cached": false,
+      "query_sha256": "fd9ac91b06cf74eba015ef37cfa7f600d234b1746eec91fff4a1b2b40a41efbb",
+      "query": "2016 novel contender Man Booker International Prize translated many languages",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"2016\" OR \"novel\" OR \"contender\" OR \"man\" OR \"booker\" OR \"international\" OR \"prize\" OR \"translated\" OR \"many\" OR \"languages\"",
+        "terms": [
+          "2016",
+          "novel",
+          "contender",
+          "man",
+          "booker",
+          "international",
+          "prize",
+          "translated",
+          "many",
+          "languages"
+        ]
+      }
+    },
+    {
+      "round": 4,
+      "top_k": 8,
+      "equivalence_key": "39aa93a4639eb089f8157b154f071d21519a3d1710350cc23547ca2741e93508",
+      "cached": false,
+      "query_sha256": "6e32e024cb56993d25ae80d2e7f479629fde402ff5924e8043e291ae10e9e0f7",
+      "query": "Man Booker International Prize 2016 shortlist six books",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"man\" OR \"booker\" OR \"international\" OR \"prize\" OR \"2016\" OR \"shortlist\" OR \"six\" OR \"books\"",
+        "terms": [
+          "man",
+          "booker",
+          "international",
+          "prize",
+          "2016",
+          "shortlist",
+          "six",
+          "books"
+        ]
+      }
+    },
+    {
+      "round": 4,
+      "top_k": 8,
+      "equivalence_key": "46896e094c0814142220004b3d9399dbed3201385802757236fb8d9dc0abe32b",
+      "cached": false,
+      "query_sha256": "ce16b0343ec018f89dc2badea11708744176729f1bf4c4e8f75ee433c5d9b6da",
+      "query": "2016 International Booker Prize shortlist nominees list",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"2016\" OR \"international\" OR \"booker\" OR \"prize\" OR \"shortlist\" OR \"nominees\" OR \"list\"",
+        "terms": [
+          "2016",
+          "international",
+          "booker",
+          "prize",
+          "shortlist",
+          "nominees",
+          "list"
+        ]
+      }
+    },
+    {
+      "round": 4,
+      "top_k": 8,
+      "equivalence_key": "0f00ac131f2f00b77a762e41253ba6076b0a247fdb776687e8776131769847be",
+      "cached": false,
+      "query_sha256": "479c663c2512cd2eab93298bd4559f15b612b912eaf2e69caf8c3a6680a5f95d",
+      "query": "Man Booker International 2016 shortlisted books authors",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"man\" OR \"booker\" OR \"international\" OR \"2016\" OR \"shortlisted\" OR \"books\" OR \"authors\"",
+        "terms": [
+          "man",
+          "booker",
+          "international",
+          "2016",
+          "shortlisted",
+          "books",
+          "authors"
+        ]
+      }
+    },
+    {
+      "round": 5,
+      "top_k": 8,
+      "equivalence_key": "c76dd56d06d32b3fce5904b2157e6cefbb63ed5e0a75a2a0c35e7dcb9869d8e4",
+      "cached": false,
+      "query_sha256": "bf0840e2bbde8883c399aa6e2682da5ca013072b8d7431a58409c2c67c4e04c3",
+      "query": "novel translated into 26 languages shortlisted Man Asian Literary Prize",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"novel\" OR \"translated\" OR \"into\" OR \"26\" OR \"languages\" OR \"shortlisted\" OR \"man\" OR \"asian\" OR \"literary\" OR \"prize\"",
+        "terms": [
+          "novel",
+          "translated",
+          "into",
+          "26",
+          "languages",
+          "shortlisted",
+          "man",
+          "asian",
+          "literary",
+          "prize"
+        ]
+      }
+    },
+    {
+      "round": 5,
+      "top_k": 8,
+      "equivalence_key": "8c77c9c1dc52fb58d7d33ef1bdb6903193f83a4d2c1bdc32809fe300bd38c2ec",
+      "cached": false,
+      "query_sha256": "6d248a0717ee2652a3e0d63db00c57be9de44fb346fb93544f23aab5d05a7683",
+      "query": "book translated into 27 languages contender literary prize 2010s",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"book\" OR \"translated\" OR \"into\" OR \"27\" OR \"languages\" OR \"contender\" OR \"literary\" OR \"prize\" OR \"2010s\"",
+        "terms": [
+          "book",
+          "translated",
+          "into",
+          "27",
+          "languages",
+          "contender",
+          "literary",
+          "prize",
+          "2010s"
+        ]
+      }
+    },
+    {
+      "round": 5,
+      "top_k": 8,
+      "equivalence_key": "b92d73eb7f004e3ed1af5d9b3a261018b73a4aad70a8fbfbddd9b6fb46a9ee6d",
+      "cached": false,
+      "query_sha256": "6fe386d9289ab7e7d52bc1fd1a978e8eca367664feab1bc693b5b3838cd5b0e4",
+      "query": "novel translated into 28 languages shortlisted award 2010s",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"novel\" OR \"translated\" OR \"into\" OR \"28\" OR \"languages\" OR \"shortlisted\" OR \"award\" OR \"2010s\"",
+        "terms": [
+          "novel",
+          "translated",
+          "into",
+          "28",
+          "languages",
+          "shortlisted",
+          "award",
+          "2010s"
+        ]
+      }
+    },
+    {
+      "round": 5,
+      "top_k": 5,
+      "equivalence_key": "53fbda52a859ac80cef42b5cf9263262bd97a4d16cbaea7abb7a94c3049b1b49",
+      "cached": false,
+      "query_sha256": "b6ef37f7858b655cf525de284b15b5a6173ec3d2bf2ba458f82a4d5716808b2f",
+      "query": "Han Kang born Gwangju",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"han\" OR \"kang\" OR \"born\" OR \"gwangju\"",
+        "terms": [
+          "han",
+          "kang",
+          "born",
+          "gwangju"
+        ]
+      }
+    },
+    {
+      "round": 5,
+      "top_k": 5,
+      "equivalence_key": "a8e2676da690f9d1aae9c0d1737f2f0020ed6cb2706bc33d42e1781ab226f8fb",
+      "cached": false,
+      "query_sha256": "0a66a98cbca2ca347d239330d9d468a0f6cde920e3f88a494048742876eb28ce",
+      "query": "Han Kang birthplace city",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"han\" OR \"kang\" OR \"birthplace\" OR \"city\"",
+        "terms": [
+          "han",
+          "kang",
+          "birthplace",
+          "city"
+        ]
+      }
+    },
+    {
+      "round": 6,
+      "top_k": 8,
+      "equivalence_key": "39aa93a4639eb089f8157b154f071d21519a3d1710350cc23547ca2741e93508",
+      "cached": true,
+      "query_sha256": "6e32e024cb56993d25ae80d2e7f479629fde402ff5924e8043e291ae10e9e0f7",
+      "query": "Man Booker International Prize 2016 shortlist six books",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"man\" OR \"booker\" OR \"international\" OR \"prize\" OR \"2016\" OR \"shortlist\" OR \"six\" OR \"books\"",
+        "terms": [
+          "man",
+          "booker",
+          "international",
+          "prize",
+          "2016",
+          "shortlist",
+          "six",
+          "books"
+        ]
+      }
+    },
+    {
+      "round": 6,
+      "top_k": 8,
+      "equivalence_key": "46896e094c0814142220004b3d9399dbed3201385802757236fb8d9dc0abe32b",
+      "cached": true,
+      "query_sha256": "ce16b0343ec018f89dc2badea11708744176729f1bf4c4e8f75ee433c5d9b6da",
+      "query": "2016 International Booker Prize shortlist nominees list",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"2016\" OR \"international\" OR \"booker\" OR \"prize\" OR \"shortlist\" OR \"nominees\" OR \"list\"",
+        "terms": [
+          "2016",
+          "international",
+          "booker",
+          "prize",
+          "shortlist",
+          "nominees",
+          "list"
+        ]
+      }
+    },
+    {
+      "round": 6,
+      "top_k": 8,
+      "equivalence_key": "0f00ac131f2f00b77a762e41253ba6076b0a247fdb776687e8776131769847be",
+      "cached": true,
+      "query_sha256": "479c663c2512cd2eab93298bd4559f15b612b912eaf2e69caf8c3a6680a5f95d",
+      "query": "Man Booker International 2016 shortlisted books authors",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"man\" OR \"booker\" OR \"international\" OR \"2016\" OR \"shortlisted\" OR \"books\" OR \"authors\"",
+        "terms": [
+          "man",
+          "booker",
+          "international",
+          "2016",
+          "shortlisted",
+          "books",
+          "authors"
+        ]
+      }
+    },
+    {
+      "round": 7,
+      "top_k": 8,
+      "equivalence_key": "39aa93a4639eb089f8157b154f071d21519a3d1710350cc23547ca2741e93508",
+      "cached": true,
+      "query_sha256": "6e32e024cb56993d25ae80d2e7f479629fde402ff5924e8043e291ae10e9e0f7",
+      "query": "Man Booker International Prize 2016 shortlist six books",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"man\" OR \"booker\" OR \"international\" OR \"prize\" OR \"2016\" OR \"shortlist\" OR \"six\" OR \"books\"",
+        "terms": [
+          "man",
+          "booker",
+          "international",
+          "prize",
+          "2016",
+          "shortlist",
+          "six",
+          "books"
+        ]
+      }
+    },
+    {
+      "round": 7,
+      "top_k": 8,
+      "equivalence_key": "46896e094c0814142220004b3d9399dbed3201385802757236fb8d9dc0abe32b",
+      "cached": true,
+      "query_sha256": "ce16b0343ec018f89dc2badea11708744176729f1bf4c4e8f75ee433c5d9b6da",
+      "query": "2016 International Booker Prize shortlist nominees list",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"2016\" OR \"international\" OR \"booker\" OR \"prize\" OR \"shortlist\" OR \"nominees\" OR \"list\"",
+        "terms": [
+          "2016",
+          "international",
+          "booker",
+          "prize",
+          "shortlist",
+          "nominees",
+          "list"
+        ]
+      }
+    },
+    {
+      "round": 7,
+      "top_k": 8,
+      "equivalence_key": "0f00ac131f2f00b77a762e41253ba6076b0a247fdb776687e8776131769847be",
+      "cached": true,
+      "query_sha256": "479c663c2512cd2eab93298bd4559f15b612b912eaf2e69caf8c3a6680a5f95d",
+      "query": "Man Booker International 2016 shortlisted books authors",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"man\" OR \"booker\" OR \"international\" OR \"2016\" OR \"shortlisted\" OR \"books\" OR \"authors\"",
+        "terms": [
+          "man",
+          "booker",
+          "international",
+          "2016",
+          "shortlisted",
+          "books",
+          "authors"
+        ]
+      }
+    }
+  ],
+  "equivalent_query_repeats": 6,
+  "views": [
+    {
+      "round": 1,
+      "compacted": false,
+      "visible_evidence": [],
+      "shelf": [],
+      "shelf_evicted": []
+    },
+    {
+      "round": 2,
+      "compacted": false,
+      "visible_evidence": [
+        "e1"
+      ],
+      "shelf": [],
+      "shelf_evicted": []
+    },
+    {
+      "round": 3,
+      "compacted": false,
+      "visible_evidence": [
+        "e1",
+        "e2"
+      ],
+      "shelf": [],
+      "shelf_evicted": []
+    },
+    {
+      "round": 4,
+      "compacted": false,
+      "visible_evidence": [
+        "e1",
+        "e2",
+        "e3"
+      ],
+      "shelf": [],
+      "shelf_evicted": []
+    },
+    {
+      "round": 5,
+      "compacted": true,
+      "visible_evidence": [
+        "e1",
+        "e2",
+        "e3"
+      ],
+      "shelf": [
+        "e1"
+      ],
+      "shelf_evicted": []
+    },
+    {
+      "round": 6,
+      "compacted": true,
+      "visible_evidence": [
+        "e1",
+        "e2",
+        "e3"
+      ],
+      "shelf": [
+        "e1",
+        "e2"
+      ],
+      "shelf_evicted": []
+    },
+    {
+      "round": 7,
+      "compacted": true,
+      "visible_evidence": [
+        "e1",
+        "e2",
+        "e3"
+      ],
+      "shelf": [
+        "e1",
+        "e2",
+        "e3"
+      ],
+      "shelf_evicted": []
+    },
+    {
+      "round": 8,
+      "compacted": true,
+      "visible_evidence": [
+        "e1",
+        "e2",
+        "e3"
+      ],
+      "shelf": [
+        "e1",
+        "e2",
+        "e3"
+      ],
+      "shelf_evicted": []
+    },
+    {
+      "round": 9,
+      "compacted": false,
+      "visible_evidence": [
+        "e1",
+        "e2",
+        "e3"
+      ],
+      "shelf": [
+        "e1",
+        "e2",
+        "e3"
+      ],
+      "shelf_evicted": []
+    },
+    {
+      "round": 10,
+      "compacted": false,
+      "visible_evidence": [
+        "e1",
+        "e2",
+        "e3"
+      ],
+      "shelf": [
+        "e1",
+        "e2",
+        "e3"
+      ],
+      "shelf_evicted": []
+    }
+  ],
+  "delivered_refs": [
+    "e1",
+    "e2",
+    "e3"
+  ],
+  "submitted_refs": [
+    "e2",
+    "e3"
+  ],
+  "text_included": true,
+  "limitations": [
+    "Equivalence is compiler equality, not semantic identity or wasted-search proof",
+    "Raw-window visibility/selection is not entailment or complete evidence coverage",
+    "No live q26 replay or independent answer scoring is performed"
+  ]
+}

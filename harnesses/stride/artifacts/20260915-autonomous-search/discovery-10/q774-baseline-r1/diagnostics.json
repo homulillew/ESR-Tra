@@ -1,0 +1,710 @@
+{
+  "protocol": "stride-search-3",
+  "head": "30e801cfe1c6cdb450add883f9e2772319ef1a9bb0b0cb6862af6578fde251dd",
+  "outcome": "abstained",
+  "formal_correct": null,
+  "model_attempts": 12,
+  "backend_attempts": 21,
+  "queries": [
+    {
+      "round": 1,
+      "top_k": 8,
+      "equivalence_key": "f75b4198a59a45300e437504da188d4b1fecb5e9997cf1d4195f009bd39a5f16",
+      "cached": false,
+      "query_sha256": "beef24844ed4b52ea68fbd8a2f657a9959d9c2686f015fd2627b4fa968f68b1c",
+      "query": "character married three times only one child survives series",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"character\" OR \"married\" OR \"three\" OR \"times\" OR \"only\" OR \"one\" OR \"child\" OR \"survives\" OR \"series\"",
+        "terms": [
+          "character",
+          "married",
+          "three",
+          "times",
+          "only",
+          "one",
+          "child",
+          "survives",
+          "series"
+        ]
+      }
+    },
+    {
+      "round": 1,
+      "top_k": 8,
+      "equivalence_key": "30ee343247f70634ab23b521e3fe17048f85fdd0e247d861118b23bb7bcb54f5",
+      "cached": false,
+      "query_sha256": "a9cd72f798b046ab5bbcd34c66dc56f90d37acc0f50fc91ee48ef74529d72398",
+      "query": "actor plays alongside real life relative unrelated in series",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"actor\" OR \"plays\" OR \"alongside\" OR \"real\" OR \"life\" OR \"relative\" OR \"unrelated\" OR \"in\" OR \"series\"",
+        "terms": [
+          "actor",
+          "plays",
+          "alongside",
+          "real",
+          "life",
+          "relative",
+          "unrelated",
+          "in",
+          "series"
+        ]
+      }
+    },
+    {
+      "round": 1,
+      "top_k": 8,
+      "equivalence_key": "9b1e806b0ca21dcda28e151407bd2163ee0c9c042a19be3a5d3e00316048bda8",
+      "cached": false,
+      "query_sha256": "e52a8b89a4020071f6d9f55c0222107caf24d0b2c32f6497ae8183a6f17dc04d",
+      "query": "soap opera character married multiple times one surviving child",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"soap\" OR \"opera\" OR \"character\" OR \"married\" OR \"multiple\" OR \"times\" OR \"one\" OR \"surviving\" OR \"child\"",
+        "terms": [
+          "soap",
+          "opera",
+          "character",
+          "married",
+          "multiple",
+          "times",
+          "one",
+          "surviving",
+          "child"
+        ]
+      }
+    },
+    {
+      "round": 2,
+      "top_k": 8,
+      "equivalence_key": "c9328d898aca2f467d0e1fb8f5e941b8db7299af9b142090804e96d0ecd94381",
+      "cached": false,
+      "query_sha256": "7f211789dc59b207ba33675e10c99e69b0aa2dfe13cac3996172bbc076442d50",
+      "query": "character married three times only one child survives telenovela actor real life relative",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"character\" OR \"married\" OR \"three\" OR \"times\" OR \"only\" OR \"one\" OR \"child\" OR \"survives\" OR \"telenovela\" OR \"actor\" OR \"real\" OR \"life\" OR \"relative\"",
+        "terms": [
+          "character",
+          "married",
+          "three",
+          "times",
+          "only",
+          "one",
+          "child",
+          "survives",
+          "telenovela",
+          "actor",
+          "real",
+          "life",
+          "relative"
+        ]
+      }
+    },
+    {
+      "round": 2,
+      "top_k": 8,
+      "equivalence_key": "45b19e6e200aa649aa9a54447c01bb7d0e28ed9fd8febea63083f4de9d778cea",
+      "cached": false,
+      "query_sha256": "3124bf419d63ef16d2f283908d8fdf067eabaf58d66084f9550c8521dcaa88a7",
+      "query": "long running TV series character widowed multiple marriages one surviving child actor sibling",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"long\" OR \"running\" OR \"tv\" OR \"series\" OR \"character\" OR \"widowed\" OR \"multiple\" OR \"marriages\" OR \"one\" OR \"surviving\" OR \"child\" OR \"actor\" OR \"sibling\"",
+        "terms": [
+          "long",
+          "running",
+          "tv",
+          "series",
+          "character",
+          "widowed",
+          "multiple",
+          "marriages",
+          "one",
+          "surviving",
+          "child",
+          "actor",
+          "sibling"
+        ]
+      }
+    },
+    {
+      "round": 2,
+      "top_k": 8,
+      "equivalence_key": "11cee4f7f8f99d2c3cff6c68e70a66790247be8aa73b2fc028c19d052de396bb",
+      "cached": false,
+      "query_sha256": "8c2d4a64babeea122d91d7b0044ac61b9d8e4f9f34721a299b4f829e61fdde4a",
+      "query": "Grey's Anatomy character married multiple times one child survives actor real life relative",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"grey\" OR \"s\" OR \"anatomy\" OR \"character\" OR \"married\" OR \"multiple\" OR \"times\" OR \"one\" OR \"child\" OR \"survives\" OR \"actor\" OR \"real\" OR \"life\" OR \"relative\"",
+        "terms": [
+          "grey",
+          "s",
+          "anatomy",
+          "character",
+          "married",
+          "multiple",
+          "times",
+          "one",
+          "child",
+          "survives",
+          "actor",
+          "real",
+          "life",
+          "relative"
+        ]
+      }
+    },
+    {
+      "round": 3,
+      "top_k": 8,
+      "equivalence_key": "b8030aa28281f22f421de7be19e4e37be194e73c8b3bf7392065121b1ea51d35",
+      "cached": false,
+      "query_sha256": "1703816665ab917ed64fe7c4ccc400c512f076c0bb01f97543b01a1f9842d4ff",
+      "query": "actor real life daughter plays unrelated character same series",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"actor\" OR \"real\" OR \"life\" OR \"daughter\" OR \"plays\" OR \"unrelated\" OR \"character\" OR \"same\" OR \"series\"",
+        "terms": [
+          "actor",
+          "real",
+          "life",
+          "daughter",
+          "plays",
+          "unrelated",
+          "character",
+          "same",
+          "series"
+        ]
+      }
+    },
+    {
+      "round": 3,
+      "top_k": 8,
+      "equivalence_key": "5c68ed2165e8c858fcfa77cea3db5778a82fa3e3619fdde80875d82a6a67d6cf",
+      "cached": false,
+      "query_sha256": "0ae5ec3fa7476c33df8cd278677e3da28eaf4fcbf7d8de2a65e83eeb99a32138",
+      "query": "character married three times one child dies one survives series",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"character\" OR \"married\" OR \"three\" OR \"times\" OR \"one\" OR \"child\" OR \"dies\" OR \"survives\" OR \"series\"",
+        "terms": [
+          "character",
+          "married",
+          "three",
+          "times",
+          "one",
+          "child",
+          "dies",
+          "survives",
+          "series"
+        ]
+      }
+    },
+    {
+      "round": 3,
+      "top_k": 8,
+      "equivalence_key": "6de23ba03a06fd14b2394307e6e03d548b9d993a16c68b80f49d9e49d709c0a2",
+      "cached": false,
+      "query_sha256": "63deae5fd89120a2f685b8ea08c42d9e8c1b104471dee19c3dc11182fc0b4171",
+      "query": "long running drama character lost children multiple marriages",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"long\" OR \"running\" OR \"drama\" OR \"character\" OR \"lost\" OR \"children\" OR \"multiple\" OR \"marriages\"",
+        "terms": [
+          "long",
+          "running",
+          "drama",
+          "character",
+          "lost",
+          "children",
+          "multiple",
+          "marriages"
+        ]
+      }
+    },
+    {
+      "round": 4,
+      "top_k": 8,
+      "equivalence_key": "82513d8fd286f02ca78a541e59794b8b36fdc79c2c3ec3c5644130235661b756",
+      "cached": false,
+      "query_sha256": "fa7c0666837348bc1cdb4b3c4c1b1049fcb8e3b0313b5d50dd0c1e14559ad54b",
+      "query": "El Señor de los Cielos character married multiple times children died",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"el\" OR \"señor\" OR \"de\" OR \"los\" OR \"cielos\" OR \"character\" OR \"married\" OR \"multiple\" OR \"times\" OR \"children\" OR \"died\"",
+        "terms": [
+          "el",
+          "señor",
+          "de",
+          "los",
+          "cielos",
+          "character",
+          "married",
+          "multiple",
+          "times",
+          "children",
+          "died"
+        ]
+      }
+    },
+    {
+      "round": 4,
+      "top_k": 8,
+      "equivalence_key": "aa5456d12f601b4d5611c307743a9364360f334e2cebdd5032ff0ff88a180c21",
+      "cached": false,
+      "query_sha256": "04ac3f12540466c11b769b862c9a551aba603f231edfc8a4cb73921c6e24c917",
+      "query": "telenovela character married three times one child survives actor real life relative",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"telenovela\" OR \"character\" OR \"married\" OR \"three\" OR \"times\" OR \"one\" OR \"child\" OR \"survives\" OR \"actor\" OR \"real\" OR \"life\" OR \"relative\"",
+        "terms": [
+          "telenovela",
+          "character",
+          "married",
+          "three",
+          "times",
+          "one",
+          "child",
+          "survives",
+          "actor",
+          "real",
+          "life",
+          "relative"
+        ]
+      }
+    },
+    {
+      "round": 4,
+      "top_k": 8,
+      "equivalence_key": "ab74f1dd50c9c5a8ca3d1d1ccba7a3df2907158b9cebc5b39923173b34e9705e",
+      "cached": false,
+      "query_sha256": "2daabc069dd635e24188948abab9e6c8103cbb6905fbb260da772c0c0c2c022c",
+      "query": "actor height 1.68 m telenovela real life daughter plays unrelated character",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"actor\" OR \"height\" OR \"1\" OR \"68\" OR \"m\" OR \"telenovela\" OR \"real\" OR \"life\" OR \"daughter\" OR \"plays\" OR \"unrelated\" OR \"character\"",
+        "terms": [
+          "actor",
+          "height",
+          "1",
+          "68",
+          "m",
+          "telenovela",
+          "real",
+          "life",
+          "daughter",
+          "plays",
+          "unrelated",
+          "character"
+        ]
+      }
+    },
+    {
+      "round": 5,
+      "top_k": 8,
+      "equivalence_key": "b8ef6557be104a8318b73e83d8d5b444c86ea093c3863c0596083ddefec3ec05",
+      "cached": false,
+      "query_sha256": "087399d7066a8fc5d6957b00632b50e614439e5c64c9f85724915bc1047c85b9",
+      "query": "Aurelio Casillas wives marriages children died El Señor de los Cielos",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"aurelio\" OR \"casillas\" OR \"wives\" OR \"marriages\" OR \"children\" OR \"died\" OR \"el\" OR \"señor\" OR \"de\" OR \"los\" OR \"cielos\"",
+        "terms": [
+          "aurelio",
+          "casillas",
+          "wives",
+          "marriages",
+          "children",
+          "died",
+          "el",
+          "señor",
+          "de",
+          "los",
+          "cielos"
+        ]
+      }
+    },
+    {
+      "round": 5,
+      "top_k": 8,
+      "equivalence_key": "df157a72cd804f9ccc539f82908e99db30a5eddfbbb23ffb7a3a0f2b0b8f3388",
+      "cached": false,
+      "query_sha256": "6c1de9df5b6cc86b2ad5f735090328b454d76afee86dbdee3547a24d2e5d7561",
+      "query": "El Señor de los Cielos cast real life relatives siblings",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"el\" OR \"señor\" OR \"de\" OR \"los\" OR \"cielos\" OR \"cast\" OR \"real\" OR \"life\" OR \"relatives\" OR \"siblings\"",
+        "terms": [
+          "el",
+          "señor",
+          "de",
+          "los",
+          "cielos",
+          "cast",
+          "real",
+          "life",
+          "relatives",
+          "siblings"
+        ]
+      }
+    },
+    {
+      "round": 5,
+      "top_k": 8,
+      "equivalence_key": "5e2710e64cd1271bba5d225d842f637e63db8ecf1b072263922c0b5edf8f1631",
+      "cached": false,
+      "query_sha256": "2ad9ef0dc3bbf0b2d29b080ad0ff55499805bb883f25ca7d95d59bf2a1a5894f",
+      "query": "Rafael Amaya height Aurelio Casillas actor",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"rafael\" OR \"amaya\" OR \"height\" OR \"aurelio\" OR \"casillas\" OR \"actor\"",
+        "terms": [
+          "rafael",
+          "amaya",
+          "height",
+          "aurelio",
+          "casillas",
+          "actor"
+        ]
+      }
+    },
+    {
+      "round": 6,
+      "top_k": 8,
+      "equivalence_key": "e9fc2d1bfe91ce1bd7f1dc61019341a840067fac9338ad689f2107faf09e8d9d",
+      "cached": false,
+      "query_sha256": "6f9ac9ae7ef0b017eddd7ca5944ac3a4c00a7a2f6fcf7565300cf0c8e4b8ce21",
+      "query": "El Señor de los Cielos Wikipedia Aurelio Casillas character",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"el\" OR \"señor\" OR \"de\" OR \"los\" OR \"cielos\" OR \"wikipedia\" OR \"aurelio\" OR \"casillas\" OR \"character\"",
+        "terms": [
+          "el",
+          "señor",
+          "de",
+          "los",
+          "cielos",
+          "wikipedia",
+          "aurelio",
+          "casillas",
+          "character"
+        ]
+      }
+    },
+    {
+      "round": 6,
+      "top_k": 8,
+      "equivalence_key": "2335c0d806cab7ac49012b48dc652397c8b29042b217b832037cac2844e92d8a",
+      "cached": false,
+      "query_sha256": "f3e95a47b18faaffa5657664c5c3ab667e3ae2f4d86c12f8ac9de75b23b0864d",
+      "query": "Aurelio Casillas wives children El Señor de los Cielos",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"aurelio\" OR \"casillas\" OR \"wives\" OR \"children\" OR \"el\" OR \"señor\" OR \"de\" OR \"los\" OR \"cielos\"",
+        "terms": [
+          "aurelio",
+          "casillas",
+          "wives",
+          "children",
+          "el",
+          "señor",
+          "de",
+          "los",
+          "cielos"
+        ]
+      }
+    },
+    {
+      "round": 6,
+      "top_k": 8,
+      "equivalence_key": "385a120270cc9b8e737041dfa8455010e3fcf26d91fd4fa918afec82fc45f453",
+      "cached": false,
+      "query_sha256": "7effb3c6e045f1aedfa84c9f3e4b53d6bc19c018365b1e3c8630ddebacf2c87c",
+      "query": "El Señor de los Cielos seasons cast Rafael Amaya",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"el\" OR \"señor\" OR \"de\" OR \"los\" OR \"cielos\" OR \"seasons\" OR \"cast\" OR \"rafael\" OR \"amaya\"",
+        "terms": [
+          "el",
+          "señor",
+          "de",
+          "los",
+          "cielos",
+          "seasons",
+          "cast",
+          "rafael",
+          "amaya"
+        ]
+      }
+    },
+    {
+      "round": 7,
+      "top_k": 8,
+      "equivalence_key": "e305b7854fd03a6ff59003d84c557071b4d0a5e38f0af4163c2bd0777a2bb0bc",
+      "cached": false,
+      "query_sha256": "b469d8a0e8b9d7aa45b33e054f12cb161fa9c3a0f3475feb1c8b3156da051093",
+      "query": "El Señor de los Cielos Wikipedia",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"el\" OR \"señor\" OR \"de\" OR \"los\" OR \"cielos\" OR \"wikipedia\"",
+        "terms": [
+          "el",
+          "señor",
+          "de",
+          "los",
+          "cielos",
+          "wikipedia"
+        ]
+      }
+    },
+    {
+      "round": 7,
+      "top_k": 8,
+      "equivalence_key": "a32dfc7d1c0ecda088cd0b86bcd51f726eda1e3b63cea1075504630aa0978195",
+      "cached": false,
+      "query_sha256": "0108390ed080529c9fe88d3740aaa669a0c165c137555e3acafab194c75d5f64",
+      "query": "Aurelio Casillas character wives children",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"aurelio\" OR \"casillas\" OR \"character\" OR \"wives\" OR \"children\"",
+        "terms": [
+          "aurelio",
+          "casillas",
+          "character",
+          "wives",
+          "children"
+        ]
+      }
+    },
+    {
+      "round": 7,
+      "top_k": 8,
+      "equivalence_key": "1fb90b905dc141a91b89bdfa4f0df936e15f44edaabd680101186ffa87c0801c",
+      "cached": false,
+      "query_sha256": "d804387dfbe150c80ebe234f7f14576c323e2d69763cfafe752b4ae41f55d5ad",
+      "query": "Rafael Amaya height actor",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"rafael\" OR \"amaya\" OR \"height\" OR \"actor\"",
+        "terms": [
+          "rafael",
+          "amaya",
+          "height",
+          "actor"
+        ]
+      }
+    },
+    {
+      "round": 8,
+      "top_k": 8,
+      "equivalence_key": "e305b7854fd03a6ff59003d84c557071b4d0a5e38f0af4163c2bd0777a2bb0bc",
+      "cached": true,
+      "query_sha256": "b469d8a0e8b9d7aa45b33e054f12cb161fa9c3a0f3475feb1c8b3156da051093",
+      "query": "El Señor de los Cielos Wikipedia",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"el\" OR \"señor\" OR \"de\" OR \"los\" OR \"cielos\" OR \"wikipedia\"",
+        "terms": [
+          "el",
+          "señor",
+          "de",
+          "los",
+          "cielos",
+          "wikipedia"
+        ]
+      }
+    },
+    {
+      "round": 8,
+      "top_k": 8,
+      "equivalence_key": "a32dfc7d1c0ecda088cd0b86bcd51f726eda1e3b63cea1075504630aa0978195",
+      "cached": true,
+      "query_sha256": "0108390ed080529c9fe88d3740aaa669a0c165c137555e3acafab194c75d5f64",
+      "query": "Aurelio Casillas character wives children",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"aurelio\" OR \"casillas\" OR \"character\" OR \"wives\" OR \"children\"",
+        "terms": [
+          "aurelio",
+          "casillas",
+          "character",
+          "wives",
+          "children"
+        ]
+      }
+    },
+    {
+      "round": 8,
+      "top_k": 8,
+      "equivalence_key": "1fb90b905dc141a91b89bdfa4f0df936e15f44edaabd680101186ffa87c0801c",
+      "cached": true,
+      "query_sha256": "d804387dfbe150c80ebe234f7f14576c323e2d69763cfafe752b4ae41f55d5ad",
+      "query": "Rafael Amaya height actor",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"rafael\" OR \"amaya\" OR \"height\" OR \"actor\"",
+        "terms": [
+          "rafael",
+          "amaya",
+          "height",
+          "actor"
+        ]
+      }
+    },
+    {
+      "round": 9,
+      "top_k": 8,
+      "equivalence_key": "e305b7854fd03a6ff59003d84c557071b4d0a5e38f0af4163c2bd0777a2bb0bc",
+      "cached": true,
+      "query_sha256": "b469d8a0e8b9d7aa45b33e054f12cb161fa9c3a0f3475feb1c8b3156da051093",
+      "query": "El Señor de los Cielos Wikipedia",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"el\" OR \"señor\" OR \"de\" OR \"los\" OR \"cielos\" OR \"wikipedia\"",
+        "terms": [
+          "el",
+          "señor",
+          "de",
+          "los",
+          "cielos",
+          "wikipedia"
+        ]
+      }
+    },
+    {
+      "round": 9,
+      "top_k": 8,
+      "equivalence_key": "a32dfc7d1c0ecda088cd0b86bcd51f726eda1e3b63cea1075504630aa0978195",
+      "cached": true,
+      "query_sha256": "0108390ed080529c9fe88d3740aaa669a0c165c137555e3acafab194c75d5f64",
+      "query": "Aurelio Casillas character wives children",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"aurelio\" OR \"casillas\" OR \"character\" OR \"wives\" OR \"children\"",
+        "terms": [
+          "aurelio",
+          "casillas",
+          "character",
+          "wives",
+          "children"
+        ]
+      }
+    },
+    {
+      "round": 9,
+      "top_k": 8,
+      "equivalence_key": "1fb90b905dc141a91b89bdfa4f0df936e15f44edaabd680101186ffa87c0801c",
+      "cached": true,
+      "query_sha256": "d804387dfbe150c80ebe234f7f14576c323e2d69763cfafe752b4ae41f55d5ad",
+      "query": "Rafael Amaya height actor",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"rafael\" OR \"amaya\" OR \"height\" OR \"actor\"",
+        "terms": [
+          "rafael",
+          "amaya",
+          "height",
+          "actor"
+        ]
+      }
+    }
+  ],
+  "equivalent_query_repeats": 6,
+  "views": [
+    {
+      "round": 1,
+      "compacted": false,
+      "visible_evidence": [],
+      "shelf": [],
+      "shelf_evicted": []
+    },
+    {
+      "round": 2,
+      "compacted": false,
+      "visible_evidence": [],
+      "shelf": [],
+      "shelf_evicted": []
+    },
+    {
+      "round": 3,
+      "compacted": false,
+      "visible_evidence": [],
+      "shelf": [],
+      "shelf_evicted": []
+    },
+    {
+      "round": 4,
+      "compacted": false,
+      "visible_evidence": [],
+      "shelf": [],
+      "shelf_evicted": []
+    },
+    {
+      "round": 5,
+      "compacted": false,
+      "visible_evidence": [],
+      "shelf": [],
+      "shelf_evicted": []
+    },
+    {
+      "round": 6,
+      "compacted": true,
+      "visible_evidence": [],
+      "shelf": [],
+      "shelf_evicted": []
+    },
+    {
+      "round": 7,
+      "compacted": true,
+      "visible_evidence": [],
+      "shelf": [],
+      "shelf_evicted": []
+    },
+    {
+      "round": 8,
+      "compacted": true,
+      "visible_evidence": [],
+      "shelf": [],
+      "shelf_evicted": []
+    },
+    {
+      "round": 9,
+      "compacted": true,
+      "visible_evidence": [],
+      "shelf": [],
+      "shelf_evicted": []
+    },
+    {
+      "round": 10,
+      "compacted": false,
+      "visible_evidence": [],
+      "shelf": [],
+      "shelf_evicted": []
+    },
+    {
+      "round": 11,
+      "compacted": false,
+      "visible_evidence": [],
+      "shelf": [],
+      "shelf_evicted": []
+    },
+    {
+      "round": 12,
+      "compacted": false,
+      "visible_evidence": [],
+      "shelf": [],
+      "shelf_evicted": []
+    }
+  ],
+  "delivered_refs": [],
+  "submitted_refs": [],
+  "text_included": true,
+  "limitations": [
+    "Equivalence is compiler equality, not semantic identity or wasted-search proof",
+    "Raw-window visibility/selection is not entailment or complete evidence coverage",
+    "No live q26 replay or independent answer scoring is performed"
+  ]
+}
