@@ -36,6 +36,10 @@ def build(harness, model, counter, *, final: bool, output_limit: int, groups=Non
             documents.append({"ref": ref, "title": doc["title"][:160], "read_ranges": [
                 {"ref": v["ref"], "start": v["start"], "end": v["end"]} for v in ranges]})
         policy = system_message(harness.answer_contract) + (POLICY if harness.workflow.options.enabled else "") + PROTOCOLS[harness.decision_protocol]
+        if harness.search_raw is not None:
+            from .search_raw import SYSTEM_INSTRUCTION
+            policy = policy.replace("Search/find/recall excerpts are navigation, not citable evidence.",
+                "Search/find/recall snippets are navigation, not citable evidence.") + SYSTEM_INSTRUCTION
         messages = [{"role": "system", "content": policy}, {"role": "user", "content": harness.question}]
         visible, issued = set(), list(nav)
         history_view = None
@@ -89,6 +93,9 @@ def build(harness, model, counter, *, final: bool, output_limit: int, groups=Non
         messages.append({"role": "user", "content": "Current control state (data, not source evidence):\n" + canonical(scope)})
         tools = toolset(harness.workflow.options, notes_enabled=config.notes_enabled, final=effective_final,
             query_limit=config.max_queries_per_search, answer_contract=harness.answer_contract)
+        if harness.search_raw is not None:
+            from .search_raw import adapt_tools
+            tools = adapt_tools(tools)
         review_state, review_audit = None, None
         if harness.relation_review is not None:
             review_state = harness.relation_review.project(history, visible, harness.model_calls,

@@ -1,0 +1,64 @@
+{
+  "command": "python -m pytest harnesses/stride/tests harnesses/stride/examples -q --tb=short (unique private basetemp and JUnit XML)",
+  "final_regression": {
+    "tests": "535",
+    "failures": "0",
+    "errors": "0",
+    "skipped": "0",
+    "time": "206.936",
+    "timestamp": "2026-09-15T23:17:58.748752+08:00",
+    "xml_sha256": "ae12d9d69493c6f1f1523bd8d54190f7bad46fd2b399ac4ab70ca10beb3d18ff",
+    "log_sha256": "f1f813c0ed1aefa318201413ecf9a9a5234b9212cce55042a3a89ede6979b7c2"
+  },
+  "targeted": {
+    "tests": "24",
+    "failures": "0",
+    "errors": "0",
+    "skipped": "0",
+    "time": "12.497",
+    "timestamp": "2026-09-15T23:16:52.988261+08:00",
+    "xml_sha256": "09515a64e9b93f148d39f4f00f167dbee5ad82198c1e1a4ba254364e17d47098",
+    "log_sha256": "507115c428a62eb4d4d89bca58ef13103467d6933fc429c87594b1d9302bcfea"
+  },
+  "new_glm_requests": 0,
+  "loopback_proxy_bypass": true,
+  "development_checks": [
+    {
+      "result": {
+        "tests": "489",
+        "failures": "8",
+        "errors": "0",
+        "skipped": "0",
+        "time": "166.433",
+        "timestamp": "2026-09-15T23:08:38.269221+08:00",
+        "xml_sha256": "b1d0f44e6485ee190b63ea43e3b6ee7d93280c4d447c4d5966e8d723f2f82296",
+        "log_sha256": "3df9cb87931eb3a1c7c6e564f687d2d309d29f5220f5a31e7874fc6c8daa3bc5"
+      },
+      "scope": "harnesses/stride/tests",
+      "issue": "Eight existing loopback HTTP fixtures failed with the inherited proxy environment; later runs used explicit loopback bypass."
+    },
+    {
+      "result": {
+        "tests": "535",
+        "failures": "2",
+        "errors": "0",
+        "skipped": "0",
+        "time": "212.784",
+        "timestamp": "2026-09-15T23:12:24.699689+08:00",
+        "xml_sha256": "6165aa446dd40a73233e27de9b51674af4ffc5648b79ff19aa8a5e4004279bcf",
+        "log_sha256": "25fd5a25ca45e6ebe00f2264f205872d935f85b7d1838c6f37c9c16d1990eb58"
+      },
+      "scope": "harnesses/stride/tests plus examples",
+      "issue": "Two new clock fixtures advanced to 601 seconds while Config defaulted to 900. Fixtures now explicitly set the experimental 600-second limit; no production clock change."
+    }
+  ],
+  "independent_review": "No blocker found. Added checks for before/after acquisition deadlines and a withheld window followed by repeated search and native read.",
+  "budget_before_refresh": {
+    "epoch": "autonomous-search-20260915",
+    "cap": 1643,
+    "used": 1413,
+    "epoch_used": 770,
+    "remaining": 230
+  },
+  "online_status_at_freeze": "NOT_RUN: waiting for the user-authorized Beijing 2026-09-16 00:00 refresh; no approval pending"
+}

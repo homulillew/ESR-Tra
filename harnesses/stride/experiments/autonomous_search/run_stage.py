@@ -51,11 +51,13 @@ def sources():
               ROOT / 'harnesses/stride/tests/test_review_memory.py',
               ROOT / 'harnesses/stride/tests/test_read_only.py',
               ROOT / 'harnesses/stride/tests/test_read_only_explicit.py',
+              ROOT / 'harnesses/stride/tests/test_search_raw.py',
+              ROOT / 'harnesses/stride/tests/test_search_raw_integration.py',
               ROOT / 'harnesses/stride/tests/test_stage_publication.py']
     return {p.relative_to(ROOT).as_posix(): sha(p) for p in sorted(paths)}
 
 
-def prepare(manifest, target, qids, protocol, repeats=1, reverse=False):
+def prepare(manifest, target, qids, protocol, repeats=1, reverse=False, epoch=EPOCH):
     m = original_manifest(manifest); inventory = read(CASES / 'MANIFEST.sha256.json')
     slots = []
     for rep in range(repeats):
@@ -73,7 +75,7 @@ def prepare(manifest, target, qids, protocol, repeats=1, reverse=False):
     try: require(backend.identity == m['index_identity'], 'CPU index identity')
     finally: backend.close()
     target = Path(target); target.mkdir(parents=True, exist_ok=False)
-    plan = dict(epoch=EPOCH, stage=target.name, source_sha256=sources(), slots=slots,
+    plan = dict(epoch=epoch, stage=target.name, source_sha256=sources(), slots=slots,
         private_manifest_sha256=sha(manifest), index_identity=m['index_identity'],
         model={k:v for k,v in m['model_identity'].items() if k != 'endpoint'},
         policy_cap=sum(s['config']['max_model_calls'] for s in slots), judge_cap=len(slots),
@@ -233,6 +235,7 @@ if __name__=='__main__':
     p.add_argument('--private-manifest',required=True);p.add_argument('--output',required=True)
     p.add_argument('--plan');p.add_argument('--gold');p.add_argument('--qids',type=int,nargs='+')
     p.add_argument('--protocol',default='constraint-review-v1');p.add_argument('--repeats',type=int,default=1)
+    p.add_argument('--epoch',default=EPOCH,help='Existing authorized ledger epoch; preparation never renews allowance')
     p.add_argument('--reverse',action='store_true');a=p.parse_args()
-    if a.command=='prepare':prepare(a.private_manifest,a.output,a.qids,a.protocol,a.repeats,a.reverse)
+    if a.command=='prepare':prepare(a.private_manifest,a.output,a.qids,a.protocol,a.repeats,a.reverse,a.epoch)
     else:run(a.plan,a.private_manifest,a.output,a.gold)

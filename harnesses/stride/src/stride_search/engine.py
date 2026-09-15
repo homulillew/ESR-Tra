@@ -30,6 +30,10 @@ class Harness:
         self.once_prose = OnceProseState() if decision_protocol == "once-prose-reset-v1" else None
         self.relation_review = RelationReviewState() if decision_protocol in {"relation-review-once-v1", "relation-review-memory-v1"} else None
         self.read_only = OnceProseState() if decision_protocol in {"read-only-once-v1", "read-only-explicit-v1"} else None
+        self.search_raw = None
+        if decision_protocol == "search-raw-window-v1":
+            from .search_raw import SearchRawState
+            self.search_raw = SearchRawState()
         self.review_memory = None
         self.workflow = WorkflowState(workflow or WorkflowConfig())
         if answer_contract not in ANSWER_CONTRACTS:
@@ -338,7 +342,17 @@ class Harness:
                 if self.config.reserve_finish and name != "finish" and self.config.max_actions - self.action_slots <= 1: raise ContractError("finish_slot_reserved", "One action slot is reserved for an explicit finish")
                 self.action_slots += 1; charged_slot = True; args = loads(arguments)
                 validate_call(self.workflow.options, name, args, feedback=self.validation_feedback, answer_contract=self.answer_contract)
-                executed = True; result, docs, evidence = self._dispatch(name, args, binding); result = {"ok": True, **result}
+                executed = True; result, docs, evidence = self._dispatch(name, args, binding)
+                if name == "search" and self.search_raw is not None:
+                    try:
+                        result, evidence = self.search_raw.attach(self, result,
+                            round_no=round_no, call_id=call["id"])
+                    except ContractError:
+                        # Partial search/navigation remains in the archive; a failed
+                        # compound call does not deliver its document or window scope.
+                        docs, evidence = [], []
+                        raise
+                result = {"ok": True, **result}
             except ContractError as exc:
                 previous_error = True
                 if exc.fatal: fatal = exc.code

@@ -111,6 +111,7 @@ finally:
 - [CPU_EVIDENCE_A3](docs/CPU_EVIDENCE_A3.md)：q26 bad case 驱动的 CPU/原文连续性迭代。
 - [EXPERIMENTS](docs/EXPERIMENTS.md)：冻结对照与独立判分。
 - [VALIDATION_A3](docs/VALIDATION_A3.md)：a3 实际验证与未执行项。
+- [搜索附带有限原文实验](experiments/autonomous_search/SEARCH_RAW_PLAN.md)：可选 `--decision-protocol search-raw-window-v1`，从搜索首项自动取得受限原文窗口；额外获取按真实后端成本记录，仍须实际交付后才能引用。默认 `baseline` 行为不变，效果以真实对照结果为准。
 
 ## 明确限制
 
