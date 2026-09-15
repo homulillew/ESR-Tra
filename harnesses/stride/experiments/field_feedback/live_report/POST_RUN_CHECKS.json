@@ -1,0 +1,88 @@
+{
+  "checks": [
+    {
+      "slot": "A1",
+      "archive": {
+        "event_count": 107,
+        "head": "42dd07c5727c95bf48aa4087266aff9057a71e5b4aa3620cab155d4501219cf7"
+      },
+      "all_4_wire_and_response_pairs_match_archive": true,
+      "e1_exactly_equals_original_delivered_window": true,
+      "e1_visible_in_all_4_new_requests": true,
+      "error_receipt_matches_control_feedback_in_all_4_requests": true,
+      "model_identity_all_match": true,
+      "no_harness_terminal_fabricated": true,
+      "first_sent_request_matches_frozen_sha256": true
+    },
+    {
+      "slot": "B1",
+      "archive": {
+        "event_count": 107,
+        "head": "af782876f4124f0189698ecbadd56db0ce51f9cb4153c947bd76b61672c59444"
+      },
+      "all_4_wire_and_response_pairs_match_archive": true,
+      "e1_exactly_equals_original_delivered_window": true,
+      "e1_visible_in_all_4_new_requests": true,
+      "error_receipt_matches_control_feedback_in_all_4_requests": true,
+      "model_identity_all_match": true,
+      "no_harness_terminal_fabricated": true,
+      "first_sent_request_matches_frozen_sha256": true
+    },
+    {
+      "slot": "B2",
+      "archive": {
+        "event_count": 107,
+        "head": "ca9fd6e2839218fd4ee21a4ff43df5bcb17ea07107fa8a7581bc9124402d794d"
+      },
+      "all_4_wire_and_response_pairs_match_archive": true,
+      "e1_exactly_equals_original_delivered_window": true,
+      "e1_visible_in_all_4_new_requests": true,
+      "error_receipt_matches_control_feedback_in_all_4_requests": true,
+      "model_identity_all_match": true,
+      "no_harness_terminal_fabricated": true,
+      "first_sent_request_matches_frozen_sha256": true
+    },
+    {
+      "slot": "A2",
+      "archive": {
+        "event_count": 107,
+        "head": "0c0802b3f1cc5acc8782d756ca692701b82558c54f1474191a7e28b7174b0f25"
+      },
+      "all_4_wire_and_response_pairs_match_archive": true,
+      "e1_exactly_equals_original_delivered_window": true,
+      "e1_visible_in_all_4_new_requests": true,
+      "error_receipt_matches_control_feedback_in_all_4_requests": true,
+      "model_identity_all_match": true,
+      "no_harness_terminal_fabricated": true,
+      "first_sent_request_matches_frozen_sha256": true
+    }
+  ],
+  "actual_first_request_diff": {
+    "wire_difference_count": 2,
+    "decoded_difference_count": 2,
+    "differences": [
+      {
+        "wire_path": "/messages/9/content",
+        "decoded_path": "/message",
+        "before": "finish: invalid fields near []; follow the supplied schema",
+        "after": "finish: pointer \"/answer\" expected type string; received type integer."
+      },
+      {
+        "wire_path": "/messages/10/content",
+        "decoded_path": "/feedback/message",
+        "before": "finish: invalid fields near []; follow the supplied schema",
+        "after": "finish: pointer \"/answer\" expected type string; received type integer."
+      }
+    ],
+    "whitelist_passed": true,
+    "all_other_fields_unchanged": true,
+    "new_instruction_or_answer_example_added": false
+  },
+  "A1_A2_first_bytes_equal": true,
+  "B1_B2_first_bytes_equal": true,
+  "ledger_16_attempts_correspond_to_16_captured_sends": true,
+  "all_http_200": true,
+  "frozen_source_inventory_still_matches": true,
+  "new_judge_requests": 0,
+  "evidence_window_sha256": "d7b7a23b3eb780d78018e5fe30d91613c9769a1cff7564bb0a79c08614acb838"
+}

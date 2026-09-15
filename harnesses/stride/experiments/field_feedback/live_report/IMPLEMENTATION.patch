@@ -1,0 +1,498 @@
+diff --git a/harnesses/stride/experiments/field_feedback/live_pilot.py b/harnesses/stride/experiments/field_feedback/live_pilot.py
+new file mode 100644
+index 0000000..7e1b50c
+--- /dev/null
++++ b/harnesses/stride/experiments/field_feedback/live_pilot.py
+@@ -0,0 +1,300 @@
++"""Fixed-prefix real continuations; external observation limits, unchanged policy.
++
++The historical OFFLINE_ONLY plan is immutable. This separate entry point requires
++a new frozen plan and an existing shared ledger. No retries or historical suffixes.
++"""
++import argparse
++from copy import deepcopy
++import hashlib
++import os
++from pathlib import Path
++import subprocess
++import sys
++import time
++
++from stride_search.contract import ContractError, canonical
++from stride_search.cpu_index import SQLiteFTS5
++from stride_search.providers import HTTP, OpenAIModel
++
++from prefix_replay import (differences, load_prefix, next_payload, prefix_event_diff,
++                           replay, request_diff, state)
++from reproduce import read, sha, write
++
++ROOT = Path(__file__).resolve().parents[4]
++sys.path.insert(0, str(ROOT / 'harnesses/stride/examples'))
++from trace_question_a3 import Budget, CaptureOpener, utc
++
++ORDER = ('A1', 'B1', 'B2', 'A2')
++CASE = ROOT / 'harnesses/stride/artifacts/20260914-hard12-a3/q778'
++
++
++def require(condition, message):
++    if not condition:
++        raise ValueError(message)
++
++
++def inventory():
++    paths = list((ROOT / 'harnesses/stride/src/stride_search').glob('*.py'))
++    paths += list(Path(__file__).parent.glob('*.py'))
++    paths += [ROOT / 'harnesses/stride/examples/trace_question_a3.py']
++    paths += list((ROOT / 'harnesses/stride/tests').glob('test*field_feedback*.py'))
++    return {p.relative_to(ROOT).as_posix(): sha(p) for p in sorted(paths)}
++
++
++def original_manifest(path):
++    expected = read(CASE / 'SOURCE_FILE_HASHES.json')['manifest.json']
++    require(sha(path) == expected, 'Original private manifest hash mismatch')
++    m = read(path)
++    require(m['config'] == read(CASE / 'manifest.json')['config'], 'Original config mismatch')
++    require(m['model_identity']['temperature'] == 0, 'Unexpected temperature')
++    require(m['model_identity']['expected_response_model'], 'Missing returned model identity')
++    require(m['base_url'] == m['model_identity']['endpoint'], 'Deployment mismatch')
++    return m
++
++
++def verify_public():
++    for name, expected in read(CASE.parent / 'MANIFEST.sha256.json').items():
++        if name.startswith('q778/') or name == 'ARCHIVE_HEAD_MAP.json':
++            require(sha(CASE.parent / name) == expected, 'Published source integrity mismatch')
++
++
++def attach_live(h, model, backend, clock=time.monotonic):
++    """Switch adapters without touching discrete state, cache keys or policy inputs."""
++    require(backend.identity == h.retriever.identity, 'Backend identity changed')
++    require(backend.capabilities == h.search_capabilities, 'Backend capabilities changed')
++    require(not [d for d in differences(h.model_identity, model.identity)
++                 if d['path'] != '/endpoint'], 'Model configuration changed')
++    h.retriever = backend
++    h.model_identity = deepcopy(model.identity)
++    h.clock = clock
++    h.started = clock()  # New continuation origin; NOT historical elapsed time.
++    return h.started
++
++
++class GuardedCapture(CaptureOpener):
++    def __init__(self, *args, check=lambda: None, first_sha256=None, **kwargs):
++        super().__init__(*args, **kwargs)
++        self.check = check
++        self.first_sha256 = first_sha256
++
++    def open(self, request, timeout):
++        self.check()
++        if len(self.rows) >= 4:
++            raise ContractError('pilot_attempt_cap', 'External attempt cap', fatal=True)
++        if not self.rows and self.first_sha256:
++            require(hashlib.sha256(request.data).hexdigest() == self.first_sha256,
++                    'First outgoing body differs from frozen request')
++        return super().open(request, timeout)
++
++
++def continue_slot(h, model, capture, *, seconds=300, clock=time.monotonic):
++    """Observe up to four sends. Never manufacture a Harness terminal at the cap.
++
++    Check time between complete steps; bound every send by the remaining local
++    time. A transport timeout stops the queue. A completed step may include the
++    original bounded CPU work; no additional step starts after the deadline.
++    """
++    started = h.started
++    status = None
++    while h.terminal is None and len(capture.rows) < 4:
++        remaining = seconds - (clock() - started)
++        if remaining <= 0:
++            status = 'local_time_cap'
++            break
++        model.http.timeout = min(180, remaining)
++        try:
++            h._step(model)
++        except ContractError as exc:
++            status = exc.code
++            break
++        except Exception:
++            status = 'implementation_error'
++            break
++        if h.terminal is not None:
++            status = h.terminal['outcome']
++    status = status or 'local_continuation_cap'
++    return {'status': status, 'attempts': len(capture.rows),
++            'seconds': clock() - started,
++            'stop_queue': status not in ('submitted', 'abstained', 'local_continuation_cap', 'local_time_cap')}
++
++
++def prepare(private_manifest, private_output, report):
++    verify_public()
++    m = original_manifest(private_manifest)
++    private_output = Path(private_output); private_output.mkdir(parents=True, exist_ok=False)
++    report = Path(report); report.mkdir(parents=True, exist_ok=False)
++    tape = load_prefix(CASE)
++    a, ma = replay(tape, private_output / 'A.sqlite')
++    b, mb = replay(tape, private_output / 'B.sqlite', 'field')
++    try:
++        wa, wb = next_payload(a, ma), next_payload(b, mb)
++        require(canonical(wa).encode() == (CASE / 'http/005/request.body').read_bytes(), 'R5 mismatch')
++        require(not prefix_event_diff(tape['events'], list(a.archive.events())), 'Prefix event mismatch')
++        cid = tape['responses'][-1]['choices'][0]['message']['tool_calls'][0]['id']
++        diff = request_diff(wa, wb, cid)
++        sa, sb = state(a), state(b)
++        require({d['path'] for d in differences(sa, sb)} == {
++            '/groups/3/messages/1/content', '/group_refs/3', '/feedback/message'}, 'Unexpected state difference')
++        backend = SQLiteFTS5(m['index_path'], index_id=m['index_id'],
++                             timeout_seconds=m['index_identity']['query_timeout_seconds'])
++        try:
++            require(backend.identity == m['index_identity'] == a.retriever.identity, 'Index mismatch')
++        finally:
++            backend.close()
++        check = {'r5_bytes_exact': True, 'first_four_requests_exact': ma.comparisons,
++                 'discrete_state_equal_except_feedback': True, 'real_index_identity_matches': True,
++                 'index_queries': 0, 'real_model_requests': 0,
++                 'source_prefix_head': tape['events'][-1]['hash'], 'source_prefix_seq': 79}
++        write(report / 'PREFIX_CHECK.json', check)
++        write(report / 'REQUEST_DIFF.json', diff)
++        identity = {k: v for k, v in m['model_identity'].items() if k != 'endpoint'}
++        plan = {'kind': 'q778_fixed_prefix_continuation', 'authorization': 'explicit user approval before preparation',
++                'reviewed_parent': '80c0868c0987bb83f07f6290a4ae33219c274e9a',
++                'order': list(ORDER), 'max_attempts_per_slot': 4, 'max_total_attempts': 16,
++                'feedback': {'A': 'legacy', 'B': 'field'}, 'config': m['config'],
++                'remaining_after_prefix': a.remaining(), 'phase': 'RESEARCH',
++                'local_seconds': 300, 'http_timeout_ceiling': 180,
++                'time_semantics': 'New real monotonic origin after replay, same 300s observation window per slot. Check between complete steps; HTTP timeout <= remaining window. Original bounded CPU step may finish after window; no next step. Historical elapsed unknown, no UTC substitution.',
++                'historical_monotonic_elapsed': None, 'outer_caps_visible_to_model': False,
++                'model_identity': identity, 'index_identity': m['index_identity'],
++                'private_manifest_sha256': sha(private_manifest), 'source_sha256': inventory(),
++                'first_request_sha256': {k: hashlib.sha256(canonical(w).encode()).hexdigest()
++                                         for k, w in [('A', wa), ('B', wb)]},
++                'prefix_check_sha256': sha(report / 'PREFIX_CHECK.json'),
++                'request_diff_sha256': sha(report / 'REQUEST_DIFF.json'),
++                'budget': 'Existing original ledger only; atomic charge before send including failures/unknowns; no reset.',
++                'stop_queue_on': ['HTTP/transport/auth/rate-limit/timeout', 'truncation', 'identity mismatch',
++                                  'integrity failure', 'backend failure', 'insufficient budget'],
++                'automatic_retries': 0, 'judge_requests': 0, 'fill_unused_attempts': False,
++                'temperature_zero_deterministic': False, 'original_batch_labels_unchanged': True}
++        write(report / 'PLAN.json', plan)
++        (report / 'PLAN.sha256').write_bytes((sha(report / 'PLAN.json') + '\n').encode())
++    finally:
++        a.close(); b.close()
++
++
++def verify_plan(path):
++    path = Path(path)
++    require(sha(path) == path.with_suffix('.sha256').read_text().strip(), 'Frozen plan changed')
++    plan = read(path)
++    require(plan['source_sha256'] == inventory(), 'Frozen implementation changed')
++    require(plan['order'] == list(ORDER) and plan['max_total_attempts'] == 16
++            and plan['max_attempts_per_slot'] == 4 and plan['local_seconds'] == 300, 'Plan limits changed')
++    for filename, key in [('PREFIX_CHECK.json', 'prefix_check_sha256'), ('REQUEST_DIFF.json', 'request_diff_sha256')]:
++        require(sha(path.parent / filename) == plan[key], 'Frozen acceptance changed')
++    return plan
++
++
++def slot_result(h, capture, outcome, before, prefix_seq):
++    events = [e for e in h.archive.events() if e['seq'] > prefix_seq]
++    actions = [e['payload'] for e in events if e['kind'] == 'action_result']
++    return {**outcome, 'terminal': deepcopy(h.terminal), 'remaining': h.remaining(),
++            'new_tools': actions, 'new_action_slots': h.action_slots - before['action_slots'],
++            'new_declared_calls': h.declared_calls - before['declared_calls'],
++            'new_backend_calls': h.backend_calls - before['backend_calls'],
++            'new_output_charged': h.output_charged - before['output_charged'],
++            'http': deepcopy(capture.rows), 'archive_integrity': h.archive.verify()}
++
++
++def run(plan_path, private_manifest, output):
++    plan = verify_plan(plan_path)
++    verify_public()
++    m = original_manifest(private_manifest)
++    require(sha(private_manifest) == plan['private_manifest_sha256'], 'Manifest changed')
++    require(m['config'] == plan['config'], 'Plan config changed')
++    key = os.environ.get('ESR_API_KEY')
++    require(bool(key), 'Missing local credential')
++    require(not subprocess.check_output(['git', 'status', '--porcelain', '--untracked-files=no'], cwd=ROOT),
++            'Tracked changes after freeze')
++    output = Path(output).resolve(); output.mkdir(parents=True, exist_ok=False)
++    budget = Budget(m['budget_path'], output.name, limit=16)
++    results = {label: {'status': 'NOT_RUN', 'attempts': 0} for label in ORDER}
++    write(output / 'manifest.json', {'utc_started': utc(), 'plan': plan, 'plan_sha256': sha(plan_path),
++          'frozen_commit': subprocess.check_output(['git', 'rev-parse', 'HEAD'], cwd=ROOT, text=True).strip(),
++          'private_original_manifest': str(Path(private_manifest).resolve()), 'model_identity': m['model_identity'],
++          'budget_before': budget.before})
++    tape = load_prefix(CASE)
++    queue_error = None
++    try:
++        for label in ORDER:
++            h = backend = None
++            folder = output / label; folder.mkdir()
++            try:
++                verify_plan(plan_path)
++                mode = plan['feedback'][label[0]]
++                h, captured = replay(tape, folder / 'episode.sqlite', mode)
++                expected = plan['first_request_sha256'][label[0]]
++                require(hashlib.sha256(canonical(next_payload(h, captured)).encode()).hexdigest() == expected,
++                        'Independent prefix request mismatch')
++                before = state(h); prefix_seq = h.archive.seq
++                backend = SQLiteFTS5(m['index_path'], index_id=m['index_id'],
++                                     timeout_seconds=m['index_identity']['query_timeout_seconds'])
++                require(backend.identity == plan['index_identity'], 'Live index identity mismatch')
++
++                def before_send():
++                    verify_plan(plan_path)
++                    s = budget.snapshot()
++                    require(s['remaining'] >= 16 - s['this_run'], 'Insufficient shared budget')
++
++                capture = GuardedCapture(folder, budget, key, m['base_url'].rstrip('/') + '/chat/completions',
++                                         check=before_send, first_sha256=expected)
++                identity = m['model_identity']
++                model = OpenAIModel(identity['endpoint'], identity['model'], revision=identity['revision_label'],
++                    http=HTTP(allow_network=True, timeout=180, opener=capture), api_key=key,
++                    temperature=identity['temperature'], expected_response_model=identity['expected_response_model'],
++                    output_parameter=identity['output_parameter'])
++                # Compare with the real adapter before enabling the real clock/sends.
++                require(canonical(next_payload(h, model)) == canonical(next_payload(h, captured)), 'Live wire changed')
++                attach_live(h, model, backend)
++                write(folder / 'manifest.json', {'slot': label, 'feedback': mode, 'prefix_end_seq': prefix_seq,
++                      'time_semantics': plan['time_semantics'], 'local_monotonic_start': h.started,
++                      'model_identity': model.identity, 'config': h.config.to_dict(), 'remaining': h.remaining()})
++                outcome = continue_slot(h, model, capture, seconds=plan['local_seconds'])
++                result = slot_result(h, capture, outcome, before, prefix_seq)
++                result['budget_after'] = budget.snapshot()
++                # The first actual send is checked against the frozen offline request.
++                if capture.rows:
++                    require(sha(folder / 'http/001/request.body') == expected, 'First actual HTTP body mismatch')
++                write(folder / 'result.json', result)
++                write(folder / 'state.json', state(h))
++                with (folder / 'trajectory.jsonl').open('x', encoding='utf-8') as f:
++                    for event in h.archive.events():
++                        f.write(canonical(event) + '\n')
++                write(folder / 'FILE_SHA256.json', {p.relative_to(folder).as_posix(): sha(p)
++                      for p in sorted(folder.rglob('*')) if p.is_file() and 'sqlite' not in p.name})
++                results[label] = result
++                print(canonical({'slot': label, 'status': outcome['status'], 'attempts': outcome['attempts'],
++                                 'remaining': result['budget_after']['remaining']}), flush=True)
++                if outcome['stop_queue']:
++                    break
++            except Exception as exc:
++                queue_error = type(exc).__name__  # Never publish private exception text.
++                results[label] = {'status': 'queue_integrity_or_setup_error', 'exception_type': queue_error,
++                                  'attempts': len(list(folder.glob('http/*/attempt-start.json')))}
++                write(folder / 'exception.json', results[label])
++                break
++            finally:
++                if h is not None:
++                    h.close()
++                if backend is not None:
++                    backend.close()
++    finally:
++        write(output / 'RESULTS.json', {'slots': results, 'budget_before': budget.before,
++              'budget_after': budget.snapshot(), 'queue_error': queue_error, 'utc_finished': utc()})
++        budget.close()
++
++
++if __name__ == '__main__':
++    p = argparse.ArgumentParser(description=__doc__)
++    sub = p.add_subparsers(dest='command', required=True)
++    a = sub.add_parser('prepare')
++    a.add_argument('--private-manifest', required=True); a.add_argument('--private-output', required=True)
++    a.add_argument('--report', required=True)
++    a = sub.add_parser('run')
++    a.add_argument('--plan', required=True); a.add_argument('--private-manifest', required=True)
++    a.add_argument('--output', required=True)
++    a = p.parse_args()
++    if a.command == 'prepare':
++        prepare(a.private_manifest, a.private_output, a.report)
++    else:
++        run(a.plan, a.private_manifest, a.output)
+diff --git a/harnesses/stride/tests/test_field_feedback_live.py b/harnesses/stride/tests/test_field_feedback_live.py
+new file mode 100644
+index 0000000..d17bc5f
+--- /dev/null
++++ b/harnesses/stride/tests/test_field_feedback_live.py
+@@ -0,0 +1,186 @@
++"""Local fixtures only. Scripted completions are never model-effect evidence."""
++from copy import deepcopy
++import io
++import json
++from pathlib import Path
++import sqlite3
++import sys
++import urllib.error
++
++import pytest
++from stride_search.contract import canonical
++from stride_search.fixtures import native
++from stride_search.providers import HTTP, OpenAIModel
++
++sys.path.insert(0, str(Path(__file__).resolve().parents[1] / 'experiments/field_feedback'))
++from live_pilot import (Budget, CASE, GuardedCapture, attach_live, continue_slot,
++                        load_prefix, next_payload, replay)
++
++
++@pytest.fixture
++def tape():
++    return load_prefix(CASE)
++
++
++def ledger(path, cap=1000):
++    # This test-only ledger is isolated under pytest tmp_path. Production opens rw.
++    db = sqlite3.connect(path)
++    db.execute('CREATE TABLE budget (cap INTEGER NOT NULL)')
++    db.execute('INSERT INTO budget VALUES (?)', (cap,))
++    db.execute('CREATE TABLE requests (id INTEGER PRIMARY KEY,run TEXT,role TEXT,status TEXT,http_status INTEGER,usage TEXT)')
++    db.commit(); db.close()
++    return Budget(path, 'local-fixture', limit=16)
++
++
++class Backend:
++    def __init__(self, captured):
++        self.identity = deepcopy(captured.identity)
++        self.capabilities = deepcopy(captured.capabilities)
++        self.calls = []
++
++    def compile_query(self, query):
++        return {'compiler': 'fixture', 'terms': [query]}
++
++    def search(self, query, top_k):
++        self.calls.append((query, top_k))
++        return []
++
++
++class Response(io.BytesIO):
++    status = 200
++
++
++class Transport:
++    def __init__(self, budget, responses, after=lambda: None):
++        self.budget, self.responses, self.after = budget, list(responses), after
++        self.sent = []
++
++    def open(self, request, timeout):
++        # Verify the persistent charge and raw request exist before fake transport.
++        assert self.budget.snapshot()['this_run'] == len(self.sent) + 1
++        assert self.budget.db.execute('SELECT status FROM requests ORDER BY id DESC LIMIT 1').fetchone()[0] == 'unknown'
++        self.sent.append(request.data)
++        value = self.responses.pop(0)
++        self.after()
++        if isinstance(value, Exception):
++            raise value
++        return Response(canonical(value).encode())
++
++
++def response(tool, args, *, model='glm-5.2', reason='tool_calls'):
++    value = native((tool, args)); value['model'] = model
++    value['choices'][0]['finish_reason'] = reason
++    return value
++
++
++def execute(tmp_path, tape, responses, mode='field', after=None):
++    h, recorded = replay(tape, tmp_path / 'episode.sqlite', mode)
++    budget = ledger(tmp_path / 'budget.sqlite')
++    backend = Backend(h.retriever)
++    clock = [100.0]
++    transport = Transport(budget, responses, after=(lambda: after(clock)) if after else lambda: None)
++    capture = GuardedCapture(tmp_path, budget, 'fixture-secret', 'http://localhost/v1/chat/completions', opener=transport)
++    ident = recorded.identity
++    model = OpenAIModel('http://localhost/v1', ident['model'], revision=ident['revision_label'],
++        http=HTTP(allow_network=True, opener=capture), temperature=ident['temperature'],
++        expected_response_model=ident['expected_response_model'], output_parameter=ident['output_parameter'])
++    original = canonical(next_payload(h, recorded))
++    attach_live(h, model, backend, clock=lambda: clock[0])
++    assert canonical(next_payload(h, model)) == original
++    assert h.remaining() == {'model_calls': 60, 'action_slots': 196, 'backend_calls': 113, 'output_reservation': 47648}
++    result = continue_slot(h, model, capture, clock=lambda: clock[0])
++    return h, budget, backend, transport, capture, result
++
++
++@pytest.mark.parametrize('mode', ['legacy', 'field'])
++def test_real_adapter_switch_capture_and_literal_submission(tmp_path, tape, mode):
++    literal = '  "synthetic literal"\n'
++    h, budget, backend, transport, capture, result = execute(tmp_path, tape,
++        [response('finish', {'answer': literal, 'refs': ['e1']})], mode)
++    try:
++        assert result['status'] == 'submitted' and result['attempts'] == 1 and not result['stop_queue']
++        assert h.terminal['answer'] == literal and h.terminal['refs'] == ['e1']
++        assert h.config.max_model_calls == 64 and h.config.max_seconds == 1800 and not backend.calls
++        assert transport.sent[0] == (tmp_path / 'http/001/request.body').read_bytes()
++        assert json.loads((tmp_path / 'http/001/response.body').read_bytes())['model'] == 'glm-5.2'
++        assert budget.snapshot()['this_run'] == 1
++        assert capture.rows[0]['returned_model'] == 'glm-5.2'
++    finally:
++        h.close(); budget.close()
++
++
++def test_four_numeric_errors_external_cap_and_feedback(tmp_path, tape):
++    h, budget, backend, transport, capture, result = execute(tmp_path, tape,
++        [response('finish', {'answer': 47, 'refs': ['e1']}) for _ in range(4)])
++    try:
++        assert result['status'] == 'local_continuation_cap' and result['attempts'] == 4
++        assert not result['stop_queue'] and h.terminal is None and h.model_calls == 8
++        assert h.remaining()['model_calls'] == 56 and not h.final_phase()
++        wire = json.loads(transport.sent[-1])
++        feedback = json.loads(wire['messages'][-1]['content'].split('\n', 1)[1])['feedback']
++        receipts = [json.loads(m['content']) for m in wire['messages'] if m['role'] == 'tool']
++        assert receipts[-1]['message'] == feedback['message']
++        assert '/answer' in feedback['message'] and '47' not in feedback['message']
++        assert budget.snapshot()['this_run'] == 4
++    finally:
++        h.close(); budget.close()
++
++
++def test_new_search_goes_to_replacement_backend(tmp_path, tape):
++    h, budget, backend, transport, capture, result = execute(tmp_path, tape, [
++        response('search', {'queries': ['NEW SYNTHETIC QUERY'], 'top_k': 1}),
++        response('finish', {'abstain': True, 'reason': 'fixture'})])
++    try:
++        assert result['status'] == 'abstained' and result['attempts'] == 2
++        assert backend.calls == [('NEW SYNTHETIC QUERY', 1)] and h.backend_calls == 8
++    finally:
++        h.close(); budget.close()
++
++
++@pytest.mark.parametrize('bad,status', [
++    (response('finish', {'answer': 'synthetic', 'refs': ['e1']}, model='other'), 'model_identity_changed'),
++    (response('finish', {'answer': 'synthetic', 'refs': ['e1']}, reason='length'), 'incomplete_response'),
++    (urllib.error.HTTPError('http://localhost', 429, 'fixture', {}, io.BytesIO(b'fixture error')), 'http_error'),
++    (TimeoutError('fixture'), 'transport_error'),
++])
++def test_failure_charged_and_stops_queue(tmp_path, tape, bad, status):
++    h, budget, backend, transport, capture, result = execute(tmp_path, tape, [bad])
++    try:
++        assert result['status'] == status and result['stop_queue'] and result['attempts'] == 1
++        assert budget.snapshot()['this_run'] == 1 and h.action_slots == 4
++        assert (tmp_path / 'http/001/metadata.json').is_file()
++    finally:
++        h.close(); budget.close()
++
++
++def test_real_local_clock_stops_without_harness_terminal(tmp_path, tape):
++    h, budget, backend, transport, capture, result = execute(tmp_path, tape,
++        [response('finish', {'answer': 47, 'refs': ['e1']})], after=lambda c: c.__setitem__(0, c[0] + 301))
++    try:
++        assert result['status'] == 'local_time_cap' and result['attempts'] == 1
++        assert h.terminal is None and not h.final_phase() and h.config.max_seconds == 1800
++    finally:
++        h.close(); budget.close()
++
++
++def test_budget_never_creates_or_resets(tmp_path):
++    path = tmp_path / 'missing.sqlite'
++    with pytest.raises(sqlite3.OperationalError):
++        Budget(path, 'fixture', limit=16)
++    assert not path.exists()
++    with pytest.raises(ValueError, match='insufficient'):
++        ledger(tmp_path / 'too-small.sqlite', cap=15)
++
++
++def test_pre_send_integrity_gate_prevents_transport_and_charge(tmp_path):
++    budget = ledger(tmp_path / 'budget.sqlite')
++    transport = Transport(budget, [])
++    def fail():
++        raise ValueError('fixture frozen-code mismatch')
++    capture = GuardedCapture(tmp_path, budget, '', 'http://localhost/v1/chat/completions', opener=transport, check=fail)
++    try:
++        with pytest.raises(ValueError, match='frozen-code'):
++            HTTP(allow_network=True, opener=capture).post('http://localhost/v1/chat/completions', {'model': 'fixture'})
++        assert budget.snapshot()['this_run'] == 0 and transport.sent == []
++    finally:
++        budget.close()
