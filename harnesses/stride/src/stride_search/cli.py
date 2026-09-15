@@ -9,7 +9,7 @@ import sqlite3
 import sys
 
 from .archive import Archive
-from .contract import Config, ContractError, canonical, loads, tools
+from .contract import INTEGER_ANSWER, ANSWER_CONTRACTS, Config, ContractError, canonical, loads, tools
 from .cpu_index import SQLiteFTS5
 from .diagnostics import diagnose
 from .engine import Harness
@@ -34,7 +34,7 @@ def _model(args, http):
     cls = AnthropicModel if args.model_api == "anthropic" else OpenAIModel
     return cls(args.base_url, args.model, revision=args.model_revision, http=http,
                api_key=os.environ.get(args.api_key_env), expected_response_model=args.expected_response_model,
-               output_parameter=args.output_parameter)
+               output_parameter=args.output_parameter, temperature=args.temperature)
 
 
 def _retriever(args, http):
@@ -60,12 +60,15 @@ def _live_arguments(p):
     p.add_argument("--counter", required=True, choices=["utf8_bytes", "hf_tokens"])
     p.add_argument("--tokenizer", help="Local tokenizer only; no downloads or remote code")
     p.add_argument("--timeout", type=int, default=45)
+    p.add_argument("--temperature", type=float, default=0.2)
 
 
 def parser():
     p = argparse.ArgumentParser(prog="stride-search", description=__doc__)
     commands = p.add_subparsers(dest="command", required=True)
-    commands.add_parser("schema").add_argument("--final", action="store_true")
+    sp = commands.add_parser("schema")
+    sp.add_argument("--final", action="store_true")
+    sp.add_argument("--answer-contract", choices=ANSWER_CONTRACTS, default=INTEGER_ANSWER)
     commands.add_parser("smoke").add_argument("--output", required=True)
     commands.add_parser("replay").add_argument("--db", required=True)
     dp = commands.add_parser("diagnose")
@@ -82,6 +85,7 @@ def parser():
     r.add_argument("--max-actions", type=int, default=80)
     r.add_argument("--max-output-tokens", type=int, default=2048)
     r.add_argument("--max-total-output-tokens", type=int, default=24000)
+    r.add_argument("--max-seconds", type=int, default=900)
     r.add_argument("--no-notes", action="store_true")
     r.add_argument("--no-final-reserve", action="store_true")
     r.add_argument("--strict-note-failure", action="store_true")
@@ -97,6 +101,8 @@ def parser():
     r.add_argument("--context-mode", choices=["full", "rolling"], default="rolling")
     r.add_argument("--answer-prefix", default="")
     r.add_argument("--answer-suffix", default="")
+    r.add_argument("--answer-contract", choices=ANSWER_CONTRACTS, default=INTEGER_ANSWER,
+                   help="Versioned finish answer contract; legacy is for historical regression")
     fp = commands.add_parser("plan")
     for flag in ("questions", "config", "arms", "identities", "output"):
         fp.add_argument("--" + flag, required=True)
@@ -116,7 +122,7 @@ def parser():
 
 def execute(args):
     if args.command == "schema":
-        return tools(notes_enabled=True, final=args.final)
+        return tools(notes_enabled=True, final=args.final, answer_contract=args.answer_contract)
     if args.command == "diagnose":
         return diagnose(args.db, include_text=args.include_text)
     if args.command == "replay":
@@ -170,7 +176,7 @@ def execute(args):
     config = Config(max_model_calls=args.max_model_calls, context_limit=args.context_limit,
         response_reserve=args.response_reserve, max_backend_calls=args.max_backend_calls,
         max_actions=args.max_actions, max_output_tokens=args.max_output_tokens,
-        max_total_output_tokens=args.max_total_output_tokens, notes_enabled=not args.no_notes,
+        max_total_output_tokens=args.max_total_output_tokens, max_seconds=args.max_seconds, notes_enabled=not args.no_notes,
         reserve_finish=not args.no_final_reserve, nonblocking_notes=not args.strict_note_failure,
         repair_context=not args.no_repair_context, delivery_preflight=not args.no_delivery_preflight,
         disclose_retriever=not args.hide_retriever_capabilities, compiled_query_cache=args.compiled_query_cache,
@@ -185,7 +191,8 @@ def execute(args):
     retriever = _retriever(args, http)
     h = None
     try:
-        h = Harness(question, retriever, path=args.db, config=config, counter=counter)
+        h = Harness(question, retriever, path=args.db, config=config, counter=counter,
+                    answer_contract=args.answer_contract)
         h.run(model)
         return h.archive.report()
     finally:

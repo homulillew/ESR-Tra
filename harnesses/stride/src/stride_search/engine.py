@@ -9,7 +9,8 @@ from typing import Callable
 from . import search_support
 from .archive import Archive
 from .context import build
-from .contract import PROTOCOL, Config, ContractError, canonical, digest, loads, text_hash, validate
+from .contract import (PROTOCOL, INTEGER_ANSWER, ANSWER_CONTRACTS, Config, ContractError,
+                       answer_text, canonical, digest, loads, text_hash, validate)
 from .providers import ByteCounter, usage_of
 from .recovery import fit_result_group, make_group, note_blocks_finish, remember_response
 
@@ -17,7 +18,10 @@ from .recovery import fit_result_group, make_group, note_blocks_finish, remember
 class Harness:
     def __init__(self, question: str, retriever, *, path=":memory:", config: Config | None = None,
                  counter=None, clock: Callable[[], float] = time.monotonic,
-                 validation_feedback: str = "legacy"):
+                 validation_feedback: str = "legacy", answer_contract: str = "legacy"):
+        if answer_contract not in ANSWER_CONTRACTS:
+            raise ValueError("Unknown answer contract")
+        self.answer_contract = answer_contract
         if validation_feedback not in ("legacy", "field"):
             raise ValueError("Unknown validation feedback experiment")
         self.validation_feedback = validation_feedback
@@ -41,7 +45,17 @@ class Harness:
         self.archive.append("episode", {"protocol": PROTOCOL, "question": question,
             "config": self.config.to_dict(), "retriever": deepcopy(retriever.identity),
             "counter": deepcopy(self.counter.identity), "search_capabilities": deepcopy(self.search_capabilities),
-            "execution": "fresh_episode_only"})
+            "execution": "fresh_episode_only",
+            **({"answer_contract": answer_contract} if answer_contract != "legacy" else {})})
+
+    def set_answer_contract(self, value):
+        """Explicit, journaled boundary switch for historical-prefix validation."""
+        if value not in ANSWER_CONTRACTS or self.terminal is not None:
+            raise ValueError("Invalid answer contract transition")
+        if value != self.answer_contract:
+            self.archive.append("answer_contract", {"previous": self.answer_contract, "current": value,
+                                "after_round": self.model_calls})
+            self.answer_contract = value
 
     def remaining(self):
         return {"model_calls": self.config.max_model_calls - self.model_calls,
@@ -195,7 +209,8 @@ class Harness:
             return {"key": key, "changed": changed, "kind": "scratchpad_not_verified"}, [], []
         if args.get("abstain"):
             return {"terminal": self._end("abstained", reason=args["reason"])}, [], []
-        refs, answer = args["refs"], args["answer"]
+        refs = args["refs"]
+        answer = answer_text(args["answer"], answer_contract=self.answer_contract)
         if self.config.require_sources and not refs:
             raise ContractError("sources_required", "This experiment requires explicit delivered raw evidence")
         for ref in refs:
@@ -204,8 +219,14 @@ class Harness:
                 or (self.config.answer_suffix and not answer.endswith(self.config.answer_suffix))):
             raise ContractError("literal_contract", "Exact answer violates the explicitly configured prefix/suffix; no automatic rewriting")
         basis = [{k: v for k, v in self.archive.evidence(ref).items() if k != "text"} for ref in refs]
+        representation = {}
+        if self.answer_contract == INTEGER_ANSWER:
+            representation["answer_representation"] = {"rule": INTEGER_ANSWER,
+                "input_type": "integer" if type(args["answer"]) is int else "string",
+                "operation": "decimal" if type(args["answer"]) is int else "identity",
+                **({"input_value": args["answer"]} if type(args["answer"]) is int else {})}
         return {"terminal": self._end("submitted", answer=answer, refs=refs, basis=basis,
-                                      semantic_status="not_automatically_verified")}, [], []
+                                      semantic_status="not_automatically_verified", **representation)}, [], []
 
     def run(self, model):
         if self.model_identity is not None:
@@ -319,7 +340,7 @@ class Harness:
                 self.action_slots += 1
                 charged_slot = True
                 args = loads(arguments)
-                validate(name, args, feedback=self.validation_feedback)
+                validate(name, args, feedback=self.validation_feedback, answer_contract=self.answer_contract)
                 executed = True
                 result, docs, evidence = self._dispatch(name, args, binding)
                 result = {"ok": True, **result}

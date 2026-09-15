@@ -10,6 +10,8 @@ from typing import Any
 from jsonschema import Draft202012Validator
 
 PROTOCOL = "stride-search-3"
+INTEGER_ANSWER = "string-integer-v1"
+ANSWER_CONTRACTS = ("legacy", INTEGER_ANSWER)
 
 
 class ContractError(ValueError):
@@ -106,27 +108,83 @@ of the original budget, not a bonus call. Never claim to have read unreturned to
 """
 
 
-def tools(*, notes_enabled: bool, final: bool, query_limit: int = 3) -> list[dict]:
+def answer_schema(answer_contract="legacy"):
+    if answer_contract not in ANSWER_CONTRACTS:
+        raise ValueError("Unknown answer contract")
+    schema = deepcopy(SCHEMAS["finish"])
+    if answer_contract == INTEGER_ANSWER:
+        schema["oneOf"][0]["properties"]["answer"]["type"] = ["string", "integer"]
+    return schema
+
+
+def answer_text(value, *, answer_contract="legacy"):
+    """Versioned representation, never extraction or factual correction."""
+    if answer_contract not in ANSWER_CONTRACTS:
+        raise ValueError("Unknown answer contract")
+    if type(value) is str:
+        text = value
+    elif answer_contract == INTEGER_ANSWER and type(value) is int:
+        # Bound conversion before str(); Python may impose a lower decimal limit.
+        if value.bit_length() > 26576:
+            raise ContractError("arguments_invalid", "answer decimal text exceeds length limit")
+        try:
+            text = str(value)
+        except ValueError as exc:
+            raise ContractError("arguments_invalid", "answer decimal text exceeds runtime conversion limit") from exc
+    else:
+        raise ContractError("arguments_invalid", "answer must be a string or a permitted JSON integer; bools and floats are not accepted")
+    if not 1 <= len(text) <= 8000 or not any(not c.isspace() for c in text):
+        raise ContractError("arguments_invalid", "answer text must be nonblank and at most 8000 characters")
+    return text
+
+
+def system_message(answer_contract="legacy"):
+    if answer_contract not in ANSWER_CONTRACTS:
+        raise ValueError("Unknown answer contract")
+    if answer_contract == INTEGER_ANSWER:
+        return SYSTEM.replace("exact intended string; nothing adds punctuation for you.",
+            "exact intended string or JSON integer; integers become decimal text, with no added punctuation.")
+    return SYSTEM
+
+
+def tools(*, notes_enabled: bool, final: bool, query_limit: int = 3, answer_contract="legacy") -> list[dict]:
+    finish_schema = answer_schema(answer_contract)
     names = ["finish"] if final else [n for n in SCHEMAS if notes_enabled or n != "notes"]
     result = [{"type": "function", "function": {"name": n, "description": DESCRIPTIONS[n],
             "parameters": deepcopy(SCHEMAS[n])}} for n in names]
     for tool in result:
+        if tool["function"]["name"] == "finish":
+            tool["function"]["parameters"] = finish_schema
+            if answer_contract == INTEGER_ANSWER:
+                tool["function"]["description"] = DESCRIPTIONS["finish"].replace("exact answer string",
+                    "exact answer string or JSON integer (plain integer syntax, not a bool, decimal or exponent; "
+                    "integers use standard decimal text, strings remain unchanged, at most 8000 text characters)")
         if tool["function"]["name"] == "search":
             tool["function"]["parameters"]["properties"]["queries"]["maxItems"] = query_limit
     return result
 
 
-def validate(name: str, args: Any, *, feedback: str = "legacy") -> None:
+def validate(name: str, args: Any, *, feedback: str = "legacy", answer_contract="legacy") -> None:
+    if answer_contract not in ANSWER_CONTRACTS:
+        raise ValueError("Unknown answer contract")
     if feedback not in ("legacy", "field"):
         raise ValueError("Unknown validation feedback experiment")
     if name not in SCHEMAS:
         raise ContractError("unknown_tool", f"Unknown tool: {name}")
     # jsonschema regards 1.0 as an integer; the wire contract deliberately does not.
     if isinstance(args, dict):
+        if name == "finish" and answer_contract == INTEGER_ANSWER and "answer" in args:
+            # JSON Schema also accepts mathematical integers such as 21.0.
+            # This feature intentionally requires the parser's exact str/int types.
+            if type(args["answer"]) not in (str, int):
+                raise ContractError("arguments_invalid", "answer requires string or JSON integer syntax; other types are rejected")
+            if type(args["answer"]) is int:
+                answer_text(args["answer"], answer_contract=answer_contract)
         for key in ("top_k", "start", "length"):
             if key in args and type(args[key]) is not int:
                 raise ContractError("arguments_invalid", f"{key} must be an integer, not a bool or float")
-    errors = list(Draft202012Validator(SCHEMAS[name]).iter_errors(args))
+    schema = answer_schema(answer_contract) if name == "finish" else SCHEMAS[name]
+    errors = list(Draft202012Validator(schema).iter_errors(args))
     if errors:
         e = min(errors, key=lambda x: str(list(x.path)))
         if feedback == "field":

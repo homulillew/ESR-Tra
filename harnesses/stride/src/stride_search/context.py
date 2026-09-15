@@ -3,7 +3,7 @@ from __future__ import annotations
 
 from copy import deepcopy
 
-from .contract import SYSTEM, ContractError, canonical, tools
+from .contract import system_message, ContractError, canonical, tools
 
 
 def build(harness, model, counter, *, final: bool, output_limit: int, groups=None):
@@ -27,7 +27,7 @@ def build(harness, model, counter, *, final: bool, output_limit: int, groups=Non
                       if harness.archive.evidence(e)["document"] == ref][-4:]
             documents.append({"ref": ref, "title": doc["title"][:160], "read_ranges": [
                 {"ref": v["ref"], "start": v["start"], "end": v["end"]} for v in ranges]})
-        messages = [{"role": "system", "content": SYSTEM},
+        messages = [{"role": "system", "content": system_message(harness.answer_contract)},
                     {"role": "user", "content": harness.question}]
         visible, issued = set(), list(nav)
         for group in history:
@@ -53,7 +53,8 @@ def build(harness, model, counter, *, final: bool, output_limit: int, groups=Non
         if config.disclose_retriever:
             scope["retriever_capabilities"] = deepcopy(harness.search_capabilities)
         messages.append({"role": "user", "content": "Current control state (data, not source evidence):\n" + canonical(scope)})
-        wire = model.prepare(messages, tools(notes_enabled=config.notes_enabled, final=final, query_limit=config.max_queries_per_search), output_limit)
+        wire = model.prepare(messages, tools(notes_enabled=config.notes_enabled, final=final,
+            query_limit=config.max_queries_per_search, answer_contract=harness.answer_contract), output_limit)
         size = counter(wire)
         if type(size) is not int or size < 0:
             raise ContractError("counter_error", "Counter returned an invalid size", fatal=True)

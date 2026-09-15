@@ -220,6 +220,7 @@ class Archive:
         integrity = self.verify()
         terminal, requests, completed, usage, backends, actions = None, [], set(), [], 0, []
         header, model_identity = None, None
+        answer_contract = "legacy"
         seen, received_raw_rounds = set(), 0
         recovery_counts = Counter()
         for e in self.events():
@@ -228,6 +229,9 @@ class Archive:
                 recovery_counts[e["kind"]] += 1
             if e["kind"] == "episode":
                 header = p
+                answer_contract = p.get("answer_contract", "legacy")
+            elif e["kind"] == "answer_contract":
+                answer_contract = p["current"]
             elif e["kind"] == "model_identity":
                 model_identity = p
             elif e["kind"] == "model_request":
@@ -253,6 +257,7 @@ class Archive:
                   ("input_tokens", "output_tokens", "cache_read_tokens", "cache_write_tokens")}
         unknown = len(requests) - sum(type(u.get("input_tokens")) is int and type(u.get("output_tokens")) is int for u in usage)
         return {**integrity, "protocol": header["protocol"], "header": header,
+                "answer_contract": answer_contract,
                 "model_identity": model_identity,
                 "terminal": terminal or {"outcome": "interrupted", "answer": ""},
                 "model_attempts": len(requests), "backend_attempts": backends,
