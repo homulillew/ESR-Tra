@@ -1,0 +1,339 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites name="pytest tests"><testsuite name="pytest" errors="0" failures="8" skipped="0" tests="271" time="82.215" timestamp="2026-09-15T11:00:05.596613+08:00" hostname="VPC0-HZ20428504"><testcase classname="tests.test_a3_regressions" name="test_acknowledged_key_window_survives_unrelated_read_and_compaction" time="0.187" /><testcase classname="tests.test_a3_regressions" name="test_recall_of_delivered_but_unopened_search_hit" time="0.155" /><testcase classname="tests.test_a3_regressions" name="test_recall_excerpt_includes_match_near_end" time="0.156" /><testcase classname="tests.test_archive_context" name="test_persistent_replay_exact_request" time="0.290" /><testcase classname="tests.test_archive_context" name="test_existing_path_not_overwritten" time="0.015" /><testcase classname="tests.test_archive_context" name="test_immutable_window_roundtrip" time="0.052" /><testcase classname="tests.test_archive_context" name="test_message_objects_deduplicated" time="0.053" /><testcase classname="tests.test_archive_context" name="test_corruption_detected[events]" time="0.288" /><testcase classname="tests.test_archive_context" name="test_corruption_detected[objects]" time="0.315" /><testcase classname="tests.test_archive_context" name="test_corruption_detected[evidence]" time="0.311" /><testcase classname="tests.test_archive_context" name="test_archive_not_resume" time="0.234" /><testcase classname="tests.test_archive_context" name="test_capacity_failure_never_delivers_unseen_evidence[False]" time="0.189" /><testcase classname="tests.test_archive_context" name="test_capacity_failure_never_delivers_unseen_evidence[True]" time="0.202" /><testcase classname="tests.test_archive_context" name="test_compaction_keeps_whole_newest_group" time="0.162" /><testcase classname="tests.test_archive_context" name="test_full_arm_fails_explicitly_instead_of_hiding_overflow" time="0.140" /><testcase classname="tests.test_archive_context" name="test_current_note_order_does_not_depend_on_dict_order" time="0.131" /><testcase classname="tests.test_archive_context" name="test_source_instructions_only_enter_as_data" time="0.163" /><testcase classname="tests.test_archive_context" name="test_deadline_after_response_retains_usage_no_actions" time="0.152" /><testcase classname="tests.test_contract" name="test_strict_json[{&quot;x&quot;:1,&quot;x&quot;:2}]" time="0.001" /><testcase classname="tests.test_contract" name="test_strict_json[{&quot;x&quot;:NaN}]" time="0.003" /><testcase classname="tests.test_contract" name="test_strict_json[{&quot;x&quot;:Infinity}]" time="0.001" /><testcase classname="tests.test_contract" name="test_strict_json[{&quot;x&quot;:1} trailing]" time="0.001" /><testcase classname="tests.test_contract" name="test_strict_json[[]" time="0.001" /><testcase classname="tests.test_contract" name="test_config_rejects[config0]" time="0.001" /><testcase classname="tests.test_contract" name="test_config_rejects[config1]" time="0.001" /><testcase classname="tests.test_contract" name="test_config_rejects[config2]" time="0.001" /><testcase classname="tests.test_contract" name="test_config_rejects[config3]" time="0.001" /><testcase classname="tests.test_contract" name="test_config_rejects[config4]" time="0.001" /><testcase classname="tests.test_contract" name="test_config_rejects[config5]" time="0.001" /><testcase classname="tests.test_contract" name="test_config_rejects[config6]" time="0.001" /><testcase classname="tests.test_contract" name="test_config_rejects[config7]" time="0.001" /><testcase classname="tests.test_contract" name="test_config_rejects[config8]" time="0.001" /><testcase classname="tests.test_contract" name="test_invalid_actions[search-args0]" time="0.001" /><testcase classname="tests.test_contract" name="test_invalid_actions[search-args1]" time="0.001" /><testcase classname="tests.test_contract" name="test_invalid_actions[search-args2]" time="0.001" /><testcase classname="tests.test_contract" name="test_invalid_actions[search-args3]" time="0.002" /><testcase classname="tests.test_contract" name="test_invalid_actions[read-args4]" time="0.001" /><testcase classname="tests.test_contract" name="test_invalid_actions[read-args5]" time="0.001" /><testcase classname="tests.test_contract" name="test_invalid_actions[finish-args6]" time="0.001" /><testcase classname="tests.test_contract" name="test_invalid_actions[finish-args7]" time="0.001" /><testcase classname="tests.test_contract" name="test_invalid_actions[finish-args8]" time="0.001" /><testcase classname="tests.test_contract" name="test_invalid_actions[notes-args9]" time="0.001" /><testcase classname="tests.test_contract" name="test_invalid_actions[read-args10]" time="0.001" /><testcase classname="tests.test_contract" name="test_invalid_actions[unknown-args11]" time="0.001" /><testcase classname="tests.test_contract" name="test_schema_no_alias_pollution" time="0.001" /><testcase classname="tests.test_cpu_index" name="test_same_raw_sql_ranking_and_snippet_as_legacy_localindex[Mira Stone]" time="0.082" /><testcase classname="tests.test_cpu_index" name="test_same_raw_sql_ranking_and_snippet_as_legacy_localindex[&quot;Mira Stone&quot;]" time="0.107" /><testcase classname="tests.test_cpu_index" name="test_same_raw_sql_ranking_and_snippet_as_legacy_localindex[&quot;Mira Stone&quot; site:target.example]" time="0.112" /><testcase classname="tests.test_cpu_index" name="test_same_raw_sql_ranking_and_snippet_as_legacy_localindex[Mira AND Stone]" time="0.077" /><testcase classname="tests.test_cpu_index" name="test_same_raw_sql_ranking_and_snippet_as_legacy_localindex[Mira OR &quot;]" time="0.068" /><testcase classname="tests.test_cpu_index" name="test_same_raw_sql_ranking_and_snippet_as_legacy_localindex[...]" time="0.062" /><testcase classname="tests.test_cpu_index" name="test_same_raw_sql_ranking_and_snippet_as_legacy_localindex[Mira Mira Stone]" time="0.063" /><testcase classname="tests.test_cpu_index" name="test_same_raw_sql_ranking_and_snippet_as_legacy_localindex[MIRA Stone]" time="0.064" /><testcase classname="tests.test_cpu_index" name="test_not_phrase_or_domain_filter" time="0.066" /><testcase classname="tests.test_cpu_index" name="test_readonly_does_not_change_or_create_index" time="0.199" /><testcase classname="tests.test_cpu_index" name="test_incomplete_or_invalid_metadata_rejected[False]" time="0.183" /><testcase classname="tests.test_cpu_index" name="test_incomplete_or_invalid_metadata_rejected[1]" time="0.071" /><testcase classname="tests.test_cpu_index" name="test_incomplete_or_invalid_metadata_rejected[None]" time="0.077" /><testcase classname="tests.test_cpu_index" name="test_invalid_topk[0]" time="0.076" /><testcase classname="tests.test_cpu_index" name="test_invalid_topk[True]" time="0.082" /><testcase classname="tests.test_cpu_index" name="test_invalid_topk[1.0]" time="0.074" /><testcase classname="tests.test_cpu_index" name="test_invalid_topk[21]" time="0.072" /><testcase classname="tests.test_cpu_index" name="test_exact_compiler_cache_opt_in[False-2]" time="0.322" /><testcase classname="tests.test_cpu_index" name="test_exact_compiler_cache_opt_in[True-1]" time="0.312" /><testcase classname="tests.test_cpu_index" name="test_compiled_batch_preflight_counts_unique_backend_work" time="0.207" /><testcase classname="tests.test_cpu_index" name="test_capabilities_are_backend_specific_and_can_be_hidden" time="0.470" /><testcase classname="tests.test_cpu_index" name="test_topk_and_token_order_not_normalized_away" time="0.062" /><testcase classname="tests.test_cpu_index" name="test_cpu_model_loop_no_gpu_imports" time="0.199" /><testcase classname="tests.test_cpu_integration" name="test_cli_cpu_native_loopback[openai]" time="0.615"><failure message="assert (2 == 0)">provider = 'openai'
+tmp_path = WindowsPath('<WORKTREE>/runs/field-feedback-offline/baseline-temp/test_cli_cpu_native_loopback_o0')
+capsys = &lt;_pytest.capture.CaptureFixture object at 0x0000027EC42D0C20&gt;
+
+    @pytest.mark.parametrize('provider', ['openai', 'anthropic'])
+    def test_cli_cpu_native_loopback(provider, tmp_path, capsys):
+        path = make_index(tmp_path/'cpu.sqlite')
+        question = tmp_path/'question.txt'; question.write_text('Who directed Alpha?')
+        replies = [native(('search', {'queries':['Alpha'], 'top_k':1})),
+                   native(('read', {'ref':'d1'})), native(('finish', {'answer':'Mira Stone', 'refs':['e1']}))]
+        queue, received = deepcopy(replies), []
+        class Handler(BaseHTTPRequestHandler):
+            def log_message(self, *args): pass
+            def do_POST(self):
+                received.append(json.loads(self.rfile.read(int(self.headers['Content-Length']))))
+                raw = queue.pop(0)
+                payload = anthropic(raw) if provider == 'anthropic' else raw
+                self.send_response(200); self.send_header('Content-Type','application/json'); self.end_headers()
+                self.wfile.write(json.dumps(payload).encode())
+        server = ThreadingHTTPServer(('127.0.0.1', 0), Handler)
+        thread = threading.Thread(target=server.serve_forever, daemon=True); thread.start()
+        db = tmp_path/'episode.sqlite'
+        try:
+            code = main(['run','--allow-network','--accept-counter-estimate','--base-url',f'http://127.0.0.1:{server.server_port}/v1',
+                '--model','fixture','--model-revision','synthetic','--model-api',provider,
+                '--sqlite-index',str(path),'--index-id','synthetic-cpu','--counter','utf8_bytes',
+                '--question-file',str(question),'--db',str(db),'--max-model-calls','3',
+                '--context-limit','100000','--response-reserve','8192'])
+&gt;           assert code == 0 and len(received) == 3 and not queue
+E           assert (2 == 0)
+
+harnesses\stride\tests\test_cpu_integration.py:45: AssertionError</failure></testcase><testcase classname="tests.test_cpu_integration" name="test_cli_cpu_native_loopback[anthropic]" time="0.567"><failure message="assert (2 == 0)">provider = 'anthropic'
+tmp_path = WindowsPath('<WORKTREE>/runs/field-feedback-offline/baseline-temp/test_cli_cpu_native_loopback_a0')
+capsys = &lt;_pytest.capture.CaptureFixture object at 0x0000027EC3552E90&gt;
+
+    @pytest.mark.parametrize('provider', ['openai', 'anthropic'])
+    def test_cli_cpu_native_loopback(provider, tmp_path, capsys):
+        path = make_index(tmp_path/'cpu.sqlite')
+        question = tmp_path/'question.txt'; question.write_text('Who directed Alpha?')
+        replies = [native(('search', {'queries':['Alpha'], 'top_k':1})),
+                   native(('read', {'ref':'d1'})), native(('finish', {'answer':'Mira Stone', 'refs':['e1']}))]
+        queue, received = deepcopy(replies), []
+        class Handler(BaseHTTPRequestHandler):
+            def log_message(self, *args): pass
+            def do_POST(self):
+                received.append(json.loads(self.rfile.read(int(self.headers['Content-Length']))))
+                raw = queue.pop(0)
+                payload = anthropic(raw) if provider == 'anthropic' else raw
+                self.send_response(200); self.send_header('Content-Type','application/json'); self.end_headers()
+                self.wfile.write(json.dumps(payload).encode())
+        server = ThreadingHTTPServer(('127.0.0.1', 0), Handler)
+        thread = threading.Thread(target=server.serve_forever, daemon=True); thread.start()
+        db = tmp_path/'episode.sqlite'
+        try:
+            code = main(['run','--allow-network','--accept-counter-estimate','--base-url',f'http://127.0.0.1:{server.server_port}/v1',
+                '--model','fixture','--model-revision','synthetic','--model-api',provider,
+                '--sqlite-index',str(path),'--index-id','synthetic-cpu','--counter','utf8_bytes',
+                '--question-file',str(question),'--db',str(db),'--max-model-calls','3',
+                '--context-limit','100000','--response-reserve','8192'])
+&gt;           assert code == 0 and len(received) == 3 and not queue
+E           assert (2 == 0)
+
+harnesses\stride\tests\test_cpu_integration.py:45: AssertionError</failure></testcase><testcase classname="tests.test_cpu_integration" name="test_cpu_factory_closes_after_each_frozen_slot" time="0.802" /><testcase classname="tests.test_cpu_integration" name="test_cpu_authorization_checked_before_index_creation" time="0.015" /><testcase classname="tests.test_engine" name="test_shortest_path_no_note_or_audit" time="0.172" /><testcase classname="tests.test_engine" name="test_exact_answer_and_sources" time="0.179" /><testcase classname="tests.test_engine" name="test_future_handles_rejected[bad0]" time="0.172" /><testcase classname="tests.test_engine" name="test_future_handles_rejected[bad1]" time="0.206" /><testcase classname="tests.test_engine" name="test_navigation_is_not_source" time="0.154" /><testcase classname="tests.test_engine" name="test_no_pending_cleanup_even_with_unused_page" time="0.169" /><testcase classname="tests.test_engine" name="test_optional_notes_anchor_then_finish" time="0.184" /><testcase classname="tests.test_engine" name="test_note_only_hypothesis_allowed" time="0.202" /><testcase classname="tests.test_engine" name="test_note_not_a_finish_source" time="0.188" /><testcase classname="tests.test_engine" name="test_note_noop_delete_history_retained" time="0.185" /><testcase classname="tests.test_engine" name="test_no_notes_arm_rejects_actual_call" time="0.146" /><testcase classname="tests.test_engine" name="test_capacity_for_notes_does_not_prevent_finish" time="0.183" /><testcase classname="tests.test_engine" name="test_find_unicode_offsets_and_read_range" time="0.186" /><testcase classname="tests.test_engine" name="test_find_excerpts_not_exposure" time="0.157" /><testcase classname="tests.test_engine" name="test_raw_replay_deduplicates_and_no_backend" time="0.162" /><testcase classname="tests.test_engine" name="test_search_cache_still_uses_policy_attempt" time="0.184" /><testcase classname="tests.test_engine" name="test_frozen_snapshot_not_refetched" time="0.170" /><testcase classname="tests.test_engine" name="test_final_disallows_unconsumable_read" time="0.157" /><testcase classname="tests.test_engine" name="test_final_reserve_ablation" time="0.148" /><testcase classname="tests.test_engine" name="test_action_reserve_keeps_finish_possible" time="0.169" /><testcase classname="tests.test_engine" name="test_backend_budget_still_allows_abstention" time="0.226" /><testcase classname="tests.test_engine" name="test_failure_does_not_kill_independent_sibling" time="0.143" /><testcase classname="tests.test_engine" name="test_failed_prefix_prevents_pregenerated_finish" time="0.150" /><testcase classname="tests.test_engine" name="test_native_receipts_all_present_and_final_boundary" time="0.141" /><testcase classname="tests.test_engine" name="test_large_group_all_rejected_no_truncation" time="0.139" /><testcase classname="tests.test_engine" name="test_duplicate_ids_no_execution" time="0.148" /><testcase classname="tests.test_engine" name="test_incomplete_output_not_executed[length]" time="0.150" /><testcase classname="tests.test_engine" name="test_incomplete_output_not_executed[content_filter]" time="0.141" /><testcase classname="tests.test_engine" name="test_incomplete_output_not_executed[None]" time="0.139" /><testcase classname="tests.test_engine" name="test_transport_failure_no_retry_no_exposure" time="0.169" /><testcase classname="tests.test_engine" name="test_partial_usage_preserved" time="0.141" /><testcase classname="tests.test_engine" name="test_unknown_output_conservatively_reserved" time="0.150" /><testcase classname="tests.test_engine" name="test_configured_literal_guard_not_auto_repair" time="0.153" /><testcase classname="tests.test_engine" name="test_default_does_not_infer_format_from_question" time="0.155" /><testcase classname="tests.test_engine" name="test_source_requirement_can_only_change_explicit_config" time="0.293" /><testcase classname="tests.test_engine" name="test_no_free_text_salvage" time="0.155" /><testcase classname="tests.test_engine" name="test_cannot_run_twice" time="0.168" /><testcase classname="tests.test_engine" name="test_delivery_metric_does_not_count_unacknowledged_request" time="0.361" /><testcase classname="tests.test_evidence_shelf" name="test_shelf_limit_first_delivery_order_and_zero_ablation" time="0.288" /><testcase classname="tests.test_evidence_shelf" name="test_shelf_exact_text_and_no_repeat_when_native_group_contains_source" time="0.168" /><testcase classname="tests.test_evidence_shelf" name="test_shelf_never_promotes_archive_only_window" time="0.178" /><testcase classname="tests.test_evidence_shelf" name="test_shelf_yields_to_capacity_and_emits_omission_not_hidden_exposure" time="0.165" /><testcase classname="tests.test_evidence_shelf" name="test_navigation_is_ack_only_not_created_or_withheld" time="0.146" /><testcase classname="tests.test_evidence_shelf" name="test_navigation_ack_is_idempotent_and_source_not_citable" time="0.182" /><testcase classname="tests.test_evidence_shelf" name="test_recall_navigation_off_and_center_off_reproduce_local_boundaries" time="0.160" /><testcase classname="tests.test_evidence_shelf" name="test_deleted_navigation_object_is_detected" time="0.295" /><testcase classname="tests.test_evidence_shelf" name="test_find_case_mode_exact_unicode_offsets[False-0]" time="0.154" /><testcase classname="tests.test_evidence_shelf" name="test_find_case_mode_exact_unicode_offsets[True-1]" time="0.160" /><testcase classname="tests.test_evidence_shelf" name="test_wrong_answer_with_legal_ref_still_not_auto_verified" time="0.151" /><testcase classname="tests.test_evidence_shelf" name="test_shelf_invalid_config[-1]" time="0.001" /><testcase classname="tests.test_evidence_shelf" name="test_shelf_invalid_config[5]" time="0.001" /><testcase classname="tests.test_evidence_shelf" name="test_shelf_invalid_config[1.0]" time="0.001" /><testcase classname="tests.test_evidence_shelf" name="test_shelf_invalid_config[True]" time="0.001" /><testcase classname="tests.test_evidence_shelf" name="test_flag_contracts[disclose_retriever]" time="0.001" /><testcase classname="tests.test_evidence_shelf" name="test_flag_contracts[compiled_query_cache]" time="0.001" /><testcase classname="tests.test_evidence_shelf" name="test_flag_contracts[recall_navigation]" time="0.001" /><testcase classname="tests.test_evidence_shelf" name="test_flag_contracts[centered_recall]" time="0.002" /><testcase classname="tests.test_evidence_shelf" name="test_find_mode_rejects_string" time="0.001" /><testcase classname="tests.test_experiment_cli" name="test_plan_repeatable_and_tamper_evident" time="0.500" /><testcase classname="tests.test_experiment_cli" name="test_gold_forbidden_at_loader[case0]" time="0.012" /><testcase classname="tests.test_experiment_cli" name="test_gold_forbidden_at_loader[case1]" time="0.015" /><testcase classname="tests.test_experiment_cli" name="test_gold_forbidden_at_loader[case2]" time="0.011" /><testcase classname="tests.test_experiment_cli" name="test_gold_forbidden_at_loader[case3]" time="0.015" /><testcase classname="tests.test_experiment_cli" name="test_gold_forbidden_at_loader[case4]" time="0.019" /><testcase classname="tests.test_experiment_cli" name="test_budget_and_source_rules_cannot_differ_across_arms" time="0.001" /><testcase classname="tests.test_experiment_cli" name="test_complete_queue_unjudged_then_external_judge" time="0.887" /><testcase classname="tests.test_experiment_cli" name="test_insufficient_total_denied_before_output_created" time="0.236" /><testcase classname="tests.test_experiment_cli" name="test_infra_failure_stops_queue_keeps_not_run" time="0.419" /><testcase classname="tests.test_experiment_cli" name="test_no_rerun_overwrite" time="0.965" /><testcase classname="tests.test_experiment_cli" name="test_identity_mismatch_before_requests" time="0.408" /><testcase classname="tests.test_experiment_cli" name="test_cli_smoke_replay" time="0.322" /><testcase classname="tests.test_experiment_cli" name="test_cli_blocks_network_before_question_read" time="0.017" /><testcase classname="tests.test_experiment_cli" name="test_cli_requires_explicit_budget" time="0.009" /><testcase classname="tests.test_experiment_cli" name="test_schema_cli_only_finish" time="0.007" /><testcase classname="tests.test_independent_review" name="test_document_identity_corruption_is_not_silent" time="0.299" /><testcase classname="tests.test_independent_review" name="test_missing_recorded_backend_object_is_not_silent" time="0.324" /><testcase classname="tests.test_independent_review" name="test_notes_read_only_objects_cannot_be_deleted_without_detection" time="0.311" /><testcase classname="tests.test_independent_review" name="test_repeated_text_range_tampering_still_detected" time="0.059" /><testcase classname="tests.test_independent_review" name="test_vector_query_width_is_not_hidden_in_single_tool" time="0.152" /><testcase classname="tests.test_independent_review" name="test_backend_batch_budget_is_checked_before_partial_search" time="0.150" /><testcase classname="tests.test_providers" name="test_endpoint_rejects[https://user:key@example.com/v1]" time="0.001" /><testcase classname="tests.test_providers" name="test_endpoint_rejects[http://]" time="0.001" /><testcase classname="tests.test_providers" name="test_endpoint_rejects[http://:80]" time="0.001" /><testcase classname="tests.test_providers" name="test_endpoint_rejects[https://x?key=foo]" time="0.001" /><testcase classname="tests.test_providers" name="test_endpoint_rejects[https://x#frag]" time="0.001" /><testcase classname="tests.test_providers" name="test_endpoint_rejects[ftp://example.com]" time="0.001" /><testcase classname="tests.test_providers" name="test_endpoint_rejects[https://x:bad]" time="0.001" /><testcase classname="tests.test_providers" name="test_endpoint_rejects[https://x\n/v1]" time="0.001" /><testcase classname="tests.test_providers" name="test_network_disabled_by_default" time="0.135" /><testcase classname="tests.test_providers" name="test_openai_strict_envelope_and_returned_identity" time="0.139" /><testcase classname="tests.test_providers" name="test_anthropic_blocks_ids_and_results_roundtrip" time="0.149" /><testcase classname="tests.test_providers" name="test_anthropic_incomplete[max_tokens]" time="0.196" /><testcase classname="tests.test_providers" name="test_anthropic_incomplete[refusal]" time="0.143" /><testcase classname="tests.test_providers" name="test_anthropic_incomplete[pause_turn]" time="0.139" /><testcase classname="tests.test_providers" name="test_anthropic_incomplete[None]" time="0.144" /><testcase classname="tests.test_providers" name="test_anthropic_duplicate_ids_and_unknown_block" time="0.173" /><testcase classname="tests.test_providers" name="test_retriever_bad_rows[None]" time="0.001" /><testcase classname="tests.test_providers" name="test_retriever_bad_rows[rows1]" time="0.001" /><testcase classname="tests.test_providers" name="test_retriever_bad_rows[rows2]" time="0.002" /><testcase classname="tests.test_providers" name="test_retriever_bad_rows[rows3]" time="0.001" /><testcase classname="tests.test_providers" name="test_retriever_bad_rows[rows4]" time="0.001" /><testcase classname="tests.test_providers" name="test_retriever_bad_rows[rows5]" time="0.002" /><testcase classname="tests.test_providers" name="test_retriever_bad_rows[rows6]" time="0.001" /><testcase classname="tests.test_providers" name="test_retriever_document_identity_mismatch" time="0.001" /><testcase classname="tests.test_providers" name="test_partial_usage_and_boolean_not_counted" time="0.001" /><testcase classname="tests.test_providers" name="test_local_http_end_to_end_no_secret_in_archive" time="0.806" /><testcase classname="tests.test_providers" name="test_http_429_has_no_retry_or_error_body" time="0.680" /><testcase classname="tests.test_providers" name="test_redirect_is_not_followed" time="0.650" /><testcase classname="tests.test_providers" name="test_anthropic_and_echo_http_full_episode" time="0.771" /><testcase classname="tests.test_providers" name="test_missing_document_identity_echo_is_explicit" time="0.001" /><testcase classname="tests.test_recovery_http" name="test_recovery_native_http_roundtrip[soft_note-openai]" time="0.526"><failure message="AssertionError: assert 'transport_error' == 'submitted'&#10;  &#10;  - submitted&#10;  + transport_error">provider = 'openai', case = 'soft_note'
+tmp_path = WindowsPath('<WORKTREE>/runs/field-feedback-offline/baseline-temp/test_recovery_native_http_roun0')
+
+    @pytest.mark.parametrize('provider', ['openai', 'anthropic'])
+    @pytest.mark.parametrize('case', ['soft_note', 'prose', 'capacity'])
+    def test_recovery_native_http_roundtrip(provider, case, tmp_path):
+        corpus = smoke_corpus()
+        config = Config(max_model_calls=3)
+        if case == 'soft_note':
+            replies = [S, R, native(note(), ('finish', {'answer': 'Ada Rowan', 'refs': ['e1']}))]
+        elif case == 'prose':
+            replies = [S, R, native(content='RAW_REPAIR_778 "Ada Rowan"', finish_reason='stop'), F]
+            config = Config(max_model_calls=4)
+        else:
+            corpus = LocalCorpus([{'docid': 'large', 'title': 'LongArchive', 'content': 'X' * 26000}])
+            config = Config(max_model_calls=3, context_limit=28000, response_reserve=2048)
+            replies = [native(('search', {'queries': ['LongArchive'], 'top_k': 1})),
+                       native(*[('read', {'ref': 'd1', 'start': i * 6000, 'length': 6000}) for i in range(4)]), A]
+        received = []
+        queue = deepcopy(replies)
+        class Handler(BaseHTTPRequestHandler):
+            def log_message(self, *args):
+                pass
+            def do_POST(self):
+                body = json.loads(self.rfile.read(int(self.headers['Content-Length'])))
+                received.append(body)
+                raw = queue.pop(0)
+                payload = anthropic(raw) if provider == 'anthropic' else raw
+                self.send_response(200)
+                self.send_header('Content-Type', 'application/json')
+                self.end_headers()
+                self.wfile.write(json.dumps(payload).encode())
+        server = ThreadingHTTPServer(('127.0.0.1', 0), Handler)
+        thread = threading.Thread(target=server.serve_forever, daemon=True)
+        thread.start()
+        h = Harness('Who was first?', corpus, path=tmp_path/'episode.sqlite', config=config)
+        cls = AnthropicModel if provider == 'anthropic' else OpenAIModel
+        model = cls(f'http://127.0.0.1:{server.server_port}/v1', 'fixture', revision='offline', http=HTTP(allow_network=True))
+        try:
+            terminal = h.run(model)
+&gt;           assert terminal['outcome'] == ('abstained' if case == 'capacity' else 'submitted')
+E           AssertionError: assert 'transport_error' == 'submitted'
+E             
+E             - submitted
+E             + transport_error
+
+harnesses\stride\tests\test_recovery_http.py:67: AssertionError</failure></testcase><testcase classname="tests.test_recovery_http" name="test_recovery_native_http_roundtrip[soft_note-anthropic]" time="0.523"><failure message="AssertionError: assert 'transport_error' == 'submitted'&#10;  &#10;  - submitted&#10;  + transport_error">provider = 'anthropic', case = 'soft_note'
+tmp_path = WindowsPath('<WORKTREE>/runs/field-feedback-offline/baseline-temp/test_recovery_native_http_roun1')
+
+    @pytest.mark.parametrize('provider', ['openai', 'anthropic'])
+    @pytest.mark.parametrize('case', ['soft_note', 'prose', 'capacity'])
+    def test_recovery_native_http_roundtrip(provider, case, tmp_path):
+        corpus = smoke_corpus()
+        config = Config(max_model_calls=3)
+        if case == 'soft_note':
+            replies = [S, R, native(note(), ('finish', {'answer': 'Ada Rowan', 'refs': ['e1']}))]
+        elif case == 'prose':
+            replies = [S, R, native(content='RAW_REPAIR_778 "Ada Rowan"', finish_reason='stop'), F]
+            config = Config(max_model_calls=4)
+        else:
+            corpus = LocalCorpus([{'docid': 'large', 'title': 'LongArchive', 'content': 'X' * 26000}])
+            config = Config(max_model_calls=3, context_limit=28000, response_reserve=2048)
+            replies = [native(('search', {'queries': ['LongArchive'], 'top_k': 1})),
+                       native(*[('read', {'ref': 'd1', 'start': i * 6000, 'length': 6000}) for i in range(4)]), A]
+        received = []
+        queue = deepcopy(replies)
+        class Handler(BaseHTTPRequestHandler):
+            def log_message(self, *args):
+                pass
+            def do_POST(self):
+                body = json.loads(self.rfile.read(int(self.headers['Content-Length'])))
+                received.append(body)
+                raw = queue.pop(0)
+                payload = anthropic(raw) if provider == 'anthropic' else raw
+                self.send_response(200)
+                self.send_header('Content-Type', 'application/json')
+                self.end_headers()
+                self.wfile.write(json.dumps(payload).encode())
+        server = ThreadingHTTPServer(('127.0.0.1', 0), Handler)
+        thread = threading.Thread(target=server.serve_forever, daemon=True)
+        thread.start()
+        h = Harness('Who was first?', corpus, path=tmp_path/'episode.sqlite', config=config)
+        cls = AnthropicModel if provider == 'anthropic' else OpenAIModel
+        model = cls(f'http://127.0.0.1:{server.server_port}/v1', 'fixture', revision='offline', http=HTTP(allow_network=True))
+        try:
+            terminal = h.run(model)
+&gt;           assert terminal['outcome'] == ('abstained' if case == 'capacity' else 'submitted')
+E           AssertionError: assert 'transport_error' == 'submitted'
+E             
+E             - submitted
+E             + transport_error
+
+harnesses\stride\tests\test_recovery_http.py:67: AssertionError</failure></testcase><testcase classname="tests.test_recovery_http" name="test_recovery_native_http_roundtrip[prose-openai]" time="0.518"><failure message="AssertionError: assert 'transport_error' == 'submitted'&#10;  &#10;  - submitted&#10;  + transport_error">provider = 'openai', case = 'prose'
+tmp_path = WindowsPath('<WORKTREE>/runs/field-feedback-offline/baseline-temp/test_recovery_native_http_roun2')
+
+    @pytest.mark.parametrize('provider', ['openai', 'anthropic'])
+    @pytest.mark.parametrize('case', ['soft_note', 'prose', 'capacity'])
+    def test_recovery_native_http_roundtrip(provider, case, tmp_path):
+        corpus = smoke_corpus()
+        config = Config(max_model_calls=3)
+        if case == 'soft_note':
+            replies = [S, R, native(note(), ('finish', {'answer': 'Ada Rowan', 'refs': ['e1']}))]
+        elif case == 'prose':
+            replies = [S, R, native(content='RAW_REPAIR_778 "Ada Rowan"', finish_reason='stop'), F]
+            config = Config(max_model_calls=4)
+        else:
+            corpus = LocalCorpus([{'docid': 'large', 'title': 'LongArchive', 'content': 'X' * 26000}])
+            config = Config(max_model_calls=3, context_limit=28000, response_reserve=2048)
+            replies = [native(('search', {'queries': ['LongArchive'], 'top_k': 1})),
+                       native(*[('read', {'ref': 'd1', 'start': i * 6000, 'length': 6000}) for i in range(4)]), A]
+        received = []
+        queue = deepcopy(replies)
+        class Handler(BaseHTTPRequestHandler):
+            def log_message(self, *args):
+                pass
+            def do_POST(self):
+                body = json.loads(self.rfile.read(int(self.headers['Content-Length'])))
+                received.append(body)
+                raw = queue.pop(0)
+                payload = anthropic(raw) if provider == 'anthropic' else raw
+                self.send_response(200)
+                self.send_header('Content-Type', 'application/json')
+                self.end_headers()
+                self.wfile.write(json.dumps(payload).encode())
+        server = ThreadingHTTPServer(('127.0.0.1', 0), Handler)
+        thread = threading.Thread(target=server.serve_forever, daemon=True)
+        thread.start()
+        h = Harness('Who was first?', corpus, path=tmp_path/'episode.sqlite', config=config)
+        cls = AnthropicModel if provider == 'anthropic' else OpenAIModel
+        model = cls(f'http://127.0.0.1:{server.server_port}/v1', 'fixture', revision='offline', http=HTTP(allow_network=True))
+        try:
+            terminal = h.run(model)
+&gt;           assert terminal['outcome'] == ('abstained' if case == 'capacity' else 'submitted')
+E           AssertionError: assert 'transport_error' == 'submitted'
+E             
+E             - submitted
+E             + transport_error
+
+harnesses\stride\tests\test_recovery_http.py:67: AssertionError</failure></testcase><testcase classname="tests.test_recovery_http" name="test_recovery_native_http_roundtrip[prose-anthropic]" time="0.521"><failure message="AssertionError: assert 'transport_error' == 'submitted'&#10;  &#10;  - submitted&#10;  + transport_error">provider = 'anthropic', case = 'prose'
+tmp_path = WindowsPath('<WORKTREE>/runs/field-feedback-offline/baseline-temp/test_recovery_native_http_roun3')
+
+    @pytest.mark.parametrize('provider', ['openai', 'anthropic'])
+    @pytest.mark.parametrize('case', ['soft_note', 'prose', 'capacity'])
+    def test_recovery_native_http_roundtrip(provider, case, tmp_path):
+        corpus = smoke_corpus()
+        config = Config(max_model_calls=3)
+        if case == 'soft_note':
+            replies = [S, R, native(note(), ('finish', {'answer': 'Ada Rowan', 'refs': ['e1']}))]
+        elif case == 'prose':
+            replies = [S, R, native(content='RAW_REPAIR_778 "Ada Rowan"', finish_reason='stop'), F]
+            config = Config(max_model_calls=4)
+        else:
+            corpus = LocalCorpus([{'docid': 'large', 'title': 'LongArchive', 'content': 'X' * 26000}])
+            config = Config(max_model_calls=3, context_limit=28000, response_reserve=2048)
+            replies = [native(('search', {'queries': ['LongArchive'], 'top_k': 1})),
+                       native(*[('read', {'ref': 'd1', 'start': i * 6000, 'length': 6000}) for i in range(4)]), A]
+        received = []
+        queue = deepcopy(replies)
+        class Handler(BaseHTTPRequestHandler):
+            def log_message(self, *args):
+                pass
+            def do_POST(self):
+                body = json.loads(self.rfile.read(int(self.headers['Content-Length'])))
+                received.append(body)
+                raw = queue.pop(0)
+                payload = anthropic(raw) if provider == 'anthropic' else raw
+                self.send_response(200)
+                self.send_header('Content-Type', 'application/json')
+                self.end_headers()
+                self.wfile.write(json.dumps(payload).encode())
+        server = ThreadingHTTPServer(('127.0.0.1', 0), Handler)
+        thread = threading.Thread(target=server.serve_forever, daemon=True)
+        thread.start()
+        h = Harness('Who was first?', corpus, path=tmp_path/'episode.sqlite', config=config)
+        cls = AnthropicModel if provider == 'anthropic' else OpenAIModel
+        model = cls(f'http://127.0.0.1:{server.server_port}/v1', 'fixture', revision='offline', http=HTTP(allow_network=True))
+        try:
+            terminal = h.run(model)
+&gt;           assert terminal['outcome'] == ('abstained' if case == 'capacity' else 'submitted')
+E           AssertionError: assert 'transport_error' == 'submitted'
+E             
+E             - submitted
+E             + transport_error
+
+harnesses\stride\tests\test_recovery_http.py:67: AssertionError</failure></testcase><testcase classname="tests.test_recovery_http" name="test_recovery_native_http_roundtrip[capacity-openai]" time="0.525"><failure message="AssertionError: assert 'transport_error' == 'abstained'&#10;  &#10;  - abstained&#10;  + transport_error">provider = 'openai', case = 'capacity'
+tmp_path = WindowsPath('<WORKTREE>/runs/field-feedback-offline/baseline-temp/test_recovery_native_http_roun4')
+
+    @pytest.mark.parametrize('provider', ['openai', 'anthropic'])
+    @pytest.mark.parametrize('case', ['soft_note', 'prose', 'capacity'])
+    def test_recovery_native_http_roundtrip(provider, case, tmp_path):
+        corpus = smoke_corpus()
+        config = Config(max_model_calls=3)
+        if case == 'soft_note':
+            replies = [S, R, native(note(), ('finish', {'answer': 'Ada Rowan', 'refs': ['e1']}))]
+        elif case == 'prose':
+            replies = [S, R, native(content='RAW_REPAIR_778 "Ada Rowan"', finish_reason='stop'), F]
+            config = Config(max_model_calls=4)
+        else:
+            corpus = LocalCorpus([{'docid': 'large', 'title': 'LongArchive', 'content': 'X' * 26000}])
+            config = Config(max_model_calls=3, context_limit=28000, response_reserve=2048)
+            replies = [native(('search', {'queries': ['LongArchive'], 'top_k': 1})),
+                       native(*[('read', {'ref': 'd1', 'start': i * 6000, 'length': 6000}) for i in range(4)]), A]
+        received = []
+        queue = deepcopy(replies)
+        class Handler(BaseHTTPRequestHandler):
+            def log_message(self, *args):
+                pass
+            def do_POST(self):
+                body = json.loads(self.rfile.read(int(self.headers['Content-Length'])))
+                received.append(body)
+                raw = queue.pop(0)
+                payload = anthropic(raw) if provider == 'anthropic' else raw
+                self.send_response(200)
+                self.send_header('Content-Type', 'application/json')
+                self.end_headers()
+                self.wfile.write(json.dumps(payload).encode())
+        server = ThreadingHTTPServer(('127.0.0.1', 0), Handler)
+        thread = threading.Thread(target=server.serve_forever, daemon=True)
+        thread.start()
+        h = Harness('Who was first?', corpus, path=tmp_path/'episode.sqlite', config=config)
+        cls = AnthropicModel if provider == 'anthropic' else OpenAIModel
+        model = cls(f'http://127.0.0.1:{server.server_port}/v1', 'fixture', revision='offline', http=HTTP(allow_network=True))
+        try:
+            terminal = h.run(model)
+&gt;           assert terminal['outcome'] == ('abstained' if case == 'capacity' else 'submitted')
+E           AssertionError: assert 'transport_error' == 'abstained'
+E             
+E             - abstained
+E             + transport_error
+
+harnesses\stride\tests\test_recovery_http.py:67: AssertionError</failure></testcase><testcase classname="tests.test_recovery_http" name="test_recovery_native_http_roundtrip[capacity-anthropic]" time="0.526"><failure message="AssertionError: assert 'transport_error' == 'abstained'&#10;  &#10;  - abstained&#10;  + transport_error">provider = 'anthropic', case = 'capacity'
+tmp_path = WindowsPath('<WORKTREE>/runs/field-feedback-offline/baseline-temp/test_recovery_native_http_roun5')
+
+    @pytest.mark.parametrize('provider', ['openai', 'anthropic'])
+    @pytest.mark.parametrize('case', ['soft_note', 'prose', 'capacity'])
+    def test_recovery_native_http_roundtrip(provider, case, tmp_path):
+        corpus = smoke_corpus()
+        config = Config(max_model_calls=3)
+        if case == 'soft_note':
+            replies = [S, R, native(note(), ('finish', {'answer': 'Ada Rowan', 'refs': ['e1']}))]
+        elif case == 'prose':
+            replies = [S, R, native(content='RAW_REPAIR_778 "Ada Rowan"', finish_reason='stop'), F]
+            config = Config(max_model_calls=4)
+        else:
+            corpus = LocalCorpus([{'docid': 'large', 'title': 'LongArchive', 'content': 'X' * 26000}])
+            config = Config(max_model_calls=3, context_limit=28000, response_reserve=2048)
+            replies = [native(('search', {'queries': ['LongArchive'], 'top_k': 1})),
+                       native(*[('read', {'ref': 'd1', 'start': i * 6000, 'length': 6000}) for i in range(4)]), A]
+        received = []
+        queue = deepcopy(replies)
+        class Handler(BaseHTTPRequestHandler):
+            def log_message(self, *args):
+                pass
+            def do_POST(self):
+                body = json.loads(self.rfile.read(int(self.headers['Content-Length'])))
+                received.append(body)
+                raw = queue.pop(0)
+                payload = anthropic(raw) if provider == 'anthropic' else raw
+                self.send_response(200)
+                self.send_header('Content-Type', 'application/json')
+                self.end_headers()
+                self.wfile.write(json.dumps(payload).encode())
+        server = ThreadingHTTPServer(('127.0.0.1', 0), Handler)
+        thread = threading.Thread(target=server.serve_forever, daemon=True)
+        thread.start()
+        h = Harness('Who was first?', corpus, path=tmp_path/'episode.sqlite', config=config)
+        cls = AnthropicModel if provider == 'anthropic' else OpenAIModel
+        model = cls(f'http://127.0.0.1:{server.server_port}/v1', 'fixture', revision='offline', http=HTTP(allow_network=True))
+        try:
+            terminal = h.run(model)
+&gt;           assert terminal['outcome'] == ('abstained' if case == 'capacity' else 'submitted')
+E           AssertionError: assert 'transport_error' == 'abstained'
+E             
+E             - abstained
+E             + transport_error
+
+harnesses\stride\tests\test_recovery_http.py:67: AssertionError</failure></testcase><testcase classname="tests.test_recovery_v2" name="test_final_optional_note_rejection_does_not_block_independent_finish" time="0.161" /><testcase classname="tests.test_recovery_v2" name="test_note_capacity_same_response_finish_succeeds_without_extra_round" time="0.156" /><testcase classname="tests.test_recovery_v2" name="test_disabled_or_reserved_note_is_nonblocking_only_for_received_refs[config0]" time="0.154" /><testcase classname="tests.test_recovery_v2" name="test_disabled_or_reserved_note_is_nonblocking_only_for_received_refs[config1]" time="0.150" /><testcase classname="tests.test_recovery_v2" name="test_bad_source_or_schema_in_final_note_still_blocks_finish[bad_note0]" time="0.155" /><testcase classname="tests.test_recovery_v2" name="test_bad_source_or_schema_in_final_note_still_blocks_finish[bad_note1]" time="0.151" /><testcase classname="tests.test_recovery_v2" name="test_successful_read_in_same_response_does_not_license_note_or_finish" time="0.188" /><testcase classname="tests.test_recovery_v2" name="test_batch_limit_not_softened_by_note_name" time="0.156" /><testcase classname="tests.test_recovery_v2" name="test_finish_source_validation_after_soft_note_is_unchanged" time="0.155" /><testcase classname="tests.test_recovery_v2" name="test_prose_repair_sees_exact_uncommitted_content_but_does_not_auto_submit" time="0.153" /><testcase classname="tests.test_recovery_v2" name="test_last_chance_prose_is_not_salvaged_or_given_a_bonus_request" time="0.157" /><testcase classname="tests.test_recovery_v2" name="test_repair_view_is_bounded_and_keeps_hash_and_omission_metadata" time="0.165" /><testcase classname="tests.test_recovery_v2" name="test_malformed_native_ids_are_repair_data_not_dangling_native_calls" time="0.197" /><testcase classname="tests.test_recovery_v2" name="test_repair_context_is_transient_and_source_text_stays_data" time="0.158" /><testcase classname="tests.test_recovery_v2" name="test_oversized_complete_result_group_gets_recoverable_explicit_receipt" time="0.163" /><testcase classname="tests.test_recovery_v2" name="test_withheld_window_cannot_be_guessed_as_evidence" time="0.186" /><testcase classname="tests.test_recovery_v2" name="test_withheld_exact_window_can_be_retried_in_smaller_batch_without_refetch" time="0.168" /><testcase classname="tests.test_recovery_v2" name="test_smaller_raw_group_has_no_silent_truncation" time="0.150" /><testcase classname="tests.test_recovery_v2" name="test_smallest_legal_result_group_still_fails_honestly_when_impossible" time="0.143" /><testcase classname="tests.test_recovery_v2" name="test_withheld_payload_objects_are_verified_in_readonly_replay" time="0.357" /><testcase classname="tests.test_recovery_v2" name="test_recovery_flags_are_real_booleans[1-nonblocking_notes]" time="0.001" /><testcase classname="tests.test_recovery_v2" name="test_recovery_flags_are_real_booleans[1-repair_context]" time="0.001" /><testcase classname="tests.test_recovery_v2" name="test_recovery_flags_are_real_booleans[1-delivery_preflight]" time="0.001" /><testcase classname="tests.test_recovery_v2" name="test_recovery_flags_are_real_booleans[true-nonblocking_notes]" time="0.001" /><testcase classname="tests.test_recovery_v2" name="test_recovery_flags_are_real_booleans[true-repair_context]" time="0.001" /><testcase classname="tests.test_recovery_v2" name="test_recovery_flags_are_real_booleans[true-delivery_preflight]" time="0.001" /><testcase classname="tests.test_recovery_v2" name="test_recovery_flags_are_real_booleans[None-nonblocking_notes]" time="0.001" /><testcase classname="tests.test_recovery_v2" name="test_recovery_flags_are_real_booleans[None-repair_context]" time="0.001" /><testcase classname="tests.test_recovery_v2" name="test_recovery_flags_are_real_booleans[None-delivery_preflight]" time="0.001" /><testcase classname="tests.test_recovery_v2" name="test_old_note_failure_behavior_remains_a_frozen_ablation" time="0.156" /><testcase classname="tests.test_recovery_v2" name="test_repair_context_can_be_disabled_without_automatic_answer_salvage" time="0.152" /><testcase classname="tests.test_recovery_v2" name="test_capacity_ablation_preserves_original_boundary_failure" time="0.206" /><testcase classname="tests.test_recovery_v2" name="test_repair_preview_can_be_omitted_for_capacity_without_claiming_it_was_shown" time="0.141" /><testcase classname="tests.test_recovery_v2" name="test_old_archive_protocol_is_not_relabelled_as_new" time="0.073" /><testcase classname="tests.test_recovery_v2" name="test_each_new_mechanism_can_be_frozen_as_one_variable[nonblocking_notes]" time="0.026" /><testcase classname="tests.test_recovery_v2" name="test_each_new_mechanism_can_be_frozen_as_one_variable[repair_context]" time="0.026" /><testcase classname="tests.test_recovery_v2" name="test_each_new_mechanism_can_be_frozen_as_one_variable[delivery_preflight]" time="0.014" /><testcase classname="tests.test_recovery_v2" name="test_repair_archive_object_deletion_is_detected" time="0.261" /><testcase classname="tests.test_recovery_v2" name="test_package_and_distribution_versions_agree" time="0.005" /><testcase classname="tests.test_recovery_v2" name="test_critical_error_stays_blocking_after_peripheral_note_failure" time="0.177" /><testcase classname="examples.test_audit_query_arguments_a3" name="test_string_queries_does_not_count_characters_and_preserves_sources" time="0.071" /><testcase classname="examples.test_audit_query_arguments_a3" name="test_rejects_sealed_case_before_any_mutation" time="0.019" /><testcase classname="examples.test_judge_frozen_a3" name="test_one_local_judge_attempt_and_strict_result[success]" time="0.750" /><testcase classname="examples.test_judge_frozen_a3" name="test_one_local_judge_attempt_and_strict_result[length]" time="0.761" /><testcase classname="examples.test_judge_frozen_a3" name="test_one_local_judge_attempt_and_strict_result[identity]" time="0.726" /><testcase classname="examples.test_judge_frozen_a3" name="test_one_local_judge_attempt_and_strict_result[string_boolean]" time="0.784" /><testcase classname="examples.test_publish_trace_bundle_a3" name="test_public_archive_changes_only_deployment_metadata" time="0.240" /><testcase classname="examples.test_publish_trace_bundle_a3" name="test_publication_distinguishes_url_word_from_credential[False]" time="0.075" /><testcase classname="examples.test_publish_trace_bundle_a3" name="test_publication_distinguishes_url_word_from_credential[True]" time="0.074" /><testcase classname="examples.test_trace_hard_cohort_a3" name="test_only_budget_fields_change" time="0.001" /><testcase classname="examples.test_trace_hard_cohort_a3" name="test_full_780_request_coverage[62-True]" time="0.805" /><testcase classname="examples.test_trace_hard_cohort_a3" name="test_full_780_request_coverage[221-False]" time="0.877" /><testcase classname="examples.test_trace_hard_cohort_a3" name="test_no_retry_and_only_infrastructure_stops_queue[abstained-True]" time="0.223" /><testcase classname="examples.test_trace_hard_cohort_a3" name="test_no_retry_and_only_infrastructure_stops_queue[context_capacity-True]" time="0.216" /><testcase classname="examples.test_trace_hard_cohort_a3" name="test_no_retry_and_only_infrastructure_stops_queue[http_error-False]" time="0.197" /><testcase classname="examples.test_trace_hard_question_a3" name="test_missing_ledger_never_created" time="0.015" /><testcase classname="examples.test_trace_hard_question_a3" name="test_global_and_per_episode_budget" time="0.473" /><testcase classname="examples.test_trace_hard_question_a3" name="test_insufficient_allowance_has_no_charge" time="0.056" /><testcase classname="examples.test_trace_hard_question_a3" name="test_loopback_episode_and_export[success]" time="2.556" /><testcase classname="examples.test_trace_hard_question_a3" name="test_loopback_episode_and_export[http429]" time="2.453" /><testcase classname="examples.test_trace_hard_question_a3" name="test_loopback_episode_and_export[truncated]" time="2.184" /><testcase classname="examples.test_trace_hard_question_a3" name="test_loopback_episode_and_export[identity]" time="2.366" /><testcase classname="examples.test_trace_hard_question_a3" name="test_loopback_episode_and_export[secret_echo]" time="2.227" /><testcase classname="examples.test_trace_pair_a3" name="test_both_episodes_need_full_existing_budget[100-False]" time="0.179" /><testcase classname="examples.test_trace_pair_a3" name="test_both_episodes_need_full_existing_budget[105-True]" time="0.203" /><testcase classname="examples.test_trace_pair_a3" name="test_isolation_before_network[duplicate-Duplicate episode]" time="0.191" /><testcase classname="examples.test_trace_pair_a3" name="test_isolation_before_network[extra_question_field-question-only]" time="0.147" /><testcase classname="examples.test_trace_q26_a3" name="test_missing_ledger_never_created" time="0.011" /><testcase classname="examples.test_trace_q26_a3" name="test_global_and_per_episode_budget" time="0.409" /><testcase classname="examples.test_trace_q26_a3" name="test_insufficient_allowance_has_no_charge" time="0.061" /><testcase classname="examples.test_trace_q26_a3" name="test_loopback_episode_and_export[success]" time="2.498" /><testcase classname="examples.test_trace_q26_a3" name="test_loopback_episode_and_export[http429]" time="2.204" /><testcase classname="examples.test_trace_q26_a3" name="test_loopback_episode_and_export[truncated]" time="2.225" /><testcase classname="examples.test_trace_q26_a3" name="test_loopback_episode_and_export[identity]" time="2.364" /><testcase classname="examples.test_trace_q26_a3" name="test_loopback_episode_and_export[secret_echo]" time="2.217" /><testcase classname="examples.test_trace_question_a3" name="test_missing_ledger_never_created" time="0.016" /><testcase classname="examples.test_trace_question_a3" name="test_global_and_per_episode_budget" time="0.433" /><testcase classname="examples.test_trace_question_a3" name="test_insufficient_allowance_has_no_charge" time="0.047" /><testcase classname="examples.test_trace_question_a3" name="test_loopback_episode_and_export[success]" time="2.450" /><testcase classname="examples.test_trace_question_a3" name="test_loopback_episode_and_export[http429]" time="2.165" /><testcase classname="examples.test_trace_question_a3" name="test_loopback_episode_and_export[truncated]" time="2.254" /><testcase classname="examples.test_trace_question_a3" name="test_loopback_episode_and_export[identity]" time="2.193" /><testcase classname="examples.test_trace_question_a3" name="test_loopback_episode_and_export[secret_echo]" time="2.173" /></testsuite></testsuites>

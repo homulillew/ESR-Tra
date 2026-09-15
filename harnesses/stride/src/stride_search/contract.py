@@ -116,7 +116,9 @@ def tools(*, notes_enabled: bool, final: bool, query_limit: int = 3) -> list[dic
     return result
 
 
-def validate(name: str, args: Any) -> None:
+def validate(name: str, args: Any, *, feedback: str = "legacy") -> None:
+    if feedback not in ("legacy", "field"):
+        raise ValueError("Unknown validation feedback experiment")
     if name not in SCHEMAS:
         raise ContractError("unknown_tool", f"Unknown tool: {name}")
     # jsonschema regards 1.0 as an integer; the wire contract deliberately does not.
@@ -127,6 +129,9 @@ def validate(name: str, args: Any) -> None:
     errors = list(Draft202012Validator(SCHEMAS[name]).iter_errors(args))
     if errors:
         e = min(errors, key=lambda x: str(list(x.path)))
+        if feedback == "field":
+            from .validation_feedback import format_validation_error
+            raise ContractError("arguments_invalid", format_validation_error(name, e))
         # Do not echo an unbounded invalid document/answer into error messages.
         raise ContractError("arguments_invalid", f"{name}: invalid fields near {list(e.path)!r}; follow the supplied schema")
 

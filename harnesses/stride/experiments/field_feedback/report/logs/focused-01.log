@@ -1,0 +1,38 @@
+.................................F..                                     [100%]
+================================== FAILURES ===================================
+____________ test_scripted_http_roundtrip_preserves_id_and_message ____________
+
+    def test_scripted_http_roundtrip_preserves_id_and_message():
+        """SCRIPTED: explicit synthetic next response, no claim of model self-repair."""
+        answer = '  "Synthetic literal"\n'
+        replies = [native(('search', {'queries': ['Lumen Observatory'], 'top_k': 1})),
+                   native(('read', {'ref': 'd1'})), native(('finish', {'answer': 47, 'refs': ['e1']})),
+                   native(('finish', {'answer': answer, 'refs': ['e1']}))]
+        wrong = replies[2]['choices'][0]['message']['tool_calls'][0]
+        received = []; queue = deepcopy(replies)
+        class Handler(BaseHTTPRequestHandler):
+            def log_message(self, *_):
+                pass
+            def do_POST(self):
+                received.append(json.loads(self.rfile.read(int(self.headers['Content-Length']))))
+                self.send_response(200); self.end_headers(); self.wfile.write(canonical(queue.pop(0)).encode())
+        server = ThreadingHTTPServer(('127.0.0.1', 0), Handler)
+        thread = threading.Thread(target=server.serve_forever, daemon=True); thread.start()
+        h = Harness('SCRIPTED interface check', smoke_corpus(), config=Config(max_model_calls=8), validation_feedback='field')
+        model = OpenAIModel(f'http://127.0.0.1:{server.server_port}/v1', 'fixture', revision='SCRIPTED',
+            http=HTTP(allow_network=True, opener=urllib.request.build_opener(urllib.request.ProxyHandler({}))))
+        try:
+            assert h.run(model)['outcome'] == 'submitted'
+            assert h.terminal['answer'] == answer and h.terminal['refs'] == ['e1']
+            assert h.model_calls == 4 and not queue
+            final = received[-1]
+            receipt = next(loads(m['content']) for m in final['messages'] if m.get('tool_call_id') == wrong['id'])
+            feedback = loads(final['messages'][-1]['content'].split('\n', 1)[1])['feedback']
+>           assert receipt['message'] == feedback['message'] and '/answer' in receipt['message']
+                   ^^^^^^^^^^^^^^^^^^
+E           KeyError: 'message'
+
+harnesses\stride\tests\test_field_feedback.py:187: KeyError
+=========================== short test summary info ===========================
+FAILED harnesses\stride\tests\test_field_feedback.py::test_scripted_http_roundtrip_preserves_id_and_message
+1 failed, 35 passed in 5.53s

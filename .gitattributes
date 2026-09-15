@@ -1,3 +1,5 @@
 # Published trace hashes refer to exact stored bytes, including HTTP bodies.
 harnesses/stride/artifacts/** -text
 harnesses/stride/artifacts/**/*.sqlite binary
+# Experiment report hashes refer to exact committed publication bytes.
+harnesses/stride/experiments/field_feedback/report/** -text

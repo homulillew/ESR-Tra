@@ -1,0 +1,605 @@
+....................................................................FF.. [ 26%]
+........................................................................ [ 53%]
+......................................FFFFFF............................ [ 79%]
+.......................................................                  [100%]
+================================== FAILURES ===================================
+____________________ test_cli_cpu_native_loopback[openai] _____________________
+
+provider = 'openai'
+tmp_path = WindowsPath('<WORKTREE>/runs/field-feedback-offline/baseline-temp/test_cli_cpu_native_loopback_o0')
+capsys = <_pytest.capture.CaptureFixture object at 0x0000027EC42D0C20>
+
+    @pytest.mark.parametrize('provider', ['openai', 'anthropic'])
+    def test_cli_cpu_native_loopback(provider, tmp_path, capsys):
+        path = make_index(tmp_path/'cpu.sqlite')
+        question = tmp_path/'question.txt'; question.write_text('Who directed Alpha?')
+        replies = [native(('search', {'queries':['Alpha'], 'top_k':1})),
+                   native(('read', {'ref':'d1'})), native(('finish', {'answer':'Mira Stone', 'refs':['e1']}))]
+        queue, received = deepcopy(replies), []
+        class Handler(BaseHTTPRequestHandler):
+            def log_message(self, *args): pass
+            def do_POST(self):
+                received.append(json.loads(self.rfile.read(int(self.headers['Content-Length']))))
+                raw = queue.pop(0)
+                payload = anthropic(raw) if provider == 'anthropic' else raw
+                self.send_response(200); self.send_header('Content-Type','application/json'); self.end_headers()
+                self.wfile.write(json.dumps(payload).encode())
+        server = ThreadingHTTPServer(('127.0.0.1', 0), Handler)
+        thread = threading.Thread(target=server.serve_forever, daemon=True); thread.start()
+        db = tmp_path/'episode.sqlite'
+        try:
+            code = main(['run','--allow-network','--accept-counter-estimate','--base-url',f'http://127.0.0.1:{server.server_port}/v1',
+                '--model','fixture','--model-revision','synthetic','--model-api',provider,
+                '--sqlite-index',str(path),'--index-id','synthetic-cpu','--counter','utf8_bytes',
+                '--question-file',str(question),'--db',str(db),'--max-model-calls','3',
+                '--context-limit','100000','--response-reserve','8192'])
+>           assert code == 0 and len(received) == 3 and not queue
+E           assert (2 == 0)
+
+harnesses\stride\tests\test_cpu_integration.py:45: AssertionError
+---------------------------- Captured stdout call -----------------------------
+{
+  "event_count": 5,
+  "head": "38ee036f0def2ff92c178e717b049df4b2a289f0bef7e221b7648a56b145907a",
+  "protocol": "stride-search-3",
+  "header": {
+    "config": {
+      "answer_prefix": "",
+      "answer_suffix": "",
+      "centered_recall": true,
+      "compiled_query_cache": false,
+      "context_limit": 100000,
+      "context_mode": "rolling",
+      "delivery_preflight": true,
+      "disclose_retriever": true,
+      "evidence_shelf_size": 3,
+      "max_actions": 80,
+      "max_backend_calls": 60,
+      "max_batch": 4,
+      "max_document_chars": 2000000,
+      "max_model_calls": 3,
+      "max_notes": 6,
+      "max_output_tokens": 2048,
+      "max_queries_per_search": 3,
+      "max_seconds": 900,
+      "max_total_output_tokens": 24000,
+      "nonblocking_notes": true,
+      "notes_enabled": true,
+      "read_chars": 3000,
+      "recall_navigation": true,
+      "recent_groups": 4,
+      "repair_context": true,
+      "require_sources": true,
+      "reserve_finish": true,
+      "response_reserve": 8192
+    },
+    "counter": {
+      "calibrated_provider_tokens": false,
+      "kind": "utf8_bytes"
+    },
+    "execution": "fresh_episode_only",
+    "protocol": "stride-search-3",
+    "question": "Who directed Alpha?",
+    "retriever": {
+      "adapter": "stride-cpu-or-1",
+      "capabilities_sha256": "4e52078473bc25d06809eef33e5edb9d80d3aa958ae57e00063c1ba8db12f048",
+      "identity_scope": "metadata hash and declared index label; not a new corpus byte audit",
+      "index_fingerprint": "41d0b02714b522c14e4d86226ce6ba480147b966f679e27e6fe33b6f1786e0da",
+      "index_id": "synthetic-cpu",
+      "kind": "sqlite-fts5-bm25",
+      "metadata": {
+        "complete": true,
+        "documents": 4
+      },
+      "query_timeout_seconds": 45,
+      "sqlite_runtime": "3.50.4"
+    },
+    "search_capabilities": {
+      "boolean_operators": false,
+      "kind": "sqlite-fts5-bm25",
+      "negative_result": "no hit for this expression is not proof that the fact is absent",
+      "phrase_quotes": false,
+      "query_rule": "lowercase; regex word extraction; first-occurrence deduplication; OR of quoted individual tokens",
+      "ranking": "SQLite bm25(search), ascending; docid tie-break; unchanged from q26 LocalIndex",
+      "scope": "fixed local corpus; not live web",
+      "site_filter": false,
+      "title_kind": "stored URL, not an extracted page title",
+      "warning": "site:, quotes and AND/OR in input are not filters/operators. Their words may become ordinary search terms. Use a few discriminating terms."
+    }
+  },
+  "model_identity": {
+    "endpoint": "http://127.0.0.1:57293/v1",
+    "expected_response_model": null,
+    "kind": "openai",
+    "model": "fixture",
+    "output_parameter": "max_tokens",
+    "revision_label": "synthetic",
+    "temperature": 0.2
+  },
+  "terminal": {
+    "answer": "",
+    "elapsed_seconds": 0.14561470001353882,
+    "outcome": "transport_error"
+  },
+  "model_attempts": 1,
+  "backend_attempts": 0,
+  "actions_recorded": 0,
+  "executed_actions": 0,
+  "usage_known": {
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "cache_read_tokens": 0,
+    "cache_write_tokens": 0
+  },
+  "unknown_usage_calls": 1,
+  "outstanding_requests": [
+    1
+  ],
+  "formal_correct": null,
+  "recovery_events": {},
+  "nonblocking_note_failures": 0,
+  "action_counts": {},
+  "action_error_counts": {},
+  "final_phase_requests": 0,
+  "compaction_requests": 0,
+  "rounds_receiving_new_raw": 0,
+  "cache_query_hits": 0,
+  "unchanged_note_updates": 0,
+  "limitations": [
+    "No semantic judge has run",
+    "No resume or automatic reissue",
+    "Hashes are not adversarial authentication"
+  ]
+}
+___________________ test_cli_cpu_native_loopback[anthropic] ___________________
+
+provider = 'anthropic'
+tmp_path = WindowsPath('<WORKTREE>/runs/field-feedback-offline/baseline-temp/test_cli_cpu_native_loopback_a0')
+capsys = <_pytest.capture.CaptureFixture object at 0x0000027EC3552E90>
+
+    @pytest.mark.parametrize('provider', ['openai', 'anthropic'])
+    def test_cli_cpu_native_loopback(provider, tmp_path, capsys):
+        path = make_index(tmp_path/'cpu.sqlite')
+        question = tmp_path/'question.txt'; question.write_text('Who directed Alpha?')
+        replies = [native(('search', {'queries':['Alpha'], 'top_k':1})),
+                   native(('read', {'ref':'d1'})), native(('finish', {'answer':'Mira Stone', 'refs':['e1']}))]
+        queue, received = deepcopy(replies), []
+        class Handler(BaseHTTPRequestHandler):
+            def log_message(self, *args): pass
+            def do_POST(self):
+                received.append(json.loads(self.rfile.read(int(self.headers['Content-Length']))))
+                raw = queue.pop(0)
+                payload = anthropic(raw) if provider == 'anthropic' else raw
+                self.send_response(200); self.send_header('Content-Type','application/json'); self.end_headers()
+                self.wfile.write(json.dumps(payload).encode())
+        server = ThreadingHTTPServer(('127.0.0.1', 0), Handler)
+        thread = threading.Thread(target=server.serve_forever, daemon=True); thread.start()
+        db = tmp_path/'episode.sqlite'
+        try:
+            code = main(['run','--allow-network','--accept-counter-estimate','--base-url',f'http://127.0.0.1:{server.server_port}/v1',
+                '--model','fixture','--model-revision','synthetic','--model-api',provider,
+                '--sqlite-index',str(path),'--index-id','synthetic-cpu','--counter','utf8_bytes',
+                '--question-file',str(question),'--db',str(db),'--max-model-calls','3',
+                '--context-limit','100000','--response-reserve','8192'])
+>           assert code == 0 and len(received) == 3 and not queue
+E           assert (2 == 0)
+
+harnesses\stride\tests\test_cpu_integration.py:45: AssertionError
+---------------------------- Captured stdout call -----------------------------
+{
+  "event_count": 5,
+  "head": "f511b6ef07f31a59486d0b3a514fe2ee18dbf7a08867fbb9148ba872bfef555d",
+  "protocol": "stride-search-3",
+  "header": {
+    "config": {
+      "answer_prefix": "",
+      "answer_suffix": "",
+      "centered_recall": true,
+      "compiled_query_cache": false,
+      "context_limit": 100000,
+      "context_mode": "rolling",
+      "delivery_preflight": true,
+      "disclose_retriever": true,
+      "evidence_shelf_size": 3,
+      "max_actions": 80,
+      "max_backend_calls": 60,
+      "max_batch": 4,
+      "max_document_chars": 2000000,
+      "max_model_calls": 3,
+      "max_notes": 6,
+      "max_output_tokens": 2048,
+      "max_queries_per_search": 3,
+      "max_seconds": 900,
+      "max_total_output_tokens": 24000,
+      "nonblocking_notes": true,
+      "notes_enabled": true,
+      "read_chars": 3000,
+      "recall_navigation": true,
+      "recent_groups": 4,
+      "repair_context": true,
+      "require_sources": true,
+      "reserve_finish": true,
+      "response_reserve": 8192
+    },
+    "counter": {
+      "calibrated_provider_tokens": false,
+      "kind": "utf8_bytes"
+    },
+    "execution": "fresh_episode_only",
+    "protocol": "stride-search-3",
+    "question": "Who directed Alpha?",
+    "retriever": {
+      "adapter": "stride-cpu-or-1",
+      "capabilities_sha256": "4e52078473bc25d06809eef33e5edb9d80d3aa958ae57e00063c1ba8db12f048",
+      "identity_scope": "metadata hash and declared index label; not a new corpus byte audit",
+      "index_fingerprint": "41d0b02714b522c14e4d86226ce6ba480147b966f679e27e6fe33b6f1786e0da",
+      "index_id": "synthetic-cpu",
+      "kind": "sqlite-fts5-bm25",
+      "metadata": {
+        "complete": true,
+        "documents": 4
+      },
+      "query_timeout_seconds": 45,
+      "sqlite_runtime": "3.50.4"
+    },
+    "search_capabilities": {
+      "boolean_operators": false,
+      "kind": "sqlite-fts5-bm25",
+      "negative_result": "no hit for this expression is not proof that the fact is absent",
+      "phrase_quotes": false,
+      "query_rule": "lowercase; regex word extraction; first-occurrence deduplication; OR of quoted individual tokens",
+      "ranking": "SQLite bm25(search), ascending; docid tie-break; unchanged from q26 LocalIndex",
+      "scope": "fixed local corpus; not live web",
+      "site_filter": false,
+      "title_kind": "stored URL, not an extracted page title",
+      "warning": "site:, quotes and AND/OR in input are not filters/operators. Their words may become ordinary search terms. Use a few discriminating terms."
+    }
+  },
+  "model_identity": {
+    "endpoint": "http://127.0.0.1:57297/v1",
+    "expected_response_model": null,
+    "kind": "anthropic",
+    "model": "fixture",
+    "output_parameter": "max_tokens",
+    "revision_label": "synthetic",
+    "temperature": 0.2
+  },
+  "terminal": {
+    "answer": "",
+    "elapsed_seconds": 0.12772759998915717,
+    "outcome": "transport_error"
+  },
+  "model_attempts": 1,
+  "backend_attempts": 0,
+  "actions_recorded": 0,
+  "executed_actions": 0,
+  "usage_known": {
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "cache_read_tokens": 0,
+    "cache_write_tokens": 0
+  },
+  "unknown_usage_calls": 1,
+  "outstanding_requests": [
+    1
+  ],
+  "formal_correct": null,
+  "recovery_events": {},
+  "nonblocking_note_failures": 0,
+  "action_counts": {},
+  "action_error_counts": {},
+  "final_phase_requests": 0,
+  "compaction_requests": 0,
+  "rounds_receiving_new_raw": 0,
+  "cache_query_hits": 0,
+  "unchanged_note_updates": 0,
+  "limitations": [
+    "No semantic judge has run",
+    "No resume or automatic reissue",
+    "Hashes are not adversarial authentication"
+  ]
+}
+____________ test_recovery_native_http_roundtrip[soft_note-openai] ____________
+
+provider = 'openai', case = 'soft_note'
+tmp_path = WindowsPath('<WORKTREE>/runs/field-feedback-offline/baseline-temp/test_recovery_native_http_roun0')
+
+    @pytest.mark.parametrize('provider', ['openai', 'anthropic'])
+    @pytest.mark.parametrize('case', ['soft_note', 'prose', 'capacity'])
+    def test_recovery_native_http_roundtrip(provider, case, tmp_path):
+        corpus = smoke_corpus()
+        config = Config(max_model_calls=3)
+        if case == 'soft_note':
+            replies = [S, R, native(note(), ('finish', {'answer': 'Ada Rowan', 'refs': ['e1']}))]
+        elif case == 'prose':
+            replies = [S, R, native(content='RAW_REPAIR_778 "Ada Rowan"', finish_reason='stop'), F]
+            config = Config(max_model_calls=4)
+        else:
+            corpus = LocalCorpus([{'docid': 'large', 'title': 'LongArchive', 'content': 'X' * 26000}])
+            config = Config(max_model_calls=3, context_limit=28000, response_reserve=2048)
+            replies = [native(('search', {'queries': ['LongArchive'], 'top_k': 1})),
+                       native(*[('read', {'ref': 'd1', 'start': i * 6000, 'length': 6000}) for i in range(4)]), A]
+        received = []
+        queue = deepcopy(replies)
+        class Handler(BaseHTTPRequestHandler):
+            def log_message(self, *args):
+                pass
+            def do_POST(self):
+                body = json.loads(self.rfile.read(int(self.headers['Content-Length'])))
+                received.append(body)
+                raw = queue.pop(0)
+                payload = anthropic(raw) if provider == 'anthropic' else raw
+                self.send_response(200)
+                self.send_header('Content-Type', 'application/json')
+                self.end_headers()
+                self.wfile.write(json.dumps(payload).encode())
+        server = ThreadingHTTPServer(('127.0.0.1', 0), Handler)
+        thread = threading.Thread(target=server.serve_forever, daemon=True)
+        thread.start()
+        h = Harness('Who was first?', corpus, path=tmp_path/'episode.sqlite', config=config)
+        cls = AnthropicModel if provider == 'anthropic' else OpenAIModel
+        model = cls(f'http://127.0.0.1:{server.server_port}/v1', 'fixture', revision='offline', http=HTTP(allow_network=True))
+        try:
+            terminal = h.run(model)
+>           assert terminal['outcome'] == ('abstained' if case == 'capacity' else 'submitted')
+E           AssertionError: assert 'transport_error' == 'submitted'
+E             
+E             - submitted
+E             + transport_error
+
+harnesses\stride\tests\test_recovery_http.py:67: AssertionError
+__________ test_recovery_native_http_roundtrip[soft_note-anthropic] ___________
+
+provider = 'anthropic', case = 'soft_note'
+tmp_path = WindowsPath('<WORKTREE>/runs/field-feedback-offline/baseline-temp/test_recovery_native_http_roun1')
+
+    @pytest.mark.parametrize('provider', ['openai', 'anthropic'])
+    @pytest.mark.parametrize('case', ['soft_note', 'prose', 'capacity'])
+    def test_recovery_native_http_roundtrip(provider, case, tmp_path):
+        corpus = smoke_corpus()
+        config = Config(max_model_calls=3)
+        if case == 'soft_note':
+            replies = [S, R, native(note(), ('finish', {'answer': 'Ada Rowan', 'refs': ['e1']}))]
+        elif case == 'prose':
+            replies = [S, R, native(content='RAW_REPAIR_778 "Ada Rowan"', finish_reason='stop'), F]
+            config = Config(max_model_calls=4)
+        else:
+            corpus = LocalCorpus([{'docid': 'large', 'title': 'LongArchive', 'content': 'X' * 26000}])
+            config = Config(max_model_calls=3, context_limit=28000, response_reserve=2048)
+            replies = [native(('search', {'queries': ['LongArchive'], 'top_k': 1})),
+                       native(*[('read', {'ref': 'd1', 'start': i * 6000, 'length': 6000}) for i in range(4)]), A]
+        received = []
+        queue = deepcopy(replies)
+        class Handler(BaseHTTPRequestHandler):
+            def log_message(self, *args):
+                pass
+            def do_POST(self):
+                body = json.loads(self.rfile.read(int(self.headers['Content-Length'])))
+                received.append(body)
+                raw = queue.pop(0)
+                payload = anthropic(raw) if provider == 'anthropic' else raw
+                self.send_response(200)
+                self.send_header('Content-Type', 'application/json')
+                self.end_headers()
+                self.wfile.write(json.dumps(payload).encode())
+        server = ThreadingHTTPServer(('127.0.0.1', 0), Handler)
+        thread = threading.Thread(target=server.serve_forever, daemon=True)
+        thread.start()
+        h = Harness('Who was first?', corpus, path=tmp_path/'episode.sqlite', config=config)
+        cls = AnthropicModel if provider == 'anthropic' else OpenAIModel
+        model = cls(f'http://127.0.0.1:{server.server_port}/v1', 'fixture', revision='offline', http=HTTP(allow_network=True))
+        try:
+            terminal = h.run(model)
+>           assert terminal['outcome'] == ('abstained' if case == 'capacity' else 'submitted')
+E           AssertionError: assert 'transport_error' == 'submitted'
+E             
+E             - submitted
+E             + transport_error
+
+harnesses\stride\tests\test_recovery_http.py:67: AssertionError
+______________ test_recovery_native_http_roundtrip[prose-openai] ______________
+
+provider = 'openai', case = 'prose'
+tmp_path = WindowsPath('<WORKTREE>/runs/field-feedback-offline/baseline-temp/test_recovery_native_http_roun2')
+
+    @pytest.mark.parametrize('provider', ['openai', 'anthropic'])
+    @pytest.mark.parametrize('case', ['soft_note', 'prose', 'capacity'])
+    def test_recovery_native_http_roundtrip(provider, case, tmp_path):
+        corpus = smoke_corpus()
+        config = Config(max_model_calls=3)
+        if case == 'soft_note':
+            replies = [S, R, native(note(), ('finish', {'answer': 'Ada Rowan', 'refs': ['e1']}))]
+        elif case == 'prose':
+            replies = [S, R, native(content='RAW_REPAIR_778 "Ada Rowan"', finish_reason='stop'), F]
+            config = Config(max_model_calls=4)
+        else:
+            corpus = LocalCorpus([{'docid': 'large', 'title': 'LongArchive', 'content': 'X' * 26000}])
+            config = Config(max_model_calls=3, context_limit=28000, response_reserve=2048)
+            replies = [native(('search', {'queries': ['LongArchive'], 'top_k': 1})),
+                       native(*[('read', {'ref': 'd1', 'start': i * 6000, 'length': 6000}) for i in range(4)]), A]
+        received = []
+        queue = deepcopy(replies)
+        class Handler(BaseHTTPRequestHandler):
+            def log_message(self, *args):
+                pass
+            def do_POST(self):
+                body = json.loads(self.rfile.read(int(self.headers['Content-Length'])))
+                received.append(body)
+                raw = queue.pop(0)
+                payload = anthropic(raw) if provider == 'anthropic' else raw
+                self.send_response(200)
+                self.send_header('Content-Type', 'application/json')
+                self.end_headers()
+                self.wfile.write(json.dumps(payload).encode())
+        server = ThreadingHTTPServer(('127.0.0.1', 0), Handler)
+        thread = threading.Thread(target=server.serve_forever, daemon=True)
+        thread.start()
+        h = Harness('Who was first?', corpus, path=tmp_path/'episode.sqlite', config=config)
+        cls = AnthropicModel if provider == 'anthropic' else OpenAIModel
+        model = cls(f'http://127.0.0.1:{server.server_port}/v1', 'fixture', revision='offline', http=HTTP(allow_network=True))
+        try:
+            terminal = h.run(model)
+>           assert terminal['outcome'] == ('abstained' if case == 'capacity' else 'submitted')
+E           AssertionError: assert 'transport_error' == 'submitted'
+E             
+E             - submitted
+E             + transport_error
+
+harnesses\stride\tests\test_recovery_http.py:67: AssertionError
+____________ test_recovery_native_http_roundtrip[prose-anthropic] _____________
+
+provider = 'anthropic', case = 'prose'
+tmp_path = WindowsPath('<WORKTREE>/runs/field-feedback-offline/baseline-temp/test_recovery_native_http_roun3')
+
+    @pytest.mark.parametrize('provider', ['openai', 'anthropic'])
+    @pytest.mark.parametrize('case', ['soft_note', 'prose', 'capacity'])
+    def test_recovery_native_http_roundtrip(provider, case, tmp_path):
+        corpus = smoke_corpus()
+        config = Config(max_model_calls=3)
+        if case == 'soft_note':
+            replies = [S, R, native(note(), ('finish', {'answer': 'Ada Rowan', 'refs': ['e1']}))]
+        elif case == 'prose':
+            replies = [S, R, native(content='RAW_REPAIR_778 "Ada Rowan"', finish_reason='stop'), F]
+            config = Config(max_model_calls=4)
+        else:
+            corpus = LocalCorpus([{'docid': 'large', 'title': 'LongArchive', 'content': 'X' * 26000}])
+            config = Config(max_model_calls=3, context_limit=28000, response_reserve=2048)
+            replies = [native(('search', {'queries': ['LongArchive'], 'top_k': 1})),
+                       native(*[('read', {'ref': 'd1', 'start': i * 6000, 'length': 6000}) for i in range(4)]), A]
+        received = []
+        queue = deepcopy(replies)
+        class Handler(BaseHTTPRequestHandler):
+            def log_message(self, *args):
+                pass
+            def do_POST(self):
+                body = json.loads(self.rfile.read(int(self.headers['Content-Length'])))
+                received.append(body)
+                raw = queue.pop(0)
+                payload = anthropic(raw) if provider == 'anthropic' else raw
+                self.send_response(200)
+                self.send_header('Content-Type', 'application/json')
+                self.end_headers()
+                self.wfile.write(json.dumps(payload).encode())
+        server = ThreadingHTTPServer(('127.0.0.1', 0), Handler)
+        thread = threading.Thread(target=server.serve_forever, daemon=True)
+        thread.start()
+        h = Harness('Who was first?', corpus, path=tmp_path/'episode.sqlite', config=config)
+        cls = AnthropicModel if provider == 'anthropic' else OpenAIModel
+        model = cls(f'http://127.0.0.1:{server.server_port}/v1', 'fixture', revision='offline', http=HTTP(allow_network=True))
+        try:
+            terminal = h.run(model)
+>           assert terminal['outcome'] == ('abstained' if case == 'capacity' else 'submitted')
+E           AssertionError: assert 'transport_error' == 'submitted'
+E             
+E             - submitted
+E             + transport_error
+
+harnesses\stride\tests\test_recovery_http.py:67: AssertionError
+____________ test_recovery_native_http_roundtrip[capacity-openai] _____________
+
+provider = 'openai', case = 'capacity'
+tmp_path = WindowsPath('<WORKTREE>/runs/field-feedback-offline/baseline-temp/test_recovery_native_http_roun4')
+
+    @pytest.mark.parametrize('provider', ['openai', 'anthropic'])
+    @pytest.mark.parametrize('case', ['soft_note', 'prose', 'capacity'])
+    def test_recovery_native_http_roundtrip(provider, case, tmp_path):
+        corpus = smoke_corpus()
+        config = Config(max_model_calls=3)
+        if case == 'soft_note':
+            replies = [S, R, native(note(), ('finish', {'answer': 'Ada Rowan', 'refs': ['e1']}))]
+        elif case == 'prose':
+            replies = [S, R, native(content='RAW_REPAIR_778 "Ada Rowan"', finish_reason='stop'), F]
+            config = Config(max_model_calls=4)
+        else:
+            corpus = LocalCorpus([{'docid': 'large', 'title': 'LongArchive', 'content': 'X' * 26000}])
+            config = Config(max_model_calls=3, context_limit=28000, response_reserve=2048)
+            replies = [native(('search', {'queries': ['LongArchive'], 'top_k': 1})),
+                       native(*[('read', {'ref': 'd1', 'start': i * 6000, 'length': 6000}) for i in range(4)]), A]
+        received = []
+        queue = deepcopy(replies)
+        class Handler(BaseHTTPRequestHandler):
+            def log_message(self, *args):
+                pass
+            def do_POST(self):
+                body = json.loads(self.rfile.read(int(self.headers['Content-Length'])))
+                received.append(body)
+                raw = queue.pop(0)
+                payload = anthropic(raw) if provider == 'anthropic' else raw
+                self.send_response(200)
+                self.send_header('Content-Type', 'application/json')
+                self.end_headers()
+                self.wfile.write(json.dumps(payload).encode())
+        server = ThreadingHTTPServer(('127.0.0.1', 0), Handler)
+        thread = threading.Thread(target=server.serve_forever, daemon=True)
+        thread.start()
+        h = Harness('Who was first?', corpus, path=tmp_path/'episode.sqlite', config=config)
+        cls = AnthropicModel if provider == 'anthropic' else OpenAIModel
+        model = cls(f'http://127.0.0.1:{server.server_port}/v1', 'fixture', revision='offline', http=HTTP(allow_network=True))
+        try:
+            terminal = h.run(model)
+>           assert terminal['outcome'] == ('abstained' if case == 'capacity' else 'submitted')
+E           AssertionError: assert 'transport_error' == 'abstained'
+E             
+E             - abstained
+E             + transport_error
+
+harnesses\stride\tests\test_recovery_http.py:67: AssertionError
+___________ test_recovery_native_http_roundtrip[capacity-anthropic] ___________
+
+provider = 'anthropic', case = 'capacity'
+tmp_path = WindowsPath('<WORKTREE>/runs/field-feedback-offline/baseline-temp/test_recovery_native_http_roun5')
+
+    @pytest.mark.parametrize('provider', ['openai', 'anthropic'])
+    @pytest.mark.parametrize('case', ['soft_note', 'prose', 'capacity'])
+    def test_recovery_native_http_roundtrip(provider, case, tmp_path):
+        corpus = smoke_corpus()
+        config = Config(max_model_calls=3)
+        if case == 'soft_note':
+            replies = [S, R, native(note(), ('finish', {'answer': 'Ada Rowan', 'refs': ['e1']}))]
+        elif case == 'prose':
+            replies = [S, R, native(content='RAW_REPAIR_778 "Ada Rowan"', finish_reason='stop'), F]
+            config = Config(max_model_calls=4)
+        else:
+            corpus = LocalCorpus([{'docid': 'large', 'title': 'LongArchive', 'content': 'X' * 26000}])
+            config = Config(max_model_calls=3, context_limit=28000, response_reserve=2048)
+            replies = [native(('search', {'queries': ['LongArchive'], 'top_k': 1})),
+                       native(*[('read', {'ref': 'd1', 'start': i * 6000, 'length': 6000}) for i in range(4)]), A]
+        received = []
+        queue = deepcopy(replies)
+        class Handler(BaseHTTPRequestHandler):
+            def log_message(self, *args):
+                pass
+            def do_POST(self):
+                body = json.loads(self.rfile.read(int(self.headers['Content-Length'])))
+                received.append(body)
+                raw = queue.pop(0)
+                payload = anthropic(raw) if provider == 'anthropic' else raw
+                self.send_response(200)
+                self.send_header('Content-Type', 'application/json')
+                self.end_headers()
+                self.wfile.write(json.dumps(payload).encode())
+        server = ThreadingHTTPServer(('127.0.0.1', 0), Handler)
+        thread = threading.Thread(target=server.serve_forever, daemon=True)
+        thread.start()
+        h = Harness('Who was first?', corpus, path=tmp_path/'episode.sqlite', config=config)
+        cls = AnthropicModel if provider == 'anthropic' else OpenAIModel
+        model = cls(f'http://127.0.0.1:{server.server_port}/v1', 'fixture', revision='offline', http=HTTP(allow_network=True))
+        try:
+            terminal = h.run(model)
+>           assert terminal['outcome'] == ('abstained' if case == 'capacity' else 'submitted')
+E           AssertionError: assert 'transport_error' == 'abstained'
+E             
+E             - abstained
+E             + transport_error
+
+harnesses\stride\tests\test_recovery_http.py:67: AssertionError
+=========================== short test summary info ===========================
+FAILED harnesses\stride\tests\test_cpu_integration.py::test_cli_cpu_native_loopback[openai]
+FAILED harnesses\stride\tests\test_cpu_integration.py::test_cli_cpu_native_loopback[anthropic]
+FAILED harnesses\stride\tests\test_recovery_http.py::test_recovery_native_http_roundtrip[soft_note-openai]
+FAILED harnesses\stride\tests\test_recovery_http.py::test_recovery_native_http_roundtrip[soft_note-anthropic]
+FAILED harnesses\stride\tests\test_recovery_http.py::test_recovery_native_http_roundtrip[prose-openai]
+FAILED harnesses\stride\tests\test_recovery_http.py::test_recovery_native_http_roundtrip[prose-anthropic]
+FAILED harnesses\stride\tests\test_recovery_http.py::test_recovery_native_http_roundtrip[capacity-openai]
+FAILED harnesses\stride\tests\test_recovery_http.py::test_recovery_native_http_roundtrip[capacity-anthropic]
+8 failed, 263 passed in 82.54s (0:01:22)

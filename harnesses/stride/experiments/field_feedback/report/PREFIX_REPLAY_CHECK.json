@@ -1,0 +1,126 @@
+{
+  "status": "BLOCKED_PREFIX_RECONSTRUCTION",
+  "discrete_state_reconstructed": true,
+  "boundary_round": 4,
+  "source_data_commit": "749c505110741d828c7f54fdfb865c37b19627b3",
+  "source_core_release": "5d7752be94a9d40aa757383d8899504bc0f81e81",
+  "source_public_head": "1bb75f4b1e55f681d290240a7646808f5362a40d9e89fae16cdfc9e7cd480aba",
+  "source_prefix_head": "5c904022af9c565443a415c71488f53f088240a778cbb774756ce82a3ff52f2b",
+  "source_prefix_end_seq": 79,
+  "prefix_event_count": 79,
+  "prefix_request_checks_A": [
+    {
+      "round": 1,
+      "json_equal": true,
+      "serializer_bytes_equal": true
+    },
+    {
+      "round": 2,
+      "json_equal": true,
+      "serializer_bytes_equal": true
+    },
+    {
+      "round": 3,
+      "json_equal": true,
+      "serializer_bytes_equal": true
+    },
+    {
+      "round": 4,
+      "json_equal": true,
+      "serializer_bytes_equal": true
+    }
+  ],
+  "prefix_request_checks_B": [
+    {
+      "round": 1,
+      "json_equal": true,
+      "serializer_bytes_equal": true
+    },
+    {
+      "round": 2,
+      "json_equal": true,
+      "serializer_bytes_equal": true
+    },
+    {
+      "round": 3,
+      "json_equal": true,
+      "serializer_bytes_equal": true
+    },
+    {
+      "round": 4,
+      "json_equal": true,
+      "serializer_bytes_equal": true
+    }
+  ],
+  "a_prefix_event_payloads_equal_except_elapsed": true,
+  "r5_json_equal": true,
+  "r5_serializer_bytes_equal": true,
+  "original_r5_body_sha256": "05440f27c0d222e4284c099058aba7b7f056d3690328adcc85e1fe8cb8a39420",
+  "a_first_body_sha256": "05440f27c0d222e4284c099058aba7b7f056d3690328adcc85e1fe8cb8a39420",
+  "b_first_body_sha256": "61d54bbec3c45492db2d391d103e249a6efba5e41cc1df332bd838a19d67428c",
+  "remaining": {
+    "model_calls": 60,
+    "action_slots": 196,
+    "backend_calls": 113,
+    "output_reservation": 47648
+  },
+  "phase": "RESEARCH",
+  "state_fields_hashed": {
+    "question": "3cc761c2811f5b4b14f723a2d04cc20af1c9544863ed0c3169f00b6520bdfeb4",
+    "groups": "e2bc4c81fde7c623cc5253edae4364d1983baad1dd90de83aa646c6e11c977e0",
+    "group_refs": "9c8a2949264b41c71a376afdb94fb4ce0b53accf8ebdbc137836050acc939ce9",
+    "exposed": "ebd95e39533f81443f352d7adde61da14675a3d3835f67249bb2d05508bc5809",
+    "published_docs": "5bd06a2c6182860c2e38fa765e7ba89223a853d2874e14e23b57ddff2e8557e8",
+    "evidence_order": "ebd95e39533f81443f352d7adde61da14675a3d3835f67249bb2d05508bc5809",
+    "doc_order": "944d94bfb0e3959977040ef923f456bba4bff16bd0b4ca8e0c659ebc842168cb",
+    "notes": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+    "note_history": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+    "search_cache": "4982febf5c13aab49c7c076a0bef1d2f855506fc5e7ee847a34f72bb5d8137bf",
+    "search_capabilities": "4e52078473bc25d06809eef33e5edb9d80d3aa958ae57e00063c1ba8db12f048",
+    "navigation_history": "dcc2fe486d6564ed4617280ae147ffbc84c66beadf51c762d04e64823db98d8c",
+    "navigation_acked_rounds": "a615eeaee21de5179de080de8c3052c8da901138406ba71c38c032845f7d54f4",
+    "model_calls": "4b227777d4dd1fc61c6f884f48641d02b4d121d3fd328cb08b5531fcacdabf8a",
+    "action_slots": "4b227777d4dd1fc61c6f884f48641d02b4d121d3fd328cb08b5531fcacdabf8a",
+    "declared_calls": "4b227777d4dd1fc61c6f884f48641d02b4d121d3fd328cb08b5531fcacdabf8a",
+    "backend_calls": "7902699be42c8a8e46fbbb4501726517e86b22c56a189f7625a6da49081b2451",
+    "output_charged": "9a72c24f2fd76561729110d804c69f38a7088f2ec41fdf8fbfea20d07e8bcff8",
+    "feedback": "72eb2c44ebf503f7e1d09152991bdfd5f850f35da532bdf44f4337908d4153bd",
+    "terminal": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
+    "model_identity": "6eb9c3bc6e841968b7a76f9564a7ea3ed03bf29a10092e4f18f09f8605fa984f",
+    "repair": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
+    "config": "1ef4e2320682be8ee62d9036bac94277a5c596d644d36490029f8125b297923b",
+    "docs": "0233453cc798b45693035fe4bbdaa68fa23ff5bc91feaa19c2094b76ab0b9221",
+    "evidence": "af0a23018ed36ad6aa46b33dd3114aea409801bd299f59a2dc677c397dac192a",
+    "historical_usage": "e630effa3b97ce915c234191a70d524548c75112c723169d12955f367a8f4a0a",
+    "remaining": "64928dedfa7dcabd3bc8cbd13fbcf2d5f549256371422a9032960fd4fd2cca78",
+    "phase": "6d511f5b9a6eaa0547f8a57063570c838d24ba85b9b174592e467b230aa48d65"
+  },
+  "a_b_state_differences": [
+    "/feedback/message",
+    "/group_refs/3",
+    "/groups/3/messages/1/content"
+  ],
+  "all_other_state_fields_equal": true,
+  "documents": 25,
+  "evidence_windows": 1,
+  "delivered_documents": 25,
+  "delivered_evidence": 1,
+  "query_cache_entries": 6,
+  "timing": {
+    "recorded_event_utc_delta_seconds": 18.538888,
+    "original_monotonic_elapsed_seconds": null,
+    "exact_time_balance_reconstructible": false,
+    "reason": "Collector records UTC after append. Harness.started and monotonic elapsed at the boundary are not recorded; event timestamps omit initialization and are a different clock.",
+    "utc_delta_used_as_live_budget": false,
+    "copied_file_time_charged": false
+  },
+  "historical_model_responses_replayed_per_arm": 4,
+  "historical_backend_responses_replayed_per_arm": 7,
+  "prefix_cost_recharged": false,
+  "real_model_calls": 0,
+  "production_index_queries": 0,
+  "historical_suffix_model_responses_loaded": 0,
+  "gold_in_replay_inputs": false,
+  "request_oracle_is_only_compared_after_reconstruction": true,
+  "original_raw_model_arguments_unchanged": true
+}

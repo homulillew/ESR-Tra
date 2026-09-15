@@ -1,0 +1,21 @@
+{
+  "wire_difference_count": 2,
+  "decoded_difference_count": 2,
+  "differences": [
+    {
+      "wire_path": "/messages/9/content",
+      "decoded_path": "/message",
+      "before": "finish: invalid fields near []; follow the supplied schema",
+      "after": "finish: pointer \"/answer\" expected type string; received type integer."
+    },
+    {
+      "wire_path": "/messages/10/content",
+      "decoded_path": "/feedback/message",
+      "before": "finish: invalid fields near []; follow the supplied schema",
+      "after": "finish: pointer \"/answer\" expected type string; received type integer."
+    }
+  ],
+  "whitelist_passed": true,
+  "all_other_fields_unchanged": true,
+  "new_instruction_or_answer_example_added": false
+}

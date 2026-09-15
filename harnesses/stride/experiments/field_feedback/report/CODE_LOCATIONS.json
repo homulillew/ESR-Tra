@@ -1,0 +1,256 @@
+{
+  "contract.py": {
+    "release": [
+      {
+        "line": 33,
+        "text": "def loads(text: str) -> Any:"
+      },
+      {
+        "line": 119,
+        "text": "def validate(name: str, args: Any) -> None:"
+      },
+      {
+        "line": 127,
+        "text": "errors = list(Draft202012Validator(SCHEMAS[name]).iter_errors(args))"
+      },
+      {
+        "line": 129,
+        "text": "e = min(errors, key=lambda x: str(list(x.path)))"
+      },
+      {
+        "line": 131,
+        "text": "raise ContractError(\"arguments_invalid\", f\"{name}: invalid fields near {list(e.path)!r}; follow the supplied schema\")"
+      }
+    ],
+    "experiment": [
+      {
+        "line": 33,
+        "text": "def loads(text: str) -> Any:"
+      },
+      {
+        "line": 119,
+        "text": "def validate(name: str, args: Any, *, feedback: str = \"legacy\") -> None:"
+      },
+      {
+        "line": 129,
+        "text": "errors = list(Draft202012Validator(SCHEMAS[name]).iter_errors(args))"
+      },
+      {
+        "line": 131,
+        "text": "e = min(errors, key=lambda x: str(list(x.path)))"
+      },
+      {
+        "line": 133,
+        "text": "from .validation_feedback import format_validation_error"
+      },
+      {
+        "line": 134,
+        "text": "raise ContractError(\"arguments_invalid\", format_validation_error(name, e))"
+      },
+      {
+        "line": 136,
+        "text": "raise ContractError(\"arguments_invalid\", f\"{name}: invalid fields near {list(e.path)!r}; follow the supplied schema\")"
+      }
+    ]
+  },
+  "engine.py": {
+    "release": [
+      {
+        "line": 24,
+        "text": "self.clock, self.started = clock, clock()"
+      },
+      {
+        "line": 53,
+        "text": "def _time_check(self):"
+      },
+      {
+        "line": 266,
+        "text": "reply = model.parse(raw)"
+      },
+      {
+        "line": 272,
+        "text": "remember_response(self, raw, code=exc.code)"
+      },
+      {
+        "line": 290,
+        "text": "remember_response(self, raw, code=\"explicit_finish_required\", message=reply.message)"
+      },
+      {
+        "line": 317,
+        "text": "args = loads(arguments)"
+      },
+      {
+        "line": 318,
+        "text": "validate(name, args)"
+      },
+      {
+        "line": 329,
+        "text": "result = {\"ok\": False, \"code\": exc.code, \"message\": str(exc)[:500], \"blocks_finish\": blocks}"
+      },
+      {
+        "line": 330,
+        "text": "self.feedback = {**result, \"tool\": name, \"no_automatic_parameter_repair\": True}"
+      },
+      {
+        "line": 331,
+        "text": "result.update(executed=executed, action_slot_charged=charged_slot)"
+      }
+    ],
+    "experiment": [
+      {
+        "line": 28,
+        "text": "self.clock, self.started = clock, clock()"
+      },
+      {
+        "line": 57,
+        "text": "def _time_check(self):"
+      },
+      {
+        "line": 270,
+        "text": "reply = model.parse(raw)"
+      },
+      {
+        "line": 276,
+        "text": "remember_response(self, raw, code=exc.code)"
+      },
+      {
+        "line": 294,
+        "text": "remember_response(self, raw, code=\"explicit_finish_required\", message=reply.message)"
+      },
+      {
+        "line": 321,
+        "text": "args = loads(arguments)"
+      },
+      {
+        "line": 322,
+        "text": "validate(name, args, feedback=self.validation_feedback)"
+      },
+      {
+        "line": 333,
+        "text": "result = {\"ok\": False, \"code\": exc.code, \"message\": str(exc)[:500], \"blocks_finish\": blocks}"
+      },
+      {
+        "line": 334,
+        "text": "self.feedback = {**result, \"tool\": name, \"no_automatic_parameter_repair\": True}"
+      },
+      {
+        "line": 335,
+        "text": "result.update(executed=executed, action_slot_charged=charged_slot)"
+      }
+    ]
+  },
+  "recovery.py": {
+    "release": [
+      {
+        "line": 24,
+        "text": "def remember_response(harness, raw, *, code, message=None):"
+      },
+      {
+        "line": 51,
+        "text": "def make_group(message, records, round_no):"
+      },
+      {
+        "line": 60,
+        "text": "def fit_result_group(harness, model, message, records):"
+      }
+    ],
+    "experiment": [
+      {
+        "line": 24,
+        "text": "def remember_response(harness, raw, *, code, message=None):"
+      },
+      {
+        "line": 51,
+        "text": "def make_group(message, records, round_no):"
+      },
+      {
+        "line": 60,
+        "text": "def fit_result_group(harness, model, message, records):"
+      }
+    ]
+  },
+  "context.py": {
+    "release": [
+      {
+        "line": 14,
+        "text": "feedback = harness.feedback"
+      },
+      {
+        "line": 48,
+        "text": "\"feedback\": feedback, \"uncommitted_response_not_evidence\": repair, \"literal_answer_contract\": {"
+      },
+      {
+        "line": 56,
+        "text": "wire = model.prepare(messages, tools(notes_enabled=config.notes_enabled, final=final, query_limit=config.max_queries_per_search), output_limit)"
+      }
+    ],
+    "experiment": [
+      {
+        "line": 14,
+        "text": "feedback = harness.feedback"
+      },
+      {
+        "line": 48,
+        "text": "\"feedback\": feedback, \"uncommitted_response_not_evidence\": repair, \"literal_answer_contract\": {"
+      },
+      {
+        "line": 56,
+        "text": "wire = model.prepare(messages, tools(notes_enabled=config.notes_enabled, final=final, query_limit=config.max_queries_per_search), output_limit)"
+      }
+    ]
+  },
+  "providers.py": {
+    "release": [
+      {
+        "line": 28,
+        "text": "def prepare(self, messages: list[dict], tools: list[dict], output_limit: int) -> dict: ..."
+      },
+      {
+        "line": 69,
+        "text": "request = urllib.request.Request(url, data=canonical(body).encode(\"utf-8\"),"
+      },
+      {
+        "line": 137,
+        "text": "def prepare(self, messages, tools, output_limit):"
+      },
+      {
+        "line": 146,
+        "text": "def parse(self, raw):"
+      },
+      {
+        "line": 165,
+        "text": "def prepare(self, messages, tools, output_limit):"
+      },
+      {
+        "line": 199,
+        "text": "def parse(self, raw):"
+      }
+    ],
+    "experiment": [
+      {
+        "line": 28,
+        "text": "def prepare(self, messages: list[dict], tools: list[dict], output_limit: int) -> dict: ..."
+      },
+      {
+        "line": 69,
+        "text": "request = urllib.request.Request(url, data=canonical(body).encode(\"utf-8\"),"
+      },
+      {
+        "line": 137,
+        "text": "def prepare(self, messages, tools, output_limit):"
+      },
+      {
+        "line": 146,
+        "text": "def parse(self, raw):"
+      },
+      {
+        "line": 165,
+        "text": "def prepare(self, messages, tools, output_limit):"
+      },
+      {
+        "line": 199,
+        "text": "def parse(self, raw):"
+      }
+    ]
+  }
+}

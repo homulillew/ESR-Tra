@@ -16,7 +16,11 @@ from .recovery import fit_result_group, make_group, note_blocks_finish, remember
 
 class Harness:
     def __init__(self, question: str, retriever, *, path=":memory:", config: Config | None = None,
-                 counter=None, clock: Callable[[], float] = time.monotonic):
+                 counter=None, clock: Callable[[], float] = time.monotonic,
+                 validation_feedback: str = "legacy"):
+        if validation_feedback not in ("legacy", "field"):
+            raise ValueError("Unknown validation feedback experiment")
+        self.validation_feedback = validation_feedback
         if not isinstance(question, str) or not question.strip():
             raise ValueError("A nonempty original question is required")
         self.question, self.retriever = question, retriever
@@ -315,7 +319,7 @@ class Harness:
                 self.action_slots += 1
                 charged_slot = True
                 args = loads(arguments)
-                validate(name, args)
+                validate(name, args, feedback=self.validation_feedback)
                 executed = True
                 result, docs, evidence = self._dispatch(name, args, binding)
                 result = {"ok": True, **result}

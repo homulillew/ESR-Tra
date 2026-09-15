@@ -1,0 +1,347 @@
+{
+  "original_raw_tree_sha256": "243e2d85d58e71864d399436c19c653406172228e0cc400c3ba7c62359fedcfc",
+  "raw_tree_location": "private reproduction output; not published",
+  "cases": {
+    "actual_numeric": {
+      "accepted": false,
+      "legacy_message": "finish: invalid fields near []; follow the supplied schema",
+      "error_tree": [
+        {
+          "validator": "oneOf",
+          "path": [],
+          "absolute_path": [],
+          "schema_path": [
+            "oneOf"
+          ],
+          "absolute_schema_path": [
+            "oneOf"
+          ],
+          "context": [
+            {
+              "validator": "type",
+              "path": [
+                "answer"
+              ],
+              "absolute_path": [
+                "answer"
+              ],
+              "schema_path": [
+                0,
+                "properties",
+                "answer",
+                "type"
+              ],
+              "absolute_schema_path": [
+                "oneOf",
+                0,
+                "properties",
+                "answer",
+                "type"
+              ],
+              "context": []
+            },
+            {
+              "validator": "required",
+              "path": [],
+              "absolute_path": [],
+              "schema_path": [
+                1,
+                "required"
+              ],
+              "absolute_schema_path": [
+                "oneOf",
+                1,
+                "required"
+              ],
+              "context": []
+            },
+            {
+              "validator": "required",
+              "path": [],
+              "absolute_path": [],
+              "schema_path": [
+                1,
+                "required"
+              ],
+              "absolute_schema_path": [
+                "oneOf",
+                1,
+                "required"
+              ],
+              "context": []
+            },
+            {
+              "validator": "additionalProperties",
+              "path": [],
+              "absolute_path": [],
+              "schema_path": [
+                1,
+                "additionalProperties"
+              ],
+              "absolute_schema_path": [
+                "oneOf",
+                1,
+                "additionalProperties"
+              ],
+              "context": []
+            }
+          ]
+        }
+      ]
+    },
+    "schema_string_only": {
+      "accepted": true,
+      "legacy_message": null,
+      "error_tree": []
+    },
+    "refs_type": {
+      "accepted": false,
+      "legacy_message": "finish: invalid fields near []; follow the supplied schema",
+      "error_tree": [
+        {
+          "validator": "oneOf",
+          "path": [],
+          "absolute_path": [],
+          "schema_path": [
+            "oneOf"
+          ],
+          "absolute_schema_path": [
+            "oneOf"
+          ],
+          "context": [
+            {
+              "validator": "type",
+              "path": [
+                "refs"
+              ],
+              "absolute_path": [
+                "refs"
+              ],
+              "schema_path": [
+                0,
+                "properties",
+                "refs",
+                "type"
+              ],
+              "absolute_schema_path": [
+                "oneOf",
+                0,
+                "properties",
+                "refs",
+                "type"
+              ],
+              "context": []
+            },
+            {
+              "validator": "required",
+              "path": [],
+              "absolute_path": [],
+              "schema_path": [
+                1,
+                "required"
+              ],
+              "absolute_schema_path": [
+                "oneOf",
+                1,
+                "required"
+              ],
+              "context": []
+            },
+            {
+              "validator": "required",
+              "path": [],
+              "absolute_path": [],
+              "schema_path": [
+                1,
+                "required"
+              ],
+              "absolute_schema_path": [
+                "oneOf",
+                1,
+                "required"
+              ],
+              "context": []
+            },
+            {
+              "validator": "additionalProperties",
+              "path": [],
+              "absolute_path": [],
+              "schema_path": [
+                1,
+                "additionalProperties"
+              ],
+              "absolute_schema_path": [
+                "oneOf",
+                1,
+                "additionalProperties"
+              ],
+              "context": []
+            }
+          ]
+        }
+      ]
+    },
+    "blank": {
+      "accepted": false,
+      "legacy_message": "finish: invalid fields near []; follow the supplied schema",
+      "error_tree": [
+        {
+          "validator": "oneOf",
+          "path": [],
+          "absolute_path": [],
+          "schema_path": [
+            "oneOf"
+          ],
+          "absolute_schema_path": [
+            "oneOf"
+          ],
+          "context": [
+            {
+              "validator": "pattern",
+              "path": [
+                "answer"
+              ],
+              "absolute_path": [
+                "answer"
+              ],
+              "schema_path": [
+                0,
+                "properties",
+                "answer",
+                "pattern"
+              ],
+              "absolute_schema_path": [
+                "oneOf",
+                0,
+                "properties",
+                "answer",
+                "pattern"
+              ],
+              "context": []
+            },
+            {
+              "validator": "required",
+              "path": [],
+              "absolute_path": [],
+              "schema_path": [
+                1,
+                "required"
+              ],
+              "absolute_schema_path": [
+                "oneOf",
+                1,
+                "required"
+              ],
+              "context": []
+            },
+            {
+              "validator": "required",
+              "path": [],
+              "absolute_path": [],
+              "schema_path": [
+                1,
+                "required"
+              ],
+              "absolute_schema_path": [
+                "oneOf",
+                1,
+                "required"
+              ],
+              "context": []
+            },
+            {
+              "validator": "additionalProperties",
+              "path": [],
+              "absolute_path": [],
+              "schema_path": [
+                1,
+                "additionalProperties"
+              ],
+              "absolute_schema_path": [
+                "oneOf",
+                1,
+                "additionalProperties"
+              ],
+              "context": []
+            }
+          ]
+        }
+      ]
+    },
+    "mixed": {
+      "accepted": false,
+      "legacy_message": "finish: invalid fields near []; follow the supplied schema",
+      "error_tree": [
+        {
+          "validator": "oneOf",
+          "path": [],
+          "absolute_path": [],
+          "schema_path": [
+            "oneOf"
+          ],
+          "absolute_schema_path": [
+            "oneOf"
+          ],
+          "context": [
+            {
+              "validator": "additionalProperties",
+              "path": [],
+              "absolute_path": [],
+              "schema_path": [
+                0,
+                "additionalProperties"
+              ],
+              "absolute_schema_path": [
+                "oneOf",
+                0,
+                "additionalProperties"
+              ],
+              "context": []
+            },
+            {
+              "validator": "additionalProperties",
+              "path": [],
+              "absolute_path": [],
+              "schema_path": [
+                1,
+                "additionalProperties"
+              ],
+              "absolute_schema_path": [
+                "oneOf",
+                1,
+                "additionalProperties"
+              ],
+              "context": []
+            }
+          ]
+        }
+      ]
+    },
+    "search_shape": {
+      "accepted": false,
+      "legacy_message": "search: invalid fields near ['queries']; follow the supplied schema",
+      "error_tree": [
+        {
+          "validator": "type",
+          "path": [
+            "queries"
+          ],
+          "absolute_path": [
+            "queries"
+          ],
+          "schema_path": [
+            "properties",
+            "queries",
+            "type"
+          ],
+          "absolute_schema_path": [
+            "properties",
+            "queries",
+            "type"
+          ],
+          "context": []
+        }
+      ]
+    }
+  }
+}

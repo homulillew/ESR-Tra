@@ -1,0 +1,9 @@
+{
+  "stage": "read-only artifact correspondence check before baseline tests",
+  "result": "AssertionError at inline script line 20",
+  "cause": "The comparator included trajectory.jsonl's derived utc field, while Archive.events() has no utc field.",
+  "resolution": "Compare every archive field exactly, excluding only the documented trajectory UTC annotation. No artifact or runtime code changed.",
+  "baseline_behavior_mismatch": false,
+  "baseline_tests_started": false,
+  "real_model_calls": 0
+}

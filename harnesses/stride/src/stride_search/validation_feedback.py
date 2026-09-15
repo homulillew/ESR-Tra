@@ -1,0 +1,157 @@
+"""Bounded diagnostics from real jsonschema errors; no parameter repair."""
+from __future__ import annotations
+
+import json
+from jsonschema import Draft202012Validator
+
+MAX_MESSAGE = 420  # Engine keeps the first 500 characters.
+MAX_ERRORS = 3
+MAX_POINTER = 64
+MAX_NODES = 48
+MAX_DEPTH = 8
+
+
+def instance_type(value):
+    if value is None:
+        return 'null'
+    if type(value) is bool:
+        return 'boolean'
+    if type(value) is int:
+        return 'integer'
+    if isinstance(value, float):
+        return 'number'
+    if isinstance(value, str):
+        return 'string'
+    if isinstance(value, list):
+        return 'array'
+    if isinstance(value, dict):
+        return 'object'
+    return 'non-JSON type'
+
+
+def location(parts):
+    """Show an exact RFC 6901 pointer, or an explicitly identified ancestor."""
+    result = ''; omitted = False
+    for part in parts:
+        value = str(part)
+        if len(value) > MAX_POINTER:
+            omitted = True; break
+        token = '/' + value.replace('~', '~0').replace('/', '~1')
+        if len(result) + len(token) > MAX_POINTER:
+            omitted = True; break
+        result += token
+    rendered = json.dumps(result, ensure_ascii=True)
+    if len(rendered) > MAX_POINTER + 16:
+        return 'ancestor pointer "" (path omitted)'
+    return ('ancestor pointer ' + rendered + ' (path omitted)' if omitted else 'pointer ' + rendered)
+
+
+def related_branches(error):
+    """Use declared types, recognized property sets and const/enum discriminators.
+
+    Never rank alternatives by their number of errors. Unclassified schemas stay
+    possible, so lack of structural evidence cannot silently select an intent.
+    """
+    branches = error.validator_value
+    if not isinstance(branches, list):
+        return []
+    value = error.instance
+    known = set().union(*(set(s.get('properties', {})) for s in branches if isinstance(s, dict)))
+    present = set(value) & known if isinstance(value, dict) else set()
+    compatible = []
+    for i, schema in enumerate(branches):
+        if not isinstance(schema, dict):
+            if schema is not False:
+                compatible.append(i)
+            continue
+        declared_type = schema.get('type')
+        if declared_type is not None and not Draft202012Validator({'type': declared_type}).is_valid(value):
+            continue
+        if isinstance(value, dict) and 'properties' in schema:
+            props = schema['properties']
+            if schema.get('additionalProperties') is False and not present <= set(props):
+                continue
+            mismatch = False
+            for key in present & set(props):
+                rule = props[key]
+                if isinstance(rule, dict):
+                    constraints = {k: rule[k] for k in ('const', 'enum') if k in rule}
+                    if constraints and not Draft202012Validator(constraints).is_valid(value[key]):
+                        mismatch = True; break
+            if mismatch:
+                continue
+        compatible.append(i)
+    return compatible
+
+
+def leaf_message(error):
+    parts = list(error.absolute_path)
+    rule = error.validator
+    if rule == 'required' and isinstance(error.instance, dict):
+        missing = [k for k in error.validator_value if k not in error.instance]
+        if missing:
+            return location([*parts, missing[0]]) + ' required property missing'
+    at = location(parts)
+    if rule == 'type':
+        expected = error.validator_value
+        types = expected if isinstance(expected, list) else [expected]
+        safe = [t for t in types if t in ('string', 'integer', 'number', 'object', 'array', 'boolean', 'null')]
+        return at + ' expected type ' + '|'.join(safe) + '; received type ' + instance_type(error.instance)
+    if rule in ('minLength', 'maxLength', 'minItems', 'maxItems', 'minimum', 'maximum', 'minProperties', 'maxProperties'):
+        limit = error.validator_value
+        bound = str(limit) if type(limit) is int and abs(limit) < 10**9 else 'schema-defined limit'
+        return at + ' rule ' + rule + ': ' + bound + '; received type ' + instance_type(error.instance)
+    descriptions = {'pattern': 'must match schema pattern', 'const': 'must match schema const',
+        'enum': 'must match a schema enum alternative', 'additionalProperties': 'additional properties forbidden',
+        'uniqueItems': 'array items must be unique', 'not': 'excluded by schema not',
+        'required': 'required properties missing'}
+    # Neither e.message nor repr(e.instance) is safe to echo here.
+    return at + ' ' + descriptions.get(rule, 'schema constraint failed') + '; received type ' + instance_type(error.instance)
+
+
+def format_validation_error(name, error):
+    """Pure message formatter. Only the caller decides whether an action is legal."""
+    items = []; visited = 0
+
+    def walk(current, depth=0, label=''):
+        nonlocal visited
+        if len(items) >= MAX_ERRORS:
+            return
+        visited += 1
+        if visited > MAX_NODES or depth > MAX_DEPTH:
+            items.append(label + location(current.absolute_path) + ' nested diagnostics omitted')
+            return
+        if current.validator not in ('oneOf', 'anyOf'):
+            items.append(label + leaf_message(current)); return
+        candidates = related_branches(current)
+        groups = {}
+        for child in current.context:
+            branch = next(iter(child.schema_path), None)
+            if type(branch) is int:
+                groups.setdefault(branch, []).append(child)
+        if len(candidates) == 1 and groups.get(candidates[0]):
+            for child in groups[candidates[0]]:
+                walk(child, depth + 1, label)
+            return
+        at = location(current.absolute_path)
+        if not current.context and current.validator == 'oneOf' and current.validator_value:
+            items.append(label + at + ' oneOf branch conflict: multiple matching alternatives'); return
+        if not candidates:
+            items.append(label + at + ' ' + current.validator + ' branch conflict: incompatible parameter shape'); return
+        items.append(label + at + ' ' + current.validator + ' branch ambiguous; limited alternatives follow')
+        for branch in candidates:
+            for child in groups.get(branch, [])[:1]:
+                walk(child, depth + 1, label + f'alternative {branch}: ')
+
+    walk(error)
+    # Names originate from the fixed tool registry, but keep this pure helper safe.
+    tool = name if isinstance(name, str) and name.isascii() and name.isidentifier() and len(name) <= 32 else 'tool'
+    result = tool + ': '
+    for item in items:
+        item += '.'
+        separator = ' ' if result != tool + ': ' else ''
+        if len(result) + len(separator) + len(item) > MAX_MESSAGE - 24:
+            result += ' Diagnostics omitted.'
+            break
+        result += separator + item
+    return result
