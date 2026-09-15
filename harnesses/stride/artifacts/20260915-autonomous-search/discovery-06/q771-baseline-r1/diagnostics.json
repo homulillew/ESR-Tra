@@ -1,0 +1,139 @@
+{
+  "protocol": "stride-search-3",
+  "head": "9374e398c07c54d805661b749bd7c3058a4351acb4838044d854e3c8f5ae5e14",
+  "outcome": "submitted",
+  "formal_correct": null,
+  "model_attempts": 4,
+  "backend_attempts": 5,
+  "queries": [
+    {
+      "round": 1,
+      "top_k": 5,
+      "equivalence_key": "a71dccc3e6bd54d75bc65635bd5e127b21d4092995bc1b8843215eab2764f1c3",
+      "cached": false,
+      "query_sha256": "d6bb1dd913d18fc1f3b854374d22185779a4680bf8679192d0636d08229eb3be",
+      "query": "hat shop scarves renamed initials siblings surname branches 1970s",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"hat\" OR \"shop\" OR \"scarves\" OR \"renamed\" OR \"initials\" OR \"siblings\" OR \"surname\" OR \"branches\" OR \"1970s\"",
+        "terms": [
+          "hat",
+          "shop",
+          "scarves",
+          "renamed",
+          "initials",
+          "siblings",
+          "surname",
+          "branches",
+          "1970s"
+        ]
+      }
+    },
+    {
+      "round": 1,
+      "top_k": 5,
+      "equivalence_key": "ff95913ccda3a4a1d7b371dd2c2b14ca71aaf8cbbfdbbd99940378791b3e3f10",
+      "cached": false,
+      "query_sha256": "e923b7c7196f9e1e862840e63f5d5a862d7cc29ad6472935e76890bd7a5ce8a5",
+      "query": "hat shop owner father railway worker mother housewife tower 1340s city",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"hat\" OR \"shop\" OR \"owner\" OR \"father\" OR \"railway\" OR \"worker\" OR \"mother\" OR \"housewife\" OR \"tower\" OR \"1340s\" OR \"city\"",
+        "terms": [
+          "hat",
+          "shop",
+          "owner",
+          "father",
+          "railway",
+          "worker",
+          "mother",
+          "housewife",
+          "tower",
+          "1340s",
+          "city"
+        ]
+      }
+    },
+    {
+      "round": 1,
+      "top_k": 5,
+      "equivalence_key": "51353359ff8a0c0821c5c4e887b1757fd9fc1ef39517cc1737fa4379c6b9c7d0",
+      "cached": false,
+      "query_sha256": "4d513725c1c152cd848159b816609fe7e8bc8fbae08e77d5e0f47cb9f037e0f6",
+      "query": "hats no longer popular scarves new name initials siblings brand child 1980s",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"hats\" OR \"no\" OR \"longer\" OR \"popular\" OR \"scarves\" OR \"new\" OR \"name\" OR \"initials\" OR \"siblings\" OR \"brand\" OR \"child\" OR \"1980s\"",
+        "terms": [
+          "hats",
+          "no",
+          "longer",
+          "popular",
+          "scarves",
+          "new",
+          "name",
+          "initials",
+          "siblings",
+          "brand",
+          "child",
+          "1980s"
+        ]
+      }
+    }
+  ],
+  "equivalent_query_repeats": 0,
+  "views": [
+    {
+      "round": 1,
+      "compacted": false,
+      "visible_evidence": [],
+      "shelf": [],
+      "shelf_evicted": []
+    },
+    {
+      "round": 2,
+      "compacted": false,
+      "visible_evidence": [],
+      "shelf": [],
+      "shelf_evicted": []
+    },
+    {
+      "round": 3,
+      "compacted": false,
+      "visible_evidence": [
+        "e1",
+        "e2"
+      ],
+      "shelf": [],
+      "shelf_evicted": []
+    },
+    {
+      "round": 4,
+      "compacted": false,
+      "visible_evidence": [
+        "e1",
+        "e2",
+        "e3",
+        "e4"
+      ],
+      "shelf": [],
+      "shelf_evicted": []
+    }
+  ],
+  "delivered_refs": [
+    "e1",
+    "e2",
+    "e3",
+    "e4"
+  ],
+  "submitted_refs": [
+    "e3",
+    "e4"
+  ],
+  "text_included": true,
+  "limitations": [
+    "Equivalence is compiler equality, not semantic identity or wasted-search proof",
+    "Raw-window visibility/selection is not entailment or complete evidence coverage",
+    "No live q26 replay or independent answer scoring is performed"
+  ]
+}

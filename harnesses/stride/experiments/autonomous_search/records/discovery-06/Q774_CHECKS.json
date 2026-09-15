@@ -1,0 +1,345 @@
+{
+  "treatment": {
+    "all_checks_passed": true,
+    "chain": {
+      "event_count": 352,
+      "head": "b3a67c70e02b754d4146184a4aed19e364699e14420a21f5c834c11e75ab68cc"
+    },
+    "seal_files": 64,
+    "all_request_wire_matches_archive": true,
+    "http": [
+      {
+        "round": 1,
+        "status": 200
+      },
+      {
+        "round": 2,
+        "status": 200
+      },
+      {
+        "round": 3,
+        "status": 200
+      },
+      {
+        "round": 4,
+        "status": 200
+      },
+      {
+        "round": 5,
+        "status": 200
+      },
+      {
+        "round": 6,
+        "status": 200
+      },
+      {
+        "round": 7,
+        "status": 200
+      },
+      {
+        "round": 8,
+        "status": 200
+      },
+      {
+        "round": 9,
+        "status": 200
+      },
+      {
+        "round": 10,
+        "status": 200
+      },
+      {
+        "round": 11,
+        "status": 200
+      },
+      {
+        "round": 12,
+        "status": 200
+      }
+    ],
+    "review": {
+      "excluded_fields": [
+        "assistant_content",
+        "provider_reasoning",
+        "notes",
+        "repair",
+        "feedback",
+        "gap_judgments",
+        "non_search_read_find_arguments_and_receipt_bodies"
+      ],
+      "identity": {
+        "instruction_sha256": "15590f5a6a7ce6bbb2de19bb693f778186da2258a09ed8b86daadc2b7233c133",
+        "kind": "one_request_relation_review_not_verified_evidence",
+        "rule": {
+          "allowed_tools": [
+            "find",
+            "read",
+            "search"
+          ],
+          "batch_limit": "unchanged",
+          "consecutive_successful_search_rounds": 3,
+          "excluded": [
+            "assistant_content",
+            "provider_reasoning",
+            "notes",
+            "repair",
+            "feedback",
+            "gap_judgments",
+            "non_search_read_find_arguments_and_receipt_bodies"
+          ],
+          "extra_model_requests": 0,
+          "final": "never_trigger",
+          "history": "retrieval-tool-history-only_untrusted_data_not_native_message_pairs",
+          "max_triggers": 1,
+          "minimum_remaining_model_calls": 4,
+          "require_existing_raw": false,
+          "restore": "next_request_original_history",
+          "search_success": "executed_and_ok",
+          "version": "relation-review-once-v1"
+        },
+        "rule_sha256": "b6df1df8be149253aeb45031d8ffa0eb801bdf3b2aaaf38cdc551b51924f4c80",
+        "version": "relation-review-once-v1"
+      },
+      "input_sources": [
+        {
+          "group_sha256": "8f88a717452915dcaa0ae55e2f677d5f9065423f38557ffc87f963f0b0cd9382",
+          "message_sha256": [
+            "8bffbadf71e020bafc6f0947d50713f8f3d82a9a226f7605ad0e84020a83ef30",
+            "a81235313fd6d0e0012491afe0cbff35311661efd0839d2102b350aa63ee09e4",
+            "37c907f431427ed864b8b95c46495aa5f195ce9a4a4750f0486f8bbb357ebefa"
+          ],
+          "round": 5
+        },
+        {
+          "group_sha256": "4cbc65bf4087165e9b2732b1170146dd7b9b62a874df56e7539fe4978b7b313b",
+          "message_sha256": [
+            "e7c76a1710018622a011e7ec7c8451b74af7ce4d6f89da20c49c75f293ab1dd9",
+            "f149d4ed9a1b8fd86add6a08ba875361cafe1cc68f2cd2bcfa2a3a8a92681315",
+            "5a9afc598071583e0a35e225f140b69b577715867681ca250b5f3235773cdef5"
+          ],
+          "round": 6
+        }
+      ],
+      "observation": "no new source passage",
+      "raw_windows": [
+        {
+          "end": 3000,
+          "object_sha256": "f59b2a95157daec0d8aac514c14f089e25169c209c9b209459eacdffb89a311f",
+          "ref": "e1",
+          "start": 0
+        },
+        {
+          "end": 6000,
+          "object_sha256": "d16964a408198b8be3d81ccdadc9e54068a6521082b6774c54652177899a6fbc",
+          "ref": "e2",
+          "start": 3000
+        }
+      ],
+      "round": 7,
+      "source_rounds": [
+        4,
+        5,
+        6
+      ],
+      "system_sha256": "3a03c8ef8c9b7f9f516783b03d7781d3800097f25b0dde41e6df1a19c0b9f600",
+      "tools_sha256": "3ea4f314864c7db310ba13e8f5c7598a671d78f270aecb8dd5648a2148ca6bcf",
+      "trigger_number": 1,
+      "wire_sha256": "8cacc376738e75322b101c17948aec05fc035226e0d2296f1bf3d81b1c75b3d7",
+      "wire_tools_sha256": "3ea4f314864c7db310ba13e8f5c7598a671d78f270aecb8dd5648a2148ca6bcf"
+    },
+    "raw_windows_exact": [
+      "e1",
+      "e2"
+    ],
+    "retrieval_records_exact": true,
+    "r8_original_groups_restored": [
+      6,
+      7
+    ],
+    "metrics": {
+      "event_count": 352,
+      "head": "b3a67c70e02b754d4146184a4aed19e364699e14420a21f5c834c11e75ab68cc",
+      "protocol": "stride-search-3",
+      "answer_contract": "string-integer-v1",
+      "workflow_contract": {
+        "enabled": true,
+        "gap_state": true,
+        "guided_read": true,
+        "recovery_rounds": 2,
+        "repeat_threshold": 2,
+        "repetition": "bounded",
+        "reuse_results": true,
+        "version": "gap-workflow-v1"
+      },
+      "model_attempts": 12,
+      "backend_attempts": 26,
+      "actions_recorded": 21,
+      "executed_actions": 21,
+      "usage_known": {
+        "input_tokens": 208751,
+        "output_tokens": 1795,
+        "cache_read_tokens": 75776,
+        "cache_write_tokens": 0
+      },
+      "unknown_usage_calls": 0,
+      "outstanding_requests": [],
+      "formal_correct": null,
+      "recovery_events": {
+        "delivery_preflight": 11
+      },
+      "nonblocking_note_failures": 0,
+      "action_counts": {
+        "search": 18,
+        "read": 2,
+        "finish": 1
+      },
+      "action_error_counts": {
+        "duplicate_query_blocked": 4
+      },
+      "final_phase_requests": 1,
+      "compaction_requests": 5,
+      "rounds_receiving_new_raw": 2,
+      "cache_query_hits": 12,
+      "unchanged_note_updates": 0,
+      "limitations": [
+        "No semantic judge has run",
+        "No resume or automatic reissue",
+        "Hashes are not adversarial authentication"
+      ]
+    },
+    "backend_kind_counts": {
+      "search": 25,
+      "get_document": 1
+    }
+  },
+  "baseline": {
+    "all_checks_passed": true,
+    "seal_files": 80,
+    "chain": {
+      "event_count": 582,
+      "head": "85350ebe5aa024f49c6e3e90a17f77c37de7fd2498437de2a69b4a6ed9fbb2f5"
+    },
+    "all_request_wire_matches_archive": true,
+    "http": [
+      {
+        "round": 1,
+        "status": 200
+      },
+      {
+        "round": 2,
+        "status": 200
+      },
+      {
+        "round": 3,
+        "status": 200
+      },
+      {
+        "round": 4,
+        "status": 200
+      },
+      {
+        "round": 5,
+        "status": 200
+      },
+      {
+        "round": 6,
+        "status": 200
+      },
+      {
+        "round": 7,
+        "status": 200
+      },
+      {
+        "round": 8,
+        "status": 200
+      },
+      {
+        "round": 9,
+        "status": 200
+      },
+      {
+        "round": 10,
+        "status": 200
+      },
+      {
+        "round": 11,
+        "status": 200
+      },
+      {
+        "round": 12,
+        "status": 200
+      },
+      {
+        "round": 13,
+        "status": 200
+      },
+      {
+        "round": 14,
+        "status": 200
+      },
+      {
+        "round": 15,
+        "status": 200
+      },
+      {
+        "round": 16,
+        "status": 200
+      }
+    ],
+    "backend_kind_counts": {
+      "search": 48,
+      "get_document": 1
+    },
+    "metrics": {
+      "event_count": 582,
+      "head": "85350ebe5aa024f49c6e3e90a17f77c37de7fd2498437de2a69b4a6ed9fbb2f5",
+      "protocol": "stride-search-3",
+      "answer_contract": "string-integer-v1",
+      "workflow_contract": {
+        "enabled": true,
+        "gap_state": true,
+        "guided_read": true,
+        "recovery_rounds": 2,
+        "repeat_threshold": 2,
+        "repetition": "bounded",
+        "reuse_results": true,
+        "version": "gap-workflow-v1"
+      },
+      "model_attempts": 16,
+      "backend_attempts": 49,
+      "actions_recorded": 30,
+      "executed_actions": 28,
+      "usage_known": {
+        "input_tokens": 284570,
+        "output_tokens": 3455,
+        "cache_read_tokens": 99328,
+        "cache_write_tokens": 0
+      },
+      "unknown_usage_calls": 0,
+      "outstanding_requests": [],
+      "formal_correct": null,
+      "recovery_events": {
+        "delivery_preflight": 15
+      },
+      "nonblocking_note_failures": 0,
+      "action_counts": {
+        "search": 28,
+        "read": 2
+      },
+      "action_error_counts": {
+        "final_only": 2
+      },
+      "final_phase_requests": 1,
+      "compaction_requests": 9,
+      "rounds_receiving_new_raw": 2,
+      "cache_query_hits": 13,
+      "unchanged_note_updates": 0,
+      "limitations": [
+        "No semantic judge has run",
+        "No resume or automatic reissue",
+        "Hashes are not adversarial authentication"
+      ]
+    }
+  },
+  "r1_byte_identical": true
+}

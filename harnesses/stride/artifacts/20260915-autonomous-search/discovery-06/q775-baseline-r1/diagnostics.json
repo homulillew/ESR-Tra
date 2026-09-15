@@ -1,0 +1,911 @@
+{
+  "protocol": "stride-search-3",
+  "head": "fb91f204283ec28dc33f2045caa2dead624024dddf69be4ff8a7845237ded896",
+  "outcome": "submitted",
+  "formal_correct": null,
+  "model_attempts": 16,
+  "backend_attempts": 28,
+  "queries": [
+    {
+      "round": 1,
+      "top_k": 8,
+      "equivalence_key": "cd5125b3fc988cc478b87de986b338d8ede461caf5825d40fd9813869067b903",
+      "cached": false,
+      "query_sha256": "3f407bb8fb83ab87c2c8be5e284154c389db0daabb355f1418fe14fa31c3f835",
+      "query": "award created 2000s literary prize translated twenty five languages",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"award\" OR \"created\" OR \"2000s\" OR \"literary\" OR \"prize\" OR \"translated\" OR \"twenty\" OR \"five\" OR \"languages\"",
+        "terms": [
+          "award",
+          "created",
+          "2000s",
+          "literary",
+          "prize",
+          "translated",
+          "twenty",
+          "five",
+          "languages"
+        ]
+      }
+    },
+    {
+      "round": 1,
+      "top_k": 8,
+      "equivalence_key": "eca8d85b16f40b5453daf6d70bf9d85411314394b3f2278d2151caf4d19607bc",
+      "cached": false,
+      "query_sha256": "068fafd9a4f5ce1ffd8a4716b625447cb2223e2fa909215d84ba09c2eb2cb1b2",
+      "query": "book translated over 25 languages award contender 2010s",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"book\" OR \"translated\" OR \"over\" OR \"25\" OR \"languages\" OR \"award\" OR \"contender\" OR \"2010s\"",
+        "terms": [
+          "book",
+          "translated",
+          "over",
+          "25",
+          "languages",
+          "award",
+          "contender",
+          "2010s"
+        ]
+      }
+    },
+    {
+      "round": 1,
+      "top_k": 8,
+      "equivalence_key": "b225792a35d2f96c6c9ce170e2718c945af5a794b98007f19c24a210b4d9d4e4",
+      "cached": false,
+      "query_sha256": "3a7f13e31ba52f5b9c26c1ba4328d8a035741f779c84d4ddd3d57a8f9f2bff68",
+      "query": "literary prize founded 2000s international award",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"literary\" OR \"prize\" OR \"founded\" OR \"2000s\" OR \"international\" OR \"award\"",
+        "terms": [
+          "literary",
+          "prize",
+          "founded",
+          "2000s",
+          "international",
+          "award"
+        ]
+      }
+    },
+    {
+      "round": 1,
+      "top_k": 8,
+      "equivalence_key": "eb1650090c8d89e5322dd4f4e79e7d662c817eec8443cf3a9d367394f1bb73ad",
+      "cached": false,
+      "query_sha256": "216219c2bc37be3f3b6d4388486c55563b3f677055c6122e502e08858452dc87",
+      "query": "book award founded 2000s contender translated many languages",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"book\" OR \"award\" OR \"founded\" OR \"2000s\" OR \"contender\" OR \"translated\" OR \"many\" OR \"languages\"",
+        "terms": [
+          "book",
+          "award",
+          "founded",
+          "2000s",
+          "contender",
+          "translated",
+          "many",
+          "languages"
+        ]
+      }
+    },
+    {
+      "round": 1,
+      "top_k": 8,
+      "equivalence_key": "d4aae265705a7cc349e7984b9b667b0d459077274c8e304b3df1905b96f0b3ee",
+      "cached": false,
+      "query_sha256": "bac67a932de24ed5496fcfcd5529e4a346a938945cd5e653c1b3e2f0ecaf231d",
+      "query": "author born city grew up prize winning book preceding year",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"author\" OR \"born\" OR \"city\" OR \"grew\" OR \"up\" OR \"prize\" OR \"winning\" OR \"book\" OR \"preceding\" OR \"year\"",
+        "terms": [
+          "author",
+          "born",
+          "city",
+          "grew",
+          "up",
+          "prize",
+          "winning",
+          "book",
+          "preceding",
+          "year"
+        ]
+      }
+    },
+    {
+      "round": 2,
+      "top_k": 8,
+      "equivalence_key": "8b1b8c5e8688c5ab89cb53b8d0e7ec1ddd573e7beafd43b704602064dd7d4782",
+      "cached": false,
+      "query_sha256": "ff001d98e3c6173e90a75f0182e64818bff7ce2a2cf44757d8b21fdea76364ae",
+      "query": "International Booker Prize longlist book translated 25 languages 2010s",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"international\" OR \"booker\" OR \"prize\" OR \"longlist\" OR \"book\" OR \"translated\" OR \"25\" OR \"languages\" OR \"2010s\"",
+        "terms": [
+          "international",
+          "booker",
+          "prize",
+          "longlist",
+          "book",
+          "translated",
+          "25",
+          "languages",
+          "2010s"
+        ]
+      }
+    },
+    {
+      "round": 2,
+      "top_k": 8,
+      "equivalence_key": "ddceb4c304c6ec94c4459e14b77ab2a2463824866a5cf0f44381ffa707f1692e",
+      "cached": false,
+      "query_sha256": "5bef32bc91232c6257d38503d4f1993d5ab1e53072824032ed727aac33089c66",
+      "query": "novel translated into 30 languages International Booker contender published 2010s",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"novel\" OR \"translated\" OR \"into\" OR \"30\" OR \"languages\" OR \"international\" OR \"booker\" OR \"contender\" OR \"published\" OR \"2010s\"",
+        "terms": [
+          "novel",
+          "translated",
+          "into",
+          "30",
+          "languages",
+          "international",
+          "booker",
+          "contender",
+          "published",
+          "2010s"
+        ]
+      }
+    },
+    {
+      "round": 2,
+      "top_k": 8,
+      "equivalence_key": "4b653e21db50d5ccdc161ae035f199450e85040e0ba3d590b77d79576a65c96c",
+      "cached": false,
+      "query_sha256": "0548510f5f4fd26d161e56d800766b38b17563f2caf5b2b9186e32f054247862",
+      "query": "book translated over 25 languages shortlisted Man Booker International",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"book\" OR \"translated\" OR \"over\" OR \"25\" OR \"languages\" OR \"shortlisted\" OR \"man\" OR \"booker\" OR \"international\"",
+        "terms": [
+          "book",
+          "translated",
+          "over",
+          "25",
+          "languages",
+          "shortlisted",
+          "man",
+          "booker",
+          "international"
+        ]
+      }
+    },
+    {
+      "round": 2,
+      "top_k": 8,
+      "equivalence_key": "80449480ecd5fd2fb97a10acdae14eadd6e5329c1b0f290e240c849ec67b2a8f",
+      "cached": false,
+      "query_sha256": "71b3b23f16d88c9a0f7256ef4e07db370a3a0611243862e283f2db2312c8cbfb",
+      "query": "author born city grew up another author International Booker Prize winner",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"author\" OR \"born\" OR \"city\" OR \"grew\" OR \"up\" OR \"another\" OR \"international\" OR \"booker\" OR \"prize\" OR \"winner\"",
+        "terms": [
+          "author",
+          "born",
+          "city",
+          "grew",
+          "up",
+          "another",
+          "international",
+          "booker",
+          "prize",
+          "winner"
+        ]
+      }
+    },
+    {
+      "round": 2,
+      "top_k": 8,
+      "equivalence_key": "8dbfe1f3701324bd54ad61ef14e38811b8c6ef5b5c8dda300771acb57ffed8f8",
+      "cached": false,
+      "query_sha256": "1685fc7a4c953409fb6d2efa1fe3dee7939d1947081ff6d1a822a2672d679012",
+      "query": "International Booker Prize winner born same city another author grew up",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"international\" OR \"booker\" OR \"prize\" OR \"winner\" OR \"born\" OR \"same\" OR \"city\" OR \"another\" OR \"author\" OR \"grew\" OR \"up\"",
+        "terms": [
+          "international",
+          "booker",
+          "prize",
+          "winner",
+          "born",
+          "same",
+          "city",
+          "another",
+          "author",
+          "grew",
+          "up"
+        ]
+      }
+    },
+    {
+      "round": 3,
+      "top_k": 8,
+      "equivalence_key": "918b92a917a7cf9eb8d08fc12980e812d4114437ae2fc472e4ac26f6187c7479",
+      "cached": false,
+      "query_sha256": "6d201255b5ddcbcaa9b0d804276386ffc86fa8a64df99481fc22135bc127694b",
+      "query": "Chigozie Obioma born city grew up biography",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"chigozie\" OR \"obioma\" OR \"born\" OR \"city\" OR \"grew\" OR \"up\" OR \"biography\"",
+        "terms": [
+          "chigozie",
+          "obioma",
+          "born",
+          "city",
+          "grew",
+          "up",
+          "biography"
+        ]
+      }
+    },
+    {
+      "round": 3,
+      "top_k": 8,
+      "equivalence_key": "610be7e7c9db5a85d765349ecf09547ee14466340409d0389bbfeefdff2211c7",
+      "cached": false,
+      "query_sha256": "3c4222c4eca1b20f394e3e46a18d08dfd633eddab1b7c24c39b113489754bdaa",
+      "query": "An Orchestra of Minorities 2019 Booker Prize shortlist translated 30 languages",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"an\" OR \"orchestra\" OR \"of\" OR \"minorities\" OR \"2019\" OR \"booker\" OR \"prize\" OR \"shortlist\" OR \"translated\" OR \"30\" OR \"languages\"",
+        "terms": [
+          "an",
+          "orchestra",
+          "of",
+          "minorities",
+          "2019",
+          "booker",
+          "prize",
+          "shortlist",
+          "translated",
+          "30",
+          "languages"
+        ]
+      }
+    },
+    {
+      "round": 3,
+      "top_k": 8,
+      "equivalence_key": "552955814f65c9110c8e5ce12cb428b0c8acdfd3644999d0dd436fb2a0c355b3",
+      "cached": false,
+      "query_sha256": "d5df9d9a8bf5352c4af82ab15aae6efda7255f1e5d9aa2122abf19208a386b32",
+      "query": "Booker Prize 2019 winner Margaret Atwood Bernardine Evaristo",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"booker\" OR \"prize\" OR \"2019\" OR \"winner\" OR \"margaret\" OR \"atwood\" OR \"bernardine\" OR \"evaristo\"",
+        "terms": [
+          "booker",
+          "prize",
+          "2019",
+          "winner",
+          "margaret",
+          "atwood",
+          "bernardine",
+          "evaristo"
+        ]
+      }
+    },
+    {
+      "round": 4,
+      "top_k": 8,
+      "equivalence_key": "55ba81a0a7837ac74fd6288049fe19bb45c796adf6b770bdb54804951918b78f",
+      "cached": false,
+      "query_sha256": "241b30002e8e95d650bfe5fe857b14b12cef279ed405bbbea274a4a20d589182",
+      "query": "Chigozie Obioma grew up Akure biography early life",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"chigozie\" OR \"obioma\" OR \"grew\" OR \"up\" OR \"akure\" OR \"biography\" OR \"early\" OR \"life\"",
+        "terms": [
+          "chigozie",
+          "obioma",
+          "grew",
+          "up",
+          "akure",
+          "biography",
+          "early",
+          "life"
+        ]
+      }
+    },
+    {
+      "round": 4,
+      "top_k": 8,
+      "equivalence_key": "1443183a00b7bb3d9eb598a3d5b728d94da86a17ec8c386454e45c9a79b2f87a",
+      "cached": false,
+      "query_sha256": "0da9805617545321fd8074c88affe3a5123d6549e12fd1f9e5053e7e8f545a94",
+      "query": "Chigozie Obioma childhood hometown Nigeria",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"chigozie\" OR \"obioma\" OR \"childhood\" OR \"hometown\" OR \"nigeria\"",
+        "terms": [
+          "chigozie",
+          "obioma",
+          "childhood",
+          "hometown",
+          "nigeria"
+        ]
+      }
+    },
+    {
+      "round": 4,
+      "top_k": 8,
+      "equivalence_key": "d1ca767db0cb9613610bcfa726fc6b275caadec2d9c53ab45b73ab9adf4cab5c",
+      "cached": false,
+      "query_sha256": "41eeeb0be268a0bca6c4c8ec98d5738f910007b5452ad613a94e4a6062f45db5",
+      "query": "Bernardine Evaristo born city birthplace",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"bernardine\" OR \"evaristo\" OR \"born\" OR \"city\" OR \"birthplace\"",
+        "terms": [
+          "bernardine",
+          "evaristo",
+          "born",
+          "city",
+          "birthplace"
+        ]
+      }
+    },
+    {
+      "round": 4,
+      "top_k": 8,
+      "equivalence_key": "4e58fb9d867c31fda4253bb550d4ed4c98a59306e894019f36d9d9e08f07f886",
+      "cached": false,
+      "query_sha256": "d3f03108001d7e3d7ad062f20b7386ba476b6ab5916ec91ec7090ecf9e267fc4",
+      "query": "Margaret Atwood born city birthplace",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"margaret\" OR \"atwood\" OR \"born\" OR \"city\" OR \"birthplace\"",
+        "terms": [
+          "margaret",
+          "atwood",
+          "born",
+          "city",
+          "birthplace"
+        ]
+      }
+    },
+    {
+      "round": 4,
+      "top_k": 8,
+      "equivalence_key": "9badd330bad8d90bc8294f74aaffc39071962bb69cf024d4b99a21bd7840ac12",
+      "cached": false,
+      "query_sha256": "22e54626d6605a711246e17f9273260548fe2097239380d4946d66598d66bdde",
+      "query": "Bernardine Evaristo born London biography",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"bernardine\" OR \"evaristo\" OR \"born\" OR \"london\" OR \"biography\"",
+        "terms": [
+          "bernardine",
+          "evaristo",
+          "born",
+          "london",
+          "biography"
+        ]
+      }
+    },
+    {
+      "round": 6,
+      "top_k": 8,
+      "equivalence_key": "d44256a933dda6fa2888a4b56a8b44cb9277992f6826ebf588c9921c75c4a231",
+      "cached": false,
+      "query_sha256": "1dab2492e1f7c6ef597304d0846048ebdc1fdce3de5ba8b88f31033edb45bc14",
+      "query": "Chigozie Obioma grew up Akure childhood biography",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"chigozie\" OR \"obioma\" OR \"grew\" OR \"up\" OR \"akure\" OR \"childhood\" OR \"biography\"",
+        "terms": [
+          "chigozie",
+          "obioma",
+          "grew",
+          "up",
+          "akure",
+          "childhood",
+          "biography"
+        ]
+      }
+    },
+    {
+      "round": 6,
+      "top_k": 8,
+      "equivalence_key": "d66d74445a7b906296a7d1f4c305128c24336c4337245bc1a417253c8c448974",
+      "cached": false,
+      "query_sha256": "4d0c88eb5e9c2fd71805db1de80987b8aebbcd02efbce7c028e0c8e17b1db4b3",
+      "query": "Chigozie Obioma early life Akure Nigeria hometown",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"chigozie\" OR \"obioma\" OR \"early\" OR \"life\" OR \"akure\" OR \"nigeria\" OR \"hometown\"",
+        "terms": [
+          "chigozie",
+          "obioma",
+          "early",
+          "life",
+          "akure",
+          "nigeria",
+          "hometown"
+        ]
+      }
+    },
+    {
+      "round": 6,
+      "top_k": 8,
+      "equivalence_key": "f448712e49cc239686605864ec90c51f5b295ebdead7903b9be10f93a6fcd72d",
+      "cached": false,
+      "query_sha256": "0476c6abe405ef1f92c67b678f994d043030cbef65d8dc82dbcf6225272b3718",
+      "query": "Chigozie Obioma biography born Akure raised",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"chigozie\" OR \"obioma\" OR \"biography\" OR \"born\" OR \"akure\" OR \"raised\"",
+        "terms": [
+          "chigozie",
+          "obioma",
+          "biography",
+          "born",
+          "akure",
+          "raised"
+        ]
+      }
+    },
+    {
+      "round": 7,
+      "top_k": 8,
+      "equivalence_key": "d44256a933dda6fa2888a4b56a8b44cb9277992f6826ebf588c9921c75c4a231",
+      "cached": true,
+      "query_sha256": "1dab2492e1f7c6ef597304d0846048ebdc1fdce3de5ba8b88f31033edb45bc14",
+      "query": "Chigozie Obioma grew up Akure childhood biography",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"chigozie\" OR \"obioma\" OR \"grew\" OR \"up\" OR \"akure\" OR \"childhood\" OR \"biography\"",
+        "terms": [
+          "chigozie",
+          "obioma",
+          "grew",
+          "up",
+          "akure",
+          "childhood",
+          "biography"
+        ]
+      }
+    },
+    {
+      "round": 7,
+      "top_k": 8,
+      "equivalence_key": "f448712e49cc239686605864ec90c51f5b295ebdead7903b9be10f93a6fcd72d",
+      "cached": true,
+      "query_sha256": "0476c6abe405ef1f92c67b678f994d043030cbef65d8dc82dbcf6225272b3718",
+      "query": "Chigozie Obioma biography born Akure raised",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"chigozie\" OR \"obioma\" OR \"biography\" OR \"born\" OR \"akure\" OR \"raised\"",
+        "terms": [
+          "chigozie",
+          "obioma",
+          "biography",
+          "born",
+          "akure",
+          "raised"
+        ]
+      }
+    },
+    {
+      "round": 7,
+      "top_k": 8,
+      "equivalence_key": "d66d74445a7b906296a7d1f4c305128c24336c4337245bc1a417253c8c448974",
+      "cached": true,
+      "query_sha256": "4d0c88eb5e9c2fd71805db1de80987b8aebbcd02efbce7c028e0c8e17b1db4b3",
+      "query": "Chigozie Obioma early life Akure Nigeria hometown",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"chigozie\" OR \"obioma\" OR \"early\" OR \"life\" OR \"akure\" OR \"nigeria\" OR \"hometown\"",
+        "terms": [
+          "chigozie",
+          "obioma",
+          "early",
+          "life",
+          "akure",
+          "nigeria",
+          "hometown"
+        ]
+      }
+    },
+    {
+      "round": 8,
+      "top_k": 8,
+      "equivalence_key": "d44256a933dda6fa2888a4b56a8b44cb9277992f6826ebf588c9921c75c4a231",
+      "cached": true,
+      "query_sha256": "1dab2492e1f7c6ef597304d0846048ebdc1fdce3de5ba8b88f31033edb45bc14",
+      "query": "Chigozie Obioma grew up Akure childhood biography",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"chigozie\" OR \"obioma\" OR \"grew\" OR \"up\" OR \"akure\" OR \"childhood\" OR \"biography\"",
+        "terms": [
+          "chigozie",
+          "obioma",
+          "grew",
+          "up",
+          "akure",
+          "childhood",
+          "biography"
+        ]
+      }
+    },
+    {
+      "round": 8,
+      "top_k": 8,
+      "equivalence_key": "f448712e49cc239686605864ec90c51f5b295ebdead7903b9be10f93a6fcd72d",
+      "cached": true,
+      "query_sha256": "0476c6abe405ef1f92c67b678f994d043030cbef65d8dc82dbcf6225272b3718",
+      "query": "Chigozie Obioma biography born Akure raised",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"chigozie\" OR \"obioma\" OR \"biography\" OR \"born\" OR \"akure\" OR \"raised\"",
+        "terms": [
+          "chigozie",
+          "obioma",
+          "biography",
+          "born",
+          "akure",
+          "raised"
+        ]
+      }
+    },
+    {
+      "round": 8,
+      "top_k": 8,
+      "equivalence_key": "d66d74445a7b906296a7d1f4c305128c24336c4337245bc1a417253c8c448974",
+      "cached": true,
+      "query_sha256": "4d0c88eb5e9c2fd71805db1de80987b8aebbcd02efbce7c028e0c8e17b1db4b3",
+      "query": "Chigozie Obioma early life Akure Nigeria hometown",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"chigozie\" OR \"obioma\" OR \"early\" OR \"life\" OR \"akure\" OR \"nigeria\" OR \"hometown\"",
+        "terms": [
+          "chigozie",
+          "obioma",
+          "early",
+          "life",
+          "akure",
+          "nigeria",
+          "hometown"
+        ]
+      }
+    },
+    {
+      "round": 14,
+      "top_k": 8,
+      "equivalence_key": "d44256a933dda6fa2888a4b56a8b44cb9277992f6826ebf588c9921c75c4a231",
+      "cached": true,
+      "query_sha256": "1dab2492e1f7c6ef597304d0846048ebdc1fdce3de5ba8b88f31033edb45bc14",
+      "query": "Chigozie Obioma grew up Akure childhood biography",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"chigozie\" OR \"obioma\" OR \"grew\" OR \"up\" OR \"akure\" OR \"childhood\" OR \"biography\"",
+        "terms": [
+          "chigozie",
+          "obioma",
+          "grew",
+          "up",
+          "akure",
+          "childhood",
+          "biography"
+        ]
+      }
+    },
+    {
+      "round": 14,
+      "top_k": 8,
+      "equivalence_key": "f448712e49cc239686605864ec90c51f5b295ebdead7903b9be10f93a6fcd72d",
+      "cached": true,
+      "query_sha256": "0476c6abe405ef1f92c67b678f994d043030cbef65d8dc82dbcf6225272b3718",
+      "query": "Chigozie Obioma biography born Akure raised",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"chigozie\" OR \"obioma\" OR \"biography\" OR \"born\" OR \"akure\" OR \"raised\"",
+        "terms": [
+          "chigozie",
+          "obioma",
+          "biography",
+          "born",
+          "akure",
+          "raised"
+        ]
+      }
+    },
+    {
+      "round": 14,
+      "top_k": 8,
+      "equivalence_key": "d66d74445a7b906296a7d1f4c305128c24336c4337245bc1a417253c8c448974",
+      "cached": true,
+      "query_sha256": "4d0c88eb5e9c2fd71805db1de80987b8aebbcd02efbce7c028e0c8e17b1db4b3",
+      "query": "Chigozie Obioma early life Akure Nigeria hometown",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"chigozie\" OR \"obioma\" OR \"early\" OR \"life\" OR \"akure\" OR \"nigeria\" OR \"hometown\"",
+        "terms": [
+          "chigozie",
+          "obioma",
+          "early",
+          "life",
+          "akure",
+          "nigeria",
+          "hometown"
+        ]
+      }
+    },
+    {
+      "round": 15,
+      "top_k": 10,
+      "equivalence_key": "c8c6fbb2bafc884e6c5cc415e6bbbf521d2611b0ec6452ed18ce47bd7664ae3a",
+      "cached": false,
+      "query_sha256": "4b3f0353d1060114f0656f87781c9f15b99003782657963812cc8b3e16daf42e",
+      "query": "Chigozie Obioma childhood Akure grew up biography",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"chigozie\" OR \"obioma\" OR \"childhood\" OR \"akure\" OR \"grew\" OR \"up\" OR \"biography\"",
+        "terms": [
+          "chigozie",
+          "obioma",
+          "childhood",
+          "akure",
+          "grew",
+          "up",
+          "biography"
+        ]
+      }
+    },
+    {
+      "round": 15,
+      "top_k": 10,
+      "equivalence_key": "f9623c19e6a2396c1cdb9884c35e126b640d337e42d5d3be773d75ec217b0eaf",
+      "cached": false,
+      "query_sha256": "3017647e9c39e51e8f464038d98a02dfb5da05f3ceadf95b1bc29947d7349a02",
+      "query": "Chigozie Obioma early life hometown Nigeria",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"chigozie\" OR \"obioma\" OR \"early\" OR \"life\" OR \"hometown\" OR \"nigeria\"",
+        "terms": [
+          "chigozie",
+          "obioma",
+          "early",
+          "life",
+          "hometown",
+          "nigeria"
+        ]
+      }
+    },
+    {
+      "round": 15,
+      "top_k": 10,
+      "equivalence_key": "2d395eca3ba48a7f163a3055d4a943a24859463cae8218b98c598d51d30955fd",
+      "cached": false,
+      "query_sha256": "beecf1330bb8dbb515f0f49d55089623ea195465935aab66cf4f905a61fb9a75",
+      "query": "Chigozie Obioma biography born raised Akure",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"chigozie\" OR \"obioma\" OR \"biography\" OR \"born\" OR \"raised\" OR \"akure\"",
+        "terms": [
+          "chigozie",
+          "obioma",
+          "biography",
+          "born",
+          "raised",
+          "akure"
+        ]
+      }
+    }
+  ],
+  "equivalent_query_repeats": 9,
+  "views": [
+    {
+      "round": 1,
+      "compacted": false,
+      "visible_evidence": [],
+      "shelf": [],
+      "shelf_evicted": []
+    },
+    {
+      "round": 2,
+      "compacted": false,
+      "visible_evidence": [],
+      "shelf": [],
+      "shelf_evicted": []
+    },
+    {
+      "round": 3,
+      "compacted": false,
+      "visible_evidence": [],
+      "shelf": [],
+      "shelf_evicted": []
+    },
+    {
+      "round": 4,
+      "compacted": true,
+      "visible_evidence": [
+        "e1"
+      ],
+      "shelf": [],
+      "shelf_evicted": []
+    },
+    {
+      "round": 5,
+      "compacted": true,
+      "visible_evidence": [
+        "e1"
+      ],
+      "shelf": [],
+      "shelf_evicted": []
+    },
+    {
+      "round": 6,
+      "compacted": false,
+      "visible_evidence": [
+        "e1",
+        "e2",
+        "e3"
+      ],
+      "shelf": [],
+      "shelf_evicted": []
+    },
+    {
+      "round": 7,
+      "compacted": true,
+      "visible_evidence": [
+        "e1",
+        "e2",
+        "e3"
+      ],
+      "shelf": [
+        "e1"
+      ],
+      "shelf_evicted": []
+    },
+    {
+      "round": 8,
+      "compacted": false,
+      "visible_evidence": [
+        "e1",
+        "e2",
+        "e3"
+      ],
+      "shelf": [
+        "e1"
+      ],
+      "shelf_evicted": []
+    },
+    {
+      "round": 9,
+      "compacted": true,
+      "visible_evidence": [
+        "e1",
+        "e2",
+        "e3"
+      ],
+      "shelf": [
+        "e1"
+      ],
+      "shelf_evicted": []
+    },
+    {
+      "round": 10,
+      "compacted": false,
+      "visible_evidence": [
+        "e1",
+        "e2",
+        "e3"
+      ],
+      "shelf": [
+        "e1"
+      ],
+      "shelf_evicted": []
+    },
+    {
+      "round": 11,
+      "compacted": false,
+      "visible_evidence": [
+        "e1",
+        "e2",
+        "e3",
+        "e4"
+      ],
+      "shelf": [
+        "e1"
+      ],
+      "shelf_evicted": []
+    },
+    {
+      "round": 12,
+      "compacted": false,
+      "visible_evidence": [
+        "e2",
+        "e3",
+        "e4"
+      ],
+      "shelf": [],
+      "shelf_evicted": []
+    },
+    {
+      "round": 13,
+      "compacted": false,
+      "visible_evidence": [
+        "e2",
+        "e3",
+        "e4"
+      ],
+      "shelf": [],
+      "shelf_evicted": []
+    },
+    {
+      "round": 14,
+      "compacted": false,
+      "visible_evidence": [
+        "e2",
+        "e3",
+        "e4",
+        "e5"
+      ],
+      "shelf": [],
+      "shelf_evicted": []
+    },
+    {
+      "round": 15,
+      "compacted": false,
+      "visible_evidence": [
+        "e2",
+        "e3",
+        "e4",
+        "e5"
+      ],
+      "shelf": [],
+      "shelf_evicted": []
+    },
+    {
+      "round": 16,
+      "compacted": true,
+      "visible_evidence": [
+        "e3",
+        "e4",
+        "e5"
+      ],
+      "shelf": [
+        "e3",
+        "e4"
+      ],
+      "shelf_evicted": []
+    }
+  ],
+  "delivered_refs": [
+    "e1",
+    "e2",
+    "e3",
+    "e4",
+    "e5"
+  ],
+  "submitted_refs": [
+    "e3",
+    "e5"
+  ],
+  "text_included": true,
+  "limitations": [
+    "Equivalence is compiler equality, not semantic identity or wasted-search proof",
+    "Raw-window visibility/selection is not entailment or complete evidence coverage",
+    "No live q26 replay or independent answer scoring is performed"
+  ]
+}

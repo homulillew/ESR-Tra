@@ -1,0 +1,543 @@
+{
+  "scope": "only sealed discovery-06 q771/q778 two arms; no judge/gold",
+  "slots": {
+    "q771-baseline-r1": {
+      "seal_sha256": "55b8041820ad9d59991c14b9abd93237394fb976e119b12b9adcc15e90dc5f0e",
+      "sealed_files": {
+        "all-objects.json": true,
+        "analysis-data.json": true,
+        "diagnostics.json": true,
+        "episode.sqlite": true,
+        "events-timed.jsonl": true,
+        "EVIDENCE_TABLE.csv": true,
+        "FULL_INTERACTION.md": true,
+        "http/001/attempt-start.json": true,
+        "http/001/metadata.json": true,
+        "http/001/request.body": true,
+        "http/001/response.body": true,
+        "http/002/attempt-start.json": true,
+        "http/002/metadata.json": true,
+        "http/002/request.body": true,
+        "http/002/response.body": true,
+        "http/003/attempt-start.json": true,
+        "http/003/metadata.json": true,
+        "http/003/request.body": true,
+        "http/003/response.body": true,
+        "http/004/attempt-start.json": true,
+        "http/004/metadata.json": true,
+        "http/004/request.body": true,
+        "http/004/response.body": true,
+        "INTEGRITY_CHECKS.json": true,
+        "metrics.sanitized.json": true,
+        "QUERY_EXECUTION.csv": true,
+        "report.json": true,
+        "result.json": true,
+        "ROUND_TABLE.csv": true,
+        "TOOL_INTEGRITY.csv": true,
+        "trajectory.jsonl": true,
+        "VISIBILITY_TABLE.csv": true
+      },
+      "chain": {
+        "event_count": 67,
+        "head": "464f4d2c3942605a7b3839017b8207b4f3004f4604590d2d7097b39aa9f8cab5"
+      },
+      "wire_checks": [
+        {
+          "round": 1,
+          "request_archive_equals_http_json": true,
+          "response_archive_equals_http_json": true
+        },
+        {
+          "round": 2,
+          "request_archive_equals_http_json": true,
+          "response_archive_equals_http_json": true
+        },
+        {
+          "round": 3,
+          "request_archive_equals_http_json": true,
+          "response_archive_equals_http_json": true
+        },
+        {
+          "round": 4,
+          "request_archive_equals_http_json": true,
+          "response_archive_equals_http_json": true
+        }
+      ],
+      "review_events": [],
+      "evidence": [
+        {
+          "ref": "e1",
+          "document": "d5",
+          "range": [
+            0,
+            3000
+          ],
+          "sha256": "ed282b99cfb0aae5a430ddfadeb3348fa20e85aac24fb4501bf9cd3b3dadb4b2",
+          "snapshot": "7d8960afbde4b93401ea738e66299a6ee3d0dee47906ba8e3a86ebdea642ffcd",
+          "snapshot_bytes_valid": true,
+          "window_bytes_valid": true,
+          "exact_snapshot_slice": true,
+          "visible_request_rounds": [
+            3,
+            4
+          ],
+          "target_phrase_present": false
+        },
+        {
+          "ref": "e2",
+          "document": "d1",
+          "range": [
+            0,
+            3000
+          ],
+          "sha256": "521deb8f6549e7ea288326ea13a34d4635283fc59820929b6ad3b4c3edade321",
+          "snapshot": "446eabd6c86b9aad83f468e7eb034d96105d6e38bc9d97c923416d3ce089e105",
+          "snapshot_bytes_valid": true,
+          "window_bytes_valid": true,
+          "exact_snapshot_slice": true,
+          "visible_request_rounds": [
+            3,
+            4
+          ],
+          "target_phrase_present": false
+        },
+        {
+          "ref": "e3",
+          "document": "d5",
+          "range": [
+            3000,
+            6000
+          ],
+          "sha256": "97a6e11f3f34512afbebf984635c4f0118e43a0fd1a04e71a3f4cf755defe729",
+          "snapshot": "7d8960afbde4b93401ea738e66299a6ee3d0dee47906ba8e3a86ebdea642ffcd",
+          "snapshot_bytes_valid": true,
+          "window_bytes_valid": true,
+          "exact_snapshot_slice": true,
+          "visible_request_rounds": [
+            4
+          ],
+          "target_phrase_present": false
+        },
+        {
+          "ref": "e4",
+          "document": "d1",
+          "range": [
+            3000,
+            6000
+          ],
+          "sha256": "01ef6425050ddf612695a672f50d2d88e296ce9e1e5d49338047f20a92856164",
+          "snapshot": "446eabd6c86b9aad83f468e7eb034d96105d6e38bc9d97c923416d3ce089e105",
+          "snapshot_bytes_valid": true,
+          "window_bytes_valid": true,
+          "exact_snapshot_slice": true,
+          "visible_request_rounds": [
+            4
+          ],
+          "target_phrase_present": true,
+          "target_char_offset": 5712,
+          "target_utf8_byte_offset_in_snapshot": 5730,
+          "target_phrase": "in 1982 created a new brand together with his son Cem. Called Vakkorama"
+        }
+      ],
+      "model_requests": 4,
+      "query_executions": 3,
+      "tool_counts": {
+        "finish": 1,
+        "read": 4,
+        "search": 1
+      },
+      "backend_requests": 5,
+      "backend_wall_seconds": 2.2454156999883708,
+      "cpu_search_backend_wall_seconds": 2.24126919999253,
+      "cpu_process_time_available": false,
+      "terminal_elapsed_seconds": 15.229395600006683,
+      "tokens": {
+        "prompt_tokens": 28834,
+        "completion_tokens": 365,
+        "total_tokens": 29199,
+        "cached_tokens": 13568,
+        "reasoning_tokens": 0
+      },
+      "terminal_answer": "Vakkorama",
+      "terminal_refs": [
+        "e3",
+        "e4"
+      ],
+      "final_visible": [
+        "e1",
+        "e2",
+        "e3",
+        "e4"
+      ]
+    },
+    "q771-relation-review-once-v1-r1": {
+      "seal_sha256": "0590e3aa9971c67a6de05f95c4863de684271ea894c7652b676516ac5490feb6",
+      "sealed_files": {
+        "all-objects.json": true,
+        "analysis-data.json": true,
+        "diagnostics.json": true,
+        "episode.sqlite": true,
+        "events-timed.jsonl": true,
+        "EVIDENCE_TABLE.csv": true,
+        "FULL_INTERACTION.md": true,
+        "http/001/attempt-start.json": true,
+        "http/001/metadata.json": true,
+        "http/001/request.body": true,
+        "http/001/response.body": true,
+        "http/002/attempt-start.json": true,
+        "http/002/metadata.json": true,
+        "http/002/request.body": true,
+        "http/002/response.body": true,
+        "http/003/attempt-start.json": true,
+        "http/003/metadata.json": true,
+        "http/003/request.body": true,
+        "http/003/response.body": true,
+        "http/004/attempt-start.json": true,
+        "http/004/metadata.json": true,
+        "http/004/request.body": true,
+        "http/004/response.body": true,
+        "INTEGRITY_CHECKS.json": true,
+        "metrics.sanitized.json": true,
+        "QUERY_EXECUTION.csv": true,
+        "report.json": true,
+        "result.json": true,
+        "ROUND_TABLE.csv": true,
+        "TOOL_INTEGRITY.csv": true,
+        "trajectory.jsonl": true,
+        "VISIBILITY_TABLE.csv": true
+      },
+      "chain": {
+        "event_count": 72,
+        "head": "5fab51b8ef1f309872972c561563579d53dd3f2bee521b506b3fb0e41ece1a22"
+      },
+      "wire_checks": [
+        {
+          "round": 1,
+          "request_archive_equals_http_json": true,
+          "response_archive_equals_http_json": true
+        },
+        {
+          "round": 2,
+          "request_archive_equals_http_json": true,
+          "response_archive_equals_http_json": true
+        },
+        {
+          "round": 3,
+          "request_archive_equals_http_json": true,
+          "response_archive_equals_http_json": true
+        },
+        {
+          "round": 4,
+          "request_archive_equals_http_json": true,
+          "response_archive_equals_http_json": true
+        }
+      ],
+      "review_events": [],
+      "evidence": [
+        {
+          "ref": "e1",
+          "document": "d1",
+          "range": [
+            0,
+            3000
+          ],
+          "sha256": "521deb8f6549e7ea288326ea13a34d4635283fc59820929b6ad3b4c3edade321",
+          "snapshot": "446eabd6c86b9aad83f468e7eb034d96105d6e38bc9d97c923416d3ce089e105",
+          "snapshot_bytes_valid": true,
+          "window_bytes_valid": true,
+          "exact_snapshot_slice": true,
+          "visible_request_rounds": [
+            3,
+            4
+          ],
+          "target_phrase_present": false
+        },
+        {
+          "ref": "e2",
+          "document": "d17",
+          "range": [
+            0,
+            3000
+          ],
+          "sha256": "ed282b99cfb0aae5a430ddfadeb3348fa20e85aac24fb4501bf9cd3b3dadb4b2",
+          "snapshot": "7d8960afbde4b93401ea738e66299a6ee3d0dee47906ba8e3a86ebdea642ffcd",
+          "snapshot_bytes_valid": true,
+          "window_bytes_valid": true,
+          "exact_snapshot_slice": true,
+          "visible_request_rounds": [
+            3,
+            4
+          ],
+          "target_phrase_present": false
+        }
+      ],
+      "model_requests": 4,
+      "query_executions": 3,
+      "tool_counts": {
+        "find": 2,
+        "finish": 1,
+        "read": 2,
+        "search": 1
+      },
+      "backend_requests": 5,
+      "backend_wall_seconds": 32.76610909998999,
+      "cpu_search_backend_wall_seconds": 32.76228739999351,
+      "cpu_process_time_available": false,
+      "terminal_elapsed_seconds": 56.61103759999969,
+      "tokens": {
+        "prompt_tokens": 31404,
+        "completion_tokens": 797,
+        "total_tokens": 32201,
+        "cached_tokens": 15744,
+        "reasoning_tokens": 0
+      },
+      "terminal_answer": "Vakkorama",
+      "terminal_refs": [
+        "e1",
+        "e2"
+      ],
+      "final_visible": [
+        "e1",
+        "e2"
+      ]
+    },
+    "q778-baseline-r1": {
+      "seal_sha256": "de495765f56d9ad3c4351e22f8d3a79797543bb2bcf5c3c1e133a8ee031b46a9",
+      "sealed_files": {
+        "all-objects.json": true,
+        "analysis-data.json": true,
+        "diagnostics.json": true,
+        "episode.sqlite": true,
+        "events-timed.jsonl": true,
+        "EVIDENCE_TABLE.csv": true,
+        "FULL_INTERACTION.md": true,
+        "http/001/attempt-start.json": true,
+        "http/001/metadata.json": true,
+        "http/001/request.body": true,
+        "http/001/response.body": true,
+        "http/002/attempt-start.json": true,
+        "http/002/metadata.json": true,
+        "http/002/request.body": true,
+        "http/002/response.body": true,
+        "http/003/attempt-start.json": true,
+        "http/003/metadata.json": true,
+        "http/003/request.body": true,
+        "http/003/response.body": true,
+        "http/004/attempt-start.json": true,
+        "http/004/metadata.json": true,
+        "http/004/request.body": true,
+        "http/004/response.body": true,
+        "INTEGRITY_CHECKS.json": true,
+        "metrics.sanitized.json": true,
+        "QUERY_EXECUTION.csv": true,
+        "report.json": true,
+        "result.json": true,
+        "ROUND_TABLE.csv": true,
+        "TOOL_INTEGRITY.csv": true,
+        "trajectory.jsonl": true,
+        "VISIBILITY_TABLE.csv": true
+      },
+      "chain": {
+        "event_count": 75,
+        "head": "541b1877cca8ce6e0342c2efdec8d241f68afa68ab427cc3971d9794de153807"
+      },
+      "wire_checks": [
+        {
+          "round": 1,
+          "request_archive_equals_http_json": true,
+          "response_archive_equals_http_json": true
+        },
+        {
+          "round": 2,
+          "request_archive_equals_http_json": true,
+          "response_archive_equals_http_json": true
+        },
+        {
+          "round": 3,
+          "request_archive_equals_http_json": true,
+          "response_archive_equals_http_json": true
+        },
+        {
+          "round": 4,
+          "request_archive_equals_http_json": true,
+          "response_archive_equals_http_json": true
+        }
+      ],
+      "review_events": [],
+      "evidence": [
+        {
+          "ref": "e1",
+          "document": "d19",
+          "range": [
+            0,
+            3000
+          ],
+          "sha256": "bc0d510dbd6cde0530cf08684de455d82ec1943c0ba50cab130ae01990cc24b8",
+          "snapshot": "d7b7a23b3eb780d78018e5fe30d91613c9769a1cff7564bb0a79c08614acb838",
+          "snapshot_bytes_valid": true,
+          "window_bytes_valid": true,
+          "exact_snapshot_slice": true,
+          "visible_request_rounds": [
+            4
+          ],
+          "target_phrase_present": true,
+          "target_char_offset": 2153,
+          "target_utf8_byte_offset_in_snapshot": 2153,
+          "target_phrase": "Her mother was 21 when she gave birth"
+        }
+      ],
+      "model_requests": 4,
+      "query_executions": 6,
+      "tool_counts": {
+        "finish": 1,
+        "read": 1,
+        "search": 2
+      },
+      "backend_requests": 7,
+      "backend_wall_seconds": 3.667638699960662,
+      "cpu_search_backend_wall_seconds": 3.6662995999795385,
+      "cpu_process_time_available": false,
+      "terminal_elapsed_seconds": 22.767870400013635,
+      "tokens": {
+        "prompt_tokens": 30263,
+        "completion_tokens": 500,
+        "total_tokens": 30763,
+        "cached_tokens": 14208,
+        "reasoning_tokens": 0
+      },
+      "terminal_answer": "21",
+      "terminal_refs": [
+        "e1"
+      ],
+      "final_visible": [
+        "e1"
+      ]
+    },
+    "q778-relation-review-once-v1-r1": {
+      "seal_sha256": "0e5cbb9d16ca08d8fa39e0e2b386c33dc456bd214e683cd8d133400a6779e766",
+      "sealed_files": {
+        "all-objects.json": true,
+        "analysis-data.json": true,
+        "diagnostics.json": true,
+        "episode.sqlite": true,
+        "events-timed.jsonl": true,
+        "EVIDENCE_TABLE.csv": true,
+        "FULL_INTERACTION.md": true,
+        "http/001/attempt-start.json": true,
+        "http/001/metadata.json": true,
+        "http/001/request.body": true,
+        "http/001/response.body": true,
+        "http/002/attempt-start.json": true,
+        "http/002/metadata.json": true,
+        "http/002/request.body": true,
+        "http/002/response.body": true,
+        "http/003/attempt-start.json": true,
+        "http/003/metadata.json": true,
+        "http/003/request.body": true,
+        "http/003/response.body": true,
+        "http/004/attempt-start.json": true,
+        "http/004/metadata.json": true,
+        "http/004/request.body": true,
+        "http/004/response.body": true,
+        "INTEGRITY_CHECKS.json": true,
+        "metrics.sanitized.json": true,
+        "QUERY_EXECUTION.csv": true,
+        "report.json": true,
+        "result.json": true,
+        "ROUND_TABLE.csv": true,
+        "TOOL_INTEGRITY.csv": true,
+        "trajectory.jsonl": true,
+        "VISIBILITY_TABLE.csv": true
+      },
+      "chain": {
+        "event_count": 86,
+        "head": "0469f6df5e789172f05a81be70b3d306587a55398a9d4d41777d1f65eea09815"
+      },
+      "wire_checks": [
+        {
+          "round": 1,
+          "request_archive_equals_http_json": true,
+          "response_archive_equals_http_json": true
+        },
+        {
+          "round": 2,
+          "request_archive_equals_http_json": true,
+          "response_archive_equals_http_json": true
+        },
+        {
+          "round": 3,
+          "request_archive_equals_http_json": true,
+          "response_archive_equals_http_json": true
+        },
+        {
+          "round": 4,
+          "request_archive_equals_http_json": true,
+          "response_archive_equals_http_json": true
+        }
+      ],
+      "review_events": [],
+      "evidence": [
+        {
+          "ref": "e1",
+          "document": "d25",
+          "range": [
+            0,
+            3000
+          ],
+          "sha256": "bc0d510dbd6cde0530cf08684de455d82ec1943c0ba50cab130ae01990cc24b8",
+          "snapshot": "d7b7a23b3eb780d78018e5fe30d91613c9769a1cff7564bb0a79c08614acb838",
+          "snapshot_bytes_valid": true,
+          "window_bytes_valid": true,
+          "exact_snapshot_slice": true,
+          "visible_request_rounds": [
+            4
+          ],
+          "target_phrase_present": true,
+          "target_char_offset": 2153,
+          "target_utf8_byte_offset_in_snapshot": 2153,
+          "target_phrase": "Her mother was 21 when she gave birth"
+        }
+      ],
+      "model_requests": 4,
+      "query_executions": 6,
+      "tool_counts": {
+        "finish": 1,
+        "read": 1,
+        "search": 2
+      },
+      "backend_requests": 7,
+      "backend_wall_seconds": 9.214130700012902,
+      "cpu_search_backend_wall_seconds": 9.212115700007416,
+      "cpu_process_time_available": false,
+      "terminal_elapsed_seconds": 26.578198399976827,
+      "tokens": {
+        "prompt_tokens": 35801,
+        "completion_tokens": 352,
+        "total_tokens": 36153,
+        "cached_tokens": 14592,
+        "reasoning_tokens": 0
+      },
+      "terminal_answer": "21",
+      "terminal_refs": [
+        "e1"
+      ],
+      "final_visible": [
+        "e1"
+      ]
+    }
+  },
+  "pairs": {
+    "771": {
+      "first_request_bytes_equal": true,
+      "first_request_sha256": "a61deeac7f2debefea800747f21cf59eb495c83b3fe63081feaef2c7a704fe3b",
+      "tools_equal": true,
+      "system_equal": true
+    },
+    "778": {
+      "first_request_bytes_equal": true,
+      "first_request_sha256": "7c3b4de711393e1eb56749a873d6860c113e222b59f4a83f8c44136a147268b7",
+      "tools_equal": true,
+      "system_equal": true
+    }
+  }
+}

@@ -1,0 +1,202 @@
+{
+  "protocol": "stride-search-3",
+  "head": "1afdcba5dae91df86f845894b29fd168d65e0ba50c602662cb0f438e6b23c605",
+  "outcome": "submitted",
+  "formal_correct": null,
+  "model_attempts": 4,
+  "backend_attempts": 7,
+  "queries": [
+    {
+      "round": 1,
+      "top_k": 8,
+      "equivalence_key": "6e69d177ff8e935eb14c4b2aa16ee03123739edd19242a28808a5f04214c0666",
+      "cached": false,
+      "query_sha256": "41b42c64a7da191aab5454ac9a88bff6ffb51a094ae4454ffa177910df7428ce",
+      "query": "CEO founded company mid-1990s raised Southern Africa father engineer",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"ceo\" OR \"founded\" OR \"company\" OR \"mid\" OR \"1990s\" OR \"raised\" OR \"southern\" OR \"africa\" OR \"father\" OR \"engineer\"",
+        "terms": [
+          "ceo",
+          "founded",
+          "company",
+          "mid",
+          "1990s",
+          "raised",
+          "southern",
+          "africa",
+          "father",
+          "engineer"
+        ]
+      }
+    },
+    {
+      "round": 1,
+      "top_k": 8,
+      "equivalence_key": "3680932a4ef530ed9612b8edf4dc5559f090276fbccf7591ce3d8eb35fcb0587",
+      "cached": false,
+      "query_sha256": "6d765216d5ab6695162be1b76e864f05c9bc95a153100aa34787d49cf191c556",
+      "query": "CEO first child SIDS early 2020s baby name internet buzzing",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"ceo\" OR \"first\" OR \"child\" OR \"sids\" OR \"early\" OR \"2020s\" OR \"baby\" OR \"name\" OR \"internet\" OR \"buzzing\"",
+        "terms": [
+          "ceo",
+          "first",
+          "child",
+          "sids",
+          "early",
+          "2020s",
+          "baby",
+          "name",
+          "internet",
+          "buzzing"
+        ]
+      }
+    },
+    {
+      "round": 1,
+      "top_k": 8,
+      "equivalence_key": "abbe09cfd9ca2ca2841abae8ca9ea563b0a34de142a44b24699649166dd8a5cb",
+      "cached": false,
+      "query_sha256": "8bb35a1220611abed076691e362329bf3dfc5f7eceb9990f842c1b21e410bc10",
+      "query": "younger sister co-founded film streaming service CEO Southern Africa",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"younger\" OR \"sister\" OR \"co\" OR \"founded\" OR \"film\" OR \"streaming\" OR \"service\" OR \"ceo\" OR \"southern\" OR \"africa\"",
+        "terms": [
+          "younger",
+          "sister",
+          "co",
+          "founded",
+          "film",
+          "streaming",
+          "service",
+          "ceo",
+          "southern",
+          "africa"
+        ]
+      }
+    },
+    {
+      "round": 2,
+      "top_k": 8,
+      "equivalence_key": "d7096e139d3f49507ce4f2f2824fbba89d77e42ef81051faf00a02cc4f3b8e2b",
+      "cached": false,
+      "query_sha256": "2e8b845f6073d645387f78b0465add615da5cc40eaea5cb59a944c2d0743626d",
+      "query": "woman claimed related to Elon Musk half-sister mother age gave birth",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"woman\" OR \"claimed\" OR \"related\" OR \"to\" OR \"elon\" OR \"musk\" OR \"half\" OR \"sister\" OR \"mother\" OR \"age\" OR \"gave\" OR \"birth\"",
+        "terms": [
+          "woman",
+          "claimed",
+          "related",
+          "to",
+          "elon",
+          "musk",
+          "half",
+          "sister",
+          "mother",
+          "age",
+          "gave",
+          "birth"
+        ]
+      }
+    },
+    {
+      "round": 2,
+      "top_k": 8,
+      "equivalence_key": "43ba6cc1fc25a976cbfb13f1fdaa217e6d48386b8228577944dcd88f3f19f657",
+      "cached": false,
+      "query_sha256": "fca37b5ae4263a965a467d735e1402af02a0f3be66459bb15bcb1f8d6631c0f5",
+      "query": "Elon Musk claimed relative woman mother young age birth article",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"elon\" OR \"musk\" OR \"claimed\" OR \"relative\" OR \"woman\" OR \"mother\" OR \"young\" OR \"age\" OR \"birth\" OR \"article\"",
+        "terms": [
+          "elon",
+          "musk",
+          "claimed",
+          "relative",
+          "woman",
+          "mother",
+          "young",
+          "age",
+          "birth",
+          "article"
+        ]
+      }
+    },
+    {
+      "round": 2,
+      "top_k": 8,
+      "equivalence_key": "a11696fdcf23489b5c03aa766cc3574a0185f68e62ba9d67107fb7c252055607",
+      "cached": false,
+      "query_sha256": "7efb519a269168130a26388d4dd45bd349c1afa58a26c3499429b710f81a68d2",
+      "query": "claimed to be Elon Musk relative sister mother gave birth age",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"claimed\" OR \"to\" OR \"be\" OR \"elon\" OR \"musk\" OR \"relative\" OR \"sister\" OR \"mother\" OR \"gave\" OR \"birth\" OR \"age\"",
+        "terms": [
+          "claimed",
+          "to",
+          "be",
+          "elon",
+          "musk",
+          "relative",
+          "sister",
+          "mother",
+          "gave",
+          "birth",
+          "age"
+        ]
+      }
+    }
+  ],
+  "equivalent_query_repeats": 0,
+  "views": [
+    {
+      "round": 1,
+      "compacted": false,
+      "visible_evidence": [],
+      "shelf": [],
+      "shelf_evicted": []
+    },
+    {
+      "round": 2,
+      "compacted": false,
+      "visible_evidence": [],
+      "shelf": [],
+      "shelf_evicted": []
+    },
+    {
+      "round": 3,
+      "compacted": false,
+      "visible_evidence": [],
+      "shelf": [],
+      "shelf_evicted": []
+    },
+    {
+      "round": 4,
+      "compacted": false,
+      "visible_evidence": [
+        "e1"
+      ],
+      "shelf": [],
+      "shelf_evicted": []
+    }
+  ],
+  "delivered_refs": [
+    "e1"
+  ],
+  "submitted_refs": [
+    "e1"
+  ],
+  "text_included": true,
+  "limitations": [
+    "Equivalence is compiler equality, not semantic identity or wasted-search proof",
+    "Raw-window visibility/selection is not entailment or complete evidence coverage",
+    "No live q26 replay or independent answer scoring is performed"
+  ]
+}

@@ -1,0 +1,1136 @@
+{
+  "protocol": "stride-search-3",
+  "head": "425cfc11d5759201a359473fa31d146114a428acc02961b5d17cc67387c7024c",
+  "outcome": "model_budget",
+  "formal_correct": null,
+  "model_attempts": 16,
+  "backend_attempts": 44,
+  "queries": [
+    {
+      "round": 1,
+      "top_k": 8,
+      "equivalence_key": "bf23b59795ceb988a6280355252e05673ebb57924f04091afb9f5db0155e93e8",
+      "cached": false,
+      "query_sha256": "96e54c068c088dc1275943d4c4952d1b05475d0051dd8653d22c9c121b8cf95d",
+      "query": "literary award created founded 2000s international book prize",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"literary\" OR \"award\" OR \"created\" OR \"founded\" OR \"2000s\" OR \"international\" OR \"book\" OR \"prize\"",
+        "terms": [
+          "literary",
+          "award",
+          "created",
+          "founded",
+          "2000s",
+          "international",
+          "book",
+          "prize"
+        ]
+      }
+    },
+    {
+      "round": 1,
+      "top_k": 8,
+      "equivalence_key": "d360097f2aa7d450847fc2553425376f1e7fbdb3b57b754808e8c12e057c2674",
+      "cached": false,
+      "query_sha256": "0197d1964eddfd304b8fa113b2b4d30897a058ba66a9b3ab05c2b6af60a2cce0",
+      "query": "book translated into twenty five languages award contender",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"book\" OR \"translated\" OR \"into\" OR \"twenty\" OR \"five\" OR \"languages\" OR \"award\" OR \"contender\"",
+        "terms": [
+          "book",
+          "translated",
+          "into",
+          "twenty",
+          "five",
+          "languages",
+          "award",
+          "contender"
+        ]
+      }
+    },
+    {
+      "round": 1,
+      "top_k": 8,
+      "equivalence_key": "1c0deedad452792cc1cf40279bad71127b718646dceaaa0c1017ba7cfd7e3736",
+      "cached": false,
+      "query_sha256": "34c5ed6f4bcd8f9de577e8b8213463cb2308b58ec20dd6a02215dc57919204d1",
+      "query": "author born city grew up prize winning book 2010s",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"author\" OR \"born\" OR \"city\" OR \"grew\" OR \"up\" OR \"prize\" OR \"winning\" OR \"book\" OR \"2010s\"",
+        "terms": [
+          "author",
+          "born",
+          "city",
+          "grew",
+          "up",
+          "prize",
+          "winning",
+          "book",
+          "2010s"
+        ]
+      }
+    },
+    {
+      "round": 2,
+      "top_k": 8,
+      "equivalence_key": "efff05aef4d57ac4f4b9e04cd98a85cff5fe5f1971612440c00f0b4abcc67b70",
+      "cached": false,
+      "query_sha256": "a7e93221d33fac5b3335250a2cc6a17413b31dd3832c0b1f7f4da785b11818f2",
+      "query": "Man Booker International Prize created 2005 winner 2010s",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"man\" OR \"booker\" OR \"international\" OR \"prize\" OR \"created\" OR \"2005\" OR \"winner\" OR \"2010s\"",
+        "terms": [
+          "man",
+          "booker",
+          "international",
+          "prize",
+          "created",
+          "2005",
+          "winner",
+          "2010s"
+        ]
+      }
+    },
+    {
+      "round": 2,
+      "top_k": 8,
+      "equivalence_key": "13f933956576b360033cb306951977b9ea5d53ee55aa632b9d1863d0b5dd6878",
+      "cached": false,
+      "query_sha256": "6b4c6ce7ed873469e0c51fbc33fd39b8bd82e535e11bf72e8ca3934c40ccfb3d",
+      "query": "book translated into 30 languages shortlisted Man Booker International Prize",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"book\" OR \"translated\" OR \"into\" OR \"30\" OR \"languages\" OR \"shortlisted\" OR \"man\" OR \"booker\" OR \"international\" OR \"prize\"",
+        "terms": [
+          "book",
+          "translated",
+          "into",
+          "30",
+          "languages",
+          "shortlisted",
+          "man",
+          "booker",
+          "international",
+          "prize"
+        ]
+      }
+    },
+    {
+      "round": 2,
+      "top_k": 8,
+      "equivalence_key": "bdb1db86ffc06e7cd65442020358cc6870d01783e06e0acf2d33bfcecac61a2b",
+      "cached": false,
+      "query_sha256": "2d0995189eada5a3ea284ed24847cf1f857781bf9d153732623ce79f8aae6318",
+      "query": "International Dublin Literary Award founded 1996 winner 2010s",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"international\" OR \"dublin\" OR \"literary\" OR \"award\" OR \"founded\" OR \"1996\" OR \"winner\" OR \"2010s\"",
+        "terms": [
+          "international",
+          "dublin",
+          "literary",
+          "award",
+          "founded",
+          "1996",
+          "winner",
+          "2010s"
+        ]
+      }
+    },
+    {
+      "round": 3,
+      "top_k": 8,
+      "equivalence_key": "7b30946219b1d0e74679c340f92abb2e12955a0d825ac7220441d685cca2e6fb",
+      "cached": false,
+      "query_sha256": "4c085b4c7f994aad34b4f8c003f9427fb2411243099d8150a154be5af5e774aa",
+      "query": "Chigozie Obioma born grew up city biography",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"chigozie\" OR \"obioma\" OR \"born\" OR \"grew\" OR \"up\" OR \"city\" OR \"biography\"",
+        "terms": [
+          "chigozie",
+          "obioma",
+          "born",
+          "grew",
+          "up",
+          "city",
+          "biography"
+        ]
+      }
+    },
+    {
+      "round": 3,
+      "top_k": 8,
+      "equivalence_key": "53335ab537b898d9f82357ad85420ad3a49ada9cf0ef22ddf8645b0def0d7597",
+      "cached": false,
+      "query_sha256": "cc49a356dc1dbd532cca2b9a4f6801bc5f2bba75a61050e441f0b8988dfbaf28",
+      "query": "An Orchestra of Minorities 2019 Man Booker International Prize shortlist",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"an\" OR \"orchestra\" OR \"of\" OR \"minorities\" OR \"2019\" OR \"man\" OR \"booker\" OR \"international\" OR \"prize\" OR \"shortlist\"",
+        "terms": [
+          "an",
+          "orchestra",
+          "of",
+          "minorities",
+          "2019",
+          "man",
+          "booker",
+          "international",
+          "prize",
+          "shortlist"
+        ]
+      }
+    },
+    {
+      "round": 3,
+      "top_k": 8,
+      "equivalence_key": "433b16aca45ee59d28af1859a33e22d82ebc73fad8d6ee36aed9c7b2a7138d29",
+      "cached": false,
+      "query_sha256": "b540f10a67294258b77d6fe99979259dc3f470ba4c6d2dfb2855eef4d0c2e6f5",
+      "query": "The Fishermen 2015 Booker Prize shortlist translated languages",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"the\" OR \"fishermen\" OR \"2015\" OR \"booker\" OR \"prize\" OR \"shortlist\" OR \"translated\" OR \"languages\"",
+        "terms": [
+          "the",
+          "fishermen",
+          "2015",
+          "booker",
+          "prize",
+          "shortlist",
+          "translated",
+          "languages"
+        ]
+      }
+    },
+    {
+      "round": 4,
+      "top_k": 8,
+      "equivalence_key": "97dd9d1c6c74f2abd7541d635a2a31edf72b1aaa93bc11f18c22dd57748ce60c",
+      "cached": false,
+      "query_sha256": "740438651d7083de5ff36b55e34095190e90d57ca2caa790ba7840164f919ada",
+      "query": "Man Booker International Prize winners list 2010 2011 2012 2013 2014 2015",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"man\" OR \"booker\" OR \"international\" OR \"prize\" OR \"winners\" OR \"list\" OR \"2010\" OR \"2011\" OR \"2012\" OR \"2013\" OR \"2014\" OR \"2015\"",
+        "terms": [
+          "man",
+          "booker",
+          "international",
+          "prize",
+          "winners",
+          "list",
+          "2010",
+          "2011",
+          "2012",
+          "2013",
+          "2014",
+          "2015"
+        ]
+      }
+    },
+    {
+      "round": 4,
+      "top_k": 8,
+      "equivalence_key": "fd30963606cd6261bd36e9c38eebd69a43f10446059a02672f091c473d599aab",
+      "cached": false,
+      "query_sha256": "dc8575d52b610c245a5283defc9f644e5a523e3fcc2891d250b1283436b98821",
+      "query": "International Booker Prize 2016 2017 2018 2019 winner",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"international\" OR \"booker\" OR \"prize\" OR \"2016\" OR \"2017\" OR \"2018\" OR \"2019\" OR \"winner\"",
+        "terms": [
+          "international",
+          "booker",
+          "prize",
+          "2016",
+          "2017",
+          "2018",
+          "2019",
+          "winner"
+        ]
+      }
+    },
+    {
+      "round": 4,
+      "top_k": 8,
+      "equivalence_key": "724e326f9603d6b380780da7794d76376bb03640febf1b8c79f9f77b667bb97c",
+      "cached": false,
+      "query_sha256": "012ebe13c1498f65f0d8ca971ebeb35577576f28cb3ebfc9a19958a0b49cba7f",
+      "query": "book translated into 25 languages shortlisted International Booker Prize contender",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"book\" OR \"translated\" OR \"into\" OR \"25\" OR \"languages\" OR \"shortlisted\" OR \"international\" OR \"booker\" OR \"prize\" OR \"contender\"",
+        "terms": [
+          "book",
+          "translated",
+          "into",
+          "25",
+          "languages",
+          "shortlisted",
+          "international",
+          "booker",
+          "prize",
+          "contender"
+        ]
+      }
+    },
+    {
+      "round": 6,
+      "top_k": 8,
+      "equivalence_key": "57d6565db19266ba3768bef0d365529965d4f626a7861060c03a007af034ad7b",
+      "cached": false,
+      "query_sha256": "358262b48e60f23af893f1e8e4cccf40eb2d367700c5fdf0803873bac6f6584b",
+      "query": "International Booker Prize winners 2016 2017 2018 2019 2020 list author",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"international\" OR \"booker\" OR \"prize\" OR \"winners\" OR \"2016\" OR \"2017\" OR \"2018\" OR \"2019\" OR \"2020\" OR \"list\" OR \"author\"",
+        "terms": [
+          "international",
+          "booker",
+          "prize",
+          "winners",
+          "2016",
+          "2017",
+          "2018",
+          "2019",
+          "2020",
+          "list",
+          "author"
+        ]
+      }
+    },
+    {
+      "round": 6,
+      "top_k": 8,
+      "equivalence_key": "ae066ef7703f764c866d28dcfd803182b5ba73bf043b59dc5bc1eaf007420b65",
+      "cached": false,
+      "query_sha256": "cb76435560ed284108b47a3898da245ee17a64640a673ba5fab977d32a421fab",
+      "query": "Han Kang The Vegetarian translated 25 languages International Booker",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"han\" OR \"kang\" OR \"the\" OR \"vegetarian\" OR \"translated\" OR \"25\" OR \"languages\" OR \"international\" OR \"booker\"",
+        "terms": [
+          "han",
+          "kang",
+          "the",
+          "vegetarian",
+          "translated",
+          "25",
+          "languages",
+          "international",
+          "booker"
+        ]
+      }
+    },
+    {
+      "round": 6,
+      "top_k": 8,
+      "equivalence_key": "ea216f8ea77b7808125ca3fa12b68abe508ae7cd88bb1a26745145ed706d44eb",
+      "cached": false,
+      "query_sha256": "578f6235609c3b99e86f2998eb14f60a303e37ddfbcbd3118465a95518bac7b3",
+      "query": "Olga Tokarczuk Flights translated languages International Booker Prize 2018",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"olga\" OR \"tokarczuk\" OR \"flights\" OR \"translated\" OR \"languages\" OR \"international\" OR \"booker\" OR \"prize\" OR \"2018\"",
+        "terms": [
+          "olga",
+          "tokarczuk",
+          "flights",
+          "translated",
+          "languages",
+          "international",
+          "booker",
+          "prize",
+          "2018"
+        ]
+      }
+    },
+    {
+      "round": 7,
+      "top_k": 8,
+      "equivalence_key": "3d198d337bf3b56b261661ae59578afc15f9f79c482a7f272ee4725a8d216fcf",
+      "cached": false,
+      "query_sha256": "f08866ac7a37c68ad8bdc340e60b01da3271bb3a4ade16ffd91214c091037564",
+      "query": "International Booker Prize Wikipedia winners list 2016 2017 2018 2019 2020",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"international\" OR \"booker\" OR \"prize\" OR \"wikipedia\" OR \"winners\" OR \"list\" OR \"2016\" OR \"2017\" OR \"2018\" OR \"2019\" OR \"2020\"",
+        "terms": [
+          "international",
+          "booker",
+          "prize",
+          "wikipedia",
+          "winners",
+          "list",
+          "2016",
+          "2017",
+          "2018",
+          "2019",
+          "2020"
+        ]
+      }
+    },
+    {
+      "round": 7,
+      "top_k": 8,
+      "equivalence_key": "8797c67729d16234504a0e3858b4169c1f7a91db1b610124cddbc8b8fa09d27f",
+      "cached": false,
+      "query_sha256": "a892bc465825bb9ff576fd83e6be053a9d14697318a91e89ac008e53411d6972",
+      "query": "Man Booker International Prize 2016 2017 2018 2019 2020 winner shortlist",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"man\" OR \"booker\" OR \"international\" OR \"prize\" OR \"2016\" OR \"2017\" OR \"2018\" OR \"2019\" OR \"2020\" OR \"winner\" OR \"shortlist\"",
+        "terms": [
+          "man",
+          "booker",
+          "international",
+          "prize",
+          "2016",
+          "2017",
+          "2018",
+          "2019",
+          "2020",
+          "winner",
+          "shortlist"
+        ]
+      }
+    },
+    {
+      "round": 7,
+      "top_k": 8,
+      "equivalence_key": "db3e02adfcd6e31a382d3df1b4817eee92db94949219f31c76fb38868662c329",
+      "cached": false,
+      "query_sha256": "e2c224c3cfef201c84187dd6b93f7561ee7e23c0ce5c590122e451558a017818",
+      "query": "International Booker Prize created 2005 history winners",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"international\" OR \"booker\" OR \"prize\" OR \"created\" OR \"2005\" OR \"history\" OR \"winners\"",
+        "terms": [
+          "international",
+          "booker",
+          "prize",
+          "created",
+          "2005",
+          "history",
+          "winners"
+        ]
+      }
+    },
+    {
+      "round": 8,
+      "top_k": 8,
+      "equivalence_key": "328757c37a444f3cb217f5463b5852e5b0794e6203ccd117fa5c63c86ed8df5e",
+      "cached": false,
+      "query_sha256": "ee7c24de161aa98c1fa5146b997b43aa4943b75e44fb5b3b75bcb255353b85ac",
+      "query": "International Booker Prize Wikipedia winners list",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"international\" OR \"booker\" OR \"prize\" OR \"wikipedia\" OR \"winners\" OR \"list\"",
+        "terms": [
+          "international",
+          "booker",
+          "prize",
+          "wikipedia",
+          "winners",
+          "list"
+        ]
+      }
+    },
+    {
+      "round": 8,
+      "top_k": 8,
+      "equivalence_key": "6d474bdeefde7ee7a7211801da86b66d3873801d8bb3a7538cd5837f86de0173",
+      "cached": false,
+      "query_sha256": "b98614e520cc8cae887075bd49fb1e3bbef1f6f614d334ce9ff79adc8206658c",
+      "query": "Man Booker International Prize 2016 2017 2018 2019 winner",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"man\" OR \"booker\" OR \"international\" OR \"prize\" OR \"2016\" OR \"2017\" OR \"2018\" OR \"2019\" OR \"winner\"",
+        "terms": [
+          "man",
+          "booker",
+          "international",
+          "prize",
+          "2016",
+          "2017",
+          "2018",
+          "2019",
+          "winner"
+        ]
+      }
+    },
+    {
+      "round": 8,
+      "top_k": 8,
+      "equivalence_key": "ee4ed82b932f551b69b7d019c87757b8d13d3f9089538f7a693ef257aeaa41f8",
+      "cached": false,
+      "query_sha256": "f57c4d1b40e5d9a3dd5ed7b92490e5fd98f860f9af11ad997767cf0c2604ea0e",
+      "query": "International Booker Prize 2016 2017 2018 2019 2020 winner shortlist",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"international\" OR \"booker\" OR \"prize\" OR \"2016\" OR \"2017\" OR \"2018\" OR \"2019\" OR \"2020\" OR \"winner\" OR \"shortlist\"",
+        "terms": [
+          "international",
+          "booker",
+          "prize",
+          "2016",
+          "2017",
+          "2018",
+          "2019",
+          "2020",
+          "winner",
+          "shortlist"
+        ]
+      }
+    },
+    {
+      "round": 9,
+      "top_k": 8,
+      "equivalence_key": "d7f9b782d4c42a69efa1171111b8f7703eb2c4ab0131d0122d4b07891cdd2a3a",
+      "cached": false,
+      "query_sha256": "d9cb70de936edd70820ae604f5bffa36a44951f74e4f2e66336e41ebb2ceaa71",
+      "query": "International Booker Prize established 2005 created history",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"international\" OR \"booker\" OR \"prize\" OR \"established\" OR \"2005\" OR \"created\" OR \"history\"",
+        "terms": [
+          "international",
+          "booker",
+          "prize",
+          "established",
+          "2005",
+          "created",
+          "history"
+        ]
+      }
+    },
+    {
+      "round": 9,
+      "top_k": 8,
+      "equivalence_key": "083a3bd985389112d6595613873e73419fd736b13aa983f42c98c2d972f7e73a",
+      "cached": false,
+      "query_sha256": "fc66e528a8a715620b66d53648a8e0b2b596518afade25dfd2f5ca192cf8c714",
+      "query": "International Booker Prize 2018 winner Flights Tokarczuk published 2017",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"international\" OR \"booker\" OR \"prize\" OR \"2018\" OR \"winner\" OR \"flights\" OR \"tokarczuk\" OR \"published\" OR \"2017\"",
+        "terms": [
+          "international",
+          "booker",
+          "prize",
+          "2018",
+          "winner",
+          "flights",
+          "tokarczuk",
+          "published",
+          "2017"
+        ]
+      }
+    },
+    {
+      "round": 9,
+      "top_k": 8,
+      "equivalence_key": "0c493c9bcf48346561aa05ab64e02f7b444e17e7b2166768647c6ac4069164ec",
+      "cached": false,
+      "query_sha256": "4ef24e29c917880607075b04b20ef3415e3dc6e719a21feb78c3b0e9a51a58a6",
+      "query": "International Booker Prize shortlist contender translated 25 languages 2010s",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"international\" OR \"booker\" OR \"prize\" OR \"shortlist\" OR \"contender\" OR \"translated\" OR \"25\" OR \"languages\" OR \"2010s\"",
+        "terms": [
+          "international",
+          "booker",
+          "prize",
+          "shortlist",
+          "contender",
+          "translated",
+          "25",
+          "languages",
+          "2010s"
+        ]
+      }
+    },
+    {
+      "round": 10,
+      "top_k": 8,
+      "equivalence_key": "b2c94f2aa547b9937596ccef61598847f971d04094984807f3b8d9c7391b3708",
+      "cached": false,
+      "query_sha256": "b0cd6b10f4b7aaf153b16ccf49156e9ce45075be265368108c4ebaac99f432c3",
+      "query": "International Booker Prize Wikipedia winners 2016 2017 2018 2019 2020 list",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"international\" OR \"booker\" OR \"prize\" OR \"wikipedia\" OR \"winners\" OR \"2016\" OR \"2017\" OR \"2018\" OR \"2019\" OR \"2020\" OR \"list\"",
+        "terms": [
+          "international",
+          "booker",
+          "prize",
+          "wikipedia",
+          "winners",
+          "2016",
+          "2017",
+          "2018",
+          "2019",
+          "2020",
+          "list"
+        ]
+      }
+    },
+    {
+      "round": 10,
+      "top_k": 8,
+      "equivalence_key": "9b2caacd451ad27c821387cf98fddaf8827ab71a9f1bac5e7ae45d42e0ba2ba9",
+      "cached": false,
+      "query_sha256": "c7ce36bce0b552f875721da6972522f7bfdff2f1d5b28967ea02a44dd6c8f1a6",
+      "query": "International Booker Prize shortlist 2016 2017 2018 2019 2020",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"international\" OR \"booker\" OR \"prize\" OR \"shortlist\" OR \"2016\" OR \"2017\" OR \"2018\" OR \"2019\" OR \"2020\"",
+        "terms": [
+          "international",
+          "booker",
+          "prize",
+          "shortlist",
+          "2016",
+          "2017",
+          "2018",
+          "2019",
+          "2020"
+        ]
+      }
+    },
+    {
+      "round": 10,
+      "top_k": 8,
+      "equivalence_key": "7a5a890503d1ad6b81180873aa9c5adffebaa525101af2c1359dcf9fbf4b73b9",
+      "cached": false,
+      "query_sha256": "6c0aed89ef4c0594445807a90362d44749b1c5c2ea692baca7d06cd16c0ea046",
+      "query": "Olga Tokarczuk Flights original Polish publication year 2007",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"olga\" OR \"tokarczuk\" OR \"flights\" OR \"original\" OR \"polish\" OR \"publication\" OR \"year\" OR \"2007\"",
+        "terms": [
+          "olga",
+          "tokarczuk",
+          "flights",
+          "original",
+          "polish",
+          "publication",
+          "year",
+          "2007"
+        ]
+      }
+    },
+    {
+      "round": 11,
+      "top_k": 8,
+      "equivalence_key": "a48be1ea82ccd4162885c2c75c2e4b570d550098531fb76ee15d1c4d56fe3504",
+      "cached": false,
+      "query_sha256": "191327c77e770099301eaf952bd9732107c3e63725e045bea10ab10b80dc8c37",
+      "query": "International Booker Prize Wikipedia winners shortlist 2016 2017 2018 2019 2020",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"international\" OR \"booker\" OR \"prize\" OR \"wikipedia\" OR \"winners\" OR \"shortlist\" OR \"2016\" OR \"2017\" OR \"2018\" OR \"2019\" OR \"2020\"",
+        "terms": [
+          "international",
+          "booker",
+          "prize",
+          "wikipedia",
+          "winners",
+          "shortlist",
+          "2016",
+          "2017",
+          "2018",
+          "2019",
+          "2020"
+        ]
+      }
+    },
+    {
+      "round": 11,
+      "top_k": 8,
+      "equivalence_key": "54c826e0391c46d0e7a8ea8c5332d097b45c834a9be1ba57b17261ab40078f4b",
+      "cached": false,
+      "query_sha256": "ebfa3dd33d873166394de2f4cce7539c792a53238f2b6e9c032ea596c02d95d6",
+      "query": "Man Booker International Prize 2016 2017 2018 2019 2020 shortlist translated",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"man\" OR \"booker\" OR \"international\" OR \"prize\" OR \"2016\" OR \"2017\" OR \"2018\" OR \"2019\" OR \"2020\" OR \"shortlist\" OR \"translated\"",
+        "terms": [
+          "man",
+          "booker",
+          "international",
+          "prize",
+          "2016",
+          "2017",
+          "2018",
+          "2019",
+          "2020",
+          "shortlist",
+          "translated"
+        ]
+      }
+    },
+    {
+      "round": 11,
+      "top_k": 8,
+      "equivalence_key": "4e9084aa7b86493e1c66ae5c2347ac19744ebaab3a7f5b8e6e81bd0b3a208a66",
+      "cached": false,
+      "query_sha256": "958ff808f2d6ad770df23d63267a141d658443b7ee05d4c2c06fee33722f1b5d",
+      "query": "International Booker Prize Wikipedia page history winners list",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"international\" OR \"booker\" OR \"prize\" OR \"wikipedia\" OR \"page\" OR \"history\" OR \"winners\" OR \"list\"",
+        "terms": [
+          "international",
+          "booker",
+          "prize",
+          "wikipedia",
+          "page",
+          "history",
+          "winners",
+          "list"
+        ]
+      }
+    },
+    {
+      "round": 12,
+      "top_k": 5,
+      "equivalence_key": "76a6d47e85b71b1e1cd86c3f46e519eb7c803b96e587a82a48a344e37be5f64c",
+      "cached": false,
+      "query_sha256": "e5ec8650a62c496669401b9676f77a4995746ac6357020727f6382b071b0ba0b",
+      "query": "International Booker Prize Wikipedia",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"international\" OR \"booker\" OR \"prize\" OR \"wikipedia\"",
+        "terms": [
+          "international",
+          "booker",
+          "prize",
+          "wikipedia"
+        ]
+      }
+    },
+    {
+      "round": 12,
+      "top_k": 5,
+      "equivalence_key": "f6468578c1f9364ce2c937f932398df08fbeb7697fcc3dd8d691dc8710714d3a",
+      "cached": false,
+      "query_sha256": "54a785a3223da5dbcb4bf4f4a99ef595781e4561d5d22ba9cbfb2ea29febba38",
+      "query": "Man Booker International Prize Wikipedia",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"man\" OR \"booker\" OR \"international\" OR \"prize\" OR \"wikipedia\"",
+        "terms": [
+          "man",
+          "booker",
+          "international",
+          "prize",
+          "wikipedia"
+        ]
+      }
+    },
+    {
+      "round": 13,
+      "top_k": 10,
+      "equivalence_key": "2cd6ffc8e254f0039364072762925e43abb68f47737104ac806183af071d4f69",
+      "cached": false,
+      "query_sha256": "e5ec8650a62c496669401b9676f77a4995746ac6357020727f6382b071b0ba0b",
+      "query": "International Booker Prize Wikipedia",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"international\" OR \"booker\" OR \"prize\" OR \"wikipedia\"",
+        "terms": [
+          "international",
+          "booker",
+          "prize",
+          "wikipedia"
+        ]
+      }
+    },
+    {
+      "round": 13,
+      "top_k": 10,
+      "equivalence_key": "1faef45e9ebf25bd2eb60deb38a6b8f8cc0a5e4f0b56a4312c18eb5b81d3d096",
+      "cached": false,
+      "query_sha256": "222425104236b79bb30b9696805d79c3091b7304fad55bd8362f778f954d6dcc",
+      "query": "International Booker Prize winners shortlist 2016 2017 2018 2019 2020",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"international\" OR \"booker\" OR \"prize\" OR \"winners\" OR \"shortlist\" OR \"2016\" OR \"2017\" OR \"2018\" OR \"2019\" OR \"2020\"",
+        "terms": [
+          "international",
+          "booker",
+          "prize",
+          "winners",
+          "shortlist",
+          "2016",
+          "2017",
+          "2018",
+          "2019",
+          "2020"
+        ]
+      }
+    },
+    {
+      "round": 13,
+      "top_k": 10,
+      "equivalence_key": "ecda89f6a74eda0e8194d41a027efe4d3d74e19ed9b6bb039af78ed82bd4790d",
+      "cached": false,
+      "query_sha256": "54a785a3223da5dbcb4bf4f4a99ef595781e4561d5d22ba9cbfb2ea29febba38",
+      "query": "Man Booker International Prize Wikipedia",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"man\" OR \"booker\" OR \"international\" OR \"prize\" OR \"wikipedia\"",
+        "terms": [
+          "man",
+          "booker",
+          "international",
+          "prize",
+          "wikipedia"
+        ]
+      }
+    },
+    {
+      "round": 14,
+      "top_k": 8,
+      "equivalence_key": "1933f828fd926dcf50554dbda63925e576faf11fa07be07647daf8e2b0fb43a6",
+      "cached": false,
+      "query_sha256": "5d349d4f9dbc67beb54f104e1157c77ed5a58fc34ff34fbe631c9d18bc48abf3",
+      "query": "International Booker Prize 2016 winner The Vegetarian Han Kang published 2015",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"international\" OR \"booker\" OR \"prize\" OR \"2016\" OR \"winner\" OR \"the\" OR \"vegetarian\" OR \"han\" OR \"kang\" OR \"published\" OR \"2015\"",
+        "terms": [
+          "international",
+          "booker",
+          "prize",
+          "2016",
+          "winner",
+          "the",
+          "vegetarian",
+          "han",
+          "kang",
+          "published",
+          "2015"
+        ]
+      }
+    },
+    {
+      "round": 14,
+      "top_k": 8,
+      "equivalence_key": "60d9fbc01cbd41389bacb34afe60ba63f199ab7fdc55fbe3fa8554d9c9a3b7e0",
+      "cached": false,
+      "query_sha256": "75eaa645ca4e7b4c5489c758e46d9e3d8bc6064803fe7cdd089952ce8e7b8547",
+      "query": "International Booker Prize 2019 winner Celestial Bodies published 2018",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"international\" OR \"booker\" OR \"prize\" OR \"2019\" OR \"winner\" OR \"celestial\" OR \"bodies\" OR \"published\" OR \"2018\"",
+        "terms": [
+          "international",
+          "booker",
+          "prize",
+          "2019",
+          "winner",
+          "celestial",
+          "bodies",
+          "published",
+          "2018"
+        ]
+      }
+    },
+    {
+      "round": 14,
+      "top_k": 8,
+      "equivalence_key": "d92042ced44a3940ec21b171b57315ea01be265a7d34033c477452a14c980ff4",
+      "cached": false,
+      "query_sha256": "fb6f87be80f2a1a98890bd25110749f89fe42309da15bfc9187a78ffe1c39d06",
+      "query": "Chigozie Obioma An Orchestra of Minorities International Booker Prize shortlist 2019",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"chigozie\" OR \"obioma\" OR \"an\" OR \"orchestra\" OR \"of\" OR \"minorities\" OR \"international\" OR \"booker\" OR \"prize\" OR \"shortlist\" OR \"2019\"",
+        "terms": [
+          "chigozie",
+          "obioma",
+          "an",
+          "orchestra",
+          "of",
+          "minorities",
+          "international",
+          "booker",
+          "prize",
+          "shortlist",
+          "2019"
+        ]
+      }
+    },
+    {
+      "round": 15,
+      "top_k": 8,
+      "equivalence_key": "26f2b1e27bb951396407d6f43475d987a49b09229ccd7f83f6f5dcc67f254ec7",
+      "cached": false,
+      "query_sha256": "c8130b0bafc20e5aea9962310f50d760e474e4e3be3f10717af760dc547c1fd1",
+      "query": "Jokha Alharthi born city Oman",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"jokha\" OR \"alharthi\" OR \"born\" OR \"city\" OR \"oman\"",
+        "terms": [
+          "jokha",
+          "alharthi",
+          "born",
+          "city",
+          "oman"
+        ]
+      }
+    },
+    {
+      "round": 15,
+      "top_k": 8,
+      "equivalence_key": "3d5edfd0223f7d51e8389a0e0fb504a2e9eb27457a52c65694e04c9371bdc05c",
+      "cached": false,
+      "query_sha256": "789a2b775afa062ffcefc0217864bfe35d28465e01e4cd2b3221ad87ab6da36e",
+      "query": "Celestial Bodies Jokha Alharthi published 2018 Man Booker International 2019",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"celestial\" OR \"bodies\" OR \"jokha\" OR \"alharthi\" OR \"published\" OR \"2018\" OR \"man\" OR \"booker\" OR \"international\" OR \"2019\"",
+        "terms": [
+          "celestial",
+          "bodies",
+          "jokha",
+          "alharthi",
+          "published",
+          "2018",
+          "man",
+          "booker",
+          "international",
+          "2019"
+        ]
+      }
+    },
+    {
+      "round": 15,
+      "top_k": 8,
+      "equivalence_key": "90c11dc9217e111465313b2fa7326b047a497511ce24613c5bf810f1420e11fb",
+      "cached": false,
+      "query_sha256": "23f9d719f1c803e51f42972ea319894153db21a10c4954bde92e79ee6e64cde0",
+      "query": "Chigozie Obioma grew up Akure Nigeria",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"chigozie\" OR \"obioma\" OR \"grew\" OR \"up\" OR \"akure\" OR \"nigeria\"",
+        "terms": [
+          "chigozie",
+          "obioma",
+          "grew",
+          "up",
+          "akure",
+          "nigeria"
+        ]
+      }
+    }
+  ],
+  "equivalent_query_repeats": 0,
+  "views": [
+    {
+      "round": 1,
+      "compacted": false,
+      "visible_evidence": [],
+      "shelf": [],
+      "shelf_evicted": []
+    },
+    {
+      "round": 2,
+      "compacted": false,
+      "visible_evidence": [],
+      "shelf": [],
+      "shelf_evicted": []
+    },
+    {
+      "round": 3,
+      "compacted": false,
+      "visible_evidence": [],
+      "shelf": [],
+      "shelf_evicted": []
+    },
+    {
+      "round": 4,
+      "compacted": false,
+      "visible_evidence": [
+        "e1"
+      ],
+      "shelf": [],
+      "shelf_evicted": []
+    },
+    {
+      "round": 5,
+      "compacted": true,
+      "visible_evidence": [
+        "e1"
+      ],
+      "shelf": [],
+      "shelf_evicted": []
+    },
+    {
+      "round": 6,
+      "compacted": false,
+      "visible_evidence": [
+        "e1",
+        "e2"
+      ],
+      "shelf": [],
+      "shelf_evicted": []
+    },
+    {
+      "round": 7,
+      "compacted": true,
+      "visible_evidence": [
+        "e1",
+        "e2"
+      ],
+      "shelf": [],
+      "shelf_evicted": []
+    },
+    {
+      "round": 8,
+      "compacted": true,
+      "visible_evidence": [
+        "e1",
+        "e2"
+      ],
+      "shelf": [
+        "e1"
+      ],
+      "shelf_evicted": []
+    },
+    {
+      "round": 9,
+      "compacted": true,
+      "visible_evidence": [
+        "e1",
+        "e2"
+      ],
+      "shelf": [
+        "e1"
+      ],
+      "shelf_evicted": []
+    },
+    {
+      "round": 10,
+      "compacted": true,
+      "visible_evidence": [
+        "e1",
+        "e2",
+        "e3"
+      ],
+      "shelf": [
+        "e1",
+        "e2"
+      ],
+      "shelf_evicted": []
+    },
+    {
+      "round": 11,
+      "compacted": true,
+      "visible_evidence": [
+        "e1",
+        "e2",
+        "e3"
+      ],
+      "shelf": [
+        "e1",
+        "e2"
+      ],
+      "shelf_evicted": []
+    },
+    {
+      "round": 12,
+      "compacted": true,
+      "visible_evidence": [
+        "e1",
+        "e2",
+        "e3"
+      ],
+      "shelf": [
+        "e1",
+        "e2"
+      ],
+      "shelf_evicted": []
+    },
+    {
+      "round": 13,
+      "compacted": true,
+      "visible_evidence": [
+        "e1",
+        "e2",
+        "e3"
+      ],
+      "shelf": [
+        "e1",
+        "e2",
+        "e3"
+      ],
+      "shelf_evicted": []
+    },
+    {
+      "round": 14,
+      "compacted": true,
+      "visible_evidence": [
+        "e1",
+        "e2",
+        "e3"
+      ],
+      "shelf": [
+        "e1",
+        "e2",
+        "e3"
+      ],
+      "shelf_evicted": []
+    },
+    {
+      "round": 15,
+      "compacted": true,
+      "visible_evidence": [
+        "e1",
+        "e2",
+        "e3"
+      ],
+      "shelf": [
+        "e1",
+        "e2",
+        "e3"
+      ],
+      "shelf_evicted": []
+    },
+    {
+      "round": 16,
+      "compacted": false,
+      "visible_evidence": [
+        "e1",
+        "e2",
+        "e3"
+      ],
+      "shelf": [
+        "e1",
+        "e2",
+        "e3"
+      ],
+      "shelf_evicted": []
+    }
+  ],
+  "delivered_refs": [
+    "e1",
+    "e2",
+    "e3"
+  ],
+  "submitted_refs": [],
+  "text_included": true,
+  "limitations": [
+    "Equivalence is compiler equality, not semantic identity or wasted-search proof",
+    "Raw-window visibility/selection is not entailment or complete evidence coverage",
+    "No live q26 replay or independent answer scoring is performed"
+  ]
+}

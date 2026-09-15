@@ -1,0 +1,358 @@
+{
+  "utc": "2026-09-15T12:35:00.337458+00:00",
+  "rows": [
+    {
+      "slot": "q775-baseline-r1",
+      "qid": 775,
+      "protocol": "baseline",
+      "status": "submitted",
+      "terminal": {
+        "answer": "Ottawa",
+        "answer_representation": {
+          "input_type": "string",
+          "operation": "identity",
+          "rule": "string-integer-v1"
+        },
+        "basis": [
+          {
+            "document": "d75",
+            "document_chars": 32766,
+            "end": 3000,
+            "kind": "raw_evidence",
+            "ref": "e3",
+            "sha256": "6de017c9de1032465c992e2388cd9a4bcb364931ce76d51e922443095db8fb49",
+            "snapshot": "9ff9159f5e3567dd434dd4bad65773ab5050529f4c8332b6239b8a5519b2c3dc",
+            "start": 0
+          },
+          {
+            "document": "d81",
+            "document_chars": 68834,
+            "end": 64500,
+            "kind": "raw_evidence",
+            "ref": "e5",
+            "sha256": "25eabf8af27e091faa2be1da708c30501f605a213054b110ac6479285d54d186",
+            "snapshot": "cbd16701a46c11b80ae5752419da39ca5f2badb338844fb27a60b5969f630b65",
+            "start": 63000
+          }
+        ],
+        "elapsed_seconds": 120.33179080000264,
+        "outcome": "submitted",
+        "refs": [
+          "e3",
+          "e5"
+        ],
+        "semantic_status": "not_automatically_verified"
+      },
+      "attempts": 16,
+      "elapsed_seconds": 120.55939130001934,
+      "head": "fb91f204283ec28dc33f2045caa2dead624024dddf69be4ff8a7845237ded896",
+      "seal_sha256": "ec96f6deb173b6730a4f803a7003ea9fced88057e590af0a7735479676c84ae7",
+      "budget_after": {
+        "cap": 1643,
+        "used": 883,
+        "remaining": 760,
+        "this_run": 16,
+        "epoch_allowance": 1000,
+        "epoch_used": 240,
+        "epoch_remaining": 760
+      }
+    },
+    {
+      "slot": "q775-relation-review-once-v1-r1",
+      "qid": 775,
+      "protocol": "relation-review-once-v1",
+      "status": "model_budget",
+      "terminal": {
+        "answer": "",
+        "elapsed_seconds": 137.40278999999282,
+        "outcome": "model_budget"
+      },
+      "attempts": 16,
+      "elapsed_seconds": 137.54311989998678,
+      "head": "425cfc11d5759201a359473fa31d146114a428acc02961b5d17cc67387c7024c",
+      "seal_sha256": "0496e9cff2eb3731fe43671fa1fe3606654132eeb126eca39923fef6f8b7e27b",
+      "budget_after": {
+        "cap": 1643,
+        "used": 899,
+        "remaining": 744,
+        "this_run": 32,
+        "epoch_allowance": 1000,
+        "epoch_used": 256,
+        "epoch_remaining": 744
+      }
+    },
+    {
+      "slot": "q774-relation-review-once-v1-r1",
+      "qid": 774,
+      "protocol": "relation-review-once-v1",
+      "status": "submitted",
+      "terminal": {
+        "answer": "Richard Harmon",
+        "answer_representation": {
+          "input_type": "string",
+          "operation": "identity",
+          "rule": "string-integer-v1"
+        },
+        "basis": [
+          {
+            "document": "d1",
+            "document_chars": 9101,
+            "end": 6000,
+            "kind": "raw_evidence",
+            "ref": "e2",
+            "sha256": "296ede205a2fe113473e85be08b84f0d6833191551136843c6bff169eec542b7",
+            "snapshot": "a531c0a6be82cbe578781b28cb207ff02e87008856d5212ec2eab3fae2afe076",
+            "start": 3000
+          }
+        ],
+        "elapsed_seconds": 160.8288109000132,
+        "outcome": "submitted",
+        "refs": [
+          "e2"
+        ],
+        "semantic_status": "not_automatically_verified"
+      },
+      "attempts": 12,
+      "elapsed_seconds": 161.02310150000267,
+      "head": "dd007ef773ec0210995f06ed5a8c2908553873fdf6ecd46d2556967d73959cde",
+      "seal_sha256": "98e24f5c9e3418148b13ebad199728d11993cd32a52cfbbb4b1d05f591d0aa9f",
+      "budget_after": {
+        "cap": 1643,
+        "used": 911,
+        "remaining": 732,
+        "this_run": 44,
+        "epoch_allowance": 1000,
+        "epoch_used": 268,
+        "epoch_remaining": 732
+      }
+    },
+    {
+      "slot": "q774-baseline-r1",
+      "qid": 774,
+      "protocol": "baseline",
+      "status": "model_budget",
+      "terminal": {
+        "answer": "",
+        "elapsed_seconds": 241.02900120001868,
+        "outcome": "model_budget"
+      },
+      "attempts": 16,
+      "elapsed_seconds": 241.1797237000137,
+      "head": "739da1f73e0ddcd869fc79f1396a6fc643248abcbc67178f1ee88b7c69c89c37",
+      "seal_sha256": "c1330e4a89b36f6ddd9d21d8df0c18a40ea0f61a07ca177aea7095c0b284acff",
+      "budget_after": {
+        "cap": 1643,
+        "used": 927,
+        "remaining": 716,
+        "this_run": 60,
+        "epoch_allowance": 1000,
+        "epoch_used": 284,
+        "epoch_remaining": 716
+      }
+    },
+    {
+      "slot": "q771-baseline-r1",
+      "qid": 771,
+      "protocol": "baseline",
+      "status": "submitted",
+      "terminal": {
+        "answer": "Vakkorama",
+        "answer_representation": {
+          "input_type": "string",
+          "operation": "identity",
+          "rule": "string-integer-v1"
+        },
+        "basis": [
+          {
+            "document": "d5",
+            "document_chars": 13639,
+            "end": 6000,
+            "kind": "raw_evidence",
+            "ref": "e3",
+            "sha256": "97a6e11f3f34512afbebf984635c4f0118e43a0fd1a04e71a3f4cf755defe729",
+            "snapshot": "7d8960afbde4b93401ea738e66299a6ee3d0dee47906ba8e3a86ebdea642ffcd",
+            "start": 3000
+          },
+          {
+            "document": "d1",
+            "document_chars": 9095,
+            "end": 6000,
+            "kind": "raw_evidence",
+            "ref": "e4",
+            "sha256": "01ef6425050ddf612695a672f50d2d88e296ce9e1e5d49338047f20a92856164",
+            "snapshot": "446eabd6c86b9aad83f468e7eb034d96105d6e38bc9d97c923416d3ce089e105",
+            "start": 3000
+          }
+        ],
+        "elapsed_seconds": 15.229395600006683,
+        "outcome": "submitted",
+        "refs": [
+          "e3",
+          "e4"
+        ],
+        "semantic_status": "not_automatically_verified"
+      },
+      "attempts": 4,
+      "elapsed_seconds": 15.364242200012086,
+      "head": "9374e398c07c54d805661b749bd7c3058a4351acb4838044d854e3c8f5ae5e14",
+      "seal_sha256": "55b8041820ad9d59991c14b9abd93237394fb976e119b12b9adcc15e90dc5f0e",
+      "budget_after": {
+        "cap": 1643,
+        "used": 931,
+        "remaining": 712,
+        "this_run": 64,
+        "epoch_allowance": 1000,
+        "epoch_used": 288,
+        "epoch_remaining": 712
+      }
+    },
+    {
+      "slot": "q771-relation-review-once-v1-r1",
+      "qid": 771,
+      "protocol": "relation-review-once-v1",
+      "status": "submitted",
+      "terminal": {
+        "answer": "Vakkorama",
+        "answer_representation": {
+          "input_type": "string",
+          "operation": "identity",
+          "rule": "string-integer-v1"
+        },
+        "basis": [
+          {
+            "document": "d1",
+            "document_chars": 9095,
+            "end": 3000,
+            "kind": "raw_evidence",
+            "ref": "e1",
+            "sha256": "521deb8f6549e7ea288326ea13a34d4635283fc59820929b6ad3b4c3edade321",
+            "snapshot": "446eabd6c86b9aad83f468e7eb034d96105d6e38bc9d97c923416d3ce089e105",
+            "start": 0
+          },
+          {
+            "document": "d17",
+            "document_chars": 13639,
+            "end": 3000,
+            "kind": "raw_evidence",
+            "ref": "e2",
+            "sha256": "ed282b99cfb0aae5a430ddfadeb3348fa20e85aac24fb4501bf9cd3b3dadb4b2",
+            "snapshot": "7d8960afbde4b93401ea738e66299a6ee3d0dee47906ba8e3a86ebdea642ffcd",
+            "start": 0
+          }
+        ],
+        "elapsed_seconds": 56.61103759999969,
+        "outcome": "submitted",
+        "refs": [
+          "e1",
+          "e2"
+        ],
+        "semantic_status": "not_automatically_verified"
+      },
+      "attempts": 4,
+      "elapsed_seconds": 56.706646999984514,
+      "head": "b1a3b4f61c152a2b6c64e7e099e04f3483ec2e2642827bb74bb86479a24bc738",
+      "seal_sha256": "0590e3aa9971c67a6de05f95c4863de684271ea894c7652b676516ac5490feb6",
+      "budget_after": {
+        "cap": 1643,
+        "used": 935,
+        "remaining": 708,
+        "this_run": 68,
+        "epoch_allowance": 1000,
+        "epoch_used": 292,
+        "epoch_remaining": 708
+      }
+    },
+    {
+      "slot": "q778-relation-review-once-v1-r1",
+      "qid": 778,
+      "protocol": "relation-review-once-v1",
+      "status": "submitted",
+      "terminal": {
+        "answer": "21",
+        "answer_representation": {
+          "input_type": "integer",
+          "input_value": 21,
+          "operation": "decimal",
+          "rule": "string-integer-v1"
+        },
+        "basis": [
+          {
+            "document": "d25",
+            "document_chars": 4374,
+            "end": 3000,
+            "kind": "raw_evidence",
+            "ref": "e1",
+            "sha256": "bc0d510dbd6cde0530cf08684de455d82ec1943c0ba50cab130ae01990cc24b8",
+            "snapshot": "d7b7a23b3eb780d78018e5fe30d91613c9769a1cff7564bb0a79c08614acb838",
+            "start": 0
+          }
+        ],
+        "elapsed_seconds": 26.578198399976827,
+        "outcome": "submitted",
+        "refs": [
+          "e1"
+        ],
+        "semantic_status": "not_automatically_verified"
+      },
+      "attempts": 4,
+      "elapsed_seconds": 26.722984499996528,
+      "head": "1afdcba5dae91df86f845894b29fd168d65e0ba50c602662cb0f438e6b23c605",
+      "seal_sha256": "0e5cbb9d16ca08d8fa39e0e2b386c33dc456bd214e683cd8d133400a6779e766",
+      "budget_after": {
+        "cap": 1643,
+        "used": 939,
+        "remaining": 704,
+        "this_run": 72,
+        "epoch_allowance": 1000,
+        "epoch_used": 296,
+        "epoch_remaining": 704
+      }
+    },
+    {
+      "slot": "q778-baseline-r1",
+      "qid": 778,
+      "protocol": "baseline",
+      "status": "submitted",
+      "terminal": {
+        "answer": "21",
+        "answer_representation": {
+          "input_type": "integer",
+          "input_value": 21,
+          "operation": "decimal",
+          "rule": "string-integer-v1"
+        },
+        "basis": [
+          {
+            "document": "d19",
+            "document_chars": 4374,
+            "end": 3000,
+            "kind": "raw_evidence",
+            "ref": "e1",
+            "sha256": "bc0d510dbd6cde0530cf08684de455d82ec1943c0ba50cab130ae01990cc24b8",
+            "snapshot": "d7b7a23b3eb780d78018e5fe30d91613c9769a1cff7564bb0a79c08614acb838",
+            "start": 0
+          }
+        ],
+        "elapsed_seconds": 22.767870400013635,
+        "outcome": "submitted",
+        "refs": [
+          "e1"
+        ],
+        "semantic_status": "not_automatically_verified"
+      },
+      "attempts": 4,
+      "elapsed_seconds": 22.866259800008265,
+      "head": "8e2b25b721dfd9afbe65634d6949a7f42278bb31e8aeb10b1a8f188172d0b5f8",
+      "seal_sha256": "de495765f56d9ad3c4351e22f8d3a79797543bb2bcf5c3c1e133a8ee031b46a9",
+      "budget_after": {
+        "cap": 1643,
+        "used": 943,
+        "remaining": 700,
+        "this_run": 76,
+        "epoch_allowance": 1000,
+        "epoch_used": 300,
+        "epoch_remaining": 700
+      }
+    }
+  ]
+}
