@@ -1,0 +1,61 @@
+{
+  "runs": [
+    {
+      "run": "tests-01",
+      "tests": 374,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "seconds": 125.757,
+      "raw_xml_sha256": "5b6ad0a458746deba32b8977d80878a4af7d74953f690970fe65aebb8ea90759",
+      "raw_log_sha256": "8d92be6143739b6b4093e33ec2cbe730cbfa23af40f69e53cd93205d4497438a",
+      "summary": "374 passed in 126.07s (0:02:06)"
+    },
+    {
+      "run": "integration-01",
+      "tests": 8,
+      "failures": 3,
+      "errors": 0,
+      "skipped": 0,
+      "seconds": 7.157,
+      "raw_xml_sha256": "67a5c845590d3949239d7715510876f50488d414562b454ae09b22839ff8cc98",
+      "raw_log_sha256": "747f2f91df40be89e8c5b95ccb9c7bcf21d8ceee84164dd2601f215e19880e56",
+      "summary": "3 failed, 5 passed in 7.32s"
+    },
+    {
+      "run": "tests-02",
+      "tests": 382,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "seconds": 129.889,
+      "raw_xml_sha256": "035d5b0631db8ee9277c2afd228e6c8d2121df2547795667c9b6ba9e1e994650",
+      "raw_log_sha256": "ca60baad485ebe6c4af425972d9e7b04a9c25c587f01656a617fd2c7a7d6088a",
+      "summary": "382 passed in 130.22s (0:02:10)"
+    },
+    {
+      "run": "runner-01",
+      "tests": 5,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "seconds": 6.122,
+      "raw_xml_sha256": "c147a16f173dfe74edd56c7a5a27b16d4b763880f951240503d8db905d095986",
+      "raw_log_sha256": "4bf30a8214c47956fdec506eec7ce0fc3c641c64093fca31b2cc9321f9a16921",
+      "summary": "5 passed in 6.28s"
+    },
+    {
+      "run": "tests-03",
+      "tests": 387,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "seconds": 128.795,
+      "raw_xml_sha256": "97b7e9aa204e56cdf4365c085ca091d9997d4a00b952a738ffd0e071ed3275d0",
+      "raw_log_sha256": "8dc50788c87f1e0ed91b533dca41cd0c8ed79b127ac84ecd4c913276f58b5b7b",
+      "summary": "387 passed in 129.08s (0:02:09)"
+    }
+  ],
+  "initial_failures": "Three focused regressions exposed missing CLI token-reserve/cohort exit-code guards; six product lines restore them. Final full suite passes.",
+  "production_http_calls": 0
+}
