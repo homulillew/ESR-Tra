@@ -1,0 +1,1059 @@
+{
+  "implementation_sha": "2d62ac9dbe3bd6f59eb62c3f9980fbfb4c7364a7",
+  "rows": [
+    {
+      "slot": "q771-full",
+      "qid": 771,
+      "status": "submitted",
+      "terminal": {
+        "answer": "Vakkorama",
+        "answer_representation": {
+          "input_type": "string",
+          "operation": "identity",
+          "rule": "string-integer-v1"
+        },
+        "basis": [
+          {
+            "document": "d1",
+            "document_chars": 9095,
+            "end": 3000,
+            "kind": "raw_evidence",
+            "ref": "e1",
+            "sha256": "521deb8f6549e7ea288326ea13a34d4635283fc59820929b6ad3b4c3edade321",
+            "snapshot": "446eabd6c86b9aad83f468e7eb034d96105d6e38bc9d97c923416d3ce089e105",
+            "start": 0
+          },
+          {
+            "document": "d8",
+            "document_chars": 13639,
+            "end": 3000,
+            "kind": "raw_evidence",
+            "ref": "e2",
+            "sha256": "ed282b99cfb0aae5a430ddfadeb3348fa20e85aac24fb4501bf9cd3b3dadb4b2",
+            "snapshot": "7d8960afbde4b93401ea738e66299a6ee3d0dee47906ba8e3a86ebdea642ffcd",
+            "start": 0
+          },
+          {
+            "document": "d8",
+            "document_chars": 13639,
+            "end": 6000,
+            "kind": "raw_evidence",
+            "ref": "e3",
+            "sha256": "97a6e11f3f34512afbebf984635c4f0118e43a0fd1a04e71a3f4cf755defe729",
+            "snapshot": "7d8960afbde4b93401ea738e66299a6ee3d0dee47906ba8e3a86ebdea642ffcd",
+            "start": 3000
+          }
+        ],
+        "elapsed_seconds": 20.065079199994216,
+        "outcome": "submitted",
+        "refs": [
+          "e1",
+          "e2",
+          "e3"
+        ],
+        "semantic_status": "not_automatically_verified"
+      },
+      "attempts": 4,
+      "elapsed_seconds": 20.18882609999855,
+      "head": "3d4a0b71aea62033afc4bf2ed512f07b5b112f74e85891184289ae467bdf12f0",
+      "seal_sha256": "5b218f72db90ee274a1a76edc479a7916ec7d4fe33cd2e75960ea077f52965d9",
+      "budget_after": {
+        "cap": 1000,
+        "used": 636,
+        "remaining": 364,
+        "this_run": 64
+      },
+      "formal_judge": {
+        "slot": "q771-full",
+        "head": "3d4a0b71aea62033afc4bf2ed512f07b5b112f74e85891184289ae467bdf12f0",
+        "http_sequence": 2,
+        "correct": true,
+        "confidence": 1.0,
+        "extracted_answer": "Vakkorama",
+        "rationale": "The candidate answer matches the standard answer exactly.",
+        "parse_error": false
+      },
+      "declared_tools": 5,
+      "dispatched_tools": 5,
+      "declared_queries": 3,
+      "successful_tools": 5,
+      "tool_counts": {
+        "search": 1,
+        "read": 3,
+        "finish": 1
+      },
+      "query_executions": 3,
+      "distinct_query_strings": 3,
+      "backend_counts": {
+        "search": 3,
+        "get_document": 2
+      },
+      "backend_total": 5,
+      "query_cache_hits": 0,
+      "usage_known": {
+        "input_tokens": 27941,
+        "output_tokens": 619,
+        "cache_read_tokens": 13568,
+        "cache_write_tokens": 0
+      },
+      "unknown_usage_calls": 0,
+      "cache_read_unknown_calls": 0,
+      "cache_write_unknown_calls": 4,
+      "model_latency_seconds": 15.697273900004802,
+      "request_bytes": 117147,
+      "tool_errors": {},
+      "compaction_requests": 0,
+      "workflow_stages": {
+        "normal": 4
+      },
+      "workflow_stage_rounds": {
+        "recover": [],
+        "final": []
+      },
+      "gap_update_rounds": [],
+      "reuse_result_batches": 0,
+      "replay_search_actions": 0,
+      "goal_read_actions": 0,
+      "read_rounds": [
+        2,
+        2,
+        3
+      ],
+      "registered_evidence": 3,
+      "received_evidence": [
+        "e1",
+        "e2",
+        "e3"
+      ],
+      "submitted_refs_received": true,
+      "integrity": {
+        "archive": {
+          "event_count": 64,
+          "head": "3d4a0b71aea62033afc4bf2ed512f07b5b112f74e85891184289ae467bdf12f0"
+        },
+        "request_correspondence": [
+          {
+            "round": 1,
+            "http_body_exists": true,
+            "json_equivalent": true,
+            "canonical_serialization_matches_sent_body": true
+          },
+          {
+            "round": 2,
+            "http_body_exists": true,
+            "json_equivalent": true,
+            "canonical_serialization_matches_sent_body": true
+          },
+          {
+            "round": 3,
+            "http_body_exists": true,
+            "json_equivalent": true,
+            "canonical_serialization_matches_sent_body": true
+          },
+          {
+            "round": 4,
+            "http_body_exists": true,
+            "json_equivalent": true,
+            "canonical_serialization_matches_sent_body": true
+          }
+        ],
+        "request_bytes_note": "Compared captured urllib Request.data with deterministic Archive reconstruction; not TCP framing bytes",
+        "all_json_equivalent": true,
+        "http_attempts": 4,
+        "formal_correct": null
+      }
+    },
+    {
+      "slot": "q774-full",
+      "qid": 774,
+      "status": "abstained",
+      "terminal": {
+        "answer": "",
+        "elapsed_seconds": 110.86700889997883,
+        "outcome": "abstained",
+        "reason_sha256": "267181a422f7c123fd009acb120b1356bfc44a4c5cdd1d7939784f6beff0f3f5",
+        "reason_summary": "Combined constraints not verified; no delivered raw evidence."
+      },
+      "attempts": 12,
+      "elapsed_seconds": 111.05245700001251,
+      "head": "a6cb6dcce9d08ed162b362706b5feb4ab6d1cfbf762935c79318912d07cb8291",
+      "seal_sha256": "28e6a86c2c15b55e60514ed552ade63a47c0056adb7a72979d976f262f604579",
+      "budget_after": {
+        "cap": 1000,
+        "used": 616,
+        "remaining": 384,
+        "this_run": 44
+      },
+      "formal_judge": null,
+      "declared_tools": 12,
+      "dispatched_tools": 12,
+      "declared_queries": 33,
+      "successful_tools": 10,
+      "tool_counts": {
+        "search": 11,
+        "finish": 1
+      },
+      "query_executions": 27,
+      "distinct_query_strings": 21,
+      "backend_counts": {
+        "search": 21
+      },
+      "backend_total": 21,
+      "query_cache_hits": 6,
+      "usage_known": {
+        "input_tokens": 194375,
+        "output_tokens": 1585,
+        "cache_read_tokens": 88576,
+        "cache_write_tokens": 0
+      },
+      "unknown_usage_calls": 0,
+      "cache_read_unknown_calls": 0,
+      "cache_write_unknown_calls": 12,
+      "model_latency_seconds": 50.006749600026524,
+      "request_bytes": 828025,
+      "tool_errors": {
+        "duplicate_query_blocked": 2
+      },
+      "compaction_requests": 4,
+      "workflow_stages": {
+        "normal": 9,
+        "recover": 2,
+        "final": 1
+      },
+      "workflow_stage_rounds": {
+        "recover": [
+          10,
+          11
+        ],
+        "final": [
+          12
+        ]
+      },
+      "gap_update_rounds": [],
+      "reuse_result_batches": 6,
+      "replay_search_actions": 0,
+      "goal_read_actions": 0,
+      "read_rounds": [],
+      "registered_evidence": 0,
+      "received_evidence": [],
+      "submitted_refs_received": false,
+      "integrity": {
+        "archive": {
+          "event_count": 269,
+          "head": "a6cb6dcce9d08ed162b362706b5feb4ab6d1cfbf762935c79318912d07cb8291"
+        },
+        "request_correspondence": [
+          {
+            "round": 1,
+            "http_body_exists": true,
+            "json_equivalent": true,
+            "canonical_serialization_matches_sent_body": true
+          },
+          {
+            "round": 2,
+            "http_body_exists": true,
+            "json_equivalent": true,
+            "canonical_serialization_matches_sent_body": true
+          },
+          {
+            "round": 3,
+            "http_body_exists": true,
+            "json_equivalent": true,
+            "canonical_serialization_matches_sent_body": true
+          },
+          {
+            "round": 4,
+            "http_body_exists": true,
+            "json_equivalent": true,
+            "canonical_serialization_matches_sent_body": true
+          },
+          {
+            "round": 5,
+            "http_body_exists": true,
+            "json_equivalent": true,
+            "canonical_serialization_matches_sent_body": true
+          },
+          {
+            "round": 6,
+            "http_body_exists": true,
+            "json_equivalent": true,
+            "canonical_serialization_matches_sent_body": true
+          },
+          {
+            "round": 7,
+            "http_body_exists": true,
+            "json_equivalent": true,
+            "canonical_serialization_matches_sent_body": true
+          },
+          {
+            "round": 8,
+            "http_body_exists": true,
+            "json_equivalent": true,
+            "canonical_serialization_matches_sent_body": true
+          },
+          {
+            "round": 9,
+            "http_body_exists": true,
+            "json_equivalent": true,
+            "canonical_serialization_matches_sent_body": true
+          },
+          {
+            "round": 10,
+            "http_body_exists": true,
+            "json_equivalent": true,
+            "canonical_serialization_matches_sent_body": true
+          },
+          {
+            "round": 11,
+            "http_body_exists": true,
+            "json_equivalent": true,
+            "canonical_serialization_matches_sent_body": true
+          },
+          {
+            "round": 12,
+            "http_body_exists": true,
+            "json_equivalent": true,
+            "canonical_serialization_matches_sent_body": true
+          }
+        ],
+        "request_bytes_note": "Compared captured urllib Request.data with deterministic Archive reconstruction; not TCP framing bytes",
+        "all_json_equivalent": true,
+        "http_attempts": 12,
+        "formal_correct": null
+      }
+    },
+    {
+      "slot": "q774-legacy",
+      "qid": 774,
+      "status": "model_budget",
+      "terminal": {
+        "answer": "",
+        "elapsed_seconds": 118.16544250000152,
+        "outcome": "model_budget"
+      },
+      "attempts": 16,
+      "elapsed_seconds": 118.2956256000034,
+      "head": "57889f6dacbea17d347cfc841f5bcb5276987931e3bcac2446522e1f4d37a7f8",
+      "seal_sha256": "d60ceb8162422f7a146ca57ecc2d2197b4fbed53e67b1b2fece17ab1dca13b77",
+      "budget_after": {
+        "cap": 1000,
+        "used": 632,
+        "remaining": 368,
+        "this_run": 60
+      },
+      "formal_judge": null,
+      "declared_tools": 16,
+      "dispatched_tools": 15,
+      "declared_queries": 39,
+      "successful_tools": 15,
+      "tool_counts": {
+        "search": 13,
+        "read": 2,
+        "find": 1
+      },
+      "query_executions": 36,
+      "distinct_query_strings": 33,
+      "backend_counts": {
+        "search": 33,
+        "get_document": 1
+      },
+      "backend_total": 34,
+      "query_cache_hits": 3,
+      "usage_known": {
+        "input_tokens": 186629,
+        "output_tokens": 1117,
+        "cache_read_tokens": 127616,
+        "cache_write_tokens": 0
+      },
+      "unknown_usage_calls": 0,
+      "cache_read_unknown_calls": 0,
+      "cache_write_unknown_calls": 16,
+      "model_latency_seconds": 51.77529200000572,
+      "request_bytes": 789875,
+      "tool_errors": {
+        "final_only": 1
+      },
+      "compaction_requests": 1,
+      "workflow_stages": {
+        "legacy": 16
+      },
+      "workflow_stage_rounds": {
+        "recover": [],
+        "final": []
+      },
+      "gap_update_rounds": [],
+      "reuse_result_batches": 0,
+      "replay_search_actions": 0,
+      "goal_read_actions": 0,
+      "read_rounds": [
+        4,
+        6
+      ],
+      "registered_evidence": 2,
+      "received_evidence": [
+        "e1",
+        "e2"
+      ],
+      "submitted_refs_received": false,
+      "integrity": {
+        "archive": {
+          "event_count": 326,
+          "head": "57889f6dacbea17d347cfc841f5bcb5276987931e3bcac2446522e1f4d37a7f8"
+        },
+        "request_correspondence": [
+          {
+            "round": 1,
+            "http_body_exists": true,
+            "json_equivalent": true,
+            "canonical_serialization_matches_sent_body": true
+          },
+          {
+            "round": 2,
+            "http_body_exists": true,
+            "json_equivalent": true,
+            "canonical_serialization_matches_sent_body": true
+          },
+          {
+            "round": 3,
+            "http_body_exists": true,
+            "json_equivalent": true,
+            "canonical_serialization_matches_sent_body": true
+          },
+          {
+            "round": 4,
+            "http_body_exists": true,
+            "json_equivalent": true,
+            "canonical_serialization_matches_sent_body": true
+          },
+          {
+            "round": 5,
+            "http_body_exists": true,
+            "json_equivalent": true,
+            "canonical_serialization_matches_sent_body": true
+          },
+          {
+            "round": 6,
+            "http_body_exists": true,
+            "json_equivalent": true,
+            "canonical_serialization_matches_sent_body": true
+          },
+          {
+            "round": 7,
+            "http_body_exists": true,
+            "json_equivalent": true,
+            "canonical_serialization_matches_sent_body": true
+          },
+          {
+            "round": 8,
+            "http_body_exists": true,
+            "json_equivalent": true,
+            "canonical_serialization_matches_sent_body": true
+          },
+          {
+            "round": 9,
+            "http_body_exists": true,
+            "json_equivalent": true,
+            "canonical_serialization_matches_sent_body": true
+          },
+          {
+            "round": 10,
+            "http_body_exists": true,
+            "json_equivalent": true,
+            "canonical_serialization_matches_sent_body": true
+          },
+          {
+            "round": 11,
+            "http_body_exists": true,
+            "json_equivalent": true,
+            "canonical_serialization_matches_sent_body": true
+          },
+          {
+            "round": 12,
+            "http_body_exists": true,
+            "json_equivalent": true,
+            "canonical_serialization_matches_sent_body": true
+          },
+          {
+            "round": 13,
+            "http_body_exists": true,
+            "json_equivalent": true,
+            "canonical_serialization_matches_sent_body": true
+          },
+          {
+            "round": 14,
+            "http_body_exists": true,
+            "json_equivalent": true,
+            "canonical_serialization_matches_sent_body": true
+          },
+          {
+            "round": 15,
+            "http_body_exists": true,
+            "json_equivalent": true,
+            "canonical_serialization_matches_sent_body": true
+          },
+          {
+            "round": 16,
+            "http_body_exists": true,
+            "json_equivalent": true,
+            "canonical_serialization_matches_sent_body": true
+          }
+        ],
+        "request_bytes_note": "Compared captured urllib Request.data with deterministic Archive reconstruction; not TCP framing bytes",
+        "all_json_equivalent": true,
+        "http_attempts": 16,
+        "formal_correct": null
+      }
+    },
+    {
+      "slot": "q775-full",
+      "qid": 775,
+      "status": "submitted",
+      "terminal": {
+        "answer": "Akure, Nigeria",
+        "answer_representation": {
+          "input_type": "string",
+          "operation": "identity",
+          "rule": "string-integer-v1"
+        },
+        "basis": [
+          {
+            "document": "d38",
+            "document_chars": 17355,
+            "end": 3000,
+            "kind": "raw_evidence",
+            "ref": "e1",
+            "sha256": "79767844ce2071fc5dcf3fb0e64d0cade0ba154ef0fc324d0054c1c767e63138",
+            "snapshot": "90019ca46504785f620ef12f36abae20080c8c3bc7809053339e4beaa4deb2fd",
+            "start": 0
+          },
+          {
+            "document": "d86",
+            "document_chars": 27013,
+            "end": 3000,
+            "kind": "raw_evidence",
+            "ref": "e2",
+            "sha256": "fe7103588bdedb65d2bce58f2eb8dcf7f7fb7a5d81aff763760b9decd9a62ef5",
+            "snapshot": "650b898f3eaa1e0d792c8f3b8578b301f5b2335c6ab971f106e6f9e7bc6aa0e3",
+            "start": 0
+          }
+        ],
+        "elapsed_seconds": 126.70637040000292,
+        "outcome": "submitted",
+        "refs": [
+          "e1",
+          "e2"
+        ],
+        "semantic_status": "not_automatically_verified"
+      },
+      "attempts": 16,
+      "elapsed_seconds": 126.93387509998865,
+      "head": "742b73b5c84474466ecbfef9959e11deefe05bed470f074dd07361d883513f37",
+      "seal_sha256": "b8f5a9eb136091cb204052c0507bdd4464c65efdd29703508fffeee4816dfea2",
+      "budget_after": {
+        "cap": 1000,
+        "used": 604,
+        "remaining": 396,
+        "this_run": 32
+      },
+      "formal_judge": {
+        "slot": "q775-full",
+        "head": "742b73b5c84474466ecbfef9959e11deefe05bed470f074dd07361d883513f37",
+        "http_sequence": 1,
+        "correct": false,
+        "confidence": 1.0,
+        "extracted_answer": "Akure, Nigeria",
+        "rationale": "The standard answer is Boston. The candidate answer is Akure, Nigeria, which does not match the standard answer.",
+        "parse_error": false
+      },
+      "declared_tools": 20,
+      "dispatched_tools": 20,
+      "declared_queries": 29,
+      "successful_tools": 20,
+      "tool_counts": {
+        "search": 13,
+        "read": 5,
+        "find": 1,
+        "finish": 1
+      },
+      "query_executions": 29,
+      "distinct_query_strings": 28,
+      "backend_counts": {
+        "search": 28,
+        "get_document": 3
+      },
+      "backend_total": 31,
+      "query_cache_hits": 1,
+      "usage_known": {
+        "input_tokens": 290202,
+        "output_tokens": 2933,
+        "cache_read_tokens": 141568,
+        "cache_write_tokens": 0
+      },
+      "unknown_usage_calls": 0,
+      "cache_read_unknown_calls": 0,
+      "cache_write_unknown_calls": 16,
+      "model_latency_seconds": 90.64991320003173,
+      "request_bytes": 1181715,
+      "tool_errors": {},
+      "compaction_requests": 5,
+      "workflow_stages": {
+        "normal": 16
+      },
+      "workflow_stage_rounds": {
+        "recover": [],
+        "final": []
+      },
+      "gap_update_rounds": [],
+      "reuse_result_batches": 1,
+      "replay_search_actions": 0,
+      "goal_read_actions": 0,
+      "read_rounds": [
+        3,
+        5,
+        9,
+        11,
+        15
+      ],
+      "registered_evidence": 5,
+      "received_evidence": [
+        "e1",
+        "e2",
+        "e3",
+        "e4",
+        "e5"
+      ],
+      "submitted_refs_received": true,
+      "integrity": {
+        "archive": {
+          "event_count": 349,
+          "head": "742b73b5c84474466ecbfef9959e11deefe05bed470f074dd07361d883513f37"
+        },
+        "request_correspondence": [
+          {
+            "round": 1,
+            "http_body_exists": true,
+            "json_equivalent": true,
+            "canonical_serialization_matches_sent_body": true
+          },
+          {
+            "round": 2,
+            "http_body_exists": true,
+            "json_equivalent": true,
+            "canonical_serialization_matches_sent_body": true
+          },
+          {
+            "round": 3,
+            "http_body_exists": true,
+            "json_equivalent": true,
+            "canonical_serialization_matches_sent_body": true
+          },
+          {
+            "round": 4,
+            "http_body_exists": true,
+            "json_equivalent": true,
+            "canonical_serialization_matches_sent_body": true
+          },
+          {
+            "round": 5,
+            "http_body_exists": true,
+            "json_equivalent": true,
+            "canonical_serialization_matches_sent_body": true
+          },
+          {
+            "round": 6,
+            "http_body_exists": true,
+            "json_equivalent": true,
+            "canonical_serialization_matches_sent_body": true
+          },
+          {
+            "round": 7,
+            "http_body_exists": true,
+            "json_equivalent": true,
+            "canonical_serialization_matches_sent_body": true
+          },
+          {
+            "round": 8,
+            "http_body_exists": true,
+            "json_equivalent": true,
+            "canonical_serialization_matches_sent_body": true
+          },
+          {
+            "round": 9,
+            "http_body_exists": true,
+            "json_equivalent": true,
+            "canonical_serialization_matches_sent_body": true
+          },
+          {
+            "round": 10,
+            "http_body_exists": true,
+            "json_equivalent": true,
+            "canonical_serialization_matches_sent_body": true
+          },
+          {
+            "round": 11,
+            "http_body_exists": true,
+            "json_equivalent": true,
+            "canonical_serialization_matches_sent_body": true
+          },
+          {
+            "round": 12,
+            "http_body_exists": true,
+            "json_equivalent": true,
+            "canonical_serialization_matches_sent_body": true
+          },
+          {
+            "round": 13,
+            "http_body_exists": true,
+            "json_equivalent": true,
+            "canonical_serialization_matches_sent_body": true
+          },
+          {
+            "round": 14,
+            "http_body_exists": true,
+            "json_equivalent": true,
+            "canonical_serialization_matches_sent_body": true
+          },
+          {
+            "round": 15,
+            "http_body_exists": true,
+            "json_equivalent": true,
+            "canonical_serialization_matches_sent_body": true
+          },
+          {
+            "round": 16,
+            "http_body_exists": true,
+            "json_equivalent": true,
+            "canonical_serialization_matches_sent_body": true
+          }
+        ],
+        "request_bytes_note": "Compared captured urllib Request.data with deterministic Archive reconstruction; not TCP framing bytes",
+        "all_json_equivalent": true,
+        "http_attempts": 16,
+        "formal_correct": null
+      }
+    },
+    {
+      "slot": "q775-legacy",
+      "qid": 775,
+      "status": "model_budget",
+      "terminal": {
+        "answer": "",
+        "elapsed_seconds": 132.03148639999563,
+        "outcome": "model_budget"
+      },
+      "attempts": 16,
+      "elapsed_seconds": 132.14967949999846,
+      "head": "73b8a09d830f210448fda902f051d91da1a931ec43281b517eac6c3656ed6ec2",
+      "seal_sha256": "0962496c6824cdf37d886bed3ca952bc02d362c74837665fe8c996272257239b",
+      "budget_after": {
+        "cap": 1000,
+        "used": 588,
+        "remaining": 412,
+        "this_run": 16
+      },
+      "formal_judge": null,
+      "declared_tools": 32,
+      "dispatched_tools": 30,
+      "declared_queries": 96,
+      "successful_tools": 30,
+      "tool_counts": {
+        "search": 32
+      },
+      "query_executions": 90,
+      "distinct_query_strings": 30,
+      "backend_counts": {
+        "search": 30
+      },
+      "backend_total": 30,
+      "query_cache_hits": 60,
+      "usage_known": {
+        "input_tokens": 254947,
+        "output_tokens": 2845,
+        "cache_read_tokens": 94080,
+        "cache_write_tokens": 0
+      },
+      "unknown_usage_calls": 0,
+      "cache_read_unknown_calls": 0,
+      "cache_write_unknown_calls": 16,
+      "model_latency_seconds": 77.39453629995114,
+      "request_bytes": 1077208,
+      "tool_errors": {
+        "final_only": 2
+      },
+      "compaction_requests": 11,
+      "workflow_stages": {
+        "legacy": 16
+      },
+      "workflow_stage_rounds": {
+        "recover": [],
+        "final": []
+      },
+      "gap_update_rounds": [],
+      "reuse_result_batches": 0,
+      "replay_search_actions": 0,
+      "goal_read_actions": 0,
+      "read_rounds": [],
+      "registered_evidence": 0,
+      "received_evidence": [],
+      "submitted_refs_received": false,
+      "integrity": {
+        "archive": {
+          "event_count": 385,
+          "head": "73b8a09d830f210448fda902f051d91da1a931ec43281b517eac6c3656ed6ec2"
+        },
+        "request_correspondence": [
+          {
+            "round": 1,
+            "http_body_exists": true,
+            "json_equivalent": true,
+            "canonical_serialization_matches_sent_body": true
+          },
+          {
+            "round": 2,
+            "http_body_exists": true,
+            "json_equivalent": true,
+            "canonical_serialization_matches_sent_body": true
+          },
+          {
+            "round": 3,
+            "http_body_exists": true,
+            "json_equivalent": true,
+            "canonical_serialization_matches_sent_body": true
+          },
+          {
+            "round": 4,
+            "http_body_exists": true,
+            "json_equivalent": true,
+            "canonical_serialization_matches_sent_body": true
+          },
+          {
+            "round": 5,
+            "http_body_exists": true,
+            "json_equivalent": true,
+            "canonical_serialization_matches_sent_body": true
+          },
+          {
+            "round": 6,
+            "http_body_exists": true,
+            "json_equivalent": true,
+            "canonical_serialization_matches_sent_body": true
+          },
+          {
+            "round": 7,
+            "http_body_exists": true,
+            "json_equivalent": true,
+            "canonical_serialization_matches_sent_body": true
+          },
+          {
+            "round": 8,
+            "http_body_exists": true,
+            "json_equivalent": true,
+            "canonical_serialization_matches_sent_body": true
+          },
+          {
+            "round": 9,
+            "http_body_exists": true,
+            "json_equivalent": true,
+            "canonical_serialization_matches_sent_body": true
+          },
+          {
+            "round": 10,
+            "http_body_exists": true,
+            "json_equivalent": true,
+            "canonical_serialization_matches_sent_body": true
+          },
+          {
+            "round": 11,
+            "http_body_exists": true,
+            "json_equivalent": true,
+            "canonical_serialization_matches_sent_body": true
+          },
+          {
+            "round": 12,
+            "http_body_exists": true,
+            "json_equivalent": true,
+            "canonical_serialization_matches_sent_body": true
+          },
+          {
+            "round": 13,
+            "http_body_exists": true,
+            "json_equivalent": true,
+            "canonical_serialization_matches_sent_body": true
+          },
+          {
+            "round": 14,
+            "http_body_exists": true,
+            "json_equivalent": true,
+            "canonical_serialization_matches_sent_body": true
+          },
+          {
+            "round": 15,
+            "http_body_exists": true,
+            "json_equivalent": true,
+            "canonical_serialization_matches_sent_body": true
+          },
+          {
+            "round": 16,
+            "http_body_exists": true,
+            "json_equivalent": true,
+            "canonical_serialization_matches_sent_body": true
+          }
+        ],
+        "request_bytes_note": "Compared captured urllib Request.data with deterministic Archive reconstruction; not TCP framing bytes",
+        "all_json_equivalent": true,
+        "http_attempts": 16,
+        "formal_correct": null
+      }
+    },
+    {
+      "slot": "q778-full",
+      "qid": 778,
+      "status": "submitted",
+      "terminal": {
+        "answer": "21",
+        "answer_representation": {
+          "input_type": "integer",
+          "input_value": 21,
+          "operation": "decimal",
+          "rule": "string-integer-v1"
+        },
+        "basis": [
+          {
+            "document": "d16",
+            "document_chars": 4374,
+            "end": 3000,
+            "kind": "raw_evidence",
+            "ref": "e1",
+            "sha256": "bc0d510dbd6cde0530cf08684de455d82ec1943c0ba50cab130ae01990cc24b8",
+            "snapshot": "d7b7a23b3eb780d78018e5fe30d91613c9769a1cff7564bb0a79c08614acb838",
+            "start": 0
+          }
+        ],
+        "elapsed_seconds": 23.617126199998893,
+        "outcome": "submitted",
+        "refs": [
+          "e1"
+        ],
+        "semantic_status": "not_automatically_verified"
+      },
+      "attempts": 4,
+      "elapsed_seconds": 23.718278299988015,
+      "head": "e27a7d6f8fe158c431792b9b2169597f0c7cd163628a59ba224d6d5c8bd145f6",
+      "seal_sha256": "68b4eeafb5f2f65d0b7f35daf7838fcd9fb4c177073ca42aaff209d1e0ef6ea7",
+      "budget_after": {
+        "cap": 1000,
+        "used": 640,
+        "remaining": 360,
+        "this_run": 68
+      },
+      "formal_judge": {
+        "slot": "q778-full",
+        "head": "e27a7d6f8fe158c431792b9b2169597f0c7cd163628a59ba224d6d5c8bd145f6",
+        "http_sequence": 3,
+        "correct": true,
+        "confidence": 1.0,
+        "extracted_answer": "21",
+        "rationale": "The candidate answer matches the standard answer.",
+        "parse_error": false
+      },
+      "declared_tools": 4,
+      "dispatched_tools": 4,
+      "declared_queries": 6,
+      "successful_tools": 4,
+      "tool_counts": {
+        "search": 2,
+        "read": 1,
+        "finish": 1
+      },
+      "query_executions": 6,
+      "distinct_query_strings": 6,
+      "backend_counts": {
+        "search": 6,
+        "get_document": 1
+      },
+      "backend_total": 7,
+      "query_cache_hits": 0,
+      "usage_known": {
+        "input_tokens": 29852,
+        "output_tokens": 425,
+        "cache_read_tokens": 13440,
+        "cache_write_tokens": 0
+      },
+      "unknown_usage_calls": 0,
+      "cache_read_unknown_calls": 0,
+      "cache_write_unknown_calls": 4,
+      "model_latency_seconds": 12.771413999987999,
+      "request_bytes": 124492,
+      "tool_errors": {},
+      "compaction_requests": 0,
+      "workflow_stages": {
+        "normal": 4
+      },
+      "workflow_stage_rounds": {
+        "recover": [],
+        "final": []
+      },
+      "gap_update_rounds": [],
+      "reuse_result_batches": 0,
+      "replay_search_actions": 0,
+      "goal_read_actions": 0,
+      "read_rounds": [
+        3
+      ],
+      "registered_evidence": 1,
+      "received_evidence": [
+        "e1"
+      ],
+      "submitted_refs_received": true,
+      "integrity": {
+        "archive": {
+          "event_count": 76,
+          "head": "e27a7d6f8fe158c431792b9b2169597f0c7cd163628a59ba224d6d5c8bd145f6"
+        },
+        "request_correspondence": [
+          {
+            "round": 1,
+            "http_body_exists": true,
+            "json_equivalent": true,
+            "canonical_serialization_matches_sent_body": true
+          },
+          {
+            "round": 2,
+            "http_body_exists": true,
+            "json_equivalent": true,
+            "canonical_serialization_matches_sent_body": true
+          },
+          {
+            "round": 3,
+            "http_body_exists": true,
+            "json_equivalent": true,
+            "canonical_serialization_matches_sent_body": true
+          },
+          {
+            "round": 4,
+            "http_body_exists": true,
+            "json_equivalent": true,
+            "canonical_serialization_matches_sent_body": true
+          }
+        ],
+        "request_bytes_note": "Compared captured urllib Request.data with deterministic Archive reconstruction; not TCP framing bytes",
+        "all_json_equivalent": true,
+        "http_attempts": 4,
+        "formal_correct": null
+      }
+    }
+  ],
+  "budget_before": {
+    "cap": 1000,
+    "used": 572,
+    "remaining": 428,
+    "this_run": 0
+  },
+  "budget_after": {
+    "cap": 1000,
+    "used": 643,
+    "remaining": 357,
+    "this_run": 71
+  },
+  "utc_finished": "2026-09-15T08:28:12.426395+00:00"
+}

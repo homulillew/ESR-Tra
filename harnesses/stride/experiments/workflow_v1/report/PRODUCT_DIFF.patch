@@ -1,0 +1,22 @@
+diff --git a/harnesses/stride/src/stride_search/cli.py b/harnesses/stride/src/stride_search/cli.py
+index 363ce69..6e3be36 100644
+--- a/harnesses/stride/src/stride_search/cli.py
++++ b/harnesses/stride/src/stride_search/cli.py
+@@ -106,6 +106,8 @@ def execute(args):
+     http=HTTP(allow_network=True,timeout=args.timeout); counter=_counter(args)
+     if args.command=="cohort": return run_plan(_json(args.plan),args.output,lambda:_model(args,http),lambda:_retriever(args,http),lambda:counter,max_total_model_calls=args.max_total_model_calls)
+     config=Config(max_model_calls=args.max_model_calls,context_limit=args.context_limit,response_reserve=args.response_reserve,max_backend_calls=args.max_backend_calls,max_actions=args.max_actions,max_output_tokens=args.max_output_tokens,max_total_output_tokens=args.max_total_output_tokens,max_seconds=args.max_seconds,notes_enabled=not args.no_notes,reserve_finish=not args.no_final_reserve,nonblocking_notes=not args.strict_note_failure,repair_context=not args.no_repair_context,delivery_preflight=not args.no_delivery_preflight,disclose_retriever=not args.hide_retriever_capabilities,compiled_query_cache=args.compiled_query_cache,evidence_shelf_size=args.evidence_shelf_size,recall_navigation=not args.no_recall_navigation,centered_recall=not args.prefix_recall_excerpts,max_batch=args.max_batch,max_queries_per_search=args.max_queries_per_search,context_mode=args.context_mode,answer_prefix=args.answer_prefix,answer_suffix=args.answer_suffix)
++    if args.counter == "hf_tokens" and config.response_reserve < config.max_output_tokens:
++        raise ValueError("Token-mode response reserve must cover max-output-tokens")
+     model=_model(args,http); question=Path(args.question_file).read_text(encoding="utf-8"); retriever=_retriever(args,http); h=None
+     try:
+         h=Harness(question,retriever,path=args.db,config=config,counter=counter,answer_contract=args.answer_contract,workflow=_workflow(args)); h.run(model); return h.archive.report()
+@@ -120,4 +122,8 @@ def main(argv=None):
+         print(canonical({"error":getattr(exc,"code",type(exc).__name__),"detail":str(exc)[:400]}),file=sys.stderr); return 2
+     print(json.dumps(result,ensure_ascii=False,indent=2))
+     if args.command=="run" and result["terminal"]["outcome"] not in ("submitted","abstained"): return 2
++    if args.command == "cohort":
++        from .experiment import INFRASTRUCTURE_FAILURES
++        if any(r["status"] == "NOT_RUN" or r["status"] in INFRASTRUCTURE_FAILURES for r in result["rows"]):
++            return 2
+     return 0

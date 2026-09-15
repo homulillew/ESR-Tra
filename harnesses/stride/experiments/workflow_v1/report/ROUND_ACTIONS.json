@@ -1,0 +1,3681 @@
+{
+  "q771-full": [
+    {
+      "round": 1,
+      "final": false,
+      "workflow_stage": "normal",
+      "workflow_view_sha256": "0d2ec788ee110f7d279841587c4484a4b5c471547f8ddf6e518ce766e8d7a539",
+      "visible_evidence": [],
+      "actions": [
+        {
+          "tool": "search",
+          "tool_call_id": "call_49d96808e9804a4f9216f604",
+          "arguments_summary": {
+            "queries_sha256": [
+              "7a3e9d7cc654e75209b2f491fb6fcb05b6d7afd310e522bc1a2d6f69252865b2",
+              "47a46e68ba9b2254dc1f049b3d08cb14f88812047e64639b2465dc233cb578f5",
+              "c7f77ac140b4fa464578b3e4d468e39d184711e4e01a8f8d1fd8306297ce9ad2"
+            ]
+          },
+          "raw_arguments_sha256": "5db32a8453c216f89923ad9b09952f5f37eaf54536629cfa95045b714b4d44e7",
+          "executed": true,
+          "ok": true,
+          "error": null,
+          "query_results": [
+            {
+              "view": "full",
+              "cached": false,
+              "result_fingerprint": null,
+              "query_key": null,
+              "previous_deliveries": null
+            },
+            {
+              "view": "full",
+              "cached": false,
+              "result_fingerprint": null,
+              "query_key": null,
+              "previous_deliveries": null
+            },
+            {
+              "view": "full",
+              "cached": false,
+              "result_fingerprint": null,
+              "query_key": null,
+              "previous_deliveries": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "round": 2,
+      "final": false,
+      "workflow_stage": "normal",
+      "workflow_view_sha256": "ff06f6a9c719f43cf91f4ea40470ab7961c6068f6c134bdad47d7487e607c4a3",
+      "visible_evidence": [],
+      "actions": [
+        {
+          "tool": "read",
+          "tool_call_id": "call_658d74bf918e4399a20d1870",
+          "arguments_summary": {
+            "ref": "d1"
+          },
+          "raw_arguments_sha256": "b45393c5334640bf996689d0fac726a521083d3d731f0b195db2509b31f99cd1",
+          "executed": true,
+          "ok": true,
+          "error": null,
+          "read_result_summary": {
+            "action_slot_charged": true,
+            "evidence": {
+              "document": "d1",
+              "document_chars": 9095,
+              "end": 3000,
+              "kind": "raw_evidence",
+              "ref": "e1",
+              "sha256": "521deb8f6549e7ea288326ea13a34d4635283fc59820929b6ad3b4c3edade321",
+              "snapshot": "446eabd6c86b9aad83f468e7eb034d96105d6e38bc9d97c923416d3ce089e105",
+              "start": 0
+            },
+            "executed": true,
+            "next_start": 3000,
+            "ok": true,
+            "previously_received": false
+          }
+        },
+        {
+          "tool": "read",
+          "tool_call_id": "call_dc7867d17fee474f8028d497",
+          "arguments_summary": {
+            "ref": "d8"
+          },
+          "raw_arguments_sha256": "ce91e22c91fa475f1c8ab755d9cac8d388260b4fecbfb4428710a24eca983ca6",
+          "executed": true,
+          "ok": true,
+          "error": null,
+          "read_result_summary": {
+            "action_slot_charged": true,
+            "evidence": {
+              "document": "d8",
+              "document_chars": 13639,
+              "end": 3000,
+              "kind": "raw_evidence",
+              "ref": "e2",
+              "sha256": "ed282b99cfb0aae5a430ddfadeb3348fa20e85aac24fb4501bf9cd3b3dadb4b2",
+              "snapshot": "7d8960afbde4b93401ea738e66299a6ee3d0dee47906ba8e3a86ebdea642ffcd",
+              "start": 0
+            },
+            "executed": true,
+            "next_start": 3000,
+            "ok": true,
+            "previously_received": false
+          }
+        }
+      ]
+    },
+    {
+      "round": 3,
+      "final": false,
+      "workflow_stage": "normal",
+      "workflow_view_sha256": "9fd17f8c74aa192df4964d25173c217f1ab6cd47e55586e6ebb5a8ceac8638e4",
+      "visible_evidence": [
+        "e1",
+        "e2"
+      ],
+      "actions": [
+        {
+          "tool": "read",
+          "tool_call_id": "call_863b4d9fcd894427b168730a",
+          "arguments_summary": {
+            "ref": "d8",
+            "start": 3000
+          },
+          "raw_arguments_sha256": "2afa2a3f42c07fb0ad9be9c02957d84eb8e66b48bbb8f9cab094959c4cc4395b",
+          "executed": true,
+          "ok": true,
+          "error": null,
+          "read_result_summary": {
+            "action_slot_charged": true,
+            "evidence": {
+              "document": "d8",
+              "document_chars": 13639,
+              "end": 6000,
+              "kind": "raw_evidence",
+              "ref": "e3",
+              "sha256": "97a6e11f3f34512afbebf984635c4f0118e43a0fd1a04e71a3f4cf755defe729",
+              "snapshot": "7d8960afbde4b93401ea738e66299a6ee3d0dee47906ba8e3a86ebdea642ffcd",
+              "start": 3000
+            },
+            "executed": true,
+            "next_start": 6000,
+            "ok": true,
+            "previously_received": false
+          }
+        }
+      ]
+    },
+    {
+      "round": 4,
+      "final": true,
+      "workflow_stage": "normal",
+      "workflow_view_sha256": "53070ded59b44b551e8124d2c1c4da51e6c7a821c29aadba9ac94fd48fe112d7",
+      "visible_evidence": [
+        "e1",
+        "e2",
+        "e3"
+      ],
+      "actions": [
+        {
+          "tool": "finish",
+          "tool_call_id": "call_a555c6fe2f624e4ea315233f",
+          "arguments_summary": {
+            "answer": "Vakkorama",
+            "refs": [
+              "e1",
+              "e2",
+              "e3"
+            ]
+          },
+          "raw_arguments_sha256": "ba3a6a74574b3f8f62cbc3d145e3ebb6e78d9167570bab111607667e378c9eb5",
+          "executed": true,
+          "ok": true,
+          "error": null
+        }
+      ]
+    }
+  ],
+  "q774-full": [
+    {
+      "round": 1,
+      "final": false,
+      "workflow_stage": "normal",
+      "workflow_view_sha256": "0d2ec788ee110f7d279841587c4484a4b5c471547f8ddf6e518ce766e8d7a539",
+      "visible_evidence": [],
+      "actions": [
+        {
+          "tool": "search",
+          "tool_call_id": "call_69ba8f69356f4ad6ad9cc1ac",
+          "arguments_summary": {
+            "top_k": 8,
+            "queries_sha256": [
+              "59d2f48a321076d08e216656fdac079d7d80b8aa522e64abba4e7ec3e2dcce61",
+              "e52539081de4f62e77ab78b2e7a68cc352cc8633c6f8e7d30d3def6fe0a3df2d",
+              "6080ec5d95fb9cca1a38a78ec25de1b6459620d24ef14a9338cce70b878293a9"
+            ]
+          },
+          "raw_arguments_sha256": "3e149dca39392ac8a4c030ff246ffd5ed0122fa7321eee7eb594c22add909555",
+          "executed": true,
+          "ok": true,
+          "error": null,
+          "query_results": [
+            {
+              "view": "full",
+              "cached": false,
+              "result_fingerprint": null,
+              "query_key": null,
+              "previous_deliveries": null
+            },
+            {
+              "view": "full",
+              "cached": false,
+              "result_fingerprint": null,
+              "query_key": null,
+              "previous_deliveries": null
+            },
+            {
+              "view": "full",
+              "cached": false,
+              "result_fingerprint": null,
+              "query_key": null,
+              "previous_deliveries": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "round": 2,
+      "final": false,
+      "workflow_stage": "normal",
+      "workflow_view_sha256": "e44da6c30fa642a5bb864e99b502dea0ee0713630c2de0b8cd630742cf8a2f6a",
+      "visible_evidence": [],
+      "actions": [
+        {
+          "tool": "search",
+          "tool_call_id": "call_9869a0ed587641e79b123386",
+          "arguments_summary": {
+            "top_k": 8,
+            "queries_sha256": [
+              "48805903414bcf3c4b13089270b6e697ba4026dddba0294e0d97f8e3d7066465",
+              "5bc7abf7dbf5b15925ff6934b783ba9aa24873c58d8da188fdf62453dd2a2830",
+              "a9c95d0a3e18fbe9c86402224c09549c97d0a3da587ad3888d360ff640ad40b9"
+            ]
+          },
+          "raw_arguments_sha256": "3b144bbae4bd92f574e72a5e193a4a6664ffa5e917f5b8fdca628188ee89c680",
+          "executed": true,
+          "ok": true,
+          "error": null,
+          "query_results": [
+            {
+              "view": "full",
+              "cached": false,
+              "result_fingerprint": null,
+              "query_key": null,
+              "previous_deliveries": null
+            },
+            {
+              "view": "full",
+              "cached": false,
+              "result_fingerprint": null,
+              "query_key": null,
+              "previous_deliveries": null
+            },
+            {
+              "view": "full",
+              "cached": false,
+              "result_fingerprint": null,
+              "query_key": null,
+              "previous_deliveries": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "round": 3,
+      "final": false,
+      "workflow_stage": "normal",
+      "workflow_view_sha256": "10dfab361ec64f40650f5d41c5c5554f9d9ff4948b53c1cbb8971aea17772fe7",
+      "visible_evidence": [],
+      "actions": [
+        {
+          "tool": "search",
+          "tool_call_id": "call_498d089af87349b19864af0f",
+          "arguments_summary": {
+            "top_k": 8,
+            "queries_sha256": [
+              "0961dc8929baf9ac2c89a426a29dcc2067b3990cf5e54d0a2c51feff424fda11",
+              "3efdd2e0b21ee61cb3156c35443a1356a1b4bf81b5c8475afc46987b0d50bdd4",
+              "292c93b1657605f8a389396edd1c10309136e3c62321876f0f857d031fea31e2"
+            ]
+          },
+          "raw_arguments_sha256": "691356bcbebe4018f773456b719de0f24513f2ab6a42f7b84e1d85b5216874dc",
+          "executed": true,
+          "ok": true,
+          "error": null,
+          "query_results": [
+            {
+              "view": "full",
+              "cached": false,
+              "result_fingerprint": null,
+              "query_key": null,
+              "previous_deliveries": null
+            },
+            {
+              "view": "full",
+              "cached": false,
+              "result_fingerprint": null,
+              "query_key": null,
+              "previous_deliveries": null
+            },
+            {
+              "view": "full",
+              "cached": false,
+              "result_fingerprint": null,
+              "query_key": null,
+              "previous_deliveries": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "round": 4,
+      "final": false,
+      "workflow_stage": "normal",
+      "workflow_view_sha256": "dca9c9c174999731c4249ab11105b7df88365f0eb7a71038700bc847549b15f2",
+      "visible_evidence": [],
+      "actions": [
+        {
+          "tool": "search",
+          "tool_call_id": "call_fb66a06a34544416b7597c31",
+          "arguments_summary": {
+            "top_k": 8,
+            "queries_sha256": [
+              "10c13263e3a6f75243bc6b326cdedff66e98325824e1db65597d349d1dd607f9",
+              "e0439bd32f46337e85439a3d42f7b6ba9699466afc193534e62dbafa286eb9a5",
+              "95dd83c24d84aed5c068b16938ae8593e62d370dd827fd736d1933d07f62100d"
+            ]
+          },
+          "raw_arguments_sha256": "c23ca7f0228d9b3057e0adf2e1d633f9f95431ee1a3a7c9379417608b1439f5d",
+          "executed": true,
+          "ok": true,
+          "error": null,
+          "query_results": [
+            {
+              "view": "full",
+              "cached": false,
+              "result_fingerprint": null,
+              "query_key": null,
+              "previous_deliveries": null
+            },
+            {
+              "view": "full",
+              "cached": false,
+              "result_fingerprint": null,
+              "query_key": null,
+              "previous_deliveries": null
+            },
+            {
+              "view": "full",
+              "cached": false,
+              "result_fingerprint": null,
+              "query_key": null,
+              "previous_deliveries": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "round": 5,
+      "final": false,
+      "workflow_stage": "normal",
+      "workflow_view_sha256": "fbd4999bd3d0c37f45aa40333abe247e6b74e7fbe0e5b6d66f99bc632f28f956",
+      "visible_evidence": [],
+      "actions": [
+        {
+          "tool": "search",
+          "tool_call_id": "call_9dbee7565534456694f3e415",
+          "arguments_summary": {
+            "top_k": 8,
+            "queries_sha256": [
+              "e03a6df995f3ccc2f9b01e2872902d59147fd6d044dc2c0b2652fc96ba37d325",
+              "7f688dbbc2f68b4352e80fd4e16dc1c01501cb076ac9911b43e3c6440f683389",
+              "2f4dbad6379e47863609c82d981ca8ab10d185f52aa3c7b742a99ba588f446db"
+            ]
+          },
+          "raw_arguments_sha256": "34f5783efaa7473bcbf782cf754fe46a479c50efa01082fdccd1da69f3968c17",
+          "executed": true,
+          "ok": true,
+          "error": null,
+          "query_results": [
+            {
+              "view": "full",
+              "cached": false,
+              "result_fingerprint": null,
+              "query_key": null,
+              "previous_deliveries": null
+            },
+            {
+              "view": "full",
+              "cached": false,
+              "result_fingerprint": null,
+              "query_key": null,
+              "previous_deliveries": null
+            },
+            {
+              "view": "full",
+              "cached": false,
+              "result_fingerprint": null,
+              "query_key": null,
+              "previous_deliveries": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "round": 6,
+      "final": false,
+      "workflow_stage": "normal",
+      "workflow_view_sha256": "87aee6619b1d265f9e42a250d1b2f880e7aa151a58ce0753dcf0978df33c6112",
+      "visible_evidence": [],
+      "actions": [
+        {
+          "tool": "search",
+          "tool_call_id": "call_3bc908de114d4ca59de9f6c2",
+          "arguments_summary": {
+            "top_k": 8,
+            "queries_sha256": [
+              "48b972a5e5142f84ca50f0a68bdced4104ef9aced468431f55673873b2012ea0",
+              "805f629c67a58f1c393255ce991df69b948aad1fd4b63066028ee311a2b1a0f0",
+              "7c2e9d20d6566da5228f27f9cb805c46ec94718ae905c90c259a98ac6a99416e"
+            ]
+          },
+          "raw_arguments_sha256": "9d6de80ce73e74e6740ba3625607c03d4cc4e06bdd0aef5815d89e6d2e65613e",
+          "executed": true,
+          "ok": true,
+          "error": null,
+          "query_results": [
+            {
+              "view": "full",
+              "cached": false,
+              "result_fingerprint": null,
+              "query_key": null,
+              "previous_deliveries": null
+            },
+            {
+              "view": "full",
+              "cached": false,
+              "result_fingerprint": null,
+              "query_key": null,
+              "previous_deliveries": null
+            },
+            {
+              "view": "full",
+              "cached": false,
+              "result_fingerprint": null,
+              "query_key": null,
+              "previous_deliveries": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "round": 7,
+      "final": false,
+      "workflow_stage": "normal",
+      "workflow_view_sha256": "bd2f7b38df13889c75f2c6adaac2cb7df48c3885ecfa8b346d30d94a30171451",
+      "visible_evidence": [],
+      "actions": [
+        {
+          "tool": "search",
+          "tool_call_id": "call_e86a9201c3cf48e1baad7878",
+          "arguments_summary": {
+            "top_k": 8,
+            "queries_sha256": [
+              "2f9567c60f0d9c11192e16214b7a275fced079a46db8cdb312df8d917ee0ee72",
+              "324835bdf7827b6634857b655b0fed5d037b46f1a6753a3e6f9721231a075d7e",
+              "8b4d7d097227f93b0e6c9e13d9fe1e11e98029d16a35d2b30279444321c18302"
+            ]
+          },
+          "raw_arguments_sha256": "b2fa5032f0f2aef551a7cc6fe4359e85cc74c508b1d5e534d64786f077e701b1",
+          "executed": true,
+          "ok": true,
+          "error": null,
+          "query_results": [
+            {
+              "view": "full",
+              "cached": false,
+              "result_fingerprint": null,
+              "query_key": null,
+              "previous_deliveries": null
+            },
+            {
+              "view": "full",
+              "cached": false,
+              "result_fingerprint": null,
+              "query_key": null,
+              "previous_deliveries": null
+            },
+            {
+              "view": "full",
+              "cached": false,
+              "result_fingerprint": null,
+              "query_key": null,
+              "previous_deliveries": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "round": 8,
+      "final": false,
+      "workflow_stage": "normal",
+      "workflow_view_sha256": "7c01fb13cb0de76f94dc8331c67c26b976ad9bcff4bfbf8a7ab2191955ab4453",
+      "visible_evidence": [],
+      "actions": [
+        {
+          "tool": "search",
+          "tool_call_id": "call_96d9303df8f142499035fa52",
+          "arguments_summary": {
+            "top_k": 8,
+            "queries_sha256": [
+              "2f9567c60f0d9c11192e16214b7a275fced079a46db8cdb312df8d917ee0ee72",
+              "324835bdf7827b6634857b655b0fed5d037b46f1a6753a3e6f9721231a075d7e",
+              "8b4d7d097227f93b0e6c9e13d9fe1e11e98029d16a35d2b30279444321c18302"
+            ]
+          },
+          "raw_arguments_sha256": "b2fa5032f0f2aef551a7cc6fe4359e85cc74c508b1d5e534d64786f077e701b1",
+          "executed": true,
+          "ok": true,
+          "error": null,
+          "query_results": [
+            {
+              "view": "reuse",
+              "cached": true,
+              "result_fingerprint": null,
+              "query_key": null,
+              "previous_deliveries": null
+            },
+            {
+              "view": "reuse",
+              "cached": true,
+              "result_fingerprint": null,
+              "query_key": null,
+              "previous_deliveries": null
+            },
+            {
+              "view": "reuse",
+              "cached": true,
+              "result_fingerprint": null,
+              "query_key": null,
+              "previous_deliveries": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "round": 9,
+      "final": false,
+      "workflow_stage": "normal",
+      "workflow_view_sha256": "1c9658b6fe9f055d8526964c45774d690706236f461b28a2f1815d023e21f2fc",
+      "visible_evidence": [],
+      "actions": [
+        {
+          "tool": "search",
+          "tool_call_id": "call_0b3940b80ac44b30b91ec292",
+          "arguments_summary": {
+            "top_k": 8,
+            "queries_sha256": [
+              "2f9567c60f0d9c11192e16214b7a275fced079a46db8cdb312df8d917ee0ee72",
+              "324835bdf7827b6634857b655b0fed5d037b46f1a6753a3e6f9721231a075d7e",
+              "8b4d7d097227f93b0e6c9e13d9fe1e11e98029d16a35d2b30279444321c18302"
+            ]
+          },
+          "raw_arguments_sha256": "b2fa5032f0f2aef551a7cc6fe4359e85cc74c508b1d5e534d64786f077e701b1",
+          "executed": true,
+          "ok": true,
+          "error": null,
+          "query_results": [
+            {
+              "view": "reuse",
+              "cached": true,
+              "result_fingerprint": null,
+              "query_key": null,
+              "previous_deliveries": null
+            },
+            {
+              "view": "reuse",
+              "cached": true,
+              "result_fingerprint": null,
+              "query_key": null,
+              "previous_deliveries": null
+            },
+            {
+              "view": "reuse",
+              "cached": true,
+              "result_fingerprint": null,
+              "query_key": null,
+              "previous_deliveries": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "round": 10,
+      "final": false,
+      "workflow_stage": "recover",
+      "workflow_view_sha256": "70832040539ae094d01b5878743c7032108b4acf95b9e6ff46f659c30609d324",
+      "visible_evidence": [],
+      "actions": [
+        {
+          "tool": "search",
+          "tool_call_id": "call_b6b99361263644999f4b8171",
+          "arguments_summary": {
+            "top_k": 8,
+            "queries_sha256": [
+              "2f9567c60f0d9c11192e16214b7a275fced079a46db8cdb312df8d917ee0ee72",
+              "324835bdf7827b6634857b655b0fed5d037b46f1a6753a3e6f9721231a075d7e",
+              "8b4d7d097227f93b0e6c9e13d9fe1e11e98029d16a35d2b30279444321c18302"
+            ]
+          },
+          "raw_arguments_sha256": "b2fa5032f0f2aef551a7cc6fe4359e85cc74c508b1d5e534d64786f077e701b1",
+          "executed": true,
+          "ok": false,
+          "error": "duplicate_query_blocked",
+          "query_results": []
+        }
+      ]
+    },
+    {
+      "round": 11,
+      "final": false,
+      "workflow_stage": "recover",
+      "workflow_view_sha256": "bfcf9aaf62aac4090eb937c59f800c88edecf1577671ca3cd169fd4cd64cfe6b",
+      "visible_evidence": [],
+      "actions": [
+        {
+          "tool": "search",
+          "tool_call_id": "call_3fe2801f8a494892a63fc935",
+          "arguments_summary": {
+            "top_k": 8,
+            "queries_sha256": [
+              "2f9567c60f0d9c11192e16214b7a275fced079a46db8cdb312df8d917ee0ee72",
+              "324835bdf7827b6634857b655b0fed5d037b46f1a6753a3e6f9721231a075d7e",
+              "8b4d7d097227f93b0e6c9e13d9fe1e11e98029d16a35d2b30279444321c18302"
+            ]
+          },
+          "raw_arguments_sha256": "b2fa5032f0f2aef551a7cc6fe4359e85cc74c508b1d5e534d64786f077e701b1",
+          "executed": true,
+          "ok": false,
+          "error": "duplicate_query_blocked",
+          "query_results": []
+        }
+      ]
+    },
+    {
+      "round": 12,
+      "final": true,
+      "workflow_stage": "final",
+      "workflow_view_sha256": "a79fbe7996d271ce9f58b3ce4ab71601fc4cf3a3a23ad753f5f4728a36b2abdb",
+      "visible_evidence": [],
+      "actions": [
+        {
+          "tool": "finish",
+          "tool_call_id": "call_158d3fb3f72e49d8bb01bd2e",
+          "arguments_summary": {
+            "abstain": true,
+            "reason_sha256": "267181a422f7c123fd009acb120b1356bfc44a4c5cdd1d7939784f6beff0f3f5"
+          },
+          "raw_arguments_sha256": "ff0b7f725203c53ad46a000d87225dd6bd695b9edc1ff658fc2c03173fb9f7ba",
+          "executed": true,
+          "ok": true,
+          "error": null
+        }
+      ]
+    }
+  ],
+  "q774-legacy": [
+    {
+      "round": 1,
+      "final": false,
+      "workflow_stage": null,
+      "workflow_view_sha256": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
+      "visible_evidence": [],
+      "actions": [
+        {
+          "tool": "search",
+          "tool_call_id": "call_a4d75bf696b64485b0493c0b",
+          "arguments_summary": {
+            "queries_sha256": [
+              "9fbc0450721355775ad94369e1969d2de5423ac8de75253a2d49f42df7ab7ebd",
+              "e5af0cceacd125a53cd900b990dcafec3403e17cacc94ecba94879899b1bb2b9",
+              "69ec05239e9b201db01fa0f09c9b2fd634f2b88ce3ac19409bc663111e7ab057"
+            ]
+          },
+          "raw_arguments_sha256": "35ef46794063f5ffad22580227a45e2bebaf13988cd368838858ec4b7dfbdf75",
+          "executed": true,
+          "ok": true,
+          "error": null,
+          "query_results": [
+            {
+              "view": null,
+              "cached": false,
+              "result_fingerprint": null,
+              "query_key": null,
+              "previous_deliveries": null
+            },
+            {
+              "view": null,
+              "cached": false,
+              "result_fingerprint": null,
+              "query_key": null,
+              "previous_deliveries": null
+            },
+            {
+              "view": null,
+              "cached": false,
+              "result_fingerprint": null,
+              "query_key": null,
+              "previous_deliveries": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "round": 2,
+      "final": false,
+      "workflow_stage": null,
+      "workflow_view_sha256": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
+      "visible_evidence": [],
+      "actions": [
+        {
+          "tool": "search",
+          "tool_call_id": "call_863b2f485da544cd8516b2d3",
+          "arguments_summary": {
+            "queries_sha256": [
+              "94c282e5cb12127b26475e1bfa6b3dcddd070d76c7bd2bb5ad49ef8b38431e0a",
+              "6a7331bb2d68cdf16f0e44d57a91c65a1a0cb8dd0d584de7c68cbed64a96b15e",
+              "a89ef1c99c50a94cdeeb8f9b9646ebfc92df88a929f208b666ed369574c96b32"
+            ]
+          },
+          "raw_arguments_sha256": "9af4d5f5b16649b7e578c58e1f205fdc907fbe0e43863dfcaf56d9d1e1122c1d",
+          "executed": true,
+          "ok": true,
+          "error": null,
+          "query_results": [
+            {
+              "view": null,
+              "cached": false,
+              "result_fingerprint": null,
+              "query_key": null,
+              "previous_deliveries": null
+            },
+            {
+              "view": null,
+              "cached": false,
+              "result_fingerprint": null,
+              "query_key": null,
+              "previous_deliveries": null
+            },
+            {
+              "view": null,
+              "cached": false,
+              "result_fingerprint": null,
+              "query_key": null,
+              "previous_deliveries": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "round": 3,
+      "final": false,
+      "workflow_stage": null,
+      "workflow_view_sha256": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
+      "visible_evidence": [],
+      "actions": [
+        {
+          "tool": "search",
+          "tool_call_id": "call_db894760d8e64cdc901f6e49",
+          "arguments_summary": {
+            "queries_sha256": [
+              "8f1017c67f4c995de6b1c931b6c1e50fc40343dc9dd65bd7d6d6fc62642d8e48",
+              "8f90a32ed33e4d364d0a276383694dfdbc5fe8f9ca65bb63a6d72e84e21153cf",
+              "9a7b748d109bfb77a7f8ae1bcc20b4edb443d24efd32d8e1bf081eee747b0c21"
+            ]
+          },
+          "raw_arguments_sha256": "0501ac946729f1e64a64f7982bc46e2a0393e593f4a7d058db20fb8def2a16b1",
+          "executed": true,
+          "ok": true,
+          "error": null,
+          "query_results": [
+            {
+              "view": null,
+              "cached": false,
+              "result_fingerprint": null,
+              "query_key": null,
+              "previous_deliveries": null
+            },
+            {
+              "view": null,
+              "cached": false,
+              "result_fingerprint": null,
+              "query_key": null,
+              "previous_deliveries": null
+            },
+            {
+              "view": null,
+              "cached": false,
+              "result_fingerprint": null,
+              "query_key": null,
+              "previous_deliveries": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "round": 4,
+      "final": false,
+      "workflow_stage": null,
+      "workflow_view_sha256": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
+      "visible_evidence": [],
+      "actions": [
+        {
+          "tool": "read",
+          "tool_call_id": "call_9c59ad1b04574e918ddd5135",
+          "arguments_summary": {
+            "ref": "d1",
+            "start": 0,
+            "length": 3000
+          },
+          "raw_arguments_sha256": "249e113fddba0545d92189e0a8b057ced294a26dd149940aaf43b080102b92d6",
+          "executed": true,
+          "ok": true,
+          "error": null,
+          "read_result_summary": {
+            "action_slot_charged": true,
+            "evidence": {
+              "document": "d1",
+              "document_chars": 9101,
+              "end": 3000,
+              "kind": "raw_evidence",
+              "ref": "e1",
+              "sha256": "30d6d8bd1feaa16d7480eae3bbb0d0772ddf0a956d9870efc705af2df5ace29e",
+              "snapshot": "a531c0a6be82cbe578781b28cb207ff02e87008856d5212ec2eab3fae2afe076",
+              "start": 0
+            },
+            "executed": true,
+            "next_start": 3000,
+            "ok": true,
+            "previously_received": false
+          }
+        }
+      ]
+    },
+    {
+      "round": 5,
+      "final": false,
+      "workflow_stage": null,
+      "workflow_view_sha256": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
+      "visible_evidence": [
+        "e1"
+      ],
+      "actions": [
+        {
+          "tool": "find",
+          "tool_call_id": "call_97ebdc8b8040475f8aa9e4e1",
+          "arguments_summary": {
+            "ref": "d1"
+          },
+          "raw_arguments_sha256": "4d8f52c29c2d2f54dffe101cd39df64dcdb5f20e5a4f0d88e6bc0b285f9cd61e",
+          "executed": true,
+          "ok": true,
+          "error": null
+        }
+      ]
+    },
+    {
+      "round": 6,
+      "final": false,
+      "workflow_stage": null,
+      "workflow_view_sha256": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
+      "visible_evidence": [
+        "e1"
+      ],
+      "actions": [
+        {
+          "tool": "read",
+          "tool_call_id": "call_1453f9054abf48919b857183",
+          "arguments_summary": {
+            "ref": "d1",
+            "start": 4344,
+            "length": 1500
+          },
+          "raw_arguments_sha256": "43d2a11fb35bccc1eb727342451f5640275c63908a75fb0337bcfbc4d0882144",
+          "executed": true,
+          "ok": true,
+          "error": null,
+          "read_result_summary": {
+            "action_slot_charged": true,
+            "evidence": {
+              "document": "d1",
+              "document_chars": 9101,
+              "end": 5844,
+              "kind": "raw_evidence",
+              "ref": "e2",
+              "sha256": "ecc6db411aec7113912b01ee11404052f68c5913770dd4a8ef771ea82049a974",
+              "snapshot": "a531c0a6be82cbe578781b28cb207ff02e87008856d5212ec2eab3fae2afe076",
+              "start": 4344
+            },
+            "executed": true,
+            "next_start": 5844,
+            "ok": true,
+            "previously_received": false
+          }
+        }
+      ]
+    },
+    {
+      "round": 7,
+      "final": false,
+      "workflow_stage": null,
+      "workflow_view_sha256": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
+      "visible_evidence": [
+        "e1",
+        "e2"
+      ],
+      "actions": [
+        {
+          "tool": "search",
+          "tool_call_id": "call_e85cc16cd9d84427912d9a0f",
+          "arguments_summary": {
+            "queries_sha256": [
+              "6da476fa8913e3ecea995a51172c433da22ac6a57b50f2085530cf8ed1e33796",
+              "ff88a07113e05858f6c33648ddc1d35d95f9432b0950b949f8570070c1db9d74",
+              "7fab7e296ffbe9130a9a82d1d94c5b4c4ef55395e8caaf414ea2dbcb3cee7dae"
+            ]
+          },
+          "raw_arguments_sha256": "09e6fa5b3d808ee79d08be6e3ea084e8d4bd6767a53f6291803f00f91f5c95e1",
+          "executed": true,
+          "ok": true,
+          "error": null,
+          "query_results": [
+            {
+              "view": null,
+              "cached": false,
+              "result_fingerprint": null,
+              "query_key": null,
+              "previous_deliveries": null
+            },
+            {
+              "view": null,
+              "cached": false,
+              "result_fingerprint": null,
+              "query_key": null,
+              "previous_deliveries": null
+            },
+            {
+              "view": null,
+              "cached": false,
+              "result_fingerprint": null,
+              "query_key": null,
+              "previous_deliveries": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "round": 8,
+      "final": false,
+      "workflow_stage": null,
+      "workflow_view_sha256": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
+      "visible_evidence": [
+        "e1",
+        "e2"
+      ],
+      "actions": [
+        {
+          "tool": "search",
+          "tool_call_id": "call_483efd8bf0fa43eaa6ce942f",
+          "arguments_summary": {
+            "queries_sha256": [
+              "5c903f8667f4aad3e7cd415bc1cba272d8f97e33f37ac5de79f977146a3092fa",
+              "60b6ea0ae887d84aa5f1c91de8d594ccf68ec53ad7af20c310ec3cc7198980f8",
+              "3c3f467322cc156c8d30354eaf4aba16fe94da5d91a79214735de71d9a315bf2"
+            ]
+          },
+          "raw_arguments_sha256": "8aec37a44176999adfc2fb323f8e3d2ad5d55101fe87540c5eca135c91fdebb5",
+          "executed": true,
+          "ok": true,
+          "error": null,
+          "query_results": [
+            {
+              "view": null,
+              "cached": false,
+              "result_fingerprint": null,
+              "query_key": null,
+              "previous_deliveries": null
+            },
+            {
+              "view": null,
+              "cached": false,
+              "result_fingerprint": null,
+              "query_key": null,
+              "previous_deliveries": null
+            },
+            {
+              "view": null,
+              "cached": false,
+              "result_fingerprint": null,
+              "query_key": null,
+              "previous_deliveries": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "round": 9,
+      "final": false,
+      "workflow_stage": null,
+      "workflow_view_sha256": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
+      "visible_evidence": [
+        "e1",
+        "e2"
+      ],
+      "actions": [
+        {
+          "tool": "search",
+          "tool_call_id": "call_94bda752e6bc4d30aa414b05",
+          "arguments_summary": {
+            "queries_sha256": [
+              "f7c4e98e85533701fff88ed190cf248fd8d0e8c718563bfbb86aacbae97287dd",
+              "f7445b7a788af8117f26a4495a551235b86bc3c50b0322131b58def57b39dac5",
+              "ca8b2b591574c6b78b361171d37c92969c3f6d3f571c1f655572cf18fd8646f2"
+            ]
+          },
+          "raw_arguments_sha256": "4fc4962bce08a7555f3967dba758028291172122ec2881c98b66a412b08871f6",
+          "executed": true,
+          "ok": true,
+          "error": null,
+          "query_results": [
+            {
+              "view": null,
+              "cached": false,
+              "result_fingerprint": null,
+              "query_key": null,
+              "previous_deliveries": null
+            },
+            {
+              "view": null,
+              "cached": false,
+              "result_fingerprint": null,
+              "query_key": null,
+              "previous_deliveries": null
+            },
+            {
+              "view": null,
+              "cached": false,
+              "result_fingerprint": null,
+              "query_key": null,
+              "previous_deliveries": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "round": 10,
+      "final": false,
+      "workflow_stage": null,
+      "workflow_view_sha256": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
+      "visible_evidence": [
+        "e1",
+        "e2"
+      ],
+      "actions": [
+        {
+          "tool": "search",
+          "tool_call_id": "call_6e3bc3bb4d914a3891da0635",
+          "arguments_summary": {
+            "queries_sha256": [
+              "6453390f6bbceb88db7818dd716a580eaf5d2f5e61ac85e823da3531b06e8393",
+              "02b700ebd47969386fea7c9dae3b0613f209d91f2982671b09fd9c9c8bb447b0",
+              "42db0ec4f17d31bf01ccf9648d6a7b351bfafdbaae9afee9a6f8f95b193a991d"
+            ]
+          },
+          "raw_arguments_sha256": "f35689660d77a53e7a73a6a22976dc7a7bb0b6a6dca186c10ec7268da653e485",
+          "executed": true,
+          "ok": true,
+          "error": null,
+          "query_results": [
+            {
+              "view": null,
+              "cached": false,
+              "result_fingerprint": null,
+              "query_key": null,
+              "previous_deliveries": null
+            },
+            {
+              "view": null,
+              "cached": false,
+              "result_fingerprint": null,
+              "query_key": null,
+              "previous_deliveries": null
+            },
+            {
+              "view": null,
+              "cached": false,
+              "result_fingerprint": null,
+              "query_key": null,
+              "previous_deliveries": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "round": 11,
+      "final": false,
+      "workflow_stage": null,
+      "workflow_view_sha256": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
+      "visible_evidence": [
+        "e1",
+        "e2"
+      ],
+      "actions": [
+        {
+          "tool": "search",
+          "tool_call_id": "call_823cf8bd9b7a47cf852ae314",
+          "arguments_summary": {
+            "queries_sha256": [
+              "05a275896c8711bdfa60da20ff619b3ae2bd4432f18b74b2696683260a659602",
+              "289b109a101e52e993b7d957bbcabd7ca425f1b45b64c3779477897989d66fe3",
+              "6bca17be766faac9caebd4691322a953d3158a011d3564dde12e6dfd8ec8ac4a"
+            ]
+          },
+          "raw_arguments_sha256": "43bbc60b1f530a2ad3777f3b75888d226a44740b07ab7f91ab935031345bbe9f",
+          "executed": true,
+          "ok": true,
+          "error": null,
+          "query_results": [
+            {
+              "view": null,
+              "cached": false,
+              "result_fingerprint": null,
+              "query_key": null,
+              "previous_deliveries": null
+            },
+            {
+              "view": null,
+              "cached": false,
+              "result_fingerprint": null,
+              "query_key": null,
+              "previous_deliveries": null
+            },
+            {
+              "view": null,
+              "cached": false,
+              "result_fingerprint": null,
+              "query_key": null,
+              "previous_deliveries": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "round": 12,
+      "final": false,
+      "workflow_stage": null,
+      "workflow_view_sha256": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
+      "visible_evidence": [
+        "e1",
+        "e2"
+      ],
+      "actions": [
+        {
+          "tool": "search",
+          "tool_call_id": "call_0435de391bbc469b833c5e67",
+          "arguments_summary": {
+            "queries_sha256": [
+              "d6673a230722f8bad3060b277cff790c8fb47e1a19dd8160bf0f07b6c451fe7d",
+              "02b700ebd47969386fea7c9dae3b0613f209d91f2982671b09fd9c9c8bb447b0",
+              "209d34e89eefa9a05e6ba14323bbf1cf02c21e41ea6d0efed7ebedbaa1e18896"
+            ]
+          },
+          "raw_arguments_sha256": "3f8196862bd6988347962cdb35680c71f303372afcae9a3beee39ebea286fa77",
+          "executed": true,
+          "ok": true,
+          "error": null,
+          "query_results": [
+            {
+              "view": null,
+              "cached": false,
+              "result_fingerprint": null,
+              "query_key": null,
+              "previous_deliveries": null
+            },
+            {
+              "view": null,
+              "cached": true,
+              "result_fingerprint": null,
+              "query_key": null,
+              "previous_deliveries": null
+            },
+            {
+              "view": null,
+              "cached": false,
+              "result_fingerprint": null,
+              "query_key": null,
+              "previous_deliveries": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "round": 13,
+      "final": false,
+      "workflow_stage": null,
+      "workflow_view_sha256": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
+      "visible_evidence": [
+        "e1",
+        "e2"
+      ],
+      "actions": [
+        {
+          "tool": "search",
+          "tool_call_id": "call_c930543997014cf1aeb4ac03",
+          "arguments_summary": {
+            "queries_sha256": [
+              "050add64ab676fb06e219615b9545eda759b0c32b7ba0a073aa93db851d7d770",
+              "6da476fa8913e3ecea995a51172c433da22ac6a57b50f2085530cf8ed1e33796",
+              "8e109142ef9e88b9310c065b666d64795ca69e884b9cb06edd5fb91a47b235b8"
+            ]
+          },
+          "raw_arguments_sha256": "cebdade6b72037904e26d97f788d2d63d51afcc3b63a8403dab660354b63c20d",
+          "executed": true,
+          "ok": true,
+          "error": null,
+          "query_results": [
+            {
+              "view": null,
+              "cached": false,
+              "result_fingerprint": null,
+              "query_key": null,
+              "previous_deliveries": null
+            },
+            {
+              "view": null,
+              "cached": true,
+              "result_fingerprint": null,
+              "query_key": null,
+              "previous_deliveries": null
+            },
+            {
+              "view": null,
+              "cached": false,
+              "result_fingerprint": null,
+              "query_key": null,
+              "previous_deliveries": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "round": 14,
+      "final": false,
+      "workflow_stage": null,
+      "workflow_view_sha256": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
+      "visible_evidence": [
+        "e1",
+        "e2"
+      ],
+      "actions": [
+        {
+          "tool": "search",
+          "tool_call_id": "call_764403375171494a8b79fea8",
+          "arguments_summary": {
+            "queries_sha256": [
+              "7b2f7eaaec3a820d5a0df35d41a7b7eb095e8ddcca9a36a916fbaac09d2fcba7",
+              "ad99aa45d6ffd6b7c0a3d886652b7fa97a8efc08d52d39b325db5a6700412e96",
+              "a82bb06dd2a44e99ae7c1ea860f4052d0fc3e4ca42371af61489cbd23227b09f"
+            ]
+          },
+          "raw_arguments_sha256": "24f2d068b789dcc9f9d628faec009a484759be43f0cbd3bc02d53928a1e24d07",
+          "executed": true,
+          "ok": true,
+          "error": null,
+          "query_results": [
+            {
+              "view": null,
+              "cached": false,
+              "result_fingerprint": null,
+              "query_key": null,
+              "previous_deliveries": null
+            },
+            {
+              "view": null,
+              "cached": false,
+              "result_fingerprint": null,
+              "query_key": null,
+              "previous_deliveries": null
+            },
+            {
+              "view": null,
+              "cached": false,
+              "result_fingerprint": null,
+              "query_key": null,
+              "previous_deliveries": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "round": 15,
+      "final": false,
+      "workflow_stage": null,
+      "workflow_view_sha256": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
+      "visible_evidence": [
+        "e1",
+        "e2"
+      ],
+      "actions": [
+        {
+          "tool": "search",
+          "tool_call_id": "call_dd92a06d9a844efd9aa3376c",
+          "arguments_summary": {
+            "queries_sha256": [
+              "65d7a2d5da6bb81afc30235031a0483262dff78cd24beb17a38319126108a206",
+              "aef59d3f9632f7d820050d4801f680dde1500fbaadbcec3087ed326bcf50f4eb",
+              "a82bb06dd2a44e99ae7c1ea860f4052d0fc3e4ca42371af61489cbd23227b09f"
+            ]
+          },
+          "raw_arguments_sha256": "6ba598b52c507bbd23e08285748c573839b3465f71951ef6ded1af83b1387f85",
+          "executed": true,
+          "ok": true,
+          "error": null,
+          "query_results": [
+            {
+              "view": null,
+              "cached": false,
+              "result_fingerprint": null,
+              "query_key": null,
+              "previous_deliveries": null
+            },
+            {
+              "view": null,
+              "cached": false,
+              "result_fingerprint": null,
+              "query_key": null,
+              "previous_deliveries": null
+            },
+            {
+              "view": null,
+              "cached": true,
+              "result_fingerprint": null,
+              "query_key": null,
+              "previous_deliveries": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "round": 16,
+      "final": true,
+      "workflow_stage": null,
+      "workflow_view_sha256": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
+      "visible_evidence": [
+        "e1",
+        "e2"
+      ],
+      "actions": [
+        {
+          "tool": "search",
+          "tool_call_id": "call_8a0d7dd47ea9477cadbd1dd8",
+          "arguments_summary": {
+            "queries_sha256": [
+              "09af06d510e9dd11e0e3da487b639c6305556eefae8a984f75e31fb95c25c458",
+              "7b2f7eaaec3a820d5a0df35d41a7b7eb095e8ddcca9a36a916fbaac09d2fcba7",
+              "a82bb06dd2a44e99ae7c1ea860f4052d0fc3e4ca42371af61489cbd23227b09f"
+            ]
+          },
+          "raw_arguments_sha256": "a35ac73155235e341065ac862544c8eafe78d01abfa3d68927a7e096395e9a8c",
+          "executed": false,
+          "ok": false,
+          "error": "final_only",
+          "query_results": []
+        }
+      ]
+    }
+  ],
+  "q775-full": [
+    {
+      "round": 1,
+      "final": false,
+      "workflow_stage": "normal",
+      "workflow_view_sha256": "0d2ec788ee110f7d279841587c4484a4b5c471547f8ddf6e518ce766e8d7a539",
+      "visible_evidence": [],
+      "actions": [
+        {
+          "tool": "search",
+          "tool_call_id": "call_62c9b779b8e944d6a3d6d239",
+          "arguments_summary": {
+            "top_k": 10,
+            "queries_sha256": [
+              "781ed36d2a6dd6d30a2691a75be6614313110949dd16a0eb277ed6b1272b53c6",
+              "cc1950aa6cf321ec83a01620319a3ac0dfbd052022b70679f0433fe288adb78a",
+              "b04bd69a2d6766a9383d25e210bf2ac4b55ad2e500c568193f9bc3dfee7ede6f"
+            ]
+          },
+          "raw_arguments_sha256": "d3a05db5d459c00b30d0abf10bcaad1c7dfc6cb0e8a8be3f5ea56e0bd8c1bfd9",
+          "executed": true,
+          "ok": true,
+          "error": null,
+          "query_results": [
+            {
+              "view": "full",
+              "cached": false,
+              "result_fingerprint": null,
+              "query_key": null,
+              "previous_deliveries": null
+            },
+            {
+              "view": "full",
+              "cached": false,
+              "result_fingerprint": null,
+              "query_key": null,
+              "previous_deliveries": null
+            },
+            {
+              "view": "full",
+              "cached": false,
+              "result_fingerprint": null,
+              "query_key": null,
+              "previous_deliveries": null
+            }
+          ]
+        },
+        {
+          "tool": "search",
+          "tool_call_id": "call_f2ffd972b23e4e2d9ba0e545",
+          "arguments_summary": {
+            "top_k": 10,
+            "queries_sha256": [
+              "689d3d530a986e8cda69e8cf61c92d7b8aeddcc8047f525e0097379327a5fcad",
+              "1c1c04da3e6880be35e58cd3a04d68dacccd62c3c2775822b9ef8d739e31c133"
+            ]
+          },
+          "raw_arguments_sha256": "f9d0164ee5f07bab4775dae7c6433bbbfc678589a8326dacbc0c59f3937332f7",
+          "executed": true,
+          "ok": true,
+          "error": null,
+          "query_results": [
+            {
+              "view": "full",
+              "cached": false,
+              "result_fingerprint": null,
+              "query_key": null,
+              "previous_deliveries": null
+            },
+            {
+              "view": "full",
+              "cached": false,
+              "result_fingerprint": null,
+              "query_key": null,
+              "previous_deliveries": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "round": 2,
+      "final": false,
+      "workflow_stage": "normal",
+      "workflow_view_sha256": "751be4e4b887fb271554ceda7353658915d37982e9cd1d94e84b0ad38d0f0423",
+      "visible_evidence": [],
+      "actions": [
+        {
+          "tool": "search",
+          "tool_call_id": "call_c4b29b4b729643108d656913",
+          "arguments_summary": {
+            "top_k": 10,
+            "queries_sha256": [
+              "5a62b241481cb91b46b277b92eb454e4e0c9d31816ff94efce3edd2cd8bc154b",
+              "1e7377892450bc6518b05dcdbbfdcbc715aaa103ccb181445531d2a4a1c7e677",
+              "a62a23cf91b63db0866e15d3641b13f24eaf7a5f4d61ccf7193c05be1032d0a8"
+            ]
+          },
+          "raw_arguments_sha256": "bf6be31694cc64c762500e17bcbc4e6c51b3ddd851f10a6854066fb99c4bc23f",
+          "executed": true,
+          "ok": true,
+          "error": null,
+          "query_results": [
+            {
+              "view": "full",
+              "cached": false,
+              "result_fingerprint": null,
+              "query_key": null,
+              "previous_deliveries": null
+            },
+            {
+              "view": "full",
+              "cached": false,
+              "result_fingerprint": null,
+              "query_key": null,
+              "previous_deliveries": null
+            },
+            {
+              "view": "full",
+              "cached": false,
+              "result_fingerprint": null,
+              "query_key": null,
+              "previous_deliveries": null
+            }
+          ]
+        },
+        {
+          "tool": "search",
+          "tool_call_id": "call_98aff7349080434ba88ad6b9",
+          "arguments_summary": {
+            "top_k": 10,
+            "queries_sha256": [
+              "f540d8c91de947f03158510ecb4205e4591bfa315a328250409bfafe1d63987c",
+              "0970c7cb1a0197676c07b03b42d666e880c161b730d3f161937621fb7184bfc9"
+            ]
+          },
+          "raw_arguments_sha256": "89c43a7dc838bbbe3d4e597eb089a9cf47190cf73b73f24192422e5fd2f320b2",
+          "executed": true,
+          "ok": true,
+          "error": null,
+          "query_results": [
+            {
+              "view": "full",
+              "cached": false,
+              "result_fingerprint": null,
+              "query_key": null,
+              "previous_deliveries": null
+            },
+            {
+              "view": "full",
+              "cached": false,
+              "result_fingerprint": null,
+              "query_key": null,
+              "previous_deliveries": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "round": 3,
+      "final": false,
+      "workflow_stage": "normal",
+      "workflow_view_sha256": "aa6b78049ce728dd37db3a67a976c9ec0fc86a20babd9b6dcb88c8af7a22b01a",
+      "visible_evidence": [],
+      "actions": [
+        {
+          "tool": "search",
+          "tool_call_id": "call_f9747ad8252c4eb5ae3a73fd",
+          "arguments_summary": {
+            "top_k": 10,
+            "queries_sha256": [
+              "76bb8610c8211de8c32ccdb57da12619f63d3c4dd9a78823bc9e68f139c5e8e9",
+              "732adfc88dde888080971458c61c73507fd77b753027a947f4fbe1c4cc13f4d0",
+              "cedcdb91a3bfb43172cf96474724d395f5f2864fbef312086cf099070056986a"
+            ]
+          },
+          "raw_arguments_sha256": "3c15d2c25cbc99a0f604ee1f5d1fce4958a6527dacc879be2ccbcafa2c38bc79",
+          "executed": true,
+          "ok": true,
+          "error": null,
+          "query_results": [
+            {
+              "view": "full",
+              "cached": false,
+              "result_fingerprint": null,
+              "query_key": null,
+              "previous_deliveries": null
+            },
+            {
+              "view": "full",
+              "cached": false,
+              "result_fingerprint": null,
+              "query_key": null,
+              "previous_deliveries": null
+            },
+            {
+              "view": "full",
+              "cached": false,
+              "result_fingerprint": null,
+              "query_key": null,
+              "previous_deliveries": null
+            }
+          ]
+        },
+        {
+          "tool": "read",
+          "tool_call_id": "call_eff7df42204b484ba21c860a",
+          "arguments_summary": {
+            "ref": "d38"
+          },
+          "raw_arguments_sha256": "d1232604e6325971f88eb4141d0a71b48881eae60456fa2920b5ae84475ed2c9",
+          "executed": true,
+          "ok": true,
+          "error": null,
+          "read_result_summary": {
+            "action_slot_charged": true,
+            "evidence": {
+              "document": "d38",
+              "document_chars": 17355,
+              "end": 3000,
+              "kind": "raw_evidence",
+              "ref": "e1",
+              "sha256": "79767844ce2071fc5dcf3fb0e64d0cade0ba154ef0fc324d0054c1c767e63138",
+              "snapshot": "90019ca46504785f620ef12f36abae20080c8c3bc7809053339e4beaa4deb2fd",
+              "start": 0
+            },
+            "executed": true,
+            "next_start": 3000,
+            "ok": true,
+            "previously_received": false
+          }
+        }
+      ]
+    },
+    {
+      "round": 4,
+      "final": false,
+      "workflow_stage": "normal",
+      "workflow_view_sha256": "057b008366dcf4a57ea74c53c076af593ed8a3a3c0c91ded51a9d15409d59c7d",
+      "visible_evidence": [
+        "e1"
+      ],
+      "actions": [
+        {
+          "tool": "search",
+          "tool_call_id": "call_9ef4fe5a56b34c3d9bc8aac4",
+          "arguments_summary": {
+            "top_k": 10,
+            "queries_sha256": [
+              "dd9e1c2d37859a0a95519993da87e0c66435eef2f1a5f394b73d96e87ac72776",
+              "09fa92854deac793b361eaa490304ca29c8c55dd931b7de6be9314fb0e57502e"
+            ]
+          },
+          "raw_arguments_sha256": "7e65d54323d41e66eaec5b283c24fbda2516fae830458616402f0953b0f2d6a0",
+          "executed": true,
+          "ok": true,
+          "error": null,
+          "query_results": [
+            {
+              "view": "full",
+              "cached": false,
+              "result_fingerprint": null,
+              "query_key": null,
+              "previous_deliveries": null
+            },
+            {
+              "view": "full",
+              "cached": false,
+              "result_fingerprint": null,
+              "query_key": null,
+              "previous_deliveries": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "round": 5,
+      "final": false,
+      "workflow_stage": "normal",
+      "workflow_view_sha256": "8f631eff282d9a6a1925eca6be55adcf1f32a762d2e19fdf3d5bdd3042cf2080",
+      "visible_evidence": [
+        "e1"
+      ],
+      "actions": [
+        {
+          "tool": "read",
+          "tool_call_id": "call_c1aa1e66c0f04ca4aba8bf91",
+          "arguments_summary": {
+            "ref": "d86"
+          },
+          "raw_arguments_sha256": "44e04a3741c2c459a7acd50ca30de4dc907b5c28080cbadfbb53d96b66a51129",
+          "executed": true,
+          "ok": true,
+          "error": null,
+          "read_result_summary": {
+            "action_slot_charged": true,
+            "evidence": {
+              "document": "d86",
+              "document_chars": 27013,
+              "end": 3000,
+              "kind": "raw_evidence",
+              "ref": "e2",
+              "sha256": "fe7103588bdedb65d2bce58f2eb8dcf7f7fb7a5d81aff763760b9decd9a62ef5",
+              "snapshot": "650b898f3eaa1e0d792c8f3b8578b301f5b2335c6ab971f106e6f9e7bc6aa0e3",
+              "start": 0
+            },
+            "executed": true,
+            "next_start": 3000,
+            "ok": true,
+            "previously_received": false
+          }
+        },
+        {
+          "tool": "search",
+          "tool_call_id": "call_d701907e80b849488e6f021a",
+          "arguments_summary": {
+            "top_k": 10,
+            "queries_sha256": [
+              "4549dbe7389e796e162619d20464c6b910a4ea5b7e815d5f9e86e6937b373bce",
+              "5e9f2de7a52339d4976f3c1b8281901cc97cda73f977157f5ec6313f18aa1001"
+            ]
+          },
+          "raw_arguments_sha256": "8ab6dbad4f7370f5109222a8a2223a589608e71b6f926066a5ae9a8b099ce70e",
+          "executed": true,
+          "ok": true,
+          "error": null,
+          "query_results": [
+            {
+              "view": "full",
+              "cached": false,
+              "result_fingerprint": null,
+              "query_key": null,
+              "previous_deliveries": null
+            },
+            {
+              "view": "full",
+              "cached": false,
+              "result_fingerprint": null,
+              "query_key": null,
+              "previous_deliveries": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "round": 6,
+      "final": false,
+      "workflow_stage": "normal",
+      "workflow_view_sha256": "3c66153925d2a990b0ffaeb06e7396537d36e06dcec49d1fec9596dca3933fe7",
+      "visible_evidence": [
+        "e1",
+        "e2"
+      ],
+      "actions": [
+        {
+          "tool": "search",
+          "tool_call_id": "call_3238ce90dfd047d093e59b8e",
+          "arguments_summary": {
+            "top_k": 10,
+            "queries_sha256": [
+              "427f2021f2ceda0c4233b37735a584564d034cfab65b00360506c2ca1ae060e1",
+              "faabb48f87dd2c8704150553cbdd23ab8b88673d5671e6a01bdd16ef112a8419"
+            ]
+          },
+          "raw_arguments_sha256": "b0a9b387b29e9eb6b21bf79222e6267daa226b2d129ac9e9892ff40a1d38ed1f",
+          "executed": true,
+          "ok": true,
+          "error": null,
+          "query_results": [
+            {
+              "view": "full",
+              "cached": false,
+              "result_fingerprint": null,
+              "query_key": null,
+              "previous_deliveries": null
+            },
+            {
+              "view": "full",
+              "cached": false,
+              "result_fingerprint": null,
+              "query_key": null,
+              "previous_deliveries": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "round": 7,
+      "final": false,
+      "workflow_stage": "normal",
+      "workflow_view_sha256": "3c66153925d2a990b0ffaeb06e7396537d36e06dcec49d1fec9596dca3933fe7",
+      "visible_evidence": [
+        "e1",
+        "e2"
+      ],
+      "actions": [
+        {
+          "tool": "search",
+          "tool_call_id": "call_564986ce8bbb4826865424b7",
+          "arguments_summary": {
+            "top_k": 10,
+            "queries_sha256": [
+              "451dae1a8788056c18daa2f257669b24169feed8825b1dc84c2b7adb9b97c989",
+              "4666988d45b9a3c43adeedbfdf0972e093a89eaa161f83e40069021f292dff7a"
+            ]
+          },
+          "raw_arguments_sha256": "f1aa5cc966e04aedccdd162256e8d0b86603f2e32587d0124ead9ae314886608",
+          "executed": true,
+          "ok": true,
+          "error": null,
+          "query_results": [
+            {
+              "view": "full",
+              "cached": false,
+              "result_fingerprint": null,
+              "query_key": null,
+              "previous_deliveries": null
+            },
+            {
+              "view": "full",
+              "cached": false,
+              "result_fingerprint": null,
+              "query_key": null,
+              "previous_deliveries": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "round": 8,
+      "final": false,
+      "workflow_stage": "normal",
+      "workflow_view_sha256": "e4780db7fcb0ca7f2c2d6fb62355af5b3749830c1b94a60eded3de6f15fda320",
+      "visible_evidence": [
+        "e1",
+        "e2"
+      ],
+      "actions": [
+        {
+          "tool": "search",
+          "tool_call_id": "call_375db26b968e42aabc396a03",
+          "arguments_summary": {
+            "top_k": 10,
+            "queries_sha256": [
+              "04043d5e51750814f4b8fb635bfd942d22db52f371681535bb1572b7c0ef75b9",
+              "099836f6a36a2798d84d015e4bdc48588aa8740d58f17214ec11ab54a0991ede"
+            ]
+          },
+          "raw_arguments_sha256": "1d73a04c7980f374e6035305dbc8d06c72c7d58d145246334ac666b1a27e55ad",
+          "executed": true,
+          "ok": true,
+          "error": null,
+          "query_results": [
+            {
+              "view": "full",
+              "cached": false,
+              "result_fingerprint": null,
+              "query_key": null,
+              "previous_deliveries": null
+            },
+            {
+              "view": "full",
+              "cached": false,
+              "result_fingerprint": null,
+              "query_key": null,
+              "previous_deliveries": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "round": 9,
+      "final": false,
+      "workflow_stage": "normal",
+      "workflow_view_sha256": "e99833f9957ab38f3880173d0d17614aadbcdef4ba61c39f1f79b4ef72afeaaa",
+      "visible_evidence": [
+        "e1",
+        "e2"
+      ],
+      "actions": [
+        {
+          "tool": "read",
+          "tool_call_id": "call_44a69475a00b443282ebfe3b",
+          "arguments_summary": {
+            "ref": "d72"
+          },
+          "raw_arguments_sha256": "91763051359e9ffb5c85a40287598c205700e9582902e76b8b2e4b38fb333633",
+          "executed": true,
+          "ok": true,
+          "error": null,
+          "read_result_summary": {
+            "action_slot_charged": true,
+            "evidence": {
+              "document": "d72",
+              "document_chars": 34987,
+              "end": 3000,
+              "kind": "raw_evidence",
+              "ref": "e3",
+              "sha256": "f25543f7a26771a164c3efb838880af5fc76d669a95281c768b8896ae57e04f0",
+              "snapshot": "81c80adef0ee1e251760e00a50d994b39cd387db733d352b2aabf6693458d123",
+              "start": 0
+            },
+            "executed": true,
+            "next_start": 3000,
+            "ok": true,
+            "previously_received": false
+          }
+        }
+      ]
+    },
+    {
+      "round": 10,
+      "final": false,
+      "workflow_stage": "normal",
+      "workflow_view_sha256": "c6c633c873014c5456fcf4649bc76458d5900f47b7a69d6d0295cb65637a3bf6",
+      "visible_evidence": [
+        "e1",
+        "e2",
+        "e3"
+      ],
+      "actions": [
+        {
+          "tool": "find",
+          "tool_call_id": "call_f57f7a26a9f64f3cbf402229",
+          "arguments_summary": {
+            "ref": "d72"
+          },
+          "raw_arguments_sha256": "64ff7f4bee78d378bdae0b8096d2a0885704bc0dd50aebb3c6ff31c2e330f399",
+          "executed": true,
+          "ok": true,
+          "error": null
+        }
+      ]
+    },
+    {
+      "round": 11,
+      "final": false,
+      "workflow_stage": "normal",
+      "workflow_view_sha256": "c6c633c873014c5456fcf4649bc76458d5900f47b7a69d6d0295cb65637a3bf6",
+      "visible_evidence": [
+        "e1",
+        "e2",
+        "e3"
+      ],
+      "actions": [
+        {
+          "tool": "read",
+          "tool_call_id": "call_234ac4de91a7499c9e778543",
+          "arguments_summary": {
+            "ref": "d72",
+            "start": 21600,
+            "length": 3000
+          },
+          "raw_arguments_sha256": "57d2dc01293144e2c4c6ee55d85e6cb2a26770be04b5f8ddc6185c40afab26fe",
+          "executed": true,
+          "ok": true,
+          "error": null,
+          "read_result_summary": {
+            "action_slot_charged": true,
+            "evidence": {
+              "document": "d72",
+              "document_chars": 34987,
+              "end": 24600,
+              "kind": "raw_evidence",
+              "ref": "e4",
+              "sha256": "7c1b52a1b3c248929ae1e30eed37bb19784346d956c03a0b20fdfa3eb1aee657",
+              "snapshot": "81c80adef0ee1e251760e00a50d994b39cd387db733d352b2aabf6693458d123",
+              "start": 21600
+            },
+            "executed": true,
+            "next_start": 24600,
+            "ok": true,
+            "previously_received": false
+          }
+        }
+      ]
+    },
+    {
+      "round": 12,
+      "final": false,
+      "workflow_stage": "normal",
+      "workflow_view_sha256": "ee5c54f26558dd5778aff2878f7f8311533bb668d676252692c1cf69a099ecfb",
+      "visible_evidence": [
+        "e1",
+        "e2",
+        "e3",
+        "e4"
+      ],
+      "actions": [
+        {
+          "tool": "search",
+          "tool_call_id": "call_1e2773768b7441fd84c5d9ad",
+          "arguments_summary": {
+            "top_k": 10,
+            "queries_sha256": [
+              "dd9e1c2d37859a0a95519993da87e0c66435eef2f1a5f394b73d96e87ac72776",
+              "e5b53619e6fe288b674bd1eabea2030913d5aa3d9c0a97700085dabbb9cabc49"
+            ]
+          },
+          "raw_arguments_sha256": "ab6756c6ab20ad441c803369379109bf943801276698bc2001f7ccf830b72ba1",
+          "executed": true,
+          "ok": true,
+          "error": null,
+          "query_results": [
+            {
+              "view": "reuse",
+              "cached": true,
+              "result_fingerprint": null,
+              "query_key": null,
+              "previous_deliveries": null
+            },
+            {
+              "view": "full",
+              "cached": false,
+              "result_fingerprint": null,
+              "query_key": null,
+              "previous_deliveries": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "round": 13,
+      "final": false,
+      "workflow_stage": "normal",
+      "workflow_view_sha256": "79bcc532cf94334d7cf0dc7fa2a2289813aed795b4b73426baf6ad1380cf1641",
+      "visible_evidence": [
+        "e2",
+        "e3",
+        "e4"
+      ],
+      "actions": [
+        {
+          "tool": "search",
+          "tool_call_id": "call_ef7390ffb1104389a7cf891c",
+          "arguments_summary": {
+            "top_k": 10,
+            "queries_sha256": [
+              "70f74bcb7adcf7de3643d5bb6adc5ad44160edf61baa812cf75f814882648712",
+              "0bd9bd33b95c5caadeba134be60a7ef3c176cc638c1aa9c33fd0ca6fc769fa2b"
+            ]
+          },
+          "raw_arguments_sha256": "72b4452ccadf83a51930a2c7718e6a55c4ed2b9fa1bb3209616b05a4aeb5abac",
+          "executed": true,
+          "ok": true,
+          "error": null,
+          "query_results": [
+            {
+              "view": "full",
+              "cached": false,
+              "result_fingerprint": null,
+              "query_key": null,
+              "previous_deliveries": null
+            },
+            {
+              "view": "full",
+              "cached": false,
+              "result_fingerprint": null,
+              "query_key": null,
+              "previous_deliveries": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "round": 14,
+      "final": false,
+      "workflow_stage": "normal",
+      "workflow_view_sha256": "162195f521d3c3583473199d6149f1ede04f4565fd322c27d3e7d8602b66114e",
+      "visible_evidence": [
+        "e2",
+        "e3",
+        "e4"
+      ],
+      "actions": [
+        {
+          "tool": "search",
+          "tool_call_id": "call_986bc66f5e8744cdbe40d210",
+          "arguments_summary": {
+            "top_k": 10,
+            "queries_sha256": [
+              "2c5bbc980d586f1e5f7760d0727485029d2a451d2da2b25c59cc882a1a4b32e0",
+              "c6cc8a3dd825ff43b7361b8b11b6b02f73a9e271dc4cfb27709ee9d4cf826a37"
+            ]
+          },
+          "raw_arguments_sha256": "a8705eb0bcad01f81f4760e8b98b8c25e6ce14dd41279ec834de8f8099811324",
+          "executed": true,
+          "ok": true,
+          "error": null,
+          "query_results": [
+            {
+              "view": "full",
+              "cached": false,
+              "result_fingerprint": null,
+              "query_key": null,
+              "previous_deliveries": null
+            },
+            {
+              "view": "full",
+              "cached": false,
+              "result_fingerprint": null,
+              "query_key": null,
+              "previous_deliveries": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "round": 15,
+      "final": false,
+      "workflow_stage": "normal",
+      "workflow_view_sha256": "cf277a451d5d4a49bf4db359a4b78fc57902ae6595d584c1c9f179f0ecc02890",
+      "visible_evidence": [
+        "e2",
+        "e3",
+        "e4"
+      ],
+      "actions": [
+        {
+          "tool": "read",
+          "tool_call_id": "call_38b6d1a60b9444b1af8834bc",
+          "arguments_summary": {
+            "ref": "d86",
+            "start": 3000,
+            "length": 3000
+          },
+          "raw_arguments_sha256": "eafdcb919d00a48b0709da8a45a57de7d70844789bcf28aa4f4209e82596eacf",
+          "executed": true,
+          "ok": true,
+          "error": null,
+          "read_result_summary": {
+            "action_slot_charged": true,
+            "evidence": {
+              "document": "d86",
+              "document_chars": 27013,
+              "end": 6000,
+              "kind": "raw_evidence",
+              "ref": "e5",
+              "sha256": "eb4f8d7a33eb232717731849583ed25e7221eb71a78ecdc9970d78d87c7547e6",
+              "snapshot": "650b898f3eaa1e0d792c8f3b8578b301f5b2335c6ab971f106e6f9e7bc6aa0e3",
+              "start": 3000
+            },
+            "executed": true,
+            "next_start": 6000,
+            "ok": true,
+            "previously_received": false
+          }
+        }
+      ]
+    },
+    {
+      "round": 16,
+      "final": true,
+      "workflow_stage": "normal",
+      "workflow_view_sha256": "05d92e07ecaa88673964c21c135aab1e193aa86ec0557e54fe8b5e21d6fa9dd8",
+      "visible_evidence": [
+        "e2",
+        "e3",
+        "e4",
+        "e5"
+      ],
+      "actions": [
+        {
+          "tool": "finish",
+          "tool_call_id": "call_80a3b63e7cb540ba956ef4e1",
+          "arguments_summary": {
+            "answer": "Akure, Nigeria",
+            "refs": [
+              "e1",
+              "e2"
+            ]
+          },
+          "raw_arguments_sha256": "f990e46867162dea78829ffc58baf2d2a2dbc3781c4348875c806d4e0d8129e8",
+          "executed": true,
+          "ok": true,
+          "error": null
+        }
+      ]
+    }
+  ],
+  "q775-legacy": [
+    {
+      "round": 1,
+      "final": false,
+      "workflow_stage": null,
+      "workflow_view_sha256": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
+      "visible_evidence": [],
+      "actions": [
+        {
+          "tool": "search",
+          "tool_call_id": "call_a7becf56f4cd470c89cf3075",
+          "arguments_summary": {
+            "queries_sha256": [
+              "7ca267ce5127d832c1eeb795d4612b972396950df24b1b7c775b5a4a212f9f8c",
+              "4a9a81597efccfa70e967f1355296f260833586403b9e2a869e142d6a89465b4",
+              "8b3fcf29984eb28657d47e20f20152ec16dd1a7f8578d9346b32ac02211e0e71"
+            ]
+          },
+          "raw_arguments_sha256": "41564b0c1fbc31274d305f22eb967560e08c838d5531cd378415d0fffa2f78bc",
+          "executed": true,
+          "ok": true,
+          "error": null,
+          "query_results": [
+            {
+              "view": null,
+              "cached": false,
+              "result_fingerprint": null,
+              "query_key": null,
+              "previous_deliveries": null
+            },
+            {
+              "view": null,
+              "cached": false,
+              "result_fingerprint": null,
+              "query_key": null,
+              "previous_deliveries": null
+            },
+            {
+              "view": null,
+              "cached": false,
+              "result_fingerprint": null,
+              "query_key": null,
+              "previous_deliveries": null
+            }
+          ]
+        },
+        {
+          "tool": "search",
+          "tool_call_id": "call_865660612175472a9b97bb4d",
+          "arguments_summary": {
+            "queries_sha256": [
+              "604e1416a461de971435003312d65844eb6527022e7f7c1ea7729ad9288876af",
+              "11bb997560fb0975314452c145f1c8bdae09406f9a216ecbb53a4a32a9e99071",
+              "00ade60daa4ad3fbe3813b042df47118dcdc8882019aeed68427dc295fd5273b"
+            ]
+          },
+          "raw_arguments_sha256": "49e0a20649c3eec51adefb8fff6ebeaa8e93a1b06a43ee23dda8f86656803877",
+          "executed": true,
+          "ok": true,
+          "error": null,
+          "query_results": [
+            {
+              "view": null,
+              "cached": false,
+              "result_fingerprint": null,
+              "query_key": null,
+              "previous_deliveries": null
+            },
+            {
+              "view": null,
+              "cached": false,
+              "result_fingerprint": null,
+              "query_key": null,
+              "previous_deliveries": null
+            },
+            {
+              "view": null,
+              "cached": false,
+              "result_fingerprint": null,
+              "query_key": null,
+              "previous_deliveries": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "round": 2,
+      "final": false,
+      "workflow_stage": null,
+      "workflow_view_sha256": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
+      "visible_evidence": [],
+      "actions": [
+        {
+          "tool": "search",
+          "tool_call_id": "call_4ab700ceec47420aaa301257",
+          "arguments_summary": {
+            "queries_sha256": [
+              "a1e9b51d68ca935fdcead2279980a50388e1bd5825db6a1625aa98811169d13d",
+              "f32917179e07b625725c9c40d5650c04af6dd711650bd7812b3340c9df0be41e",
+              "cf2b89d5be79c5adf44b1837d2fae6919add65daa7b120ee1bc8b42c88d190b4"
+            ]
+          },
+          "raw_arguments_sha256": "02837604bde2b7fff90168a90db89cabea628fb7436768b69468cd51598cd8f1",
+          "executed": true,
+          "ok": true,
+          "error": null,
+          "query_results": [
+            {
+              "view": null,
+              "cached": false,
+              "result_fingerprint": null,
+              "query_key": null,
+              "previous_deliveries": null
+            },
+            {
+              "view": null,
+              "cached": false,
+              "result_fingerprint": null,
+              "query_key": null,
+              "previous_deliveries": null
+            },
+            {
+              "view": null,
+              "cached": false,
+              "result_fingerprint": null,
+              "query_key": null,
+              "previous_deliveries": null
+            }
+          ]
+        },
+        {
+          "tool": "search",
+          "tool_call_id": "call_db4b3db70b514979a7cee68c",
+          "arguments_summary": {
+            "queries_sha256": [
+              "a0a930c878f9671c8cae5570745f9f956bfbdc2971612f4ca9d4101551305e1a",
+              "ab084bfd44683309e045a0c4ec595ee178ccb7b1dcdb268340a3dfb6d5fea0d7",
+              "c6b6eb0e81384dc9fb090c9f7e558da08c65bac7985f3790ea7f9ea9c3c8de94"
+            ]
+          },
+          "raw_arguments_sha256": "431ff8f8a9974b4d29e97d68d2573c858a94223ec2245a506d79d08068a4c3fe",
+          "executed": true,
+          "ok": true,
+          "error": null,
+          "query_results": [
+            {
+              "view": null,
+              "cached": false,
+              "result_fingerprint": null,
+              "query_key": null,
+              "previous_deliveries": null
+            },
+            {
+              "view": null,
+              "cached": false,
+              "result_fingerprint": null,
+              "query_key": null,
+              "previous_deliveries": null
+            },
+            {
+              "view": null,
+              "cached": false,
+              "result_fingerprint": null,
+              "query_key": null,
+              "previous_deliveries": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "round": 3,
+      "final": false,
+      "workflow_stage": null,
+      "workflow_view_sha256": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
+      "visible_evidence": [],
+      "actions": [
+        {
+          "tool": "search",
+          "tool_call_id": "call_e279932ef4684130ab55f5f1",
+          "arguments_summary": {
+            "queries_sha256": [
+              "9f297eac23314ceaedb505d17a023852a580d408e3c435d0bfc190b09be6cb2d",
+              "dad1e532e30d93e08165c8aded078d4b366b4f4d0f78b54d7744eb316c68c76d",
+              "9995ab2d2fc4d1c52b45c97a0cc3e6aa418d168ef816f2e139ad56d24f10c750"
+            ]
+          },
+          "raw_arguments_sha256": "898a802ab1c569eab07ac1b7a34530a58e3d3d87f4b05a986e423bea5bfdcfb9",
+          "executed": true,
+          "ok": true,
+          "error": null,
+          "query_results": [
+            {
+              "view": null,
+              "cached": false,
+              "result_fingerprint": null,
+              "query_key": null,
+              "previous_deliveries": null
+            },
+            {
+              "view": null,
+              "cached": false,
+              "result_fingerprint": null,
+              "query_key": null,
+              "previous_deliveries": null
+            },
+            {
+              "view": null,
+              "cached": false,
+              "result_fingerprint": null,
+              "query_key": null,
+              "previous_deliveries": null
+            }
+          ]
+        },
+        {
+          "tool": "search",
+          "tool_call_id": "call_88072c0ce88f42e08cc05548",
+          "arguments_summary": {
+            "queries_sha256": [
+              "77ba4663fe4365ab7672cea336d8c9d26af1c1a70cf1a2c773fe9bfa03190406",
+              "bcd559a057ed333c3c7185e832c5361dc2508ad867810715fc0d86359320ffc7",
+              "2a5ed49d0c7fde119d2c49a6ff941e919825a01646c730581962a2cbae993757"
+            ]
+          },
+          "raw_arguments_sha256": "30cf36b92350620fb4da437fbce4e6af571017698e9d512caeca1714107254b8",
+          "executed": true,
+          "ok": true,
+          "error": null,
+          "query_results": [
+            {
+              "view": null,
+              "cached": false,
+              "result_fingerprint": null,
+              "query_key": null,
+              "previous_deliveries": null
+            },
+            {
+              "view": null,
+              "cached": false,
+              "result_fingerprint": null,
+              "query_key": null,
+              "previous_deliveries": null
+            },
+            {
+              "view": null,
+              "cached": false,
+              "result_fingerprint": null,
+              "query_key": null,
+              "previous_deliveries": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "round": 4,
+      "final": false,
+      "workflow_stage": null,
+      "workflow_view_sha256": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
+      "visible_evidence": [],
+      "actions": [
+        {
+          "tool": "search",
+          "tool_call_id": "call_170ca5201a404799a8a5cc06",
+          "arguments_summary": {
+            "queries_sha256": [
+              "3314b172877f4308899cf235a5eafa5121388a6391b6670324333e747f4cc9b6",
+              "40a4411fe179a3995f021aad2191aaeb507ec07d70d18c9be6357ffc4374607f",
+              "fd4aecc82e1103ccabb9f5a95c0312419d30dc1a92eaded0fccc715c66904044"
+            ]
+          },
+          "raw_arguments_sha256": "5fa5e40a4e43d92d373605730f536ae828c4d1a12ccee953f59914e10a28e5e7",
+          "executed": true,
+          "ok": true,
+          "error": null,
+          "query_results": [
+            {
+              "view": null,
+              "cached": false,
+              "result_fingerprint": null,
+              "query_key": null,
+              "previous_deliveries": null
+            },
+            {
+              "view": null,
+              "cached": false,
+              "result_fingerprint": null,
+              "query_key": null,
+              "previous_deliveries": null
+            },
+            {
+              "view": null,
+              "cached": false,
+              "result_fingerprint": null,
+              "query_key": null,
+              "previous_deliveries": null
+            }
+          ]
+        },
+        {
+          "tool": "search",
+          "tool_call_id": "call_0bd33192be7a4a78baf5c3c6",
+          "arguments_summary": {
+            "queries_sha256": [
+              "f42e39969300afef95e476b7794278c9b035768de16a71e7047475d91eb82ceb",
+              "e17ae4a6671b5e1730bfc26810162cf7a0d250d0fc1a4fbd340289a7f800cb7b",
+              "c9a05ac79c0e97507775d23be90838e3fd2ad96f9e2536bd98ebdc2d120aee8b"
+            ]
+          },
+          "raw_arguments_sha256": "0b8fe5fe705d6d9f6ccef880ba0fbce63f5ab2d1566da89f990f8c368e288ce4",
+          "executed": true,
+          "ok": true,
+          "error": null,
+          "query_results": [
+            {
+              "view": null,
+              "cached": false,
+              "result_fingerprint": null,
+              "query_key": null,
+              "previous_deliveries": null
+            },
+            {
+              "view": null,
+              "cached": false,
+              "result_fingerprint": null,
+              "query_key": null,
+              "previous_deliveries": null
+            },
+            {
+              "view": null,
+              "cached": false,
+              "result_fingerprint": null,
+              "query_key": null,
+              "previous_deliveries": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "round": 5,
+      "final": false,
+      "workflow_stage": null,
+      "workflow_view_sha256": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
+      "visible_evidence": [],
+      "actions": [
+        {
+          "tool": "search",
+          "tool_call_id": "call_6069670d5e0e4500ab90ad30",
+          "arguments_summary": {
+            "queries_sha256": [
+              "5150fc7774cab6a7bde5f4486917a1e4ef5712dcb71a8df7b14142aab8ddf04f",
+              "4c4a2bd9579da76b754acc67b15361b8636e3600ba6618502302ece5769e5b7a",
+              "77664277f77175fa89bb6db0db5b599ad0b10a64cd826bd522a66cc69d89a709"
+            ]
+          },
+          "raw_arguments_sha256": "423cd7632a0c1d5afd8cfe57aa36b86dc45818625ad49c1ad02ba7305948b6a4",
+          "executed": true,
+          "ok": true,
+          "error": null,
+          "query_results": [
+            {
+              "view": null,
+              "cached": false,
+              "result_fingerprint": null,
+              "query_key": null,
+              "previous_deliveries": null
+            },
+            {
+              "view": null,
+              "cached": false,
+              "result_fingerprint": null,
+              "query_key": null,
+              "previous_deliveries": null
+            },
+            {
+              "view": null,
+              "cached": false,
+              "result_fingerprint": null,
+              "query_key": null,
+              "previous_deliveries": null
+            }
+          ]
+        },
+        {
+          "tool": "search",
+          "tool_call_id": "call_0cd11d9d8b964646bdb0531e",
+          "arguments_summary": {
+            "queries_sha256": [
+              "a902846e61ac4455854b1ff4ef8d53f9d95c736f73b0966b85429676b83c5d36",
+              "1c94a19a8235b4083abf3242e601225e44c4a21863b6849662e2f5ab9bbf4da8",
+              "19c8198b6165e3c384da2f677601b989c9a141baf18cb88e43973086b4877710"
+            ]
+          },
+          "raw_arguments_sha256": "61ca8ae412d1c96eae154a7558687f33b9350bffc87c05892349f6820480a095",
+          "executed": true,
+          "ok": true,
+          "error": null,
+          "query_results": [
+            {
+              "view": null,
+              "cached": false,
+              "result_fingerprint": null,
+              "query_key": null,
+              "previous_deliveries": null
+            },
+            {
+              "view": null,
+              "cached": false,
+              "result_fingerprint": null,
+              "query_key": null,
+              "previous_deliveries": null
+            },
+            {
+              "view": null,
+              "cached": false,
+              "result_fingerprint": null,
+              "query_key": null,
+              "previous_deliveries": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "round": 6,
+      "final": false,
+      "workflow_stage": null,
+      "workflow_view_sha256": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
+      "visible_evidence": [],
+      "actions": [
+        {
+          "tool": "search",
+          "tool_call_id": "call_d104376312484ddebb653c37",
+          "arguments_summary": {
+            "queries_sha256": [
+              "5150fc7774cab6a7bde5f4486917a1e4ef5712dcb71a8df7b14142aab8ddf04f",
+              "4c4a2bd9579da76b754acc67b15361b8636e3600ba6618502302ece5769e5b7a",
+              "77664277f77175fa89bb6db0db5b599ad0b10a64cd826bd522a66cc69d89a709"
+            ]
+          },
+          "raw_arguments_sha256": "423cd7632a0c1d5afd8cfe57aa36b86dc45818625ad49c1ad02ba7305948b6a4",
+          "executed": true,
+          "ok": true,
+          "error": null,
+          "query_results": [
+            {
+              "view": null,
+              "cached": true,
+              "result_fingerprint": null,
+              "query_key": null,
+              "previous_deliveries": null
+            },
+            {
+              "view": null,
+              "cached": true,
+              "result_fingerprint": null,
+              "query_key": null,
+              "previous_deliveries": null
+            },
+            {
+              "view": null,
+              "cached": true,
+              "result_fingerprint": null,
+              "query_key": null,
+              "previous_deliveries": null
+            }
+          ]
+        },
+        {
+          "tool": "search",
+          "tool_call_id": "call_5a93a9127ef3439699a6124c",
+          "arguments_summary": {
+            "queries_sha256": [
+              "a902846e61ac4455854b1ff4ef8d53f9d95c736f73b0966b85429676b83c5d36",
+              "1c94a19a8235b4083abf3242e601225e44c4a21863b6849662e2f5ab9bbf4da8",
+              "19c8198b6165e3c384da2f677601b989c9a141baf18cb88e43973086b4877710"
+            ]
+          },
+          "raw_arguments_sha256": "61ca8ae412d1c96eae154a7558687f33b9350bffc87c05892349f6820480a095",
+          "executed": true,
+          "ok": true,
+          "error": null,
+          "query_results": [
+            {
+              "view": null,
+              "cached": true,
+              "result_fingerprint": null,
+              "query_key": null,
+              "previous_deliveries": null
+            },
+            {
+              "view": null,
+              "cached": true,
+              "result_fingerprint": null,
+              "query_key": null,
+              "previous_deliveries": null
+            },
+            {
+              "view": null,
+              "cached": true,
+              "result_fingerprint": null,
+              "query_key": null,
+              "previous_deliveries": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "round": 7,
+      "final": false,
+      "workflow_stage": null,
+      "workflow_view_sha256": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
+      "visible_evidence": [],
+      "actions": [
+        {
+          "tool": "search",
+          "tool_call_id": "call_c635aa1b1c5f493ea60c9d38",
+          "arguments_summary": {
+            "queries_sha256": [
+              "5150fc7774cab6a7bde5f4486917a1e4ef5712dcb71a8df7b14142aab8ddf04f",
+              "4c4a2bd9579da76b754acc67b15361b8636e3600ba6618502302ece5769e5b7a",
+              "77664277f77175fa89bb6db0db5b599ad0b10a64cd826bd522a66cc69d89a709"
+            ]
+          },
+          "raw_arguments_sha256": "423cd7632a0c1d5afd8cfe57aa36b86dc45818625ad49c1ad02ba7305948b6a4",
+          "executed": true,
+          "ok": true,
+          "error": null,
+          "query_results": [
+            {
+              "view": null,
+              "cached": true,
+              "result_fingerprint": null,
+              "query_key": null,
+              "previous_deliveries": null
+            },
+            {
+              "view": null,
+              "cached": true,
+              "result_fingerprint": null,
+              "query_key": null,
+              "previous_deliveries": null
+            },
+            {
+              "view": null,
+              "cached": true,
+              "result_fingerprint": null,
+              "query_key": null,
+              "previous_deliveries": null
+            }
+          ]
+        },
+        {
+          "tool": "search",
+          "tool_call_id": "call_3bb14b05fafd46b58a006d33",
+          "arguments_summary": {
+            "queries_sha256": [
+              "a902846e61ac4455854b1ff4ef8d53f9d95c736f73b0966b85429676b83c5d36",
+              "1c94a19a8235b4083abf3242e601225e44c4a21863b6849662e2f5ab9bbf4da8",
+              "19c8198b6165e3c384da2f677601b989c9a141baf18cb88e43973086b4877710"
+            ]
+          },
+          "raw_arguments_sha256": "61ca8ae412d1c96eae154a7558687f33b9350bffc87c05892349f6820480a095",
+          "executed": true,
+          "ok": true,
+          "error": null,
+          "query_results": [
+            {
+              "view": null,
+              "cached": true,
+              "result_fingerprint": null,
+              "query_key": null,
+              "previous_deliveries": null
+            },
+            {
+              "view": null,
+              "cached": true,
+              "result_fingerprint": null,
+              "query_key": null,
+              "previous_deliveries": null
+            },
+            {
+              "view": null,
+              "cached": true,
+              "result_fingerprint": null,
+              "query_key": null,
+              "previous_deliveries": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "round": 8,
+      "final": false,
+      "workflow_stage": null,
+      "workflow_view_sha256": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
+      "visible_evidence": [],
+      "actions": [
+        {
+          "tool": "search",
+          "tool_call_id": "call_0335beb5c84e4ccb9b7137d3",
+          "arguments_summary": {
+            "queries_sha256": [
+              "5150fc7774cab6a7bde5f4486917a1e4ef5712dcb71a8df7b14142aab8ddf04f",
+              "4c4a2bd9579da76b754acc67b15361b8636e3600ba6618502302ece5769e5b7a",
+              "77664277f77175fa89bb6db0db5b599ad0b10a64cd826bd522a66cc69d89a709"
+            ]
+          },
+          "raw_arguments_sha256": "423cd7632a0c1d5afd8cfe57aa36b86dc45818625ad49c1ad02ba7305948b6a4",
+          "executed": true,
+          "ok": true,
+          "error": null,
+          "query_results": [
+            {
+              "view": null,
+              "cached": true,
+              "result_fingerprint": null,
+              "query_key": null,
+              "previous_deliveries": null
+            },
+            {
+              "view": null,
+              "cached": true,
+              "result_fingerprint": null,
+              "query_key": null,
+              "previous_deliveries": null
+            },
+            {
+              "view": null,
+              "cached": true,
+              "result_fingerprint": null,
+              "query_key": null,
+              "previous_deliveries": null
+            }
+          ]
+        },
+        {
+          "tool": "search",
+          "tool_call_id": "call_d4c7ab35db9d4f399b246aba",
+          "arguments_summary": {
+            "queries_sha256": [
+              "a902846e61ac4455854b1ff4ef8d53f9d95c736f73b0966b85429676b83c5d36",
+              "1c94a19a8235b4083abf3242e601225e44c4a21863b6849662e2f5ab9bbf4da8",
+              "19c8198b6165e3c384da2f677601b989c9a141baf18cb88e43973086b4877710"
+            ]
+          },
+          "raw_arguments_sha256": "61ca8ae412d1c96eae154a7558687f33b9350bffc87c05892349f6820480a095",
+          "executed": true,
+          "ok": true,
+          "error": null,
+          "query_results": [
+            {
+              "view": null,
+              "cached": true,
+              "result_fingerprint": null,
+              "query_key": null,
+              "previous_deliveries": null
+            },
+            {
+              "view": null,
+              "cached": true,
+              "result_fingerprint": null,
+              "query_key": null,
+              "previous_deliveries": null
+            },
+            {
+              "view": null,
+              "cached": true,
+              "result_fingerprint": null,
+              "query_key": null,
+              "previous_deliveries": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "round": 9,
+      "final": false,
+      "workflow_stage": null,
+      "workflow_view_sha256": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
+      "visible_evidence": [],
+      "actions": [
+        {
+          "tool": "search",
+          "tool_call_id": "call_7c2c937ad93e47a8bd077a47",
+          "arguments_summary": {
+            "queries_sha256": [
+              "5150fc7774cab6a7bde5f4486917a1e4ef5712dcb71a8df7b14142aab8ddf04f",
+              "4c4a2bd9579da76b754acc67b15361b8636e3600ba6618502302ece5769e5b7a",
+              "77664277f77175fa89bb6db0db5b599ad0b10a64cd826bd522a66cc69d89a709"
+            ]
+          },
+          "raw_arguments_sha256": "423cd7632a0c1d5afd8cfe57aa36b86dc45818625ad49c1ad02ba7305948b6a4",
+          "executed": true,
+          "ok": true,
+          "error": null,
+          "query_results": [
+            {
+              "view": null,
+              "cached": true,
+              "result_fingerprint": null,
+              "query_key": null,
+              "previous_deliveries": null
+            },
+            {
+              "view": null,
+              "cached": true,
+              "result_fingerprint": null,
+              "query_key": null,
+              "previous_deliveries": null
+            },
+            {
+              "view": null,
+              "cached": true,
+              "result_fingerprint": null,
+              "query_key": null,
+              "previous_deliveries": null
+            }
+          ]
+        },
+        {
+          "tool": "search",
+          "tool_call_id": "call_08be2494e3cd41148b48a82a",
+          "arguments_summary": {
+            "queries_sha256": [
+              "a902846e61ac4455854b1ff4ef8d53f9d95c736f73b0966b85429676b83c5d36",
+              "1c94a19a8235b4083abf3242e601225e44c4a21863b6849662e2f5ab9bbf4da8",
+              "19c8198b6165e3c384da2f677601b989c9a141baf18cb88e43973086b4877710"
+            ]
+          },
+          "raw_arguments_sha256": "61ca8ae412d1c96eae154a7558687f33b9350bffc87c05892349f6820480a095",
+          "executed": true,
+          "ok": true,
+          "error": null,
+          "query_results": [
+            {
+              "view": null,
+              "cached": true,
+              "result_fingerprint": null,
+              "query_key": null,
+              "previous_deliveries": null
+            },
+            {
+              "view": null,
+              "cached": true,
+              "result_fingerprint": null,
+              "query_key": null,
+              "previous_deliveries": null
+            },
+            {
+              "view": null,
+              "cached": true,
+              "result_fingerprint": null,
+              "query_key": null,
+              "previous_deliveries": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "round": 10,
+      "final": false,
+      "workflow_stage": null,
+      "workflow_view_sha256": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
+      "visible_evidence": [],
+      "actions": [
+        {
+          "tool": "search",
+          "tool_call_id": "call_f66e744237994b0ca0660426",
+          "arguments_summary": {
+            "queries_sha256": [
+              "5150fc7774cab6a7bde5f4486917a1e4ef5712dcb71a8df7b14142aab8ddf04f",
+              "4c4a2bd9579da76b754acc67b15361b8636e3600ba6618502302ece5769e5b7a",
+              "77664277f77175fa89bb6db0db5b599ad0b10a64cd826bd522a66cc69d89a709"
+            ]
+          },
+          "raw_arguments_sha256": "423cd7632a0c1d5afd8cfe57aa36b86dc45818625ad49c1ad02ba7305948b6a4",
+          "executed": true,
+          "ok": true,
+          "error": null,
+          "query_results": [
+            {
+              "view": null,
+              "cached": true,
+              "result_fingerprint": null,
+              "query_key": null,
+              "previous_deliveries": null
+            },
+            {
+              "view": null,
+              "cached": true,
+              "result_fingerprint": null,
+              "query_key": null,
+              "previous_deliveries": null
+            },
+            {
+              "view": null,
+              "cached": true,
+              "result_fingerprint": null,
+              "query_key": null,
+              "previous_deliveries": null
+            }
+          ]
+        },
+        {
+          "tool": "search",
+          "tool_call_id": "call_bc1a25739db94067ae6ccfce",
+          "arguments_summary": {
+            "queries_sha256": [
+              "a902846e61ac4455854b1ff4ef8d53f9d95c736f73b0966b85429676b83c5d36",
+              "1c94a19a8235b4083abf3242e601225e44c4a21863b6849662e2f5ab9bbf4da8",
+              "19c8198b6165e3c384da2f677601b989c9a141baf18cb88e43973086b4877710"
+            ]
+          },
+          "raw_arguments_sha256": "61ca8ae412d1c96eae154a7558687f33b9350bffc87c05892349f6820480a095",
+          "executed": true,
+          "ok": true,
+          "error": null,
+          "query_results": [
+            {
+              "view": null,
+              "cached": true,
+              "result_fingerprint": null,
+              "query_key": null,
+              "previous_deliveries": null
+            },
+            {
+              "view": null,
+              "cached": true,
+              "result_fingerprint": null,
+              "query_key": null,
+              "previous_deliveries": null
+            },
+            {
+              "view": null,
+              "cached": true,
+              "result_fingerprint": null,
+              "query_key": null,
+              "previous_deliveries": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "round": 11,
+      "final": false,
+      "workflow_stage": null,
+      "workflow_view_sha256": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
+      "visible_evidence": [],
+      "actions": [
+        {
+          "tool": "search",
+          "tool_call_id": "call_96c8019db12e4857bb7416ba",
+          "arguments_summary": {
+            "queries_sha256": [
+              "5150fc7774cab6a7bde5f4486917a1e4ef5712dcb71a8df7b14142aab8ddf04f",
+              "4c4a2bd9579da76b754acc67b15361b8636e3600ba6618502302ece5769e5b7a",
+              "77664277f77175fa89bb6db0db5b599ad0b10a64cd826bd522a66cc69d89a709"
+            ]
+          },
+          "raw_arguments_sha256": "423cd7632a0c1d5afd8cfe57aa36b86dc45818625ad49c1ad02ba7305948b6a4",
+          "executed": true,
+          "ok": true,
+          "error": null,
+          "query_results": [
+            {
+              "view": null,
+              "cached": true,
+              "result_fingerprint": null,
+              "query_key": null,
+              "previous_deliveries": null
+            },
+            {
+              "view": null,
+              "cached": true,
+              "result_fingerprint": null,
+              "query_key": null,
+              "previous_deliveries": null
+            },
+            {
+              "view": null,
+              "cached": true,
+              "result_fingerprint": null,
+              "query_key": null,
+              "previous_deliveries": null
+            }
+          ]
+        },
+        {
+          "tool": "search",
+          "tool_call_id": "call_c7d63a1cd56a4ef1951d5608",
+          "arguments_summary": {
+            "queries_sha256": [
+              "a902846e61ac4455854b1ff4ef8d53f9d95c736f73b0966b85429676b83c5d36",
+              "1c94a19a8235b4083abf3242e601225e44c4a21863b6849662e2f5ab9bbf4da8",
+              "19c8198b6165e3c384da2f677601b989c9a141baf18cb88e43973086b4877710"
+            ]
+          },
+          "raw_arguments_sha256": "61ca8ae412d1c96eae154a7558687f33b9350bffc87c05892349f6820480a095",
+          "executed": true,
+          "ok": true,
+          "error": null,
+          "query_results": [
+            {
+              "view": null,
+              "cached": true,
+              "result_fingerprint": null,
+              "query_key": null,
+              "previous_deliveries": null
+            },
+            {
+              "view": null,
+              "cached": true,
+              "result_fingerprint": null,
+              "query_key": null,
+              "previous_deliveries": null
+            },
+            {
+              "view": null,
+              "cached": true,
+              "result_fingerprint": null,
+              "query_key": null,
+              "previous_deliveries": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "round": 12,
+      "final": false,
+      "workflow_stage": null,
+      "workflow_view_sha256": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
+      "visible_evidence": [],
+      "actions": [
+        {
+          "tool": "search",
+          "tool_call_id": "call_23292222b291482ebea9f734",
+          "arguments_summary": {
+            "queries_sha256": [
+              "5150fc7774cab6a7bde5f4486917a1e4ef5712dcb71a8df7b14142aab8ddf04f",
+              "4c4a2bd9579da76b754acc67b15361b8636e3600ba6618502302ece5769e5b7a",
+              "77664277f77175fa89bb6db0db5b599ad0b10a64cd826bd522a66cc69d89a709"
+            ]
+          },
+          "raw_arguments_sha256": "423cd7632a0c1d5afd8cfe57aa36b86dc45818625ad49c1ad02ba7305948b6a4",
+          "executed": true,
+          "ok": true,
+          "error": null,
+          "query_results": [
+            {
+              "view": null,
+              "cached": true,
+              "result_fingerprint": null,
+              "query_key": null,
+              "previous_deliveries": null
+            },
+            {
+              "view": null,
+              "cached": true,
+              "result_fingerprint": null,
+              "query_key": null,
+              "previous_deliveries": null
+            },
+            {
+              "view": null,
+              "cached": true,
+              "result_fingerprint": null,
+              "query_key": null,
+              "previous_deliveries": null
+            }
+          ]
+        },
+        {
+          "tool": "search",
+          "tool_call_id": "call_844a7daab6d34fe0b580d4ff",
+          "arguments_summary": {
+            "queries_sha256": [
+              "a902846e61ac4455854b1ff4ef8d53f9d95c736f73b0966b85429676b83c5d36",
+              "1c94a19a8235b4083abf3242e601225e44c4a21863b6849662e2f5ab9bbf4da8",
+              "19c8198b6165e3c384da2f677601b989c9a141baf18cb88e43973086b4877710"
+            ]
+          },
+          "raw_arguments_sha256": "61ca8ae412d1c96eae154a7558687f33b9350bffc87c05892349f6820480a095",
+          "executed": true,
+          "ok": true,
+          "error": null,
+          "query_results": [
+            {
+              "view": null,
+              "cached": true,
+              "result_fingerprint": null,
+              "query_key": null,
+              "previous_deliveries": null
+            },
+            {
+              "view": null,
+              "cached": true,
+              "result_fingerprint": null,
+              "query_key": null,
+              "previous_deliveries": null
+            },
+            {
+              "view": null,
+              "cached": true,
+              "result_fingerprint": null,
+              "query_key": null,
+              "previous_deliveries": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "round": 13,
+      "final": false,
+      "workflow_stage": null,
+      "workflow_view_sha256": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
+      "visible_evidence": [],
+      "actions": [
+        {
+          "tool": "search",
+          "tool_call_id": "call_c83ad42d72ec4452a4bfe95d",
+          "arguments_summary": {
+            "queries_sha256": [
+              "5150fc7774cab6a7bde5f4486917a1e4ef5712dcb71a8df7b14142aab8ddf04f",
+              "4c4a2bd9579da76b754acc67b15361b8636e3600ba6618502302ece5769e5b7a",
+              "77664277f77175fa89bb6db0db5b599ad0b10a64cd826bd522a66cc69d89a709"
+            ]
+          },
+          "raw_arguments_sha256": "423cd7632a0c1d5afd8cfe57aa36b86dc45818625ad49c1ad02ba7305948b6a4",
+          "executed": true,
+          "ok": true,
+          "error": null,
+          "query_results": [
+            {
+              "view": null,
+              "cached": true,
+              "result_fingerprint": null,
+              "query_key": null,
+              "previous_deliveries": null
+            },
+            {
+              "view": null,
+              "cached": true,
+              "result_fingerprint": null,
+              "query_key": null,
+              "previous_deliveries": null
+            },
+            {
+              "view": null,
+              "cached": true,
+              "result_fingerprint": null,
+              "query_key": null,
+              "previous_deliveries": null
+            }
+          ]
+        },
+        {
+          "tool": "search",
+          "tool_call_id": "call_ca157077c0ed49eebd70dbf9",
+          "arguments_summary": {
+            "queries_sha256": [
+              "a902846e61ac4455854b1ff4ef8d53f9d95c736f73b0966b85429676b83c5d36",
+              "1c94a19a8235b4083abf3242e601225e44c4a21863b6849662e2f5ab9bbf4da8",
+              "19c8198b6165e3c384da2f677601b989c9a141baf18cb88e43973086b4877710"
+            ]
+          },
+          "raw_arguments_sha256": "61ca8ae412d1c96eae154a7558687f33b9350bffc87c05892349f6820480a095",
+          "executed": true,
+          "ok": true,
+          "error": null,
+          "query_results": [
+            {
+              "view": null,
+              "cached": true,
+              "result_fingerprint": null,
+              "query_key": null,
+              "previous_deliveries": null
+            },
+            {
+              "view": null,
+              "cached": true,
+              "result_fingerprint": null,
+              "query_key": null,
+              "previous_deliveries": null
+            },
+            {
+              "view": null,
+              "cached": true,
+              "result_fingerprint": null,
+              "query_key": null,
+              "previous_deliveries": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "round": 14,
+      "final": false,
+      "workflow_stage": null,
+      "workflow_view_sha256": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
+      "visible_evidence": [],
+      "actions": [
+        {
+          "tool": "search",
+          "tool_call_id": "call_6975bec5f5ec479bb2b96723",
+          "arguments_summary": {
+            "queries_sha256": [
+              "5150fc7774cab6a7bde5f4486917a1e4ef5712dcb71a8df7b14142aab8ddf04f",
+              "4c4a2bd9579da76b754acc67b15361b8636e3600ba6618502302ece5769e5b7a",
+              "77664277f77175fa89bb6db0db5b599ad0b10a64cd826bd522a66cc69d89a709"
+            ]
+          },
+          "raw_arguments_sha256": "423cd7632a0c1d5afd8cfe57aa36b86dc45818625ad49c1ad02ba7305948b6a4",
+          "executed": true,
+          "ok": true,
+          "error": null,
+          "query_results": [
+            {
+              "view": null,
+              "cached": true,
+              "result_fingerprint": null,
+              "query_key": null,
+              "previous_deliveries": null
+            },
+            {
+              "view": null,
+              "cached": true,
+              "result_fingerprint": null,
+              "query_key": null,
+              "previous_deliveries": null
+            },
+            {
+              "view": null,
+              "cached": true,
+              "result_fingerprint": null,
+              "query_key": null,
+              "previous_deliveries": null
+            }
+          ]
+        },
+        {
+          "tool": "search",
+          "tool_call_id": "call_582ba83994bd49d487b9e608",
+          "arguments_summary": {
+            "queries_sha256": [
+              "a902846e61ac4455854b1ff4ef8d53f9d95c736f73b0966b85429676b83c5d36",
+              "1c94a19a8235b4083abf3242e601225e44c4a21863b6849662e2f5ab9bbf4da8",
+              "19c8198b6165e3c384da2f677601b989c9a141baf18cb88e43973086b4877710"
+            ]
+          },
+          "raw_arguments_sha256": "61ca8ae412d1c96eae154a7558687f33b9350bffc87c05892349f6820480a095",
+          "executed": true,
+          "ok": true,
+          "error": null,
+          "query_results": [
+            {
+              "view": null,
+              "cached": true,
+              "result_fingerprint": null,
+              "query_key": null,
+              "previous_deliveries": null
+            },
+            {
+              "view": null,
+              "cached": true,
+              "result_fingerprint": null,
+              "query_key": null,
+              "previous_deliveries": null
+            },
+            {
+              "view": null,
+              "cached": true,
+              "result_fingerprint": null,
+              "query_key": null,
+              "previous_deliveries": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "round": 15,
+      "final": false,
+      "workflow_stage": null,
+      "workflow_view_sha256": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
+      "visible_evidence": [],
+      "actions": [
+        {
+          "tool": "search",
+          "tool_call_id": "call_e3c3fec2002643659e479802",
+          "arguments_summary": {
+            "queries_sha256": [
+              "5150fc7774cab6a7bde5f4486917a1e4ef5712dcb71a8df7b14142aab8ddf04f",
+              "4c4a2bd9579da76b754acc67b15361b8636e3600ba6618502302ece5769e5b7a",
+              "77664277f77175fa89bb6db0db5b599ad0b10a64cd826bd522a66cc69d89a709"
+            ]
+          },
+          "raw_arguments_sha256": "423cd7632a0c1d5afd8cfe57aa36b86dc45818625ad49c1ad02ba7305948b6a4",
+          "executed": true,
+          "ok": true,
+          "error": null,
+          "query_results": [
+            {
+              "view": null,
+              "cached": true,
+              "result_fingerprint": null,
+              "query_key": null,
+              "previous_deliveries": null
+            },
+            {
+              "view": null,
+              "cached": true,
+              "result_fingerprint": null,
+              "query_key": null,
+              "previous_deliveries": null
+            },
+            {
+              "view": null,
+              "cached": true,
+              "result_fingerprint": null,
+              "query_key": null,
+              "previous_deliveries": null
+            }
+          ]
+        },
+        {
+          "tool": "search",
+          "tool_call_id": "call_920b3b5a4ec944669fc97486",
+          "arguments_summary": {
+            "queries_sha256": [
+              "a902846e61ac4455854b1ff4ef8d53f9d95c736f73b0966b85429676b83c5d36",
+              "1c94a19a8235b4083abf3242e601225e44c4a21863b6849662e2f5ab9bbf4da8",
+              "19c8198b6165e3c384da2f677601b989c9a141baf18cb88e43973086b4877710"
+            ]
+          },
+          "raw_arguments_sha256": "61ca8ae412d1c96eae154a7558687f33b9350bffc87c05892349f6820480a095",
+          "executed": true,
+          "ok": true,
+          "error": null,
+          "query_results": [
+            {
+              "view": null,
+              "cached": true,
+              "result_fingerprint": null,
+              "query_key": null,
+              "previous_deliveries": null
+            },
+            {
+              "view": null,
+              "cached": true,
+              "result_fingerprint": null,
+              "query_key": null,
+              "previous_deliveries": null
+            },
+            {
+              "view": null,
+              "cached": true,
+              "result_fingerprint": null,
+              "query_key": null,
+              "previous_deliveries": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "round": 16,
+      "final": true,
+      "workflow_stage": null,
+      "workflow_view_sha256": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
+      "visible_evidence": [],
+      "actions": [
+        {
+          "tool": "search",
+          "tool_call_id": "call_4180627838e146839027ca87",
+          "arguments_summary": {
+            "queries_sha256": [
+              "5150fc7774cab6a7bde5f4486917a1e4ef5712dcb71a8df7b14142aab8ddf04f",
+              "4c4a2bd9579da76b754acc67b15361b8636e3600ba6618502302ece5769e5b7a",
+              "77664277f77175fa89bb6db0db5b599ad0b10a64cd826bd522a66cc69d89a709"
+            ]
+          },
+          "raw_arguments_sha256": "423cd7632a0c1d5afd8cfe57aa36b86dc45818625ad49c1ad02ba7305948b6a4",
+          "executed": false,
+          "ok": false,
+          "error": "final_only",
+          "query_results": []
+        },
+        {
+          "tool": "search",
+          "tool_call_id": "call_2c5fe670d9564893be9f62e0",
+          "arguments_summary": {
+            "queries_sha256": [
+              "a902846e61ac4455854b1ff4ef8d53f9d95c736f73b0966b85429676b83c5d36",
+              "1c94a19a8235b4083abf3242e601225e44c4a21863b6849662e2f5ab9bbf4da8",
+              "19c8198b6165e3c384da2f677601b989c9a141baf18cb88e43973086b4877710"
+            ]
+          },
+          "raw_arguments_sha256": "61ca8ae412d1c96eae154a7558687f33b9350bffc87c05892349f6820480a095",
+          "executed": false,
+          "ok": false,
+          "error": "final_only",
+          "query_results": []
+        }
+      ]
+    }
+  ],
+  "q778-full": [
+    {
+      "round": 1,
+      "final": false,
+      "workflow_stage": "normal",
+      "workflow_view_sha256": "0d2ec788ee110f7d279841587c4484a4b5c471547f8ddf6e518ce766e8d7a539",
+      "visible_evidence": [],
+      "actions": [
+        {
+          "tool": "search",
+          "tool_call_id": "call_6db6290bf99e47809b0af045",
+          "arguments_summary": {
+            "queries_sha256": [
+              "17ab86d60c4cfe00721ce566ada32b540e76723afeb1c73fed4f96d5dc09ccfa",
+              "0e8ba9ae2d712bd51ee716b3ca1a47df9fdaf0315f091030202a5f5d396ac222",
+              "1183183381a5e0604ffab6cadc2c95856f2e630c33fa0bc4184e1cdc87b05b3f"
+            ]
+          },
+          "raw_arguments_sha256": "c0f13525981c36b35c3d0ec9f81b350459ab478643b45b1a02a4720c6d8b5197",
+          "executed": true,
+          "ok": true,
+          "error": null,
+          "query_results": [
+            {
+              "view": "full",
+              "cached": false,
+              "result_fingerprint": null,
+              "query_key": null,
+              "previous_deliveries": null
+            },
+            {
+              "view": "full",
+              "cached": false,
+              "result_fingerprint": null,
+              "query_key": null,
+              "previous_deliveries": null
+            },
+            {
+              "view": "full",
+              "cached": false,
+              "result_fingerprint": null,
+              "query_key": null,
+              "previous_deliveries": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "round": 2,
+      "final": false,
+      "workflow_stage": "normal",
+      "workflow_view_sha256": "9df3bd7aace07d1feb18097142c29fc15397dad4eee2353e8374290683fff4e1",
+      "visible_evidence": [],
+      "actions": [
+        {
+          "tool": "search",
+          "tool_call_id": "call_40b2004d78df4c4b8305a7ef",
+          "arguments_summary": {
+            "queries_sha256": [
+              "d780cfe5f08cc7e2557a99863d675457a021f3b4090ee1200c6666bc8c04179d",
+              "b7149a4dffc4a18cb02498e77bb76e88ff9b3498b2753a9220970ccd275c5913",
+              "733b44e17ee44347b287a6bfccbfaa440aa4516f248f510a7f54ee950ca73b9c"
+            ]
+          },
+          "raw_arguments_sha256": "992042c257a77461273b4e7a1a9fb7aa73f99a87b7bf8053882ef942b730181b",
+          "executed": true,
+          "ok": true,
+          "error": null,
+          "query_results": [
+            {
+              "view": "full",
+              "cached": false,
+              "result_fingerprint": null,
+              "query_key": null,
+              "previous_deliveries": null
+            },
+            {
+              "view": "full",
+              "cached": false,
+              "result_fingerprint": null,
+              "query_key": null,
+              "previous_deliveries": null
+            },
+            {
+              "view": "full",
+              "cached": false,
+              "result_fingerprint": null,
+              "query_key": null,
+              "previous_deliveries": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "round": 3,
+      "final": false,
+      "workflow_stage": "normal",
+      "workflow_view_sha256": "e14d7fd10515be93898ec9288c7443b979854553f056818ce3cb7a9bbf6113ca",
+      "visible_evidence": [],
+      "actions": [
+        {
+          "tool": "read",
+          "tool_call_id": "call_bf8f7b97755543d7ab8459f4",
+          "arguments_summary": {
+            "ref": "d16"
+          },
+          "raw_arguments_sha256": "a1b2e0d08f01d1a75e3f3831b1a0eba4dd3c64c49b480ceaee4e8c223a560ab2",
+          "executed": true,
+          "ok": true,
+          "error": null,
+          "read_result_summary": {
+            "action_slot_charged": true,
+            "evidence": {
+              "document": "d16",
+              "document_chars": 4374,
+              "end": 3000,
+              "kind": "raw_evidence",
+              "ref": "e1",
+              "sha256": "bc0d510dbd6cde0530cf08684de455d82ec1943c0ba50cab130ae01990cc24b8",
+              "snapshot": "d7b7a23b3eb780d78018e5fe30d91613c9769a1cff7564bb0a79c08614acb838",
+              "start": 0
+            },
+            "executed": true,
+            "next_start": 3000,
+            "ok": true,
+            "previously_received": false
+          }
+        }
+      ]
+    },
+    {
+      "round": 4,
+      "final": true,
+      "workflow_stage": "normal",
+      "workflow_view_sha256": "ac617e617942429219ddacfe13cb32d1c1627c6940bbd2b88697ea8d662b0679",
+      "visible_evidence": [
+        "e1"
+      ],
+      "actions": [
+        {
+          "tool": "finish",
+          "tool_call_id": "call_5f026ea1670040de975db17a",
+          "arguments_summary": {
+            "answer": 21,
+            "refs": [
+              "e1"
+            ]
+          },
+          "raw_arguments_sha256": "2101cf2dcaf2a01d610ae18e801c71b201c1491cc3f512f84b7fd4553148ac0a",
+          "executed": true,
+          "ok": true,
+          "error": null
+        }
+      ]
+    }
+  ]
+}
