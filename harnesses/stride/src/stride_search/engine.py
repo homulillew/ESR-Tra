@@ -16,7 +16,7 @@ from .providers import ByteCounter, usage_of
 from .recovery import fit_result_group, make_group, note_blocks_finish, remember_response
 from .workflow import WorkflowState, navigation_result, check_search_recovery
 from .workflow_contract import WorkflowConfig, validate_call
-from .decision_protocol import identity as decision_identity, SearchPivotState, OnceProseState
+from .decision_protocol import identity as decision_identity, SearchPivotState, OnceProseState, RelationReviewState
 
 
 class Harness:
@@ -28,6 +28,7 @@ class Harness:
         self.decision_protocol = decision_protocol
         self.search_pivot = SearchPivotState() if decision_protocol == "search-pivot-v1" else None
         self.once_prose = OnceProseState() if decision_protocol == "once-prose-reset-v1" else None
+        self.relation_review = RelationReviewState() if decision_protocol == "relation-review-once-v1" else None
         self.workflow = WorkflowState(workflow or WorkflowConfig())
         if answer_contract not in ANSWER_CONTRACTS:
             raise ValueError("Unknown answer contract")
@@ -268,6 +269,13 @@ class Harness:
                 self.archive.append("once_prose_reset", {"round": round_no,
                     **projection["trigger"], **plan["once_prose_audit"],
                     "wire_sha256": digest(plan["wire"])})
+        if self.relation_review is not None:
+            projection = plan["relation_review_state"]
+            self.relation_review.commit(projection)
+            if projection["trigger"] is not None:
+                self.archive.append("relation_review", {"round": round_no,
+                    **projection["trigger"], **plan["relation_review_audit"], "wire_sha256": digest(plan["wire"]),
+                    "wire_tools_sha256": digest(plan["wire"].get("tools", []))})
         try: raw = model.send(deepcopy(plan["wire"]))
         except Exception as exc:
             self.output_charged += output_limit; code = exc.code if isinstance(exc, ContractError) else "model_transport"
@@ -306,6 +314,8 @@ class Harness:
             try:
                 if invalid_group: raise ContractError(invalid_group, "Batch exceeds limit; no call in this batch is executed")
                 if fatal or self.terminal is not None: raise ContractError("not_executed", "A fatal or terminal boundary stopped this suffix")
+                if plan.get("relation_review_audit") is not None and name not in {"search", "read", "find"}:
+                    raise ContractError("relation_review_tool_only", "This review decision permits only search/read/find; no automatic replacement")
                 if final and name != "finish": raise ContractError("final_only", "Final decision accepts only finish, within the original budget")
                 if name == "finish" and index != len(calls) - 1: raise ContractError("finish_order", "finish must be the last declared call")
                 if name == "finish" and blocking_error: raise ContractError("not_executed", "A failed earlier action prevents a pre-generated finish")
@@ -334,6 +344,8 @@ class Harness:
             self.search_pivot.complete(group)
         if self.once_prose is not None:
             self.once_prose.complete(group)
+        if self.relation_review is not None:
+            self.relation_review.complete(group)
         self.archive.append("round_end", {"round": round_no, "group": group_ref, "notes": self.archive.put_json(sorted(self.notes.values(), key=lambda n: n["order"])), "remaining": self.remaining()})
         self.workflow.complete_decision(workflow_stage)
         if fatal: self._end(fatal)

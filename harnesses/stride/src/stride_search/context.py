@@ -7,6 +7,7 @@ from .contract import system_message, ContractError, canonical
 from .workflow_contract import POLICY, toolset
 from .decision_protocol import PROTOCOLS
 from .history_projection import project as project_history, project_once
+from .relation_review import render as render_review
 
 
 def build(harness, model, counter, *, final: bool, output_limit: int, groups=None):
@@ -86,8 +87,17 @@ def build(harness, model, counter, *, final: bool, output_limit: int, groups=Non
             if pivot["trigger"] is not None:
                 scope["search_pivot"] = pivot["trigger"]
         messages.append({"role": "user", "content": "Current control state (data, not source evidence):\n" + canonical(scope)})
-        wire = model.prepare(messages, toolset(harness.workflow.options, notes_enabled=config.notes_enabled, final=effective_final,
-            query_limit=config.max_queries_per_search, answer_contract=harness.answer_contract), output_limit)
+        tools = toolset(harness.workflow.options, notes_enabled=config.notes_enabled, final=effective_final,
+            query_limit=config.max_queries_per_search, answer_contract=harness.answer_contract)
+        review_state, review_audit = None, None
+        if harness.relation_review is not None:
+            review_state = harness.relation_review.project(history, visible, harness.model_calls,
+                remaining=harness.remaining()["model_calls"], final=effective_final)
+            if review_state["trigger"] is not None:
+                raw_windows = [harness.archive.evidence(ref) for ref in sorted(visible, key=lambda r: int(r[1:]))]
+                messages, tools, review_audit = render_review(policy, harness.question, history,
+                    raw_windows, scope, tools)
+        wire = model.prepare(messages, tools, output_limit)
         size = counter(wire)
         if type(size) is not int or size < 0:
             raise ContractError("counter_error", "Counter returned an invalid size", fatal=True)
@@ -98,6 +108,7 @@ def build(harness, model, counter, *, final: bool, output_limit: int, groups=Non
                     "rendered_note_keys": [n["key"] for n in active_notes], "shelf": restored, "shelf_evicted": evicted,
                     **({"search_pivot_projection": pivot} if pivot is not None else {}),
                     **({"once_prose_state": once_state, "once_prose_audit": once_audit} if once_state is not None else {}),
+                    **({"relation_review_state": review_state, "relation_review_audit": review_audit} if review_state is not None else {}),
                     **({"history_projection": history_view} if middle_history else {})}
         if config.context_mode == "full":
             raise ContractError("context_capacity", "Full-history arm cannot fit its actual wire request", fatal=True)

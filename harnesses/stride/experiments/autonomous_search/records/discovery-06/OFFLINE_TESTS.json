@@ -1,0 +1,42 @@
+{
+  "suites": [
+    {
+      "artifact_name": "full-tests-06",
+      "name": "pytest",
+      "errors": "0",
+      "failures": "0",
+      "skipped": "0",
+      "tests": "429",
+      "time": "125.394",
+      "timestamp": "2026-09-15T20:17:23.398729+08:00",
+      "hostname": "VPC0-HZ20428504",
+      "xml_sha256": "ff91a83c4ceb59ec3745d874d86e16a5e1f8d4de30aa683d0b7491264c2ee978",
+      "log_sha256": "58a3b3bd436c9f845f5c6ecc057f0623abda41951dcf3a5e391e1b2870d3007f"
+    },
+    {
+      "artifact_name": "examples-tests-06",
+      "name": "pytest",
+      "errors": "0",
+      "failures": "0",
+      "skipped": "0",
+      "tests": "43",
+      "time": "45.856",
+      "timestamp": "2026-09-15T20:18:14.675584+08:00",
+      "hostname": "VPC0-HZ20428504",
+      "xml_sha256": "557d27b366a925205479466c2cc729e60667d0d153c5561dba822c3432a64607",
+      "log_sha256": "76564499d2ea7c1c1001e604bd26734b95211bb76e5900a2b263be015315a340"
+    }
+  ],
+  "total_tests": 472,
+  "new_glm_requests": 0,
+  "loopback_proxy_bypass": true,
+  "focused_regression": {
+    "tests_passed": 64,
+    "seconds": 44.79
+  },
+  "independent_review": "No blocking issue; original search queries remain visible; no raw means unproven only.",
+  "commands": [
+    "python -m pytest harnesses/stride/tests -q (unique private basetemp; XML/log archived locally)",
+    "python -m pytest harnesses/stride/examples -q (unique private basetemp; XML/log archived locally)"
+  ]
+}
