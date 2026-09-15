@@ -1,0 +1,1039 @@
+{
+  "protocol": "stride-search-3",
+  "head": "ebe9ea70c60cbf8f1aa7fb46e0652712a3b44996d62f76296a5b8641c0b90cbb",
+  "outcome": "model_budget",
+  "formal_correct": null,
+  "model_attempts": 16,
+  "backend_attempts": 36,
+  "queries": [
+    {
+      "round": 1,
+      "top_k": 10,
+      "equivalence_key": "997718e6127a5c6e93e17035a4ee03eafb44f8294440c60efec9e48af61132d7",
+      "cached": false,
+      "query_sha256": "e3f0e82c0c8aedba719d88918ddaf3e78b11c716094d9ab30c44a4bf6aea2cb5",
+      "query": "actor plays real life relative unrelated series character married multiple times",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"actor\" OR \"plays\" OR \"real\" OR \"life\" OR \"relative\" OR \"unrelated\" OR \"series\" OR \"character\" OR \"married\" OR \"multiple\" OR \"times\"",
+        "terms": [
+          "actor",
+          "plays",
+          "real",
+          "life",
+          "relative",
+          "unrelated",
+          "series",
+          "character",
+          "married",
+          "multiple",
+          "times"
+        ]
+      }
+    },
+    {
+      "round": 1,
+      "top_k": 10,
+      "equivalence_key": "0b37c90b270d51cdc757001e292720d8f2f55e11211abb508a504db4f593c80b",
+      "cached": false,
+      "query_sha256": "ad476c43beae19bb732a07fdb5e2e726b81779ac69ac1151c219202d65e7bd34",
+      "query": "TV character married 3 times only one child survives series",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"tv\" OR \"character\" OR \"married\" OR \"3\" OR \"times\" OR \"only\" OR \"one\" OR \"child\" OR \"survives\" OR \"series\"",
+        "terms": [
+          "tv",
+          "character",
+          "married",
+          "3",
+          "times",
+          "only",
+          "one",
+          "child",
+          "survives",
+          "series"
+        ]
+      }
+    },
+    {
+      "round": 1,
+      "top_k": 10,
+      "equivalence_key": "ab2322c8fdc670d028db0fed2d592bb2f56d65ce6ab1c3793f608bb3350b224d",
+      "cached": false,
+      "query_sha256": "079334c602e783d95cd02d5b625fb5d57ec5bd9110955e0b32fe2dcd720a3486",
+      "query": "entertainer height 1.65 1.70 plays real life relative series",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"entertainer\" OR \"height\" OR \"1\" OR \"65\" OR \"70\" OR \"plays\" OR \"real\" OR \"life\" OR \"relative\" OR \"series\"",
+        "terms": [
+          "entertainer",
+          "height",
+          "1",
+          "65",
+          "70",
+          "plays",
+          "real",
+          "life",
+          "relative",
+          "series"
+        ]
+      }
+    },
+    {
+      "round": 4,
+      "top_k": 10,
+      "equivalence_key": "1a30fcc9166c224c8ce128c21c399f773c4d95aee3ae1708bf46ab41bc14c3c4",
+      "cached": false,
+      "query_sha256": "4634a75ee61d80e5f6ecc385dbe16dc1799dc40d1372aeabc2f3376fe20e39b5",
+      "query": "Jessica Harmon actress height",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"jessica\" OR \"harmon\" OR \"actress\" OR \"height\"",
+        "terms": [
+          "jessica",
+          "harmon",
+          "actress",
+          "height"
+        ]
+      }
+    },
+    {
+      "round": 4,
+      "top_k": 10,
+      "equivalence_key": "faab2caf27f11cddaf528d9f885fafe969b848d38a7c968e63665934aec34c15",
+      "cached": false,
+      "query_sha256": "00753231f764b576cac6d5cb8912da828e2d893c7eb51881fbe7de41b00ad207",
+      "query": "Niylah The 100 character marriages children",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"niylah\" OR \"the\" OR \"100\" OR \"character\" OR \"marriages\" OR \"children\"",
+        "terms": [
+          "niylah",
+          "the",
+          "100",
+          "character",
+          "marriages",
+          "children"
+        ]
+      }
+    },
+    {
+      "round": 4,
+      "top_k": 10,
+      "equivalence_key": "93f96a717ea4167949de5068d0fb0fd52ea2944411f339550800e4e66007ca80",
+      "cached": false,
+      "query_sha256": "7563c87c0698efdac427afd13972ce2962fd134cd8de620d9bb13b5081723f30",
+      "query": "Jessica Harmon Richard Harmon siblings The 100",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"jessica\" OR \"harmon\" OR \"richard\" OR \"siblings\" OR \"the\" OR \"100\"",
+        "terms": [
+          "jessica",
+          "harmon",
+          "richard",
+          "siblings",
+          "the",
+          "100"
+        ]
+      }
+    },
+    {
+      "round": 5,
+      "top_k": 10,
+      "equivalence_key": "79f1ab553b31ad250c27df02e2e6e85f14ee0a651bd76b6278d309b1b95818d5",
+      "cached": false,
+      "query_sha256": "8b75510271a7bc42b7f7c9f50f3056e9929c0dd2e6a0cf1f7f45d120f49e2a92",
+      "query": "TV character married three times only one child survives drama series",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"tv\" OR \"character\" OR \"married\" OR \"three\" OR \"times\" OR \"only\" OR \"one\" OR \"child\" OR \"survives\" OR \"drama\" OR \"series\"",
+        "terms": [
+          "tv",
+          "character",
+          "married",
+          "three",
+          "times",
+          "only",
+          "one",
+          "child",
+          "survives",
+          "drama",
+          "series"
+        ]
+      }
+    },
+    {
+      "round": 5,
+      "top_k": 10,
+      "equivalence_key": "3c45f6dcb3de82ccee138c413b4a1acac5ab989eaf3b90687c3e78e244ed5cfe",
+      "cached": false,
+      "query_sha256": "77c4a730ccb6128386dd823f1d260f7e3954d599df59b7f9b6f17f91d16b6bd0",
+      "query": "character married 3 times one child survives CW show",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"character\" OR \"married\" OR \"3\" OR \"times\" OR \"one\" OR \"child\" OR \"survives\" OR \"cw\" OR \"show\"",
+        "terms": [
+          "character",
+          "married",
+          "3",
+          "times",
+          "one",
+          "child",
+          "survives",
+          "cw",
+          "show"
+        ]
+      }
+    },
+    {
+      "round": 5,
+      "top_k": 10,
+      "equivalence_key": "9c85a85aa38aaad1fa429f9fa938e1d2dc04dc924b77319308bfe866e85e54fb",
+      "cached": false,
+      "query_sha256": "53027cc88c810b3ee3516ffbb7931a0f81635b921c7229308a547f0c44455bc8",
+      "query": "soap opera character multiple marriages only one surviving child",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"soap\" OR \"opera\" OR \"character\" OR \"multiple\" OR \"marriages\" OR \"only\" OR \"one\" OR \"surviving\" OR \"child\"",
+        "terms": [
+          "soap",
+          "opera",
+          "character",
+          "multiple",
+          "marriages",
+          "only",
+          "one",
+          "surviving",
+          "child"
+        ]
+      }
+    },
+    {
+      "round": 6,
+      "top_k": 10,
+      "equivalence_key": "b8a5cc7dc66b08ff77d29d55c218079b0521ce75f77d9aa2d450bf042fa05984",
+      "cached": false,
+      "query_sha256": "17f99c581c45c79e93f98f8b051afa029a28d23af8f41993d30e36b13633cd09",
+      "query": "character married three times children died only one survives TV drama",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"character\" OR \"married\" OR \"three\" OR \"times\" OR \"children\" OR \"died\" OR \"only\" OR \"one\" OR \"survives\" OR \"tv\" OR \"drama\"",
+        "terms": [
+          "character",
+          "married",
+          "three",
+          "times",
+          "children",
+          "died",
+          "only",
+          "one",
+          "survives",
+          "tv",
+          "drama"
+        ]
+      }
+    },
+    {
+      "round": 6,
+      "top_k": 10,
+      "equivalence_key": "ae13a4a2b73430fddbdbc47077cffa55a29a162eb31c661a643bba8a22417043",
+      "cached": false,
+      "query_sha256": "9505d8c2f9b346117b58a02ed03e8b03832a80af6c671008cf78f58a09ddc244",
+      "query": "actress plays real life sister brother unrelated characters TV show",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"actress\" OR \"plays\" OR \"real\" OR \"life\" OR \"sister\" OR \"brother\" OR \"unrelated\" OR \"characters\" OR \"tv\" OR \"show\"",
+        "terms": [
+          "actress",
+          "plays",
+          "real",
+          "life",
+          "sister",
+          "brother",
+          "unrelated",
+          "characters",
+          "tv",
+          "show"
+        ]
+      }
+    },
+    {
+      "round": 6,
+      "top_k": 10,
+      "equivalence_key": "c5fbe1d7836b61322cfe9a135c1769a78b2eea6763440cd6e37fa34753e7679e",
+      "cached": false,
+      "query_sha256": "1473d8701098ccdd60e14dfc04a556d2dc90cac611fd5479ad87f9f71e913431",
+      "query": "TV character lost children only one surviving married multiple times",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"tv\" OR \"character\" OR \"lost\" OR \"children\" OR \"only\" OR \"one\" OR \"surviving\" OR \"married\" OR \"multiple\" OR \"times\"",
+        "terms": [
+          "tv",
+          "character",
+          "lost",
+          "children",
+          "only",
+          "one",
+          "surviving",
+          "married",
+          "multiple",
+          "times"
+        ]
+      }
+    },
+    {
+      "round": 7,
+      "top_k": 10,
+      "equivalence_key": "a541e36c0b83e6bde0efb1d56c7375a065ffc51cf28286fe6e24b63529a7f904",
+      "cached": false,
+      "query_sha256": "7e5976df5809a5706987ac358f3c94741f8e9fb2c3716b089bad41f8a8cbda34",
+      "query": "Outlander Claire Fraser marriages children survived",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"outlander\" OR \"claire\" OR \"fraser\" OR \"marriages\" OR \"children\" OR \"survived\"",
+        "terms": [
+          "outlander",
+          "claire",
+          "fraser",
+          "marriages",
+          "children",
+          "survived"
+        ]
+      }
+    },
+    {
+      "round": 7,
+      "top_k": 10,
+      "equivalence_key": "204a5228036194e6279a00bfb7ddd7076c3e1110b23323868b2bbb9020e51f56",
+      "cached": false,
+      "query_sha256": "e38e40a2ac80b926670d8d8264bb9679e27370eff9aa518b17605f6b006d731f",
+      "query": "Game of Thrones Cersei marriages children died",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"game\" OR \"of\" OR \"thrones\" OR \"cersei\" OR \"marriages\" OR \"children\" OR \"died\"",
+        "terms": [
+          "game",
+          "of",
+          "thrones",
+          "cersei",
+          "marriages",
+          "children",
+          "died"
+        ]
+      }
+    },
+    {
+      "round": 7,
+      "top_k": 10,
+      "equivalence_key": "69142cbaf1700869b58fbfa0af285cbc6b67b2caacf06d1a343532294b0cc427",
+      "cached": false,
+      "query_sha256": "ca1365ef12dbcd3bf2d81ac59ac81dd7701fc6d73539f4025eb85cd92a59aba0",
+      "query": "character married three times children died one survives period drama",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"character\" OR \"married\" OR \"three\" OR \"times\" OR \"children\" OR \"died\" OR \"one\" OR \"survives\" OR \"period\" OR \"drama\"",
+        "terms": [
+          "character",
+          "married",
+          "three",
+          "times",
+          "children",
+          "died",
+          "one",
+          "survives",
+          "period",
+          "drama"
+        ]
+      }
+    },
+    {
+      "round": 8,
+      "top_k": 10,
+      "equivalence_key": "b042db8fbe6c8997a81152deb40f9c0faa6342bba8555e90a28698f379a7df70",
+      "cached": false,
+      "query_sha256": "05f7979d56d528559726ec0aecefcd6d9570b04c0b4d93723efff1c8500d2939",
+      "query": "character married three times children died one survives TV drama",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"character\" OR \"married\" OR \"three\" OR \"times\" OR \"children\" OR \"died\" OR \"one\" OR \"survives\" OR \"tv\" OR \"drama\"",
+        "terms": [
+          "character",
+          "married",
+          "three",
+          "times",
+          "children",
+          "died",
+          "one",
+          "survives",
+          "tv",
+          "drama"
+        ]
+      }
+    },
+    {
+      "round": 8,
+      "top_k": 10,
+      "equivalence_key": "ae13a4a2b73430fddbdbc47077cffa55a29a162eb31c661a643bba8a22417043",
+      "cached": true,
+      "query_sha256": "9505d8c2f9b346117b58a02ed03e8b03832a80af6c671008cf78f58a09ddc244",
+      "query": "actress plays real life sister brother unrelated characters TV show",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"actress\" OR \"plays\" OR \"real\" OR \"life\" OR \"sister\" OR \"brother\" OR \"unrelated\" OR \"characters\" OR \"tv\" OR \"show\"",
+        "terms": [
+          "actress",
+          "plays",
+          "real",
+          "life",
+          "sister",
+          "brother",
+          "unrelated",
+          "characters",
+          "tv",
+          "show"
+        ]
+      }
+    },
+    {
+      "round": 8,
+      "top_k": 10,
+      "equivalence_key": "c5fbe1d7836b61322cfe9a135c1769a78b2eea6763440cd6e37fa34753e7679e",
+      "cached": true,
+      "query_sha256": "1473d8701098ccdd60e14dfc04a556d2dc90cac611fd5479ad87f9f71e913431",
+      "query": "TV character lost children only one surviving married multiple times",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"tv\" OR \"character\" OR \"lost\" OR \"children\" OR \"only\" OR \"one\" OR \"surviving\" OR \"married\" OR \"multiple\" OR \"times\"",
+        "terms": [
+          "tv",
+          "character",
+          "lost",
+          "children",
+          "only",
+          "one",
+          "surviving",
+          "married",
+          "multiple",
+          "times"
+        ]
+      }
+    },
+    {
+      "round": 9,
+      "top_k": 10,
+      "equivalence_key": "d851d55e6831da9d1f0f30e16d0d0c325b9ec9efda5bb23231bca346612dc9c2",
+      "cached": false,
+      "query_sha256": "8d8173624cc67a389f193bb115ad2900a41bceb11f5613cd51463cd03782bf22",
+      "query": "The 100 Niylah character marriages children",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"the\" OR \"100\" OR \"niylah\" OR \"character\" OR \"marriages\" OR \"children\"",
+        "terms": [
+          "the",
+          "100",
+          "niylah",
+          "character",
+          "marriages",
+          "children"
+        ]
+      }
+    },
+    {
+      "round": 9,
+      "top_k": 10,
+      "equivalence_key": "1a30fcc9166c224c8ce128c21c399f773c4d95aee3ae1708bf46ab41bc14c3c4",
+      "cached": true,
+      "query_sha256": "4634a75ee61d80e5f6ecc385dbe16dc1799dc40d1372aeabc2f3376fe20e39b5",
+      "query": "Jessica Harmon actress height",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"jessica\" OR \"harmon\" OR \"actress\" OR \"height\"",
+        "terms": [
+          "jessica",
+          "harmon",
+          "actress",
+          "height"
+        ]
+      }
+    },
+    {
+      "round": 9,
+      "top_k": 10,
+      "equivalence_key": "5a290ff47e9e3fcffd1a2567cacb547ddd18349848f5fadd7a66174d6991e822",
+      "cached": false,
+      "query_sha256": "ef1f53d3c5384b2f1851519fdacdf08a70df661b3276b7b8838077a53c58e637",
+      "query": "The 100 TV series seasons number premiere date",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"the\" OR \"100\" OR \"tv\" OR \"series\" OR \"seasons\" OR \"number\" OR \"premiere\" OR \"date\"",
+        "terms": [
+          "the",
+          "100",
+          "tv",
+          "series",
+          "seasons",
+          "number",
+          "premiere",
+          "date"
+        ]
+      }
+    },
+    {
+      "round": 10,
+      "top_k": 10,
+      "equivalence_key": "a1de1666abf00e5d88a33c7881991612f43ead5e2c6c3f4a2798cedb8c125e5d",
+      "cached": false,
+      "query_sha256": "fa3b179b0e23d1ac3170363b9875d49f8966652b55688e0c2139417a09cda60c",
+      "query": "Niylah The 100 husband marriages children",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"niylah\" OR \"the\" OR \"100\" OR \"husband\" OR \"marriages\" OR \"children\"",
+        "terms": [
+          "niylah",
+          "the",
+          "100",
+          "husband",
+          "marriages",
+          "children"
+        ]
+      }
+    },
+    {
+      "round": 10,
+      "top_k": 10,
+      "equivalence_key": "3d15faae1926739e33844ad577f22ddf622ec0a3a518c742b61509e99a9f93c1",
+      "cached": false,
+      "query_sha256": "14c694eb4cdfb594f0d69b69bc1962daa4d7f021b101b4984309798aa800e4da",
+      "query": "Jessica Harmon height actress",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"jessica\" OR \"harmon\" OR \"height\" OR \"actress\"",
+        "terms": [
+          "jessica",
+          "harmon",
+          "height",
+          "actress"
+        ]
+      }
+    },
+    {
+      "round": 10,
+      "top_k": 10,
+      "equivalence_key": "53534aa61417b38403d4325b8d612c2c0548684fc6d2f13a64ebf01221525956",
+      "cached": false,
+      "query_sha256": "f14a2bc27d9ba3b62731a3480dc190ff90be195485ce847ce9db0aaea8432b21",
+      "query": "The 100 Niylah character biography fandom",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"the\" OR \"100\" OR \"niylah\" OR \"character\" OR \"biography\" OR \"fandom\"",
+        "terms": [
+          "the",
+          "100",
+          "niylah",
+          "character",
+          "biography",
+          "fandom"
+        ]
+      }
+    },
+    {
+      "round": 11,
+      "top_k": 10,
+      "equivalence_key": "3796a4bb772f5d7ec9b51f8ee493cc156e10b5ed736b9d1fa0e745787a73a8d7",
+      "cached": false,
+      "query_sha256": "047ef214a8952fc083d018174a4fb8fc297697cf220c264e4f9fb6e49b8014dc",
+      "query": "Niylah The 100 wiki husband Ilian Kane marriages",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"niylah\" OR \"the\" OR \"100\" OR \"wiki\" OR \"husband\" OR \"ilian\" OR \"kane\" OR \"marriages\"",
+        "terms": [
+          "niylah",
+          "the",
+          "100",
+          "wiki",
+          "husband",
+          "ilian",
+          "kane",
+          "marriages"
+        ]
+      }
+    },
+    {
+      "round": 11,
+      "top_k": 10,
+      "equivalence_key": "0a0a4112ac12206ccfde59065b32f928abd3bd85f1782fba4d814e295cad42b2",
+      "cached": false,
+      "query_sha256": "5dca615a51837e6c0653d3390b0319cb3b7949ed7bec4a5bc6609116e97f5ea4",
+      "query": "Niylah The 100 daughter Hope child",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"niylah\" OR \"the\" OR \"100\" OR \"daughter\" OR \"hope\" OR \"child\"",
+        "terms": [
+          "niylah",
+          "the",
+          "100",
+          "daughter",
+          "hope",
+          "child"
+        ]
+      }
+    },
+    {
+      "round": 11,
+      "top_k": 10,
+      "equivalence_key": "30ed19cd95357eb705d0f394469289aff652639ad878b531f9e87dfcf8db838c",
+      "cached": false,
+      "query_sha256": "f4900730b2584cb922a454fa53e17b6204d616cb48b9568f32a7e560c95f31d4",
+      "query": "Jessica Harmon actress height cm",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"jessica\" OR \"harmon\" OR \"actress\" OR \"height\" OR \"cm\"",
+        "terms": [
+          "jessica",
+          "harmon",
+          "actress",
+          "height",
+          "cm"
+        ]
+      }
+    },
+    {
+      "round": 12,
+      "top_k": 10,
+      "equivalence_key": "de5a820a1a0441f8bbfb6308e8a88f47b8cf4c3170611457700be8b42faacb1a",
+      "cached": false,
+      "query_sha256": "ddbf8114d96eefbdb693a3c292cf1bd4d67b607ba44ea75c23687c3b7a38dac1",
+      "query": "Niylah The 100 fandom wiki character page",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"niylah\" OR \"the\" OR \"100\" OR \"fandom\" OR \"wiki\" OR \"character\" OR \"page\"",
+        "terms": [
+          "niylah",
+          "the",
+          "100",
+          "fandom",
+          "wiki",
+          "character",
+          "page"
+        ]
+      }
+    },
+    {
+      "round": 12,
+      "top_k": 10,
+      "equivalence_key": "16978e12ce8649f79d6d97946c10b5e121d7ba13240c72e031052dcab895d4d5",
+      "cached": false,
+      "query_sha256": "6e60297d25ef215f347889bd504bdcfff83b7f31360b9b0d285d9b2297d4aedb",
+      "query": "Niylah The 100 Ilian husband married",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"niylah\" OR \"the\" OR \"100\" OR \"ilian\" OR \"husband\" OR \"married\"",
+        "terms": [
+          "niylah",
+          "the",
+          "100",
+          "ilian",
+          "husband",
+          "married"
+        ]
+      }
+    },
+    {
+      "round": 12,
+      "top_k": 10,
+      "equivalence_key": "78aa249b9961f03f0fe24e22a3c26e48a1b3be7f9865cb9107b9f6d63405572f",
+      "cached": false,
+      "query_sha256": "71bee90a60d6ecfed3188f700a160ea225d26c44ccbf30b7bd14a8a0a1c4967c",
+      "query": "Jessica Harmon height 5 feet actress biography",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"jessica\" OR \"harmon\" OR \"height\" OR \"5\" OR \"feet\" OR \"actress\" OR \"biography\"",
+        "terms": [
+          "jessica",
+          "harmon",
+          "height",
+          "5",
+          "feet",
+          "actress",
+          "biography"
+        ]
+      }
+    },
+    {
+      "round": 13,
+      "top_k": 10,
+      "equivalence_key": "4ef471e9a57308a60df96b1e23251005f4257a09094363f07246caf8c3792f2b",
+      "cached": false,
+      "query_sha256": "206cd0ed43df153837d61a7b43df61c42d63d61af18207fc703137730cd2529e",
+      "query": "Niylah The 100 character wiki married husband",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"niylah\" OR \"the\" OR \"100\" OR \"character\" OR \"wiki\" OR \"married\" OR \"husband\"",
+        "terms": [
+          "niylah",
+          "the",
+          "100",
+          "character",
+          "wiki",
+          "married",
+          "husband"
+        ]
+      }
+    },
+    {
+      "round": 13,
+      "top_k": 10,
+      "equivalence_key": "412146f8edebcb7c418b9d66bea0d085cac0d23be30aada2d2a1944fdbb05847",
+      "cached": false,
+      "query_sha256": "5eaf57f333832a5be18fb9c38cdd716fa23945a14b43d34c9cbeabb8be911783",
+      "query": "Niylah The 100 child daughter son",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"niylah\" OR \"the\" OR \"100\" OR \"child\" OR \"daughter\" OR \"son\"",
+        "terms": [
+          "niylah",
+          "the",
+          "100",
+          "child",
+          "daughter",
+          "son"
+        ]
+      }
+    },
+    {
+      "round": 13,
+      "top_k": 10,
+      "equivalence_key": "a869d2f61e3eddb18f2876f074ffc07424b9a0e516a8bfcefe9df615d23fb3d5",
+      "cached": false,
+      "query_sha256": "5a1faaf8bd5c6a5efce212c0b81bb4af1465052a5915a59687daa349c12f1fa0",
+      "query": "Jessica Harmon actress height measurements",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"jessica\" OR \"harmon\" OR \"actress\" OR \"height\" OR \"measurements\"",
+        "terms": [
+          "jessica",
+          "harmon",
+          "actress",
+          "height",
+          "measurements"
+        ]
+      }
+    },
+    {
+      "round": 14,
+      "top_k": 10,
+      "equivalence_key": "3d8d3e6a7a0e12daad27b18b1cac2853183c978e0e18a1bdfb880e0804d0aa81",
+      "cached": false,
+      "query_sha256": "7a5f886fae8d3931eae752a54e82355af2c211c11c81041517422ef0017992a2",
+      "query": "Niylah The 100 wiki character biography",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"niylah\" OR \"the\" OR \"100\" OR \"wiki\" OR \"character\" OR \"biography\"",
+        "terms": [
+          "niylah",
+          "the",
+          "100",
+          "wiki",
+          "character",
+          "biography"
+        ]
+      }
+    },
+    {
+      "round": 14,
+      "top_k": 10,
+      "equivalence_key": "74defa834aefd7a270f84bde05e4c84e2ba0ee8197bf5e12ffec6ce391e5edcc",
+      "cached": false,
+      "query_sha256": "1f1d7ad21baadf27497b9e8a50666824a173db360ab4627ec4ffff806cab79c4",
+      "query": "Niylah The 100 Ilian husband marriage",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"niylah\" OR \"the\" OR \"100\" OR \"ilian\" OR \"husband\" OR \"marriage\"",
+        "terms": [
+          "niylah",
+          "the",
+          "100",
+          "ilian",
+          "husband",
+          "marriage"
+        ]
+      }
+    },
+    {
+      "round": 14,
+      "top_k": 10,
+      "equivalence_key": "412146f8edebcb7c418b9d66bea0d085cac0d23be30aada2d2a1944fdbb05847",
+      "cached": true,
+      "query_sha256": "5eaf57f333832a5be18fb9c38cdd716fa23945a14b43d34c9cbeabb8be911783",
+      "query": "Niylah The 100 child daughter son",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"niylah\" OR \"the\" OR \"100\" OR \"child\" OR \"daughter\" OR \"son\"",
+        "terms": [
+          "niylah",
+          "the",
+          "100",
+          "child",
+          "daughter",
+          "son"
+        ]
+      }
+    },
+    {
+      "round": 15,
+      "top_k": 10,
+      "equivalence_key": "9823b154d4ecc6e1b7848a9d019208beb002d8c36afedc14bbdf839de578ee4a",
+      "cached": false,
+      "query_sha256": "74f90613dea8c53e90b01499463448d95924361bd5a55353c089573c01d28abf",
+      "query": "Niylah the100 fandom wiki character page",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"niylah\" OR \"the100\" OR \"fandom\" OR \"wiki\" OR \"character\" OR \"page\"",
+        "terms": [
+          "niylah",
+          "the100",
+          "fandom",
+          "wiki",
+          "character",
+          "page"
+        ]
+      }
+    },
+    {
+      "round": 15,
+      "top_k": 10,
+      "equivalence_key": "d12fda5802a42c4afc1766aa6a887fade733e453a798270df1adfc61a0a2ee1c",
+      "cached": false,
+      "query_sha256": "e4f1662eb8f06bbae416fab541d7b4c9046cec2619b2b11b8f99f8da453e130c",
+      "query": "Niylah The 100 Clarke relationship married",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"niylah\" OR \"the\" OR \"100\" OR \"clarke\" OR \"relationship\" OR \"married\"",
+        "terms": [
+          "niylah",
+          "the",
+          "100",
+          "clarke",
+          "relationship",
+          "married"
+        ]
+      }
+    },
+    {
+      "round": 15,
+      "top_k": 10,
+      "equivalence_key": "ad73ac9216ebe74f156cee561458fe9523419a75eeea41b10f534c6ff7589758",
+      "cached": false,
+      "query_sha256": "e66b762f2fd278c6d647106667108d390ae1c8afeb1b7f751e2fe92955aa76a9",
+      "query": "Niylah The 100 Ilian husband child",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"niylah\" OR \"the\" OR \"100\" OR \"ilian\" OR \"husband\" OR \"child\"",
+        "terms": [
+          "niylah",
+          "the",
+          "100",
+          "ilian",
+          "husband",
+          "child"
+        ]
+      }
+    }
+  ],
+  "equivalent_query_repeats": 4,
+  "views": [
+    {
+      "round": 1,
+      "compacted": false,
+      "visible_evidence": [],
+      "shelf": [],
+      "shelf_evicted": []
+    },
+    {
+      "round": 2,
+      "compacted": false,
+      "visible_evidence": [],
+      "shelf": [],
+      "shelf_evicted": []
+    },
+    {
+      "round": 3,
+      "compacted": false,
+      "visible_evidence": [
+        "e1"
+      ],
+      "shelf": [],
+      "shelf_evicted": []
+    },
+    {
+      "round": 4,
+      "compacted": false,
+      "visible_evidence": [
+        "e1",
+        "e2"
+      ],
+      "shelf": [],
+      "shelf_evicted": []
+    },
+    {
+      "round": 5,
+      "compacted": false,
+      "visible_evidence": [
+        "e1",
+        "e2"
+      ],
+      "shelf": [],
+      "shelf_evicted": []
+    },
+    {
+      "round": 6,
+      "compacted": false,
+      "visible_evidence": [
+        "e1",
+        "e2"
+      ],
+      "shelf": [],
+      "shelf_evicted": []
+    },
+    {
+      "round": 7,
+      "compacted": true,
+      "visible_evidence": [
+        "e1",
+        "e2"
+      ],
+      "shelf": [
+        "e1"
+      ],
+      "shelf_evicted": []
+    },
+    {
+      "round": 8,
+      "compacted": true,
+      "visible_evidence": [
+        "e1",
+        "e2"
+      ],
+      "shelf": [
+        "e1",
+        "e2"
+      ],
+      "shelf_evicted": []
+    },
+    {
+      "round": 9,
+      "compacted": true,
+      "visible_evidence": [
+        "e1",
+        "e2"
+      ],
+      "shelf": [
+        "e1",
+        "e2"
+      ],
+      "shelf_evicted": []
+    },
+    {
+      "round": 10,
+      "compacted": true,
+      "visible_evidence": [
+        "e1",
+        "e2"
+      ],
+      "shelf": [
+        "e1",
+        "e2"
+      ],
+      "shelf_evicted": []
+    },
+    {
+      "round": 11,
+      "compacted": true,
+      "visible_evidence": [
+        "e1",
+        "e2"
+      ],
+      "shelf": [
+        "e1",
+        "e2"
+      ],
+      "shelf_evicted": []
+    },
+    {
+      "round": 12,
+      "compacted": true,
+      "visible_evidence": [
+        "e1",
+        "e2"
+      ],
+      "shelf": [
+        "e1",
+        "e2"
+      ],
+      "shelf_evicted": []
+    },
+    {
+      "round": 13,
+      "compacted": true,
+      "visible_evidence": [
+        "e1",
+        "e2"
+      ],
+      "shelf": [
+        "e1",
+        "e2"
+      ],
+      "shelf_evicted": []
+    },
+    {
+      "round": 14,
+      "compacted": true,
+      "visible_evidence": [
+        "e1",
+        "e2"
+      ],
+      "shelf": [
+        "e1",
+        "e2"
+      ],
+      "shelf_evicted": []
+    },
+    {
+      "round": 15,
+      "compacted": true,
+      "visible_evidence": [
+        "e1",
+        "e2"
+      ],
+      "shelf": [
+        "e1",
+        "e2"
+      ],
+      "shelf_evicted": []
+    },
+    {
+      "round": 16,
+      "compacted": true,
+      "visible_evidence": [
+        "e1",
+        "e2"
+      ],
+      "shelf": [
+        "e1",
+        "e2"
+      ],
+      "shelf_evicted": []
+    }
+  ],
+  "delivered_refs": [
+    "e1",
+    "e2"
+  ],
+  "submitted_refs": [],
+  "text_included": true,
+  "limitations": [
+    "Equivalence is compiler equality, not semantic identity or wasted-search proof",
+    "Raw-window visibility/selection is not entailment or complete evidence coverage",
+    "No live q26 replay or independent answer scoring is performed"
+  ]
+}

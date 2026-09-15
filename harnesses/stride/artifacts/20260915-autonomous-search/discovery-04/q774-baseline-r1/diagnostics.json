@@ -1,0 +1,1227 @@
+{
+  "protocol": "stride-search-3",
+  "head": "97de07f1358ce3f9d4a4841ffc50c1a9c34e2675b819231eb876ee2d685dbc35",
+  "outcome": "model_budget",
+  "formal_correct": null,
+  "model_attempts": 16,
+  "backend_attempts": 35,
+  "queries": [
+    {
+      "round": 1,
+      "top_k": 10,
+      "equivalence_key": "457cdd477ad3301c42c9efc327396051ded0a37acfced28f5a55b5a42b228577",
+      "cached": false,
+      "query_sha256": "0a6a881b3397d739b26f4a17540bef3ce5dcf9218b1bc00e14f7f6572acf0caa",
+      "query": "character married three times one surviving child series actor real life relative",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"character\" OR \"married\" OR \"three\" OR \"times\" OR \"one\" OR \"surviving\" OR \"child\" OR \"series\" OR \"actor\" OR \"real\" OR \"life\" OR \"relative\"",
+        "terms": [
+          "character",
+          "married",
+          "three",
+          "times",
+          "one",
+          "surviving",
+          "child",
+          "series",
+          "actor",
+          "real",
+          "life",
+          "relative"
+        ]
+      }
+    },
+    {
+      "round": 1,
+      "top_k": 10,
+      "equivalence_key": "c0fa7bc8e4ca23646ecbd228f1d03a678a71c21a77c08a2f6640457eb7feb5b7",
+      "cached": false,
+      "query_sha256": "6ab34b6c5628ac8885eac5ac6c69c01659d120dccc673ff9660b98b64eb9b848",
+      "query": "TV series character married multiple times only one child survives actor plays with real life relative",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"tv\" OR \"series\" OR \"character\" OR \"married\" OR \"multiple\" OR \"times\" OR \"only\" OR \"one\" OR \"child\" OR \"survives\" OR \"actor\" OR \"plays\" OR \"with\" OR \"real\" OR \"life\" OR \"relative\"",
+        "terms": [
+          "tv",
+          "series",
+          "character",
+          "married",
+          "multiple",
+          "times",
+          "only",
+          "one",
+          "child",
+          "survives",
+          "actor",
+          "plays",
+          "with",
+          "real",
+          "life",
+          "relative"
+        ]
+      }
+    },
+    {
+      "round": 1,
+      "top_k": 10,
+      "equivalence_key": "22e7406f7799f59d111b76677a28eb4f6af674f2c4a33ce1c89c906f93489bd6",
+      "cached": false,
+      "query_sha256": "4a8ecf2601b72251645df86f2d8c821a5609af2c924db6a51e1b1a16339f10c7",
+      "query": "long running TV series character married 3 or 4 times one child alive",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"long\" OR \"running\" OR \"tv\" OR \"series\" OR \"character\" OR \"married\" OR \"3\" OR \"or\" OR \"4\" OR \"times\" OR \"one\" OR \"child\" OR \"alive\"",
+        "terms": [
+          "long",
+          "running",
+          "tv",
+          "series",
+          "character",
+          "married",
+          "3",
+          "or",
+          "4",
+          "times",
+          "one",
+          "child",
+          "alive"
+        ]
+      }
+    },
+    {
+      "round": 3,
+      "top_k": 10,
+      "equivalence_key": "76b5dc4ef8f623daefc657773b997e8f17511b272106bf4018f609c593f282a9",
+      "cached": false,
+      "query_sha256": "e2ce1a9286e0011cc0a888240eacd04de038f317a709d91b96c3d009ce0d7f18",
+      "query": "soap opera character married three times one surviving child actor real life relative",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"soap\" OR \"opera\" OR \"character\" OR \"married\" OR \"three\" OR \"times\" OR \"one\" OR \"surviving\" OR \"child\" OR \"actor\" OR \"real\" OR \"life\" OR \"relative\"",
+        "terms": [
+          "soap",
+          "opera",
+          "character",
+          "married",
+          "three",
+          "times",
+          "one",
+          "surviving",
+          "child",
+          "actor",
+          "real",
+          "life",
+          "relative"
+        ]
+      }
+    },
+    {
+      "round": 3,
+      "top_k": 10,
+      "equivalence_key": "dfe50bea108534f7cdb586f05a7c8c3ef35330a8bf8e9e3e518d6953da9bb0de",
+      "cached": false,
+      "query_sha256": "4024bd3176a5b28b336b5f1f64fcdecd2d5e7dba1e388f9e05b5cd560bee2461",
+      "query": "TV character married four times one child alive series actor sibling real life",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"tv\" OR \"character\" OR \"married\" OR \"four\" OR \"times\" OR \"one\" OR \"child\" OR \"alive\" OR \"series\" OR \"actor\" OR \"sibling\" OR \"real\" OR \"life\"",
+        "terms": [
+          "tv",
+          "character",
+          "married",
+          "four",
+          "times",
+          "one",
+          "child",
+          "alive",
+          "series",
+          "actor",
+          "sibling",
+          "real",
+          "life"
+        ]
+      }
+    },
+    {
+      "round": 3,
+      "top_k": 10,
+      "equivalence_key": "9a7d50e7ae57d1e1bb838de514c783b831c893cadc1806cd7d95146e5d6b7d4e",
+      "cached": false,
+      "query_sha256": "5c63b1cd6052b51ffa2269142ad40290b2347f803e572fe2c6bb100b8d3a2c02",
+      "query": "character married 3 times only one child survives actor plays with real life family member",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"character\" OR \"married\" OR \"3\" OR \"times\" OR \"only\" OR \"one\" OR \"child\" OR \"survives\" OR \"actor\" OR \"plays\" OR \"with\" OR \"real\" OR \"life\" OR \"family\" OR \"member\"",
+        "terms": [
+          "character",
+          "married",
+          "3",
+          "times",
+          "only",
+          "one",
+          "child",
+          "survives",
+          "actor",
+          "plays",
+          "with",
+          "real",
+          "life",
+          "family",
+          "member"
+        ]
+      }
+    },
+    {
+      "round": 4,
+      "top_k": 10,
+      "equivalence_key": "9f7ec5d03a65ead472287d195f9c0b7bd45dd4059f4cae9ee3a555f67ec80184",
+      "cached": false,
+      "query_sha256": "65be2532eb460e9ad56e71d40d89ebb5ffb66571c9fbcd2b3db9af9a2bac0478",
+      "query": "character married three times one child survives telenovela actor real life relative",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"character\" OR \"married\" OR \"three\" OR \"times\" OR \"one\" OR \"child\" OR \"survives\" OR \"telenovela\" OR \"actor\" OR \"real\" OR \"life\" OR \"relative\"",
+        "terms": [
+          "character",
+          "married",
+          "three",
+          "times",
+          "one",
+          "child",
+          "survives",
+          "telenovela",
+          "actor",
+          "real",
+          "life",
+          "relative"
+        ]
+      }
+    },
+    {
+      "round": 4,
+      "top_k": 10,
+      "equivalence_key": "708c9c10454878a114449894fb27394bc5fdb2a4e37a6fa2c25419b742e0011e",
+      "cached": false,
+      "query_sha256": "3ce38e985d3209744645e5a9cf68851a52692ec7eb238c594cfb142385a0bf8d",
+      "query": "soap opera character married four times only one child alive actor sibling spouse real life",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"soap\" OR \"opera\" OR \"character\" OR \"married\" OR \"four\" OR \"times\" OR \"only\" OR \"one\" OR \"child\" OR \"alive\" OR \"actor\" OR \"sibling\" OR \"spouse\" OR \"real\" OR \"life\"",
+        "terms": [
+          "soap",
+          "opera",
+          "character",
+          "married",
+          "four",
+          "times",
+          "only",
+          "one",
+          "child",
+          "alive",
+          "actor",
+          "sibling",
+          "spouse",
+          "real",
+          "life"
+        ]
+      }
+    },
+    {
+      "round": 4,
+      "top_k": 10,
+      "equivalence_key": "9fefb6170f80460de1cf142a093f1bb82f0091264f7801221eaa0ff47ca80cdb",
+      "cached": false,
+      "query_sha256": "94ce2b299b71562884d87aa0495c2d402f1a43b9be6eb3a1f3604d77ab4b1a7a",
+      "query": "character married 3 times one surviving child actor plays with real life relative height 1.68",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"character\" OR \"married\" OR \"3\" OR \"times\" OR \"one\" OR \"surviving\" OR \"child\" OR \"actor\" OR \"plays\" OR \"with\" OR \"real\" OR \"life\" OR \"relative\" OR \"height\" OR \"1\" OR \"68\"",
+        "terms": [
+          "character",
+          "married",
+          "3",
+          "times",
+          "one",
+          "surviving",
+          "child",
+          "actor",
+          "plays",
+          "with",
+          "real",
+          "life",
+          "relative",
+          "height",
+          "1",
+          "68"
+        ]
+      }
+    },
+    {
+      "round": 5,
+      "top_k": 10,
+      "equivalence_key": "7320e3c99c94ec41ff544616fac9d1161d5a28bf77fcd230c36c7365542e2f72",
+      "cached": false,
+      "query_sha256": "d3602434b49caef5563e1ad9e465ab0e08a833f651e6153e01da86cf62228b64",
+      "query": "Grey's Anatomy character married three times one child alive actor real life relative",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"grey\" OR \"s\" OR \"anatomy\" OR \"character\" OR \"married\" OR \"three\" OR \"times\" OR \"one\" OR \"child\" OR \"alive\" OR \"actor\" OR \"real\" OR \"life\" OR \"relative\"",
+        "terms": [
+          "grey",
+          "s",
+          "anatomy",
+          "character",
+          "married",
+          "three",
+          "times",
+          "one",
+          "child",
+          "alive",
+          "actor",
+          "real",
+          "life",
+          "relative"
+        ]
+      }
+    },
+    {
+      "round": 5,
+      "top_k": 10,
+      "equivalence_key": "25b5b2d32a26af2816dc7c0bb9cb40b76d78c7e8b4ef88a8967bb6ad253978c4",
+      "cached": false,
+      "query_sha256": "4ed5132623b6aa20e0b0f5e20b52bf3db43000389bf2ab0b0f4a6a454535e8cd",
+      "query": "Callie Torres Grey's Anatomy marriages child Sara Ramirez real life relative",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"callie\" OR \"torres\" OR \"grey\" OR \"s\" OR \"anatomy\" OR \"marriages\" OR \"child\" OR \"sara\" OR \"ramirez\" OR \"real\" OR \"life\" OR \"relative\"",
+        "terms": [
+          "callie",
+          "torres",
+          "grey",
+          "s",
+          "anatomy",
+          "marriages",
+          "child",
+          "sara",
+          "ramirez",
+          "real",
+          "life",
+          "relative"
+        ]
+      }
+    },
+    {
+      "round": 5,
+      "top_k": 10,
+      "equivalence_key": "279568f8af032e23f05d2a4f4d30049e2da30a18bae0f85c1cd9bf0e89339d9d",
+      "cached": false,
+      "query_sha256": "d386ccce190ed565627c589886455332ec61e76f7428a766ea70c72caaf52e25",
+      "query": "character married four times one surviving child series actor sibling real life height",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"character\" OR \"married\" OR \"four\" OR \"times\" OR \"one\" OR \"surviving\" OR \"child\" OR \"series\" OR \"actor\" OR \"sibling\" OR \"real\" OR \"life\" OR \"height\"",
+        "terms": [
+          "character",
+          "married",
+          "four",
+          "times",
+          "one",
+          "surviving",
+          "child",
+          "series",
+          "actor",
+          "sibling",
+          "real",
+          "life",
+          "height"
+        ]
+      }
+    },
+    {
+      "round": 6,
+      "top_k": 10,
+      "equivalence_key": "df698e6f2900131750c258f68a02ef09b743bfa30b45731612a2ee6fa35359ce",
+      "cached": false,
+      "query_sha256": "3614bb6020f2afa35cb835f8b03dc9e0d2040282b3f1b96ed7f38f1d9212af40",
+      "query": "telenovela character married three times one child survives actor real life relative plays",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"telenovela\" OR \"character\" OR \"married\" OR \"three\" OR \"times\" OR \"one\" OR \"child\" OR \"survives\" OR \"actor\" OR \"real\" OR \"life\" OR \"relative\" OR \"plays\"",
+        "terms": [
+          "telenovela",
+          "character",
+          "married",
+          "three",
+          "times",
+          "one",
+          "child",
+          "survives",
+          "actor",
+          "real",
+          "life",
+          "relative",
+          "plays"
+        ]
+      }
+    },
+    {
+      "round": 6,
+      "top_k": 10,
+      "equivalence_key": "7fc92f931f1f6c19747695ebd60533411b372d708f808df1a2b50873d764c73f",
+      "cached": false,
+      "query_sha256": "24705f544b2f9af52b804662345e43e97e8e8a3bc3eed45d7abfe7b11536dbab",
+      "query": "protagonist married four times one surviving child telenovela actor sibling real life",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"protagonist\" OR \"married\" OR \"four\" OR \"times\" OR \"one\" OR \"surviving\" OR \"child\" OR \"telenovela\" OR \"actor\" OR \"sibling\" OR \"real\" OR \"life\"",
+        "terms": [
+          "protagonist",
+          "married",
+          "four",
+          "times",
+          "one",
+          "surviving",
+          "child",
+          "telenovela",
+          "actor",
+          "sibling",
+          "real",
+          "life"
+        ]
+      }
+    },
+    {
+      "round": 6,
+      "top_k": 10,
+      "equivalence_key": "883fd9eda3a0dac25a8b71ea372b0a87c2e085b06dd12c5e997e81420ed15867",
+      "cached": false,
+      "query_sha256": "a89db9c850c2767564ad1b01615b3c326c3d7557a9169bd8bb07dde9fc1e17c0",
+      "query": "telenovela character married 3 times only one child alive actor plays with real life family",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"telenovela\" OR \"character\" OR \"married\" OR \"3\" OR \"times\" OR \"only\" OR \"one\" OR \"child\" OR \"alive\" OR \"actor\" OR \"plays\" OR \"with\" OR \"real\" OR \"life\" OR \"family\"",
+        "terms": [
+          "telenovela",
+          "character",
+          "married",
+          "3",
+          "times",
+          "only",
+          "one",
+          "child",
+          "alive",
+          "actor",
+          "plays",
+          "with",
+          "real",
+          "life",
+          "family"
+        ]
+      }
+    },
+    {
+      "round": 7,
+      "top_k": 10,
+      "equivalence_key": "9de49915267c7a59346630e1e674124c2d1b7095a3ebb16b17879f12e7856d26",
+      "cached": false,
+      "query_sha256": "15336cb0d9a49da63fdd405ecd5500b8a26fb9cabb9375b59e2b550ac17668ca",
+      "query": "Days of Our Lives character married three times one child alive actor real life relative",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"days\" OR \"of\" OR \"our\" OR \"lives\" OR \"character\" OR \"married\" OR \"three\" OR \"times\" OR \"one\" OR \"child\" OR \"alive\" OR \"actor\" OR \"real\" OR \"life\" OR \"relative\"",
+        "terms": [
+          "days",
+          "of",
+          "our",
+          "lives",
+          "character",
+          "married",
+          "three",
+          "times",
+          "one",
+          "child",
+          "alive",
+          "actor",
+          "real",
+          "life",
+          "relative"
+        ]
+      }
+    },
+    {
+      "round": 7,
+      "top_k": 10,
+      "equivalence_key": "404c2e58a7e899b1c1e35906d999ea705831a9d34eda54991851bfc46dff2c2f",
+      "cached": false,
+      "query_sha256": "9b46395fda59eb6b66c94a955792c703a66166b651be9540c1090c7cab9ece7c",
+      "query": "Hope Brady marriages children actor real life relative",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"hope\" OR \"brady\" OR \"marriages\" OR \"children\" OR \"actor\" OR \"real\" OR \"life\" OR \"relative\"",
+        "terms": [
+          "hope",
+          "brady",
+          "marriages",
+          "children",
+          "actor",
+          "real",
+          "life",
+          "relative"
+        ]
+      }
+    },
+    {
+      "round": 7,
+      "top_k": 10,
+      "equivalence_key": "87713557412e0a0020499d7c2e273bd6741ff4610e79219eaba5ee1ca6b608c0",
+      "cached": false,
+      "query_sha256": "dd78f693af4a2a689fdcb8651fbbf220aad2d0bd1fe140c3f7b3363f163d56fe",
+      "query": "soap opera character married four times one surviving child actor sibling spouse plays",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"soap\" OR \"opera\" OR \"character\" OR \"married\" OR \"four\" OR \"times\" OR \"one\" OR \"surviving\" OR \"child\" OR \"actor\" OR \"sibling\" OR \"spouse\" OR \"plays\"",
+        "terms": [
+          "soap",
+          "opera",
+          "character",
+          "married",
+          "four",
+          "times",
+          "one",
+          "surviving",
+          "child",
+          "actor",
+          "sibling",
+          "spouse",
+          "plays"
+        ]
+      }
+    },
+    {
+      "round": 8,
+      "top_k": 10,
+      "equivalence_key": "b200127201b17056ba77a215cf4ec55a17f243ab19a7ed83cf81563ac7dbce8c",
+      "cached": false,
+      "query_sha256": "3749c0d62014f9c906f0a1ebc0daaaf0325e81799491e2574dbf6c3afffb700f",
+      "query": "Young and the Restless character married three times one child alive actor real life relative",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"young\" OR \"and\" OR \"the\" OR \"restless\" OR \"character\" OR \"married\" OR \"three\" OR \"times\" OR \"one\" OR \"child\" OR \"alive\" OR \"actor\" OR \"real\" OR \"life\" OR \"relative\"",
+        "terms": [
+          "young",
+          "and",
+          "the",
+          "restless",
+          "character",
+          "married",
+          "three",
+          "times",
+          "one",
+          "child",
+          "alive",
+          "actor",
+          "real",
+          "life",
+          "relative"
+        ]
+      }
+    },
+    {
+      "round": 8,
+      "top_k": 10,
+      "equivalence_key": "da4b1419476a955777194f3d55bcd0f6bd42eee2063528efb67700fe25020c0a",
+      "cached": false,
+      "query_sha256": "6834511e94811c972fbf4518ae55bb55e7920afdee0b06bbe19f957d827055d8",
+      "query": "Sharon Newman marriages children actor real life relative Young Restless",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"sharon\" OR \"newman\" OR \"marriages\" OR \"children\" OR \"actor\" OR \"real\" OR \"life\" OR \"relative\" OR \"young\" OR \"restless\"",
+        "terms": [
+          "sharon",
+          "newman",
+          "marriages",
+          "children",
+          "actor",
+          "real",
+          "life",
+          "relative",
+          "young",
+          "restless"
+        ]
+      }
+    },
+    {
+      "round": 8,
+      "top_k": 10,
+      "equivalence_key": "97959112a5c24bb5b289c90424d65c4001077bac6d9ffee801eee79aa7106d00",
+      "cached": false,
+      "query_sha256": "efd0504f7bebff5f46c4d1fc6a33b1446a8dcdd924e747570f3ff80a98052542",
+      "query": "Phyllis Summers marriages children actor real life relative Young Restless",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"phyllis\" OR \"summers\" OR \"marriages\" OR \"children\" OR \"actor\" OR \"real\" OR \"life\" OR \"relative\" OR \"young\" OR \"restless\"",
+        "terms": [
+          "phyllis",
+          "summers",
+          "marriages",
+          "children",
+          "actor",
+          "real",
+          "life",
+          "relative",
+          "young",
+          "restless"
+        ]
+      }
+    },
+    {
+      "round": 9,
+      "top_k": 10,
+      "equivalence_key": "df698e6f2900131750c258f68a02ef09b743bfa30b45731612a2ee6fa35359ce",
+      "cached": true,
+      "query_sha256": "3614bb6020f2afa35cb835f8b03dc9e0d2040282b3f1b96ed7f38f1d9212af40",
+      "query": "telenovela character married three times one child survives actor real life relative plays",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"telenovela\" OR \"character\" OR \"married\" OR \"three\" OR \"times\" OR \"one\" OR \"child\" OR \"survives\" OR \"actor\" OR \"real\" OR \"life\" OR \"relative\" OR \"plays\"",
+        "terms": [
+          "telenovela",
+          "character",
+          "married",
+          "three",
+          "times",
+          "one",
+          "child",
+          "survives",
+          "actor",
+          "real",
+          "life",
+          "relative",
+          "plays"
+        ]
+      }
+    },
+    {
+      "round": 9,
+      "top_k": 10,
+      "equivalence_key": "7fc92f931f1f6c19747695ebd60533411b372d708f808df1a2b50873d764c73f",
+      "cached": true,
+      "query_sha256": "24705f544b2f9af52b804662345e43e97e8e8a3bc3eed45d7abfe7b11536dbab",
+      "query": "protagonist married four times one surviving child telenovela actor sibling real life",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"protagonist\" OR \"married\" OR \"four\" OR \"times\" OR \"one\" OR \"surviving\" OR \"child\" OR \"telenovela\" OR \"actor\" OR \"sibling\" OR \"real\" OR \"life\"",
+        "terms": [
+          "protagonist",
+          "married",
+          "four",
+          "times",
+          "one",
+          "surviving",
+          "child",
+          "telenovela",
+          "actor",
+          "sibling",
+          "real",
+          "life"
+        ]
+      }
+    },
+    {
+      "round": 9,
+      "top_k": 10,
+      "equivalence_key": "883fd9eda3a0dac25a8b71ea372b0a87c2e085b06dd12c5e997e81420ed15867",
+      "cached": true,
+      "query_sha256": "a89db9c850c2767564ad1b01615b3c326c3d7557a9169bd8bb07dde9fc1e17c0",
+      "query": "telenovela character married 3 times only one child alive actor plays with real life family",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"telenovela\" OR \"character\" OR \"married\" OR \"3\" OR \"times\" OR \"only\" OR \"one\" OR \"child\" OR \"alive\" OR \"actor\" OR \"plays\" OR \"with\" OR \"real\" OR \"life\" OR \"family\"",
+        "terms": [
+          "telenovela",
+          "character",
+          "married",
+          "3",
+          "times",
+          "only",
+          "one",
+          "child",
+          "alive",
+          "actor",
+          "plays",
+          "with",
+          "real",
+          "life",
+          "family"
+        ]
+      }
+    },
+    {
+      "round": 10,
+      "top_k": 10,
+      "equivalence_key": "7320e3c99c94ec41ff544616fac9d1161d5a28bf77fcd230c36c7365542e2f72",
+      "cached": true,
+      "query_sha256": "d3602434b49caef5563e1ad9e465ab0e08a833f651e6153e01da86cf62228b64",
+      "query": "Grey's Anatomy character married three times one child alive actor real life relative",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"grey\" OR \"s\" OR \"anatomy\" OR \"character\" OR \"married\" OR \"three\" OR \"times\" OR \"one\" OR \"child\" OR \"alive\" OR \"actor\" OR \"real\" OR \"life\" OR \"relative\"",
+        "terms": [
+          "grey",
+          "s",
+          "anatomy",
+          "character",
+          "married",
+          "three",
+          "times",
+          "one",
+          "child",
+          "alive",
+          "actor",
+          "real",
+          "life",
+          "relative"
+        ]
+      }
+    },
+    {
+      "round": 10,
+      "top_k": 10,
+      "equivalence_key": "aca42ff85a550f61d9f8114a3cbc174fed7ad696ffaaa10478c478362fc342f5",
+      "cached": false,
+      "query_sha256": "b0938f7b60180e83365b7d744849cd49414e453d928d23e46f87449ea58f4fe1",
+      "query": "Grey's Anatomy character married four times one surviving child actor sibling spouse",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"grey\" OR \"s\" OR \"anatomy\" OR \"character\" OR \"married\" OR \"four\" OR \"times\" OR \"one\" OR \"surviving\" OR \"child\" OR \"actor\" OR \"sibling\" OR \"spouse\"",
+        "terms": [
+          "grey",
+          "s",
+          "anatomy",
+          "character",
+          "married",
+          "four",
+          "times",
+          "one",
+          "surviving",
+          "child",
+          "actor",
+          "sibling",
+          "spouse"
+        ]
+      }
+    },
+    {
+      "round": 10,
+      "top_k": 10,
+      "equivalence_key": "a05ed4773bb70e2a36d4e7be71ecbf513d9f6488a7995d9ef11a20e49a3eb552",
+      "cached": false,
+      "query_sha256": "f1f112fad8cc7caac33085fa8c8aab460d52da67708028e8ad20267c4e51f0c8",
+      "query": "Grey's Anatomy character married multiple times one child actor real life family member",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"grey\" OR \"s\" OR \"anatomy\" OR \"character\" OR \"married\" OR \"multiple\" OR \"times\" OR \"one\" OR \"child\" OR \"actor\" OR \"real\" OR \"life\" OR \"family\" OR \"member\"",
+        "terms": [
+          "grey",
+          "s",
+          "anatomy",
+          "character",
+          "married",
+          "multiple",
+          "times",
+          "one",
+          "child",
+          "actor",
+          "real",
+          "life",
+          "family",
+          "member"
+        ]
+      }
+    },
+    {
+      "round": 11,
+      "top_k": 10,
+      "equivalence_key": "4d93a7648668e5d36020bad5d70f91c093cd2e1b853fbd0fab1809c0b65555b7",
+      "cached": false,
+      "query_sha256": "aa6c6d63e31185e93e532d415ae3cfe28e589df594cc8bbeaf0e04355bfbc103",
+      "query": "Grey's Anatomy Callie Torres marriages children Sara Ramirez height",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"grey\" OR \"s\" OR \"anatomy\" OR \"callie\" OR \"torres\" OR \"marriages\" OR \"children\" OR \"sara\" OR \"ramirez\" OR \"height\"",
+        "terms": [
+          "grey",
+          "s",
+          "anatomy",
+          "callie",
+          "torres",
+          "marriages",
+          "children",
+          "sara",
+          "ramirez",
+          "height"
+        ]
+      }
+    },
+    {
+      "round": 11,
+      "top_k": 10,
+      "equivalence_key": "55dda72bac80bac1c8e2694f27401baa58dc16eedd99ba91c9c7409f8664117a",
+      "cached": false,
+      "query_sha256": "f0997f565d689035ccce4bf6d0efeecb1fb457b6b0da3c830144fd9116ee5990",
+      "query": "Callie Torres married times one child Sara Ramirez real life relative",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"callie\" OR \"torres\" OR \"married\" OR \"times\" OR \"one\" OR \"child\" OR \"sara\" OR \"ramirez\" OR \"real\" OR \"life\" OR \"relative\"",
+        "terms": [
+          "callie",
+          "torres",
+          "married",
+          "times",
+          "one",
+          "child",
+          "sara",
+          "ramirez",
+          "real",
+          "life",
+          "relative"
+        ]
+      }
+    },
+    {
+      "round": 11,
+      "top_k": 10,
+      "equivalence_key": "07ad5744b49834b0f415940a1ce82330a0c46482ffa12aa5fc7ed94f897a2a2c",
+      "cached": false,
+      "query_sha256": "1940664846c881ff488145e13516dc58f4acbd585e09b56a43d728983bad2348",
+      "query": "Sara Ramirez height Grey's Anatomy Callie Torres husband child",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"sara\" OR \"ramirez\" OR \"height\" OR \"grey\" OR \"s\" OR \"anatomy\" OR \"callie\" OR \"torres\" OR \"husband\" OR \"child\"",
+        "terms": [
+          "sara",
+          "ramirez",
+          "height",
+          "grey",
+          "s",
+          "anatomy",
+          "callie",
+          "torres",
+          "husband",
+          "child"
+        ]
+      }
+    },
+    {
+      "round": 12,
+      "top_k": 10,
+      "equivalence_key": "d78f40e0595d7ff18e6381e1f1639f62e579e3b3c497ac26d4b8d79eb9ca69f4",
+      "cached": false,
+      "query_sha256": "4794adc902fece774e96764929b55160c68cb3df18ae01cc947e82dd6bf054c8",
+      "query": "Jane the Virgin Jane Villanueva marriages children Gina Rodriguez height",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"jane\" OR \"the\" OR \"virgin\" OR \"villanueva\" OR \"marriages\" OR \"children\" OR \"gina\" OR \"rodriguez\" OR \"height\"",
+        "terms": [
+          "jane",
+          "the",
+          "virgin",
+          "villanueva",
+          "marriages",
+          "children",
+          "gina",
+          "rodriguez",
+          "height"
+        ]
+      }
+    },
+    {
+      "round": 12,
+      "top_k": 10,
+      "equivalence_key": "958eea35122b8df87de5b71099bbc04628cc67454f1cf2bf5697df39ba986dae",
+      "cached": false,
+      "query_sha256": "3790e205eebc950af9d05834ea56f7b98dfd59436ef86c5f84b194c872572bed",
+      "query": "Jane Villanueva married times husband child Gina Rodriguez real life relative",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"jane\" OR \"villanueva\" OR \"married\" OR \"times\" OR \"husband\" OR \"child\" OR \"gina\" OR \"rodriguez\" OR \"real\" OR \"life\" OR \"relative\"",
+        "terms": [
+          "jane",
+          "villanueva",
+          "married",
+          "times",
+          "husband",
+          "child",
+          "gina",
+          "rodriguez",
+          "real",
+          "life",
+          "relative"
+        ]
+      }
+    },
+    {
+      "round": 12,
+      "top_k": 10,
+      "equivalence_key": "d5968d4631eaa56bbdeddda55bc94fae7ab71c7b642dc3fb9dc8811395f70563",
+      "cached": false,
+      "query_sha256": "31fa419bd213c21c2641675c494c62f490292201a21be79e30002ace9360f374",
+      "query": "Gina Rodriguez height Jane the Virgin Jane Villanueva husband Michael Rafael",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"gina\" OR \"rodriguez\" OR \"height\" OR \"jane\" OR \"the\" OR \"virgin\" OR \"villanueva\" OR \"husband\" OR \"michael\" OR \"rafael\"",
+        "terms": [
+          "gina",
+          "rodriguez",
+          "height",
+          "jane",
+          "the",
+          "virgin",
+          "villanueva",
+          "husband",
+          "michael",
+          "rafael"
+        ]
+      }
+    },
+    {
+      "round": 13,
+      "top_k": 10,
+      "equivalence_key": "df698e6f2900131750c258f68a02ef09b743bfa30b45731612a2ee6fa35359ce",
+      "cached": true,
+      "query_sha256": "3614bb6020f2afa35cb835f8b03dc9e0d2040282b3f1b96ed7f38f1d9212af40",
+      "query": "telenovela character married three times one child survives actor real life relative plays",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"telenovela\" OR \"character\" OR \"married\" OR \"three\" OR \"times\" OR \"one\" OR \"child\" OR \"survives\" OR \"actor\" OR \"real\" OR \"life\" OR \"relative\" OR \"plays\"",
+        "terms": [
+          "telenovela",
+          "character",
+          "married",
+          "three",
+          "times",
+          "one",
+          "child",
+          "survives",
+          "actor",
+          "real",
+          "life",
+          "relative",
+          "plays"
+        ]
+      }
+    },
+    {
+      "round": 13,
+      "top_k": 10,
+      "equivalence_key": "7fc92f931f1f6c19747695ebd60533411b372d708f808df1a2b50873d764c73f",
+      "cached": true,
+      "query_sha256": "24705f544b2f9af52b804662345e43e97e8e8a3bc3eed45d7abfe7b11536dbab",
+      "query": "protagonist married four times one surviving child telenovela actor sibling real life",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"protagonist\" OR \"married\" OR \"four\" OR \"times\" OR \"one\" OR \"surviving\" OR \"child\" OR \"telenovela\" OR \"actor\" OR \"sibling\" OR \"real\" OR \"life\"",
+        "terms": [
+          "protagonist",
+          "married",
+          "four",
+          "times",
+          "one",
+          "surviving",
+          "child",
+          "telenovela",
+          "actor",
+          "sibling",
+          "real",
+          "life"
+        ]
+      }
+    },
+    {
+      "round": 13,
+      "top_k": 10,
+      "equivalence_key": "883fd9eda3a0dac25a8b71ea372b0a87c2e085b06dd12c5e997e81420ed15867",
+      "cached": true,
+      "query_sha256": "a89db9c850c2767564ad1b01615b3c326c3d7557a9169bd8bb07dde9fc1e17c0",
+      "query": "telenovela character married 3 times only one child alive actor plays with real life family",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"telenovela\" OR \"character\" OR \"married\" OR \"3\" OR \"times\" OR \"only\" OR \"one\" OR \"child\" OR \"alive\" OR \"actor\" OR \"plays\" OR \"with\" OR \"real\" OR \"life\" OR \"family\"",
+        "terms": [
+          "telenovela",
+          "character",
+          "married",
+          "3",
+          "times",
+          "only",
+          "one",
+          "child",
+          "alive",
+          "actor",
+          "plays",
+          "with",
+          "real",
+          "life",
+          "family"
+        ]
+      }
+    },
+    {
+      "round": 14,
+      "top_k": 10,
+      "equivalence_key": "4f485592cebdfe5d86902262065ee8c1701e13909d078d36de6f502054206523",
+      "cached": false,
+      "query_sha256": "bea281da97806fbf78d9176e89f4a807e975b32327a2f71c994197a94422ddf5",
+      "query": "La Usurpadora Paulina Fernando character marriages children",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"la\" OR \"usurpadora\" OR \"paulina\" OR \"fernando\" OR \"character\" OR \"marriages\" OR \"children\"",
+        "terms": [
+          "la",
+          "usurpadora",
+          "paulina",
+          "fernando",
+          "character",
+          "marriages",
+          "children"
+        ]
+      }
+    },
+    {
+      "round": 14,
+      "top_k": 10,
+      "equivalence_key": "9705b880df19f4872f0a9045ed5a4f6f12e1b88a3ea684aef4c5e612719ffae4",
+      "cached": false,
+      "query_sha256": "958b959a1779e59cf009d9f1f247ebc46d1bdfa4c1aee84fe39c4920956ce293",
+      "query": "Gabriela Spanic height La Usurpadora twin sisters",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"gabriela\" OR \"spanic\" OR \"height\" OR \"la\" OR \"usurpadora\" OR \"twin\" OR \"sisters\"",
+        "terms": [
+          "gabriela",
+          "spanic",
+          "height",
+          "la",
+          "usurpadora",
+          "twin",
+          "sisters"
+        ]
+      }
+    },
+    {
+      "round": 14,
+      "top_k": 10,
+      "equivalence_key": "5a637277197b2a3bfa08186aef039819c33f9efc334387989fa334d1c981da95",
+      "cached": false,
+      "query_sha256": "1b1036d3fdfe08ecc243af31fd0750b62468c11eb4252afd68b4172e03000a44",
+      "query": "Fernando character La Usurpadora wife children died",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"fernando\" OR \"character\" OR \"la\" OR \"usurpadora\" OR \"wife\" OR \"children\" OR \"died\"",
+        "terms": [
+          "fernando",
+          "character",
+          "la",
+          "usurpadora",
+          "wife",
+          "children",
+          "died"
+        ]
+      }
+    },
+    {
+      "round": 15,
+      "top_k": 10,
+      "equivalence_key": "f8ffde7e4c2348f43ffe0042f315ae13a29e79b979fa5d27f07dc3212c0612e7",
+      "cached": false,
+      "query_sha256": "28804d050c7e9fc824ea1936223a0e4542f790e911ace9a9fe159fa8fce6149b",
+      "query": "La Usurpadora telenovela plot Paulina Paola twins Fernando Carlos children",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"la\" OR \"usurpadora\" OR \"telenovela\" OR \"plot\" OR \"paulina\" OR \"paola\" OR \"twins\" OR \"fernando\" OR \"carlos\" OR \"children\"",
+        "terms": [
+          "la",
+          "usurpadora",
+          "telenovela",
+          "plot",
+          "paulina",
+          "paola",
+          "twins",
+          "fernando",
+          "carlos",
+          "children"
+        ]
+      }
+    },
+    {
+      "round": 15,
+      "top_k": 10,
+      "equivalence_key": "acb3fc2e68cc46689b97d4c6646c0f4879d5beae155578b536cd1b26695379d2",
+      "cached": false,
+      "query_sha256": "ddf2a0251883ba690fa5c844afcfa1d04d443773cde99f24111bd77bc82c6629",
+      "query": "Gabriela Spanic La Usurpadora twin sisters Paulina Paola",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"gabriela\" OR \"spanic\" OR \"la\" OR \"usurpadora\" OR \"twin\" OR \"sisters\" OR \"paulina\" OR \"paola\"",
+        "terms": [
+          "gabriela",
+          "spanic",
+          "la",
+          "usurpadora",
+          "twin",
+          "sisters",
+          "paulina",
+          "paola"
+        ]
+      }
+    },
+    {
+      "round": 15,
+      "top_k": 10,
+      "equivalence_key": "7a7cbc3de0c4237e9e2cb6b776ce9f2fed1f6ec03949898d44c9d1638bd6e1e0",
+      "cached": false,
+      "query_sha256": "4606b04c8b0b78c4d2a09270ea4aa29b81751bed7dc07daf50304fabfddbbce6",
+      "query": "La Usurpadora 1998 Televisa cast characters Fernando Carlos Paulina Paola",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"la\" OR \"usurpadora\" OR \"1998\" OR \"televisa\" OR \"cast\" OR \"characters\" OR \"fernando\" OR \"carlos\" OR \"paulina\" OR \"paola\"",
+        "terms": [
+          "la",
+          "usurpadora",
+          "1998",
+          "televisa",
+          "cast",
+          "characters",
+          "fernando",
+          "carlos",
+          "paulina",
+          "paola"
+        ]
+      }
+    }
+  ],
+  "equivalent_query_repeats": 7,
+  "views": [
+    {
+      "round": 1,
+      "compacted": false,
+      "visible_evidence": [],
+      "shelf": [],
+      "shelf_evicted": []
+    },
+    {
+      "round": 2,
+      "compacted": false,
+      "visible_evidence": [],
+      "shelf": [],
+      "shelf_evicted": []
+    },
+    {
+      "round": 3,
+      "compacted": false,
+      "visible_evidence": [],
+      "shelf": [],
+      "shelf_evicted": []
+    },
+    {
+      "round": 4,
+      "compacted": false,
+      "visible_evidence": [],
+      "shelf": [],
+      "shelf_evicted": []
+    },
+    {
+      "round": 5,
+      "compacted": false,
+      "visible_evidence": [],
+      "shelf": [],
+      "shelf_evicted": []
+    },
+    {
+      "round": 6,
+      "compacted": true,
+      "visible_evidence": [],
+      "shelf": [],
+      "shelf_evicted": []
+    },
+    {
+      "round": 7,
+      "compacted": true,
+      "visible_evidence": [],
+      "shelf": [],
+      "shelf_evicted": []
+    },
+    {
+      "round": 8,
+      "compacted": true,
+      "visible_evidence": [],
+      "shelf": [],
+      "shelf_evicted": []
+    },
+    {
+      "round": 9,
+      "compacted": true,
+      "visible_evidence": [],
+      "shelf": [],
+      "shelf_evicted": []
+    },
+    {
+      "round": 10,
+      "compacted": false,
+      "visible_evidence": [],
+      "shelf": [],
+      "shelf_evicted": []
+    },
+    {
+      "round": 11,
+      "compacted": true,
+      "visible_evidence": [],
+      "shelf": [],
+      "shelf_evicted": []
+    },
+    {
+      "round": 12,
+      "compacted": true,
+      "visible_evidence": [],
+      "shelf": [],
+      "shelf_evicted": []
+    },
+    {
+      "round": 13,
+      "compacted": true,
+      "visible_evidence": [],
+      "shelf": [],
+      "shelf_evicted": []
+    },
+    {
+      "round": 14,
+      "compacted": true,
+      "visible_evidence": [],
+      "shelf": [],
+      "shelf_evicted": []
+    },
+    {
+      "round": 15,
+      "compacted": true,
+      "visible_evidence": [],
+      "shelf": [],
+      "shelf_evicted": []
+    },
+    {
+      "round": 16,
+      "compacted": true,
+      "visible_evidence": [],
+      "shelf": [],
+      "shelf_evicted": []
+    }
+  ],
+  "delivered_refs": [],
+  "submitted_refs": [],
+  "text_included": true,
+  "limitations": [
+    "Equivalence is compiler equality, not semantic identity or wasted-search proof",
+    "Raw-window visibility/selection is not entailment or complete evidence coverage",
+    "No live q26 replay or independent answer scoring is performed"
+  ]
+}

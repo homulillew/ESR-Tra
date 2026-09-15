@@ -1,0 +1,246 @@
+{
+  "utc": "2026-09-15T11:30:15.817378+00:00",
+  "rows": [
+    {
+      "slot": "q774-middle-history-v1-r1",
+      "qid": 774,
+      "protocol": "middle-history-v1",
+      "status": "model_budget",
+      "terminal": {
+        "answer": "",
+        "elapsed_seconds": 173.80292310001096,
+        "outcome": "model_budget"
+      },
+      "attempts": 16,
+      "elapsed_seconds": 173.94177350000245,
+      "head": "ebe9ea70c60cbf8f1aa7fb46e0652712a3b44996d62f76296a5b8641c0b90cbb",
+      "seal_sha256": "616c5eb9b4a8999427b31af80632729293d2a01e83488e91d92e4ca1a3ed861f",
+      "budget_after": {
+        "cap": 1643,
+        "used": 781,
+        "remaining": 862,
+        "this_run": 16,
+        "epoch_allowance": 1000,
+        "epoch_used": 138,
+        "epoch_remaining": 862
+      }
+    },
+    {
+      "slot": "q774-baseline-r1",
+      "qid": 774,
+      "protocol": "baseline",
+      "status": "model_budget",
+      "terminal": {
+        "answer": "",
+        "elapsed_seconds": 154.18070280001848,
+        "outcome": "model_budget"
+      },
+      "attempts": 16,
+      "elapsed_seconds": 154.32620589999715,
+      "head": "97de07f1358ce3f9d4a4841ffc50c1a9c34e2675b819231eb876ee2d685dbc35",
+      "seal_sha256": "996f3c2f7ce21c44f065205b06fa34fdaf13208d1565e1140299aaa47c9c3e36",
+      "budget_after": {
+        "cap": 1643,
+        "used": 797,
+        "remaining": 846,
+        "this_run": 32,
+        "epoch_allowance": 1000,
+        "epoch_used": 154,
+        "epoch_remaining": 846
+      }
+    },
+    {
+      "slot": "q771-baseline-r1",
+      "qid": 771,
+      "protocol": "baseline",
+      "status": "submitted",
+      "terminal": {
+        "answer": "Vakkorama",
+        "answer_representation": {
+          "input_type": "string",
+          "operation": "identity",
+          "rule": "string-integer-v1"
+        },
+        "basis": [
+          {
+            "document": "d11",
+            "document_chars": 9095,
+            "end": 6000,
+            "kind": "raw_evidence",
+            "ref": "e2",
+            "sha256": "01ef6425050ddf612695a672f50d2d88e296ce9e1e5d49338047f20a92856164",
+            "snapshot": "446eabd6c86b9aad83f468e7eb034d96105d6e38bc9d97c923416d3ce089e105",
+            "start": 3000
+          }
+        ],
+        "elapsed_seconds": 21.150940199993784,
+        "outcome": "submitted",
+        "refs": [
+          "e2"
+        ],
+        "semantic_status": "not_automatically_verified"
+      },
+      "attempts": 4,
+      "elapsed_seconds": 21.256341599975713,
+      "head": "21fbd877a1ffbc83c568574b23aeaec11c8d3777c408b1ffc35acb83cfbd38fe",
+      "seal_sha256": "857105ff3fe1bbfc236dcebe3edb7315c37953e8aac2659da8034598823ca382",
+      "budget_after": {
+        "cap": 1643,
+        "used": 801,
+        "remaining": 842,
+        "this_run": 36,
+        "epoch_allowance": 1000,
+        "epoch_used": 158,
+        "epoch_remaining": 842
+      }
+    },
+    {
+      "slot": "q771-middle-history-v1-r1",
+      "qid": 771,
+      "protocol": "middle-history-v1",
+      "status": "submitted",
+      "terminal": {
+        "answer": "Vakkorama",
+        "answer_representation": {
+          "input_type": "string",
+          "operation": "identity",
+          "rule": "string-integer-v1"
+        },
+        "basis": [
+          {
+            "document": "d1",
+            "document_chars": 9095,
+            "end": 9000,
+            "kind": "raw_evidence",
+            "ref": "e2",
+            "sha256": "65b0c184fd64ea3be18598ab6d37752140611b4fbf1622c2fe742617ac029a28",
+            "snapshot": "446eabd6c86b9aad83f468e7eb034d96105d6e38bc9d97c923416d3ce089e105",
+            "start": 3000
+          },
+          {
+            "document": "d10",
+            "document_chars": 13639,
+            "end": 3000,
+            "kind": "raw_evidence",
+            "ref": "e3",
+            "sha256": "ed282b99cfb0aae5a430ddfadeb3348fa20e85aac24fb4501bf9cd3b3dadb4b2",
+            "snapshot": "7d8960afbde4b93401ea738e66299a6ee3d0dee47906ba8e3a86ebdea642ffcd",
+            "start": 0
+          }
+        ],
+        "elapsed_seconds": 16.65274859999772,
+        "outcome": "submitted",
+        "refs": [
+          "e2",
+          "e3"
+        ],
+        "semantic_status": "not_automatically_verified"
+      },
+      "attempts": 4,
+      "elapsed_seconds": 16.7418733999948,
+      "head": "ef945a04e888a2b26add6443dfaf13eaec8ab2cec214fc927e2c92b9722ccbd6",
+      "seal_sha256": "3e9566bd7ee87e47c8c5e7c5ae05a71ae80e50a29a9027352e81ad569f0ba2ae",
+      "budget_after": {
+        "cap": 1643,
+        "used": 805,
+        "remaining": 838,
+        "this_run": 40,
+        "epoch_allowance": 1000,
+        "epoch_used": 162,
+        "epoch_remaining": 838
+      }
+    },
+    {
+      "slot": "q778-middle-history-v1-r1",
+      "qid": 778,
+      "protocol": "middle-history-v1",
+      "status": "submitted",
+      "terminal": {
+        "answer": "21",
+        "answer_representation": {
+          "input_type": "integer",
+          "input_value": 21,
+          "operation": "decimal",
+          "rule": "string-integer-v1"
+        },
+        "basis": [
+          {
+            "document": "d22",
+            "document_chars": 4374,
+            "end": 3000,
+            "kind": "raw_evidence",
+            "ref": "e1",
+            "sha256": "bc0d510dbd6cde0530cf08684de455d82ec1943c0ba50cab130ae01990cc24b8",
+            "snapshot": "d7b7a23b3eb780d78018e5fe30d91613c9769a1cff7564bb0a79c08614acb838",
+            "start": 0
+          }
+        ],
+        "elapsed_seconds": 22.32252079999307,
+        "outcome": "submitted",
+        "refs": [
+          "e1"
+        ],
+        "semantic_status": "not_automatically_verified"
+      },
+      "attempts": 4,
+      "elapsed_seconds": 22.486727100011194,
+      "head": "b700163fe53fa1f9c6325e9d92da83a1a2b30f0fe4abdf32a8dbbe88ba8d9b04",
+      "seal_sha256": "151c3be506370b29d9329443f54d8c621b392474744859484c9d156617ef59ba",
+      "budget_after": {
+        "cap": 1643,
+        "used": 809,
+        "remaining": 834,
+        "this_run": 44,
+        "epoch_allowance": 1000,
+        "epoch_used": 166,
+        "epoch_remaining": 834
+      }
+    },
+    {
+      "slot": "q778-baseline-r1",
+      "qid": 778,
+      "protocol": "baseline",
+      "status": "submitted",
+      "terminal": {
+        "answer": "21",
+        "answer_representation": {
+          "input_type": "integer",
+          "input_value": 21,
+          "operation": "decimal",
+          "rule": "string-integer-v1"
+        },
+        "basis": [
+          {
+            "document": "d1",
+            "document_chars": 4374,
+            "end": 3000,
+            "kind": "raw_evidence",
+            "ref": "e1",
+            "sha256": "bc0d510dbd6cde0530cf08684de455d82ec1943c0ba50cab130ae01990cc24b8",
+            "snapshot": "d7b7a23b3eb780d78018e5fe30d91613c9769a1cff7564bb0a79c08614acb838",
+            "start": 0
+          }
+        ],
+        "elapsed_seconds": 20.940280700015137,
+        "outcome": "submitted",
+        "refs": [
+          "e1"
+        ],
+        "semantic_status": "not_automatically_verified"
+      },
+      "attempts": 3,
+      "elapsed_seconds": 21.021968899993226,
+      "head": "8b2c5a0dceb3c4f21c78fd64a7246c3f60b6376cb14b1fa7bb10ae6e159acbbc",
+      "seal_sha256": "58710c897b610ce701cd3b960267f840469230cfd38c7eeb6f15cecd1d0e7919",
+      "budget_after": {
+        "cap": 1643,
+        "used": 812,
+        "remaining": 831,
+        "this_run": 47,
+        "epoch_allowance": 1000,
+        "epoch_used": 169,
+        "epoch_remaining": 831
+      }
+    }
+  ]
+}

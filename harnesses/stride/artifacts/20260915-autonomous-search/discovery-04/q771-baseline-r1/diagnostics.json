@@ -1,0 +1,185 @@
+{
+  "protocol": "stride-search-3",
+  "head": "21fbd877a1ffbc83c568574b23aeaec11c8d3777c408b1ffc35acb83cfbd38fe",
+  "outcome": "submitted",
+  "formal_correct": null,
+  "model_attempts": 4,
+  "backend_attempts": 7,
+  "queries": [
+    {
+      "round": 1,
+      "top_k": 10,
+      "equivalence_key": "b1bcbaf7c19517654c6b7d27e6690aa4b94d45273fa966628bb64b0de931a096",
+      "cached": false,
+      "query_sha256": "f02d2a3390c01b9f2046f1bfe194f78f9238e20e62d4c19da1ca54a2d7972333",
+      "query": "tower built 1340s city",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"tower\" OR \"built\" OR \"1340s\" OR \"city\"",
+        "terms": [
+          "tower",
+          "built",
+          "1340s",
+          "city"
+        ]
+      }
+    },
+    {
+      "round": 1,
+      "top_k": 10,
+      "equivalence_key": "92c72cf38701bf8849f66c2fad8a9e0ec287d1f28cd1e6e4470c5f899296f121",
+      "cached": false,
+      "query_sha256": "123d18f7c1bdfc86b1eef0d45bac0d4432a27fd326a6da7c8bd6734ef7150b47",
+      "query": "hat shop 1930s scarves renamed initials siblings surname",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"hat\" OR \"shop\" OR \"1930s\" OR \"scarves\" OR \"renamed\" OR \"initials\" OR \"siblings\" OR \"surname\"",
+        "terms": [
+          "hat",
+          "shop",
+          "1930s",
+          "scarves",
+          "renamed",
+          "initials",
+          "siblings",
+          "surname"
+        ]
+      }
+    },
+    {
+      "round": 1,
+      "top_k": 10,
+      "equivalence_key": "bb14ce6471f2be99e1299c25e27db702e140e979ddb1c514c665f9c67ec9e435",
+      "cached": false,
+      "query_sha256": "5319b41199faaed28e96f31a391fb112f02d522b09fade0dc29e71e61fd52eaa",
+      "query": "hat shop became scarf shop branches 1970s new brand 1980s child",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"hat\" OR \"shop\" OR \"became\" OR \"scarf\" OR \"branches\" OR \"1970s\" OR \"new\" OR \"brand\" OR \"1980s\" OR \"child\"",
+        "terms": [
+          "hat",
+          "shop",
+          "became",
+          "scarf",
+          "branches",
+          "1970s",
+          "new",
+          "brand",
+          "1980s",
+          "child"
+        ]
+      }
+    },
+    {
+      "round": 3,
+      "top_k": 8,
+      "equivalence_key": "c232f5f76ac40d2d92b4b0b8a4a0016ca921f4a43bd0b6d59dcd54a1a6679a67",
+      "cached": false,
+      "query_sha256": "fd626ac2b9454486193f5b14a9686f9c51606687174974555887934bef348383",
+      "query": "Vakko new brand 1980s younger audience Vitali Hakko son",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"vakko\" OR \"new\" OR \"brand\" OR \"1980s\" OR \"younger\" OR \"audience\" OR \"vitali\" OR \"hakko\" OR \"son\"",
+        "terms": [
+          "vakko",
+          "new",
+          "brand",
+          "1980s",
+          "younger",
+          "audience",
+          "vitali",
+          "hakko",
+          "son"
+        ]
+      }
+    },
+    {
+      "round": 3,
+      "top_k": 8,
+      "equivalence_key": "874673926051f8e9e0153faa30dd54d86d14ffcec1581271de43495e02e6c125",
+      "cached": false,
+      "query_sha256": "07e61326dbe8e4377a0c045e86d7c5ab3c1a62d33c812ef911e558e43f85941e",
+      "query": "Vakko V2 brand younger generation",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"vakko\" OR \"v2\" OR \"brand\" OR \"younger\" OR \"generation\"",
+        "terms": [
+          "vakko",
+          "v2",
+          "brand",
+          "younger",
+          "generation"
+        ]
+      }
+    },
+    {
+      "round": 3,
+      "top_k": 8,
+      "equivalence_key": "c43f0f8cac01e56703c54877e9aa094be20e046b8f37e72fc19a69d3aba9eb43",
+      "cached": false,
+      "query_sha256": "83f1d1ea7742a29ce5d8b8bf4eb5c057c11131aab8075990597409b49f9954ba",
+      "query": "Vitali Hakko son brand 1980s youth",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"vitali\" OR \"hakko\" OR \"son\" OR \"brand\" OR \"1980s\" OR \"youth\"",
+        "terms": [
+          "vitali",
+          "hakko",
+          "son",
+          "brand",
+          "1980s",
+          "youth"
+        ]
+      }
+    }
+  ],
+  "equivalent_query_repeats": 0,
+  "views": [
+    {
+      "round": 1,
+      "compacted": false,
+      "visible_evidence": [],
+      "shelf": [],
+      "shelf_evicted": []
+    },
+    {
+      "round": 2,
+      "compacted": false,
+      "visible_evidence": [],
+      "shelf": [],
+      "shelf_evicted": []
+    },
+    {
+      "round": 3,
+      "compacted": false,
+      "visible_evidence": [
+        "e1"
+      ],
+      "shelf": [],
+      "shelf_evicted": []
+    },
+    {
+      "round": 4,
+      "compacted": false,
+      "visible_evidence": [
+        "e1",
+        "e2"
+      ],
+      "shelf": [],
+      "shelf_evicted": []
+    }
+  ],
+  "delivered_refs": [
+    "e1",
+    "e2"
+  ],
+  "submitted_refs": [
+    "e2"
+  ],
+  "text_included": true,
+  "limitations": [
+    "Equivalence is compiler equality, not semantic identity or wasted-search proof",
+    "Raw-window visibility/selection is not entailment or complete evidence coverage",
+    "No live q26 replay or independent answer scoring is performed"
+  ]
+}

@@ -1,0 +1,185 @@
+{
+  "protocol": "stride-search-3",
+  "head": "8b2c5a0dceb3c4f21c78fd64a7246c3f60b6376cb14b1fa7bb10ae6e159acbbc",
+  "outcome": "submitted",
+  "formal_correct": null,
+  "model_attempts": 3,
+  "backend_attempts": 7,
+  "queries": [
+    {
+      "round": 1,
+      "top_k": 5,
+      "equivalence_key": "c06a9efc40f7e52d7836ee861fd9b97d7ca14b3e759b2f067bfbc7f88d9f7ca7",
+      "cached": false,
+      "query_sha256": "1f22944303e22dd7f73f85620c91f7e66b07b6c0dcbf937e95c6557bbb501499",
+      "query": "woman claimed to be related to Elon Musk mother age gave birth",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"woman\" OR \"claimed\" OR \"to\" OR \"be\" OR \"related\" OR \"elon\" OR \"musk\" OR \"mother\" OR \"age\" OR \"gave\" OR \"birth\"",
+        "terms": [
+          "woman",
+          "claimed",
+          "to",
+          "be",
+          "related",
+          "elon",
+          "musk",
+          "mother",
+          "age",
+          "gave",
+          "birth"
+        ]
+      }
+    },
+    {
+      "round": 1,
+      "top_k": 5,
+      "equivalence_key": "506a00e04d8d8852742cc2f5a5befe582214d679f8e9185fdbfac62dbe4cb0fb",
+      "cached": false,
+      "query_sha256": "603c981c4064e8482c02689cb4d62ba800857ad4e9b388bcadf6855616fb5639",
+      "query": "lady claimed related Elon Musk mother age birth article",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"lady\" OR \"claimed\" OR \"related\" OR \"elon\" OR \"musk\" OR \"mother\" OR \"age\" OR \"birth\" OR \"article\"",
+        "terms": [
+          "lady",
+          "claimed",
+          "related",
+          "elon",
+          "musk",
+          "mother",
+          "age",
+          "birth",
+          "article"
+        ]
+      }
+    },
+    {
+      "round": 1,
+      "top_k": 5,
+      "equivalence_key": "16437474b6cdc0042d5a2250a251eede39811aae82fa730f5d0113b93e1a3443",
+      "cached": false,
+      "query_sha256": "dba271f8aa59a79359473beb69efbc14d51c99d904deaa29dd538635676643c6",
+      "query": "woman claiming relation Elon Musk mother gave birth age",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"woman\" OR \"claiming\" OR \"relation\" OR \"elon\" OR \"musk\" OR \"mother\" OR \"gave\" OR \"birth\" OR \"age\"",
+        "terms": [
+          "woman",
+          "claiming",
+          "relation",
+          "elon",
+          "musk",
+          "mother",
+          "gave",
+          "birth",
+          "age"
+        ]
+      }
+    },
+    {
+      "round": 1,
+      "top_k": 5,
+      "equivalence_key": "1afb908e10145ece74e51823c168195c485160bffc9cdcea3226ddf7e6ec5ea0",
+      "cached": false,
+      "query_sha256": "b7bdc0314b8afc4c813567e8aaec759a5babd3ad3f715c87cdf326f0835cd9d4",
+      "query": "Elon Musk secret sister daughter claimed relative",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"elon\" OR \"musk\" OR \"secret\" OR \"sister\" OR \"daughter\" OR \"claimed\" OR \"relative\"",
+        "terms": [
+          "elon",
+          "musk",
+          "secret",
+          "sister",
+          "daughter",
+          "claimed",
+          "relative"
+        ]
+      }
+    },
+    {
+      "round": 1,
+      "top_k": 5,
+      "equivalence_key": "6c1e79d325903687680fd71241f6c347d7f0c849dc988c9b032e93f239596cc4",
+      "cached": false,
+      "query_sha256": "eca7fddb8ca98f717e0a6b9f99b8ef5177ec651f49753af0c2435bf4fc234edc",
+      "query": "woman claiming to be Elon Musk relative sister",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"woman\" OR \"claiming\" OR \"to\" OR \"be\" OR \"elon\" OR \"musk\" OR \"relative\" OR \"sister\"",
+        "terms": [
+          "woman",
+          "claiming",
+          "to",
+          "be",
+          "elon",
+          "musk",
+          "relative",
+          "sister"
+        ]
+      }
+    },
+    {
+      "round": 1,
+      "top_k": 5,
+      "equivalence_key": "5f3671531a68fc0f838aa20000c5928c016ad21a6ea81bb0eb4c3147f54b5ee1",
+      "cached": false,
+      "query_sha256": "240e6fa0ba44b7e9f55696b302b86e1e115d2e2f3a7ef17e93caecdf73393b5e",
+      "query": "claimed to be Elon Musk half-sister relative article",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"claimed\" OR \"to\" OR \"be\" OR \"elon\" OR \"musk\" OR \"half\" OR \"sister\" OR \"relative\" OR \"article\"",
+        "terms": [
+          "claimed",
+          "to",
+          "be",
+          "elon",
+          "musk",
+          "half",
+          "sister",
+          "relative",
+          "article"
+        ]
+      }
+    }
+  ],
+  "equivalent_query_repeats": 0,
+  "views": [
+    {
+      "round": 1,
+      "compacted": false,
+      "visible_evidence": [],
+      "shelf": [],
+      "shelf_evicted": []
+    },
+    {
+      "round": 2,
+      "compacted": false,
+      "visible_evidence": [],
+      "shelf": [],
+      "shelf_evicted": []
+    },
+    {
+      "round": 3,
+      "compacted": false,
+      "visible_evidence": [
+        "e1"
+      ],
+      "shelf": [],
+      "shelf_evicted": []
+    }
+  ],
+  "delivered_refs": [
+    "e1"
+  ],
+  "submitted_refs": [
+    "e1"
+  ],
+  "text_included": true,
+  "limitations": [
+    "Equivalence is compiler equality, not semantic identity or wasted-search proof",
+    "Raw-window visibility/selection is not entailment or complete evidence coverage",
+    "No live q26 replay or independent answer scoring is performed"
+  ]
+}

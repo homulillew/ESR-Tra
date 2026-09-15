@@ -1,0 +1,197 @@
+{
+  "protocol": "stride-search-3",
+  "head": "b700163fe53fa1f9c6325e9d92da83a1a2b30f0fe4abdf32a8dbbe88ba8d9b04",
+  "outcome": "submitted",
+  "formal_correct": null,
+  "model_attempts": 4,
+  "backend_attempts": 7,
+  "queries": [
+    {
+      "round": 1,
+      "top_k": 8,
+      "equivalence_key": "2dc02a58e8808adf807602cc47495865933c9ebce26a996c489fd34321a601fd",
+      "cached": false,
+      "query_sha256": "357a29e594a9e038c429a10faca65a17176d63e1c6a3c36a258d5cba60bc0693",
+      "query": "CEO founded company mid-1990s raised Southern Africa father engineer first child SIDS",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"ceo\" OR \"founded\" OR \"company\" OR \"mid\" OR \"1990s\" OR \"raised\" OR \"southern\" OR \"africa\" OR \"father\" OR \"engineer\" OR \"first\" OR \"child\" OR \"sids\"",
+        "terms": [
+          "ceo",
+          "founded",
+          "company",
+          "mid",
+          "1990s",
+          "raised",
+          "southern",
+          "africa",
+          "father",
+          "engineer",
+          "first",
+          "child",
+          "sids"
+        ]
+      }
+    },
+    {
+      "round": 1,
+      "top_k": 8,
+      "equivalence_key": "abbe09cfd9ca2ca2841abae8ca9ea563b0a34de142a44b24699649166dd8a5cb",
+      "cached": false,
+      "query_sha256": "8bb35a1220611abed076691e362329bf3dfc5f7eceb9990f842c1b21e410bc10",
+      "query": "younger sister co-founded film streaming service CEO Southern Africa",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"younger\" OR \"sister\" OR \"co\" OR \"founded\" OR \"film\" OR \"streaming\" OR \"service\" OR \"ceo\" OR \"southern\" OR \"africa\"",
+        "terms": [
+          "younger",
+          "sister",
+          "co",
+          "founded",
+          "film",
+          "streaming",
+          "service",
+          "ceo",
+          "southern",
+          "africa"
+        ]
+      }
+    },
+    {
+      "round": 1,
+      "top_k": 8,
+      "equivalence_key": "a7cea4e84ea43f88eb65b068b4a77dc90882a7aa0624e99f1af2e413b274aa65",
+      "cached": false,
+      "query_sha256": "db0d682624db776145cb2a2873cdf2e54c2814c20a1f3ef642ea26c3c5700736",
+      "query": "Elon Musk sister co-founded film streaming service",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"elon\" OR \"musk\" OR \"sister\" OR \"co\" OR \"founded\" OR \"film\" OR \"streaming\" OR \"service\"",
+        "terms": [
+          "elon",
+          "musk",
+          "sister",
+          "co",
+          "founded",
+          "film",
+          "streaming",
+          "service"
+        ]
+      }
+    },
+    {
+      "round": 2,
+      "top_k": 8,
+      "equivalence_key": "275b88de1fec40554b0790a97e18cce0458209b955ab57b8ac1fed67c68d986c",
+      "cached": false,
+      "query_sha256": "ece4c9e5b86d79bf32507fdfd27288044c08c2c5af365212bfa2e1dc7a5c0643",
+      "query": "woman claimed to be Elon Musk secret daughter relative",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"woman\" OR \"claimed\" OR \"to\" OR \"be\" OR \"elon\" OR \"musk\" OR \"secret\" OR \"daughter\" OR \"relative\"",
+        "terms": [
+          "woman",
+          "claimed",
+          "to",
+          "be",
+          "elon",
+          "musk",
+          "secret",
+          "daughter",
+          "relative"
+        ]
+      }
+    },
+    {
+      "round": 2,
+      "top_k": 8,
+      "equivalence_key": "084cbcecdbd5aaca9702d0232afb48e2fe2688093eeec55d0f4fa6f47bba2ac5",
+      "cached": false,
+      "query_sha256": "83a1dbfb559df3e16dd31aeb42463955fcdc393ab929524956820f1d813f3ea3",
+      "query": "lady claimed related Elon Musk mother age gave birth",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"lady\" OR \"claimed\" OR \"related\" OR \"elon\" OR \"musk\" OR \"mother\" OR \"age\" OR \"gave\" OR \"birth\"",
+        "terms": [
+          "lady",
+          "claimed",
+          "related",
+          "elon",
+          "musk",
+          "mother",
+          "age",
+          "gave",
+          "birth"
+        ]
+      }
+    },
+    {
+      "round": 2,
+      "top_k": 8,
+      "equivalence_key": "43dc251d424395734c1e8febde8240be2212fd6325ac7f4eed651c31631d84b7",
+      "cached": false,
+      "query_sha256": "894eae298dee94d18c0d11e7e4b8695a6ee6f3b962fa3102eacfa3b3ddc70bfa",
+      "query": "Elon Musk secret daughter claim mother age birth article",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"elon\" OR \"musk\" OR \"secret\" OR \"daughter\" OR \"claim\" OR \"mother\" OR \"age\" OR \"birth\" OR \"article\"",
+        "terms": [
+          "elon",
+          "musk",
+          "secret",
+          "daughter",
+          "claim",
+          "mother",
+          "age",
+          "birth",
+          "article"
+        ]
+      }
+    }
+  ],
+  "equivalent_query_repeats": 0,
+  "views": [
+    {
+      "round": 1,
+      "compacted": false,
+      "visible_evidence": [],
+      "shelf": [],
+      "shelf_evicted": []
+    },
+    {
+      "round": 2,
+      "compacted": false,
+      "visible_evidence": [],
+      "shelf": [],
+      "shelf_evicted": []
+    },
+    {
+      "round": 3,
+      "compacted": false,
+      "visible_evidence": [],
+      "shelf": [],
+      "shelf_evicted": []
+    },
+    {
+      "round": 4,
+      "compacted": false,
+      "visible_evidence": [
+        "e1"
+      ],
+      "shelf": [],
+      "shelf_evicted": []
+    }
+  ],
+  "delivered_refs": [
+    "e1"
+  ],
+  "submitted_refs": [
+    "e1"
+  ],
+  "text_included": true,
+  "limitations": [
+    "Equivalence is compiler equality, not semantic identity or wasted-search proof",
+    "Raw-window visibility/selection is not entailment or complete evidence coverage",
+    "No live q26 replay or independent answer scoring is performed"
+  ]
+}
