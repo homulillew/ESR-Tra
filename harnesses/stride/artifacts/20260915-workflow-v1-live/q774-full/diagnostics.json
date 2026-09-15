@@ -1,0 +1,782 @@
+{
+  "protocol": "stride-search-3",
+  "head": "25fc1365e98a1023df6989b2579d057f81028c8827642ce554a4969a9bfad357",
+  "outcome": "abstained",
+  "formal_correct": null,
+  "model_attempts": 12,
+  "backend_attempts": 21,
+  "queries": [
+    {
+      "round": 1,
+      "top_k": 8,
+      "equivalence_key": "f75b4198a59a45300e437504da188d4b1fecb5e9997cf1d4195f009bd39a5f16",
+      "cached": false,
+      "query_sha256": "beef24844ed4b52ea68fbd8a2f657a9959d9c2686f015fd2627b4fa968f68b1c",
+      "query": "character married three times only one child survives series",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"character\" OR \"married\" OR \"three\" OR \"times\" OR \"only\" OR \"one\" OR \"child\" OR \"survives\" OR \"series\"",
+        "terms": [
+          "character",
+          "married",
+          "three",
+          "times",
+          "only",
+          "one",
+          "child",
+          "survives",
+          "series"
+        ]
+      }
+    },
+    {
+      "round": 1,
+      "top_k": 8,
+      "equivalence_key": "30ee343247f70634ab23b521e3fe17048f85fdd0e247d861118b23bb7bcb54f5",
+      "cached": false,
+      "query_sha256": "a9cd72f798b046ab5bbcd34c66dc56f90d37acc0f50fc91ee48ef74529d72398",
+      "query": "actor plays alongside real life relative unrelated in series",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"actor\" OR \"plays\" OR \"alongside\" OR \"real\" OR \"life\" OR \"relative\" OR \"unrelated\" OR \"in\" OR \"series\"",
+        "terms": [
+          "actor",
+          "plays",
+          "alongside",
+          "real",
+          "life",
+          "relative",
+          "unrelated",
+          "in",
+          "series"
+        ]
+      }
+    },
+    {
+      "round": 1,
+      "top_k": 8,
+      "equivalence_key": "9b1e806b0ca21dcda28e151407bd2163ee0c9c042a19be3a5d3e00316048bda8",
+      "cached": false,
+      "query_sha256": "e52a8b89a4020071f6d9f55c0222107caf24d0b2c32f6497ae8183a6f17dc04d",
+      "query": "soap opera character married multiple times one surviving child",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"soap\" OR \"opera\" OR \"character\" OR \"married\" OR \"multiple\" OR \"times\" OR \"one\" OR \"surviving\" OR \"child\"",
+        "terms": [
+          "soap",
+          "opera",
+          "character",
+          "married",
+          "multiple",
+          "times",
+          "one",
+          "surviving",
+          "child"
+        ]
+      }
+    },
+    {
+      "round": 2,
+      "top_k": 8,
+      "equivalence_key": "d98d4daadbfd4cd4412785a2839a2a400dfe8fef1754abee34766cd402543fbc",
+      "cached": false,
+      "query_sha256": "31a9d3a242025fbbefcbd79e90f85f718004047ff6290b66f06c5b2467e99da3",
+      "query": "actor real life sibling spouse plays unrelated character series",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"actor\" OR \"real\" OR \"life\" OR \"sibling\" OR \"spouse\" OR \"plays\" OR \"unrelated\" OR \"character\" OR \"series\"",
+        "terms": [
+          "actor",
+          "real",
+          "life",
+          "sibling",
+          "spouse",
+          "plays",
+          "unrelated",
+          "character",
+          "series"
+        ]
+      }
+    },
+    {
+      "round": 2,
+      "top_k": 8,
+      "equivalence_key": "aa811835f5f0808b7fac5c291b140d95c168bb0060c3898e5068821ae91e6cd6",
+      "cached": false,
+      "query_sha256": "70abc397dbb7da30224e2f457a35b46c4d1664c004717009c7bd3d605d31622d",
+      "query": "character married three times one child survives telenovela",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"character\" OR \"married\" OR \"three\" OR \"times\" OR \"one\" OR \"child\" OR \"survives\" OR \"telenovela\"",
+        "terms": [
+          "character",
+          "married",
+          "three",
+          "times",
+          "one",
+          "child",
+          "survives",
+          "telenovela"
+        ]
+      }
+    },
+    {
+      "round": 2,
+      "top_k": 8,
+      "equivalence_key": "71a33b14c236b9350202cbe3671fd25261708e5ed12a7ff8551f70c3313f36ca",
+      "cached": false,
+      "query_sha256": "648b50169c3c577adac25024c0012ad7a801ed98b516cb05b37cded52b557cd2",
+      "query": "actor plays alongside real life wife husband unrelated characters show",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"actor\" OR \"plays\" OR \"alongside\" OR \"real\" OR \"life\" OR \"wife\" OR \"husband\" OR \"unrelated\" OR \"characters\" OR \"show\"",
+        "terms": [
+          "actor",
+          "plays",
+          "alongside",
+          "real",
+          "life",
+          "wife",
+          "husband",
+          "unrelated",
+          "characters",
+          "show"
+        ]
+      }
+    },
+    {
+      "round": 3,
+      "top_k": 8,
+      "equivalence_key": "771219074a1002f9fd3d24507a4439f17af4970bc69c420a9e2c0141d2e93334",
+      "cached": false,
+      "query_sha256": "0e4ee2766e27425070b25a2b292e1192d92d170dfa3d396cec34311504bf9d39",
+      "query": "character married three times one surviving child long running series",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"character\" OR \"married\" OR \"three\" OR \"times\" OR \"one\" OR \"surviving\" OR \"child\" OR \"long\" OR \"running\" OR \"series\"",
+        "terms": [
+          "character",
+          "married",
+          "three",
+          "times",
+          "one",
+          "surviving",
+          "child",
+          "long",
+          "running",
+          "series"
+        ]
+      }
+    },
+    {
+      "round": 3,
+      "top_k": 8,
+      "equivalence_key": "4f629807a2243b0ce8f6f8eff8d403649469981a11f828ac4e0eecdea14e0dc0",
+      "cached": false,
+      "query_sha256": "43fd3e87801ceae2967b7e410d8207afecf964873a12313c498df7ff960f1d22",
+      "query": "actor real life daughter son plays unrelated character same show",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"actor\" OR \"real\" OR \"life\" OR \"daughter\" OR \"son\" OR \"plays\" OR \"unrelated\" OR \"character\" OR \"same\" OR \"show\"",
+        "terms": [
+          "actor",
+          "real",
+          "life",
+          "daughter",
+          "son",
+          "plays",
+          "unrelated",
+          "character",
+          "same",
+          "show"
+        ]
+      }
+    },
+    {
+      "round": 3,
+      "top_k": 8,
+      "equivalence_key": "f178f921ca2f949287a58ee1c68c3ad4f0056356501f7881f5dfabf310c59dd2",
+      "cached": false,
+      "query_sha256": "4890c6c3dc4247c63d6387420cd697fe86f5d0ac30036799b7bf14867feea4b1",
+      "query": "character married four times one child survives drama series",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"character\" OR \"married\" OR \"four\" OR \"times\" OR \"one\" OR \"child\" OR \"survives\" OR \"drama\" OR \"series\"",
+        "terms": [
+          "character",
+          "married",
+          "four",
+          "times",
+          "one",
+          "child",
+          "survives",
+          "drama",
+          "series"
+        ]
+      }
+    },
+    {
+      "round": 4,
+      "top_k": 8,
+      "equivalence_key": "2fc9bfa4f550622fe4d2da0dc45f4e3bb1daed36d2944ba1dafaa12c757b4cac",
+      "cached": false,
+      "query_sha256": "3342de0454b26d064691888fc11325661b72fb0a7d399754d85290b8f39b6137",
+      "query": "character married three times only one child alive series actor real life relative",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"character\" OR \"married\" OR \"three\" OR \"times\" OR \"only\" OR \"one\" OR \"child\" OR \"alive\" OR \"series\" OR \"actor\" OR \"real\" OR \"life\" OR \"relative\"",
+        "terms": [
+          "character",
+          "married",
+          "three",
+          "times",
+          "only",
+          "one",
+          "child",
+          "alive",
+          "series",
+          "actor",
+          "real",
+          "life",
+          "relative"
+        ]
+      }
+    },
+    {
+      "round": 4,
+      "top_k": 8,
+      "equivalence_key": "39c5de3da4e84b26daee0df0b2edce93276b216ec1d144494689437c4869241c",
+      "cached": false,
+      "query_sha256": "9c4803638420361a34dd00acd429668bba88b7e9b8175ef29f3b7be0b31b060a",
+      "query": "actor plays with real life sibling parent child unrelated characters drama",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"actor\" OR \"plays\" OR \"with\" OR \"real\" OR \"life\" OR \"sibling\" OR \"parent\" OR \"child\" OR \"unrelated\" OR \"characters\" OR \"drama\"",
+        "terms": [
+          "actor",
+          "plays",
+          "with",
+          "real",
+          "life",
+          "sibling",
+          "parent",
+          "child",
+          "unrelated",
+          "characters",
+          "drama"
+        ]
+      }
+    },
+    {
+      "round": 4,
+      "top_k": 8,
+      "equivalence_key": "445d1f0f009e0f46c60896a0c4b72bc244a9232ce609a212d18862db3dd1f6e4",
+      "cached": false,
+      "query_sha256": "a204397d688b89a5ed3dffde1fd7a1667df6d5f1bddd7897a66241e2dab9fdc3",
+      "query": "character widowed multiple times one surviving child television series",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"character\" OR \"widowed\" OR \"multiple\" OR \"times\" OR \"one\" OR \"surviving\" OR \"child\" OR \"television\" OR \"series\"",
+        "terms": [
+          "character",
+          "widowed",
+          "multiple",
+          "times",
+          "one",
+          "surviving",
+          "child",
+          "television",
+          "series"
+        ]
+      }
+    },
+    {
+      "round": 5,
+      "top_k": 8,
+      "equivalence_key": "dc049c83c27b9cbb415979de0079c619f2f1dd4468674f11d824be849990e6a5",
+      "cached": false,
+      "query_sha256": "79e107f720040b3f2e797611378709727fe57d3a2ed293916a501054d320a4ad",
+      "query": "actor real life mother daughter plays unrelated characters same series",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"actor\" OR \"real\" OR \"life\" OR \"mother\" OR \"daughter\" OR \"plays\" OR \"unrelated\" OR \"characters\" OR \"same\" OR \"series\"",
+        "terms": [
+          "actor",
+          "real",
+          "life",
+          "mother",
+          "daughter",
+          "plays",
+          "unrelated",
+          "characters",
+          "same",
+          "series"
+        ]
+      }
+    },
+    {
+      "round": 5,
+      "top_k": 8,
+      "equivalence_key": "ad6317d69c09ccf6fe45f6198df568c4b9a5c53c7ae9bd98e6b518ea3f40d92d",
+      "cached": false,
+      "query_sha256": "3babff8f6bd5f7c2bea71cb219168c308753f31e6215849663da3a8dc77fbc03",
+      "query": "character married three times one child survives Grey's Anatomy",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"character\" OR \"married\" OR \"three\" OR \"times\" OR \"one\" OR \"child\" OR \"survives\" OR \"grey\" OR \"s\" OR \"anatomy\"",
+        "terms": [
+          "character",
+          "married",
+          "three",
+          "times",
+          "one",
+          "child",
+          "survives",
+          "grey",
+          "s",
+          "anatomy"
+        ]
+      }
+    },
+    {
+      "round": 5,
+      "top_k": 8,
+      "equivalence_key": "e24ec5954161ec6e876c95a70b45ad8b5838bec9e224e4233d6657a8b59293cf",
+      "cached": false,
+      "query_sha256": "4f5685e0e161a6ca5417ffedf8913fe3c0aa6e5433a7e225dc568edb03fc7eae",
+      "query": "character married three times one child survives NCIS",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"character\" OR \"married\" OR \"three\" OR \"times\" OR \"one\" OR \"child\" OR \"survives\" OR \"ncis\"",
+        "terms": [
+          "character",
+          "married",
+          "three",
+          "times",
+          "one",
+          "child",
+          "survives",
+          "ncis"
+        ]
+      }
+    },
+    {
+      "round": 6,
+      "top_k": 8,
+      "equivalence_key": "5e5385ccfe10c2d512a68a177287206c4f56ac7549a3d7c92c0f268cda6e71d3",
+      "cached": false,
+      "query_sha256": "a396aa9d610cf4fdc9aa9280485992f5b4afee5746caec26446cee925d5831f2",
+      "query": "actor plays alongside real life son daughter unrelated characters series married three times",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"actor\" OR \"plays\" OR \"alongside\" OR \"real\" OR \"life\" OR \"son\" OR \"daughter\" OR \"unrelated\" OR \"characters\" OR \"series\" OR \"married\" OR \"three\" OR \"times\"",
+        "terms": [
+          "actor",
+          "plays",
+          "alongside",
+          "real",
+          "life",
+          "son",
+          "daughter",
+          "unrelated",
+          "characters",
+          "series",
+          "married",
+          "three",
+          "times"
+        ]
+      }
+    },
+    {
+      "round": 6,
+      "top_k": 8,
+      "equivalence_key": "a983657f8bd9e0e46a44d87e7c3e448f0131ada39c11423079c2ffede3ba452a",
+      "cached": false,
+      "query_sha256": "65be2532eb460e9ad56e71d40d89ebb5ffb66571c9fbcd2b3db9af9a2bac0478",
+      "query": "character married three times one child survives telenovela actor real life relative",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"character\" OR \"married\" OR \"three\" OR \"times\" OR \"one\" OR \"child\" OR \"survives\" OR \"telenovela\" OR \"actor\" OR \"real\" OR \"life\" OR \"relative\"",
+        "terms": [
+          "character",
+          "married",
+          "three",
+          "times",
+          "one",
+          "child",
+          "survives",
+          "telenovela",
+          "actor",
+          "real",
+          "life",
+          "relative"
+        ]
+      }
+    },
+    {
+      "round": 6,
+      "top_k": 8,
+      "equivalence_key": "42ccc0e011327903decc160fb42b615239fde4bb1a246a81b4daa3f18ec25f8c",
+      "cached": false,
+      "query_sha256": "b233138fc1704481a67bc37d2986492f77a9f794177a5209711a1d7bb7deb662",
+      "query": "long running series actor real life child plays unrelated character height 1.68",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"long\" OR \"running\" OR \"series\" OR \"actor\" OR \"real\" OR \"life\" OR \"child\" OR \"plays\" OR \"unrelated\" OR \"character\" OR \"height\" OR \"1\" OR \"68\"",
+        "terms": [
+          "long",
+          "running",
+          "series",
+          "actor",
+          "real",
+          "life",
+          "child",
+          "plays",
+          "unrelated",
+          "character",
+          "height",
+          "1",
+          "68"
+        ]
+      }
+    },
+    {
+      "round": 7,
+      "top_k": 8,
+      "equivalence_key": "870205d158839e601afac04dcef5dffb6ff88074c12e975fe95d08c31899a815",
+      "cached": false,
+      "query_sha256": "dc77867cb9939db10af7aa075c2df243d679ca1eefbebb882861ce84fdc35d61",
+      "query": "actor real life daughter plays unrelated character same series married three times one child",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"actor\" OR \"real\" OR \"life\" OR \"daughter\" OR \"plays\" OR \"unrelated\" OR \"character\" OR \"same\" OR \"series\" OR \"married\" OR \"three\" OR \"times\" OR \"one\" OR \"child\"",
+        "terms": [
+          "actor",
+          "real",
+          "life",
+          "daughter",
+          "plays",
+          "unrelated",
+          "character",
+          "same",
+          "series",
+          "married",
+          "three",
+          "times",
+          "one",
+          "child"
+        ]
+      }
+    },
+    {
+      "round": 7,
+      "top_k": 8,
+      "equivalence_key": "ac0f5d599028b48dc379c3212ea1fd4ac7a6539a73194e6d0a44f8e911b44b68",
+      "cached": false,
+      "query_sha256": "d0c76c17c863a39969656af3c5168f5b1d5b5fbb4106377eb4018ab5aa857597",
+      "query": "character married three times one surviving child actor real life son daughter cast",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"character\" OR \"married\" OR \"three\" OR \"times\" OR \"one\" OR \"surviving\" OR \"child\" OR \"actor\" OR \"real\" OR \"life\" OR \"son\" OR \"daughter\" OR \"cast\"",
+        "terms": [
+          "character",
+          "married",
+          "three",
+          "times",
+          "one",
+          "surviving",
+          "child",
+          "actor",
+          "real",
+          "life",
+          "son",
+          "daughter",
+          "cast"
+        ]
+      }
+    },
+    {
+      "round": 7,
+      "top_k": 8,
+      "equivalence_key": "036f2a0630ab1469f8fed05dd3f6448ce6915adcc0986723c86cdf200e74bf80",
+      "cached": false,
+      "query_sha256": "a8c2b30dadc7906b646c4a2df8aae4e25e5ec5a28a5c598d1c3062feeace3232",
+      "query": "actor plays with real life child unrelated character series married three times",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"actor\" OR \"plays\" OR \"with\" OR \"real\" OR \"life\" OR \"child\" OR \"unrelated\" OR \"character\" OR \"series\" OR \"married\" OR \"three\" OR \"times\"",
+        "terms": [
+          "actor",
+          "plays",
+          "with",
+          "real",
+          "life",
+          "child",
+          "unrelated",
+          "character",
+          "series",
+          "married",
+          "three",
+          "times"
+        ]
+      }
+    },
+    {
+      "round": 8,
+      "top_k": 8,
+      "equivalence_key": "870205d158839e601afac04dcef5dffb6ff88074c12e975fe95d08c31899a815",
+      "cached": true,
+      "query_sha256": "dc77867cb9939db10af7aa075c2df243d679ca1eefbebb882861ce84fdc35d61",
+      "query": "actor real life daughter plays unrelated character same series married three times one child",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"actor\" OR \"real\" OR \"life\" OR \"daughter\" OR \"plays\" OR \"unrelated\" OR \"character\" OR \"same\" OR \"series\" OR \"married\" OR \"three\" OR \"times\" OR \"one\" OR \"child\"",
+        "terms": [
+          "actor",
+          "real",
+          "life",
+          "daughter",
+          "plays",
+          "unrelated",
+          "character",
+          "same",
+          "series",
+          "married",
+          "three",
+          "times",
+          "one",
+          "child"
+        ]
+      }
+    },
+    {
+      "round": 8,
+      "top_k": 8,
+      "equivalence_key": "ac0f5d599028b48dc379c3212ea1fd4ac7a6539a73194e6d0a44f8e911b44b68",
+      "cached": true,
+      "query_sha256": "d0c76c17c863a39969656af3c5168f5b1d5b5fbb4106377eb4018ab5aa857597",
+      "query": "character married three times one surviving child actor real life son daughter cast",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"character\" OR \"married\" OR \"three\" OR \"times\" OR \"one\" OR \"surviving\" OR \"child\" OR \"actor\" OR \"real\" OR \"life\" OR \"son\" OR \"daughter\" OR \"cast\"",
+        "terms": [
+          "character",
+          "married",
+          "three",
+          "times",
+          "one",
+          "surviving",
+          "child",
+          "actor",
+          "real",
+          "life",
+          "son",
+          "daughter",
+          "cast"
+        ]
+      }
+    },
+    {
+      "round": 8,
+      "top_k": 8,
+      "equivalence_key": "036f2a0630ab1469f8fed05dd3f6448ce6915adcc0986723c86cdf200e74bf80",
+      "cached": true,
+      "query_sha256": "a8c2b30dadc7906b646c4a2df8aae4e25e5ec5a28a5c598d1c3062feeace3232",
+      "query": "actor plays with real life child unrelated character series married three times",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"actor\" OR \"plays\" OR \"with\" OR \"real\" OR \"life\" OR \"child\" OR \"unrelated\" OR \"character\" OR \"series\" OR \"married\" OR \"three\" OR \"times\"",
+        "terms": [
+          "actor",
+          "plays",
+          "with",
+          "real",
+          "life",
+          "child",
+          "unrelated",
+          "character",
+          "series",
+          "married",
+          "three",
+          "times"
+        ]
+      }
+    },
+    {
+      "round": 9,
+      "top_k": 8,
+      "equivalence_key": "870205d158839e601afac04dcef5dffb6ff88074c12e975fe95d08c31899a815",
+      "cached": true,
+      "query_sha256": "dc77867cb9939db10af7aa075c2df243d679ca1eefbebb882861ce84fdc35d61",
+      "query": "actor real life daughter plays unrelated character same series married three times one child",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"actor\" OR \"real\" OR \"life\" OR \"daughter\" OR \"plays\" OR \"unrelated\" OR \"character\" OR \"same\" OR \"series\" OR \"married\" OR \"three\" OR \"times\" OR \"one\" OR \"child\"",
+        "terms": [
+          "actor",
+          "real",
+          "life",
+          "daughter",
+          "plays",
+          "unrelated",
+          "character",
+          "same",
+          "series",
+          "married",
+          "three",
+          "times",
+          "one",
+          "child"
+        ]
+      }
+    },
+    {
+      "round": 9,
+      "top_k": 8,
+      "equivalence_key": "ac0f5d599028b48dc379c3212ea1fd4ac7a6539a73194e6d0a44f8e911b44b68",
+      "cached": true,
+      "query_sha256": "d0c76c17c863a39969656af3c5168f5b1d5b5fbb4106377eb4018ab5aa857597",
+      "query": "character married three times one surviving child actor real life son daughter cast",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"character\" OR \"married\" OR \"three\" OR \"times\" OR \"one\" OR \"surviving\" OR \"child\" OR \"actor\" OR \"real\" OR \"life\" OR \"son\" OR \"daughter\" OR \"cast\"",
+        "terms": [
+          "character",
+          "married",
+          "three",
+          "times",
+          "one",
+          "surviving",
+          "child",
+          "actor",
+          "real",
+          "life",
+          "son",
+          "daughter",
+          "cast"
+        ]
+      }
+    },
+    {
+      "round": 9,
+      "top_k": 8,
+      "equivalence_key": "036f2a0630ab1469f8fed05dd3f6448ce6915adcc0986723c86cdf200e74bf80",
+      "cached": true,
+      "query_sha256": "a8c2b30dadc7906b646c4a2df8aae4e25e5ec5a28a5c598d1c3062feeace3232",
+      "query": "actor plays with real life child unrelated character series married three times",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"actor\" OR \"plays\" OR \"with\" OR \"real\" OR \"life\" OR \"child\" OR \"unrelated\" OR \"character\" OR \"series\" OR \"married\" OR \"three\" OR \"times\"",
+        "terms": [
+          "actor",
+          "plays",
+          "with",
+          "real",
+          "life",
+          "child",
+          "unrelated",
+          "character",
+          "series",
+          "married",
+          "three",
+          "times"
+        ]
+      }
+    }
+  ],
+  "equivalent_query_repeats": 6,
+  "views": [
+    {
+      "round": 1,
+      "compacted": false,
+      "visible_evidence": [],
+      "shelf": [],
+      "shelf_evicted": []
+    },
+    {
+      "round": 2,
+      "compacted": false,
+      "visible_evidence": [],
+      "shelf": [],
+      "shelf_evicted": []
+    },
+    {
+      "round": 3,
+      "compacted": false,
+      "visible_evidence": [],
+      "shelf": [],
+      "shelf_evicted": []
+    },
+    {
+      "round": 4,
+      "compacted": false,
+      "visible_evidence": [],
+      "shelf": [],
+      "shelf_evicted": []
+    },
+    {
+      "round": 5,
+      "compacted": false,
+      "visible_evidence": [],
+      "shelf": [],
+      "shelf_evicted": []
+    },
+    {
+      "round": 6,
+      "compacted": true,
+      "visible_evidence": [],
+      "shelf": [],
+      "shelf_evicted": []
+    },
+    {
+      "round": 7,
+      "compacted": true,
+      "visible_evidence": [],
+      "shelf": [],
+      "shelf_evicted": []
+    },
+    {
+      "round": 8,
+      "compacted": true,
+      "visible_evidence": [],
+      "shelf": [],
+      "shelf_evicted": []
+    },
+    {
+      "round": 9,
+      "compacted": true,
+      "visible_evidence": [],
+      "shelf": [],
+      "shelf_evicted": []
+    },
+    {
+      "round": 10,
+      "compacted": false,
+      "visible_evidence": [],
+      "shelf": [],
+      "shelf_evicted": []
+    },
+    {
+      "round": 11,
+      "compacted": false,
+      "visible_evidence": [],
+      "shelf": [],
+      "shelf_evicted": []
+    },
+    {
+      "round": 12,
+      "compacted": false,
+      "visible_evidence": [],
+      "shelf": [],
+      "shelf_evicted": []
+    }
+  ],
+  "delivered_refs": [],
+  "submitted_refs": [],
+  "text_included": true,
+  "limitations": [
+    "Equivalence is compiler equality, not semantic identity or wasted-search proof",
+    "Raw-window visibility/selection is not entailment or complete evidence coverage",
+    "No live q26 replay or independent answer scoring is performed"
+  ]
+}

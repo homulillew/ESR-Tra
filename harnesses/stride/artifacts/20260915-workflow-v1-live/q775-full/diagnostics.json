@@ -1,0 +1,810 @@
+{
+  "protocol": "stride-search-3",
+  "head": "424e8a1f1fdfc8a30b4b5284d342da337349bdf95f0671c810159a94667a5e0d",
+  "outcome": "submitted",
+  "formal_correct": null,
+  "model_attempts": 16,
+  "backend_attempts": 31,
+  "queries": [
+    {
+      "round": 1,
+      "top_k": 10,
+      "equivalence_key": "47929e87e1a7bebe4baada30fab33cdf420d27512ddcd85f591c4a64c24d2f24",
+      "cached": false,
+      "query_sha256": "c87e1e8f6c4e284bae2b965086d97f5b776c8fe2a3e65965aaad129f68613247",
+      "query": "literary award created 2000s translated twenty five languages",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"literary\" OR \"award\" OR \"created\" OR \"2000s\" OR \"translated\" OR \"twenty\" OR \"five\" OR \"languages\"",
+        "terms": [
+          "literary",
+          "award",
+          "created",
+          "2000s",
+          "translated",
+          "twenty",
+          "five",
+          "languages"
+        ]
+      }
+    },
+    {
+      "round": 1,
+      "top_k": 10,
+      "equivalence_key": "eddc40a8ebfb96ae9acc8674afbf005deec54083a0d45f57852d6b1b4242836a",
+      "cached": false,
+      "query_sha256": "e4205b8d8fa3360cfa853620f7becc5febe2bed2f9614953bdd4d5c365d9c9f4",
+      "query": "book award established 2000s contender translated over 25 languages",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"book\" OR \"award\" OR \"established\" OR \"2000s\" OR \"contender\" OR \"translated\" OR \"over\" OR \"25\" OR \"languages\"",
+        "terms": [
+          "book",
+          "award",
+          "established",
+          "2000s",
+          "contender",
+          "translated",
+          "over",
+          "25",
+          "languages"
+        ]
+      }
+    },
+    {
+      "round": 1,
+      "top_k": 10,
+      "equivalence_key": "f78d33fe568615ff1a94c3bbb79bc4bf4c201d9217842fb1c850d5e5dd4118fc",
+      "cached": false,
+      "query_sha256": "aba7878f41c356427fcf99f5734b3b3c34eae24ac61b9f7dfbe5c752a72c65e4",
+      "query": "international literary prize founded 2000s",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"international\" OR \"literary\" OR \"prize\" OR \"founded\" OR \"2000s\"",
+        "terms": [
+          "international",
+          "literary",
+          "prize",
+          "founded",
+          "2000s"
+        ]
+      }
+    },
+    {
+      "round": 1,
+      "top_k": 10,
+      "equivalence_key": "877388c84c8d23d80a25127f067072485db3e68c12faa144a4d9bc9ac7a66d61",
+      "cached": false,
+      "query_sha256": "43e4006531210fb5e94451c7333ef581c14fe2c728b7c4cf07b62a8f84deb3fa",
+      "query": "book translated into over 25 languages award contender 2010s",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"book\" OR \"translated\" OR \"into\" OR \"over\" OR \"25\" OR \"languages\" OR \"award\" OR \"contender\" OR \"2010s\"",
+        "terms": [
+          "book",
+          "translated",
+          "into",
+          "over",
+          "25",
+          "languages",
+          "award",
+          "contender",
+          "2010s"
+        ]
+      }
+    },
+    {
+      "round": 1,
+      "top_k": 10,
+      "equivalence_key": "bdcac4402afeda94271f6daacec89fed0ebea7d0d1feea60cc0d76f51fc8838d",
+      "cached": false,
+      "query_sha256": "97f5ae59880dfacd3326df3426127f1b453acb4e05985b9291a57d11912a58f6",
+      "query": "novel translated 25 languages prize shortlist 2010s",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"novel\" OR \"translated\" OR \"25\" OR \"languages\" OR \"prize\" OR \"shortlist\" OR \"2010s\"",
+        "terms": [
+          "novel",
+          "translated",
+          "25",
+          "languages",
+          "prize",
+          "shortlist",
+          "2010s"
+        ]
+      }
+    },
+    {
+      "round": 2,
+      "top_k": 10,
+      "equivalence_key": "8a1190480d7e78d2d4ba0096f7c6277b6c93c5608ce91b0a9ded571a88c4ea9b",
+      "cached": false,
+      "query_sha256": "813892e70628367a1f312de8000f428f0a3773e13fd9f61b3e459db71d709b63",
+      "query": "Man Booker Prize established 2002 renamed",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"man\" OR \"booker\" OR \"prize\" OR \"established\" OR \"2002\" OR \"renamed\"",
+        "terms": [
+          "man",
+          "booker",
+          "prize",
+          "established",
+          "2002",
+          "renamed"
+        ]
+      }
+    },
+    {
+      "round": 2,
+      "top_k": 10,
+      "equivalence_key": "a54f3aa83356c982ee1bbd6aa2333bb82a9d16179bd97d35b8e9bb2a9c4f13ff",
+      "cached": false,
+      "query_sha256": "b48943d890ec16d2661c3d4424282ab10f007c6813583f474c805ae5232239e3",
+      "query": "Booker Prize 2019 winner The Testaments Girl Woman Other",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"booker\" OR \"prize\" OR \"2019\" OR \"winner\" OR \"the\" OR \"testaments\" OR \"girl\" OR \"woman\" OR \"other\"",
+        "terms": [
+          "booker",
+          "prize",
+          "2019",
+          "winner",
+          "the",
+          "testaments",
+          "girl",
+          "woman",
+          "other"
+        ]
+      }
+    },
+    {
+      "round": 2,
+      "top_k": 10,
+      "equivalence_key": "7d0b8f59af05a5fa2ea57209a86558b3d263e83cbb07f62f4bb4fcff36ce7e2d",
+      "cached": false,
+      "query_sha256": "81f31edc2a85082fcc491b6bd1bf16da6b382b9fdccc843cd3dd899a3a549c06",
+      "query": "An Orchestra of Minorities Chigozie Obioma Booker shortlist 2019",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"an\" OR \"orchestra\" OR \"of\" OR \"minorities\" OR \"chigozie\" OR \"obioma\" OR \"booker\" OR \"shortlist\" OR \"2019\"",
+        "terms": [
+          "an",
+          "orchestra",
+          "of",
+          "minorities",
+          "chigozie",
+          "obioma",
+          "booker",
+          "shortlist",
+          "2019"
+        ]
+      }
+    },
+    {
+      "round": 2,
+      "top_k": 10,
+      "equivalence_key": "17f7e271317d9d8db9d45659489e95a90766fe62f825c531d41c607dd9fa923c",
+      "cached": false,
+      "query_sha256": "f82f69ef0fb91753371bfebeab75eabc2c04bebcc09aab783d014347d160a7e2",
+      "query": "Chigozie Obioma born city grew up",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"chigozie\" OR \"obioma\" OR \"born\" OR \"city\" OR \"grew\" OR \"up\"",
+        "terms": [
+          "chigozie",
+          "obioma",
+          "born",
+          "city",
+          "grew",
+          "up"
+        ]
+      }
+    },
+    {
+      "round": 2,
+      "top_k": 10,
+      "equivalence_key": "711c6ba74533bdfc45b9df1a9d4f5c69a1e06ced32bc570ab9e7ff9f5d42d7e3",
+      "cached": false,
+      "query_sha256": "0696ba1177616ca058cb3d3111675cfbffe790ccc1e233135baba7af0429dfe9",
+      "query": "Chigozie Obioma biography birthplace hometown",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"chigozie\" OR \"obioma\" OR \"biography\" OR \"birthplace\" OR \"hometown\"",
+        "terms": [
+          "chigozie",
+          "obioma",
+          "biography",
+          "birthplace",
+          "hometown"
+        ]
+      }
+    },
+    {
+      "round": 3,
+      "top_k": 10,
+      "equivalence_key": "3fca6828457a3b55a65aa14ea3c926417b2f80203f8a9e42c058b458f95de010",
+      "cached": false,
+      "query_sha256": "28d339bf74ec2830b266f901f00234d63202fb91405b49507bfb1319ac3f6365",
+      "query": "Booker Prize 2015 winner A Brief History of Seven Killings Marlon James",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"booker\" OR \"prize\" OR \"2015\" OR \"winner\" OR \"a\" OR \"brief\" OR \"history\" OR \"of\" OR \"seven\" OR \"killings\" OR \"marlon\" OR \"james\"",
+        "terms": [
+          "booker",
+          "prize",
+          "2015",
+          "winner",
+          "a",
+          "brief",
+          "history",
+          "of",
+          "seven",
+          "killings",
+          "marlon",
+          "james"
+        ]
+      }
+    },
+    {
+      "round": 3,
+      "top_k": 10,
+      "equivalence_key": "a9f8366587ba60e5055c854262809352d3658624c77eb48593b482c023fd15b6",
+      "cached": false,
+      "query_sha256": "3ee590b5d194b226dfb9e6900d39cb9e5197430864bb19e0d62d08d409dfa871",
+      "query": "The Fishermen Chigozie Obioma 2015 Booker shortlist translated languages",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"the\" OR \"fishermen\" OR \"chigozie\" OR \"obioma\" OR \"2015\" OR \"booker\" OR \"shortlist\" OR \"translated\" OR \"languages\"",
+        "terms": [
+          "the",
+          "fishermen",
+          "chigozie",
+          "obioma",
+          "2015",
+          "booker",
+          "shortlist",
+          "translated",
+          "languages"
+        ]
+      }
+    },
+    {
+      "round": 3,
+      "top_k": 10,
+      "equivalence_key": "47ff666cedf0c313bf57988927d44963cba5ce13c0bc903d15c7af852d35c24b",
+      "cached": false,
+      "query_sha256": "c45e79114cde4d3aeff01ce45ed2324b7f45153927727ae40bb3c4d1826c1102",
+      "query": "Marlon James born birthplace city",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"marlon\" OR \"james\" OR \"born\" OR \"birthplace\" OR \"city\"",
+        "terms": [
+          "marlon",
+          "james",
+          "born",
+          "birthplace",
+          "city"
+        ]
+      }
+    },
+    {
+      "round": 4,
+      "top_k": 10,
+      "equivalence_key": "4333e0258bcc956ea1e9e54e2a71e0ab2276d7d14a6d80d3a53f583495a51fa8",
+      "cached": false,
+      "query_sha256": "f3e94c050540c7bc3e26a815510e2b3008aa67c1129014a2dbbe52eec16544ec",
+      "query": "Marlon James born Kingston Jamaica",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"marlon\" OR \"james\" OR \"born\" OR \"kingston\" OR \"jamaica\"",
+        "terms": [
+          "marlon",
+          "james",
+          "born",
+          "kingston",
+          "jamaica"
+        ]
+      }
+    },
+    {
+      "round": 4,
+      "top_k": 10,
+      "equivalence_key": "9010265194ad5ed97831b3684fff03476c72bf8771dc82b10d7dd24c3a767cb4",
+      "cached": false,
+      "query_sha256": "fbbfe54183f59314a4b08008da954e8457bd006d00b44e82d7c4189abb94940d",
+      "query": "Chigozie Obioma grew up Akure Nigeria childhood",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"chigozie\" OR \"obioma\" OR \"grew\" OR \"up\" OR \"akure\" OR \"nigeria\" OR \"childhood\"",
+        "terms": [
+          "chigozie",
+          "obioma",
+          "grew",
+          "up",
+          "akure",
+          "nigeria",
+          "childhood"
+        ]
+      }
+    },
+    {
+      "round": 5,
+      "top_k": 10,
+      "equivalence_key": "89bbd3d9b0f7b9aea27bc58214671c55c47894cd526c379a0b5400f8b7df29ed",
+      "cached": false,
+      "query_sha256": "e94a9b7a741afbdf8115c87c2f803aac51615b06d94fb16c8b643f6f3d58161e",
+      "query": "Marlon James Wikipedia novelist born Kingston Jamaica biography",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"marlon\" OR \"james\" OR \"wikipedia\" OR \"novelist\" OR \"born\" OR \"kingston\" OR \"jamaica\" OR \"biography\"",
+        "terms": [
+          "marlon",
+          "james",
+          "wikipedia",
+          "novelist",
+          "born",
+          "kingston",
+          "jamaica",
+          "biography"
+        ]
+      }
+    },
+    {
+      "round": 5,
+      "top_k": 10,
+      "equivalence_key": "57d0a239acf335175e2601ae0c879977420a0db38698d813d4a08cbb11800c0a",
+      "cached": false,
+      "query_sha256": "79674f402db0a50a6a9ccc91b26599aa8417049eca3b6d1b9eb1625c66d8f07d",
+      "query": "Chigozie Obioma grew up Akure childhood hometown biography",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"chigozie\" OR \"obioma\" OR \"grew\" OR \"up\" OR \"akure\" OR \"childhood\" OR \"hometown\" OR \"biography\"",
+        "terms": [
+          "chigozie",
+          "obioma",
+          "grew",
+          "up",
+          "akure",
+          "childhood",
+          "hometown",
+          "biography"
+        ]
+      }
+    },
+    {
+      "round": 6,
+      "top_k": 10,
+      "equivalence_key": "05e8682edc129077376c7c7387701c80aee3471b8b48aada49f3e9c4cc3e6be3",
+      "cached": false,
+      "query_sha256": "d45b0f6c5ad57da062e0d49deb482601074d0b67dfcb2388bcb5b64aea39d950",
+      "query": "Marlon James novelist Wikipedia biography Kingston Jamaica born",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"marlon\" OR \"james\" OR \"novelist\" OR \"wikipedia\" OR \"biography\" OR \"kingston\" OR \"jamaica\" OR \"born\"",
+        "terms": [
+          "marlon",
+          "james",
+          "novelist",
+          "wikipedia",
+          "biography",
+          "kingston",
+          "jamaica",
+          "born"
+        ]
+      }
+    },
+    {
+      "round": 6,
+      "top_k": 10,
+      "equivalence_key": "56614349c3de41ee1686465b54a3eb6d54a1e6f7f97b33e598c6b670ee697c38",
+      "cached": false,
+      "query_sha256": "f4fd90e7fa2a8df39aed6d589b9e0e165e48e337bdd55239276013475b227375",
+      "query": "Chigozie Obioma biography grew up Akure Nigeria childhood hometown",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"chigozie\" OR \"obioma\" OR \"biography\" OR \"grew\" OR \"up\" OR \"akure\" OR \"nigeria\" OR \"childhood\" OR \"hometown\"",
+        "terms": [
+          "chigozie",
+          "obioma",
+          "biography",
+          "grew",
+          "up",
+          "akure",
+          "nigeria",
+          "childhood",
+          "hometown"
+        ]
+      }
+    },
+    {
+      "round": 7,
+      "top_k": 10,
+      "equivalence_key": "af63d7c21149c8798f66c08593597db9926cfc2c402a622317c27c8fd9ddc200",
+      "cached": false,
+      "query_sha256": "191b2e1bfff4a544e4020f5c672eec638575ed44dfd2806ef095a3975222ce91",
+      "query": "Marlon James Wikipedia novelist biography",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"marlon\" OR \"james\" OR \"wikipedia\" OR \"novelist\" OR \"biography\"",
+        "terms": [
+          "marlon",
+          "james",
+          "wikipedia",
+          "novelist",
+          "biography"
+        ]
+      }
+    },
+    {
+      "round": 7,
+      "top_k": 10,
+      "equivalence_key": "da29a703db94a0ec9568b544a6da6b785815d21764d7691768d6054ff9cfca67",
+      "cached": false,
+      "query_sha256": "e43e204be403b62055bcd2eb46891cc4b65f79c452c68f8556f98e7633283f35",
+      "query": "Chigozie Obioma Wikipedia biography Akure childhood",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"chigozie\" OR \"obioma\" OR \"wikipedia\" OR \"biography\" OR \"akure\" OR \"childhood\"",
+        "terms": [
+          "chigozie",
+          "obioma",
+          "wikipedia",
+          "biography",
+          "akure",
+          "childhood"
+        ]
+      }
+    },
+    {
+      "round": 8,
+      "top_k": 10,
+      "equivalence_key": "a340ecba455026d2521b4ac7be40eae7255a64f36a285330b58cd2a28178bae1",
+      "cached": false,
+      "query_sha256": "52bea0802c78ca2645eb7519e46c9482396798176a475815759f2b201e623081",
+      "query": "Marlon James author Wikipedia",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"marlon\" OR \"james\" OR \"author\" OR \"wikipedia\"",
+        "terms": [
+          "marlon",
+          "james",
+          "author",
+          "wikipedia"
+        ]
+      }
+    },
+    {
+      "round": 8,
+      "top_k": 10,
+      "equivalence_key": "bc9c2768a6a0e7541ab679aefcd2d6833e55cd34d2e238507a086f9a00bea93e",
+      "cached": false,
+      "query_sha256": "7a08b34d582e94f08427536ef65d264f6c52579d110ba063f7d32bbd6203f2c6",
+      "query": "Chigozie Obioma Wikipedia",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"chigozie\" OR \"obioma\" OR \"wikipedia\"",
+        "terms": [
+          "chigozie",
+          "obioma",
+          "wikipedia"
+        ]
+      }
+    },
+    {
+      "round": 12,
+      "top_k": 10,
+      "equivalence_key": "4333e0258bcc956ea1e9e54e2a71e0ab2276d7d14a6d80d3a53f583495a51fa8",
+      "cached": true,
+      "query_sha256": "f3e94c050540c7bc3e26a815510e2b3008aa67c1129014a2dbbe52eec16544ec",
+      "query": "Marlon James born Kingston Jamaica",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"marlon\" OR \"james\" OR \"born\" OR \"kingston\" OR \"jamaica\"",
+        "terms": [
+          "marlon",
+          "james",
+          "born",
+          "kingston",
+          "jamaica"
+        ]
+      }
+    },
+    {
+      "round": 12,
+      "top_k": 10,
+      "equivalence_key": "f1f95d3140816d01e126dfda77955d9f34d8951969a5dcfdd0c48d64d02e3e20",
+      "cached": false,
+      "query_sha256": "23f9d719f1c803e51f42972ea319894153db21a10c4954bde92e79ee6e64cde0",
+      "query": "Chigozie Obioma grew up Akure Nigeria",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"chigozie\" OR \"obioma\" OR \"grew\" OR \"up\" OR \"akure\" OR \"nigeria\"",
+        "terms": [
+          "chigozie",
+          "obioma",
+          "grew",
+          "up",
+          "akure",
+          "nigeria"
+        ]
+      }
+    },
+    {
+      "round": 13,
+      "top_k": 10,
+      "equivalence_key": "e18d7794802357d92ed7cfb377fa8837feb930e11c14742cd91dd21d57e651ac",
+      "cached": false,
+      "query_sha256": "aae04c44f12f775f04cc7b681ae3ce6e9eaf4f4fe5d852f0f8890a60268bbd69",
+      "query": "Marlon James author biography birthplace",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"marlon\" OR \"james\" OR \"author\" OR \"biography\" OR \"birthplace\"",
+        "terms": [
+          "marlon",
+          "james",
+          "author",
+          "biography",
+          "birthplace"
+        ]
+      }
+    },
+    {
+      "round": 13,
+      "top_k": 10,
+      "equivalence_key": "2f28895b6dcc53c145d4660c2d95f46bfba6a9ea60794b87bb7801470a312dbb",
+      "cached": false,
+      "query_sha256": "5bc31cb25c2bcfea989c6e185ebb20dd281051a9bb81aff1345519b452cd7d7e",
+      "query": "Chigozie Obioma biography grew up hometown",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"chigozie\" OR \"obioma\" OR \"biography\" OR \"grew\" OR \"up\" OR \"hometown\"",
+        "terms": [
+          "chigozie",
+          "obioma",
+          "biography",
+          "grew",
+          "up",
+          "hometown"
+        ]
+      }
+    },
+    {
+      "round": 14,
+      "top_k": 10,
+      "equivalence_key": "e74ca0e909efbff54458a63cf66800c0547e4458022d3462bc17831a7de4305d",
+      "cached": false,
+      "query_sha256": "e64bb7b1c5f54d5b23756eaad06974dd14f3716d441f98ad87d61a031c3a6cab",
+      "query": "Marlon James novelist born Kingston Jamaica biography",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"marlon\" OR \"james\" OR \"novelist\" OR \"born\" OR \"kingston\" OR \"jamaica\" OR \"biography\"",
+        "terms": [
+          "marlon",
+          "james",
+          "novelist",
+          "born",
+          "kingston",
+          "jamaica",
+          "biography"
+        ]
+      }
+    },
+    {
+      "round": 14,
+      "top_k": 10,
+      "equivalence_key": "dd5feb371c66e1ea9ad08e851e86243c8581a6f5fdced929f24091f8639ceeff",
+      "cached": false,
+      "query_sha256": "2069b350c7ae15d7be5b0d9ec9e330813d2a0cce3774a9d3ee2922474d79e74d",
+      "query": "Chigozie Obioma biography Akure hometown childhood",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"chigozie\" OR \"obioma\" OR \"biography\" OR \"akure\" OR \"hometown\" OR \"childhood\"",
+        "terms": [
+          "chigozie",
+          "obioma",
+          "biography",
+          "akure",
+          "hometown",
+          "childhood"
+        ]
+      }
+    }
+  ],
+  "equivalent_query_repeats": 1,
+  "views": [
+    {
+      "round": 1,
+      "compacted": false,
+      "visible_evidence": [],
+      "shelf": [],
+      "shelf_evicted": []
+    },
+    {
+      "round": 2,
+      "compacted": false,
+      "visible_evidence": [],
+      "shelf": [],
+      "shelf_evicted": []
+    },
+    {
+      "round": 3,
+      "compacted": false,
+      "visible_evidence": [],
+      "shelf": [],
+      "shelf_evicted": []
+    },
+    {
+      "round": 4,
+      "compacted": true,
+      "visible_evidence": [
+        "e1"
+      ],
+      "shelf": [],
+      "shelf_evicted": []
+    },
+    {
+      "round": 5,
+      "compacted": false,
+      "visible_evidence": [
+        "e1"
+      ],
+      "shelf": [],
+      "shelf_evicted": []
+    },
+    {
+      "round": 6,
+      "compacted": true,
+      "visible_evidence": [
+        "e1",
+        "e2"
+      ],
+      "shelf": [],
+      "shelf_evicted": []
+    },
+    {
+      "round": 7,
+      "compacted": false,
+      "visible_evidence": [
+        "e1",
+        "e2"
+      ],
+      "shelf": [],
+      "shelf_evicted": []
+    },
+    {
+      "round": 8,
+      "compacted": true,
+      "visible_evidence": [
+        "e1",
+        "e2"
+      ],
+      "shelf": [
+        "e1"
+      ],
+      "shelf_evicted": []
+    },
+    {
+      "round": 9,
+      "compacted": true,
+      "visible_evidence": [
+        "e1",
+        "e2"
+      ],
+      "shelf": [
+        "e1"
+      ],
+      "shelf_evicted": []
+    },
+    {
+      "round": 10,
+      "compacted": false,
+      "visible_evidence": [
+        "e1",
+        "e2",
+        "e3"
+      ],
+      "shelf": [
+        "e1"
+      ],
+      "shelf_evicted": []
+    },
+    {
+      "round": 11,
+      "compacted": false,
+      "visible_evidence": [
+        "e1",
+        "e2",
+        "e3"
+      ],
+      "shelf": [
+        "e1"
+      ],
+      "shelf_evicted": []
+    },
+    {
+      "round": 12,
+      "compacted": true,
+      "visible_evidence": [
+        "e1",
+        "e2",
+        "e3",
+        "e4"
+      ],
+      "shelf": [
+        "e1",
+        "e2"
+      ],
+      "shelf_evicted": []
+    },
+    {
+      "round": 13,
+      "compacted": false,
+      "visible_evidence": [
+        "e2",
+        "e3",
+        "e4"
+      ],
+      "shelf": [
+        "e2"
+      ],
+      "shelf_evicted": []
+    },
+    {
+      "round": 14,
+      "compacted": false,
+      "visible_evidence": [
+        "e2",
+        "e3",
+        "e4"
+      ],
+      "shelf": [
+        "e2"
+      ],
+      "shelf_evicted": []
+    },
+    {
+      "round": 15,
+      "compacted": false,
+      "visible_evidence": [
+        "e2",
+        "e3",
+        "e4"
+      ],
+      "shelf": [
+        "e2"
+      ],
+      "shelf_evicted": []
+    },
+    {
+      "round": 16,
+      "compacted": false,
+      "visible_evidence": [
+        "e2",
+        "e3",
+        "e4",
+        "e5"
+      ],
+      "shelf": [
+        "e2"
+      ],
+      "shelf_evicted": []
+    }
+  ],
+  "delivered_refs": [
+    "e1",
+    "e2",
+    "e3",
+    "e4",
+    "e5"
+  ],
+  "submitted_refs": [
+    "e1",
+    "e2"
+  ],
+  "text_included": true,
+  "limitations": [
+    "Equivalence is compiler equality, not semantic identity or wasted-search proof",
+    "Raw-window visibility/selection is not entailment or complete evidence coverage",
+    "No live q26 replay or independent answer scoring is performed"
+  ]
+}

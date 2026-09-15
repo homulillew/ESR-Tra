@@ -1,0 +1,2115 @@
+{
+  "protocol": "stride-search-3",
+  "head": "4b4979f52976ee271d8b73b359c90d9ca1477737b769ffa48676eeb2d9e68409",
+  "outcome": "model_budget",
+  "formal_correct": null,
+  "model_attempts": 16,
+  "backend_attempts": 30,
+  "queries": [
+    {
+      "round": 1,
+      "top_k": 5,
+      "equivalence_key": "582beb748c629e5b15c0c51df23bd8d14735e6f2cda25df6b1d73ad10f508be3",
+      "cached": false,
+      "query_sha256": "a7b1ebd81967dc3d74a082e2fc295b4075d54de2a302009ef96765e00778ddf9",
+      "query": "award created 2000s book translated over twenty five languages",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"award\" OR \"created\" OR \"2000s\" OR \"book\" OR \"translated\" OR \"over\" OR \"twenty\" OR \"five\" OR \"languages\"",
+        "terms": [
+          "award",
+          "created",
+          "2000s",
+          "book",
+          "translated",
+          "over",
+          "twenty",
+          "five",
+          "languages"
+        ]
+      }
+    },
+    {
+      "round": 1,
+      "top_k": 5,
+      "equivalence_key": "31427478020d68a8a3f91c57612001fddf3c776cf7ae23d400d124030aeb029e",
+      "cached": false,
+      "query_sha256": "790b5a5e90d02cc6a2124fda463bd88993c530532bce8b82c05fadc98962a225",
+      "query": "literary award founded 2000s book contender translated 25 languages",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"literary\" OR \"award\" OR \"founded\" OR \"2000s\" OR \"book\" OR \"contender\" OR \"translated\" OR \"25\" OR \"languages\"",
+        "terms": [
+          "literary",
+          "award",
+          "founded",
+          "2000s",
+          "book",
+          "contender",
+          "translated",
+          "25",
+          "languages"
+        ]
+      }
+    },
+    {
+      "round": 1,
+      "top_k": 5,
+      "equivalence_key": "a32a53e693516a9c2acd59f29344856fa5b17ebec222c0c7679c337205f941f6",
+      "cached": false,
+      "query_sha256": "832c668e201ccf3851a924a5ae5ee7e1272637eb27a63e95aa136d24de7e33f6",
+      "query": "international book award established 2000s translated many languages",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"international\" OR \"book\" OR \"award\" OR \"established\" OR \"2000s\" OR \"translated\" OR \"many\" OR \"languages\"",
+        "terms": [
+          "international",
+          "book",
+          "award",
+          "established",
+          "2000s",
+          "translated",
+          "many",
+          "languages"
+        ]
+      }
+    },
+    {
+      "round": 1,
+      "top_k": 5,
+      "equivalence_key": "568c3c72c4ea7e6b9982380af79449a67dd14ce17db8ba207f81b91e2b185481",
+      "cached": false,
+      "query_sha256": "c83ce66e88efc7eb00ee4147ac1199dca17b2906832c4ba51c51b52564018844",
+      "query": "author born city where another author grew up prize winning book",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"author\" OR \"born\" OR \"city\" OR \"where\" OR \"another\" OR \"grew\" OR \"up\" OR \"prize\" OR \"winning\" OR \"book\"",
+        "terms": [
+          "author",
+          "born",
+          "city",
+          "where",
+          "another",
+          "grew",
+          "up",
+          "prize",
+          "winning",
+          "book"
+        ]
+      }
+    },
+    {
+      "round": 1,
+      "top_k": 5,
+      "equivalence_key": "0e8a4160601bc14ea0f7acadaf8c7a9f19708af1a345e149ced75dc6f4b42e56",
+      "cached": false,
+      "query_sha256": "3f9a7c09c7a22030bf0af22031d67374eff55901202bb6b76892ef098b1f2da3",
+      "query": "author grew up city prize winning author born same city",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"author\" OR \"grew\" OR \"up\" OR \"city\" OR \"prize\" OR \"winning\" OR \"born\" OR \"same\"",
+        "terms": [
+          "author",
+          "grew",
+          "up",
+          "city",
+          "prize",
+          "winning",
+          "born",
+          "same"
+        ]
+      }
+    },
+    {
+      "round": 1,
+      "top_k": 5,
+      "equivalence_key": "8c7233f359c4ec1d84c685fc95de1ee70b0661e3dec05bd0c46dc852af6419a3",
+      "cached": false,
+      "query_sha256": "860f8bcff73c314e1a2c121320b87a3f38dbfb721c5479b4cf57030f438b17b5",
+      "query": "literary prize winner born same city another author grew up",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"literary\" OR \"prize\" OR \"winner\" OR \"born\" OR \"same\" OR \"city\" OR \"another\" OR \"author\" OR \"grew\" OR \"up\"",
+        "terms": [
+          "literary",
+          "prize",
+          "winner",
+          "born",
+          "same",
+          "city",
+          "another",
+          "author",
+          "grew",
+          "up"
+        ]
+      }
+    },
+    {
+      "round": 2,
+      "top_k": 5,
+      "equivalence_key": "7cee1630c70025f82fd1ce3d1eec6db4252f512250f917742119903228857a90",
+      "cached": false,
+      "query_sha256": "9e4de05c8e047ccde9ebf3f21f558e9f4656d569653d86c8f6c9af3deb3add49",
+      "query": "International Booker Prize winner 2017 author born city",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"international\" OR \"booker\" OR \"prize\" OR \"winner\" OR \"2017\" OR \"author\" OR \"born\" OR \"city\"",
+        "terms": [
+          "international",
+          "booker",
+          "prize",
+          "winner",
+          "2017",
+          "author",
+          "born",
+          "city"
+        ]
+      }
+    },
+    {
+      "round": 2,
+      "top_k": 5,
+      "equivalence_key": "0bc703d529fbb7e7b9ec142b0da00f69117f558003aae0b6d4deb95e9f1d52ad",
+      "cached": false,
+      "query_sha256": "af7e615f156dd11f18cd8408f99df7fb174677b2fca8ae8d4b204dad6dfdbc42",
+      "query": "International Booker Prize 2016 2017 2018 winner author birthplace",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"international\" OR \"booker\" OR \"prize\" OR \"2016\" OR \"2017\" OR \"2018\" OR \"winner\" OR \"author\" OR \"birthplace\"",
+        "terms": [
+          "international",
+          "booker",
+          "prize",
+          "2016",
+          "2017",
+          "2018",
+          "winner",
+          "author",
+          "birthplace"
+        ]
+      }
+    },
+    {
+      "round": 2,
+      "top_k": 5,
+      "equivalence_key": "c349526ce6a52fc7ca92ca7ff40a29bea822dde3d9ee86b4298ed549d7d41605",
+      "cached": false,
+      "query_sha256": "17cda53b65421c18dff5f17f9e05d17fe45d20ac26c0ed0e70bd27bbc87f1df1",
+      "query": "book translated 25 languages International Booker Prize contender",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"book\" OR \"translated\" OR \"25\" OR \"languages\" OR \"international\" OR \"booker\" OR \"prize\" OR \"contender\"",
+        "terms": [
+          "book",
+          "translated",
+          "25",
+          "languages",
+          "international",
+          "booker",
+          "prize",
+          "contender"
+        ]
+      }
+    },
+    {
+      "round": 2,
+      "top_k": 5,
+      "equivalence_key": "00c0218730827cecbfad67eb8d0a241c814230de9745a8f011046ecbbfd658e1",
+      "cached": false,
+      "query_sha256": "4e7159b6c627fd91b20cc03c23e0998fc751c42c9d231d032e9c50625abc0f1f",
+      "query": "Han Kang Human Acts translated languages",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"han\" OR \"kang\" OR \"human\" OR \"acts\" OR \"translated\" OR \"languages\"",
+        "terms": [
+          "han",
+          "kang",
+          "human",
+          "acts",
+          "translated",
+          "languages"
+        ]
+      }
+    },
+    {
+      "round": 2,
+      "top_k": 5,
+      "equivalence_key": "f57848afcf51d0396dcbb5e8edb9b9f576cbc42cf835f738c180025ddcbf8a63",
+      "cached": false,
+      "query_sha256": "cdd39a0972728791068725f6a69dbc9471dbc96b563c8a8bed7739ab1543365c",
+      "query": "Yanagihara A Little Life translated languages award contender",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"yanagihara\" OR \"a\" OR \"little\" OR \"life\" OR \"translated\" OR \"languages\" OR \"award\" OR \"contender\"",
+        "terms": [
+          "yanagihara",
+          "a",
+          "little",
+          "life",
+          "translated",
+          "languages",
+          "award",
+          "contender"
+        ]
+      }
+    },
+    {
+      "round": 2,
+      "top_k": 5,
+      "equivalence_key": "ad97ef27feb29670b451a6a31c7ee1ade8f4ff452233d1fd53e420645a1bbe0c",
+      "cached": false,
+      "query_sha256": "5a83b061f7876f1d3abc07fed0e45c25bc789ceff382a9370000b56298aecef8",
+      "query": "Ferrante My Brilliant Friend translated languages award",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"ferrante\" OR \"my\" OR \"brilliant\" OR \"friend\" OR \"translated\" OR \"languages\" OR \"award\"",
+        "terms": [
+          "ferrante",
+          "my",
+          "brilliant",
+          "friend",
+          "translated",
+          "languages",
+          "award"
+        ]
+      }
+    },
+    {
+      "round": 3,
+      "top_k": 5,
+      "equivalence_key": "c50f8e8a25f0a0159617c9d6875014ea605b479db6945fa7ad6d86259828e825",
+      "cached": false,
+      "query_sha256": "485f3ea3dbbf689e3ffaef4703c73e57a663f934e71df313e197868064b80f76",
+      "query": "Man Booker International Prize created 2005 history",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"man\" OR \"booker\" OR \"international\" OR \"prize\" OR \"created\" OR \"2005\" OR \"history\"",
+        "terms": [
+          "man",
+          "booker",
+          "international",
+          "prize",
+          "created",
+          "2005",
+          "history"
+        ]
+      }
+    },
+    {
+      "round": 3,
+      "top_k": 5,
+      "equivalence_key": "d48efebf30f790e757e1efe528d723bb9be1ded079bbfb5b58874a43d052dcd1",
+      "cached": false,
+      "query_sha256": "a5ecfce22a2310242ade843263e26f3086a8c3c7fee268706298739072eb4a97",
+      "query": "literary award founded 2004 2005 2006 2007 2008 2009 book translated",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"literary\" OR \"award\" OR \"founded\" OR \"2004\" OR \"2005\" OR \"2006\" OR \"2007\" OR \"2008\" OR \"2009\" OR \"book\" OR \"translated\"",
+        "terms": [
+          "literary",
+          "award",
+          "founded",
+          "2004",
+          "2005",
+          "2006",
+          "2007",
+          "2008",
+          "2009",
+          "book",
+          "translated"
+        ]
+      }
+    },
+    {
+      "round": 3,
+      "top_k": 5,
+      "equivalence_key": "918c50fee1bf4909529ac65a3f8bae13208c128a976e31b6901b51fb17a42003",
+      "cached": false,
+      "query_sha256": "fb818ea0d220b94a335cd145ec0dbb6cce5b6fb7e50bc970b6caf9ea31eb5de0",
+      "query": "award established 2000s book translated over 25 languages contender",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"award\" OR \"established\" OR \"2000s\" OR \"book\" OR \"translated\" OR \"over\" OR \"25\" OR \"languages\" OR \"contender\"",
+        "terms": [
+          "award",
+          "established",
+          "2000s",
+          "book",
+          "translated",
+          "over",
+          "25",
+          "languages",
+          "contender"
+        ]
+      }
+    },
+    {
+      "round": 3,
+      "top_k": 5,
+      "equivalence_key": "cc3e38ad569099e3dac0d831f09d186aa8a7af12d6d59633169c8c8402f01bef",
+      "cached": false,
+      "query_sha256": "7aeb0535ec71c2faadf9b4484e68f5206a65d2fe71bf5852814c1c7516b8ff42",
+      "query": "A Little Life Hanya Yanagihara translated languages number",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"a\" OR \"little\" OR \"life\" OR \"hanya\" OR \"yanagihara\" OR \"translated\" OR \"languages\" OR \"number\"",
+        "terms": [
+          "a",
+          "little",
+          "life",
+          "hanya",
+          "yanagihara",
+          "translated",
+          "languages",
+          "number"
+        ]
+      }
+    },
+    {
+      "round": 3,
+      "top_k": 5,
+      "equivalence_key": "e16b334ca68ee73e56521103d9bdb50eda614f3592890023d990f0bc73227c89",
+      "cached": false,
+      "query_sha256": "81e28c12eb7aa597ff60a964690375c270cb4002904ef8e4f4cfd25a0521a0b1",
+      "query": "Hanya Yanagihara birthplace born city",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"hanya\" OR \"yanagihara\" OR \"birthplace\" OR \"born\" OR \"city\"",
+        "terms": [
+          "hanya",
+          "yanagihara",
+          "birthplace",
+          "born",
+          "city"
+        ]
+      }
+    },
+    {
+      "round": 3,
+      "top_k": 5,
+      "equivalence_key": "5ed78650af19c5e048e10cb8023a6b30300ca46e0afe956664b4c926c3d8520f",
+      "cached": false,
+      "query_sha256": "7c7123085e09563991f76ac1dbaa1cf1e3cb1274279e69a101cda581122c4fe1",
+      "query": "A Little Life Man Booker International Prize shortlisted",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"a\" OR \"little\" OR \"life\" OR \"man\" OR \"booker\" OR \"international\" OR \"prize\" OR \"shortlisted\"",
+        "terms": [
+          "a",
+          "little",
+          "life",
+          "man",
+          "booker",
+          "international",
+          "prize",
+          "shortlisted"
+        ]
+      }
+    },
+    {
+      "round": 4,
+      "top_k": 5,
+      "equivalence_key": "e4dbec800a9e2dd83cf4b52ad442d2baca1362bb6894d6725af912fd3b4432c1",
+      "cached": false,
+      "query_sha256": "f402258b309b79443387a098f2facb145b07b3dea071e8ca0cd628c69cb188db",
+      "query": "Man Booker International Prize 2016 winner The Vegetarian Han Kang",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"man\" OR \"booker\" OR \"international\" OR \"prize\" OR \"2016\" OR \"winner\" OR \"the\" OR \"vegetarian\" OR \"han\" OR \"kang\"",
+        "terms": [
+          "man",
+          "booker",
+          "international",
+          "prize",
+          "2016",
+          "winner",
+          "the",
+          "vegetarian",
+          "han",
+          "kang"
+        ]
+      }
+    },
+    {
+      "round": 4,
+      "top_k": 5,
+      "equivalence_key": "6450192984f869c57facfd8dbb8505ba489b6d1593940c053ed16f9939623d0e",
+      "cached": false,
+      "query_sha256": "00bd7a3ff724e359d80c66234adc71f8e38d55b6dc369ac32bf08eb4ae5a6733",
+      "query": "Man Booker International Prize 2017 winner Flights Olga Tokarczuk",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"man\" OR \"booker\" OR \"international\" OR \"prize\" OR \"2017\" OR \"winner\" OR \"flights\" OR \"olga\" OR \"tokarczuk\"",
+        "terms": [
+          "man",
+          "booker",
+          "international",
+          "prize",
+          "2017",
+          "winner",
+          "flights",
+          "olga",
+          "tokarczuk"
+        ]
+      }
+    },
+    {
+      "round": 4,
+      "top_k": 5,
+      "equivalence_key": "5f2e3b7f6f22da2e4da0fbe4229f1fc111142cac6ac1d5bd545370d28c16b77d",
+      "cached": false,
+      "query_sha256": "e99b7f66ad3f92726c42e9d89883999b922b323fdbab81884afcd412adeb6d76",
+      "query": "Man Booker International Prize 2018 winner",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"man\" OR \"booker\" OR \"international\" OR \"prize\" OR \"2018\" OR \"winner\"",
+        "terms": [
+          "man",
+          "booker",
+          "international",
+          "prize",
+          "2018",
+          "winner"
+        ]
+      }
+    },
+    {
+      "round": 4,
+      "top_k": 5,
+      "equivalence_key": "0cf8c171151bc63bc3ff7f5b0c0ff21371e43595c2b9fb9c48b9edb7102628a7",
+      "cached": false,
+      "query_sha256": "aacea469499e82d452eec2f7f7c64dfa6ef943c4f29eba704f390b44d4975486",
+      "query": "A Little Life translated into 24 languages",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"a\" OR \"little\" OR \"life\" OR \"translated\" OR \"into\" OR \"24\" OR \"languages\"",
+        "terms": [
+          "a",
+          "little",
+          "life",
+          "translated",
+          "into",
+          "24",
+          "languages"
+        ]
+      }
+    },
+    {
+      "round": 4,
+      "top_k": 5,
+      "equivalence_key": "d9284e97c3356184f25c5d5a5ed151f92b200cba9e4f56faeaaf496e1566cd43",
+      "cached": false,
+      "query_sha256": "68edebce5256f99f18e80321ae6766c0bd579fcd2942e82e0713780c0c5d2849",
+      "query": "A Little Life Hanya Yanagihara number of languages translated",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"a\" OR \"little\" OR \"life\" OR \"hanya\" OR \"yanagihara\" OR \"number\" OR \"of\" OR \"languages\" OR \"translated\"",
+        "terms": [
+          "a",
+          "little",
+          "life",
+          "hanya",
+          "yanagihara",
+          "number",
+          "of",
+          "languages",
+          "translated"
+        ]
+      }
+    },
+    {
+      "round": 4,
+      "top_k": 5,
+      "equivalence_key": "59add7cdf5f4bb6e2fb66b5c25f42f18d33d90c8dd6ee3bb5412ed7a82da1578",
+      "cached": false,
+      "query_sha256": "714be9b8e5b10880f7a8d2b9820f14da0603b643727eb42ea855dd46ceee6d36",
+      "query": "Hanya Yanagihara grew up city",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"hanya\" OR \"yanagihara\" OR \"grew\" OR \"up\" OR \"city\"",
+        "terms": [
+          "hanya",
+          "yanagihara",
+          "grew",
+          "up",
+          "city"
+        ]
+      }
+    },
+    {
+      "round": 5,
+      "top_k": 5,
+      "equivalence_key": "3c98bcc55084041a1a68f443b12286802279d3da5a4b129db5b955134672102a",
+      "cached": false,
+      "query_sha256": "a814fdb83b05707f5bcd4cec064689c24c19f0c4e1676fc24d379423aee8c320",
+      "query": "Man Booker International Prize 2016 winner The Vegetarian Han Kang born Gwangju",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"man\" OR \"booker\" OR \"international\" OR \"prize\" OR \"2016\" OR \"winner\" OR \"the\" OR \"vegetarian\" OR \"han\" OR \"kang\" OR \"born\" OR \"gwangju\"",
+        "terms": [
+          "man",
+          "booker",
+          "international",
+          "prize",
+          "2016",
+          "winner",
+          "the",
+          "vegetarian",
+          "han",
+          "kang",
+          "born",
+          "gwangju"
+        ]
+      }
+    },
+    {
+      "round": 5,
+      "top_k": 5,
+      "equivalence_key": "1b04a9c82e2226c80b3586a71a7cacdc4eda1569e7d5003f4f158c5f7a4eb55a",
+      "cached": false,
+      "query_sha256": "2f35adf995c9c0ce2675a5b17ca3bfe95385e1a471d33ced6895c4ef5910aadf",
+      "query": "Han Kang birthplace born city",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"han\" OR \"kang\" OR \"birthplace\" OR \"born\" OR \"city\"",
+        "terms": [
+          "han",
+          "kang",
+          "birthplace",
+          "born",
+          "city"
+        ]
+      }
+    },
+    {
+      "round": 5,
+      "top_k": 5,
+      "equivalence_key": "a3e8491297818cd77f9543a46dca626bcefe423f01f9c7b227c02569d1e49472",
+      "cached": false,
+      "query_sha256": "59b25d240ffa97d8625008915ad9d6715d7c948e94dae6c9fdd4fbb31e0cd5d5",
+      "query": "The Vegetarian published 2007 Korea 2015 English translation",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"the\" OR \"vegetarian\" OR \"published\" OR \"2007\" OR \"korea\" OR \"2015\" OR \"english\" OR \"translation\"",
+        "terms": [
+          "the",
+          "vegetarian",
+          "published",
+          "2007",
+          "korea",
+          "2015",
+          "english",
+          "translation"
+        ]
+      }
+    },
+    {
+      "round": 5,
+      "top_k": 5,
+      "equivalence_key": "e338a141cc1f4dcace0a6ffacc6a62089e3abd32d8573f9307e20711959335d2",
+      "cached": false,
+      "query_sha256": "c2b70e196d9a15373cb92a97ba726753b07b3c772e7ab085be69eea9778ea480",
+      "query": "A Little Life 2015 Man Booker International Prize contender",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"a\" OR \"little\" OR \"life\" OR \"2015\" OR \"man\" OR \"booker\" OR \"international\" OR \"prize\" OR \"contender\"",
+        "terms": [
+          "a",
+          "little",
+          "life",
+          "2015",
+          "man",
+          "booker",
+          "international",
+          "prize",
+          "contender"
+        ]
+      }
+    },
+    {
+      "round": 5,
+      "top_k": 5,
+      "equivalence_key": "cbeecd6c902ace6f7f8a5fcb770942326ce78c9bcef6540c8dabc9c1a833fcdb",
+      "cached": false,
+      "query_sha256": "1b0179ceda41af849c3d80613985f15396a84299f9a7570da35b4047c4cbfa9d",
+      "query": "A Little Life Hanya Yanagihara shortlisted Man Booker International",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"a\" OR \"little\" OR \"life\" OR \"hanya\" OR \"yanagihara\" OR \"shortlisted\" OR \"man\" OR \"booker\" OR \"international\"",
+        "terms": [
+          "a",
+          "little",
+          "life",
+          "hanya",
+          "yanagihara",
+          "shortlisted",
+          "man",
+          "booker",
+          "international"
+        ]
+      }
+    },
+    {
+      "round": 5,
+      "top_k": 5,
+      "equivalence_key": "d5db017ce56769f7bdb35f0e33bfd77c3bdabbbae8ebe95ac7e76a570d039a4b",
+      "cached": false,
+      "query_sha256": "28de37e780f45db6a4242b6db2db944c36a8601775553a4ef0d4200e942ef550",
+      "query": "Hanya Yanagihara born Los Angeles",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"hanya\" OR \"yanagihara\" OR \"born\" OR \"los\" OR \"angeles\"",
+        "terms": [
+          "hanya",
+          "yanagihara",
+          "born",
+          "los",
+          "angeles"
+        ]
+      }
+    },
+    {
+      "round": 6,
+      "top_k": 5,
+      "equivalence_key": "3c98bcc55084041a1a68f443b12286802279d3da5a4b129db5b955134672102a",
+      "cached": true,
+      "query_sha256": "a814fdb83b05707f5bcd4cec064689c24c19f0c4e1676fc24d379423aee8c320",
+      "query": "Man Booker International Prize 2016 winner The Vegetarian Han Kang born Gwangju",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"man\" OR \"booker\" OR \"international\" OR \"prize\" OR \"2016\" OR \"winner\" OR \"the\" OR \"vegetarian\" OR \"han\" OR \"kang\" OR \"born\" OR \"gwangju\"",
+        "terms": [
+          "man",
+          "booker",
+          "international",
+          "prize",
+          "2016",
+          "winner",
+          "the",
+          "vegetarian",
+          "han",
+          "kang",
+          "born",
+          "gwangju"
+        ]
+      }
+    },
+    {
+      "round": 6,
+      "top_k": 5,
+      "equivalence_key": "1b04a9c82e2226c80b3586a71a7cacdc4eda1569e7d5003f4f158c5f7a4eb55a",
+      "cached": true,
+      "query_sha256": "2f35adf995c9c0ce2675a5b17ca3bfe95385e1a471d33ced6895c4ef5910aadf",
+      "query": "Han Kang birthplace born city",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"han\" OR \"kang\" OR \"birthplace\" OR \"born\" OR \"city\"",
+        "terms": [
+          "han",
+          "kang",
+          "birthplace",
+          "born",
+          "city"
+        ]
+      }
+    },
+    {
+      "round": 6,
+      "top_k": 5,
+      "equivalence_key": "a3e8491297818cd77f9543a46dca626bcefe423f01f9c7b227c02569d1e49472",
+      "cached": true,
+      "query_sha256": "59b25d240ffa97d8625008915ad9d6715d7c948e94dae6c9fdd4fbb31e0cd5d5",
+      "query": "The Vegetarian published 2007 Korea 2015 English translation",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"the\" OR \"vegetarian\" OR \"published\" OR \"2007\" OR \"korea\" OR \"2015\" OR \"english\" OR \"translation\"",
+        "terms": [
+          "the",
+          "vegetarian",
+          "published",
+          "2007",
+          "korea",
+          "2015",
+          "english",
+          "translation"
+        ]
+      }
+    },
+    {
+      "round": 6,
+      "top_k": 5,
+      "equivalence_key": "e338a141cc1f4dcace0a6ffacc6a62089e3abd32d8573f9307e20711959335d2",
+      "cached": true,
+      "query_sha256": "c2b70e196d9a15373cb92a97ba726753b07b3c772e7ab085be69eea9778ea480",
+      "query": "A Little Life 2015 Man Booker International Prize contender",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"a\" OR \"little\" OR \"life\" OR \"2015\" OR \"man\" OR \"booker\" OR \"international\" OR \"prize\" OR \"contender\"",
+        "terms": [
+          "a",
+          "little",
+          "life",
+          "2015",
+          "man",
+          "booker",
+          "international",
+          "prize",
+          "contender"
+        ]
+      }
+    },
+    {
+      "round": 6,
+      "top_k": 5,
+      "equivalence_key": "cbeecd6c902ace6f7f8a5fcb770942326ce78c9bcef6540c8dabc9c1a833fcdb",
+      "cached": true,
+      "query_sha256": "1b0179ceda41af849c3d80613985f15396a84299f9a7570da35b4047c4cbfa9d",
+      "query": "A Little Life Hanya Yanagihara shortlisted Man Booker International",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"a\" OR \"little\" OR \"life\" OR \"hanya\" OR \"yanagihara\" OR \"shortlisted\" OR \"man\" OR \"booker\" OR \"international\"",
+        "terms": [
+          "a",
+          "little",
+          "life",
+          "hanya",
+          "yanagihara",
+          "shortlisted",
+          "man",
+          "booker",
+          "international"
+        ]
+      }
+    },
+    {
+      "round": 6,
+      "top_k": 5,
+      "equivalence_key": "d5db017ce56769f7bdb35f0e33bfd77c3bdabbbae8ebe95ac7e76a570d039a4b",
+      "cached": true,
+      "query_sha256": "28de37e780f45db6a4242b6db2db944c36a8601775553a4ef0d4200e942ef550",
+      "query": "Hanya Yanagihara born Los Angeles",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"hanya\" OR \"yanagihara\" OR \"born\" OR \"los\" OR \"angeles\"",
+        "terms": [
+          "hanya",
+          "yanagihara",
+          "born",
+          "los",
+          "angeles"
+        ]
+      }
+    },
+    {
+      "round": 7,
+      "top_k": 5,
+      "equivalence_key": "3c98bcc55084041a1a68f443b12286802279d3da5a4b129db5b955134672102a",
+      "cached": true,
+      "query_sha256": "a814fdb83b05707f5bcd4cec064689c24c19f0c4e1676fc24d379423aee8c320",
+      "query": "Man Booker International Prize 2016 winner The Vegetarian Han Kang born Gwangju",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"man\" OR \"booker\" OR \"international\" OR \"prize\" OR \"2016\" OR \"winner\" OR \"the\" OR \"vegetarian\" OR \"han\" OR \"kang\" OR \"born\" OR \"gwangju\"",
+        "terms": [
+          "man",
+          "booker",
+          "international",
+          "prize",
+          "2016",
+          "winner",
+          "the",
+          "vegetarian",
+          "han",
+          "kang",
+          "born",
+          "gwangju"
+        ]
+      }
+    },
+    {
+      "round": 7,
+      "top_k": 5,
+      "equivalence_key": "1b04a9c82e2226c80b3586a71a7cacdc4eda1569e7d5003f4f158c5f7a4eb55a",
+      "cached": true,
+      "query_sha256": "2f35adf995c9c0ce2675a5b17ca3bfe95385e1a471d33ced6895c4ef5910aadf",
+      "query": "Han Kang birthplace born city",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"han\" OR \"kang\" OR \"birthplace\" OR \"born\" OR \"city\"",
+        "terms": [
+          "han",
+          "kang",
+          "birthplace",
+          "born",
+          "city"
+        ]
+      }
+    },
+    {
+      "round": 7,
+      "top_k": 5,
+      "equivalence_key": "a3e8491297818cd77f9543a46dca626bcefe423f01f9c7b227c02569d1e49472",
+      "cached": true,
+      "query_sha256": "59b25d240ffa97d8625008915ad9d6715d7c948e94dae6c9fdd4fbb31e0cd5d5",
+      "query": "The Vegetarian published 2007 Korea 2015 English translation",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"the\" OR \"vegetarian\" OR \"published\" OR \"2007\" OR \"korea\" OR \"2015\" OR \"english\" OR \"translation\"",
+        "terms": [
+          "the",
+          "vegetarian",
+          "published",
+          "2007",
+          "korea",
+          "2015",
+          "english",
+          "translation"
+        ]
+      }
+    },
+    {
+      "round": 7,
+      "top_k": 5,
+      "equivalence_key": "e338a141cc1f4dcace0a6ffacc6a62089e3abd32d8573f9307e20711959335d2",
+      "cached": true,
+      "query_sha256": "c2b70e196d9a15373cb92a97ba726753b07b3c772e7ab085be69eea9778ea480",
+      "query": "A Little Life 2015 Man Booker International Prize contender",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"a\" OR \"little\" OR \"life\" OR \"2015\" OR \"man\" OR \"booker\" OR \"international\" OR \"prize\" OR \"contender\"",
+        "terms": [
+          "a",
+          "little",
+          "life",
+          "2015",
+          "man",
+          "booker",
+          "international",
+          "prize",
+          "contender"
+        ]
+      }
+    },
+    {
+      "round": 7,
+      "top_k": 5,
+      "equivalence_key": "cbeecd6c902ace6f7f8a5fcb770942326ce78c9bcef6540c8dabc9c1a833fcdb",
+      "cached": true,
+      "query_sha256": "1b0179ceda41af849c3d80613985f15396a84299f9a7570da35b4047c4cbfa9d",
+      "query": "A Little Life Hanya Yanagihara shortlisted Man Booker International",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"a\" OR \"little\" OR \"life\" OR \"hanya\" OR \"yanagihara\" OR \"shortlisted\" OR \"man\" OR \"booker\" OR \"international\"",
+        "terms": [
+          "a",
+          "little",
+          "life",
+          "hanya",
+          "yanagihara",
+          "shortlisted",
+          "man",
+          "booker",
+          "international"
+        ]
+      }
+    },
+    {
+      "round": 7,
+      "top_k": 5,
+      "equivalence_key": "d5db017ce56769f7bdb35f0e33bfd77c3bdabbbae8ebe95ac7e76a570d039a4b",
+      "cached": true,
+      "query_sha256": "28de37e780f45db6a4242b6db2db944c36a8601775553a4ef0d4200e942ef550",
+      "query": "Hanya Yanagihara born Los Angeles",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"hanya\" OR \"yanagihara\" OR \"born\" OR \"los\" OR \"angeles\"",
+        "terms": [
+          "hanya",
+          "yanagihara",
+          "born",
+          "los",
+          "angeles"
+        ]
+      }
+    },
+    {
+      "round": 8,
+      "top_k": 5,
+      "equivalence_key": "3c98bcc55084041a1a68f443b12286802279d3da5a4b129db5b955134672102a",
+      "cached": true,
+      "query_sha256": "a814fdb83b05707f5bcd4cec064689c24c19f0c4e1676fc24d379423aee8c320",
+      "query": "Man Booker International Prize 2016 winner The Vegetarian Han Kang born Gwangju",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"man\" OR \"booker\" OR \"international\" OR \"prize\" OR \"2016\" OR \"winner\" OR \"the\" OR \"vegetarian\" OR \"han\" OR \"kang\" OR \"born\" OR \"gwangju\"",
+        "terms": [
+          "man",
+          "booker",
+          "international",
+          "prize",
+          "2016",
+          "winner",
+          "the",
+          "vegetarian",
+          "han",
+          "kang",
+          "born",
+          "gwangju"
+        ]
+      }
+    },
+    {
+      "round": 8,
+      "top_k": 5,
+      "equivalence_key": "1b04a9c82e2226c80b3586a71a7cacdc4eda1569e7d5003f4f158c5f7a4eb55a",
+      "cached": true,
+      "query_sha256": "2f35adf995c9c0ce2675a5b17ca3bfe95385e1a471d33ced6895c4ef5910aadf",
+      "query": "Han Kang birthplace born city",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"han\" OR \"kang\" OR \"birthplace\" OR \"born\" OR \"city\"",
+        "terms": [
+          "han",
+          "kang",
+          "birthplace",
+          "born",
+          "city"
+        ]
+      }
+    },
+    {
+      "round": 8,
+      "top_k": 5,
+      "equivalence_key": "a3e8491297818cd77f9543a46dca626bcefe423f01f9c7b227c02569d1e49472",
+      "cached": true,
+      "query_sha256": "59b25d240ffa97d8625008915ad9d6715d7c948e94dae6c9fdd4fbb31e0cd5d5",
+      "query": "The Vegetarian published 2007 Korea 2015 English translation",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"the\" OR \"vegetarian\" OR \"published\" OR \"2007\" OR \"korea\" OR \"2015\" OR \"english\" OR \"translation\"",
+        "terms": [
+          "the",
+          "vegetarian",
+          "published",
+          "2007",
+          "korea",
+          "2015",
+          "english",
+          "translation"
+        ]
+      }
+    },
+    {
+      "round": 8,
+      "top_k": 5,
+      "equivalence_key": "e338a141cc1f4dcace0a6ffacc6a62089e3abd32d8573f9307e20711959335d2",
+      "cached": true,
+      "query_sha256": "c2b70e196d9a15373cb92a97ba726753b07b3c772e7ab085be69eea9778ea480",
+      "query": "A Little Life 2015 Man Booker International Prize contender",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"a\" OR \"little\" OR \"life\" OR \"2015\" OR \"man\" OR \"booker\" OR \"international\" OR \"prize\" OR \"contender\"",
+        "terms": [
+          "a",
+          "little",
+          "life",
+          "2015",
+          "man",
+          "booker",
+          "international",
+          "prize",
+          "contender"
+        ]
+      }
+    },
+    {
+      "round": 8,
+      "top_k": 5,
+      "equivalence_key": "cbeecd6c902ace6f7f8a5fcb770942326ce78c9bcef6540c8dabc9c1a833fcdb",
+      "cached": true,
+      "query_sha256": "1b0179ceda41af849c3d80613985f15396a84299f9a7570da35b4047c4cbfa9d",
+      "query": "A Little Life Hanya Yanagihara shortlisted Man Booker International",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"a\" OR \"little\" OR \"life\" OR \"hanya\" OR \"yanagihara\" OR \"shortlisted\" OR \"man\" OR \"booker\" OR \"international\"",
+        "terms": [
+          "a",
+          "little",
+          "life",
+          "hanya",
+          "yanagihara",
+          "shortlisted",
+          "man",
+          "booker",
+          "international"
+        ]
+      }
+    },
+    {
+      "round": 8,
+      "top_k": 5,
+      "equivalence_key": "d5db017ce56769f7bdb35f0e33bfd77c3bdabbbae8ebe95ac7e76a570d039a4b",
+      "cached": true,
+      "query_sha256": "28de37e780f45db6a4242b6db2db944c36a8601775553a4ef0d4200e942ef550",
+      "query": "Hanya Yanagihara born Los Angeles",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"hanya\" OR \"yanagihara\" OR \"born\" OR \"los\" OR \"angeles\"",
+        "terms": [
+          "hanya",
+          "yanagihara",
+          "born",
+          "los",
+          "angeles"
+        ]
+      }
+    },
+    {
+      "round": 9,
+      "top_k": 5,
+      "equivalence_key": "3c98bcc55084041a1a68f443b12286802279d3da5a4b129db5b955134672102a",
+      "cached": true,
+      "query_sha256": "a814fdb83b05707f5bcd4cec064689c24c19f0c4e1676fc24d379423aee8c320",
+      "query": "Man Booker International Prize 2016 winner The Vegetarian Han Kang born Gwangju",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"man\" OR \"booker\" OR \"international\" OR \"prize\" OR \"2016\" OR \"winner\" OR \"the\" OR \"vegetarian\" OR \"han\" OR \"kang\" OR \"born\" OR \"gwangju\"",
+        "terms": [
+          "man",
+          "booker",
+          "international",
+          "prize",
+          "2016",
+          "winner",
+          "the",
+          "vegetarian",
+          "han",
+          "kang",
+          "born",
+          "gwangju"
+        ]
+      }
+    },
+    {
+      "round": 9,
+      "top_k": 5,
+      "equivalence_key": "1b04a9c82e2226c80b3586a71a7cacdc4eda1569e7d5003f4f158c5f7a4eb55a",
+      "cached": true,
+      "query_sha256": "2f35adf995c9c0ce2675a5b17ca3bfe95385e1a471d33ced6895c4ef5910aadf",
+      "query": "Han Kang birthplace born city",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"han\" OR \"kang\" OR \"birthplace\" OR \"born\" OR \"city\"",
+        "terms": [
+          "han",
+          "kang",
+          "birthplace",
+          "born",
+          "city"
+        ]
+      }
+    },
+    {
+      "round": 9,
+      "top_k": 5,
+      "equivalence_key": "a3e8491297818cd77f9543a46dca626bcefe423f01f9c7b227c02569d1e49472",
+      "cached": true,
+      "query_sha256": "59b25d240ffa97d8625008915ad9d6715d7c948e94dae6c9fdd4fbb31e0cd5d5",
+      "query": "The Vegetarian published 2007 Korea 2015 English translation",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"the\" OR \"vegetarian\" OR \"published\" OR \"2007\" OR \"korea\" OR \"2015\" OR \"english\" OR \"translation\"",
+        "terms": [
+          "the",
+          "vegetarian",
+          "published",
+          "2007",
+          "korea",
+          "2015",
+          "english",
+          "translation"
+        ]
+      }
+    },
+    {
+      "round": 9,
+      "top_k": 5,
+      "equivalence_key": "e338a141cc1f4dcace0a6ffacc6a62089e3abd32d8573f9307e20711959335d2",
+      "cached": true,
+      "query_sha256": "c2b70e196d9a15373cb92a97ba726753b07b3c772e7ab085be69eea9778ea480",
+      "query": "A Little Life 2015 Man Booker International Prize contender",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"a\" OR \"little\" OR \"life\" OR \"2015\" OR \"man\" OR \"booker\" OR \"international\" OR \"prize\" OR \"contender\"",
+        "terms": [
+          "a",
+          "little",
+          "life",
+          "2015",
+          "man",
+          "booker",
+          "international",
+          "prize",
+          "contender"
+        ]
+      }
+    },
+    {
+      "round": 9,
+      "top_k": 5,
+      "equivalence_key": "cbeecd6c902ace6f7f8a5fcb770942326ce78c9bcef6540c8dabc9c1a833fcdb",
+      "cached": true,
+      "query_sha256": "1b0179ceda41af849c3d80613985f15396a84299f9a7570da35b4047c4cbfa9d",
+      "query": "A Little Life Hanya Yanagihara shortlisted Man Booker International",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"a\" OR \"little\" OR \"life\" OR \"hanya\" OR \"yanagihara\" OR \"shortlisted\" OR \"man\" OR \"booker\" OR \"international\"",
+        "terms": [
+          "a",
+          "little",
+          "life",
+          "hanya",
+          "yanagihara",
+          "shortlisted",
+          "man",
+          "booker",
+          "international"
+        ]
+      }
+    },
+    {
+      "round": 9,
+      "top_k": 5,
+      "equivalence_key": "d5db017ce56769f7bdb35f0e33bfd77c3bdabbbae8ebe95ac7e76a570d039a4b",
+      "cached": true,
+      "query_sha256": "28de37e780f45db6a4242b6db2db944c36a8601775553a4ef0d4200e942ef550",
+      "query": "Hanya Yanagihara born Los Angeles",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"hanya\" OR \"yanagihara\" OR \"born\" OR \"los\" OR \"angeles\"",
+        "terms": [
+          "hanya",
+          "yanagihara",
+          "born",
+          "los",
+          "angeles"
+        ]
+      }
+    },
+    {
+      "round": 10,
+      "top_k": 5,
+      "equivalence_key": "3c98bcc55084041a1a68f443b12286802279d3da5a4b129db5b955134672102a",
+      "cached": true,
+      "query_sha256": "a814fdb83b05707f5bcd4cec064689c24c19f0c4e1676fc24d379423aee8c320",
+      "query": "Man Booker International Prize 2016 winner The Vegetarian Han Kang born Gwangju",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"man\" OR \"booker\" OR \"international\" OR \"prize\" OR \"2016\" OR \"winner\" OR \"the\" OR \"vegetarian\" OR \"han\" OR \"kang\" OR \"born\" OR \"gwangju\"",
+        "terms": [
+          "man",
+          "booker",
+          "international",
+          "prize",
+          "2016",
+          "winner",
+          "the",
+          "vegetarian",
+          "han",
+          "kang",
+          "born",
+          "gwangju"
+        ]
+      }
+    },
+    {
+      "round": 10,
+      "top_k": 5,
+      "equivalence_key": "1b04a9c82e2226c80b3586a71a7cacdc4eda1569e7d5003f4f158c5f7a4eb55a",
+      "cached": true,
+      "query_sha256": "2f35adf995c9c0ce2675a5b17ca3bfe95385e1a471d33ced6895c4ef5910aadf",
+      "query": "Han Kang birthplace born city",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"han\" OR \"kang\" OR \"birthplace\" OR \"born\" OR \"city\"",
+        "terms": [
+          "han",
+          "kang",
+          "birthplace",
+          "born",
+          "city"
+        ]
+      }
+    },
+    {
+      "round": 10,
+      "top_k": 5,
+      "equivalence_key": "a3e8491297818cd77f9543a46dca626bcefe423f01f9c7b227c02569d1e49472",
+      "cached": true,
+      "query_sha256": "59b25d240ffa97d8625008915ad9d6715d7c948e94dae6c9fdd4fbb31e0cd5d5",
+      "query": "The Vegetarian published 2007 Korea 2015 English translation",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"the\" OR \"vegetarian\" OR \"published\" OR \"2007\" OR \"korea\" OR \"2015\" OR \"english\" OR \"translation\"",
+        "terms": [
+          "the",
+          "vegetarian",
+          "published",
+          "2007",
+          "korea",
+          "2015",
+          "english",
+          "translation"
+        ]
+      }
+    },
+    {
+      "round": 10,
+      "top_k": 5,
+      "equivalence_key": "e338a141cc1f4dcace0a6ffacc6a62089e3abd32d8573f9307e20711959335d2",
+      "cached": true,
+      "query_sha256": "c2b70e196d9a15373cb92a97ba726753b07b3c772e7ab085be69eea9778ea480",
+      "query": "A Little Life 2015 Man Booker International Prize contender",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"a\" OR \"little\" OR \"life\" OR \"2015\" OR \"man\" OR \"booker\" OR \"international\" OR \"prize\" OR \"contender\"",
+        "terms": [
+          "a",
+          "little",
+          "life",
+          "2015",
+          "man",
+          "booker",
+          "international",
+          "prize",
+          "contender"
+        ]
+      }
+    },
+    {
+      "round": 10,
+      "top_k": 5,
+      "equivalence_key": "cbeecd6c902ace6f7f8a5fcb770942326ce78c9bcef6540c8dabc9c1a833fcdb",
+      "cached": true,
+      "query_sha256": "1b0179ceda41af849c3d80613985f15396a84299f9a7570da35b4047c4cbfa9d",
+      "query": "A Little Life Hanya Yanagihara shortlisted Man Booker International",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"a\" OR \"little\" OR \"life\" OR \"hanya\" OR \"yanagihara\" OR \"shortlisted\" OR \"man\" OR \"booker\" OR \"international\"",
+        "terms": [
+          "a",
+          "little",
+          "life",
+          "hanya",
+          "yanagihara",
+          "shortlisted",
+          "man",
+          "booker",
+          "international"
+        ]
+      }
+    },
+    {
+      "round": 10,
+      "top_k": 5,
+      "equivalence_key": "d5db017ce56769f7bdb35f0e33bfd77c3bdabbbae8ebe95ac7e76a570d039a4b",
+      "cached": true,
+      "query_sha256": "28de37e780f45db6a4242b6db2db944c36a8601775553a4ef0d4200e942ef550",
+      "query": "Hanya Yanagihara born Los Angeles",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"hanya\" OR \"yanagihara\" OR \"born\" OR \"los\" OR \"angeles\"",
+        "terms": [
+          "hanya",
+          "yanagihara",
+          "born",
+          "los",
+          "angeles"
+        ]
+      }
+    },
+    {
+      "round": 11,
+      "top_k": 5,
+      "equivalence_key": "3c98bcc55084041a1a68f443b12286802279d3da5a4b129db5b955134672102a",
+      "cached": true,
+      "query_sha256": "a814fdb83b05707f5bcd4cec064689c24c19f0c4e1676fc24d379423aee8c320",
+      "query": "Man Booker International Prize 2016 winner The Vegetarian Han Kang born Gwangju",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"man\" OR \"booker\" OR \"international\" OR \"prize\" OR \"2016\" OR \"winner\" OR \"the\" OR \"vegetarian\" OR \"han\" OR \"kang\" OR \"born\" OR \"gwangju\"",
+        "terms": [
+          "man",
+          "booker",
+          "international",
+          "prize",
+          "2016",
+          "winner",
+          "the",
+          "vegetarian",
+          "han",
+          "kang",
+          "born",
+          "gwangju"
+        ]
+      }
+    },
+    {
+      "round": 11,
+      "top_k": 5,
+      "equivalence_key": "1b04a9c82e2226c80b3586a71a7cacdc4eda1569e7d5003f4f158c5f7a4eb55a",
+      "cached": true,
+      "query_sha256": "2f35adf995c9c0ce2675a5b17ca3bfe95385e1a471d33ced6895c4ef5910aadf",
+      "query": "Han Kang birthplace born city",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"han\" OR \"kang\" OR \"birthplace\" OR \"born\" OR \"city\"",
+        "terms": [
+          "han",
+          "kang",
+          "birthplace",
+          "born",
+          "city"
+        ]
+      }
+    },
+    {
+      "round": 11,
+      "top_k": 5,
+      "equivalence_key": "a3e8491297818cd77f9543a46dca626bcefe423f01f9c7b227c02569d1e49472",
+      "cached": true,
+      "query_sha256": "59b25d240ffa97d8625008915ad9d6715d7c948e94dae6c9fdd4fbb31e0cd5d5",
+      "query": "The Vegetarian published 2007 Korea 2015 English translation",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"the\" OR \"vegetarian\" OR \"published\" OR \"2007\" OR \"korea\" OR \"2015\" OR \"english\" OR \"translation\"",
+        "terms": [
+          "the",
+          "vegetarian",
+          "published",
+          "2007",
+          "korea",
+          "2015",
+          "english",
+          "translation"
+        ]
+      }
+    },
+    {
+      "round": 11,
+      "top_k": 5,
+      "equivalence_key": "e338a141cc1f4dcace0a6ffacc6a62089e3abd32d8573f9307e20711959335d2",
+      "cached": true,
+      "query_sha256": "c2b70e196d9a15373cb92a97ba726753b07b3c772e7ab085be69eea9778ea480",
+      "query": "A Little Life 2015 Man Booker International Prize contender",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"a\" OR \"little\" OR \"life\" OR \"2015\" OR \"man\" OR \"booker\" OR \"international\" OR \"prize\" OR \"contender\"",
+        "terms": [
+          "a",
+          "little",
+          "life",
+          "2015",
+          "man",
+          "booker",
+          "international",
+          "prize",
+          "contender"
+        ]
+      }
+    },
+    {
+      "round": 11,
+      "top_k": 5,
+      "equivalence_key": "cbeecd6c902ace6f7f8a5fcb770942326ce78c9bcef6540c8dabc9c1a833fcdb",
+      "cached": true,
+      "query_sha256": "1b0179ceda41af849c3d80613985f15396a84299f9a7570da35b4047c4cbfa9d",
+      "query": "A Little Life Hanya Yanagihara shortlisted Man Booker International",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"a\" OR \"little\" OR \"life\" OR \"hanya\" OR \"yanagihara\" OR \"shortlisted\" OR \"man\" OR \"booker\" OR \"international\"",
+        "terms": [
+          "a",
+          "little",
+          "life",
+          "hanya",
+          "yanagihara",
+          "shortlisted",
+          "man",
+          "booker",
+          "international"
+        ]
+      }
+    },
+    {
+      "round": 11,
+      "top_k": 5,
+      "equivalence_key": "d5db017ce56769f7bdb35f0e33bfd77c3bdabbbae8ebe95ac7e76a570d039a4b",
+      "cached": true,
+      "query_sha256": "28de37e780f45db6a4242b6db2db944c36a8601775553a4ef0d4200e942ef550",
+      "query": "Hanya Yanagihara born Los Angeles",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"hanya\" OR \"yanagihara\" OR \"born\" OR \"los\" OR \"angeles\"",
+        "terms": [
+          "hanya",
+          "yanagihara",
+          "born",
+          "los",
+          "angeles"
+        ]
+      }
+    },
+    {
+      "round": 12,
+      "top_k": 5,
+      "equivalence_key": "3c98bcc55084041a1a68f443b12286802279d3da5a4b129db5b955134672102a",
+      "cached": true,
+      "query_sha256": "a814fdb83b05707f5bcd4cec064689c24c19f0c4e1676fc24d379423aee8c320",
+      "query": "Man Booker International Prize 2016 winner The Vegetarian Han Kang born Gwangju",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"man\" OR \"booker\" OR \"international\" OR \"prize\" OR \"2016\" OR \"winner\" OR \"the\" OR \"vegetarian\" OR \"han\" OR \"kang\" OR \"born\" OR \"gwangju\"",
+        "terms": [
+          "man",
+          "booker",
+          "international",
+          "prize",
+          "2016",
+          "winner",
+          "the",
+          "vegetarian",
+          "han",
+          "kang",
+          "born",
+          "gwangju"
+        ]
+      }
+    },
+    {
+      "round": 12,
+      "top_k": 5,
+      "equivalence_key": "1b04a9c82e2226c80b3586a71a7cacdc4eda1569e7d5003f4f158c5f7a4eb55a",
+      "cached": true,
+      "query_sha256": "2f35adf995c9c0ce2675a5b17ca3bfe95385e1a471d33ced6895c4ef5910aadf",
+      "query": "Han Kang birthplace born city",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"han\" OR \"kang\" OR \"birthplace\" OR \"born\" OR \"city\"",
+        "terms": [
+          "han",
+          "kang",
+          "birthplace",
+          "born",
+          "city"
+        ]
+      }
+    },
+    {
+      "round": 12,
+      "top_k": 5,
+      "equivalence_key": "a3e8491297818cd77f9543a46dca626bcefe423f01f9c7b227c02569d1e49472",
+      "cached": true,
+      "query_sha256": "59b25d240ffa97d8625008915ad9d6715d7c948e94dae6c9fdd4fbb31e0cd5d5",
+      "query": "The Vegetarian published 2007 Korea 2015 English translation",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"the\" OR \"vegetarian\" OR \"published\" OR \"2007\" OR \"korea\" OR \"2015\" OR \"english\" OR \"translation\"",
+        "terms": [
+          "the",
+          "vegetarian",
+          "published",
+          "2007",
+          "korea",
+          "2015",
+          "english",
+          "translation"
+        ]
+      }
+    },
+    {
+      "round": 12,
+      "top_k": 5,
+      "equivalence_key": "e338a141cc1f4dcace0a6ffacc6a62089e3abd32d8573f9307e20711959335d2",
+      "cached": true,
+      "query_sha256": "c2b70e196d9a15373cb92a97ba726753b07b3c772e7ab085be69eea9778ea480",
+      "query": "A Little Life 2015 Man Booker International Prize contender",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"a\" OR \"little\" OR \"life\" OR \"2015\" OR \"man\" OR \"booker\" OR \"international\" OR \"prize\" OR \"contender\"",
+        "terms": [
+          "a",
+          "little",
+          "life",
+          "2015",
+          "man",
+          "booker",
+          "international",
+          "prize",
+          "contender"
+        ]
+      }
+    },
+    {
+      "round": 12,
+      "top_k": 5,
+      "equivalence_key": "cbeecd6c902ace6f7f8a5fcb770942326ce78c9bcef6540c8dabc9c1a833fcdb",
+      "cached": true,
+      "query_sha256": "1b0179ceda41af849c3d80613985f15396a84299f9a7570da35b4047c4cbfa9d",
+      "query": "A Little Life Hanya Yanagihara shortlisted Man Booker International",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"a\" OR \"little\" OR \"life\" OR \"hanya\" OR \"yanagihara\" OR \"shortlisted\" OR \"man\" OR \"booker\" OR \"international\"",
+        "terms": [
+          "a",
+          "little",
+          "life",
+          "hanya",
+          "yanagihara",
+          "shortlisted",
+          "man",
+          "booker",
+          "international"
+        ]
+      }
+    },
+    {
+      "round": 12,
+      "top_k": 5,
+      "equivalence_key": "d5db017ce56769f7bdb35f0e33bfd77c3bdabbbae8ebe95ac7e76a570d039a4b",
+      "cached": true,
+      "query_sha256": "28de37e780f45db6a4242b6db2db944c36a8601775553a4ef0d4200e942ef550",
+      "query": "Hanya Yanagihara born Los Angeles",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"hanya\" OR \"yanagihara\" OR \"born\" OR \"los\" OR \"angeles\"",
+        "terms": [
+          "hanya",
+          "yanagihara",
+          "born",
+          "los",
+          "angeles"
+        ]
+      }
+    },
+    {
+      "round": 13,
+      "top_k": 5,
+      "equivalence_key": "3c98bcc55084041a1a68f443b12286802279d3da5a4b129db5b955134672102a",
+      "cached": true,
+      "query_sha256": "a814fdb83b05707f5bcd4cec064689c24c19f0c4e1676fc24d379423aee8c320",
+      "query": "Man Booker International Prize 2016 winner The Vegetarian Han Kang born Gwangju",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"man\" OR \"booker\" OR \"international\" OR \"prize\" OR \"2016\" OR \"winner\" OR \"the\" OR \"vegetarian\" OR \"han\" OR \"kang\" OR \"born\" OR \"gwangju\"",
+        "terms": [
+          "man",
+          "booker",
+          "international",
+          "prize",
+          "2016",
+          "winner",
+          "the",
+          "vegetarian",
+          "han",
+          "kang",
+          "born",
+          "gwangju"
+        ]
+      }
+    },
+    {
+      "round": 13,
+      "top_k": 5,
+      "equivalence_key": "1b04a9c82e2226c80b3586a71a7cacdc4eda1569e7d5003f4f158c5f7a4eb55a",
+      "cached": true,
+      "query_sha256": "2f35adf995c9c0ce2675a5b17ca3bfe95385e1a471d33ced6895c4ef5910aadf",
+      "query": "Han Kang birthplace born city",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"han\" OR \"kang\" OR \"birthplace\" OR \"born\" OR \"city\"",
+        "terms": [
+          "han",
+          "kang",
+          "birthplace",
+          "born",
+          "city"
+        ]
+      }
+    },
+    {
+      "round": 13,
+      "top_k": 5,
+      "equivalence_key": "a3e8491297818cd77f9543a46dca626bcefe423f01f9c7b227c02569d1e49472",
+      "cached": true,
+      "query_sha256": "59b25d240ffa97d8625008915ad9d6715d7c948e94dae6c9fdd4fbb31e0cd5d5",
+      "query": "The Vegetarian published 2007 Korea 2015 English translation",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"the\" OR \"vegetarian\" OR \"published\" OR \"2007\" OR \"korea\" OR \"2015\" OR \"english\" OR \"translation\"",
+        "terms": [
+          "the",
+          "vegetarian",
+          "published",
+          "2007",
+          "korea",
+          "2015",
+          "english",
+          "translation"
+        ]
+      }
+    },
+    {
+      "round": 13,
+      "top_k": 5,
+      "equivalence_key": "e338a141cc1f4dcace0a6ffacc6a62089e3abd32d8573f9307e20711959335d2",
+      "cached": true,
+      "query_sha256": "c2b70e196d9a15373cb92a97ba726753b07b3c772e7ab085be69eea9778ea480",
+      "query": "A Little Life 2015 Man Booker International Prize contender",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"a\" OR \"little\" OR \"life\" OR \"2015\" OR \"man\" OR \"booker\" OR \"international\" OR \"prize\" OR \"contender\"",
+        "terms": [
+          "a",
+          "little",
+          "life",
+          "2015",
+          "man",
+          "booker",
+          "international",
+          "prize",
+          "contender"
+        ]
+      }
+    },
+    {
+      "round": 13,
+      "top_k": 5,
+      "equivalence_key": "cbeecd6c902ace6f7f8a5fcb770942326ce78c9bcef6540c8dabc9c1a833fcdb",
+      "cached": true,
+      "query_sha256": "1b0179ceda41af849c3d80613985f15396a84299f9a7570da35b4047c4cbfa9d",
+      "query": "A Little Life Hanya Yanagihara shortlisted Man Booker International",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"a\" OR \"little\" OR \"life\" OR \"hanya\" OR \"yanagihara\" OR \"shortlisted\" OR \"man\" OR \"booker\" OR \"international\"",
+        "terms": [
+          "a",
+          "little",
+          "life",
+          "hanya",
+          "yanagihara",
+          "shortlisted",
+          "man",
+          "booker",
+          "international"
+        ]
+      }
+    },
+    {
+      "round": 13,
+      "top_k": 5,
+      "equivalence_key": "d5db017ce56769f7bdb35f0e33bfd77c3bdabbbae8ebe95ac7e76a570d039a4b",
+      "cached": true,
+      "query_sha256": "28de37e780f45db6a4242b6db2db944c36a8601775553a4ef0d4200e942ef550",
+      "query": "Hanya Yanagihara born Los Angeles",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"hanya\" OR \"yanagihara\" OR \"born\" OR \"los\" OR \"angeles\"",
+        "terms": [
+          "hanya",
+          "yanagihara",
+          "born",
+          "los",
+          "angeles"
+        ]
+      }
+    },
+    {
+      "round": 14,
+      "top_k": 5,
+      "equivalence_key": "3c98bcc55084041a1a68f443b12286802279d3da5a4b129db5b955134672102a",
+      "cached": true,
+      "query_sha256": "a814fdb83b05707f5bcd4cec064689c24c19f0c4e1676fc24d379423aee8c320",
+      "query": "Man Booker International Prize 2016 winner The Vegetarian Han Kang born Gwangju",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"man\" OR \"booker\" OR \"international\" OR \"prize\" OR \"2016\" OR \"winner\" OR \"the\" OR \"vegetarian\" OR \"han\" OR \"kang\" OR \"born\" OR \"gwangju\"",
+        "terms": [
+          "man",
+          "booker",
+          "international",
+          "prize",
+          "2016",
+          "winner",
+          "the",
+          "vegetarian",
+          "han",
+          "kang",
+          "born",
+          "gwangju"
+        ]
+      }
+    },
+    {
+      "round": 14,
+      "top_k": 5,
+      "equivalence_key": "1b04a9c82e2226c80b3586a71a7cacdc4eda1569e7d5003f4f158c5f7a4eb55a",
+      "cached": true,
+      "query_sha256": "2f35adf995c9c0ce2675a5b17ca3bfe95385e1a471d33ced6895c4ef5910aadf",
+      "query": "Han Kang birthplace born city",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"han\" OR \"kang\" OR \"birthplace\" OR \"born\" OR \"city\"",
+        "terms": [
+          "han",
+          "kang",
+          "birthplace",
+          "born",
+          "city"
+        ]
+      }
+    },
+    {
+      "round": 14,
+      "top_k": 5,
+      "equivalence_key": "a3e8491297818cd77f9543a46dca626bcefe423f01f9c7b227c02569d1e49472",
+      "cached": true,
+      "query_sha256": "59b25d240ffa97d8625008915ad9d6715d7c948e94dae6c9fdd4fbb31e0cd5d5",
+      "query": "The Vegetarian published 2007 Korea 2015 English translation",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"the\" OR \"vegetarian\" OR \"published\" OR \"2007\" OR \"korea\" OR \"2015\" OR \"english\" OR \"translation\"",
+        "terms": [
+          "the",
+          "vegetarian",
+          "published",
+          "2007",
+          "korea",
+          "2015",
+          "english",
+          "translation"
+        ]
+      }
+    },
+    {
+      "round": 14,
+      "top_k": 5,
+      "equivalence_key": "e338a141cc1f4dcace0a6ffacc6a62089e3abd32d8573f9307e20711959335d2",
+      "cached": true,
+      "query_sha256": "c2b70e196d9a15373cb92a97ba726753b07b3c772e7ab085be69eea9778ea480",
+      "query": "A Little Life 2015 Man Booker International Prize contender",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"a\" OR \"little\" OR \"life\" OR \"2015\" OR \"man\" OR \"booker\" OR \"international\" OR \"prize\" OR \"contender\"",
+        "terms": [
+          "a",
+          "little",
+          "life",
+          "2015",
+          "man",
+          "booker",
+          "international",
+          "prize",
+          "contender"
+        ]
+      }
+    },
+    {
+      "round": 14,
+      "top_k": 5,
+      "equivalence_key": "cbeecd6c902ace6f7f8a5fcb770942326ce78c9bcef6540c8dabc9c1a833fcdb",
+      "cached": true,
+      "query_sha256": "1b0179ceda41af849c3d80613985f15396a84299f9a7570da35b4047c4cbfa9d",
+      "query": "A Little Life Hanya Yanagihara shortlisted Man Booker International",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"a\" OR \"little\" OR \"life\" OR \"hanya\" OR \"yanagihara\" OR \"shortlisted\" OR \"man\" OR \"booker\" OR \"international\"",
+        "terms": [
+          "a",
+          "little",
+          "life",
+          "hanya",
+          "yanagihara",
+          "shortlisted",
+          "man",
+          "booker",
+          "international"
+        ]
+      }
+    },
+    {
+      "round": 14,
+      "top_k": 5,
+      "equivalence_key": "d5db017ce56769f7bdb35f0e33bfd77c3bdabbbae8ebe95ac7e76a570d039a4b",
+      "cached": true,
+      "query_sha256": "28de37e780f45db6a4242b6db2db944c36a8601775553a4ef0d4200e942ef550",
+      "query": "Hanya Yanagihara born Los Angeles",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"hanya\" OR \"yanagihara\" OR \"born\" OR \"los\" OR \"angeles\"",
+        "terms": [
+          "hanya",
+          "yanagihara",
+          "born",
+          "los",
+          "angeles"
+        ]
+      }
+    },
+    {
+      "round": 15,
+      "top_k": 5,
+      "equivalence_key": "3c98bcc55084041a1a68f443b12286802279d3da5a4b129db5b955134672102a",
+      "cached": true,
+      "query_sha256": "a814fdb83b05707f5bcd4cec064689c24c19f0c4e1676fc24d379423aee8c320",
+      "query": "Man Booker International Prize 2016 winner The Vegetarian Han Kang born Gwangju",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"man\" OR \"booker\" OR \"international\" OR \"prize\" OR \"2016\" OR \"winner\" OR \"the\" OR \"vegetarian\" OR \"han\" OR \"kang\" OR \"born\" OR \"gwangju\"",
+        "terms": [
+          "man",
+          "booker",
+          "international",
+          "prize",
+          "2016",
+          "winner",
+          "the",
+          "vegetarian",
+          "han",
+          "kang",
+          "born",
+          "gwangju"
+        ]
+      }
+    },
+    {
+      "round": 15,
+      "top_k": 5,
+      "equivalence_key": "1b04a9c82e2226c80b3586a71a7cacdc4eda1569e7d5003f4f158c5f7a4eb55a",
+      "cached": true,
+      "query_sha256": "2f35adf995c9c0ce2675a5b17ca3bfe95385e1a471d33ced6895c4ef5910aadf",
+      "query": "Han Kang birthplace born city",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"han\" OR \"kang\" OR \"birthplace\" OR \"born\" OR \"city\"",
+        "terms": [
+          "han",
+          "kang",
+          "birthplace",
+          "born",
+          "city"
+        ]
+      }
+    },
+    {
+      "round": 15,
+      "top_k": 5,
+      "equivalence_key": "a3e8491297818cd77f9543a46dca626bcefe423f01f9c7b227c02569d1e49472",
+      "cached": true,
+      "query_sha256": "59b25d240ffa97d8625008915ad9d6715d7c948e94dae6c9fdd4fbb31e0cd5d5",
+      "query": "The Vegetarian published 2007 Korea 2015 English translation",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"the\" OR \"vegetarian\" OR \"published\" OR \"2007\" OR \"korea\" OR \"2015\" OR \"english\" OR \"translation\"",
+        "terms": [
+          "the",
+          "vegetarian",
+          "published",
+          "2007",
+          "korea",
+          "2015",
+          "english",
+          "translation"
+        ]
+      }
+    },
+    {
+      "round": 15,
+      "top_k": 5,
+      "equivalence_key": "e338a141cc1f4dcace0a6ffacc6a62089e3abd32d8573f9307e20711959335d2",
+      "cached": true,
+      "query_sha256": "c2b70e196d9a15373cb92a97ba726753b07b3c772e7ab085be69eea9778ea480",
+      "query": "A Little Life 2015 Man Booker International Prize contender",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"a\" OR \"little\" OR \"life\" OR \"2015\" OR \"man\" OR \"booker\" OR \"international\" OR \"prize\" OR \"contender\"",
+        "terms": [
+          "a",
+          "little",
+          "life",
+          "2015",
+          "man",
+          "booker",
+          "international",
+          "prize",
+          "contender"
+        ]
+      }
+    },
+    {
+      "round": 15,
+      "top_k": 5,
+      "equivalence_key": "cbeecd6c902ace6f7f8a5fcb770942326ce78c9bcef6540c8dabc9c1a833fcdb",
+      "cached": true,
+      "query_sha256": "1b0179ceda41af849c3d80613985f15396a84299f9a7570da35b4047c4cbfa9d",
+      "query": "A Little Life Hanya Yanagihara shortlisted Man Booker International",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"a\" OR \"little\" OR \"life\" OR \"hanya\" OR \"yanagihara\" OR \"shortlisted\" OR \"man\" OR \"booker\" OR \"international\"",
+        "terms": [
+          "a",
+          "little",
+          "life",
+          "hanya",
+          "yanagihara",
+          "shortlisted",
+          "man",
+          "booker",
+          "international"
+        ]
+      }
+    },
+    {
+      "round": 15,
+      "top_k": 5,
+      "equivalence_key": "d5db017ce56769f7bdb35f0e33bfd77c3bdabbbae8ebe95ac7e76a570d039a4b",
+      "cached": true,
+      "query_sha256": "28de37e780f45db6a4242b6db2db944c36a8601775553a4ef0d4200e942ef550",
+      "query": "Hanya Yanagihara born Los Angeles",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"hanya\" OR \"yanagihara\" OR \"born\" OR \"los\" OR \"angeles\"",
+        "terms": [
+          "hanya",
+          "yanagihara",
+          "born",
+          "los",
+          "angeles"
+        ]
+      }
+    }
+  ],
+  "equivalent_query_repeats": 60,
+  "views": [
+    {
+      "round": 1,
+      "compacted": false,
+      "visible_evidence": [],
+      "shelf": [],
+      "shelf_evicted": []
+    },
+    {
+      "round": 2,
+      "compacted": false,
+      "visible_evidence": [],
+      "shelf": [],
+      "shelf_evicted": []
+    },
+    {
+      "round": 3,
+      "compacted": false,
+      "visible_evidence": [],
+      "shelf": [],
+      "shelf_evicted": []
+    },
+    {
+      "round": 4,
+      "compacted": false,
+      "visible_evidence": [],
+      "shelf": [],
+      "shelf_evicted": []
+    },
+    {
+      "round": 5,
+      "compacted": false,
+      "visible_evidence": [],
+      "shelf": [],
+      "shelf_evicted": []
+    },
+    {
+      "round": 6,
+      "compacted": true,
+      "visible_evidence": [],
+      "shelf": [],
+      "shelf_evicted": []
+    },
+    {
+      "round": 7,
+      "compacted": true,
+      "visible_evidence": [],
+      "shelf": [],
+      "shelf_evicted": []
+    },
+    {
+      "round": 8,
+      "compacted": true,
+      "visible_evidence": [],
+      "shelf": [],
+      "shelf_evicted": []
+    },
+    {
+      "round": 9,
+      "compacted": true,
+      "visible_evidence": [],
+      "shelf": [],
+      "shelf_evicted": []
+    },
+    {
+      "round": 10,
+      "compacted": true,
+      "visible_evidence": [],
+      "shelf": [],
+      "shelf_evicted": []
+    },
+    {
+      "round": 11,
+      "compacted": true,
+      "visible_evidence": [],
+      "shelf": [],
+      "shelf_evicted": []
+    },
+    {
+      "round": 12,
+      "compacted": true,
+      "visible_evidence": [],
+      "shelf": [],
+      "shelf_evicted": []
+    },
+    {
+      "round": 13,
+      "compacted": true,
+      "visible_evidence": [],
+      "shelf": [],
+      "shelf_evicted": []
+    },
+    {
+      "round": 14,
+      "compacted": true,
+      "visible_evidence": [],
+      "shelf": [],
+      "shelf_evicted": []
+    },
+    {
+      "round": 15,
+      "compacted": true,
+      "visible_evidence": [],
+      "shelf": [],
+      "shelf_evicted": []
+    },
+    {
+      "round": 16,
+      "compacted": true,
+      "visible_evidence": [],
+      "shelf": [],
+      "shelf_evicted": []
+    }
+  ],
+  "delivered_refs": [],
+  "submitted_refs": [],
+  "text_included": true,
+  "limitations": [
+    "Equivalence is compiler equality, not semantic identity or wasted-search proof",
+    "Raw-window visibility/selection is not entailment or complete evidence coverage",
+    "No live q26 replay or independent answer scoring is performed"
+  ]
+}

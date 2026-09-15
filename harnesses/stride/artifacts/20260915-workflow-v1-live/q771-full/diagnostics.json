@@ -1,0 +1,138 @@
+{
+  "protocol": "stride-search-3",
+  "head": "2177897b9ae87e6baad24b46e5f86d7eb329bc0ae830f4f51a9b7c59a69fcbfb",
+  "outcome": "submitted",
+  "formal_correct": null,
+  "model_attempts": 4,
+  "backend_attempts": 5,
+  "queries": [
+    {
+      "round": 1,
+      "top_k": 5,
+      "equivalence_key": "2a2b952aa0a796deaaaf68b413aca1f55f79117c2b820420e744775a7ef6fa7d",
+      "cached": false,
+      "query_sha256": "123d18f7c1bdfc86b1eef0d45bac0d4432a27fd326a6da7c8bd6734ef7150b47",
+      "query": "hat shop 1930s scarves renamed initials siblings surname",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"hat\" OR \"shop\" OR \"1930s\" OR \"scarves\" OR \"renamed\" OR \"initials\" OR \"siblings\" OR \"surname\"",
+        "terms": [
+          "hat",
+          "shop",
+          "1930s",
+          "scarves",
+          "renamed",
+          "initials",
+          "siblings",
+          "surname"
+        ]
+      }
+    },
+    {
+      "round": 1,
+      "top_k": 5,
+      "equivalence_key": "25c93b34621b169b8811ae08edca8f261c6e6ac140e6ecbdbd8fbd419d842b8f",
+      "cached": false,
+      "query_sha256": "e6aff1d2b79e177e2bf91c5f0addf072da2ea6d22c11bd61eb6eddccb38b9c90",
+      "query": "hat shop opened 1930s later scarves branches 1970s new brand 1980s child younger audience",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"hat\" OR \"shop\" OR \"opened\" OR \"1930s\" OR \"later\" OR \"scarves\" OR \"branches\" OR \"1970s\" OR \"new\" OR \"brand\" OR \"1980s\" OR \"child\" OR \"younger\" OR \"audience\"",
+        "terms": [
+          "hat",
+          "shop",
+          "opened",
+          "1930s",
+          "later",
+          "scarves",
+          "branches",
+          "1970s",
+          "new",
+          "brand",
+          "1980s",
+          "child",
+          "younger",
+          "audience"
+        ]
+      }
+    },
+    {
+      "round": 1,
+      "top_k": 5,
+      "equivalence_key": "68e91050dce107cbfe35674c7dc8c8389cc3d24cd3c3ba72bd44724dead7216b",
+      "cached": false,
+      "query_sha256": "19b913a2bda471ea914ab50d3801f8940f67761256cb30ebb2ab9888c2be505d",
+      "query": "family hat shop railway father wooden house tower 1340s city",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"family\" OR \"hat\" OR \"shop\" OR \"railway\" OR \"father\" OR \"wooden\" OR \"house\" OR \"tower\" OR \"1340s\" OR \"city\"",
+        "terms": [
+          "family",
+          "hat",
+          "shop",
+          "railway",
+          "father",
+          "wooden",
+          "house",
+          "tower",
+          "1340s",
+          "city"
+        ]
+      }
+    }
+  ],
+  "equivalent_query_repeats": 0,
+  "views": [
+    {
+      "round": 1,
+      "compacted": false,
+      "visible_evidence": [],
+      "shelf": [],
+      "shelf_evicted": []
+    },
+    {
+      "round": 2,
+      "compacted": false,
+      "visible_evidence": [],
+      "shelf": [],
+      "shelf_evicted": []
+    },
+    {
+      "round": 3,
+      "compacted": false,
+      "visible_evidence": [
+        "e1",
+        "e2"
+      ],
+      "shelf": [],
+      "shelf_evicted": []
+    },
+    {
+      "round": 4,
+      "compacted": false,
+      "visible_evidence": [
+        "e1",
+        "e2",
+        "e3"
+      ],
+      "shelf": [],
+      "shelf_evicted": []
+    }
+  ],
+  "delivered_refs": [
+    "e1",
+    "e2",
+    "e3"
+  ],
+  "submitted_refs": [
+    "e1",
+    "e2",
+    "e3"
+  ],
+  "text_included": true,
+  "limitations": [
+    "Equivalence is compiler equality, not semantic identity or wasted-search proof",
+    "Raw-window visibility/selection is not entailment or complete evidence coverage",
+    "No live q26 replay or independent answer scoring is performed"
+  ]
+}

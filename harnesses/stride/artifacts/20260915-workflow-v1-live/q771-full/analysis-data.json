@@ -1,0 +1,1082 @@
+{
+  "rounds": [
+    {
+      "round": 1,
+      "utc": "2026-09-15T08:26:50.647092+00:00",
+      "final": false,
+      "compacted": false,
+      "visible": [],
+      "shelf_restored": [],
+      "shelf_evicted": [],
+      "wire_bytes": 16349,
+      "usage": {
+        "cache_read_tokens": 3200,
+        "input_tokens": 3914,
+        "output_tokens": 152
+      },
+      "http": {
+        "sequence": 1,
+        "utc_start": "2026-09-15T08:26:50.783294+00:00",
+        "http_status": 200,
+        "requested_model": "EB-GLM-5.2",
+        "returned_model": "glm-5.2",
+        "finish_reason": "tool_calls",
+        "usage": {
+          "prompt_tokens": 3914,
+          "completion_tokens": 152,
+          "reasoning_tokens": 0,
+          "total_tokens": 4066,
+          "cached_tokens": 3200,
+          "prompt_tokens_details": {
+            "cached_tokens": 3200
+          },
+          "prompt_cost": 0.0,
+          "completion_cost": 0.0,
+          "cache_cost": 0.0
+        },
+        "input_tokens": 3914,
+        "output_tokens": 152,
+        "cache_read_tokens": 3200,
+        "cache_write_tokens": null,
+        "request_bytes": 16349,
+        "response_bytes": 1152,
+        "request_body_sha256": "a61deeac7f2debefea800747f21cf59eb495c83b3fe63081feaef2c7a704fe3b",
+        "sanitized_response": false,
+        "ledger_id": 633,
+        "utc_end": "2026-09-15T08:26:53.851832+00:00",
+        "latency_seconds": 3.0293411999882665,
+        "response_representation": "original response body bytes",
+        "saved_response_body_sha256": "f575f7cf836e6d1905003e5b3b1dc3f0c8b15ceb9a93bebc1d8056ab971a4544"
+      }
+    },
+    {
+      "round": 2,
+      "utc": "2026-09-15T08:26:56.952626+00:00",
+      "final": false,
+      "compacted": false,
+      "visible": [],
+      "shelf_restored": [],
+      "shelf_evicted": [],
+      "wire_bytes": 30085,
+      "usage": {
+        "cache_read_tokens": 3456,
+        "input_tokens": 7127,
+        "output_tokens": 98
+      },
+      "http": {
+        "sequence": 2,
+        "utc_start": "2026-09-15T08:26:57.146984+00:00",
+        "http_status": 200,
+        "requested_model": "EB-GLM-5.2",
+        "returned_model": "glm-5.2",
+        "finish_reason": "tool_calls",
+        "usage": {
+          "prompt_tokens": 7127,
+          "completion_tokens": 98,
+          "reasoning_tokens": 0,
+          "total_tokens": 7225,
+          "cached_tokens": 3456,
+          "prompt_tokens_details": {
+            "cached_tokens": 3456
+          },
+          "prompt_cost": 0.0,
+          "completion_cost": 0.0,
+          "cache_cost": 0.0
+        },
+        "input_tokens": 7127,
+        "output_tokens": 98,
+        "cache_read_tokens": 3456,
+        "cache_write_tokens": null,
+        "request_bytes": 30085,
+        "response_bytes": 1016,
+        "request_body_sha256": "81b05c2f398865d08344e2dc4e928d941528264c6aa55cdfb695caf644a37c3f",
+        "sanitized_response": false,
+        "ledger_id": 634,
+        "utc_end": "2026-09-15T08:26:59.766255+00:00",
+        "latency_seconds": 2.601583900017431,
+        "response_representation": "original response body bytes",
+        "saved_response_body_sha256": "b8d73e733d836dbf0c60c1018d5fe7cf0d0cb6b3f76aa7942d70cec87adcc1b5"
+      }
+    },
+    {
+      "round": 3,
+      "utc": "2026-09-15T08:27:00.123760+00:00",
+      "final": false,
+      "compacted": false,
+      "visible": [
+        "e1",
+        "e2"
+      ],
+      "shelf_restored": [],
+      "shelf_evicted": [],
+      "wire_bytes": 37874,
+      "usage": {
+        "cache_read_tokens": 6016,
+        "input_tokens": 9093,
+        "output_tokens": 136
+      },
+      "http": {
+        "sequence": 3,
+        "utc_start": "2026-09-15T08:27:00.283513+00:00",
+        "http_status": 200,
+        "requested_model": "EB-GLM-5.2",
+        "returned_model": "glm-5.2",
+        "finish_reason": "tool_calls",
+        "usage": {
+          "prompt_tokens": 9093,
+          "completion_tokens": 136,
+          "reasoning_tokens": 0,
+          "total_tokens": 9229,
+          "cached_tokens": 6016,
+          "prompt_tokens_details": {
+            "cached_tokens": 6016
+          },
+          "prompt_cost": 0.0,
+          "completion_cost": 0.0,
+          "cache_cost": 0.0
+        },
+        "input_tokens": 9093,
+        "output_tokens": 136,
+        "cache_read_tokens": 6016,
+        "cache_write_tokens": null,
+        "request_bytes": 37874,
+        "response_bytes": 1050,
+        "request_body_sha256": "37c77bc53d3954dea95c3d4e009a6145d7622bb98ac5fc3b8612867081bdbe47",
+        "sanitized_response": false,
+        "ledger_id": 635,
+        "utc_end": "2026-09-15T08:27:03.585115+00:00",
+        "latency_seconds": 3.272350199986249,
+        "response_representation": "original response body bytes",
+        "saved_response_body_sha256": "0c18ef429c7eac27aed47d0213c03ce396403c4df092bc9492b28f8bd6693fb1"
+      }
+    },
+    {
+      "round": 4,
+      "utc": "2026-09-15T08:27:03.711628+00:00",
+      "final": true,
+      "compacted": false,
+      "visible": [
+        "e1",
+        "e2",
+        "e3"
+      ],
+      "shelf_restored": [],
+      "shelf_evicted": [],
+      "wire_bytes": 32839,
+      "usage": {
+        "cache_read_tokens": 896,
+        "input_tokens": 7807,
+        "output_tokens": 233
+      },
+      "http": {
+        "sequence": 4,
+        "utc_start": "2026-09-15T08:27:03.784344+00:00",
+        "http_status": 200,
+        "requested_model": "EB-GLM-5.2",
+        "returned_model": "glm-5.2",
+        "finish_reason": "tool_calls",
+        "usage": {
+          "prompt_tokens": 7807,
+          "completion_tokens": 233,
+          "reasoning_tokens": 0,
+          "total_tokens": 8040,
+          "cached_tokens": 896,
+          "prompt_tokens_details": {
+            "cached_tokens": 896
+          },
+          "prompt_cost": 0.0,
+          "completion_cost": 0.0,
+          "cache_cost": 0.0
+        },
+        "input_tokens": 7807,
+        "output_tokens": 233,
+        "cache_read_tokens": 896,
+        "cache_write_tokens": null,
+        "request_bytes": 32839,
+        "response_bytes": 1396,
+        "request_body_sha256": "8811a93c32444c8c80ba4134bed965bba4a59a0fb5045092626d1ef6ed00094c",
+        "sanitized_response": false,
+        "ledger_id": 636,
+        "utc_end": "2026-09-15T08:27:10.596253+00:00",
+        "latency_seconds": 6.793998600012856,
+        "response_representation": "original response body bytes",
+        "saved_response_body_sha256": "ccd328441525dc0e78e915152c48814175000d555d202b41342ad8e598b46522"
+      }
+    }
+  ],
+  "actions": [
+    {
+      "arguments": "{\"queries\": [\"hat shop 1930s scarves renamed initials siblings surname\", \"hat shop opened 1930s later scarves branches 1970s new brand 1980s child younger audience\", \"family hat shop railway father wooden house tower 1340s city\"]}",
+      "executed": true,
+      "result": {
+        "action_slot_charged": true,
+        "executed": true,
+        "ok": true,
+        "results": [
+          {
+            "cached": false,
+            "hits": [
+              {
+                "kind": "navigation_not_evidence",
+                "navigation_seen": false,
+                "previously_received": false,
+                "raw_ranges_delivered": [],
+                "read_action": {
+                  "ref": "d1"
+                },
+                "ref": "d1",
+                "snippet": " ... Swept along by the dress and headgear reform, in 1934 he opened a tiny shop called 'Şen Şapka' (Happy Hat) in Sultanhamam near Mahmutpaşa. \"If it hadn't been for the dress and hat reform,\" he would say all his life, \"there could have been no Happy Hat ... ",
+                "title": "https://necessities123.wordpress.com/2014/11/17/vitali-hakko-the-man-behind-the-legend-named-vakko/"
+              },
+              {
+                "kind": "navigation_not_evidence",
+                "navigation_seen": false,
+                "previously_received": false,
+                "raw_ranges_delivered": [],
+                "read_action": {
+                  "ref": "d2"
+                },
+                "ref": "d2",
+                "snippet": " ... There she met millionaire Etienne Balsan, where she no doubt found the money to open up her own hat shop in 1910. They weren't dating at that time, however. The shop quickly failed, but after starting an affair with Balsan's former best friend, Arthur Capel (also ... ",
+                "title": "https://www.mentalfloss.com/article/21572/real-people-behind-10-fashion-houses"
+              },
+              {
+                "kind": "navigation_not_evidence",
+                "navigation_seen": false,
+                "previously_received": false,
+                "raw_ranges_delivered": [],
+                "read_action": {
+                  "ref": "d3"
+                },
+                "ref": "d3",
+                "snippet": " ... The scarves were an instant hit with Hermès' clientele.\n\nThe Hermès silk scarf quickly became a cornerstone of success. Initially embraced as part of the quintessential French woman's wardrobe, these scarves soon gained international acclaim, thanks in large part to an unexpected ambassador: Queen Elizabeth II of ... ",
+                "title": "https://www.screwdowncrown.com/p/hermes-luxury-brand-history-birkin-kelly"
+              },
+              {
+                "kind": "navigation_not_evidence",
+                "navigation_seen": false,
+                "previously_received": false,
+                "raw_ranges_delivered": [],
+                "read_action": {
+                  "ref": "d4"
+                },
+                "ref": "d4",
+                "snippet": " ... 40 \n\nStetson made an unusually large hat from felt he made from hides collected on the trip and wore the hat for the remainder of the expedition. Although initially worn as a joke, Stetson soon grew fond of the hat for its ability to protect him from the ... ",
+                "title": "https://en.wikipedia.org/wiki/Stetson"
+              },
+              {
+                "kind": "navigation_not_evidence",
+                "navigation_seen": false,
+                "previously_received": false,
+                "raw_ranges_delivered": [],
+                "read_action": {
+                  "ref": "d5"
+                },
+                "ref": "d5",
+                "snippet": " ... If you too have studied them I expect you've noticed how Evelyn has 'doctored' the neighbouring shops, removing E.Bennett (a tailor's shop)at No.89 and making G.E.Onslow (then actually a butcher's)into an empty shop premises, all in order to concentrate ... ",
+                "title": "https://evelyn-dunbar.blogspot.com/2012/11/the-queue-at-fish-shop-1942-45.html"
+              }
+            ],
+            "next_step": "Inspect navigation; read a relevant page or change the locating clue.",
+            "observation": {
+              "first_delivered_source_round": null,
+              "prior_deliveries": 0,
+              "query_key": "29520d81c959ef71ca83950f7c209e12d0f99e1902bd271d36b15b95a8548b66",
+              "replay_requested": false,
+              "result_fingerprint": "1cceebca5b1926c6af83db797fcaac0a94246b5d812e9e15bd24f07ee7eab304",
+              "semantic_progress": "not_measured"
+            },
+            "query": "hat shop 1930s scarves renamed initials siblings surname",
+            "view": "full"
+          },
+          {
+            "cached": false,
+            "hits": [
+              {
+                "kind": "navigation_not_evidence",
+                "navigation_seen": false,
+                "previously_received": false,
+                "raw_ranges_delivered": [],
+                "read_action": {
+                  "ref": "d3"
+                },
+                "ref": "d3",
+                "snippet": " ... The new leadership recognised the immense potential of the Chinese market but had to find ways to grow without diluting the brand's exclusivity.\n\nThey adopted a strategy of carefully controlled expansion, opening new stores in key locations and investing in training local staff to provide the signature ... ",
+                "title": "https://www.screwdowncrown.com/p/hermes-luxury-brand-history-birkin-kelly"
+              },
+              {
+                "kind": "navigation_not_evidence",
+                "navigation_seen": false,
+                "previously_received": false,
+                "raw_ranges_delivered": [],
+                "read_action": {
+                  "ref": "d4"
+                },
+                "ref": "d4",
+                "snippet": " ... Diversification\n\nIn the 1980s, Stetson began to diversify, releasing the first Stetson cologne in 1981 and Lady Stetson in 1986. Luggage, handbags, umbrellas, and scarves also carried the Stetson mark. Currently, the brand carries western hats, fashion hats, fragrances, eyewear, apparel, footwear, belts, accessories, and bourbon. Stetson is ... ",
+                "title": "https://en.wikipedia.org/wiki/Stetson"
+              },
+              {
+                "kind": "navigation_not_evidence",
+                "navigation_seen": false,
+                "previously_received": false,
+                "raw_ranges_delivered": [],
+                "read_action": {
+                  "ref": "d6"
+                },
+                "ref": "d6",
+                "snippet": " ... The company opens its first watch factory, La Montre Hermès SA, in Bienne, Switzerland.\n\nFollowing a decline in sales due to the company's dusty image in the 1970s, Dumas rejuvenates the collections, brings new designers into the company, develops modern advertising campaigns to attract new audiences, and ... ",
+                "title": "https://wunderlabel.com/lab/fashion-company-histories/hermes/"
+              },
+              {
+                "kind": "navigation_not_evidence",
+                "navigation_seen": false,
+                "previously_received": false,
+                "raw_ranges_delivered": [],
+                "read_action": {
+                  "ref": "d7"
+                },
+                "ref": "d7",
+                "snippet": " ... The later years of the decade saw a large-scale revival of clothing designs primarily from the 1960s, 1970s, and 1980s.\n\nGeneral trends\n\nThe rise of fast fashion\n\nThe early to mid-2000s saw a rise in the consumption of fast fashion: affordable off-the-peg high street ... ",
+                "title": "https://en.wikipedia.org/wiki/2000s_in_fashion"
+              },
+              {
+                "kind": "navigation_not_evidence",
+                "navigation_seen": false,
+                "previously_received": false,
+                "raw_ranges_delivered": [],
+                "read_action": {
+                  "ref": "d8"
+                },
+                "ref": "d8",
+                "snippet": " ... Six years later, in 1979, the third Vakko store opened in İzmir. There was an increase in the popularity of the Vakko brand with advertising campaigns and fashion shows carried out throughout Turkey.\n\nIn September 1979 Vakko opened up its first shop outside Turkey, in Old Bond Street ... ",
+                "title": "https://en.wikipedia.org/wiki/Vakko"
+              }
+            ],
+            "next_step": "Inspect navigation; read a relevant page or change the locating clue.",
+            "observation": {
+              "first_delivered_source_round": null,
+              "prior_deliveries": 0,
+              "query_key": "88f05beb69189a18e4c3893cd93300ddaf3830357ed867e7dad26aab759586ab",
+              "replay_requested": false,
+              "result_fingerprint": "8b3865727228c580cb27a570c797ce1ac24906b158f92f30cd7c66813f325c01",
+              "semantic_progress": "not_measured"
+            },
+            "query": "hat shop opened 1930s later scarves branches 1970s new brand 1980s child younger audience",
+            "view": "full"
+          },
+          {
+            "cached": false,
+            "hits": [
+              {
+                "kind": "navigation_not_evidence",
+                "navigation_seen": false,
+                "previously_received": false,
+                "raw_ranges_delivered": [],
+                "read_action": {
+                  "ref": "d9"
+                },
+                "ref": "d9",
+                "snippet": " ... The Illinois Central Railroad Water Tower and Pump House are symbols of a bygone era. The wooden tower and the pump house were built in 1885.\n\nStill in use today, the Havana Water Tower was Havana, Illinois' only water supply until 1962. That is an impressive feat for ... ",
+                "title": "https://pttg.com/blogs/historic-water-towers.php"
+              },
+              {
+                "kind": "navigation_not_evidence",
+                "navigation_seen": false,
+                "previously_received": false,
+                "raw_ranges_delivered": [],
+                "read_action": {
+                  "ref": "d10"
+                },
+                "ref": "d10",
+                "snippet": " ... Some residences are located inside the towers, and others are in new buildings attached to them. The upper floors are devoted to housing units the middle floors to offices, and the ground floors to entertainment and shopping malls. with sky bridges connecting the shopping mall levels. Each tower ... ",
+                "title": "https://en.wikipedia.org/wiki/Contemporary_architecture"
+              },
+              {
+                "kind": "navigation_not_evidence",
+                "navigation_seen": false,
+                "previously_received": false,
+                "raw_ranges_delivered": [],
+                "read_action": {
+                  "ref": "d11"
+                },
+                "ref": "d11",
+                "snippet": " ... export product, especially in sealing wooden boats.\n\nThe traditional timber house in Finland was generally of two types: \ni. Eastern Finland, influenced by Russian traditions. For example, in the Pertinotsa house (now in the Seurasaari Open Air Museum in Helsinki) the family's dwelling rooms are on the ... ",
+                "title": "https://en.wikipedia.org/wiki/Architecture_of_Finland"
+              },
+              {
+                "kind": "navigation_not_evidence",
+                "navigation_seen": false,
+                "previously_received": false,
+                "raw_ranges_delivered": [],
+                "read_action": {
+                  "ref": "d12"
+                },
+                "ref": "d12",
+                "snippet": " ... Edison's father built the main laboratory building on the block south of Christie Street between Middlesex and Woodbridge (now Tower) Avenues. Edison also built other ancillary buildings including the glass house, a carpenters' shop, a carbon shed, and a blacksmith shop. By the Spring of 1876, Edison ... ",
+                "title": "https://www.menloparkmuseum.org/history"
+              },
+              {
+                "kind": "navigation_not_evidence",
+                "navigation_seen": false,
+                "previously_received": false,
+                "raw_ranges_delivered": [],
+                "read_action": {
+                  "ref": "d13"
+                },
+                "ref": "d13",
+                "snippet": " ... Another prominent shopping centre called Alexandrium lies in the east of Rotterdam. It includes a large kitchen and furniture centre.\n\nEducation\n\nRotterdam has one major university, the Erasmus University Rotterdam (EUR), named after one of the city's famous former inhabitants, Desiderius Erasmus. The Woudestein campus houses (among ... ",
+                "title": "https://en.wikipedia.org/wiki/Rotterdam"
+              }
+            ],
+            "next_step": "Inspect navigation; read a relevant page or change the locating clue.",
+            "observation": {
+              "first_delivered_source_round": null,
+              "prior_deliveries": 0,
+              "query_key": "24947adc0a524a32c60ec96ede9c864d47fcdf78e5a1f16d18982fef7366a42d",
+              "replay_requested": false,
+              "result_fingerprint": "442d017fd4b09a75d9602aa96e5ae5dd9d004d0571ee8ad186026418f027a5f2",
+              "semantic_progress": "not_measured"
+            },
+            "query": "family hat shop railway father wooden house tower 1340s city",
+            "view": "full"
+          }
+        ]
+      },
+      "round": 1,
+      "tool": "search",
+      "tool_call_id": "call_49d96808e9804a4f9216f604",
+      "seq": 30,
+      "utc": "2026-09-15T08:26:56.893885+00:00",
+      "next_request": 2,
+      "next_input_receipt": true,
+      "action_commit": "NOT_A_SEPARATE_STRIDE_EVENT; action_result and round_end are recorded",
+      "receipt_not_required_after_terminal": false
+    },
+    {
+      "arguments": "{\"ref\": \"d1\"}",
+      "executed": true,
+      "result": {
+        "action_slot_charged": true,
+        "evidence": {
+          "document": "d1",
+          "document_chars": 9095,
+          "end": 3000,
+          "kind": "raw_evidence",
+          "ref": "e1",
+          "sha256": "521deb8f6549e7ea288326ea13a34d4635283fc59820929b6ad3b4c3edade321",
+          "snapshot": "446eabd6c86b9aad83f468e7eb034d96105d6e38bc9d97c923416d3ce089e105",
+          "start": 0,
+          "text": "---\ntitle: Vitali Hakko, the man behind the legend named Vakko\ndate: 2014-11-17\n---\nVitali Hakko, the man behind the legend named Vakko\n\nSeven years ago, when Vitali Hakko dies, Skylife – Turkish Airlines inflight magazine published his lifetime story… There are some interesting parts from this text.\n\nIt was 1913 and the world was on the brink of a great war when a boy was born in a wooden mansion in seven-hilled Istanbul's Yedikule district along the shores of the Marmara Sea. His father worked for the railroad, his mother was a housewife preoccupied with her children. The Hakko family named their latest addition 'Vitali', or 'life'. Little Vitali got his basic education at a school run by an order of French Freres in the nearby Istanbul district of Kumkapı.\nBut he was only able to attend for six years when his father lost his job. When his father took up carpentry, little Vitali became his apprentice. He also managed to squeeze another experience into his boyhood years when, at age seven, he converted the cavernous, dark space where children played at Yedikule into a cinema – his only capital a tiny projector and the speech his big sister gave at the opening. As he was struggling to get the projector going after she finished speaking, the kerosene lamp slipped from his hand in his excitement and the film went up in flames. That's how Hakko learned to take risks in business. But this incident, which he remembered as a failure, embarrassed him terribly and he didn't go out of the house for a week. Blowing a trivial incident out of proportion instantaneously taught him the concepts of honor, character, confidence, intelligence, honesty, success and failure.By Jewish tradition, boys become 'men' at age thirteen, an occasion celebrated in a ceremony known as a 'bar mitzvah'. Realizing he was a 'man' now, after the ceremony Vitali decided he would feel guilty if he didn't start working and contributing to the family budget. Following his forays into carpentry and the cinema, he bid a firm farewell to childhood and started to work in Mahmutpaşa, Istanbul's traditional garment district. Although his job was to stand in front of a shop and say, \"Please come in\", this young man, whose commercial sense would prove ingenious in years to come, never looked down on it for a minute.\n\nForward-looking and industrious, Vitali learned all the tricks of the trade from the Mahmutpaşa merchants, all the while witnessing with growing enthusiasm the phases of reform through which the new Turkish Republic, young like himself, was passing. Swept along by the dress and headgear reform, in 1934 he opened a tiny shop called 'Şen Şapka' (Happy Hat) in Sultanhamam near Mahmutpaşa. \"If it hadn't been for the dress and hat reform,\" he would say all his life, \"there could have been no Happy Hat and no Vakko.\"\n\n\"Many businessmen of my generation claim to have started from zero. I didn't start even from zero. My starting place was a point way below zero. Nonetheless, we trained o"
+        },
+        "executed": true,
+        "next_start": 3000,
+        "ok": true,
+        "previously_received": false
+      },
+      "round": 2,
+      "tool": "read",
+      "tool_call_id": "call_658d74bf918e4399a20d1870",
+      "seq": 47,
+      "utc": "2026-09-15T08:27:00.056117+00:00",
+      "next_request": 3,
+      "next_input_receipt": true,
+      "action_commit": "NOT_A_SEPARATE_STRIDE_EVENT; action_result and round_end are recorded",
+      "receipt_not_required_after_terminal": false
+    },
+    {
+      "arguments": "{\"ref\": \"d8\"}",
+      "executed": true,
+      "result": {
+        "action_slot_charged": true,
+        "evidence": {
+          "document": "d8",
+          "document_chars": 13639,
+          "end": 3000,
+          "kind": "raw_evidence",
+          "ref": "e2",
+          "sha256": "ed282b99cfb0aae5a430ddfadeb3348fa20e85aac24fb4501bf9cd3b3dadb4b2",
+          "snapshot": "7d8960afbde4b93401ea738e66299a6ee3d0dee47906ba8e3a86ebdea642ffcd",
+          "start": 0,
+          "text": "---\ntitle: Vakko - Wikipedia\nauthor: Authority control databases ISNI VIAF\ndate: 2012-04-10\n---\nname: Vakko\nlogo: File:Vakko_Turkish_fashion_company.png\nlogo_size: 100px\nimage_caption: Vakko department store in December 2022\nfoundation: 1934\nfounder: Vitali Hakko\nlocation_city: Istanbul\nlocation_country: Turkey\nkey_people: Cem Hakko (President) Jaklin Guner (CEO)\nindustry: Fashion\nproducts: Luxury goods\nrevenue: $424 million (2023)\nhomepage: vakko.com\n\nVakko is a Turkish luxury fashion company founded by Vitali Hakko (d. 2007) survived by his son Cem Hakko. It produces and retails textiles, leather goods, and accessories.Karen M. Morin, Jeanne Kay Guelke – 2007 – Aperçu – Autres éditionsTurkey – Page 192 Rosie Ayliffe, Marc S. Dubin, Terry Richardson – 2003Istanbul City Guide\n\nVakko also operates luxury department stores under the Vakko name at Zorlu Center, İstinye Park, Akmerkez, Vadi Istanbul, and Akasya malls and on Bağdat Caddesi in Suadiye (Asian side); in Ankara at Atakule and Armada malls, and in İzmir at Hilltown and Istinye Park İzmir malls. It also operates boutiques under the Vakkorama, Vakko Couture, Vakko Wedding, Vakko L'Atelier, and Vakko Home names, as well as Vakko Outlet locations.\"Stores\", Vakko official website\n\nIn 1962, Vakko's eight-story flagship store on İstiklal Avenue in Beyoğlu was the first modern department store in Turkey.\"Heritage\", Vakko website It operated until 2006, when it became a branch of Mango.\"Vakko Beyoğlu'ndan gidiyor yerine en büyük Mango geliyor\" (\"Vakko leaves Beyoğlu and is replaced by the biggest Mango\"), Hürriyet, 29 June 2006\n\nHistory\n\nVakko was founded in 1934 by Vitali Hakko under the brand name Şen Şapka () as a small hat seller in Sultanhamam. In 1937, with his older brother Albert Hakko becoming a partner, Vitali Hakko changed the name of the company to Vakko and established Turkey's first silk dyeing workshop in Kurtuluş, Şişli. After Şen Şapka transformed into Vakko, it started to produce scarves with Turkish silk, cotton and wool. Over time, Vakko turned to ready-to-wear to produce more than hats, scarves, and printed fabrics. Here, customers were introduced for the first time to modern store practices such as bargain-free and promotional sales, and replacement of sold goods.\n\nIn 1962, Hakko opened a large 8-storey store, including a cafe and fashion gallery, in Beyoğlu (a.k.a. Pera), at the time, the most important modern shopping districts in Istanbul. In 1969, the first Vakko Factory was built in Merter measuring 40,000 m2 and employment was provided. In 1973, the second Vakko store opened in Ankara, and Vakko began to further expand its retail network with the Vakko Boutique sales points it opened one after the other. Six years later, in 1979, the third Vakko store opened in İzmir. There was an increase in the popularity of the Vakko brand with advertising campaigns and fashion shows carried out throughout Turkey.\n\nIn September 1979 Vakko opened up its first shop outside Turkey, in Ol"
+        },
+        "executed": true,
+        "next_start": 3000,
+        "ok": true,
+        "previously_received": false
+      },
+      "round": 2,
+      "tool": "read",
+      "tool_call_id": "call_dc7867d17fee474f8028d497",
+      "seq": 48,
+      "utc": "2026-09-15T08:27:00.073961+00:00",
+      "next_request": 3,
+      "next_input_receipt": true,
+      "action_commit": "NOT_A_SEPARATE_STRIDE_EVENT; action_result and round_end are recorded",
+      "receipt_not_required_after_terminal": false
+    },
+    {
+      "arguments": "{\"ref\": \"d8\", \"start\": 3000}",
+      "executed": true,
+      "result": {
+        "action_slot_charged": true,
+        "evidence": {
+          "document": "d8",
+          "document_chars": 13639,
+          "end": 6000,
+          "kind": "raw_evidence",
+          "ref": "e3",
+          "sha256": "97a6e11f3f34512afbebf984635c4f0118e43a0fd1a04e71a3f4cf755defe729",
+          "snapshot": "7d8960afbde4b93401ea738e66299a6ee3d0dee47906ba8e3a86ebdea642ffcd",
+          "start": 3000,
+          "text": "d Bond Street, London, selling merchandise 90% Vakko-produced, including items by Sevim Cavdar, and launched by a rooftop fashion show at the Régine Club.\n\nIn 1981, on the 100th birthday of Mustafa Kemal Atatürk, a fashion and art show called \"Anatolian Sun\" was organized, bringing together Anatolian cultures and Western fashion concepts. The show, which was also exhibited in Rome, Vienna, Brussels, Paris, and London on outside Turkey, introduced Vakko in Europe as the representative of contemporary Turkish fashion.\n\nIn 1982, Vakkorama, one of Turkey's first youth stores, opened in Taksim, Istanbul. In order to bring New York fashion to Istanbul, Vakkorama introduced a new team called V2K Designers ('V2K Designers') in 2000 with the slogan \"Two cities, one brand\". Over time, V2K Designers has acquired designers and brands from other fashion cities such as Paris, London and Milan, as well as New York. Today, it is Turkey's first concept store where different world brands meet under the same roof. Creations of other designers and brands such as Rick Owens, Gareth Pugh, Alexander Wang, Hussein Chalayan, Preen, Erdem, Elizabeth & James, Band of Outsider, and Rag & Bone are available at V2K Designers.\n\nIn 2006, Vakko opened in the then-new Kanyon Shopping Mall in Levent, in Istanbul's modern Central Business District (the store has since closed and opened in the newer, larger Zorlu Center nearby). At the same time, the famous fashion designer Zac Posen's specially interpreted creations for Vakko were introduced under the label \"Zac Posen @Vakko\". In the same year, world-famous top model Gisele Bündchen became the face of Vakko's campaign. Since 2008, Vakko has been continuing its operations in its new factory, which is headquartered in Merter and spread over an area 2 times the size of its old factory, with screen printing and ready-made clothing production units, logistics facilities, social use areas, and work offices.\n\nIn 2009, Vakko Home, launched, offering a selection of home furnishings and accessories, domestics (bed linens and towels), etc.\n\nIn 2010, Vakko Fashion Center, designed by New York-based REX and shared with media company Power Media, was opened in Nakkaştepe, Üsküdar (Asia), consisting of all management units and creative staff offices, as well as showrooms, the Vitali Hakko Creative Industries Library, auditorium, gallery and museum. In the same year, Vakko Wedding House Akaretler, which brings together evening dresses, tuxedos, accessories, underwear and hats suitable for all kinds of ceremonies for the bride and groom's families, opened in a single store. The first culture and arts festival, Istancool, which brought together many famous artists from different disciplines, was held in 2010. Many important names from the fashion and art worlds were hosted as guests, including the famous style icon Daphne Guinness, hat designer Philip Treacy, and pianist Michael Nyman. In 2011, Vakko Fashion Center was chosen as the \"Best Workspace "
+        },
+        "executed": true,
+        "next_start": 6000,
+        "ok": true,
+        "previously_received": false
+      },
+      "round": 3,
+      "tool": "read",
+      "tool_call_id": "call_863b4d9fcd894427b168730a",
+      "seq": 56,
+      "utc": "2026-09-15T08:27:03.676492+00:00",
+      "next_request": 4,
+      "next_input_receipt": true,
+      "action_commit": "NOT_A_SEPARATE_STRIDE_EVENT; action_result and round_end are recorded",
+      "receipt_not_required_after_terminal": false
+    },
+    {
+      "arguments": "{\"answer\": \"Vakkorama\", \"refs\": [\"e1\", \"e2\", \"e3\"]}",
+      "executed": true,
+      "result": {
+        "action_slot_charged": true,
+        "executed": true,
+        "ok": true,
+        "terminal": {
+          "answer": "Vakkorama",
+          "answer_representation": {
+            "input_type": "string",
+            "operation": "identity",
+            "rule": "string-integer-v1"
+          },
+          "basis": [
+            {
+              "document": "d1",
+              "document_chars": 9095,
+              "end": 3000,
+              "kind": "raw_evidence",
+              "ref": "e1",
+              "sha256": "521deb8f6549e7ea288326ea13a34d4635283fc59820929b6ad3b4c3edade321",
+              "snapshot": "446eabd6c86b9aad83f468e7eb034d96105d6e38bc9d97c923416d3ce089e105",
+              "start": 0
+            },
+            {
+              "document": "d8",
+              "document_chars": 13639,
+              "end": 3000,
+              "kind": "raw_evidence",
+              "ref": "e2",
+              "sha256": "ed282b99cfb0aae5a430ddfadeb3348fa20e85aac24fb4501bf9cd3b3dadb4b2",
+              "snapshot": "7d8960afbde4b93401ea738e66299a6ee3d0dee47906ba8e3a86ebdea642ffcd",
+              "start": 0
+            },
+            {
+              "document": "d8",
+              "document_chars": 13639,
+              "end": 6000,
+              "kind": "raw_evidence",
+              "ref": "e3",
+              "sha256": "97a6e11f3f34512afbebf984635c4f0118e43a0fd1a04e71a3f4cf755defe729",
+              "snapshot": "7d8960afbde4b93401ea738e66299a6ee3d0dee47906ba8e3a86ebdea642ffcd",
+              "start": 3000
+            }
+          ],
+          "elapsed_seconds": 20.065079199994216,
+          "outcome": "submitted",
+          "refs": [
+            "e1",
+            "e2",
+            "e3"
+          ],
+          "semantic_status": "not_automatically_verified"
+        }
+      },
+      "round": 4,
+      "tool": "finish",
+      "tool_call_id": "call_a555c6fe2f624e4ea315233f",
+      "seq": 63,
+      "utc": "2026-09-15T08:27:10.678545+00:00",
+      "next_request": null,
+      "next_input_receipt": false,
+      "action_commit": "NOT_A_SEPARATE_STRIDE_EVENT; action_result and round_end are recorded",
+      "receipt_not_required_after_terminal": true
+    }
+  ],
+  "queries": [
+    {
+      "cache_key": "29520d81c959ef71ca83950f7c209e12d0f99e1902bd271d36b15b95a8548b66",
+      "cached": false,
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"hat\" OR \"shop\" OR \"1930s\" OR \"scarves\" OR \"renamed\" OR \"initials\" OR \"siblings\" OR \"surname\"",
+        "terms": [
+          "hat",
+          "shop",
+          "1930s",
+          "scarves",
+          "renamed",
+          "initials",
+          "siblings",
+          "surname"
+        ]
+      },
+      "equivalence_key": "2a2b952aa0a796deaaaf68b413aca1f55f79117c2b820420e744775a7ef6fa7d",
+      "query": "hat shop 1930s scarves renamed initials siblings surname",
+      "round": 1,
+      "top_k": 5,
+      "seq": 6,
+      "utc": "2026-09-15T08:26:53.894695+00:00",
+      "terms": [
+        "hat",
+        "shop",
+        "1930s",
+        "scarves",
+        "renamed",
+        "initials",
+        "siblings",
+        "surname"
+      ],
+      "expression": "\"hat\" OR \"shop\" OR \"1930s\" OR \"scarves\" OR \"renamed\" OR \"initials\" OR \"siblings\" OR \"surname\"",
+      "result_docs": [
+        {
+          "docid": "72111",
+          "score": 26.99197197115214,
+          "snippet": " ... Swept along by the dress and headgear reform, in 1934 he opened a tiny shop called 'Şen Şapka' (Happy Hat) in Sultanhamam near Mahmutpaşa. \"If it hadn't been for the dress and hat reform,\" he would say all his life, \"there could have been no Happy Hat ... ",
+          "title": "https://necessities123.wordpress.com/2014/11/17/vitali-hakko-the-man-behind-the-legend-named-vakko/"
+        },
+        {
+          "docid": "30523",
+          "score": 24.66060750531418,
+          "snippet": " ... There she met millionaire Etienne Balsan, where she no doubt found the money to open up her own hat shop in 1910. They weren't dating at that time, however. The shop quickly failed, but after starting an affair with Balsan's former best friend, Arthur Capel (also ... ",
+          "title": "https://www.mentalfloss.com/article/21572/real-people-behind-10-fashion-houses"
+        },
+        {
+          "docid": "35059",
+          "score": 23.932510466028596,
+          "snippet": " ... The scarves were an instant hit with Hermès' clientele.\n\nThe Hermès silk scarf quickly became a cornerstone of success. Initially embraced as part of the quintessential French woman's wardrobe, these scarves soon gained international acclaim, thanks in large part to an unexpected ambassador: Queen Elizabeth II of ... ",
+          "title": "https://www.screwdowncrown.com/p/hermes-luxury-brand-history-birkin-kelly"
+        },
+        {
+          "docid": "28438",
+          "score": 22.163223691662825,
+          "snippet": " ... 40 \n\nStetson made an unusually large hat from felt he made from hides collected on the trip and wore the hat for the remainder of the expedition. Although initially worn as a joke, Stetson soon grew fond of the hat for its ability to protect him from the ... ",
+          "title": "https://en.wikipedia.org/wiki/Stetson"
+        },
+        {
+          "docid": "54419",
+          "score": 21.154168114189062,
+          "snippet": " ... If you too have studied them I expect you've noticed how Evelyn has 'doctored' the neighbouring shops, removing E.Bennett (a tailor's shop)at No.89 and making G.E.Onslow (then actually a butcher's)into an empty shop premises, all in order to concentrate ... ",
+          "title": "https://evelyn-dunbar.blogspot.com/2012/11/the-queue-at-fish-shop-1942-45.html"
+        }
+      ],
+      "returned_dN": [
+        "d1",
+        "d2",
+        "d3",
+        "d4",
+        "d5"
+      ],
+      "returned_docids": [
+        "72111",
+        "30523",
+        "35059",
+        "28438",
+        "54419"
+      ]
+    },
+    {
+      "cache_key": "88f05beb69189a18e4c3893cd93300ddaf3830357ed867e7dad26aab759586ab",
+      "cached": false,
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"hat\" OR \"shop\" OR \"opened\" OR \"1930s\" OR \"later\" OR \"scarves\" OR \"branches\" OR \"1970s\" OR \"new\" OR \"brand\" OR \"1980s\" OR \"child\" OR \"younger\" OR \"audience\"",
+        "terms": [
+          "hat",
+          "shop",
+          "opened",
+          "1930s",
+          "later",
+          "scarves",
+          "branches",
+          "1970s",
+          "new",
+          "brand",
+          "1980s",
+          "child",
+          "younger",
+          "audience"
+        ]
+      },
+      "equivalence_key": "25c93b34621b169b8811ae08edca8f261c6e6ac140e6ecbdbd8fbd419d842b8f",
+      "query": "hat shop opened 1930s later scarves branches 1970s new brand 1980s child younger audience",
+      "round": 1,
+      "top_k": 5,
+      "seq": 14,
+      "utc": "2026-09-15T08:26:54.486103+00:00",
+      "terms": [
+        "hat",
+        "shop",
+        "opened",
+        "1930s",
+        "later",
+        "scarves",
+        "branches",
+        "1970s",
+        "new",
+        "brand",
+        "1980s",
+        "child",
+        "younger",
+        "audience"
+      ],
+      "expression": "\"hat\" OR \"shop\" OR \"opened\" OR \"1930s\" OR \"later\" OR \"scarves\" OR \"branches\" OR \"1970s\" OR \"new\" OR \"brand\" OR \"1980s\" OR \"child\" OR \"younger\" OR \"audience\"",
+      "result_docs": [
+        {
+          "docid": "35059",
+          "score": 31.06926164544034,
+          "snippet": " ... The new leadership recognised the immense potential of the Chinese market but had to find ways to grow without diluting the brand's exclusivity.\n\nThey adopted a strategy of carefully controlled expansion, opening new stores in key locations and investing in training local staff to provide the signature ... ",
+          "title": "https://www.screwdowncrown.com/p/hermes-luxury-brand-history-birkin-kelly"
+        },
+        {
+          "docid": "28438",
+          "score": 30.695632812073427,
+          "snippet": " ... Diversification\n\nIn the 1980s, Stetson began to diversify, releasing the first Stetson cologne in 1981 and Lady Stetson in 1986. Luggage, handbags, umbrellas, and scarves also carried the Stetson mark. Currently, the brand carries western hats, fashion hats, fragrances, eyewear, apparel, footwear, belts, accessories, and bourbon. Stetson is ... ",
+          "title": "https://en.wikipedia.org/wiki/Stetson"
+        },
+        {
+          "docid": "99116",
+          "score": 30.667575568962807,
+          "snippet": " ... The company opens its first watch factory, La Montre Hermès SA, in Bienne, Switzerland.\n\nFollowing a decline in sales due to the company's dusty image in the 1970s, Dumas rejuvenates the collections, brings new designers into the company, develops modern advertising campaigns to attract new audiences, and ... ",
+          "title": "https://wunderlabel.com/lab/fashion-company-histories/hermes/"
+        },
+        {
+          "docid": "32854",
+          "score": 30.250402863810862,
+          "snippet": " ... The later years of the decade saw a large-scale revival of clothing designs primarily from the 1960s, 1970s, and 1980s.\n\nGeneral trends\n\nThe rise of fast fashion\n\nThe early to mid-2000s saw a rise in the consumption of fast fashion: affordable off-the-peg high street ... ",
+          "title": "https://en.wikipedia.org/wiki/2000s_in_fashion"
+        },
+        {
+          "docid": "7624",
+          "score": 28.099376815583994,
+          "snippet": " ... Six years later, in 1979, the third Vakko store opened in İzmir. There was an increase in the popularity of the Vakko brand with advertising campaigns and fashion shows carried out throughout Turkey.\n\nIn September 1979 Vakko opened up its first shop outside Turkey, in Old Bond Street ... ",
+          "title": "https://en.wikipedia.org/wiki/Vakko"
+        }
+      ],
+      "returned_dN": [
+        "d3",
+        "d4",
+        "d6",
+        "d7",
+        "d8"
+      ],
+      "returned_docids": [
+        "35059",
+        "28438",
+        "99116",
+        "32854",
+        "7624"
+      ]
+    },
+    {
+      "cache_key": "24947adc0a524a32c60ec96ede9c864d47fcdf78e5a1f16d18982fef7366a42d",
+      "cached": false,
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"family\" OR \"hat\" OR \"shop\" OR \"railway\" OR \"father\" OR \"wooden\" OR \"house\" OR \"tower\" OR \"1340s\" OR \"city\"",
+        "terms": [
+          "family",
+          "hat",
+          "shop",
+          "railway",
+          "father",
+          "wooden",
+          "house",
+          "tower",
+          "1340s",
+          "city"
+        ]
+      },
+      "equivalence_key": "68e91050dce107cbfe35674c7dc8c8389cc3d24cd3c3ba72bd44724dead7216b",
+      "query": "family hat shop railway father wooden house tower 1340s city",
+      "round": 1,
+      "top_k": 5,
+      "seq": 20,
+      "utc": "2026-09-15T08:26:55.723489+00:00",
+      "terms": [
+        "family",
+        "hat",
+        "shop",
+        "railway",
+        "father",
+        "wooden",
+        "house",
+        "tower",
+        "1340s",
+        "city"
+      ],
+      "expression": "\"family\" OR \"hat\" OR \"shop\" OR \"railway\" OR \"father\" OR \"wooden\" OR \"house\" OR \"tower\" OR \"1340s\" OR \"city\"",
+      "result_docs": [
+        {
+          "docid": "11341",
+          "score": 25.560301737704858,
+          "snippet": " ... The Illinois Central Railroad Water Tower and Pump House are symbols of a bygone era. The wooden tower and the pump house were built in 1885.\n\nStill in use today, the Havana Water Tower was Havana, Illinois' only water supply until 1962. That is an impressive feat for ... ",
+          "title": "https://pttg.com/blogs/historic-water-towers.php"
+        },
+        {
+          "docid": "11456",
+          "score": 24.358997490064418,
+          "snippet": " ... Some residences are located inside the towers, and others are in new buildings attached to them. The upper floors are devoted to housing units the middle floors to offices, and the ground floors to entertainment and shopping malls. with sky bridges connecting the shopping mall levels. Each tower ... ",
+          "title": "https://en.wikipedia.org/wiki/Contemporary_architecture"
+        },
+        {
+          "docid": "74964",
+          "score": 23.666848704608952,
+          "snippet": " ... export product, especially in sealing wooden boats.\n\nThe traditional timber house in Finland was generally of two types: \ni. Eastern Finland, influenced by Russian traditions. For example, in the Pertinotsa house (now in the Seurasaari Open Air Museum in Helsinki) the family's dwelling rooms are on the ... ",
+          "title": "https://en.wikipedia.org/wiki/Architecture_of_Finland"
+        },
+        {
+          "docid": "54451",
+          "score": 23.361110879766642,
+          "snippet": " ... Edison's father built the main laboratory building on the block south of Christie Street between Middlesex and Woodbridge (now Tower) Avenues. Edison also built other ancillary buildings including the glass house, a carpenters' shop, a carbon shed, and a blacksmith shop. By the Spring of 1876, Edison ... ",
+          "title": "https://www.menloparkmuseum.org/history"
+        },
+        {
+          "docid": "51585",
+          "score": 23.284961255760948,
+          "snippet": " ... Another prominent shopping centre called Alexandrium lies in the east of Rotterdam. It includes a large kitchen and furniture centre.\n\nEducation\n\nRotterdam has one major university, the Erasmus University Rotterdam (EUR), named after one of the city's famous former inhabitants, Desiderius Erasmus. The Woudestein campus houses (among ... ",
+          "title": "https://en.wikipedia.org/wiki/Rotterdam"
+        }
+      ],
+      "returned_dN": [
+        "d9",
+        "d10",
+        "d11",
+        "d12",
+        "d13"
+      ],
+      "returned_docids": [
+        "11341",
+        "11456",
+        "74964",
+        "54451",
+        "51585"
+      ]
+    }
+  ],
+  "evidence": [
+    {
+      "ref": "e1",
+      "document": "d1",
+      "snapshot": "446eabd6c86b9aad83f468e7eb034d96105d6e38bc9d97c923416d3ce089e105",
+      "start": 0,
+      "end": 3000,
+      "document_chars": 9095,
+      "text": "---\ntitle: Vitali Hakko, the man behind the legend named Vakko\ndate: 2014-11-17\n---\nVitali Hakko, the man behind the legend named Vakko\n\nSeven years ago, when Vitali Hakko dies, Skylife – Turkish Airlines inflight magazine published his lifetime story… There are some interesting parts from this text.\n\nIt was 1913 and the world was on the brink of a great war when a boy was born in a wooden mansion in seven-hilled Istanbul's Yedikule district along the shores of the Marmara Sea. His father worked for the railroad, his mother was a housewife preoccupied with her children. The Hakko family named their latest addition 'Vitali', or 'life'. Little Vitali got his basic education at a school run by an order of French Freres in the nearby Istanbul district of Kumkapı.\nBut he was only able to attend for six years when his father lost his job. When his father took up carpentry, little Vitali became his apprentice. He also managed to squeeze another experience into his boyhood years when, at age seven, he converted the cavernous, dark space where children played at Yedikule into a cinema – his only capital a tiny projector and the speech his big sister gave at the opening. As he was struggling to get the projector going after she finished speaking, the kerosene lamp slipped from his hand in his excitement and the film went up in flames. That's how Hakko learned to take risks in business. But this incident, which he remembered as a failure, embarrassed him terribly and he didn't go out of the house for a week. Blowing a trivial incident out of proportion instantaneously taught him the concepts of honor, character, confidence, intelligence, honesty, success and failure.By Jewish tradition, boys become 'men' at age thirteen, an occasion celebrated in a ceremony known as a 'bar mitzvah'. Realizing he was a 'man' now, after the ceremony Vitali decided he would feel guilty if he didn't start working and contributing to the family budget. Following his forays into carpentry and the cinema, he bid a firm farewell to childhood and started to work in Mahmutpaşa, Istanbul's traditional garment district. Although his job was to stand in front of a shop and say, \"Please come in\", this young man, whose commercial sense would prove ingenious in years to come, never looked down on it for a minute.\n\nForward-looking and industrious, Vitali learned all the tricks of the trade from the Mahmutpaşa merchants, all the while witnessing with growing enthusiasm the phases of reform through which the new Turkish Republic, young like himself, was passing. Swept along by the dress and headgear reform, in 1934 he opened a tiny shop called 'Şen Şapka' (Happy Hat) in Sultanhamam near Mahmutpaşa. \"If it hadn't been for the dress and hat reform,\" he would say all his life, \"there could have been no Happy Hat and no Vakko.\"\n\n\"Many businessmen of my generation claim to have started from zero. I didn't start even from zero. My starting place was a point way below zero. Nonetheless, we trained o",
+      "sha256": "521deb8f6549e7ea288326ea13a34d4635283fc59820929b6ad3b4c3edade321",
+      "kind": "raw_evidence",
+      "created_utc": "2026-09-15T08:26:59.897384+00:00",
+      "backend_snapshot_utc": "2026-09-15T08:26:59.871411+00:00",
+      "first_request": 3,
+      "first_ack_round": 3,
+      "first_ack_utc": "2026-09-15T08:27:03.622895+00:00",
+      "visible_rounds": [
+        3,
+        4
+      ],
+      "shelf_restored_rounds": [],
+      "final_cited": true
+    },
+    {
+      "ref": "e2",
+      "document": "d8",
+      "snapshot": "7d8960afbde4b93401ea738e66299a6ee3d0dee47906ba8e3a86ebdea642ffcd",
+      "start": 0,
+      "end": 3000,
+      "document_chars": 13639,
+      "text": "---\ntitle: Vakko - Wikipedia\nauthor: Authority control databases ISNI VIAF\ndate: 2012-04-10\n---\nname: Vakko\nlogo: File:Vakko_Turkish_fashion_company.png\nlogo_size: 100px\nimage_caption: Vakko department store in December 2022\nfoundation: 1934\nfounder: Vitali Hakko\nlocation_city: Istanbul\nlocation_country: Turkey\nkey_people: Cem Hakko (President) Jaklin Guner (CEO)\nindustry: Fashion\nproducts: Luxury goods\nrevenue: $424 million (2023)\nhomepage: vakko.com\n\nVakko is a Turkish luxury fashion company founded by Vitali Hakko (d. 2007) survived by his son Cem Hakko. It produces and retails textiles, leather goods, and accessories.Karen M. Morin, Jeanne Kay Guelke – 2007 – Aperçu – Autres éditionsTurkey – Page 192 Rosie Ayliffe, Marc S. Dubin, Terry Richardson – 2003Istanbul City Guide\n\nVakko also operates luxury department stores under the Vakko name at Zorlu Center, İstinye Park, Akmerkez, Vadi Istanbul, and Akasya malls and on Bağdat Caddesi in Suadiye (Asian side); in Ankara at Atakule and Armada malls, and in İzmir at Hilltown and Istinye Park İzmir malls. It also operates boutiques under the Vakkorama, Vakko Couture, Vakko Wedding, Vakko L'Atelier, and Vakko Home names, as well as Vakko Outlet locations.\"Stores\", Vakko official website\n\nIn 1962, Vakko's eight-story flagship store on İstiklal Avenue in Beyoğlu was the first modern department store in Turkey.\"Heritage\", Vakko website It operated until 2006, when it became a branch of Mango.\"Vakko Beyoğlu'ndan gidiyor yerine en büyük Mango geliyor\" (\"Vakko leaves Beyoğlu and is replaced by the biggest Mango\"), Hürriyet, 29 June 2006\n\nHistory\n\nVakko was founded in 1934 by Vitali Hakko under the brand name Şen Şapka () as a small hat seller in Sultanhamam. In 1937, with his older brother Albert Hakko becoming a partner, Vitali Hakko changed the name of the company to Vakko and established Turkey's first silk dyeing workshop in Kurtuluş, Şişli. After Şen Şapka transformed into Vakko, it started to produce scarves with Turkish silk, cotton and wool. Over time, Vakko turned to ready-to-wear to produce more than hats, scarves, and printed fabrics. Here, customers were introduced for the first time to modern store practices such as bargain-free and promotional sales, and replacement of sold goods.\n\nIn 1962, Hakko opened a large 8-storey store, including a cafe and fashion gallery, in Beyoğlu (a.k.a. Pera), at the time, the most important modern shopping districts in Istanbul. In 1969, the first Vakko Factory was built in Merter measuring 40,000 m2 and employment was provided. In 1973, the second Vakko store opened in Ankara, and Vakko began to further expand its retail network with the Vakko Boutique sales points it opened one after the other. Six years later, in 1979, the third Vakko store opened in İzmir. There was an increase in the popularity of the Vakko brand with advertising campaigns and fashion shows carried out throughout Turkey.\n\nIn September 1979 Vakko opened up its first shop outside Turkey, in Ol",
+      "sha256": "ed282b99cfb0aae5a430ddfadeb3348fa20e85aac24fb4501bf9cd3b3dadb4b2",
+      "kind": "raw_evidence",
+      "created_utc": "2026-09-15T08:27:00.000691+00:00",
+      "backend_snapshot_utc": "2026-09-15T08:26:59.984337+00:00",
+      "first_request": 3,
+      "first_ack_round": 3,
+      "first_ack_utc": "2026-09-15T08:27:03.622895+00:00",
+      "visible_rounds": [
+        3,
+        4
+      ],
+      "shelf_restored_rounds": [],
+      "final_cited": true
+    },
+    {
+      "ref": "e3",
+      "document": "d8",
+      "snapshot": "7d8960afbde4b93401ea738e66299a6ee3d0dee47906ba8e3a86ebdea642ffcd",
+      "start": 3000,
+      "end": 6000,
+      "document_chars": 13639,
+      "text": "d Bond Street, London, selling merchandise 90% Vakko-produced, including items by Sevim Cavdar, and launched by a rooftop fashion show at the Régine Club.\n\nIn 1981, on the 100th birthday of Mustafa Kemal Atatürk, a fashion and art show called \"Anatolian Sun\" was organized, bringing together Anatolian cultures and Western fashion concepts. The show, which was also exhibited in Rome, Vienna, Brussels, Paris, and London on outside Turkey, introduced Vakko in Europe as the representative of contemporary Turkish fashion.\n\nIn 1982, Vakkorama, one of Turkey's first youth stores, opened in Taksim, Istanbul. In order to bring New York fashion to Istanbul, Vakkorama introduced a new team called V2K Designers ('V2K Designers') in 2000 with the slogan \"Two cities, one brand\". Over time, V2K Designers has acquired designers and brands from other fashion cities such as Paris, London and Milan, as well as New York. Today, it is Turkey's first concept store where different world brands meet under the same roof. Creations of other designers and brands such as Rick Owens, Gareth Pugh, Alexander Wang, Hussein Chalayan, Preen, Erdem, Elizabeth & James, Band of Outsider, and Rag & Bone are available at V2K Designers.\n\nIn 2006, Vakko opened in the then-new Kanyon Shopping Mall in Levent, in Istanbul's modern Central Business District (the store has since closed and opened in the newer, larger Zorlu Center nearby). At the same time, the famous fashion designer Zac Posen's specially interpreted creations for Vakko were introduced under the label \"Zac Posen @Vakko\". In the same year, world-famous top model Gisele Bündchen became the face of Vakko's campaign. Since 2008, Vakko has been continuing its operations in its new factory, which is headquartered in Merter and spread over an area 2 times the size of its old factory, with screen printing and ready-made clothing production units, logistics facilities, social use areas, and work offices.\n\nIn 2009, Vakko Home, launched, offering a selection of home furnishings and accessories, domestics (bed linens and towels), etc.\n\nIn 2010, Vakko Fashion Center, designed by New York-based REX and shared with media company Power Media, was opened in Nakkaştepe, Üsküdar (Asia), consisting of all management units and creative staff offices, as well as showrooms, the Vitali Hakko Creative Industries Library, auditorium, gallery and museum. In the same year, Vakko Wedding House Akaretler, which brings together evening dresses, tuxedos, accessories, underwear and hats suitable for all kinds of ceremonies for the bride and groom's families, opened in a single store. The first culture and arts festival, Istancool, which brought together many famous artists from different disciplines, was held in 2010. Many important names from the fashion and art worlds were hosted as guests, including the famous style icon Daphne Guinness, hat designer Philip Treacy, and pianist Michael Nyman. In 2011, Vakko Fashion Center was chosen as the \"Best Workspace ",
+      "sha256": "97a6e11f3f34512afbebf984635c4f0118e43a0fd1a04e71a3f4cf755defe729",
+      "kind": "raw_evidence",
+      "created_utc": "2026-09-15T08:27:03.635946+00:00",
+      "backend_snapshot_utc": "2026-09-15T08:26:59.984337+00:00",
+      "first_request": 4,
+      "first_ack_round": 4,
+      "first_ack_utc": "2026-09-15T08:27:10.638066+00:00",
+      "visible_rounds": [
+        4
+      ],
+      "shelf_restored_rounds": [],
+      "final_cited": true
+    }
+  ],
+  "http": [
+    {
+      "sequence": 1,
+      "utc_start": "2026-09-15T08:26:50.783294+00:00",
+      "http_status": 200,
+      "requested_model": "EB-GLM-5.2",
+      "returned_model": "glm-5.2",
+      "finish_reason": "tool_calls",
+      "usage": {
+        "prompt_tokens": 3914,
+        "completion_tokens": 152,
+        "reasoning_tokens": 0,
+        "total_tokens": 4066,
+        "cached_tokens": 3200,
+        "prompt_tokens_details": {
+          "cached_tokens": 3200
+        },
+        "prompt_cost": 0.0,
+        "completion_cost": 0.0,
+        "cache_cost": 0.0
+      },
+      "input_tokens": 3914,
+      "output_tokens": 152,
+      "cache_read_tokens": 3200,
+      "cache_write_tokens": null,
+      "request_bytes": 16349,
+      "response_bytes": 1152,
+      "request_body_sha256": "a61deeac7f2debefea800747f21cf59eb495c83b3fe63081feaef2c7a704fe3b",
+      "sanitized_response": false,
+      "ledger_id": 633,
+      "utc_end": "2026-09-15T08:26:53.851832+00:00",
+      "latency_seconds": 3.0293411999882665,
+      "response_representation": "original response body bytes",
+      "saved_response_body_sha256": "f575f7cf836e6d1905003e5b3b1dc3f0c8b15ceb9a93bebc1d8056ab971a4544"
+    },
+    {
+      "sequence": 2,
+      "utc_start": "2026-09-15T08:26:57.146984+00:00",
+      "http_status": 200,
+      "requested_model": "EB-GLM-5.2",
+      "returned_model": "glm-5.2",
+      "finish_reason": "tool_calls",
+      "usage": {
+        "prompt_tokens": 7127,
+        "completion_tokens": 98,
+        "reasoning_tokens": 0,
+        "total_tokens": 7225,
+        "cached_tokens": 3456,
+        "prompt_tokens_details": {
+          "cached_tokens": 3456
+        },
+        "prompt_cost": 0.0,
+        "completion_cost": 0.0,
+        "cache_cost": 0.0
+      },
+      "input_tokens": 7127,
+      "output_tokens": 98,
+      "cache_read_tokens": 3456,
+      "cache_write_tokens": null,
+      "request_bytes": 30085,
+      "response_bytes": 1016,
+      "request_body_sha256": "81b05c2f398865d08344e2dc4e928d941528264c6aa55cdfb695caf644a37c3f",
+      "sanitized_response": false,
+      "ledger_id": 634,
+      "utc_end": "2026-09-15T08:26:59.766255+00:00",
+      "latency_seconds": 2.601583900017431,
+      "response_representation": "original response body bytes",
+      "saved_response_body_sha256": "b8d73e733d836dbf0c60c1018d5fe7cf0d0cb6b3f76aa7942d70cec87adcc1b5"
+    },
+    {
+      "sequence": 3,
+      "utc_start": "2026-09-15T08:27:00.283513+00:00",
+      "http_status": 200,
+      "requested_model": "EB-GLM-5.2",
+      "returned_model": "glm-5.2",
+      "finish_reason": "tool_calls",
+      "usage": {
+        "prompt_tokens": 9093,
+        "completion_tokens": 136,
+        "reasoning_tokens": 0,
+        "total_tokens": 9229,
+        "cached_tokens": 6016,
+        "prompt_tokens_details": {
+          "cached_tokens": 6016
+        },
+        "prompt_cost": 0.0,
+        "completion_cost": 0.0,
+        "cache_cost": 0.0
+      },
+      "input_tokens": 9093,
+      "output_tokens": 136,
+      "cache_read_tokens": 6016,
+      "cache_write_tokens": null,
+      "request_bytes": 37874,
+      "response_bytes": 1050,
+      "request_body_sha256": "37c77bc53d3954dea95c3d4e009a6145d7622bb98ac5fc3b8612867081bdbe47",
+      "sanitized_response": false,
+      "ledger_id": 635,
+      "utc_end": "2026-09-15T08:27:03.585115+00:00",
+      "latency_seconds": 3.272350199986249,
+      "response_representation": "original response body bytes",
+      "saved_response_body_sha256": "0c18ef429c7eac27aed47d0213c03ce396403c4df092bc9492b28f8bd6693fb1"
+    },
+    {
+      "sequence": 4,
+      "utc_start": "2026-09-15T08:27:03.784344+00:00",
+      "http_status": 200,
+      "requested_model": "EB-GLM-5.2",
+      "returned_model": "glm-5.2",
+      "finish_reason": "tool_calls",
+      "usage": {
+        "prompt_tokens": 7807,
+        "completion_tokens": 233,
+        "reasoning_tokens": 0,
+        "total_tokens": 8040,
+        "cached_tokens": 896,
+        "prompt_tokens_details": {
+          "cached_tokens": 896
+        },
+        "prompt_cost": 0.0,
+        "completion_cost": 0.0,
+        "cache_cost": 0.0
+      },
+      "input_tokens": 7807,
+      "output_tokens": 233,
+      "cache_read_tokens": 896,
+      "cache_write_tokens": null,
+      "request_bytes": 32839,
+      "response_bytes": 1396,
+      "request_body_sha256": "8811a93c32444c8c80ba4134bed965bba4a59a0fb5045092626d1ef6ed00094c",
+      "sanitized_response": false,
+      "ledger_id": 636,
+      "utc_end": "2026-09-15T08:27:10.596253+00:00",
+      "latency_seconds": 6.793998600012856,
+      "response_representation": "original response body bytes",
+      "saved_response_body_sha256": "ccd328441525dc0e78e915152c48814175000d555d202b41342ad8e598b46522"
+    }
+  ]
+}

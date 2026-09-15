@@ -1,0 +1,205 @@
+{
+  "protocol": "stride-search-3",
+  "head": "af9e3dd72047fdaf3876d62acf2b50f9a4ec2a7152d6ad5e3224532041e8a542",
+  "outcome": "submitted",
+  "formal_correct": null,
+  "model_attempts": 4,
+  "backend_attempts": 7,
+  "queries": [
+    {
+      "round": 1,
+      "top_k": 5,
+      "equivalence_key": "b6bd8dc61721491df16aa7435b6530f4f802d59a16c08a3b818651ea63c047c3",
+      "cached": false,
+      "query_sha256": "41b42c64a7da191aab5454ac9a88bff6ffb51a094ae4454ffa177910df7428ce",
+      "query": "CEO founded company mid-1990s raised Southern Africa father engineer",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"ceo\" OR \"founded\" OR \"company\" OR \"mid\" OR \"1990s\" OR \"raised\" OR \"southern\" OR \"africa\" OR \"father\" OR \"engineer\"",
+        "terms": [
+          "ceo",
+          "founded",
+          "company",
+          "mid",
+          "1990s",
+          "raised",
+          "southern",
+          "africa",
+          "father",
+          "engineer"
+        ]
+      }
+    },
+    {
+      "round": 1,
+      "top_k": 5,
+      "equivalence_key": "6e21ec141afe4f930ea57c26f01cc02ddddfaf1beb56253c26be7afc9be65c0f",
+      "cached": false,
+      "query_sha256": "cedc701ad8a023f8d444ef4a334f40d7c312a0ab25395267101a9bf62b23c14d",
+      "query": "tech CEO first child SIDS early 2020s baby name internet buzzing",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"tech\" OR \"ceo\" OR \"first\" OR \"child\" OR \"sids\" OR \"early\" OR \"2020s\" OR \"baby\" OR \"name\" OR \"internet\" OR \"buzzing\"",
+        "terms": [
+          "tech",
+          "ceo",
+          "first",
+          "child",
+          "sids",
+          "early",
+          "2020s",
+          "baby",
+          "name",
+          "internet",
+          "buzzing"
+        ]
+      }
+    },
+    {
+      "round": 1,
+      "top_k": 5,
+      "equivalence_key": "457f9056bd1b57391890802fb2dde148b155b5149bd1b099d87555df91fc7195",
+      "cached": false,
+      "query_sha256": "b69372d5c144177da09784db4502701200ae246cbe1f9b56a70e333b39f327c3",
+      "query": "CEO younger sister co-founded film streaming service",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"ceo\" OR \"younger\" OR \"sister\" OR \"co\" OR \"founded\" OR \"film\" OR \"streaming\" OR \"service\"",
+        "terms": [
+          "ceo",
+          "younger",
+          "sister",
+          "co",
+          "founded",
+          "film",
+          "streaming",
+          "service"
+        ]
+      }
+    },
+    {
+      "round": 2,
+      "top_k": 5,
+      "equivalence_key": "9188014e0f1a3d33fdd5f1fc4d04eb45a25b787ff53617b05f88c98b4a41fa6c",
+      "cached": false,
+      "query_sha256": "1dd571abfb67d10d7caec5cb79b8d92b3e86c8bfb28ddb43c7067858669a7293",
+      "query": "woman claimed to be Elon Musk half-sister mother age gave birth",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"woman\" OR \"claimed\" OR \"to\" OR \"be\" OR \"elon\" OR \"musk\" OR \"half\" OR \"sister\" OR \"mother\" OR \"age\" OR \"gave\" OR \"birth\"",
+        "terms": [
+          "woman",
+          "claimed",
+          "to",
+          "be",
+          "elon",
+          "musk",
+          "half",
+          "sister",
+          "mother",
+          "age",
+          "gave",
+          "birth"
+        ]
+      }
+    },
+    {
+      "round": 2,
+      "top_k": 5,
+      "equivalence_key": "4788c6077731699445377e69c8f72522028779c28342110d4001945c7761a480",
+      "cached": false,
+      "query_sha256": "13de6754f3d48635d5e81ff0dc9216ad13e77c92d9342b9591aa7de5ed7c406b",
+      "query": "lady claimed related to Elon Musk mother age when she gave birth article",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"lady\" OR \"claimed\" OR \"related\" OR \"to\" OR \"elon\" OR \"musk\" OR \"mother\" OR \"age\" OR \"when\" OR \"she\" OR \"gave\" OR \"birth\" OR \"article\"",
+        "terms": [
+          "lady",
+          "claimed",
+          "related",
+          "to",
+          "elon",
+          "musk",
+          "mother",
+          "age",
+          "when",
+          "she",
+          "gave",
+          "birth",
+          "article"
+        ]
+      }
+    },
+    {
+      "round": 2,
+      "top_k": 5,
+      "equivalence_key": "7294037931ac015af4dcac3ad18429ef45e7dccf52af8c6d4c6a240e5fab3432",
+      "cached": false,
+      "query_sha256": "875920db7c6df4af5236147b03d5649dfceb227b10d4db9d633d3361fb200d08",
+      "query": "claimed to be Elon Musk relative sister mother young age birth article",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"claimed\" OR \"to\" OR \"be\" OR \"elon\" OR \"musk\" OR \"relative\" OR \"sister\" OR \"mother\" OR \"young\" OR \"age\" OR \"birth\" OR \"article\"",
+        "terms": [
+          "claimed",
+          "to",
+          "be",
+          "elon",
+          "musk",
+          "relative",
+          "sister",
+          "mother",
+          "young",
+          "age",
+          "birth",
+          "article"
+        ]
+      }
+    }
+  ],
+  "equivalent_query_repeats": 0,
+  "views": [
+    {
+      "round": 1,
+      "compacted": false,
+      "visible_evidence": [],
+      "shelf": [],
+      "shelf_evicted": []
+    },
+    {
+      "round": 2,
+      "compacted": false,
+      "visible_evidence": [],
+      "shelf": [],
+      "shelf_evicted": []
+    },
+    {
+      "round": 3,
+      "compacted": false,
+      "visible_evidence": [],
+      "shelf": [],
+      "shelf_evicted": []
+    },
+    {
+      "round": 4,
+      "compacted": false,
+      "visible_evidence": [
+        "e1"
+      ],
+      "shelf": [],
+      "shelf_evicted": []
+    }
+  ],
+  "delivered_refs": [
+    "e1"
+  ],
+  "submitted_refs": [
+    "e1"
+  ],
+  "text_included": true,
+  "limitations": [
+    "Equivalence is compiler equality, not semantic identity or wasted-search proof",
+    "Raw-window visibility/selection is not entailment or complete evidence coverage",
+    "No live q26 replay or independent answer scoring is performed"
+  ]
+}
