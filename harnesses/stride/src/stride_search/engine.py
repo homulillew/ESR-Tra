@@ -16,13 +16,16 @@ from .providers import ByteCounter, usage_of
 from .recovery import fit_result_group, make_group, note_blocks_finish, remember_response
 from .workflow import WorkflowState, navigation_result, check_search_recovery
 from .workflow_contract import WorkflowConfig, validate_call
+from .decision_protocol import identity as decision_identity
 
 
 class Harness:
     def __init__(self, question: str, retriever, *, path=":memory:", config: Config | None = None,
                  counter=None, clock: Callable[[], float] = time.monotonic,
                  validation_feedback: str = "legacy", answer_contract: str = "legacy",
-                 workflow: WorkflowConfig | None = None):
+                 workflow: WorkflowConfig | None = None, decision_protocol: str = "baseline"):
+        decision_identity(decision_protocol)
+        self.decision_protocol = decision_protocol
         self.workflow = WorkflowState(workflow or WorkflowConfig())
         if answer_contract not in ANSWER_CONTRACTS:
             raise ValueError("Unknown answer contract")
@@ -52,7 +55,8 @@ class Harness:
             "counter": deepcopy(self.counter.identity), "search_capabilities": deepcopy(self.search_capabilities),
             "execution": "fresh_episode_only",
             **({"answer_contract": answer_contract} if answer_contract != "legacy" else {}),
-            **({"workflow_contract": self.workflow.options.identity()} if self.workflow.options.enabled else {})})
+            **({"workflow_contract": self.workflow.options.identity()} if self.workflow.options.enabled else {}),
+            **({"decision_protocol": decision_identity(decision_protocol)} if decision_protocol != "baseline" else {})})
 
     def set_answer_contract(self, value):
         if value not in ANSWER_CONTRACTS or self.terminal is not None:

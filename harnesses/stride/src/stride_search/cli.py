@@ -18,6 +18,7 @@ from .experiment import make_plan, read_cases, run_plan, summarize, write_new
 from .fixtures import smoke_corpus, smoke_model
 from .providers import AnthropicModel, ByteCounter, EchoRetriever, HFCounter, HTTP, OpenAIModel
 from .workflow_contract import WorkflowConfig, toolset
+from .decision_protocol import PROTOCOLS
 
 
 def _json(path): return loads(Path(path).read_text(encoding="utf-8"))
@@ -76,6 +77,7 @@ def parser():
     r.add_argument("--prefix-recall-excerpts",action="store_true"); r.add_argument("--max-batch",type=int,default=4); r.add_argument("--max-queries-per-search",type=int,default=3)
     r.add_argument("--context-mode",choices=["full","rolling"],default="rolling"); r.add_argument("--answer-prefix",default=""); r.add_argument("--answer-suffix",default="")
     r.add_argument("--answer-contract",choices=ANSWER_CONTRACTS,default=INTEGER_ANSWER)
+    r.add_argument("--decision-protocol", choices=PROTOCOLS, default="baseline")
     fp=commands.add_parser("plan")
     for flag in ("questions","config","arms","identities","output"): fp.add_argument("--"+flag,required=True)
     fp.add_argument("--seed",type=int,default=0); fp.add_argument("--repeats",type=int,default=1)
@@ -110,7 +112,7 @@ def execute(args):
         raise ValueError("Token-mode response reserve must cover max-output-tokens")
     model=_model(args,http); question=Path(args.question_file).read_text(encoding="utf-8"); retriever=_retriever(args,http); h=None
     try:
-        h=Harness(question,retriever,path=args.db,config=config,counter=counter,answer_contract=args.answer_contract,workflow=_workflow(args)); h.run(model); return h.archive.report()
+        h=Harness(question,retriever,path=args.db,config=config,counter=counter,answer_contract=args.answer_contract,workflow=_workflow(args),decision_protocol=args.decision_protocol); h.run(model); return h.archive.report()
     finally:
         if h is not None:h.close()
         if callable(getattr(retriever,"close",None)):retriever.close()

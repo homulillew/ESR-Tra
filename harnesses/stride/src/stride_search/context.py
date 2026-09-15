@@ -5,6 +5,7 @@ from copy import deepcopy
 
 from .contract import system_message, ContractError, canonical
 from .workflow_contract import POLICY, toolset
+from .decision_protocol import PROTOCOLS
 
 
 def build(harness, model, counter, *, final: bool, output_limit: int, groups=None):
@@ -27,7 +28,7 @@ def build(harness, model, counter, *, final: bool, output_limit: int, groups=Non
                       if harness.archive.evidence(e)["document"] == ref][-4:]
             documents.append({"ref": ref, "title": doc["title"][:160], "read_ranges": [
                 {"ref": v["ref"], "start": v["start"], "end": v["end"]} for v in ranges]})
-        policy = system_message(harness.answer_contract) + (POLICY if harness.workflow.options.enabled else "")
+        policy = system_message(harness.answer_contract) + (POLICY if harness.workflow.options.enabled else "") + PROTOCOLS[harness.decision_protocol]
         messages = [{"role": "system", "content": policy}, {"role": "user", "content": harness.question}]
         visible, issued = set(), list(nav)
         for group in history:
