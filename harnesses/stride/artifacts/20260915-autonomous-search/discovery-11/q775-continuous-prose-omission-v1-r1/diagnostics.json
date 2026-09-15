@@ -1,0 +1,1176 @@
+{
+  "protocol": "stride-search-3",
+  "head": "ac22fedf94944a2b62f182e05b37288da9fd2383b05d3e97ddaba62b0f4f6e2a",
+  "outcome": "model_budget",
+  "formal_correct": null,
+  "model_attempts": 16,
+  "backend_attempts": 43,
+  "queries": [
+    {
+      "round": 1,
+      "top_k": 10,
+      "equivalence_key": "9f38b5dda22923cd933efb2c959069a443c62632857f1a4874f2a86e67459c68",
+      "cached": false,
+      "query_sha256": "96e54c068c088dc1275943d4c4952d1b05475d0051dd8653d22c9c121b8cf95d",
+      "query": "literary award created founded 2000s international book prize",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"literary\" OR \"award\" OR \"created\" OR \"founded\" OR \"2000s\" OR \"international\" OR \"book\" OR \"prize\"",
+        "terms": [
+          "literary",
+          "award",
+          "created",
+          "founded",
+          "2000s",
+          "international",
+          "book",
+          "prize"
+        ]
+      }
+    },
+    {
+      "round": 1,
+      "top_k": 10,
+      "equivalence_key": "4acdac22bf3a89843dea0f48d1e798fa2bfc21d1b9e7d2375bac10ed3bb29945",
+      "cached": false,
+      "query_sha256": "2bd09914b21004956215c5749fd1f9165d3f4cf99c8621746af83462ffeaea75",
+      "query": "book award established 2000s translated twenty five languages",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"book\" OR \"award\" OR \"established\" OR \"2000s\" OR \"translated\" OR \"twenty\" OR \"five\" OR \"languages\"",
+        "terms": [
+          "book",
+          "award",
+          "established",
+          "2000s",
+          "translated",
+          "twenty",
+          "five",
+          "languages"
+        ]
+      }
+    },
+    {
+      "round": 1,
+      "top_k": 10,
+      "equivalence_key": "ec5ea6c9544c5a01ad0df46b374f56825c9179a3feb0538ab33ff963dbcfabfc",
+      "cached": false,
+      "query_sha256": "4168c03adb0804b2e2349eb7e8ecc4db219fa31b9d9758d3fab1630374b92cca",
+      "query": "international literary prize founded 2000s debut",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"international\" OR \"literary\" OR \"prize\" OR \"founded\" OR \"2000s\" OR \"debut\"",
+        "terms": [
+          "international",
+          "literary",
+          "prize",
+          "founded",
+          "2000s",
+          "debut"
+        ]
+      }
+    },
+    {
+      "round": 2,
+      "top_k": 10,
+      "equivalence_key": "8e1c9a8450ea400a2cac2285a811bba6a29fd20037a1308522e3611379b9237b",
+      "cached": false,
+      "query_sha256": "a335d04a5d0e0285e77ac2fa1b144fb13f6593d8086ed6b28899837faa93b9a8",
+      "query": "International Booker Prize established 2005 Man Booker International",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"international\" OR \"booker\" OR \"prize\" OR \"established\" OR \"2005\" OR \"man\"",
+        "terms": [
+          "international",
+          "booker",
+          "prize",
+          "established",
+          "2005",
+          "man"
+        ]
+      }
+    },
+    {
+      "round": 2,
+      "top_k": 10,
+      "equivalence_key": "6c4d4390427256c8edd2f5111ebf3c12a85a31fca962ec604c2764576ecb0b73",
+      "cached": false,
+      "query_sha256": "6e2b7fa434cac5487d27987eff6cc0657cfc8719c8efc99b89b2e6212941df0d",
+      "query": "Han Kang The Vegetarian won 2016 International Booker Prize",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"han\" OR \"kang\" OR \"the\" OR \"vegetarian\" OR \"won\" OR \"2016\" OR \"international\" OR \"booker\" OR \"prize\"",
+        "terms": [
+          "han",
+          "kang",
+          "the",
+          "vegetarian",
+          "won",
+          "2016",
+          "international",
+          "booker",
+          "prize"
+        ]
+      }
+    },
+    {
+      "round": 2,
+      "top_k": 10,
+      "equivalence_key": "ce3a3fe6c84aa26ecbedb297b1d9e43098820a4d6a8c36fb9fa10b38da678f9b",
+      "cached": false,
+      "query_sha256": "fa0fa64d829d45ab06ffd5b04f641671d883027a588a4a960290e50ef33df4f7",
+      "query": "Hwang Sok-yong grew up Seoul biography",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"hwang\" OR \"sok\" OR \"yong\" OR \"grew\" OR \"up\" OR \"seoul\" OR \"biography\"",
+        "terms": [
+          "hwang",
+          "sok",
+          "yong",
+          "grew",
+          "up",
+          "seoul",
+          "biography"
+        ]
+      }
+    },
+    {
+      "round": 3,
+      "top_k": 10,
+      "equivalence_key": "9c112cf1058c8b0852ce5c774fa9374a2627664d98df40b0f58075faa23dda92",
+      "cached": false,
+      "query_sha256": "cf9b3899e2943df70bb5e0b6d5237b3fde51ed7655e288ef8863ba09a9da6887",
+      "query": "International Booker Prize 2016 longlist shortlist nominees",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"international\" OR \"booker\" OR \"prize\" OR \"2016\" OR \"longlist\" OR \"shortlist\" OR \"nominees\"",
+        "terms": [
+          "international",
+          "booker",
+          "prize",
+          "2016",
+          "longlist",
+          "shortlist",
+          "nominees"
+        ]
+      }
+    },
+    {
+      "round": 3,
+      "top_k": 10,
+      "equivalence_key": "c9b4997f4e51513d997f313f8a0cf2b731369c92cfa02c5d8875ab0274e86ca8",
+      "cached": false,
+      "query_sha256": "47e868af1f672aa3183206017902d734fc49496fb0e6878f5512ed6b4d80c4a4",
+      "query": "International Booker Prize 2016 finalists list",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"international\" OR \"booker\" OR \"prize\" OR \"2016\" OR \"finalists\" OR \"list\"",
+        "terms": [
+          "international",
+          "booker",
+          "prize",
+          "2016",
+          "finalists",
+          "list"
+        ]
+      }
+    },
+    {
+      "round": 3,
+      "top_k": 10,
+      "equivalence_key": "1441d4505b75f3b3126be73bbb7b426fa8c1d92b1697ea01f13e587f6517c7a6",
+      "cached": false,
+      "query_sha256": "a1e16dc57fa50454cbbed0f1c95d5809e7c9f5940582028e83599a4b7424e924",
+      "query": "Man Booker International 2016 longlist books",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"man\" OR \"booker\" OR \"international\" OR \"2016\" OR \"longlist\" OR \"books\"",
+        "terms": [
+          "man",
+          "booker",
+          "international",
+          "2016",
+          "longlist",
+          "books"
+        ]
+      }
+    },
+    {
+      "round": 3,
+      "top_k": 10,
+      "equivalence_key": "c4fdc4229ee9195e721767f27343b117f75e589d700426e3761633d3275871d6",
+      "cached": false,
+      "query_sha256": "8606ff101f1efce9e8c796e09d949ff8ae19440d37aed6379e5422df0b560556",
+      "query": "Han Kang born Gwangju biography",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"han\" OR \"kang\" OR \"born\" OR \"gwangju\" OR \"biography\"",
+        "terms": [
+          "han",
+          "kang",
+          "born",
+          "gwangju",
+          "biography"
+        ]
+      }
+    },
+    {
+      "round": 3,
+      "top_k": 10,
+      "equivalence_key": "6394363f3d8bbf9a711e30c9bb6d65bab760a4984efae7829865f2c0d9a8a1e1",
+      "cached": false,
+      "query_sha256": "2f35adf995c9c0ce2675a5b17ca3bfe95385e1a471d33ced6895c4ef5910aadf",
+      "query": "Han Kang birthplace born city",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"han\" OR \"kang\" OR \"birthplace\" OR \"born\" OR \"city\"",
+        "terms": [
+          "han",
+          "kang",
+          "birthplace",
+          "born",
+          "city"
+        ]
+      }
+    },
+    {
+      "round": 3,
+      "top_k": 10,
+      "equivalence_key": "d9bcec11f78c3393038def38c3d8f689bb4c789a7d3d8b9793413f5e473df0a5",
+      "cached": false,
+      "query_sha256": "2476fa39f8f8f3a3f5e54d2022b579787a50131846a8261a91efc029d4782358",
+      "query": "Han Kang writer born where",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"han\" OR \"kang\" OR \"writer\" OR \"born\" OR \"where\"",
+        "terms": [
+          "han",
+          "kang",
+          "writer",
+          "born",
+          "where"
+        ]
+      }
+    },
+    {
+      "round": 4,
+      "top_k": 10,
+      "equivalence_key": "791cd7036b7a6fc7bd742220d5411ceb77a754e40bc8ee2a8751ea29b040caf7",
+      "cached": false,
+      "query_sha256": "bc6f5d46349cce81f8a5cce05892ecee331563dd990ec42b8af408af2b2a613e",
+      "query": "Han Kang Wikipedia born Gwangju November 1970",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"han\" OR \"kang\" OR \"wikipedia\" OR \"born\" OR \"gwangju\" OR \"november\" OR \"1970\"",
+        "terms": [
+          "han",
+          "kang",
+          "wikipedia",
+          "born",
+          "gwangju",
+          "november",
+          "1970"
+        ]
+      }
+    },
+    {
+      "round": 4,
+      "top_k": 10,
+      "equivalence_key": "3e7a18118f53fd105a8ce3200e6fce00b682487a48d75f714631eddf33ebc78b",
+      "cached": false,
+      "query_sha256": "aff077a6fa408912b68dfb248fc4cd6476f6e5a62e82a6ac822225e1692cf800",
+      "query": "International Booker Prize 2016 shortlist six books",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"international\" OR \"booker\" OR \"prize\" OR \"2016\" OR \"shortlist\" OR \"six\" OR \"books\"",
+        "terms": [
+          "international",
+          "booker",
+          "prize",
+          "2016",
+          "shortlist",
+          "six",
+          "books"
+        ]
+      }
+    },
+    {
+      "round": 4,
+      "top_k": 10,
+      "equivalence_key": "47a111c0b972627887453d91c772281de65ed8990fd6083685e013ebc12c3066",
+      "cached": false,
+      "query_sha256": "74e24900a582c6e7e869c71cf945628db4a7b547ed8cfe963020622cf8892a68",
+      "query": "Man Booker International 2016 shortlist A Whole Life Tram 83",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"man\" OR \"booker\" OR \"international\" OR \"2016\" OR \"shortlist\" OR \"a\" OR \"whole\" OR \"life\" OR \"tram\" OR \"83\"",
+        "terms": [
+          "man",
+          "booker",
+          "international",
+          "2016",
+          "shortlist",
+          "a",
+          "whole",
+          "life",
+          "tram",
+          "83"
+        ]
+      }
+    },
+    {
+      "round": 5,
+      "top_k": 10,
+      "equivalence_key": "566dbbe70722fb76fba33487c9619394cca1a9894e3d1181826a49d353193880",
+      "cached": false,
+      "query_sha256": "d1eb4159a6d0e0a78f912afe15e3293532427b626d38a1a3846dc0db4f631ca6",
+      "query": "International Booker Prize 2016 shortlist six books The Vegetarian A Whole Life The Four Books",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"international\" OR \"booker\" OR \"prize\" OR \"2016\" OR \"shortlist\" OR \"six\" OR \"books\" OR \"the\" OR \"vegetarian\" OR \"a\" OR \"whole\" OR \"life\" OR \"four\"",
+        "terms": [
+          "international",
+          "booker",
+          "prize",
+          "2016",
+          "shortlist",
+          "six",
+          "books",
+          "the",
+          "vegetarian",
+          "a",
+          "whole",
+          "life",
+          "four"
+        ]
+      }
+    },
+    {
+      "round": 5,
+      "top_k": 10,
+      "equivalence_key": "b74c470d24ca50aee07562f34531596ad71fafb5f8d62f9145dfc8e37baf1621",
+      "cached": false,
+      "query_sha256": "d159c43a3f827e42cd7f7d35f54c641284f16ba00b3d90f08a945832b9fb8f42",
+      "query": "Man Booker International 2016 shortlist Yan Lianke The Four Books",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"man\" OR \"booker\" OR \"international\" OR \"2016\" OR \"shortlist\" OR \"yan\" OR \"lianke\" OR \"the\" OR \"four\" OR \"books\"",
+        "terms": [
+          "man",
+          "booker",
+          "international",
+          "2016",
+          "shortlist",
+          "yan",
+          "lianke",
+          "the",
+          "four",
+          "books"
+        ]
+      }
+    },
+    {
+      "round": 5,
+      "top_k": 10,
+      "equivalence_key": "b22803700fbc30134f72f94bbc271fb7d17c32e811aaf89b8e494d1556a3d90f",
+      "cached": false,
+      "query_sha256": "a74eba4cf51666b7872a592257f198fb7518963622d76cb6f3e44bd1f0edb056",
+      "query": "2016 International Booker shortlist A Whole Life Robert Seethaler Tram 83",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"2016\" OR \"international\" OR \"booker\" OR \"shortlist\" OR \"a\" OR \"whole\" OR \"life\" OR \"robert\" OR \"seethaler\" OR \"tram\" OR \"83\"",
+        "terms": [
+          "2016",
+          "international",
+          "booker",
+          "shortlist",
+          "a",
+          "whole",
+          "life",
+          "robert",
+          "seethaler",
+          "tram",
+          "83"
+        ]
+      }
+    },
+    {
+      "round": 6,
+      "top_k": 10,
+      "equivalence_key": "32c51367ecb107b53397f66711f715c2f80e5c09d31749475efa3e8cc6e3e0f3",
+      "cached": false,
+      "query_sha256": "fc3b1858ac46c217ad116bff7c7affbc78d89d7551432d9f3fcf7f0bb507b11d",
+      "query": "novel translated into over 25 languages International Booker Prize shortlist",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"novel\" OR \"translated\" OR \"into\" OR \"over\" OR \"25\" OR \"languages\" OR \"international\" OR \"booker\" OR \"prize\" OR \"shortlist\"",
+        "terms": [
+          "novel",
+          "translated",
+          "into",
+          "over",
+          "25",
+          "languages",
+          "international",
+          "booker",
+          "prize",
+          "shortlist"
+        ]
+      }
+    },
+    {
+      "round": 6,
+      "top_k": 10,
+      "equivalence_key": "968e7c1223d68f4a4b492517dbd8af14e023360bfa640718ad7b5ae1eead36fd",
+      "cached": false,
+      "query_sha256": "8915184d76ff3bab4814614b50d65ee8382f433281b0fa4cf445be403e862ef9",
+      "query": "book translated into more than 25 languages Man Booker International shortlisted",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"book\" OR \"translated\" OR \"into\" OR \"more\" OR \"than\" OR \"25\" OR \"languages\" OR \"man\" OR \"booker\" OR \"international\" OR \"shortlisted\"",
+        "terms": [
+          "book",
+          "translated",
+          "into",
+          "more",
+          "than",
+          "25",
+          "languages",
+          "man",
+          "booker",
+          "international",
+          "shortlisted"
+        ]
+      }
+    },
+    {
+      "round": 6,
+      "top_k": 10,
+      "equivalence_key": "dc5dc8a5b5966489f3be38e921bc34e8ea73b24f46c72e0561ceedfc6573013a",
+      "cached": false,
+      "query_sha256": "00024a9f49c4dfd3565c2192acd70c4ef9bd2a9a0ce032c2f6d8bf4a0c426de7",
+      "query": "translated into over twenty five languages novel International Booker contender",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"translated\" OR \"into\" OR \"over\" OR \"twenty\" OR \"five\" OR \"languages\" OR \"novel\" OR \"international\" OR \"booker\" OR \"contender\"",
+        "terms": [
+          "translated",
+          "into",
+          "over",
+          "twenty",
+          "five",
+          "languages",
+          "novel",
+          "international",
+          "booker",
+          "contender"
+        ]
+      }
+    },
+    {
+      "round": 6,
+      "top_k": 10,
+      "equivalence_key": "f2f29c99c0d955bf683068760ff772c07aee4b53b79cf45de4ffc923e7032058",
+      "cached": false,
+      "query_sha256": "c7334071b0f9130f82df6b915124365267bb31451ebd94c834f651dc3dc99f7f",
+      "query": "The Vegetarian Han Kang translated into 25 languages",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"the\" OR \"vegetarian\" OR \"han\" OR \"kang\" OR \"translated\" OR \"into\" OR \"25\" OR \"languages\"",
+        "terms": [
+          "the",
+          "vegetarian",
+          "han",
+          "kang",
+          "translated",
+          "into",
+          "25",
+          "languages"
+        ]
+      }
+    },
+    {
+      "round": 6,
+      "top_k": 10,
+      "equivalence_key": "88b608f85b087221246b5876dcc1428f80c9162e1b2644c56252ac8b6ddeab70",
+      "cached": false,
+      "query_sha256": "0ba9b92212afdb29665e8fcf2f9cfa1b2c3454044ee52b012d4069b1623f7b0f",
+      "query": "The White Book Han Kang translated into over twenty languages",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"the\" OR \"white\" OR \"book\" OR \"han\" OR \"kang\" OR \"translated\" OR \"into\" OR \"over\" OR \"twenty\" OR \"languages\"",
+        "terms": [
+          "the",
+          "white",
+          "book",
+          "han",
+          "kang",
+          "translated",
+          "into",
+          "over",
+          "twenty",
+          "languages"
+        ]
+      }
+    },
+    {
+      "round": 6,
+      "top_k": 10,
+      "equivalence_key": "7c96ee494010dcc7d181c89915e45c5b0a0851891b213ddd29ed416732f50293",
+      "cached": false,
+      "query_sha256": "a7260510bcc6d8482143671ec6bc08f14a4abd8dfa7d558fd0be26f48aea87ab",
+      "query": "Human Acts Han Kang translated into languages",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"human\" OR \"acts\" OR \"han\" OR \"kang\" OR \"translated\" OR \"into\" OR \"languages\"",
+        "terms": [
+          "human",
+          "acts",
+          "han",
+          "kang",
+          "translated",
+          "into",
+          "languages"
+        ]
+      }
+    },
+    {
+      "round": 7,
+      "top_k": 10,
+      "equivalence_key": "5919c10cd5e51daced01b6d966d79b04c0907b7715a49ccf3fe7cd14b464f3f8",
+      "cached": false,
+      "query_sha256": "208a778e67adf6a489aba7e354e54bcb3dca8b121f6364ac613421bb1237ffe1",
+      "query": "Han Kang Wikipedia biography born Gwangju",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"han\" OR \"kang\" OR \"wikipedia\" OR \"biography\" OR \"born\" OR \"gwangju\"",
+        "terms": [
+          "han",
+          "kang",
+          "wikipedia",
+          "biography",
+          "born",
+          "gwangju"
+        ]
+      }
+    },
+    {
+      "round": 7,
+      "top_k": 10,
+      "equivalence_key": "f2f29c99c0d955bf683068760ff772c07aee4b53b79cf45de4ffc923e7032058",
+      "cached": true,
+      "query_sha256": "c7334071b0f9130f82df6b915124365267bb31451ebd94c834f651dc3dc99f7f",
+      "query": "The Vegetarian Han Kang translated into 25 languages",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"the\" OR \"vegetarian\" OR \"han\" OR \"kang\" OR \"translated\" OR \"into\" OR \"25\" OR \"languages\"",
+        "terms": [
+          "the",
+          "vegetarian",
+          "han",
+          "kang",
+          "translated",
+          "into",
+          "25",
+          "languages"
+        ]
+      }
+    },
+    {
+      "round": 7,
+      "top_k": 10,
+      "equivalence_key": "210ca5af383389fc89934739d57b325a239760ec1b13ae1e255fdb65335e582a",
+      "cached": false,
+      "query_sha256": "bc0fc632f99be5c043eb434b4a3506aa792855c08c1be37b37ce7cb4703cdb9c",
+      "query": "Han Kang born Gwangju South Korea author",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"han\" OR \"kang\" OR \"born\" OR \"gwangju\" OR \"south\" OR \"korea\" OR \"author\"",
+        "terms": [
+          "han",
+          "kang",
+          "born",
+          "gwangju",
+          "south",
+          "korea",
+          "author"
+        ]
+      }
+    },
+    {
+      "round": 8,
+      "top_k": 8,
+      "equivalence_key": "ba0e21c233d5b5f36cec71c09013e41b122a2bc832ee2749c0a6681e51308908",
+      "cached": false,
+      "query_sha256": "c7334071b0f9130f82df6b915124365267bb31451ebd94c834f651dc3dc99f7f",
+      "query": "The Vegetarian Han Kang translated into 25 languages",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"the\" OR \"vegetarian\" OR \"han\" OR \"kang\" OR \"translated\" OR \"into\" OR \"25\" OR \"languages\"",
+        "terms": [
+          "the",
+          "vegetarian",
+          "han",
+          "kang",
+          "translated",
+          "into",
+          "25",
+          "languages"
+        ]
+      }
+    },
+    {
+      "round": 8,
+      "top_k": 8,
+      "equivalence_key": "9bdae7078b9f5b44ec98d7c4718d329573026c66a6dc1a5e4b71cb46edcedd92",
+      "cached": false,
+      "query_sha256": "1c908a8b63aafa8812f3893b71df4c770dad4d62e03ada6c867b39ca0e5f6b8d",
+      "query": "The Vegetarian Han Kang over twenty languages translation rights",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"the\" OR \"vegetarian\" OR \"han\" OR \"kang\" OR \"over\" OR \"twenty\" OR \"languages\" OR \"translation\" OR \"rights\"",
+        "terms": [
+          "the",
+          "vegetarian",
+          "han",
+          "kang",
+          "over",
+          "twenty",
+          "languages",
+          "translation",
+          "rights"
+        ]
+      }
+    },
+    {
+      "round": 9,
+      "top_k": 8,
+      "equivalence_key": "eecb770f18eeadd2188935bacb2a9c6436c39b8067fcceaebc1c720401bf3c2c",
+      "cached": false,
+      "query_sha256": "752a01966eaa81ca27dde33e678692014dab34f992de421b19e89c5b1671666d",
+      "query": "Man Asian Literary Prize 2016 winner",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"man\" OR \"asian\" OR \"literary\" OR \"prize\" OR \"2016\" OR \"winner\"",
+        "terms": [
+          "man",
+          "asian",
+          "literary",
+          "prize",
+          "2016",
+          "winner"
+        ]
+      }
+    },
+    {
+      "round": 9,
+      "top_k": 8,
+      "equivalence_key": "4842d4f340d0c930e6fa61b57fc34658acda85a4cf6972aea79ebed2faba965d",
+      "cached": false,
+      "query_sha256": "a0544f7a4b4ba0f213ba16437eb4fe8bbd22024ee77b803ec3e9f8b9d2abf6b4",
+      "query": "Man Asian Literary Prize 2016 winning book author born Gwangju",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"man\" OR \"asian\" OR \"literary\" OR \"prize\" OR \"2016\" OR \"winning\" OR \"book\" OR \"author\" OR \"born\" OR \"gwangju\"",
+        "terms": [
+          "man",
+          "asian",
+          "literary",
+          "prize",
+          "2016",
+          "winning",
+          "book",
+          "author",
+          "born",
+          "gwangju"
+        ]
+      }
+    },
+    {
+      "round": 10,
+      "top_k": 8,
+      "equivalence_key": "eecb770f18eeadd2188935bacb2a9c6436c39b8067fcceaebc1c720401bf3c2c",
+      "cached": true,
+      "query_sha256": "752a01966eaa81ca27dde33e678692014dab34f992de421b19e89c5b1671666d",
+      "query": "Man Asian Literary Prize 2016 winner",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"man\" OR \"asian\" OR \"literary\" OR \"prize\" OR \"2016\" OR \"winner\"",
+        "terms": [
+          "man",
+          "asian",
+          "literary",
+          "prize",
+          "2016",
+          "winner"
+        ]
+      }
+    },
+    {
+      "round": 10,
+      "top_k": 8,
+      "equivalence_key": "3588776eaa3e22af4be37e0948a06d38874542ecde11a606dd1798066a74ee42",
+      "cached": false,
+      "query_sha256": "ac3115bbecfc62a4c0a444eadaff6d7d41a6a49143d4bac1c5893fad96ed820b",
+      "query": "Man Asian Literary Prize 2016 shortlist winner book",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"man\" OR \"asian\" OR \"literary\" OR \"prize\" OR \"2016\" OR \"shortlist\" OR \"winner\" OR \"book\"",
+        "terms": [
+          "man",
+          "asian",
+          "literary",
+          "prize",
+          "2016",
+          "shortlist",
+          "winner",
+          "book"
+        ]
+      }
+    },
+    {
+      "round": 11,
+      "top_k": 8,
+      "equivalence_key": "8b79cbe4d60a93c10314f8d7fb01df6615664ca6dd01c05891e960d4f4829c02",
+      "cached": false,
+      "query_sha256": "b4a1f74ce203a9b439d87b762e08e1c222d67535cd2f58c3fbdbbaa64bf08685",
+      "query": "The Vegetarian Han Kang sold into 27 languages",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"the\" OR \"vegetarian\" OR \"han\" OR \"kang\" OR \"sold\" OR \"into\" OR \"27\" OR \"languages\"",
+        "terms": [
+          "the",
+          "vegetarian",
+          "han",
+          "kang",
+          "sold",
+          "into",
+          "27",
+          "languages"
+        ]
+      }
+    },
+    {
+      "round": 11,
+      "top_k": 8,
+      "equivalence_key": "2b75e6ba8ac9319d721fd0d96eb95abc8fb5f3613a8fceb58d4ca7bab8d2d72e",
+      "cached": false,
+      "query_sha256": "fb7a0726b19ab6b812aac3eeebc08ab27f5cdc4d0dfffd0191e7ae16208cfd56",
+      "query": "The Vegetarian Han Kang rights sold into 29 languages",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"the\" OR \"vegetarian\" OR \"han\" OR \"kang\" OR \"rights\" OR \"sold\" OR \"into\" OR \"29\" OR \"languages\"",
+        "terms": [
+          "the",
+          "vegetarian",
+          "han",
+          "kang",
+          "rights",
+          "sold",
+          "into",
+          "29",
+          "languages"
+        ]
+      }
+    },
+    {
+      "round": 12,
+      "top_k": 8,
+      "equivalence_key": "eecb770f18eeadd2188935bacb2a9c6436c39b8067fcceaebc1c720401bf3c2c",
+      "cached": true,
+      "query_sha256": "752a01966eaa81ca27dde33e678692014dab34f992de421b19e89c5b1671666d",
+      "query": "Man Asian Literary Prize 2016 winner",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"man\" OR \"asian\" OR \"literary\" OR \"prize\" OR \"2016\" OR \"winner\"",
+        "terms": [
+          "man",
+          "asian",
+          "literary",
+          "prize",
+          "2016",
+          "winner"
+        ]
+      }
+    },
+    {
+      "round": 12,
+      "top_k": 8,
+      "equivalence_key": "4350d3a22a637f1b4002f4b701ecec4566454d811c6bce4f9488d17bd4ecaf88",
+      "cached": false,
+      "query_sha256": "d21a73058339cf6ad71bc128fbf722a5ecbced765e859202f89f9aed009376ac",
+      "query": "Man Asian Literary Prize 2015 winner",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"man\" OR \"asian\" OR \"literary\" OR \"prize\" OR \"2015\" OR \"winner\"",
+        "terms": [
+          "man",
+          "asian",
+          "literary",
+          "prize",
+          "2015",
+          "winner"
+        ]
+      }
+    },
+    {
+      "round": 12,
+      "top_k": 8,
+      "equivalence_key": "6afc08356a8af7e24b65e6a4ffb0403d6236dbc2ba0e9163773e2790a2299d5d",
+      "cached": false,
+      "query_sha256": "39fc884ad7f39c90891546c211b27386b92e19ed5b8e3bda24ff203b954913e1",
+      "query": "Man Asian Literary Prize winners list 2014 2015 2016",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"man\" OR \"asian\" OR \"literary\" OR \"prize\" OR \"winners\" OR \"list\" OR \"2014\" OR \"2015\" OR \"2016\"",
+        "terms": [
+          "man",
+          "asian",
+          "literary",
+          "prize",
+          "winners",
+          "list",
+          "2014",
+          "2015",
+          "2016"
+        ]
+      }
+    },
+    {
+      "round": 13,
+      "top_k": 8,
+      "equivalence_key": "dede2f3eb35d38cce2d33e266a7d15a6c3f73ea78c1742f7f795d5c0d8f3b2d9",
+      "cached": false,
+      "query_sha256": "4c232da50cf5c004f3f60797bb93d95b491d46dc8fe9cbcb878f6df7cbb88739",
+      "query": "The Vegetarian Han Kang translated into 27 languages",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"the\" OR \"vegetarian\" OR \"han\" OR \"kang\" OR \"translated\" OR \"into\" OR \"27\" OR \"languages\"",
+        "terms": [
+          "the",
+          "vegetarian",
+          "han",
+          "kang",
+          "translated",
+          "into",
+          "27",
+          "languages"
+        ]
+      }
+    },
+    {
+      "round": 13,
+      "top_k": 8,
+      "equivalence_key": "affec6446476502eb18959009d37a15807669d36cd394b4b8ea71658b4ecd1a5",
+      "cached": false,
+      "query_sha256": "62c7bb3789bf5631774b7f023a54a745648073cd6bed150e52e8a746f289e692",
+      "query": "Han Kang born Gwangju South Korea",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"han\" OR \"kang\" OR \"born\" OR \"gwangju\" OR \"south\" OR \"korea\"",
+        "terms": [
+          "han",
+          "kang",
+          "born",
+          "gwangju",
+          "south",
+          "korea"
+        ]
+      }
+    },
+    {
+      "round": 14,
+      "top_k": 8,
+      "equivalence_key": "d98a50058865be815af6630e6ef76594d4eb3271fd637cfe889ebde6d2c30ee6",
+      "cached": false,
+      "query_sha256": "7fae1c8721c4f0eb4bc70706fd97e17f1ec5bf134ec945a20ae23fdab75faa6c",
+      "query": "The Vegetarian Han Kang rights sold into 27 languages",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"the\" OR \"vegetarian\" OR \"han\" OR \"kang\" OR \"rights\" OR \"sold\" OR \"into\" OR \"27\" OR \"languages\"",
+        "terms": [
+          "the",
+          "vegetarian",
+          "han",
+          "kang",
+          "rights",
+          "sold",
+          "into",
+          "27",
+          "languages"
+        ]
+      }
+    },
+    {
+      "round": 14,
+      "top_k": 8,
+      "equivalence_key": "7c5416e7b5a57eebb358e39daba21354ad33828be6cfacde0483c792923e603e",
+      "cached": false,
+      "query_sha256": "0228db3b8f1935ae72ba552098a0d05139f23037c7b42bf0bc8c3ef7fc8a62d8",
+      "query": "Man Booker International Prize created 2004 2005 established",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"man\" OR \"booker\" OR \"international\" OR \"prize\" OR \"created\" OR \"2004\" OR \"2005\" OR \"established\"",
+        "terms": [
+          "man",
+          "booker",
+          "international",
+          "prize",
+          "created",
+          "2004",
+          "2005",
+          "established"
+        ]
+      }
+    },
+    {
+      "round": 15,
+      "top_k": 6,
+      "equivalence_key": "d78f81e60ccafd5083cd13defa98dd544b4d6a0ec6bf7008890b630d142bde70",
+      "cached": false,
+      "query_sha256": "32beee7ce2ca02c31b898d7fed9694dd321354259199e693c9455f289dc3bdb9",
+      "query": "Man Booker International Prize established 2004 first awarded 2005",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"man\" OR \"booker\" OR \"international\" OR \"prize\" OR \"established\" OR \"2004\" OR \"first\" OR \"awarded\" OR \"2005\"",
+        "terms": [
+          "man",
+          "booker",
+          "international",
+          "prize",
+          "established",
+          "2004",
+          "first",
+          "awarded",
+          "2005"
+        ]
+      }
+    },
+    {
+      "round": 15,
+      "top_k": 6,
+      "equivalence_key": "dd062dd403edc2d4e380b1c8ada57534645a9449ac71ecfe9fe35ba5ce6c88e2",
+      "cached": false,
+      "query_sha256": "12d0c781578dcdece62f2a1cab5a1e269de6a15397cc81cb4e3f038bd6653f01",
+      "query": "International Booker Prize history founded 2004",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"international\" OR \"booker\" OR \"prize\" OR \"history\" OR \"founded\" OR \"2004\"",
+        "terms": [
+          "international",
+          "booker",
+          "prize",
+          "history",
+          "founded",
+          "2004"
+        ]
+      }
+    }
+  ],
+  "equivalent_query_repeats": 3,
+  "views": [
+    {
+      "round": 1,
+      "compacted": false,
+      "visible_evidence": [],
+      "shelf": [],
+      "shelf_evicted": []
+    },
+    {
+      "round": 2,
+      "compacted": false,
+      "visible_evidence": [],
+      "shelf": [],
+      "shelf_evicted": []
+    },
+    {
+      "round": 3,
+      "compacted": false,
+      "visible_evidence": [],
+      "shelf": [],
+      "shelf_evicted": []
+    },
+    {
+      "round": 4,
+      "compacted": true,
+      "visible_evidence": [],
+      "shelf": [],
+      "shelf_evicted": []
+    },
+    {
+      "round": 5,
+      "compacted": true,
+      "visible_evidence": [
+        "e1"
+      ],
+      "shelf": [],
+      "shelf_evicted": []
+    },
+    {
+      "round": 6,
+      "compacted": true,
+      "visible_evidence": [
+        "e1",
+        "e2"
+      ],
+      "shelf": [],
+      "shelf_evicted": []
+    },
+    {
+      "round": 7,
+      "compacted": true,
+      "visible_evidence": [
+        "e1",
+        "e2"
+      ],
+      "shelf": [
+        "e1"
+      ],
+      "shelf_evicted": []
+    },
+    {
+      "round": 8,
+      "compacted": true,
+      "visible_evidence": [
+        "e1",
+        "e2",
+        "e3"
+      ],
+      "shelf": [
+        "e1",
+        "e2"
+      ],
+      "shelf_evicted": []
+    },
+    {
+      "round": 9,
+      "compacted": true,
+      "visible_evidence": [
+        "e1",
+        "e2",
+        "e3"
+      ],
+      "shelf": [
+        "e1",
+        "e2"
+      ],
+      "shelf_evicted": []
+    },
+    {
+      "round": 10,
+      "compacted": false,
+      "visible_evidence": [
+        "e1",
+        "e2",
+        "e3"
+      ],
+      "shelf": [
+        "e1",
+        "e2"
+      ],
+      "shelf_evicted": []
+    },
+    {
+      "round": 11,
+      "compacted": false,
+      "visible_evidence": [
+        "e1",
+        "e2",
+        "e3"
+      ],
+      "shelf": [
+        "e1",
+        "e2"
+      ],
+      "shelf_evicted": []
+    },
+    {
+      "round": 12,
+      "compacted": false,
+      "visible_evidence": [
+        "e1",
+        "e2",
+        "e3"
+      ],
+      "shelf": [
+        "e1",
+        "e2"
+      ],
+      "shelf_evicted": []
+    },
+    {
+      "round": 13,
+      "compacted": true,
+      "visible_evidence": [
+        "e1",
+        "e2",
+        "e3"
+      ],
+      "shelf": [
+        "e1",
+        "e2",
+        "e3"
+      ],
+      "shelf_evicted": []
+    },
+    {
+      "round": 14,
+      "compacted": false,
+      "visible_evidence": [
+        "e1",
+        "e2",
+        "e3"
+      ],
+      "shelf": [
+        "e1",
+        "e2",
+        "e3"
+      ],
+      "shelf_evicted": []
+    },
+    {
+      "round": 15,
+      "compacted": true,
+      "visible_evidence": [
+        "e1",
+        "e2",
+        "e3"
+      ],
+      "shelf": [
+        "e1",
+        "e2",
+        "e3"
+      ],
+      "shelf_evicted": []
+    },
+    {
+      "round": 16,
+      "compacted": false,
+      "visible_evidence": [
+        "e1",
+        "e2",
+        "e3",
+        "e4"
+      ],
+      "shelf": [
+        "e1",
+        "e2",
+        "e3"
+      ],
+      "shelf_evicted": []
+    }
+  ],
+  "delivered_refs": [
+    "e1",
+    "e2",
+    "e3",
+    "e4"
+  ],
+  "submitted_refs": [],
+  "text_included": true,
+  "limitations": [
+    "Equivalence is compiler equality, not semantic identity or wasted-search proof",
+    "Raw-window visibility/selection is not entailment or complete evidence coverage",
+    "No live q26 replay or independent answer scoring is performed"
+  ]
+}

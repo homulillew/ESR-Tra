@@ -1,0 +1,50 @@
+{
+  "event_count": 414,
+  "head": "ac22fedf94944a2b62f182e05b37288da9fd2383b05d3e97ddaba62b0f4f6e2a",
+  "protocol": "stride-search-3",
+  "answer_contract": "string-integer-v1",
+  "workflow_contract": {
+    "enabled": true,
+    "gap_state": true,
+    "guided_read": true,
+    "recovery_rounds": 2,
+    "repeat_threshold": 2,
+    "repetition": "bounded",
+    "reuse_results": true,
+    "version": "gap-workflow-v1"
+  },
+  "model_attempts": 16,
+  "backend_attempts": 43,
+  "actions_recorded": 22,
+  "executed_actions": 21,
+  "usage_known": {
+    "input_tokens": 267375,
+    "output_tokens": 2329,
+    "cache_read_tokens": 97920,
+    "cache_write_tokens": 0
+  },
+  "unknown_usage_calls": 0,
+  "outstanding_requests": [],
+  "formal_correct": null,
+  "recovery_events": {
+    "delivery_preflight": 15
+  },
+  "nonblocking_note_failures": 0,
+  "action_counts": {
+    "search": 18,
+    "read": 4
+  },
+  "action_error_counts": {
+    "final_only": 1
+  },
+  "final_phase_requests": 1,
+  "compaction_requests": 8,
+  "rounds_receiving_new_raw": 4,
+  "cache_query_hits": 3,
+  "unchanged_note_updates": 0,
+  "limitations": [
+    "No semantic judge has run",
+    "No resume or automatic reissue",
+    "Hashes are not adversarial authentication"
+  ]
+}

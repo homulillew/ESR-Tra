@@ -1,0 +1,243 @@
+{
+  "q775-baseline-r1": {
+    "terminal": {
+      "answer": "Akure",
+      "answer_representation": {
+        "input_type": "string",
+        "operation": "identity",
+        "rule": "string-integer-v1"
+      },
+      "basis": [
+        {
+          "document": "d40",
+          "document_chars": 17355,
+          "end": 3000,
+          "kind": "raw_evidence",
+          "ref": "e1",
+          "sha256": "79767844ce2071fc5dcf3fb0e64d0cade0ba154ef0fc324d0054c1c767e63138",
+          "snapshot": "90019ca46504785f620ef12f36abae20080c8c3bc7809053339e4beaa4deb2fd",
+          "start": 0
+        }
+      ],
+      "elapsed_seconds": 132.01113160001114,
+      "outcome": "submitted",
+      "refs": [
+        "e1"
+      ],
+      "semantic_status": "not_automatically_verified"
+    },
+    "model_attempts": 14,
+    "backend_attempts": 24,
+    "action_counts": {
+      "search": 20,
+      "read": 1,
+      "finish": 1
+    },
+    "action_error_counts": {
+      "arguments_invalid": 1,
+      "duplicate_query_blocked": 4
+    },
+    "usage_known": {
+      "input_tokens": 228027,
+      "output_tokens": 3727,
+      "cache_read_tokens": 104960,
+      "cache_write_tokens": 0
+    },
+    "cache_query_hits": 21,
+    "compaction_requests": 5,
+    "r1_response_sha256": "95a319fc05248428f0cbfa05f872c7a8af6956e8c27248f731c8e09c188ddf89",
+    "queries_in_valid_list_arguments": {
+      "total": 56,
+      "unique_exact": 23,
+      "repeated_occurrences": 33,
+      "includes_rejected_final_call": false
+    },
+    "windows": [
+      {
+        "ref": "e1",
+        "document": "d40",
+        "snapshot": "90019ca46504785f620ef12f36abae20080c8c3bc7809053339e4beaa4deb2fd",
+        "start": 0,
+        "end": 3000,
+        "sha256": "79767844ce2071fc5dcf3fb0e64d0cade0ba154ef0fc324d0054c1c767e63138",
+        "read_round": 3
+      }
+    ],
+    "source_review": {
+      "status": "partial",
+      "finding": "Birthplace supports named candidate; shared award, second book and city relationship not established.",
+      "judge_or_gold_read": false
+    },
+    "structural_check": true,
+    "paired_r1_bytes_equal": true,
+    "response_diverged_before_effective_projection": true
+  },
+  "q775-continuous-prose-omission-v1-r1": {
+    "terminal": {
+      "answer": "",
+      "elapsed_seconds": 147.85757679998642,
+      "outcome": "model_budget"
+    },
+    "model_attempts": 16,
+    "backend_attempts": 43,
+    "action_counts": {
+      "search": 18,
+      "read": 4
+    },
+    "action_error_counts": {
+      "final_only": 1
+    },
+    "usage_known": {
+      "input_tokens": 267375,
+      "output_tokens": 2329,
+      "cache_read_tokens": 97920,
+      "cache_write_tokens": 0
+    },
+    "cache_query_hits": 3,
+    "compaction_requests": 8,
+    "r1_response_sha256": "054aed0d54bb6643e9c2724cba95acbf8d45313f306dbb4d15225bd45ec98da5",
+    "queries_in_valid_list_arguments": {
+      "total": 46,
+      "unique_exact": 42,
+      "repeated_occurrences": 4,
+      "includes_rejected_final_call": true
+    },
+    "windows": [
+      {
+        "ref": "e1",
+        "document": "d33",
+        "snapshot": "cf73f3198b61e06ea1409d0fa598f3ca5393950bb56774813f67f99bb8d90e1d",
+        "start": 3585,
+        "end": 5590,
+        "sha256": "1d57ba6fe1ec2500b762edaa594992659fe35a6130ff2876a3ab9ec0b1d2ad3d",
+        "read_round": 4
+      },
+      {
+        "ref": "e2",
+        "document": "d5",
+        "snapshot": "25e42c9d9629a06063929aefe4e8f050cac2c095d797b7476410c1a6fe277c5a",
+        "start": 25007,
+        "end": 27249,
+        "sha256": "344484bdc42ae9da871c59569e92bd28f735887242cc377e73ef6f0a04d23171",
+        "read_round": 5
+      },
+      {
+        "ref": "e3",
+        "document": "d33",
+        "snapshot": "cf73f3198b61e06ea1409d0fa598f3ca5393950bb56774813f67f99bb8d90e1d",
+        "start": 0,
+        "end": 3000,
+        "sha256": "2d508167d68898ab9a94c04692e5dd49383dedb168f97d4bee80fdb0b10e35ba",
+        "read_round": 7
+      },
+      {
+        "ref": "e4",
+        "document": "d33",
+        "snapshot": "cf73f3198b61e06ea1409d0fa598f3ca5393950bb56774813f67f99bb8d90e1d",
+        "start": 0,
+        "end": 1200,
+        "sha256": "eaa7ed280a120576da71b67aac6ff7d32a4aace9776c44d919c051a9899abb74",
+        "read_round": 15
+      }
+    ],
+    "source_review": {
+      "status": "no_submission",
+      "finding": "Partial Han Kang facts delivered; book/award/year roles confused; FINAL search rejected.",
+      "judge_or_gold_read": false
+    },
+    "structural_check": true,
+    "paired_r1_bytes_equal": true,
+    "response_diverged_before_effective_projection": true
+  },
+  "q774-baseline-r1": {
+    "terminal": {
+      "answer": "",
+      "elapsed_seconds": 222.43037640000694,
+      "outcome": "abstained",
+      "reason": "Despite extensive searching, I could not identify an entertainer who satisfies all five constraints simultaneously: (1) first appeared in a season starting between 2001-2019 of a show with more than 3 seasons as of 2023; (2) real-life height between 1.65m and 1.70m; (3) character married more than 2 but less than 5 times in the series; (4) only one of their character's children survives in the series; (5) plays alongside a real-life relative who is unrelated to their character in the series. The most distinctive clue — a real-life relative playing an unrelated character — did not yield a confirmed match in the sources retrieved, and I could not verify the marriage/child-survival/height constraints together for any single candidate. Without a source confirming all constraints, I cannot responsibly submit a name."
+    },
+    "model_attempts": 16,
+    "backend_attempts": 71,
+    "action_counts": {
+      "search": 29,
+      "finish": 1
+    },
+    "action_error_counts": {
+      "arguments_invalid": 2
+    },
+    "usage_known": {
+      "input_tokens": 281064,
+      "output_tokens": 4097,
+      "cache_read_tokens": 70784,
+      "cache_write_tokens": 0
+    },
+    "cache_query_hits": 10,
+    "compaction_requests": 12,
+    "r1_response_sha256": "08d5a8fa849537fa97f3be3ead8167fcfed04a2d684c79eaa29e0e7018f4ea12",
+    "queries_in_valid_list_arguments": {
+      "total": 81,
+      "unique_exact": 71,
+      "repeated_occurrences": 10,
+      "includes_rejected_final_call": false
+    },
+    "windows": [],
+    "source_review": {
+      "status": "no_submission",
+      "finding": "No raw evidence acquired or delivered; abstained.",
+      "judge_or_gold_read": false
+    },
+    "structural_check": true,
+    "paired_r1_bytes_equal": true,
+    "response_diverged_before_effective_projection": true
+  },
+  "q774-continuous-prose-omission-v1-r1": {
+    "terminal": {
+      "answer": "",
+      "elapsed_seconds": 138.2113742000074,
+      "outcome": "abstained",
+      "reason": "I identified a strong candidate (Sean Murray of NCIS, whose real-life stepsister Troian Bellisario plays Sarah McGee — unrelated as siblings on the show), and NCIS fits the season/era criteria (premiered 2003, >3 seasons by 2023). However, I could not verify the remaining required clues from delivered evidence: Sean Murray's exact real-life height (must be >1.65 m and <1.70 m), Timothy McGee being married more than 2 but fewer than 5 times in the series, and only one of his children surviving. Without confirming these distinguishing criteria, I cannot confidently submit the entertainer's name."
+    },
+    "model_attempts": 16,
+    "backend_attempts": 59,
+    "action_counts": {
+      "search": 20,
+      "read": 1,
+      "finish": 1
+    },
+    "action_error_counts": {},
+    "usage_known": {
+      "input_tokens": 254319,
+      "output_tokens": 1968,
+      "cache_read_tokens": 114432,
+      "cache_write_tokens": 0
+    },
+    "cache_query_hits": 0,
+    "compaction_requests": 7,
+    "r1_response_sha256": "707b6e14ffcfccd8848f5a8024cf8385b057211d16a675dfcd38499f4c5485e6",
+    "queries_in_valid_list_arguments": {
+      "total": 58,
+      "unique_exact": 58,
+      "repeated_occurrences": 0,
+      "includes_rejected_final_call": false
+    },
+    "windows": [
+      {
+        "ref": "e1",
+        "document": "d140",
+        "snapshot": "1ec693d83ee7b1f4ca3fbcee50f6b33b35e048c7cc5a6d55d7ad5995be758228",
+        "start": 183805,
+        "end": 186805,
+        "sha256": "35822304490ca64dc3755d84e0c4eb43d61d6750a92b544ff54d12e149cd48a2",
+        "read_round": 13
+      }
+    ],
+    "source_review": {
+      "status": "no_submission",
+      "finding": "Delivered evidence contradicts unrelated-on-screen condition; abstention reason repeats contradicted relation.",
+      "judge_or_gold_read": false
+    },
+    "structural_check": true,
+    "paired_r1_bytes_equal": true,
+    "response_diverged_before_effective_projection": true
+  }
+}

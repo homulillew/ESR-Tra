@@ -1,0 +1,403 @@
+{
+  "q771-baseline-r1": {
+    "passed": true,
+    "fixture_mode": false,
+    "seal_files": 32,
+    "chain": {
+      "event_count": 53,
+      "head": "05543bc01f1acdfc7dde4f51d458644c3e8423bce22f22b773fe1f8fdd9f9d59"
+    },
+    "model_requests": 4,
+    "normal_responses": 4,
+    "unparsed_or_failed_requests": 0,
+    "http_response_files": 4,
+    "search_raw_events": {},
+    "automatic_get_document_attempts": 0,
+    "unique_windows_verified": 1,
+    "delivery_ack": [
+      {
+        "round": 1,
+        "evidence": []
+      },
+      {
+        "round": 2,
+        "evidence": []
+      },
+      {
+        "round": 3,
+        "evidence": [
+          "e1"
+        ]
+      },
+      {
+        "round": 4,
+        "evidence": [
+          "e1"
+        ]
+      }
+    ],
+    "backend_attempts": 4,
+    "usage_known": {
+      "input_tokens": 25151,
+      "output_tokens": 252,
+      "cache_read_tokens": 13568
+    },
+    "native_read_actions": 2,
+    "withheld_calls": 0,
+    "limitations": [
+      "Structural delivery and integrity checks do not establish semantic answer support.",
+      "Failed HTTP response bodies are seal-covered, not normal model_response objects."
+    ],
+    "protocol": "baseline",
+    "continuous_projection": [],
+    "control_check_scope": "Phase and archived workflow match; whole control preserved in exact archived/HTTP wire. No counterfactual baseline control equality claimed.",
+    "elapsed_seconds": 29.859277600015048,
+    "first_response_object_hash": "e0bc5871b316cb3e17c6304580a2224b450b2f62f1d6d786714d109b3b287ce9",
+    "source_windows": [
+      {
+        "ref": "e1",
+        "document": "d1",
+        "snapshot": "446eabd6c86b9aad83f468e7eb034d96105d6e38bc9d97c923416d3ce089e105",
+        "start": 0,
+        "end": 3000,
+        "document_chars": 9095,
+        "sha256": "521deb8f6549e7ea288326ea13a34d4635283fc59820929b6ad3b4c3edade321"
+      }
+    ],
+    "source_assessment": "no_submission"
+  },
+  "q771-continuous-prose-omission-v1-r1": {
+    "passed": true,
+    "fixture_mode": false,
+    "seal_files": 32,
+    "chain": {
+      "event_count": 68,
+      "head": "34a132fe5da9369e396d82df65e978d39c9001395e9f69d3b5c1a73ec7f588ab"
+    },
+    "model_requests": 4,
+    "normal_responses": 4,
+    "unparsed_or_failed_requests": 0,
+    "http_response_files": 4,
+    "search_raw_events": {},
+    "automatic_get_document_attempts": 0,
+    "unique_windows_verified": 2,
+    "delivery_ack": [
+      {
+        "round": 1,
+        "evidence": []
+      },
+      {
+        "round": 2,
+        "evidence": []
+      },
+      {
+        "round": 3,
+        "evidence": [
+          "e1",
+          "e2"
+        ]
+      },
+      {
+        "round": 4,
+        "evidence": [
+          "e1",
+          "e2"
+        ]
+      }
+    ],
+    "backend_attempts": 5,
+    "usage_known": {
+      "input_tokens": 27346,
+      "output_tokens": 367,
+      "cache_read_tokens": 14464
+    },
+    "native_read_actions": 2,
+    "withheld_calls": 0,
+    "limitations": [
+      "Structural delivery and integrity checks do not establish semantic answer support.",
+      "Failed HTTP response bodies are seal-covered, not normal model_response objects."
+    ],
+    "protocol": "continuous-prose-omission-v1",
+    "continuous_projection": [
+      {
+        "round": 1,
+        "final": false,
+        "retained_group_rounds": [],
+        "changes_verified": 0,
+        "wire_sha256": "a61deeac7f2debefea800747f21cf59eb495c83b3fe63081feaef2c7a704fe3b",
+        "body_sha256": "a61deeac7f2debefea800747f21cf59eb495c83b3fe63081feaef2c7a704fe3b",
+        "native_history_exact": true,
+        "control_sha256": "d831093ee0d31d5b0423baf33838028960644a2a850d50f078ff80d51d0f5e5f"
+      },
+      {
+        "round": 2,
+        "final": false,
+        "retained_group_rounds": [
+          1
+        ],
+        "changes_verified": 1,
+        "wire_sha256": "1715a75e8843b91db1c6b17099dd1bab9430ebd18d22853a08c164046fba7d76",
+        "body_sha256": "1715a75e8843b91db1c6b17099dd1bab9430ebd18d22853a08c164046fba7d76",
+        "native_history_exact": true,
+        "control_sha256": "761785ef37af2a76b39c14800cc93df6a669ada2921a0780dc2514f17ea7dfe0"
+      },
+      {
+        "round": 3,
+        "final": false,
+        "retained_group_rounds": [
+          1,
+          2
+        ],
+        "changes_verified": 2,
+        "wire_sha256": "6a6f55d4edc72127efee3a34ca6c6f089916d0e10e7fa474d29ff88a0fc9520e",
+        "body_sha256": "6a6f55d4edc72127efee3a34ca6c6f089916d0e10e7fa474d29ff88a0fc9520e",
+        "native_history_exact": true,
+        "control_sha256": "ae820ed9026fdd5bdf30220f619efebb9a32ba5acec141f5a773963bb5e35ab7"
+      },
+      {
+        "round": 4,
+        "final": true,
+        "retained_group_rounds": [
+          1,
+          2,
+          3
+        ],
+        "changes_verified": 3,
+        "wire_sha256": "21fa3f9ac5243884e085e5b9e501f95c19805b9e18a159556439dee627174dc4",
+        "body_sha256": "21fa3f9ac5243884e085e5b9e501f95c19805b9e18a159556439dee627174dc4",
+        "native_history_exact": true,
+        "control_sha256": "2f843e9c88eb696a6ca2db3138378d6b814fd1be7fec2624952f9d92283719be"
+      }
+    ],
+    "control_check_scope": "Phase and archived workflow match; whole control preserved in exact archived/HTTP wire. No counterfactual baseline control equality claimed.",
+    "elapsed_seconds": 17.30340740000247,
+    "first_response_object_hash": "6571ae56c3f7d53ed491f8c2bd3f9dafde23cc60cfb299e786e99c5d4dbfffbd",
+    "source_windows": [
+      {
+        "ref": "e1",
+        "document": "d1",
+        "snapshot": "446eabd6c86b9aad83f468e7eb034d96105d6e38bc9d97c923416d3ce089e105",
+        "start": 0,
+        "end": 3000,
+        "document_chars": 9095,
+        "sha256": "521deb8f6549e7ea288326ea13a34d4635283fc59820929b6ad3b4c3edade321"
+      },
+      {
+        "ref": "e2",
+        "document": "d8",
+        "snapshot": "7d8960afbde4b93401ea738e66299a6ee3d0dee47906ba8e3a86ebdea642ffcd",
+        "start": 0,
+        "end": 3000,
+        "document_chars": 13639,
+        "sha256": "ed282b99cfb0aae5a430ddfadeb3348fa20e85aac24fb4501bf9cd3b3dadb4b2"
+      }
+    ],
+    "source_assessment": "core_cofounding_relation_not_supported"
+  },
+  "q778-baseline-r1": {
+    "passed": true,
+    "fixture_mode": false,
+    "seal_files": 32,
+    "chain": {
+      "event_count": 78,
+      "head": "3f1741eccb8c9a4c6af15ff98923ce14dbea48aee6c75a783ad497117b0e9d2d"
+    },
+    "model_requests": 4,
+    "normal_responses": 4,
+    "unparsed_or_failed_requests": 0,
+    "http_response_files": 4,
+    "search_raw_events": {},
+    "automatic_get_document_attempts": 0,
+    "unique_windows_verified": 1,
+    "delivery_ack": [
+      {
+        "round": 1,
+        "evidence": []
+      },
+      {
+        "round": 2,
+        "evidence": []
+      },
+      {
+        "round": 3,
+        "evidence": []
+      },
+      {
+        "round": 4,
+        "evidence": [
+          "e1"
+        ]
+      }
+    ],
+    "backend_attempts": 7,
+    "usage_known": {
+      "input_tokens": 30081,
+      "output_tokens": 342,
+      "cache_read_tokens": 14208
+    },
+    "native_read_actions": 1,
+    "withheld_calls": 0,
+    "limitations": [
+      "Structural delivery and integrity checks do not establish semantic answer support.",
+      "Failed HTTP response bodies are seal-covered, not normal model_response objects."
+    ],
+    "protocol": "baseline",
+    "continuous_projection": [],
+    "control_check_scope": "Phase and archived workflow match; whole control preserved in exact archived/HTTP wire. No counterfactual baseline control equality claimed.",
+    "elapsed_seconds": 20.085476999985985,
+    "first_response_object_hash": "9107d43e4e918198dd978b03d58d63cfc2c2ed7edd5c1606ca00c77a99a56c7f",
+    "source_windows": [
+      {
+        "ref": "e1",
+        "document": "d19",
+        "snapshot": "d7b7a23b3eb780d78018e5fe30d91613c9769a1cff7564bb0a79c08614acb838",
+        "start": 0,
+        "end": 3000,
+        "document_chars": 4374,
+        "sha256": "bc0d510dbd6cde0530cf08684de455d82ec1943c0ba50cab130ae01990cc24b8"
+      }
+    ],
+    "source_assessment": "core_maternal_age_supported; broader_locator_chain_partial; paternity_reported_claim"
+  },
+  "q778-continuous-prose-omission-v1-r1": {
+    "passed": true,
+    "fixture_mode": false,
+    "seal_files": 32,
+    "chain": {
+      "event_count": 97,
+      "head": "e3e0f457d3570c805e43bae7d913bb98b807fddc44c792b32a830f2f1c52361b"
+    },
+    "model_requests": 4,
+    "normal_responses": 4,
+    "unparsed_or_failed_requests": 0,
+    "http_response_files": 4,
+    "search_raw_events": {},
+    "automatic_get_document_attempts": 0,
+    "unique_windows_verified": 1,
+    "delivery_ack": [
+      {
+        "round": 1,
+        "evidence": []
+      },
+      {
+        "round": 2,
+        "evidence": []
+      },
+      {
+        "round": 3,
+        "evidence": []
+      },
+      {
+        "round": 4,
+        "evidence": [
+          "e1"
+        ]
+      }
+    ],
+    "backend_attempts": 10,
+    "usage_known": {
+      "input_tokens": 32051,
+      "output_tokens": 435,
+      "cache_read_tokens": 13440
+    },
+    "native_read_actions": 1,
+    "withheld_calls": 0,
+    "limitations": [
+      "Structural delivery and integrity checks do not establish semantic answer support.",
+      "Failed HTTP response bodies are seal-covered, not normal model_response objects."
+    ],
+    "protocol": "continuous-prose-omission-v1",
+    "continuous_projection": [
+      {
+        "round": 1,
+        "final": false,
+        "retained_group_rounds": [],
+        "changes_verified": 0,
+        "wire_sha256": "7c3b4de711393e1eb56749a873d6860c113e222b59f4a83f8c44136a147268b7",
+        "body_sha256": "7c3b4de711393e1eb56749a873d6860c113e222b59f4a83f8c44136a147268b7",
+        "native_history_exact": true,
+        "control_sha256": "d831093ee0d31d5b0423baf33838028960644a2a850d50f078ff80d51d0f5e5f"
+      },
+      {
+        "round": 2,
+        "final": false,
+        "retained_group_rounds": [
+          1
+        ],
+        "changes_verified": 1,
+        "wire_sha256": "ff60f028f3d30ddc96ca7b3bb67d6da31c74f135d7d6947c948758b81c0f739f",
+        "body_sha256": "ff60f028f3d30ddc96ca7b3bb67d6da31c74f135d7d6947c948758b81c0f739f",
+        "native_history_exact": true,
+        "control_sha256": "21067eff1365780970722c6db38297fd96eda935ae0c9e400d78aed1386466e5"
+      },
+      {
+        "round": 3,
+        "final": false,
+        "retained_group_rounds": [
+          1,
+          2
+        ],
+        "changes_verified": 2,
+        "wire_sha256": "f10094e20bd360779be3c4ec9a755433236aad5c2fe48d7ba14a119845cf8ce7",
+        "body_sha256": "f10094e20bd360779be3c4ec9a755433236aad5c2fe48d7ba14a119845cf8ce7",
+        "native_history_exact": true,
+        "control_sha256": "e352b7612d7eaf1c580ab8b2204df26de7af6908067fb6033415ac40b1ecdb6a"
+      },
+      {
+        "round": 4,
+        "final": true,
+        "retained_group_rounds": [
+          1,
+          2,
+          3
+        ],
+        "changes_verified": 3,
+        "wire_sha256": "53b33c4ff7280bab323b7db2cd6877b420a5ff1f46126c45a71951af8c9ea61c",
+        "body_sha256": "53b33c4ff7280bab323b7db2cd6877b420a5ff1f46126c45a71951af8c9ea61c",
+        "native_history_exact": true,
+        "control_sha256": "94156e76d51c0dd7967fb545d8e3d4d40bf92e379b2e3b6c0d29f48d582da073"
+      }
+    ],
+    "control_check_scope": "Phase and archived workflow match; whole control preserved in exact archived/HTTP wire. No counterfactual baseline control equality claimed.",
+    "elapsed_seconds": 25.584510100015905,
+    "first_response_object_hash": "ce126509c32c9be6276b9c35db93734852fd05b570330c185a9bb6184f038989",
+    "source_windows": [
+      {
+        "ref": "e1",
+        "document": "d22",
+        "snapshot": "d7b7a23b3eb780d78018e5fe30d91613c9769a1cff7564bb0a79c08614acb838",
+        "start": 0,
+        "end": 3000,
+        "document_chars": 4374,
+        "sha256": "bc0d510dbd6cde0530cf08684de455d82ec1943c0ba50cab130ae01990cc24b8"
+      }
+    ],
+    "source_assessment": "core_maternal_age_supported; broader_locator_chain_partial; paternity_reported_claim"
+  },
+  "pairs": {
+    "q771": {
+      "first_request_bytes_equal": true,
+      "first_request_sha256": [
+        "a61deeac7f2debefea800747f21cf59eb495c83b3fe63081feaef2c7a704fe3b",
+        "a61deeac7f2debefea800747f21cf59eb495c83b3fe63081feaef2c7a704fe3b"
+      ],
+      "first_response_event_hashes": [
+        "4ddd022cd29f448d3511d035fd04b6c410268598e0d2e9e00467a38418fbeaac",
+        "d61d534aa6f61bbd90c12bc09af3f461765149fad051cad56ce163edba19ff70"
+      ],
+      "first_response_content_and_function_arguments_equal": false
+    },
+    "q778": {
+      "first_request_bytes_equal": true,
+      "first_request_sha256": [
+        "7c3b4de711393e1eb56749a873d6860c113e222b59f4a83f8c44136a147268b7",
+        "7c3b4de711393e1eb56749a873d6860c113e222b59f4a83f8c44136a147268b7"
+      ],
+      "first_response_event_hashes": [
+        "5c84cd79e2be807ae8f331805a1a5dfc6b2fbba235133222b844a287a033f0a5",
+        "13f97f4859ed312836f2ea4f2280efbdddcb52012e2926d746b297c25c948560"
+      ],
+      "first_response_content_and_function_arguments_equal": false
+    }
+  }
+}

@@ -1,0 +1,202 @@
+{
+  "protocol": "stride-search-3",
+  "head": "cd1356c693f401619624c09401c751b22826e5966dc7d6c0184332166af5df35",
+  "outcome": "submitted",
+  "formal_correct": null,
+  "model_attempts": 4,
+  "backend_attempts": 7,
+  "queries": [
+    {
+      "round": 1,
+      "top_k": 5,
+      "equivalence_key": "34803be6a28ad1aad2e5079c864aed8d49ac6c723d87e1a93fb440d7a96b2ed9",
+      "cached": false,
+      "query_sha256": "01059d6de9a5dd1c42cbcb9d616302e2888b3ac543de6b4a6790b1ac1b0e192d",
+      "query": "CEO founded company mid-1990s raised Southern Africa father engineer sister co-founded film streaming service",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"ceo\" OR \"founded\" OR \"company\" OR \"mid\" OR \"1990s\" OR \"raised\" OR \"southern\" OR \"africa\" OR \"father\" OR \"engineer\" OR \"sister\" OR \"co\" OR \"film\" OR \"streaming\" OR \"service\"",
+        "terms": [
+          "ceo",
+          "founded",
+          "company",
+          "mid",
+          "1990s",
+          "raised",
+          "southern",
+          "africa",
+          "father",
+          "engineer",
+          "sister",
+          "co",
+          "film",
+          "streaming",
+          "service"
+        ]
+      }
+    },
+    {
+      "round": 1,
+      "top_k": 5,
+      "equivalence_key": "a32af9517ba55a1cb2c6aad9f5c2b81ef9ef15d00b1bb4b23f0a1057a03b9e80",
+      "cached": false,
+      "query_sha256": "bbc123b210eb7aa37f303e1dab1bace291d2622919f7e5e04b096a346a463afc",
+      "query": "CEO child SIDS first child died Southern Africa raised",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"ceo\" OR \"child\" OR \"sids\" OR \"first\" OR \"died\" OR \"southern\" OR \"africa\" OR \"raised\"",
+        "terms": [
+          "ceo",
+          "child",
+          "sids",
+          "first",
+          "died",
+          "southern",
+          "africa",
+          "raised"
+        ]
+      }
+    },
+    {
+      "round": 1,
+      "top_k": 5,
+      "equivalence_key": "0dcbc5c680aeffb6a764cc2132014ca8756f1d2ed87d06f81af74bd87b9e2d19",
+      "cached": false,
+      "query_sha256": "1c043d2eb590eadbd76b470327d6e9f4ce001eae93790e72893453c3202d07a3",
+      "query": "CEO early 2020s child name internet buzzing Southern Africa",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"ceo\" OR \"early\" OR \"2020s\" OR \"child\" OR \"name\" OR \"internet\" OR \"buzzing\" OR \"southern\" OR \"africa\"",
+        "terms": [
+          "ceo",
+          "early",
+          "2020s",
+          "child",
+          "name",
+          "internet",
+          "buzzing",
+          "southern",
+          "africa"
+        ]
+      }
+    },
+    {
+      "round": 2,
+      "top_k": 5,
+      "equivalence_key": "8679988444043de7c321a36b00d151fb0ee316dcafc8d272259832d870791b18",
+      "cached": false,
+      "query_sha256": "b394b019b49e6e3093c0b7181ed26ab6cc7a564d59e74c75535ef97ea2f15391",
+      "query": "woman claimed to be Elon Musk's secret daughter relative",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"woman\" OR \"claimed\" OR \"to\" OR \"be\" OR \"elon\" OR \"musk\" OR \"s\" OR \"secret\" OR \"daughter\" OR \"relative\"",
+        "terms": [
+          "woman",
+          "claimed",
+          "to",
+          "be",
+          "elon",
+          "musk",
+          "s",
+          "secret",
+          "daughter",
+          "relative"
+        ]
+      }
+    },
+    {
+      "round": 2,
+      "top_k": 5,
+      "equivalence_key": "9f2c386f0739b055494e3da69555162c78fa2cc3548693bcd5c8cfa156f64e8a",
+      "cached": false,
+      "query_sha256": "bb801bdbb91c35b15645fd155e54c52693c1fbdb6048aec11641a133c0a169ea",
+      "query": "Elon Musk secret daughter claim mother age gave birth",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"elon\" OR \"musk\" OR \"secret\" OR \"daughter\" OR \"claim\" OR \"mother\" OR \"age\" OR \"gave\" OR \"birth\"",
+        "terms": [
+          "elon",
+          "musk",
+          "secret",
+          "daughter",
+          "claim",
+          "mother",
+          "age",
+          "gave",
+          "birth"
+        ]
+      }
+    },
+    {
+      "round": 2,
+      "top_k": 5,
+      "equivalence_key": "d428c221798480ba6f0ef9097d8246cac00ad886ace678b92beda42fd442f4cc",
+      "cached": false,
+      "query_sha256": "f37215d44e58646750518cac9faaf17d82e30236ca688ec622f37413a20614ca",
+      "query": "woman says she is Elon Musk's daughter article 2020 2021 2022",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"woman\" OR \"says\" OR \"she\" OR \"is\" OR \"elon\" OR \"musk\" OR \"s\" OR \"daughter\" OR \"article\" OR \"2020\" OR \"2021\" OR \"2022\"",
+        "terms": [
+          "woman",
+          "says",
+          "she",
+          "is",
+          "elon",
+          "musk",
+          "s",
+          "daughter",
+          "article",
+          "2020",
+          "2021",
+          "2022"
+        ]
+      }
+    }
+  ],
+  "equivalent_query_repeats": 0,
+  "views": [
+    {
+      "round": 1,
+      "compacted": false,
+      "visible_evidence": [],
+      "shelf": [],
+      "shelf_evicted": []
+    },
+    {
+      "round": 2,
+      "compacted": false,
+      "visible_evidence": [],
+      "shelf": [],
+      "shelf_evicted": []
+    },
+    {
+      "round": 3,
+      "compacted": false,
+      "visible_evidence": [],
+      "shelf": [],
+      "shelf_evicted": []
+    },
+    {
+      "round": 4,
+      "compacted": false,
+      "visible_evidence": [
+        "e1"
+      ],
+      "shelf": [],
+      "shelf_evicted": []
+    }
+  ],
+  "delivered_refs": [
+    "e1"
+  ],
+  "submitted_refs": [
+    "e1"
+  ],
+  "text_included": true,
+  "limitations": [
+    "Equivalence is compiler equality, not semantic identity or wasted-search proof",
+    "Raw-window visibility/selection is not entailment or complete evidence coverage",
+    "No live q26 replay or independent answer scoring is performed"
+  ]
+}

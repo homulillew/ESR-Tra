@@ -1,0 +1,1238 @@
+{
+  "slots": {
+    "q775-baseline-r1": {
+      "passed": true,
+      "fixture_mode": false,
+      "seal_files": 72,
+      "chain": {
+        "event_count": 293,
+        "head": "f6e2244d5c4954e336b4c65769f41084991804c6e4537cad6edbeee8a2537093"
+      },
+      "model_requests": 14,
+      "normal_responses": 14,
+      "unparsed_or_failed_requests": 0,
+      "http_response_files": 14,
+      "search_raw_events": {},
+      "automatic_get_document_attempts": 0,
+      "unique_windows_verified": 1,
+      "delivery_ack": [
+        {
+          "round": 1,
+          "evidence": []
+        },
+        {
+          "round": 2,
+          "evidence": []
+        },
+        {
+          "round": 3,
+          "evidence": []
+        },
+        {
+          "round": 4,
+          "evidence": [
+            "e1"
+          ]
+        },
+        {
+          "round": 5,
+          "evidence": [
+            "e1"
+          ]
+        },
+        {
+          "round": 6,
+          "evidence": [
+            "e1"
+          ]
+        },
+        {
+          "round": 7,
+          "evidence": [
+            "e1"
+          ]
+        },
+        {
+          "round": 8,
+          "evidence": [
+            "e1"
+          ]
+        },
+        {
+          "round": 9,
+          "evidence": [
+            "e1"
+          ]
+        },
+        {
+          "round": 10,
+          "evidence": [
+            "e1"
+          ]
+        },
+        {
+          "round": 11,
+          "evidence": [
+            "e1"
+          ]
+        },
+        {
+          "round": 12,
+          "evidence": [
+            "e1"
+          ]
+        },
+        {
+          "round": 13,
+          "evidence": [
+            "e1"
+          ]
+        },
+        {
+          "round": 14,
+          "evidence": [
+            "e1"
+          ]
+        }
+      ],
+      "backend_attempts": 24,
+      "usage_known": {
+        "input_tokens": 228027,
+        "output_tokens": 3727,
+        "cache_read_tokens": 104960
+      },
+      "native_read_actions": 1,
+      "withheld_calls": 0,
+      "limitations": [
+        "Structural delivery and integrity checks do not establish semantic answer support.",
+        "Failed HTTP response bodies are seal-covered, not normal model_response objects."
+      ],
+      "protocol": "baseline",
+      "continuous_projection": [],
+      "control_check_scope": "Phase and archived workflow match; whole control preserved in exact archived/HTTP wire. No counterfactual baseline control equality claimed."
+    },
+    "q775-continuous-prose-omission-v1-r1": {
+      "passed": true,
+      "fixture_mode": false,
+      "seal_files": 80,
+      "chain": {
+        "event_count": 414,
+        "head": "497e1ad842fc928a2820c6d7f567123f35e494b12575e57ff34c45de004fd01d"
+      },
+      "model_requests": 16,
+      "normal_responses": 16,
+      "unparsed_or_failed_requests": 0,
+      "http_response_files": 16,
+      "search_raw_events": {},
+      "automatic_get_document_attempts": 0,
+      "unique_windows_verified": 4,
+      "delivery_ack": [
+        {
+          "round": 1,
+          "evidence": []
+        },
+        {
+          "round": 2,
+          "evidence": []
+        },
+        {
+          "round": 3,
+          "evidence": []
+        },
+        {
+          "round": 4,
+          "evidence": []
+        },
+        {
+          "round": 5,
+          "evidence": [
+            "e1"
+          ]
+        },
+        {
+          "round": 6,
+          "evidence": [
+            "e1",
+            "e2"
+          ]
+        },
+        {
+          "round": 7,
+          "evidence": [
+            "e1",
+            "e2"
+          ]
+        },
+        {
+          "round": 8,
+          "evidence": [
+            "e1",
+            "e2",
+            "e3"
+          ]
+        },
+        {
+          "round": 9,
+          "evidence": [
+            "e1",
+            "e2",
+            "e3"
+          ]
+        },
+        {
+          "round": 10,
+          "evidence": [
+            "e1",
+            "e2",
+            "e3"
+          ]
+        },
+        {
+          "round": 11,
+          "evidence": [
+            "e1",
+            "e2",
+            "e3"
+          ]
+        },
+        {
+          "round": 12,
+          "evidence": [
+            "e1",
+            "e2",
+            "e3"
+          ]
+        },
+        {
+          "round": 13,
+          "evidence": [
+            "e1",
+            "e2",
+            "e3"
+          ]
+        },
+        {
+          "round": 14,
+          "evidence": [
+            "e1",
+            "e2",
+            "e3"
+          ]
+        },
+        {
+          "round": 15,
+          "evidence": [
+            "e1",
+            "e2",
+            "e3"
+          ]
+        },
+        {
+          "round": 16,
+          "evidence": [
+            "e1",
+            "e2",
+            "e3",
+            "e4"
+          ]
+        }
+      ],
+      "backend_attempts": 43,
+      "usage_known": {
+        "input_tokens": 267375,
+        "output_tokens": 2329,
+        "cache_read_tokens": 97920
+      },
+      "native_read_actions": 4,
+      "withheld_calls": 0,
+      "limitations": [
+        "Structural delivery and integrity checks do not establish semantic answer support.",
+        "Failed HTTP response bodies are seal-covered, not normal model_response objects."
+      ],
+      "protocol": "continuous-prose-omission-v1",
+      "continuous_projection": [
+        {
+          "round": 1,
+          "final": false,
+          "retained_group_rounds": [],
+          "changes_verified": 0,
+          "wire_sha256": "f04ab436073f1d8df23d07c19d6249d5305d80faa99f820cf8b53b35eb4a8b16",
+          "body_sha256": "f04ab436073f1d8df23d07c19d6249d5305d80faa99f820cf8b53b35eb4a8b16",
+          "native_history_exact": true,
+          "control_sha256": "70da4ec484d5607dbcdbd91530d00d54d33b961b64029c7a8ec803666be01e2f"
+        },
+        {
+          "round": 2,
+          "final": false,
+          "retained_group_rounds": [
+            1
+          ],
+          "changes_verified": 1,
+          "wire_sha256": "810f1ca6958faaf8ccdc6a785c16e575beea0671582515a0ce0643f8e3101827",
+          "body_sha256": "810f1ca6958faaf8ccdc6a785c16e575beea0671582515a0ce0643f8e3101827",
+          "native_history_exact": true,
+          "control_sha256": "80ffb362f5afe68b17407934ffd34d285d679fe79084547c7d3fef504a5cae3c"
+        },
+        {
+          "round": 3,
+          "final": false,
+          "retained_group_rounds": [
+            1,
+            2
+          ],
+          "changes_verified": 2,
+          "wire_sha256": "1f8abd2bee276250ebd74d99f1f7e31e2c9a5e0b64d79a5550426787520e4355",
+          "body_sha256": "1f8abd2bee276250ebd74d99f1f7e31e2c9a5e0b64d79a5550426787520e4355",
+          "native_history_exact": true,
+          "control_sha256": "8823da840c0ba2a331c506a39a18e3e41a186f6bad9c82b28554c8c1e863d187"
+        },
+        {
+          "round": 4,
+          "final": false,
+          "retained_group_rounds": [
+            2,
+            3
+          ],
+          "changes_verified": 2,
+          "wire_sha256": "06eacf2a9eb7a48136919c20cb2f3f2fe570a30d867ecb734868c518b9bf7375",
+          "body_sha256": "06eacf2a9eb7a48136919c20cb2f3f2fe570a30d867ecb734868c518b9bf7375",
+          "native_history_exact": true,
+          "control_sha256": "63c723fb97fcb2d420d4540ca0b249926fd09023b5c998ae7b1c9ce6129d4c29"
+        },
+        {
+          "round": 5,
+          "final": false,
+          "retained_group_rounds": [
+            3,
+            4
+          ],
+          "changes_verified": 2,
+          "wire_sha256": "59d6b56327edecc2e588297350403177944917a81e5827aea5947064d66aa52a",
+          "body_sha256": "59d6b56327edecc2e588297350403177944917a81e5827aea5947064d66aa52a",
+          "native_history_exact": true,
+          "control_sha256": "b056c1fa05850f1c0a4095168273141bbd35e8a8e8b9d3d536a7ca7b51a47cad"
+        },
+        {
+          "round": 6,
+          "final": false,
+          "retained_group_rounds": [
+            4,
+            5
+          ],
+          "changes_verified": 2,
+          "wire_sha256": "259d780d65f634f620cb19da254301b609d6e643210ebe4e116b9a498642de3d",
+          "body_sha256": "259d780d65f634f620cb19da254301b609d6e643210ebe4e116b9a498642de3d",
+          "native_history_exact": true,
+          "control_sha256": "1f523c6e1be96d51cc411ce27f99b28455d87e22628bbc8d338cf451f4871c03"
+        },
+        {
+          "round": 7,
+          "final": false,
+          "retained_group_rounds": [
+            5,
+            6
+          ],
+          "changes_verified": 2,
+          "wire_sha256": "3659b69bf0fbe79eaeea2e2f913ea4cecb8fccef686bb57357256265047292c3",
+          "body_sha256": "3659b69bf0fbe79eaeea2e2f913ea4cecb8fccef686bb57357256265047292c3",
+          "native_history_exact": true,
+          "control_sha256": "2412873474d27aa80a2f3513f6cfcb54efe362837d3c122e03047220c7d0f6ac"
+        },
+        {
+          "round": 8,
+          "final": false,
+          "retained_group_rounds": [
+            6,
+            7
+          ],
+          "changes_verified": 2,
+          "wire_sha256": "514fdce6aca8869f448e3679f1db68c7784835a6a0acafa79436cf856c4ff928",
+          "body_sha256": "514fdce6aca8869f448e3679f1db68c7784835a6a0acafa79436cf856c4ff928",
+          "native_history_exact": true,
+          "control_sha256": "4a5db1293c018f14d0db9570fe623fb8aaa3d96746d335fbd142b7c39c8dafaa"
+        },
+        {
+          "round": 9,
+          "final": false,
+          "retained_group_rounds": [
+            7,
+            8
+          ],
+          "changes_verified": 2,
+          "wire_sha256": "307acfccd0d89617a6369de69694e4e7fd65a5f22bf172a7ef28fac13aac779e",
+          "body_sha256": "307acfccd0d89617a6369de69694e4e7fd65a5f22bf172a7ef28fac13aac779e",
+          "native_history_exact": true,
+          "control_sha256": "f831ab1b3e3a270a9e511a92bfdd2777319bdfdedb7d3e74bbf7e06614f8ca6d"
+        },
+        {
+          "round": 10,
+          "final": false,
+          "retained_group_rounds": [
+            7,
+            8,
+            9
+          ],
+          "changes_verified": 3,
+          "wire_sha256": "87bac9d48a141d8f9b1fd3831f9aff0e93d9c523751166b49de3b1b2872a8146",
+          "body_sha256": "87bac9d48a141d8f9b1fd3831f9aff0e93d9c523751166b49de3b1b2872a8146",
+          "native_history_exact": true,
+          "control_sha256": "2d02a032d7442bb8286a1a7e070dcb430e0e444f7ac973b11f69466eae647ea6"
+        },
+        {
+          "round": 11,
+          "final": false,
+          "retained_group_rounds": [
+            7,
+            8,
+            9,
+            10
+          ],
+          "changes_verified": 4,
+          "wire_sha256": "38fdc18ff81819f280d4414fa4c11e7098740205b722a02ff35cf45c090cdf26",
+          "body_sha256": "38fdc18ff81819f280d4414fa4c11e7098740205b722a02ff35cf45c090cdf26",
+          "native_history_exact": true,
+          "control_sha256": "6e32535e52a4b99e375bffde54ac74b277cd498aae130427f24a6b9fbea6ced4"
+        },
+        {
+          "round": 12,
+          "final": false,
+          "retained_group_rounds": [
+            7,
+            8,
+            9,
+            10,
+            11
+          ],
+          "changes_verified": 5,
+          "wire_sha256": "4a5830e97e93e1efd9e9560471dc34779bfdc7265a8af5fd96430d5b5f7dd74d",
+          "body_sha256": "4a5830e97e93e1efd9e9560471dc34779bfdc7265a8af5fd96430d5b5f7dd74d",
+          "native_history_exact": true,
+          "control_sha256": "36f1c932113c021ebec35c20bff8e1bf96b527586bb9642f54f1c4dbaf594e0a"
+        },
+        {
+          "round": 13,
+          "final": false,
+          "retained_group_rounds": [
+            9,
+            10,
+            11,
+            12
+          ],
+          "changes_verified": 4,
+          "wire_sha256": "3eec6a9cd2d054b98327f8c37df0417822181c8bf5d9fa11d02c7b52b0062662",
+          "body_sha256": "3eec6a9cd2d054b98327f8c37df0417822181c8bf5d9fa11d02c7b52b0062662",
+          "native_history_exact": true,
+          "control_sha256": "3c5add74e68f4c6824e29e231c0189c6165df8c48341990f4d004e4da8a68f02"
+        },
+        {
+          "round": 14,
+          "final": false,
+          "retained_group_rounds": [
+            9,
+            10,
+            11,
+            12,
+            13
+          ],
+          "changes_verified": 5,
+          "wire_sha256": "b78a481ffdeaed3fcbcd37cb092f903b7c8bc7e9247a497125473ee9541a2402",
+          "body_sha256": "b78a481ffdeaed3fcbcd37cb092f903b7c8bc7e9247a497125473ee9541a2402",
+          "native_history_exact": true,
+          "control_sha256": "dd7de892ef080a78897576fc0b7510b6376d2050d30832118709cdab3c7d1373"
+        },
+        {
+          "round": 15,
+          "final": false,
+          "retained_group_rounds": [
+            11,
+            12,
+            13,
+            14
+          ],
+          "changes_verified": 4,
+          "wire_sha256": "25daa1ee35b7995bfefe9bfdbe82301972f4fed594278a1ccfa92a5b486afb54",
+          "body_sha256": "25daa1ee35b7995bfefe9bfdbe82301972f4fed594278a1ccfa92a5b486afb54",
+          "native_history_exact": true,
+          "control_sha256": "9ca4cdfc71c21bcdaec4fdf469d18a7495f5be432f38d3d3b5c26ae78f21f01a"
+        },
+        {
+          "round": 16,
+          "final": true,
+          "retained_group_rounds": [
+            11,
+            12,
+            13,
+            14,
+            15
+          ],
+          "changes_verified": 5,
+          "wire_sha256": "a973bbc3fa4966a18ce9655d1b26618afbb46f62179f9d54f930066fc508b55c",
+          "body_sha256": "a973bbc3fa4966a18ce9655d1b26618afbb46f62179f9d54f930066fc508b55c",
+          "native_history_exact": true,
+          "control_sha256": "42f6b00abea957b53bc3bdaa0de126313e78293a6ce257865da0a265660a27d5"
+        }
+      ],
+      "control_check_scope": "Phase and archived workflow match; whole control preserved in exact archived/HTTP wire. No counterfactual baseline control equality claimed."
+    },
+    "q774-continuous-prose-omission-v1-r1": {
+      "passed": true,
+      "fixture_mode": false,
+      "seal_files": 80,
+      "chain": {
+        "event_count": 499,
+        "head": "a291812c7fab208e2dad0cc9b84c58dd4b7c7b89a908c027b17310c61d92aca6"
+      },
+      "model_requests": 16,
+      "normal_responses": 16,
+      "unparsed_or_failed_requests": 0,
+      "http_response_files": 16,
+      "search_raw_events": {},
+      "automatic_get_document_attempts": 0,
+      "unique_windows_verified": 1,
+      "delivery_ack": [
+        {
+          "round": 1,
+          "evidence": []
+        },
+        {
+          "round": 2,
+          "evidence": []
+        },
+        {
+          "round": 3,
+          "evidence": []
+        },
+        {
+          "round": 4,
+          "evidence": []
+        },
+        {
+          "round": 5,
+          "evidence": []
+        },
+        {
+          "round": 6,
+          "evidence": []
+        },
+        {
+          "round": 7,
+          "evidence": []
+        },
+        {
+          "round": 8,
+          "evidence": []
+        },
+        {
+          "round": 9,
+          "evidence": []
+        },
+        {
+          "round": 10,
+          "evidence": []
+        },
+        {
+          "round": 11,
+          "evidence": []
+        },
+        {
+          "round": 12,
+          "evidence": []
+        },
+        {
+          "round": 13,
+          "evidence": []
+        },
+        {
+          "round": 14,
+          "evidence": [
+            "e1"
+          ]
+        },
+        {
+          "round": 15,
+          "evidence": [
+            "e1"
+          ]
+        },
+        {
+          "round": 16,
+          "evidence": [
+            "e1"
+          ]
+        }
+      ],
+      "backend_attempts": 59,
+      "usage_known": {
+        "input_tokens": 254319,
+        "output_tokens": 1968,
+        "cache_read_tokens": 114432
+      },
+      "native_read_actions": 1,
+      "withheld_calls": 0,
+      "limitations": [
+        "Structural delivery and integrity checks do not establish semantic answer support.",
+        "Failed HTTP response bodies are seal-covered, not normal model_response objects."
+      ],
+      "protocol": "continuous-prose-omission-v1",
+      "continuous_projection": [
+        {
+          "round": 1,
+          "final": false,
+          "retained_group_rounds": [],
+          "changes_verified": 0,
+          "wire_sha256": "fe019b884af954cf8777f10448535ff340cb76bb43e9ff9bfcb87c4cc5b7cdcd",
+          "body_sha256": "fe019b884af954cf8777f10448535ff340cb76bb43e9ff9bfcb87c4cc5b7cdcd",
+          "native_history_exact": true,
+          "control_sha256": "70da4ec484d5607dbcdbd91530d00d54d33b961b64029c7a8ec803666be01e2f"
+        },
+        {
+          "round": 2,
+          "final": false,
+          "retained_group_rounds": [
+            1
+          ],
+          "changes_verified": 1,
+          "wire_sha256": "e8803f46db125de09f73bf54781199bfca8425730b08661c47e5c84650dbd50d",
+          "body_sha256": "e8803f46db125de09f73bf54781199bfca8425730b08661c47e5c84650dbd50d",
+          "native_history_exact": true,
+          "control_sha256": "32e466f190ac737f51bae56ca26eaa16e6af35bdc6808bf122d31e51af48b2e7"
+        },
+        {
+          "round": 3,
+          "final": false,
+          "retained_group_rounds": [
+            1,
+            2
+          ],
+          "changes_verified": 2,
+          "wire_sha256": "02afea31d6c77830541b0be05dcca27445ecb459a545761e442f15b7a7fde977",
+          "body_sha256": "02afea31d6c77830541b0be05dcca27445ecb459a545761e442f15b7a7fde977",
+          "native_history_exact": true,
+          "control_sha256": "50ab3e3414325a8940b60232a78cf5dbfd574aa3190605e3fc92a72d9526db7a"
+        },
+        {
+          "round": 4,
+          "final": false,
+          "retained_group_rounds": [
+            1,
+            2,
+            3
+          ],
+          "changes_verified": 3,
+          "wire_sha256": "fa242c79c8ea9301bcd85cc0130f024c57cfbc8c049cfecac1c31da43a976d37",
+          "body_sha256": "fa242c79c8ea9301bcd85cc0130f024c57cfbc8c049cfecac1c31da43a976d37",
+          "native_history_exact": true,
+          "control_sha256": "926c3a34bfe80f5ebe9620ee45f51100fe0fe591c8f227696781c06317a3c835"
+        },
+        {
+          "round": 5,
+          "final": false,
+          "retained_group_rounds": [
+            1,
+            2,
+            3,
+            4
+          ],
+          "changes_verified": 4,
+          "wire_sha256": "0b66e2bfbabafca894f597f718899c1ad9cdf45643f2d5ad56452f9269d6b83d",
+          "body_sha256": "0b66e2bfbabafca894f597f718899c1ad9cdf45643f2d5ad56452f9269d6b83d",
+          "native_history_exact": true,
+          "control_sha256": "273bc223f5d883743faca2ec53d00c4688429c58f4c0acc81407ef0c8ce54939"
+        },
+        {
+          "round": 6,
+          "final": false,
+          "retained_group_rounds": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "changes_verified": 5,
+          "wire_sha256": "cb02f4b13d90e1ae9031e1dded6a178ad7077c8640c01a8a638bfce163de1106",
+          "body_sha256": "cb02f4b13d90e1ae9031e1dded6a178ad7077c8640c01a8a638bfce163de1106",
+          "native_history_exact": true,
+          "control_sha256": "06b79a924912ec112520f8db43729b91d3f15292f8fbbdcb37cdb0ec42f813f4"
+        },
+        {
+          "round": 7,
+          "final": false,
+          "retained_group_rounds": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6
+          ],
+          "changes_verified": 6,
+          "wire_sha256": "b5ecb2ab36fbd6e7252507c37734c4e62fc659390f3ee2d452250b2af611d8d9",
+          "body_sha256": "b5ecb2ab36fbd6e7252507c37734c4e62fc659390f3ee2d452250b2af611d8d9",
+          "native_history_exact": true,
+          "control_sha256": "7ef7eed3bc5ad617a5b52052d218258296d5b79f6ce3b1dc2625abce177939ca"
+        },
+        {
+          "round": 8,
+          "final": false,
+          "retained_group_rounds": [
+            4,
+            5,
+            6,
+            7
+          ],
+          "changes_verified": 4,
+          "wire_sha256": "1753f9db0fa318d749044f5d3951b0fa3988a066e3188398730206c924080cf9",
+          "body_sha256": "1753f9db0fa318d749044f5d3951b0fa3988a066e3188398730206c924080cf9",
+          "native_history_exact": true,
+          "control_sha256": "bf2549f39d84e3e077c46f34bf1ef168410bc788f9cf60d0bbc2a4849d62b5f2"
+        },
+        {
+          "round": 9,
+          "final": false,
+          "retained_group_rounds": [
+            4,
+            5,
+            6,
+            7,
+            8
+          ],
+          "changes_verified": 5,
+          "wire_sha256": "e5b989943b905d9c240c1ce8199eb86bf788cfa56c0ce612e86ec1e2f5d6c38f",
+          "body_sha256": "e5b989943b905d9c240c1ce8199eb86bf788cfa56c0ce612e86ec1e2f5d6c38f",
+          "native_history_exact": true,
+          "control_sha256": "c7633f66d7c72ca1feb9543c987e1ae25b2529305aa1e902a7349c9cae2c5dc9"
+        },
+        {
+          "round": 10,
+          "final": false,
+          "retained_group_rounds": [
+            6,
+            7,
+            8,
+            9
+          ],
+          "changes_verified": 4,
+          "wire_sha256": "ea9b1e4e16393ef6308e93d82340d0b1d71552e8b6f895a8b32cc234160d779f",
+          "body_sha256": "ea9b1e4e16393ef6308e93d82340d0b1d71552e8b6f895a8b32cc234160d779f",
+          "native_history_exact": true,
+          "control_sha256": "fa9ecfe0374f62c861ea4fc2495fd83185b55b7110aed81a46370b9453498254"
+        },
+        {
+          "round": 11,
+          "final": false,
+          "retained_group_rounds": [
+            7,
+            8,
+            9,
+            10
+          ],
+          "changes_verified": 4,
+          "wire_sha256": "e9f5aa846814bc19d9131bdf90d7ea9197a1af5b479bccf57b8d9ddfaafe7c5f",
+          "body_sha256": "e9f5aa846814bc19d9131bdf90d7ea9197a1af5b479bccf57b8d9ddfaafe7c5f",
+          "native_history_exact": true,
+          "control_sha256": "bad21d30708590beb526f6f5ca5c9c3834a8c5b3d8b6e2bb2a02a2a515ee88f3"
+        },
+        {
+          "round": 12,
+          "final": false,
+          "retained_group_rounds": [
+            9,
+            10,
+            11
+          ],
+          "changes_verified": 3,
+          "wire_sha256": "181e665c31720be574fc6bcc2a14531a2eaf4755f7197b9ff5d9184ca35653db",
+          "body_sha256": "181e665c31720be574fc6bcc2a14531a2eaf4755f7197b9ff5d9184ca35653db",
+          "native_history_exact": true,
+          "control_sha256": "cb46c7fccd1eb5b812fded8bd63a18807d7d893399bb6e35fb01a68fad69d77b"
+        },
+        {
+          "round": 13,
+          "final": false,
+          "retained_group_rounds": [
+            10,
+            11,
+            12
+          ],
+          "changes_verified": 3,
+          "wire_sha256": "8d970435bc21250e35eb126a2a9b2e4bc97704caa0de4464e07f853a21fda0b3",
+          "body_sha256": "8d970435bc21250e35eb126a2a9b2e4bc97704caa0de4464e07f853a21fda0b3",
+          "native_history_exact": true,
+          "control_sha256": "3f323c055973a706c16c458584a0bfa08a976d9c70bcd993d5fb94432bd17678"
+        },
+        {
+          "round": 14,
+          "final": false,
+          "retained_group_rounds": [
+            10,
+            11,
+            12,
+            13
+          ],
+          "changes_verified": 4,
+          "wire_sha256": "136c0538ba1cbbcdf5e9dfcc94f6e9ab3fe5b2e94b170e9bb16d60a1b6930c1b",
+          "body_sha256": "136c0538ba1cbbcdf5e9dfcc94f6e9ab3fe5b2e94b170e9bb16d60a1b6930c1b",
+          "native_history_exact": true,
+          "control_sha256": "776b0c2f68fcca73d83c70fd6aee4cf3c22acc3eb9c66bf494bb42946e40bb06"
+        },
+        {
+          "round": 15,
+          "final": false,
+          "retained_group_rounds": [
+            11,
+            12,
+            13,
+            14
+          ],
+          "changes_verified": 4,
+          "wire_sha256": "b66913876e71ff2a7e52e4c1c14f84df31da4879a5e3ed6cfbfcfff42a7f36dc",
+          "body_sha256": "b66913876e71ff2a7e52e4c1c14f84df31da4879a5e3ed6cfbfcfff42a7f36dc",
+          "native_history_exact": true,
+          "control_sha256": "c823a9e23720b90e58b730875a2ffc91de3e9b7eb94246ba804bb4ec4c6647db"
+        },
+        {
+          "round": 16,
+          "final": true,
+          "retained_group_rounds": [
+            12,
+            13,
+            14,
+            15
+          ],
+          "changes_verified": 4,
+          "wire_sha256": "1980d0aeb0de7ee3b6b7a8f9398700977d91338b93386efa28596ece2ba92d7f",
+          "body_sha256": "1980d0aeb0de7ee3b6b7a8f9398700977d91338b93386efa28596ece2ba92d7f",
+          "native_history_exact": true,
+          "control_sha256": "bc734b5074bcf1a5d1d51b0da63eb846cf5a842dd850012f2b4ed42f2f1d1606"
+        }
+      ],
+      "control_check_scope": "Phase and archived workflow match; whole control preserved in exact archived/HTTP wire. No counterfactual baseline control equality claimed."
+    },
+    "q774-baseline-r1": {
+      "passed": true,
+      "fixture_mode": false,
+      "seal_files": 80,
+      "chain": {
+        "event_count": 642,
+        "head": "e00c17df2aaea01a1d823be95effac13214779a5f3299aa6d409927c574717c0"
+      },
+      "model_requests": 16,
+      "normal_responses": 16,
+      "unparsed_or_failed_requests": 0,
+      "http_response_files": 16,
+      "search_raw_events": {},
+      "automatic_get_document_attempts": 0,
+      "unique_windows_verified": 0,
+      "delivery_ack": [
+        {
+          "round": 1,
+          "evidence": []
+        },
+        {
+          "round": 2,
+          "evidence": []
+        },
+        {
+          "round": 3,
+          "evidence": []
+        },
+        {
+          "round": 4,
+          "evidence": []
+        },
+        {
+          "round": 5,
+          "evidence": []
+        },
+        {
+          "round": 6,
+          "evidence": []
+        },
+        {
+          "round": 7,
+          "evidence": []
+        },
+        {
+          "round": 8,
+          "evidence": []
+        },
+        {
+          "round": 9,
+          "evidence": []
+        },
+        {
+          "round": 10,
+          "evidence": []
+        },
+        {
+          "round": 11,
+          "evidence": []
+        },
+        {
+          "round": 12,
+          "evidence": []
+        },
+        {
+          "round": 13,
+          "evidence": []
+        },
+        {
+          "round": 14,
+          "evidence": []
+        },
+        {
+          "round": 15,
+          "evidence": []
+        },
+        {
+          "round": 16,
+          "evidence": []
+        }
+      ],
+      "backend_attempts": 71,
+      "usage_known": {
+        "input_tokens": 281064,
+        "output_tokens": 4097,
+        "cache_read_tokens": 70784
+      },
+      "native_read_actions": 0,
+      "withheld_calls": 0,
+      "limitations": [
+        "Structural delivery and integrity checks do not establish semantic answer support.",
+        "Failed HTTP response bodies are seal-covered, not normal model_response objects."
+      ],
+      "protocol": "baseline",
+      "continuous_projection": [],
+      "control_check_scope": "Phase and archived workflow match; whole control preserved in exact archived/HTTP wire. No counterfactual baseline control equality claimed."
+    },
+    "q771-baseline-r1": {
+      "passed": true,
+      "fixture_mode": false,
+      "seal_files": 32,
+      "chain": {
+        "event_count": 53,
+        "head": "05543bc01f1acdfc7dde4f51d458644c3e8423bce22f22b773fe1f8fdd9f9d59"
+      },
+      "model_requests": 4,
+      "normal_responses": 4,
+      "unparsed_or_failed_requests": 0,
+      "http_response_files": 4,
+      "search_raw_events": {},
+      "automatic_get_document_attempts": 0,
+      "unique_windows_verified": 1,
+      "delivery_ack": [
+        {
+          "round": 1,
+          "evidence": []
+        },
+        {
+          "round": 2,
+          "evidence": []
+        },
+        {
+          "round": 3,
+          "evidence": [
+            "e1"
+          ]
+        },
+        {
+          "round": 4,
+          "evidence": [
+            "e1"
+          ]
+        }
+      ],
+      "backend_attempts": 4,
+      "usage_known": {
+        "input_tokens": 25151,
+        "output_tokens": 252,
+        "cache_read_tokens": 13568
+      },
+      "native_read_actions": 2,
+      "withheld_calls": 0,
+      "limitations": [
+        "Structural delivery and integrity checks do not establish semantic answer support.",
+        "Failed HTTP response bodies are seal-covered, not normal model_response objects."
+      ],
+      "protocol": "baseline",
+      "continuous_projection": [],
+      "control_check_scope": "Phase and archived workflow match; whole control preserved in exact archived/HTTP wire. No counterfactual baseline control equality claimed."
+    },
+    "q771-continuous-prose-omission-v1-r1": {
+      "passed": true,
+      "fixture_mode": false,
+      "seal_files": 32,
+      "chain": {
+        "event_count": 68,
+        "head": "34a132fe5da9369e396d82df65e978d39c9001395e9f69d3b5c1a73ec7f588ab"
+      },
+      "model_requests": 4,
+      "normal_responses": 4,
+      "unparsed_or_failed_requests": 0,
+      "http_response_files": 4,
+      "search_raw_events": {},
+      "automatic_get_document_attempts": 0,
+      "unique_windows_verified": 2,
+      "delivery_ack": [
+        {
+          "round": 1,
+          "evidence": []
+        },
+        {
+          "round": 2,
+          "evidence": []
+        },
+        {
+          "round": 3,
+          "evidence": [
+            "e1",
+            "e2"
+          ]
+        },
+        {
+          "round": 4,
+          "evidence": [
+            "e1",
+            "e2"
+          ]
+        }
+      ],
+      "backend_attempts": 5,
+      "usage_known": {
+        "input_tokens": 27346,
+        "output_tokens": 367,
+        "cache_read_tokens": 14464
+      },
+      "native_read_actions": 2,
+      "withheld_calls": 0,
+      "limitations": [
+        "Structural delivery and integrity checks do not establish semantic answer support.",
+        "Failed HTTP response bodies are seal-covered, not normal model_response objects."
+      ],
+      "protocol": "continuous-prose-omission-v1",
+      "continuous_projection": [
+        {
+          "round": 1,
+          "final": false,
+          "retained_group_rounds": [],
+          "changes_verified": 0,
+          "wire_sha256": "a61deeac7f2debefea800747f21cf59eb495c83b3fe63081feaef2c7a704fe3b",
+          "body_sha256": "a61deeac7f2debefea800747f21cf59eb495c83b3fe63081feaef2c7a704fe3b",
+          "native_history_exact": true,
+          "control_sha256": "d831093ee0d31d5b0423baf33838028960644a2a850d50f078ff80d51d0f5e5f"
+        },
+        {
+          "round": 2,
+          "final": false,
+          "retained_group_rounds": [
+            1
+          ],
+          "changes_verified": 1,
+          "wire_sha256": "1715a75e8843b91db1c6b17099dd1bab9430ebd18d22853a08c164046fba7d76",
+          "body_sha256": "1715a75e8843b91db1c6b17099dd1bab9430ebd18d22853a08c164046fba7d76",
+          "native_history_exact": true,
+          "control_sha256": "761785ef37af2a76b39c14800cc93df6a669ada2921a0780dc2514f17ea7dfe0"
+        },
+        {
+          "round": 3,
+          "final": false,
+          "retained_group_rounds": [
+            1,
+            2
+          ],
+          "changes_verified": 2,
+          "wire_sha256": "6a6f55d4edc72127efee3a34ca6c6f089916d0e10e7fa474d29ff88a0fc9520e",
+          "body_sha256": "6a6f55d4edc72127efee3a34ca6c6f089916d0e10e7fa474d29ff88a0fc9520e",
+          "native_history_exact": true,
+          "control_sha256": "ae820ed9026fdd5bdf30220f619efebb9a32ba5acec141f5a773963bb5e35ab7"
+        },
+        {
+          "round": 4,
+          "final": true,
+          "retained_group_rounds": [
+            1,
+            2,
+            3
+          ],
+          "changes_verified": 3,
+          "wire_sha256": "21fa3f9ac5243884e085e5b9e501f95c19805b9e18a159556439dee627174dc4",
+          "body_sha256": "21fa3f9ac5243884e085e5b9e501f95c19805b9e18a159556439dee627174dc4",
+          "native_history_exact": true,
+          "control_sha256": "2f843e9c88eb696a6ca2db3138378d6b814fd1be7fec2624952f9d92283719be"
+        }
+      ],
+      "control_check_scope": "Phase and archived workflow match; whole control preserved in exact archived/HTTP wire. No counterfactual baseline control equality claimed."
+    },
+    "q778-continuous-prose-omission-v1-r1": {
+      "passed": true,
+      "fixture_mode": false,
+      "seal_files": 32,
+      "chain": {
+        "event_count": 97,
+        "head": "e3e0f457d3570c805e43bae7d913bb98b807fddc44c792b32a830f2f1c52361b"
+      },
+      "model_requests": 4,
+      "normal_responses": 4,
+      "unparsed_or_failed_requests": 0,
+      "http_response_files": 4,
+      "search_raw_events": {},
+      "automatic_get_document_attempts": 0,
+      "unique_windows_verified": 1,
+      "delivery_ack": [
+        {
+          "round": 1,
+          "evidence": []
+        },
+        {
+          "round": 2,
+          "evidence": []
+        },
+        {
+          "round": 3,
+          "evidence": []
+        },
+        {
+          "round": 4,
+          "evidence": [
+            "e1"
+          ]
+        }
+      ],
+      "backend_attempts": 10,
+      "usage_known": {
+        "input_tokens": 32051,
+        "output_tokens": 435,
+        "cache_read_tokens": 13440
+      },
+      "native_read_actions": 1,
+      "withheld_calls": 0,
+      "limitations": [
+        "Structural delivery and integrity checks do not establish semantic answer support.",
+        "Failed HTTP response bodies are seal-covered, not normal model_response objects."
+      ],
+      "protocol": "continuous-prose-omission-v1",
+      "continuous_projection": [
+        {
+          "round": 1,
+          "final": false,
+          "retained_group_rounds": [],
+          "changes_verified": 0,
+          "wire_sha256": "7c3b4de711393e1eb56749a873d6860c113e222b59f4a83f8c44136a147268b7",
+          "body_sha256": "7c3b4de711393e1eb56749a873d6860c113e222b59f4a83f8c44136a147268b7",
+          "native_history_exact": true,
+          "control_sha256": "d831093ee0d31d5b0423baf33838028960644a2a850d50f078ff80d51d0f5e5f"
+        },
+        {
+          "round": 2,
+          "final": false,
+          "retained_group_rounds": [
+            1
+          ],
+          "changes_verified": 1,
+          "wire_sha256": "ff60f028f3d30ddc96ca7b3bb67d6da31c74f135d7d6947c948758b81c0f739f",
+          "body_sha256": "ff60f028f3d30ddc96ca7b3bb67d6da31c74f135d7d6947c948758b81c0f739f",
+          "native_history_exact": true,
+          "control_sha256": "21067eff1365780970722c6db38297fd96eda935ae0c9e400d78aed1386466e5"
+        },
+        {
+          "round": 3,
+          "final": false,
+          "retained_group_rounds": [
+            1,
+            2
+          ],
+          "changes_verified": 2,
+          "wire_sha256": "f10094e20bd360779be3c4ec9a755433236aad5c2fe48d7ba14a119845cf8ce7",
+          "body_sha256": "f10094e20bd360779be3c4ec9a755433236aad5c2fe48d7ba14a119845cf8ce7",
+          "native_history_exact": true,
+          "control_sha256": "e352b7612d7eaf1c580ab8b2204df26de7af6908067fb6033415ac40b1ecdb6a"
+        },
+        {
+          "round": 4,
+          "final": true,
+          "retained_group_rounds": [
+            1,
+            2,
+            3
+          ],
+          "changes_verified": 3,
+          "wire_sha256": "53b33c4ff7280bab323b7db2cd6877b420a5ff1f46126c45a71951af8c9ea61c",
+          "body_sha256": "53b33c4ff7280bab323b7db2cd6877b420a5ff1f46126c45a71951af8c9ea61c",
+          "native_history_exact": true,
+          "control_sha256": "94156e76d51c0dd7967fb545d8e3d4d40bf92e379b2e3b6c0d29f48d582da073"
+        }
+      ],
+      "control_check_scope": "Phase and archived workflow match; whole control preserved in exact archived/HTTP wire. No counterfactual baseline control equality claimed."
+    },
+    "q778-baseline-r1": {
+      "passed": true,
+      "fixture_mode": false,
+      "seal_files": 32,
+      "chain": {
+        "event_count": 78,
+        "head": "3f1741eccb8c9a4c6af15ff98923ce14dbea48aee6c75a783ad497117b0e9d2d"
+      },
+      "model_requests": 4,
+      "normal_responses": 4,
+      "unparsed_or_failed_requests": 0,
+      "http_response_files": 4,
+      "search_raw_events": {},
+      "automatic_get_document_attempts": 0,
+      "unique_windows_verified": 1,
+      "delivery_ack": [
+        {
+          "round": 1,
+          "evidence": []
+        },
+        {
+          "round": 2,
+          "evidence": []
+        },
+        {
+          "round": 3,
+          "evidence": []
+        },
+        {
+          "round": 4,
+          "evidence": [
+            "e1"
+          ]
+        }
+      ],
+      "backend_attempts": 7,
+      "usage_known": {
+        "input_tokens": 30081,
+        "output_tokens": 342,
+        "cache_read_tokens": 14208
+      },
+      "native_read_actions": 1,
+      "withheld_calls": 0,
+      "limitations": [
+        "Structural delivery and integrity checks do not establish semantic answer support.",
+        "Failed HTTP response bodies are seal-covered, not normal model_response objects."
+      ],
+      "protocol": "baseline",
+      "continuous_projection": [],
+      "control_check_scope": "Phase and archived workflow match; whole control preserved in exact archived/HTTP wire. No counterfactual baseline control equality claimed."
+    }
+  },
+  "pairs": {
+    "775": {
+      "r1_bytes_equal": true,
+      "r1_sha256": "f04ab436073f1d8df23d07c19d6249d5305d80faa99f820cf8b53b35eb4a8b16"
+    },
+    "774": {
+      "r1_bytes_equal": true,
+      "r1_sha256": "fe019b884af954cf8777f10448535ff340cb76bb43e9ff9bfcb87c4cc5b7cdcd"
+    },
+    "771": {
+      "r1_bytes_equal": true,
+      "r1_sha256": "a61deeac7f2debefea800747f21cf59eb495c83b3fe63081feaef2c7a704fe3b"
+    },
+    "778": {
+      "r1_bytes_equal": true,
+      "r1_sha256": "7c3b4de711393e1eb56749a873d6860c113e222b59f4a83f8c44136a147268b7"
+    }
+  }
+}

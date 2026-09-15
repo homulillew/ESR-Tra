@@ -1,0 +1,125 @@
+{
+  "protocol": "stride-search-3",
+  "head": "ba6af866bcc730c9b2bf0cc6ff3c4d702930bc10e1d7ad8735a24cb152c84b2e",
+  "outcome": "model_budget",
+  "formal_correct": null,
+  "model_attempts": 4,
+  "backend_attempts": 4,
+  "queries": [
+    {
+      "round": 1,
+      "top_k": 5,
+      "equivalence_key": "4483e3ede05e6af611670c28af055fc6a0549d315fa3aaa6b723567996e58c77",
+      "cached": false,
+      "query_sha256": "68029aad94cdb8d4a722a3efae6eac3c98a05c8027cce53854886d4261c6286f",
+      "query": "hat shop 1930s scarves brand initials siblings surname",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"hat\" OR \"shop\" OR \"1930s\" OR \"scarves\" OR \"brand\" OR \"initials\" OR \"siblings\" OR \"surname\"",
+        "terms": [
+          "hat",
+          "shop",
+          "1930s",
+          "scarves",
+          "brand",
+          "initials",
+          "siblings",
+          "surname"
+        ]
+      }
+    },
+    {
+      "round": 1,
+      "top_k": 5,
+      "equivalence_key": "462bb80f633f61df9dda9954ee449acbdc68af66e8688612ce77da660e32ec15",
+      "cached": false,
+      "query_sha256": "6347169129f012094d648f319242b4e7335ada7bea15e721d9294bde22b82671",
+      "query": "hat shop opened 1930s later scarves new name initials",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"hat\" OR \"shop\" OR \"opened\" OR \"1930s\" OR \"later\" OR \"scarves\" OR \"new\" OR \"name\" OR \"initials\"",
+        "terms": [
+          "hat",
+          "shop",
+          "opened",
+          "1930s",
+          "later",
+          "scarves",
+          "new",
+          "name",
+          "initials"
+        ]
+      }
+    },
+    {
+      "round": 1,
+      "top_k": 5,
+      "equivalence_key": "84e1a24e0165289f004f3aa90d18d372864a05b4e6255d6a01a387d6e4e074d5",
+      "cached": false,
+      "query_sha256": "8fac793b1ce967aca560ae83e15ae75be642335330448729d0f83bbde2828c76",
+      "query": "fashion brand created 1980s with child younger audience hat shop scarves",
+      "compiled": {
+        "compiler": "cpu-or-1",
+        "expression": "\"fashion\" OR \"brand\" OR \"created\" OR \"1980s\" OR \"with\" OR \"child\" OR \"younger\" OR \"audience\" OR \"hat\" OR \"shop\" OR \"scarves\"",
+        "terms": [
+          "fashion",
+          "brand",
+          "created",
+          "1980s",
+          "with",
+          "child",
+          "younger",
+          "audience",
+          "hat",
+          "shop",
+          "scarves"
+        ]
+      }
+    }
+  ],
+  "equivalent_query_repeats": 0,
+  "views": [
+    {
+      "round": 1,
+      "compacted": false,
+      "visible_evidence": [],
+      "shelf": [],
+      "shelf_evicted": []
+    },
+    {
+      "round": 2,
+      "compacted": false,
+      "visible_evidence": [],
+      "shelf": [],
+      "shelf_evicted": []
+    },
+    {
+      "round": 3,
+      "compacted": false,
+      "visible_evidence": [
+        "e1"
+      ],
+      "shelf": [],
+      "shelf_evicted": []
+    },
+    {
+      "round": 4,
+      "compacted": false,
+      "visible_evidence": [
+        "e1"
+      ],
+      "shelf": [],
+      "shelf_evicted": []
+    }
+  ],
+  "delivered_refs": [
+    "e1"
+  ],
+  "submitted_refs": [],
+  "text_included": true,
+  "limitations": [
+    "Equivalence is compiler equality, not semantic identity or wasted-search proof",
+    "Raw-window visibility/selection is not entailment or complete evidence coverage",
+    "No live q26 replay or independent answer scoring is performed"
+  ]
+}

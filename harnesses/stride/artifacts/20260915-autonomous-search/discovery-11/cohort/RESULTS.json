@@ -1,0 +1,347 @@
+{
+  "rows": [
+    {
+      "slot": "q775-baseline-r1",
+      "qid": 775,
+      "protocol": "baseline",
+      "status": "submitted",
+      "terminal": {
+        "answer": "Akure",
+        "answer_representation": {
+          "input_type": "string",
+          "operation": "identity",
+          "rule": "string-integer-v1"
+        },
+        "basis": [
+          {
+            "document": "d40",
+            "document_chars": 17355,
+            "end": 3000,
+            "kind": "raw_evidence",
+            "ref": "e1",
+            "sha256": "79767844ce2071fc5dcf3fb0e64d0cade0ba154ef0fc324d0054c1c767e63138",
+            "snapshot": "90019ca46504785f620ef12f36abae20080c8c3bc7809053339e4beaa4deb2fd",
+            "start": 0
+          }
+        ],
+        "elapsed_seconds": 132.01113160001114,
+        "outcome": "submitted",
+        "refs": [
+          "e1"
+        ],
+        "semantic_status": "not_automatically_verified"
+      },
+      "attempts": 14,
+      "elapsed_seconds": 132.20394330000272,
+      "head": "f33b8e71e57ba3b76de2a36e75fc6c1e5e5c16af62a3a7c839f49624a630856a",
+      "seal_sha256": "b9109cbdbd747ae62e1f4224e10626b38c38e47ed338eddeea1e60535fdc1df3",
+      "budget_after": {
+        "cap": 2413,
+        "used": 1501,
+        "remaining": 912,
+        "this_run": 14,
+        "epoch_allowance": 1000,
+        "epoch_used": 88,
+        "epoch_remaining": 912
+      }
+    },
+    {
+      "slot": "q775-continuous-prose-omission-v1-r1",
+      "qid": 775,
+      "protocol": "continuous-prose-omission-v1",
+      "status": "model_budget",
+      "terminal": {
+        "answer": "",
+        "elapsed_seconds": 147.85757679998642,
+        "outcome": "model_budget"
+      },
+      "attempts": 16,
+      "elapsed_seconds": 148.00614300000598,
+      "head": "ac22fedf94944a2b62f182e05b37288da9fd2383b05d3e97ddaba62b0f4f6e2a",
+      "seal_sha256": "89573814b2b3e638f7ec0b0e1d40fd85dc88134a63c2b84ed7c1d812d08a789d",
+      "budget_after": {
+        "cap": 2413,
+        "used": 1517,
+        "remaining": 896,
+        "this_run": 30,
+        "epoch_allowance": 1000,
+        "epoch_used": 104,
+        "epoch_remaining": 896
+      }
+    },
+    {
+      "slot": "q774-continuous-prose-omission-v1-r1",
+      "qid": 774,
+      "protocol": "continuous-prose-omission-v1",
+      "status": "abstained",
+      "terminal": {
+        "answer": "",
+        "elapsed_seconds": 138.2113742000074,
+        "outcome": "abstained",
+        "reason": "I identified a strong candidate (Sean Murray of NCIS, whose real-life stepsister Troian Bellisario plays Sarah McGee — unrelated as siblings on the show), and NCIS fits the season/era criteria (premiered 2003, >3 seasons by 2023). However, I could not verify the remaining required clues from delivered evidence: Sean Murray's exact real-life height (must be >1.65 m and <1.70 m), Timothy McGee being married more than 2 but fewer than 5 times in the series, and only one of his children surviving. Without confirming these distinguishing criteria, I cannot confidently submit the entertainer's name."
+      },
+      "attempts": 16,
+      "elapsed_seconds": 138.45871989999432,
+      "head": "f476f6dc6be47d2961f6591622277eae5af4b0ea0085b7ff5ca552498de80ac8",
+      "seal_sha256": "e4052ba2126eda2bf622fc89847d947b3258431c9ca8e2312df3e5714bf2e166",
+      "budget_after": {
+        "cap": 2413,
+        "used": 1533,
+        "remaining": 880,
+        "this_run": 46,
+        "epoch_allowance": 1000,
+        "epoch_used": 120,
+        "epoch_remaining": 880
+      }
+    },
+    {
+      "slot": "q774-baseline-r1",
+      "qid": 774,
+      "protocol": "baseline",
+      "status": "abstained",
+      "terminal": {
+        "answer": "",
+        "elapsed_seconds": 222.43037640000694,
+        "outcome": "abstained",
+        "reason": "Despite extensive searching, I could not identify an entertainer who satisfies all five constraints simultaneously: (1) first appeared in a season starting between 2001-2019 of a show with more than 3 seasons as of 2023; (2) real-life height between 1.65m and 1.70m; (3) character married more than 2 but less than 5 times in the series; (4) only one of their character's children survives in the series; (5) plays alongside a real-life relative who is unrelated to their character in the series. The most distinctive clue — a real-life relative playing an unrelated character — did not yield a confirmed match in the sources retrieved, and I could not verify the marriage/child-survival/height constraints together for any single candidate. Without a source confirming all constraints, I cannot responsibly submit a name."
+      },
+      "attempts": 16,
+      "elapsed_seconds": 222.71736290000263,
+      "head": "51fc48ce85c6b54a2b0af115b8061941e2d9b8b51ce57de964ec74ef8f318807",
+      "seal_sha256": "69bb535a4f8e64e52099ad62a856e8e4fe22416a52664bf4f32b50d923bc18f3",
+      "budget_after": {
+        "cap": 2413,
+        "used": 1549,
+        "remaining": 864,
+        "this_run": 62,
+        "epoch_allowance": 1000,
+        "epoch_used": 136,
+        "epoch_remaining": 864
+      }
+    },
+    {
+      "slot": "q771-baseline-r1",
+      "qid": 771,
+      "protocol": "baseline",
+      "status": "model_budget",
+      "terminal": {
+        "answer": "",
+        "elapsed_seconds": 29.859277600015048,
+        "outcome": "model_budget"
+      },
+      "attempts": 4,
+      "elapsed_seconds": 29.912581700016744,
+      "head": "ba6af866bcc730c9b2bf0cc6ff3c4d702930bc10e1d7ad8735a24cb152c84b2e",
+      "seal_sha256": "bd2c0b288a67e18b392e3a51c2ab41299145f0d5544e2cacf1aea20eb8ed77d0",
+      "budget_after": {
+        "cap": 2413,
+        "used": 1553,
+        "remaining": 860,
+        "this_run": 66,
+        "epoch_allowance": 1000,
+        "epoch_used": 140,
+        "epoch_remaining": 860
+      }
+    },
+    {
+      "slot": "q771-continuous-prose-omission-v1-r1",
+      "qid": 771,
+      "protocol": "continuous-prose-omission-v1",
+      "status": "submitted",
+      "terminal": {
+        "answer": "Vakkorama",
+        "answer_representation": {
+          "input_type": "string",
+          "operation": "identity",
+          "rule": "string-integer-v1"
+        },
+        "basis": [
+          {
+            "document": "d1",
+            "document_chars": 9095,
+            "end": 3000,
+            "kind": "raw_evidence",
+            "ref": "e1",
+            "sha256": "521deb8f6549e7ea288326ea13a34d4635283fc59820929b6ad3b4c3edade321",
+            "snapshot": "446eabd6c86b9aad83f468e7eb034d96105d6e38bc9d97c923416d3ce089e105",
+            "start": 0
+          },
+          {
+            "document": "d8",
+            "document_chars": 13639,
+            "end": 3000,
+            "kind": "raw_evidence",
+            "ref": "e2",
+            "sha256": "ed282b99cfb0aae5a430ddfadeb3348fa20e85aac24fb4501bf9cd3b3dadb4b2",
+            "snapshot": "7d8960afbde4b93401ea738e66299a6ee3d0dee47906ba8e3a86ebdea642ffcd",
+            "start": 0
+          }
+        ],
+        "elapsed_seconds": 17.30340740000247,
+        "outcome": "submitted",
+        "refs": [
+          "e1",
+          "e2"
+        ],
+        "semantic_status": "not_automatically_verified"
+      },
+      "attempts": 4,
+      "elapsed_seconds": 17.393618600006448,
+      "head": "3e47c6c94566a3c7a234d9bf5b8c6088d89c033b8601ca4d07e29cbb41c1029c",
+      "seal_sha256": "264f410b82bf2e07779e6c9052575da26adf748e4d8b920b9d69d96a1d8f31f6",
+      "budget_after": {
+        "cap": 2413,
+        "used": 1557,
+        "remaining": 856,
+        "this_run": 70,
+        "epoch_allowance": 1000,
+        "epoch_used": 144,
+        "epoch_remaining": 856
+      }
+    },
+    {
+      "slot": "q778-continuous-prose-omission-v1-r1",
+      "qid": 778,
+      "protocol": "continuous-prose-omission-v1",
+      "status": "submitted",
+      "terminal": {
+        "answer": "21",
+        "answer_representation": {
+          "input_type": "integer",
+          "input_value": 21,
+          "operation": "decimal",
+          "rule": "string-integer-v1"
+        },
+        "basis": [
+          {
+            "document": "d22",
+            "document_chars": 4374,
+            "end": 3000,
+            "kind": "raw_evidence",
+            "ref": "e1",
+            "sha256": "bc0d510dbd6cde0530cf08684de455d82ec1943c0ba50cab130ae01990cc24b8",
+            "snapshot": "d7b7a23b3eb780d78018e5fe30d91613c9769a1cff7564bb0a79c08614acb838",
+            "start": 0
+          }
+        ],
+        "elapsed_seconds": 25.584510100015905,
+        "outcome": "submitted",
+        "refs": [
+          "e1"
+        ],
+        "semantic_status": "not_automatically_verified"
+      },
+      "attempts": 4,
+      "elapsed_seconds": 25.67681880001328,
+      "head": "04e453b998e8e23b3e2c097c6e431884fd2b6125e5bfebbbab36aba2946f8e0e",
+      "seal_sha256": "b164c7b89c4371dd25cb7992f52f84badcc236bfdb17e1a0cdf6efabffa5400b",
+      "budget_after": {
+        "cap": 2413,
+        "used": 1561,
+        "remaining": 852,
+        "this_run": 74,
+        "epoch_allowance": 1000,
+        "epoch_used": 148,
+        "epoch_remaining": 852
+      }
+    },
+    {
+      "slot": "q778-baseline-r1",
+      "qid": 778,
+      "protocol": "baseline",
+      "status": "submitted",
+      "terminal": {
+        "answer": "21",
+        "answer_representation": {
+          "input_type": "integer",
+          "input_value": 21,
+          "operation": "decimal",
+          "rule": "string-integer-v1"
+        },
+        "basis": [
+          {
+            "document": "d19",
+            "document_chars": 4374,
+            "end": 3000,
+            "kind": "raw_evidence",
+            "ref": "e1",
+            "sha256": "bc0d510dbd6cde0530cf08684de455d82ec1943c0ba50cab130ae01990cc24b8",
+            "snapshot": "d7b7a23b3eb780d78018e5fe30d91613c9769a1cff7564bb0a79c08614acb838",
+            "start": 0
+          }
+        ],
+        "elapsed_seconds": 20.085476999985985,
+        "outcome": "submitted",
+        "refs": [
+          "e1"
+        ],
+        "semantic_status": "not_automatically_verified"
+      },
+      "attempts": 4,
+      "elapsed_seconds": 20.189750599995023,
+      "head": "cd1356c693f401619624c09401c751b22826e5966dc7d6c0184332166af5df35",
+      "seal_sha256": "63266bdb16fb334d8aab2aa6fc5b20b3c15963d20644566b545bf0df608bcf4e",
+      "budget_after": {
+        "cap": 2413,
+        "used": 1565,
+        "remaining": 848,
+        "this_run": 78,
+        "epoch_allowance": 1000,
+        "epoch_used": 152,
+        "epoch_remaining": 848
+      }
+    }
+  ],
+  "judgments": [
+    {
+      "slot": "q775-baseline-r1",
+      "head": "f33b8e71e57ba3b76de2a36e75fc6c1e5e5c16af62a3a7c839f49624a630856a",
+      "http_sequence": 1,
+      "correct": false,
+      "confidence": 1.0,
+      "extracted_answer": "Akure",
+      "rationale": "The standard answer is Boston, not Akure.",
+      "parse_error": false
+    },
+    {
+      "slot": "q771-continuous-prose-omission-v1-r1",
+      "head": "3e47c6c94566a3c7a234d9bf5b8c6088d89c033b8601ca4d07e29cbb41c1029c",
+      "http_sequence": 2,
+      "correct": true,
+      "confidence": 1.0,
+      "extracted_answer": "Vakkorama",
+      "rationale": "The candidate answer matches the standard answer exactly.",
+      "parse_error": false
+    },
+    {
+      "slot": "q778-continuous-prose-omission-v1-r1",
+      "head": "04e453b998e8e23b3e2c097c6e431884fd2b6125e5bfebbbab36aba2946f8e0e",
+      "http_sequence": 3,
+      "correct": true,
+      "confidence": 1.0,
+      "extracted_answer": "21",
+      "rationale": "The candidate answer matches the standard answer.",
+      "parse_error": false
+    },
+    {
+      "slot": "q778-baseline-r1",
+      "head": "cd1356c693f401619624c09401c751b22826e5966dc7d6c0184332166af5df35",
+      "http_sequence": 4,
+      "correct": true,
+      "confidence": 1.0,
+      "extracted_answer": "21",
+      "rationale": "The candidate answer matches the standard answer.",
+      "parse_error": false
+    }
+  ],
+  "budget_after": {
+    "cap": 2413,
+    "used": 1569,
+    "remaining": 844,
+    "this_run": 82,
+    "epoch_allowance": 1000,
+    "epoch_used": 156,
+    "epoch_remaining": 844
+  },
+  "utc_finished": "2026-09-15T16:45:44.308534+00:00"
+}
