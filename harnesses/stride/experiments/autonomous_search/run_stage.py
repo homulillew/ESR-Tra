@@ -49,6 +49,7 @@ def sources():
               ROOT / 'harnesses/stride/tests/test_once_prose_reset.py',
               ROOT / 'harnesses/stride/tests/test_relation_review.py',
               ROOT / 'harnesses/stride/tests/test_review_memory.py',
+              ROOT / 'harnesses/stride/tests/test_read_only.py',
               ROOT / 'harnesses/stride/tests/test_stage_publication.py']
     return {p.relative_to(ROOT).as_posix(): sha(p) for p in sorted(paths)}
 

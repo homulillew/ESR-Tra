@@ -97,6 +97,11 @@ def build(harness, model, counter, *, final: bool, output_limit: int, groups=Non
                 raw_windows = [harness.archive.evidence(ref) for ref in sorted(visible, key=lambda r: int(r[1:]))]
                 messages, tools, review_audit = render_review(policy, harness.question, history,
                     raw_windows, scope, tools)
+        read_state, read_audit = None, None
+        if harness.read_only is not None:
+            from .read_only import project
+            read_state, tools, read_audit = project(harness, history, visible, issued,
+                workflow_view if workflow_view is not None else documents, tools, effective_final)
         wire = model.prepare(messages, tools, output_limit)
         size = counter(wire)
         if type(size) is not int or size < 0:
@@ -115,6 +120,7 @@ def build(harness, model, counter, *, final: bool, output_limit: int, groups=Non
                     **({"search_pivot_projection": pivot} if pivot is not None else {}),
                     **({"once_prose_state": once_state, "once_prose_audit": once_audit} if once_state is not None else {}),
                     **({"relation_review_state": review_state, "relation_review_audit": review_audit} if review_state is not None else {}),
+                    **({"read_only_state": read_state, "read_only_audit": read_audit} if read_state is not None else {}),
                     **({"review_memory_delivery": memory_delivery} if memory_delivery is not None else {}),
                     **({"history_projection": history_view} if middle_history else {})}
         if config.context_mode == "full":

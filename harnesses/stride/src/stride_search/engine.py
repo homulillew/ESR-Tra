@@ -29,6 +29,7 @@ class Harness:
         self.search_pivot = SearchPivotState() if decision_protocol == "search-pivot-v1" else None
         self.once_prose = OnceProseState() if decision_protocol == "once-prose-reset-v1" else None
         self.relation_review = RelationReviewState() if decision_protocol in {"relation-review-once-v1", "relation-review-memory-v1"} else None
+        self.read_only = OnceProseState() if decision_protocol == "read-only-once-v1" else None
         self.review_memory = None
         self.workflow = WorkflowState(workflow or WorkflowConfig())
         if answer_contract not in ANSWER_CONTRACTS:
@@ -277,6 +278,14 @@ class Harness:
                 self.archive.append("relation_review", {"round": round_no,
                     **projection["trigger"], **plan["relation_review_audit"], "wire_sha256": digest(plan["wire"]),
                     "wire_tools_sha256": digest(plan["wire"].get("tools", []))})
+        if self.read_only is not None:
+            projection = plan["read_only_state"]
+            self.read_only.commit(projection)
+            if projection["trigger"] is not None:
+                self.archive.append("read_only_once", {"round": round_no,
+                    **projection["trigger"], **plan["read_only_audit"],
+                    "wire_sha256": digest(plan["wire"]),
+                    "wire_tools_sha256": digest(plan["wire"].get("tools", []))})
         if plan.get("review_memory_delivery") is not None:
             self.archive.append("review_memory_delivery", {"round": round_no,
                 **plan["review_memory_delivery"], "wire_sha256": digest(plan["wire"])})
@@ -318,6 +327,8 @@ class Harness:
             try:
                 if invalid_group: raise ContractError(invalid_group, "Batch exceeds limit; no call in this batch is executed")
                 if fatal or self.terminal is not None: raise ContractError("not_executed", "A fatal or terminal boundary stopped this suffix")
+                if plan.get("read_only_audit") is not None and name != "read":
+                    raise ContractError("read_only_tool_only", "This decision permits only read; no automatic replacement")
                 if plan.get("relation_review_audit") is not None and name not in {"search", "read", "find"}:
                     raise ContractError("relation_review_tool_only", "This review decision permits only search/read/find; no automatic replacement")
                 if final and name != "finish": raise ContractError("final_only", "Final decision accepts only finish, within the original budget")
@@ -350,6 +361,8 @@ class Harness:
             self.once_prose.complete(group)
         if self.relation_review is not None:
             self.relation_review.complete(group)
+        if self.read_only is not None:
+            self.read_only.complete(group)
         if self.decision_protocol == "relation-review-memory-v1" and plan.get("relation_review_audit") is not None:
             from .review_memory import capture, identity as memory_identity
             if previous_error or fatal or not all(r["result"].get("ok") is True for r in records):
