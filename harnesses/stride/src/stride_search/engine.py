@@ -35,6 +35,10 @@ class Harness:
             from .search_raw import SearchRawState
             self.search_raw = SearchRawState()
         self.review_memory = None
+        self.local_state = None
+        if decision_protocol == "constraint-state-v1":
+            from .local_state import LocalState
+            self.local_state = LocalState()
         self.workflow = WorkflowState(workflow or WorkflowConfig())
         if answer_contract not in ANSWER_CONTRACTS:
             raise ValueError("Unknown answer contract")
@@ -145,6 +149,13 @@ class Harness:
             raise ContractError("unreceived_reference", f"{kind} {ref} was not in this decision's received-reference scope")
 
     def _dispatch(self, name, args, binding):
+        if name == "interpret" and self.local_state is not None:
+            from .local_state import dispatch_interpret
+            return dispatch_interpret(self, args, binding), [], []
+        if name == "choose" and self.local_state is not None:
+            from .local_state import dispatch_choose
+            result, docs, evidence = dispatch_choose(self, args, binding)
+            return result, docs, evidence
         if name == "update_gap" and self.workflow.options.gap_state:
             return self.workflow.update_gap(self, args, binding), [], []
         if name == "search":
@@ -309,6 +320,11 @@ class Harness:
         if plan.get("review_memory_delivery") is not None:
             self.archive.append("review_memory_delivery", {"round": round_no,
                 **plan["review_memory_delivery"], "wire_sha256": digest(plan["wire"])})
+        if self.local_state is not None and plan.get("local_state_projection") is not None:
+            self.local_state.commit(plan["local_state_projection"])
+            self.archive.append("local_state_commit", {"round": round_no,
+                "phase": plan["local_state_projection"]["phase"],
+                "view_sha256": digest(plan["local_state_projection"]["view"])})
         try: raw = model.send(deepcopy(plan["wire"]))
         except Exception as exc:
             self.output_charged += output_limit; code = exc.code if isinstance(exc, ContractError) else "model_transport"
@@ -351,13 +367,17 @@ class Harness:
                     raise ContractError("read_only_tool_only", "This decision permits only read; no automatic replacement")
                 if plan.get("relation_review_audit") is not None and name not in {"search", "read", "find"}:
                     raise ContractError("relation_review_tool_only", "This review decision permits only search/read/find; no automatic replacement")
-                if final and name != "finish": raise ContractError("final_only", "Final decision accepts only finish, within the original budget")
+                if final and name not in ("finish", "choose", "interpret"): raise ContractError("final_only", "Final decision accepts only finish, within the original budget")
                 if name == "finish" and index != len(calls) - 1: raise ContractError("finish_order", "finish must be the last declared call")
                 if name == "finish" and blocking_error: raise ContractError("not_executed", "A failed earlier action prevents a pre-generated finish")
                 if self.action_slots >= self.config.max_actions: raise ContractError("action_budget", "No action slots remain")
                 if self.config.reserve_finish and name != "finish" and self.config.max_actions - self.action_slots <= 1: raise ContractError("finish_slot_reserved", "One action slot is reserved for an explicit finish")
                 self.action_slots += 1; charged_slot = True; args = loads(arguments)
-                validate_call(self.workflow.options, name, args, feedback=self.validation_feedback, answer_contract=self.answer_contract)
+                if self.local_state is not None and name in ("interpret", "choose"):
+                    from .local_state import _validate_local_call
+                    _validate_local_call(name, args)
+                else:
+                    validate_call(self.workflow.options, name, args, feedback=self.validation_feedback, answer_contract=self.answer_contract)
                 executed = True; result, docs, evidence = self._dispatch(name, args, binding)
                 if name == "search" and self.search_raw is not None:
                     try:
@@ -405,6 +425,11 @@ class Harness:
             self.archive.append("review_memory_capture", memory_audit)
         self.archive.append("round_end", {"round": round_no, "group": group_ref, "notes": self.archive.put_json(sorted(self.notes.values(), key=lambda n: n["order"])), "remaining": self.remaining()})
         self.workflow.complete_decision(workflow_stage)
+        if self.local_state is not None:
+            self.local_state.complete(group)
+            self.archive.append("local_state_complete", {"round": round_no,
+                "task_id": self.local_state.active_task_id,
+                "phase": self.local_state.phase})
         if fatal: self._end(fatal)
         elif plan.get("workflow_final") and self.terminal is None: self._end("stalled_no_submission", detail="No legal finish in bounded recovery final decision")
 

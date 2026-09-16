@@ -33,6 +33,7 @@ tool actions. No extra note, gap update, review call, or output field is require
 SEARCH_PIVOT = """The last two search rounds delivered no new source passage. In your next search batch, use one query to investigate a different identifying clue from the question. Omit the current unverified candidate's name from that query. Use concrete names, terms, dates, or relations stated in the question; use a short lexical query rather than the full question. Keep within the existing query limit and proceed directly with tool actions."""
 
 PROTOCOLS = {'baseline': '', 'constraint-review-v1': CONSTRAINT_REVIEW,
+             'constraint-state-v1': '',  # system instruction injected by local_state via context.build
              'search-coverage-rank-v1': '',
              'continuous-prose-omission-v1': '',
              'search-pivot-v1': '', 'middle-history-v1': '', 'once-prose-reset-v1': '', 'relation-review-once-v1': '', 'relation-review-memory-v1': '', 'read-only-once-v1': '', 'read-only-explicit-v1': '', 'search-raw-window-v1': ''}
@@ -71,6 +72,10 @@ def identity(name):
     if name == 'middle-history-v1':
         from .history_projection import identity as projection_identity
         return projection_identity()
+    if name == 'constraint-state-v1':
+        from .local_state import identity as local_identity, PROTOCOL as LOCAL_PROTOCOL
+        ident = local_identity()
+        return {**ident, 'instruction_sha256': sha256(LOCAL_PROTOCOL.encode()).hexdigest()}
     instruction = SEARCH_PIVOT if name == 'search-pivot-v1' else PROTOCOLS[name]
     return {'version': name, 'instruction_sha256': sha256(instruction.encode()).hexdigest(),
             'kind': 'policy_instruction_not_verified_evidence',

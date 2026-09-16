@@ -95,8 +95,45 @@ def build(harness, model, counter, *, final: bool, output_limit: int, groups=Non
             if pivot["trigger"] is not None:
                 scope["search_pivot"] = pivot["trigger"]
         messages.append({"role": "user", "content": "Current control state (data, not source evidence):\n" + canonical(scope)})
-        tools = toolset(harness.workflow.options, notes_enabled=config.notes_enabled, final=effective_final,
-            query_limit=config.max_queries_per_search, answer_contract=harness.answer_contract)
+        local_projection = None
+        if harness.local_state is not None:
+            from .local_state import PROTOCOL as LOCAL_PROTOCOL, PHASE_INTERPRET, PHASE_CHOOSE, PHASE_FINISH
+            local_projection = harness.local_state.project(harness, history, list(visible),
+                remaining=harness.remaining()["model_calls"], final=effective_final)
+            messages[0] = {"role": "system", "content": LOCAL_PROTOCOL}
+            phase = local_projection["phase"]
+            phase_scope = {"phase": phase, "local_task_view": local_projection["view"],
+                "instruction": ("Report your interpretation of the delivered passage for the current task."
+                    if phase == PHASE_INTERPRET else
+                    "Choose the next research entry, or finish if the answer target is supported."
+                    if phase == PHASE_CHOOSE else
+                    "Submit the explicit answer with delivered evidence or abstain.")}
+            messages.append({"role": "user", "content": "Local task (natural language, not symbols):\n" + canonical(phase_scope)})
+        if harness.local_state is not None:
+            from .local_state import local_toolset, PHASE_INTERPRET, PHASE_CHOOSE
+            from .contract import tools as base_tools, INTEGER_ANSWER
+            phase = local_projection["phase"]
+            if phase == PHASE_INTERPRET:
+                tools = local_toolset(answer_contract=harness.answer_contract)
+                if effective_final:
+                    tools = [t for t in base_tools(notes_enabled=False, final=True,
+                            query_limit=config.max_queries_per_search,
+                            answer_contract=harness.answer_contract) if t["function"]["name"] == "finish"]
+                    tools = local_toolset(answer_contract=harness.answer_contract) + tools
+            else:
+                tools = local_toolset(answer_contract=harness.answer_contract)
+                # In CHOOSE phase the model may also issue search/read/find/
+                # recall/finish directly; choose records intent and the native
+                # tool calls carry the real dispatch.
+                extra = [t for t in toolset(harness.workflow.options,
+                        notes_enabled=config.notes_enabled, final=effective_final,
+                        query_limit=config.max_queries_per_search,
+                        answer_contract=harness.answer_contract)
+                    if t["function"]["name"] in ("search", "read", "find", "recall", "finish")]
+                tools = tools + extra
+        else:
+            tools = toolset(harness.workflow.options, notes_enabled=config.notes_enabled, final=effective_final,
+                query_limit=config.max_queries_per_search, answer_contract=harness.answer_contract)
         if harness.search_raw is not None:
             from .search_raw import adapt_tools
             tools = adapt_tools(tools)
@@ -139,6 +176,7 @@ def build(harness, model, counter, *, final: bool, output_limit: int, groups=Non
                     **({"relation_review_state": review_state, "relation_review_audit": review_audit} if review_state is not None else {}),
                     **({"read_only_state": read_state, "read_only_audit": read_audit} if read_state is not None else {}),
                     **({"review_memory_delivery": memory_delivery} if memory_delivery is not None else {}),
+                    **({"local_state_projection": local_projection} if local_projection is not None else {}),
                     **({"history_projection": history_view} if middle_history or continuous_history else {})}
         if config.context_mode == "full":
             raise ContractError("context_capacity", "Full-history arm cannot fit its actual wire request", fatal=True)

@@ -1,0 +1,85 @@
+{
+  "profile": "constraint-state-v1",
+  "nl_view_version": "natural-language-local-v1",
+  "base_commit": "0f34e9006b38be1e7119d934f39b151581f2dd18",
+  "branch": "research/stride-local-state-nl-20260916T104031Z",
+  "frozen_at": "2026-09-16T10:40:31Z",
+  "description": "Natural-language local-task-driven state-based ReAct. One controller, one working state, two model task kinds (Interpret/Choose). Model sees NL descriptive roles; program carries IDs/dependencies/sources/versions.",
+  "three_data_dependencies": {
+    "question_to_task": "Frame.answer_target drives the auto-created first local task; the original question is never rewritten.",
+    "observation_to_judgment": "Every judgment cites a delivered source_ref and exact quote; scoped to a task; correctable via CorrectionPatch.",
+    "judgment_to_action": "reduce() updates routing; choose(query) reaches the real search backend via harness._dispatch; choose(read_hit_dN) emits a real read."
+  },
+  "offline_acceptance": {
+    "test_file": "harnesses/stride/tests/test_constraint_state.py",
+    "test_count": 19,
+    "status": "passing",
+    "full_suite_regression": "574 passed (555 existing + 19 new)",
+    "criteria": [
+      "NL target not replaced by equations",
+      "Original question not rewritten",
+      "Source actually delivered (unreceived_reference rejected)",
+      "Quote/sentence location (quote_not_found rejected)",
+      "Subject-unknown/not-mentioned not mis-contradicted",
+      "Local refutation not expanded (dependent voided, independent kept)",
+      "Same-source correction recoverable",
+      "Independent tasks retained",
+      "Dependency-stale tickets voided before dispatch",
+      "Identity/source conflict (identity_unknown → check_conflict)",
+      "Integer/string answer contract preserved",
+      "Old archive compatible (baseline profile still works)",
+      "controller_planned labelled not forged"
+    ],
+    "full_execution_test": "test_full_loop_choose_query_triggers_real_search_dispatch: choose(query)→search dispatch→read→interpret(supported)→answer_ready→choose(answer+refs)→submitted 'Ada Rowan'. Verifies text→fixture model output→state update→new task reaches underlying tool."
+  },
+  "online_plan": {
+    "total_request_cap": 168,
+    "stages": {
+      "A": {
+        "name": "near-end mechanism",
+        "structure": "up to 3 versions × 4 slots × ≤6 requests",
+        "max_requests": 72,
+        "purpose": "Verify the Interpret/Choose alternation and routing transitions on real model output near the end of a research episode."
+      },
+      "B": {
+        "name": "one natural pairing",
+        "max_requests": 88,
+        "purpose": "One natural question→task→judgment→action pairing under the real CPU index."
+      },
+      "C": {
+        "name": "judge",
+        "max_requests": 8,
+        "purpose": "Judge whether the submitted answer and cited evidence satisfy the constraint-state contract."
+      }
+    },
+    "budget_rules": {
+      "all_requests_count": "All requests including format repairs count toward budget.",
+      "no_empty_ledger_reset": "No empty ledger created to reset; historical 357/844 balances are not current.",
+      "no_key_switch_on_failure": "No key/account/model switch on failure; tool refusals reported accurately, no channel switching.",
+      "authorized_config_only": "Tested model and CPU index use existing authorized local config; base_url/keys not public."
+    },
+    "promotion_criteria": {
+      "offline_pass": "All 19 offline tests pass and full suite regression-free (MET).",
+      "stage_a_pass": "Interpret/Choose alternation observed on real model output; routing transitions match program reduction.",
+      "stage_b_pass": "At least one full question→task→judgment→action→answer loop completes within budget.",
+      "stage_c_pass": "Judge confirms cited evidence is delivered and quotes are exact."
+    }
+  },
+  "security_constraints": {
+    "no_credentials_uploaded": "No credentials/keys/internal deployment/production index/full budget library uploaded.",
+    "base_url_from_local_config": "base_url/keys from existing local config, not public.",
+    "no_model_switch_on_failure": "No key/account/model switch on failure.",
+    "tool_refusals_reported_accurately": "Tool refusals reported accurately; no channel switching.",
+    "no_fabricated_online": "Offline results not fabricated as online.",
+    "developer_reasoning_excluded": "Claude Code reasoning/sub-agents/human knowledge must not enter the tested process."
+  },
+  "deliverables": [
+    "DESIGN.md",
+    "TOOL_CONTRACTS.md",
+    "CAMPAIGN_PLAN.json",
+    "VALIDATION.md",
+    "RESULTS.md",
+    "IMPLEMENTATION_PLAN.md",
+    "RUN_STATE"
+  ]
+}
