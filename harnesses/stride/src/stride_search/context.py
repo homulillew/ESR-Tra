@@ -110,7 +110,7 @@ def build(harness, model, counter, *, final: bool, output_limit: int, groups=Non
                     "Submit the explicit answer with delivered evidence or abstain.")}
             messages.append({"role": "user", "content": "Local task (natural language, not symbols):\n" + canonical(phase_scope)})
         if harness.local_state is not None:
-            from .local_state import local_toolset, PHASE_INTERPRET, PHASE_CHOOSE
+            from .local_state import local_toolset, PHASE_INTERPRET, PHASE_CHOOSE, PHASE_FINISH
             from .contract import tools as base_tools, INTEGER_ANSWER
             phase = local_projection["phase"]
             if phase == PHASE_INTERPRET:
@@ -120,16 +120,27 @@ def build(harness, model, counter, *, final: bool, output_limit: int, groups=Non
                             query_limit=config.max_queries_per_search,
                             answer_contract=harness.answer_contract) if t["function"]["name"] == "finish"]
                     tools = local_toolset(answer_contract=harness.answer_contract) + tools
+            elif phase == PHASE_FINISH:
+                # FINISH: only the finish tool. The model must submit an explicit
+                # answer with delivered evidence or abstain. choose is NOT offered
+                # because the routing already reached answer_ready; further
+                # research would require a correction (exit on interpret).
+                tools = [t for t in toolset(harness.workflow.options,
+                        notes_enabled=config.notes_enabled, final=True,
+                        query_limit=config.max_queries_per_search,
+                        answer_contract=harness.answer_contract)
+                    if t["function"]["name"] == "finish"]
             else:
+                # CHOOSE: only choose + finish. The model must go through
+                # choose(query) to trigger a search, or choose(answer) to finish.
+                # Native search/read/find/recall are NOT offered, so the model
+                # cannot bypass the constraint-state loop.
                 tools = local_toolset(answer_contract=harness.answer_contract)
-                # In CHOOSE phase the model may also issue search/read/find/
-                # recall/finish directly; choose records intent and the native
-                # tool calls carry the real dispatch.
                 extra = [t for t in toolset(harness.workflow.options,
                         notes_enabled=config.notes_enabled, final=effective_final,
                         query_limit=config.max_queries_per_search,
                         answer_contract=harness.answer_contract)
-                    if t["function"]["name"] in ("search", "read", "find", "recall", "finish")]
+                    if t["function"]["name"] == "finish"]
                 tools = tools + extra
         else:
             tools = toolset(harness.workflow.options, notes_enabled=config.notes_enabled, final=effective_final,

@@ -8,7 +8,7 @@
 
 ## Current state
 
-**Phase: Offline acceptance COMPLETE. Online validation NOT STARTED.**
+**Phase: Online validation Stage A complete, Stage B partial, Stage C not run.**
 
 ### Completed
 
@@ -25,17 +25,18 @@
 - [x] TOOL_CONTRACTS.md
 - [x] CAMPAIGN_PLAN.json
 - [x] VALIDATION.md
-- [x] RESULTS.md (offline portion; online TBD)
+- [x] RESULTS.md (offline + online)
 - [x] IMPLEMENTATION_PLAN.md (from earlier session)
+- [x] Online Stage A (47 requests): 5 slots, phase alternation verified,
+      Slot 5 submitted "Vakkorama"
+- [x] Online Stage B (12 requests): phase alternation verified, no submission
+- [x] Three online fixes: quote maxLength, phase alternation, FINISH-only tools
 
 ### Pending
 
-- [ ] Commit frozen implementation
+- [ ] Commit frozen implementation + online fixes
 - [ ] Push branch `research/stride-local-state-nl-20260916T104031Z`, verify remote ref
-- [ ] Online Stage A (≤72 requests): near-end mechanism, 3 versions × 4 slots × ≤6
-- [ ] Online Stage B (≤88 requests): one natural pairing
-- [ ] Online Stage C (≤8 requests): judge
-- [ ] Update RESULTS.md with online results
+- [ ] Online Stage C (≤8 requests): judge — not run
 - [ ] Final report: three dependencies fixed, offline/online results, cost,
       failures, remote branch + full SHA
 

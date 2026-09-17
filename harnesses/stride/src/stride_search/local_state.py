@@ -258,6 +258,7 @@ class LocalState:
         self.pending_dispatch: dict | None = None  # controller_planned action
         self.voided_tickets: list[dict] = []
         self._task_seq = 0
+        self.seen_evidence: set[str] = set()  # evidence delivered in prior rounds
 
     # ---- task management ----
     @property
@@ -384,6 +385,9 @@ class LocalState:
         task = self.active_task
         delivered = bool(visible) and self._has_new_evidence(groups, visible)
         phase = self.advance_phase(delivered)
+        # Record what is visible now so that only genuinely new evidence
+        # (delivered after this projection) triggers INTERPRET next round.
+        self.seen_evidence.update(visible)
         view = {
             "phase": phase, "frame": self.frame.view(),
             "active_task": task.view() if task else None,
@@ -401,10 +405,17 @@ class LocalState:
                 "controller_planned": self.pending_dispatch}
 
     def _has_new_evidence(self, groups, visible) -> bool:
-        seen = set()
-        for g in groups:
-            seen.update(g.get("evidence", []))
-        return bool(set(visible) - seen)
+        """True when visible contains evidence not yet seen in a prior round.
+
+        ``visible`` is built by context.build from group evidence plus the
+        evidence shelf. ``seen`` here is the evidence already recorded as
+        delivered in prior rounds (self.seen_evidence). Evidence that was
+        delivered by a controller-planned read in the *current* round's
+        action loop is in the current group's evidence list, hence in
+        ``visible``, but not yet in ``self.seen_evidence`` — so this returns
+        True and the phase switches to INTERPRET.
+        """
+        return bool(set(visible) - self.seen_evidence)
 
     def _unread_entries(self, harness, visible) -> list[dict]:
         """Available navigation hits not yet read into evidence."""
@@ -424,8 +435,10 @@ class LocalState:
         """Observe a completed model round; advance internal phase bookkeeping.
 
         Does NOT interpret semantics — that is the model's job via Interpret.
-        Only records that a round completed so the next project() can decide
-        whether new evidence was delivered.
+        Does NOT record evidence here — seen_evidence is updated in project()
+        after the new-evidence check, so that evidence delivered by a
+        controller-planned read in the just-completed round is detected as
+        new on the *next* project() call.
         """
         self.last_interpretation = None
         self.last_choice = None
@@ -452,7 +465,7 @@ INTERPRET_SCHEMA = {
         "relation": {"type": "string", "minLength": 1, "maxLength": 200, "pattern": r"\S"},
         "value": {"type": "string", "maxLength": 200},
         "state": {"enum": list(CONSTRAINT_STATES)},
-        "quote": {"type": "string", "maxLength": 400},
+        "quote": {"type": "string", "maxLength": 2000},
         "exit": {"enum": ["", "task_mismatch", "identity_unclear", "not_mentioned",
                           "source_conflict", "propose_amendment"]},
         "amendment": {"type": "string", "maxLength": 400},
@@ -598,16 +611,18 @@ def dispatch_choose(harness, args: dict, binding: dict) -> tuple[dict, list[str]
         ls.pending_dispatch = {"kind": "search", "query": args["query"],
                                "controller_planned": True}
         return {"ok": True, **result, "controller_planned_query": args["query"]}, docs, evidence
-    # Selecting an existing read entry → controller_planned read.
+    # Selecting an existing read entry → controller_planned read dispatched now.
     choice_id = args.get("choice_id", "")
     if choice_id.startswith("read_hit_"):
         ref = choice_id[len("read_hit_"):]
         if ref not in binding["documents"]:
             raise ContractError("unreceived_reference",
                 f"Document {ref} was not in this decision's received-reference scope")
+        # Dispatch the real read so evidence is delivered and exposed.
+        read_args = {"ref": ref}
+        result, docs, evidence = harness._dispatch("read", read_args, binding)
         ls.pending_dispatch = {"kind": "read", "ref": ref, "controller_planned": True}
-        return {"ok": True, "controller_planned_read": ref,
-                "next": "program will read this document"}, [ref], []
+        return {"ok": True, **result, "controller_planned_read": ref}, docs, evidence
     exit_code = args.get("exit", "")
     if exit_code:
         return {"ok": True, "exit": exit_code,
